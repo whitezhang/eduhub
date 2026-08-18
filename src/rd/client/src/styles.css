@@ -119,9 +119,264 @@ button, input, select, textarea { font: inherit; }
 .filter-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
 .filter-row a { text-decoration: none; color: var(--muted); border-bottom: 1px solid transparent; }
 .filter-row a.on { color: var(--indigo); border-bottom-color: var(--indigo); }
+.filter-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  min-width: 2.5rem;
+}
 .search { border: none; border-bottom: 1px solid var(--rule); background: transparent; padding: 0.3rem 0; min-width: 12rem; }
+.search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  max-width: 22rem;
+}
+.search-fill {
+  width: 100%;
+  min-width: 0;
+  padding-right: 1.75rem;
+}
+.search-clear {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem 0.35rem;
+}
+.search-clear:hover { color: var(--ink); }
+input[type="search"].search-fill::-webkit-search-cancel-button { display: none; }
+.problem-bank-sum { margin: 0 0 0.85rem; }
+.problem-table .col-score { width: 4.5rem; }
+.problem-table .col-kind { width: 3.5rem; }
+.problem-table .paper-row td {
+  padding-top: 1.4rem;
+  padding-bottom: 0.35rem;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  background: var(--surface);
+}
+.problem-table tbody tr.paper-row:first-child td { padding-top: 0.5rem; }
+.paper-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.paper-count {
+  font-family: "IBM Plex Mono", "Source Code Pro", ui-monospace, monospace;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.problem-table tr.problem-row { cursor: pointer; }
+.problem-table tr.problem-row:hover td { background: var(--paper); }
+.problem-title { text-decoration: none; }
+.problem-code { margin-left: 0.75rem; font-size: 0.75rem; }
+.paper-block { margin-bottom: 1.5rem; }
+.paper-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  font-weight: 600;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 0.15rem;
+}
+.problem-card {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: inherit;
+}
+
+.edit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
+  gap: 2rem;
+  align-items: start;
+}
+.edit-preview { position: sticky; top: 1rem; }
+.statement-edit { min-height: 16rem; font-size: 0.9rem; }
+.option-edit {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  align-items: start;
+}
+.opt-key { width: 100%; }
+.case-edit {
+  border-top: 1px solid var(--rule);
+  padding-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.workbook-top { margin-bottom: 1rem; }
+.workbook-layout {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 52rem);
+  gap: 1.5rem 2rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+  align-items: start;
+}
+.workbook-toc {
+  position: sticky;
+  top: 1rem;
+}
+.workbook-toc-title {
+  margin: 0 0 0.45rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+.workbook-toc-nums {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-height: calc(100vh - 8rem);
+  overflow: auto;
+}
+.workbook-toc-num {
+  display: grid;
+  grid-template-columns: 1.4rem minmax(0, 1fr);
+  column-gap: 0.35rem;
+  align-items: baseline;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  padding: 0.3rem 0.45rem;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  background: transparent;
+}
+.workbook-toc-idx {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+.workbook-toc-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.workbook-toc-num.draft {
+  color: var(--ink);
+  background: var(--code-bg);
+}
+.workbook-toc-num.ok {
+  color: var(--ok);
+  border-color: var(--ok);
+}
+.workbook-toc-num.mid {
+  color: var(--mid);
+  border-color: var(--mid);
+}
+.workbook-toc-num.flagged {
+  color: var(--indigo);
+  border-color: var(--indigo);
+  box-shadow: inset 0 0 0 1px var(--indigo);
+}
+.workbook-toc-num.flagged.ok {
+  color: var(--ok);
+  border-color: var(--indigo);
+  background: var(--code-bg);
+}
+.workbook-toc-num.flagged.mid,
+.workbook-toc-num.flagged.draft {
+  border-color: var(--indigo);
+}
+.workbook-toc-num.on {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.workbook-legend {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.workbook {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.workbook-item {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 1rem;
+}
+.workbook-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+.workbook-score {
+  margin-left: auto;
+  font-family: "IBM Plex Mono", "Source Code Pro", ui-monospace, monospace;
+}
+.workbook-flag.on {
+  color: var(--indigo);
+  border-color: var(--indigo);
+}
+.workbook-item .solve {
+  margin-top: 0.35rem;
+}
+.solve-bar { margin: 0.75rem 0; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.back-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 30;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: none;
+}
+.back-top:hover { border-color: var(--ink); }
+.back-top:active { transform: scale(0.98); }
+
+@media (max-width: 767px) {
+  .workbook-layout {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 2rem;
+  }
+  .workbook-toc {
+    position: static;
+  }
+  .workbook-toc-nums {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: none;
+  }
+  .workbook-toc-num {
+    display: inline-flex;
+    grid-template-columns: none;
+    gap: 0.35rem;
+    max-width: 100%;
+  }
+  .workbook-legend { display: none; }
+  .back-top { right: 1rem; bottom: 1rem; }
+}
 
 .problems-layout { display: grid; grid-template-columns: 12rem 1fr; gap: 2rem; }
+.problems-layout .filter-row { margin-bottom: 0.45rem; }
 .side a {
   display: block; text-decoration: none; color: var(--ink);
   padding: 0.35rem 0.6rem; border-left: 2px solid transparent;
@@ -223,13 +478,19 @@ button, input, select, textarea { font: inherit; }
   font-family: "IBM Plex Mono", "Source Code Pro", ui-monospace, monospace;
   font-size: 0.9rem;
 }
-.exam-num.on {
-  border-color: var(--indigo);
-  color: var(--indigo);
+.exam-num.exam-num-active {
+  color: var(--ink);
+  border-color: var(--rule);
+  text-decoration: none;
 }
 .exam-num.ok { color: var(--ok); border-color: var(--ok); }
 .exam-num.mid { color: var(--mid); border-color: var(--mid); }
 .exam-num.draft { background: var(--code-bg); }
+.exam-num.on,
+.exam-num.on.exam-num-active {
+  border-color: var(--indigo);
+  color: var(--indigo);
+}
 .exam-step { display: flex; gap: 0.5rem; }
 .exam-legend { margin: 0.45rem 0 0; font-size: 0.85rem; }
 

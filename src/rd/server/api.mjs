@@ -2,6 +2,15 @@ import { getDb } from "./db.mjs";
 import { sendJson, readJsonBody } from "./http-util.mjs";
 import { userFromRequest, login, register, logout, cookieHeader, clearCookieHeader, requireCoach } from "./auth.mjs";
 import { enqueue, queueStatus } from "./judge.mjs";
+import {
+  applyCatalog,
+  exportProblemToCatalog,
+  listCatalogFiles,
+  loadTestcasesWithContent,
+  saveProblemFromBody,
+  updateCatalogPublished,
+} from "./catalog.mjs";
+import fs from "node:fs";
 
 function contestState(c, now = Date.now()) {
   const s = new Date(c.start_at).getTime();
@@ -122,7 +131,7 @@ function paperContext(db, problemId, me, contestId) {
         `SELECT c.* FROM contest_problems cp
          JOIN contests c ON c.id = cp.contest_id
          WHERE cp.problem_id = ?
-         ORDER BY c.is_demo DESC, c.published DESC, c.id`,
+         ORDER BY c.published DESC, c.id`,
       )
       .all(problemId);
     contest = rows.find((c) => c.published === 1 || me?.role === "coach") || null;
@@ -422,25 +431,112 @@ export async function handleApi(req, res, pathname, query) {
   }
 
   if (method === "GET" && pathname === "/api/contests") {
+    const source = String(query.source || "").trim();
+    const q = String(query.q || "").trim().toLowerCase();
     const rows = db.prepare("SELECT * FROM contests WHERE published = 1 ORDER BY start_at DESC").all();
     const visibleCount = db.prepare(
       `SELECT COUNT(*) AS n FROM contest_problems cp JOIN problems p ON p.id = cp.problem_id
        WHERE cp.contest_id = ? AND p.published = 1 AND ${hasAnswerSql("p")}`,
     );
+    const sourceMatch = db.prepare(
+      `SELECT COUNT(*) AS n FROM contest_problems cp JOIN problems p ON p.id = cp.problem_id
+       WHERE cp.contest_id = ? AND p.source = ?`,
+    );
     const contests = [];
     for (const c of rows) {
-      const n = visibleCount.get(c.id).n;
+      if (source && !sourceMatch.get(c.id, source).n) continue;
+      if (q && !String(c.title || "").toLowerCase().includes(q)) continue;
+      const n = me?.role === "coach"
+        ? db.prepare("SELECT COUNT(*) AS n FROM contest_problems WHERE contest_id = ?").get(c.id).n
+        : visibleCount.get(c.id).n;
       if (me?.role !== "coach" && n === 0) continue;
+      const problems = visibleContestProblems(db, c, me);
+      const ann = annotatePaperProblems(db, c.id, problems, me);
+      const full = ann.problems.filter((p) => p.my_score != null && p.my_score >= (p.full_score || 100)).length;
+      const done = ann.problems.filter((p) => p.my_score != null).length;
       contests.push({
         ...c,
         state: contestState(c),
-        problem_count: n,
+        problem_count: ann.problems.length || n,
+        full_count: full,
+        done_count: done,
         registered: me
           ? Boolean(db.prepare("SELECT 1 FROM contest_registrations WHERE contest_id=? AND user_id=?").get(c.id, me.id))
           : false,
       });
     }
     sendJson(res, 200, { contests });
+    return true;
+  }
+
+  const workbookMatch = pathname.match(/^\/api\/contests\/(\d+)\/workbook$/);
+  if (method === "GET" && workbookMatch) {
+    const c = db.prepare("SELECT * FROM contests WHERE id = ?").get(Number(workbookMatch[1]));
+    if (!c || (c.published !== 1 && me?.role !== "coach")) {
+      sendJson(res, 404, { error: "试卷不存在" });
+      return true;
+    }
+    const problems = visibleContestProblems(db, c, me);
+    const ann = annotatePaperProblems(db, c.id, problems, me);
+    const outProblems = [];
+    for (const meta of ann.problems) {
+      const p = db.prepare("SELECT * FROM problems WHERE id = ?").get(meta.id);
+      if (!p || !studentCanSeeProblem(db, p, me)) continue;
+      let choice = null;
+      try {
+        choice = p.choice_json ? JSON.parse(p.choice_json) : null;
+      } catch {
+        choice = null;
+      }
+      if (choice && me?.role !== "coach") delete choice.answer;
+      let languages = [];
+      try {
+        languages = JSON.parse(p.languages || "[]");
+      } catch {
+        languages = [];
+      }
+      let draft = null;
+      if (me) {
+        draft = db
+          .prepare(
+            "SELECT language, code FROM paper_drafts WHERE user_id = ? AND contest_id = ? AND problem_id = ?",
+          )
+          .get(me.id, c.id, p.id);
+      }
+      outProblems.push({
+        id: p.id,
+        code: p.code,
+        title: p.title,
+        source: p.source,
+        type: p.type,
+        statement: p.statement,
+        sample_in: p.sample_in,
+        sample_out: p.sample_out,
+        sample_note: p.sample_note,
+        time_ms: p.time_ms,
+        memory_mb: p.memory_mb,
+        io_mode: p.io_mode,
+        full_score: p.full_score,
+        languages,
+        choice,
+        has_answer: problemHasAnswer(db, p) ? 1 : 0,
+        my_score: meta.my_score,
+        has_draft: meta.has_draft,
+        seq: meta.seq,
+        draft,
+      });
+    }
+    sendJson(res, 200, {
+      id: c.id,
+      title: c.title,
+      rule: c.rule,
+      duration_min: c.duration_min,
+      start_at: c.start_at,
+      end_at: c.end_at,
+      state: contestState(c),
+      problems: outProblems,
+      last_problem_id: ann.last_problem_id,
+    });
     return true;
   }
 
@@ -641,8 +737,96 @@ export async function handleApi(req, res, pathname, query) {
       sendJson(res, 200, { problems: rows });
       return true;
     }
+    const studioProblemOne = pathname.match(/^\/api\/studio\/problems\/(\d+)$/);
+    if (method === "GET" && studioProblemOne) {
+      const pid = Number(studioProblemOne[1]);
+      const p = db.prepare("SELECT * FROM problems WHERE id = ?").get(pid);
+      if (!p) {
+        sendJson(res, 404, { error: "题目不存在" });
+        return true;
+      }
+      let choice = null;
+      try {
+        choice = p.choice_json ? JSON.parse(p.choice_json) : null;
+      } catch {
+        choice = null;
+      }
+      let languages = [];
+      try {
+        languages = JSON.parse(p.languages || "[]");
+      } catch {
+        languages = [];
+      }
+      const testcases = loadTestcasesWithContent(db, pid);
+      const out = {
+        ...p,
+        languages,
+        choice,
+        has_answer: problemHasAnswer(db, p) ? 1 : 0,
+        testcases,
+      };
+      delete out.choice_json;
+      sendJson(res, 200, out);
+      return true;
+    }
+    if (method === "PUT" && studioProblemOne) {
+      const pid = Number(studioProblemOne[1]);
+      try {
+        const body = await readJsonBody(req, 5_000_000);
+        const { problem, catalog_path } = saveProblemFromBody(db, pid, body);
+        sendJson(res, 200, {
+          ok: true,
+          id: problem.id,
+          code: problem.code,
+          catalog_path,
+          message: "已写入本地库与 catalog；上线请 git add/commit/push 后部署",
+        });
+      } catch (e) {
+        sendJson(res, 400, { error: e.message || String(e) });
+      }
+      return true;
+    }
+    if (method === "POST" && pathname === "/api/studio/catalog/export") {
+      try {
+        const body = await readJsonBody(req);
+        if (body.id != null) {
+          const got = exportProblemToCatalog(db, Number(body.id));
+          sendJson(res, 200, { ok: true, exported: 1, ...got });
+          return true;
+        }
+        if (body.all) {
+          const ids = db.prepare("SELECT id FROM problems ORDER BY code").all().map((r) => r.id);
+          let n = 0;
+          for (const id of ids) {
+            exportProblemToCatalog(db, id);
+            n += 1;
+          }
+          sendJson(res, 200, { ok: true, exported: n });
+          return true;
+        }
+        const files = listCatalogFiles();
+        let n = 0;
+        for (const fp of files) {
+          const doc = JSON.parse(fs.readFileSync(fp, "utf8"));
+          const row = db.prepare("SELECT id FROM problems WHERE code = ?").get(doc.code);
+          if (row) {
+            exportProblemToCatalog(db, row.id);
+            n += 1;
+          }
+        }
+        sendJson(res, 200, { ok: true, exported: n });
+      } catch (e) {
+        sendJson(res, 400, { error: e.message || String(e) });
+      }
+      return true;
+    }
+    if (method === "POST" && pathname === "/api/studio/catalog/apply") {
+      const result = applyCatalog(db);
+      sendJson(res, 200, { ok: true, ...result });
+      return true;
+    }
     if (method === "GET" && pathname === "/api/studio/contests") {
-      const rows = db.prepare("SELECT * FROM contests ORDER BY is_demo DESC, published ASC, title").all();
+      const rows = db.prepare("SELECT * FROM contests ORDER BY published ASC, title").all();
       const statsSql = db.prepare(
         `SELECT COUNT(*) AS n,
           SUM(CASE WHEN ${hasAnswerSql("p")} THEN 1 ELSE 0 END) AS answered
@@ -712,8 +896,15 @@ export async function handleApi(req, res, pathname, query) {
     if (method === "PATCH" && patchProb) {
       const body = await readJsonBody(req);
       const pid = Number(patchProb[1]);
+      const p = db.prepare("SELECT id, code, published FROM problems WHERE id = ?").get(pid);
+      if (!p) {
+        sendJson(res, 404, { error: "题目不存在" });
+        return true;
+      }
       if (body.published != null) {
-        db.prepare("UPDATE problems SET published = ? WHERE id = ?").run(body.published ? 1 : 0, pid);
+        const pub = body.published ? 1 : 0;
+        db.prepare("UPDATE problems SET published = ? WHERE id = ?").run(pub, pid);
+        updateCatalogPublished(p.code, pub);
       }
       sendJson(res, 200, { ok: true });
       return true;

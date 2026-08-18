@@ -3,12 +3,15 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 EDUHUB_SRC="${EDUHUB_SRC:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
 API_SERVICE="${API_SERVICE:-eduhub-api}"
-API_PORT="${API_PORT:-8080}"
+API_PORT="${API_PORT:-8081}"
 HEALTH_URL="${HEALTH_URL:-http://127.0.0.1:${API_PORT}/api/health}"
 
 echo "==> [server] npm ci"
 cd "$EDUHUB_SRC"
 npm ci --omit=dev
+
+echo "==> [server] apply catalog"
+node src/op/apply-catalog.mjs
 
 echo "==> [server] restart $API_SERVICE"
 systemctl restart "$API_SERVICE"

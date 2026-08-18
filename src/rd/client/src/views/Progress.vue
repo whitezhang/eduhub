@@ -10,8 +10,7 @@ onMounted(async () => {
 
 <template>
   <div class="wide">
-    <h1 class="serif">进度</h1>
-    <p class="muted">无需登录。不展示源代码。</p>
+    <h1 class="serif">榜单</h1>
     <table class="table desk">
       <thead>
         <tr><th>学生</th><th>题库（满分/部分/未做）</th><th>最近比赛</th><th>最近提交</th></tr>

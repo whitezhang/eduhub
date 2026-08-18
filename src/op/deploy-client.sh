@@ -2,7 +2,7 @@
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 EDUHUB_SRC="${EDUHUB_SRC:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
-WEB="${WEB:-/www/wwwroot/eduhub}"
+WEB="${WEB:-/www/wwwroot/edu.jsoner.cn}"
 
 echo "==> [client] vite build"
 cd "$EDUHUB_SRC"

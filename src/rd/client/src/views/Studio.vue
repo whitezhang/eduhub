@@ -77,7 +77,6 @@ function typeLabel(p) {
 }
 
 function paperKind(c) {
-  if (c.is_demo) return "测试";
   if (String(c.title).startsWith("GESP")) return "真题";
   return "练习";
 }
@@ -204,8 +203,8 @@ async function toggleProblem(p) {
     <section v-if="tab === 'review'">
       <h2 class="serif">试卷</h2>
       <p class="muted">
-        所有试卷用同一张表。未发布：学生看不到。已发布：有答案的题进入题库，整卷出现在竞赛。
-        测试卷用来练发布流程，重启服务会收回成未发布。
+        所有试卷用同一张表。未发布：学生看不到。已发布：有答案的题进入题库。
+        点「编辑」改题面；保存后写入本机库与 catalog，上线需 git push 再 deploy。
       </p>
       <p class="filter-row">
         <a href="#" :class="{ on: paperFilter === 'all' }" @click.prevent="paperFilter = 'all'">全部</a>
@@ -223,7 +222,6 @@ async function toggleProblem(p) {
             <tr>
               <td>
                 <a href="#" @click.prevent="togglePaper(c)">{{ c.title }}</a>
-                <span v-if="c.is_demo" class="muted"> · 重启收回</span>
               </td>
               <td>{{ paperKind(c) }}</td>
               <td class="mono">{{ c.problem_count }}</td>
@@ -238,13 +236,14 @@ async function toggleProblem(p) {
               <td colspan="6">
                 <p v-if="!paperProblems[c.id]" class="muted">载入中</p>
                 <table v-else class="table">
-                  <thead><tr><th>题号</th><th>标题</th><th>类型</th><th>答案</th></tr></thead>
+                  <thead><tr><th>题号</th><th>标题</th><th>类型</th><th>答案</th><th></th></tr></thead>
                   <tbody>
                     <tr v-for="p in paperProblems[c.id]" :key="p.id">
                       <td class="mono"><router-link :to="`/problems/${p.id}?contest=${c.id}`">{{ p.code }}</router-link></td>
                       <td>{{ p.title }}</td>
                       <td>{{ typeLabel(p) }}</td>
                       <td :class="p.has_answer ? 'ok' : 'mid'">{{ p.has_answer ? "有" : "无 · 学生看不到" }}</td>
+                      <td><router-link :to="`/studio/problems/${p.id}`">编辑</router-link></td>
                     </tr>
                   </tbody>
                 </table>
@@ -277,7 +276,10 @@ async function toggleProblem(p) {
             <td>{{ typeLabel(p) }}</td>
             <td :class="p.has_answer ? 'ok' : 'mid'">{{ p.has_answer ? "有" : "无" }}</td>
             <td class="muted">{{ p.review_note }}</td>
-            <td><button class="btn-ghost" type="button" @click="toggleProblem(p)">{{ p.published ? "撤回" : "发布" }}</button></td>
+            <td class="filter-row" style="margin:0;gap:0.5rem;flex-wrap:nowrap">
+              <router-link :to="`/studio/problems/${p.id}`">编辑</router-link>
+              <button class="btn-ghost" type="button" @click="toggleProblem(p)">{{ p.published ? "撤回" : "发布" }}</button>
+            </td>
           </tr>
         </tbody>
       </table>

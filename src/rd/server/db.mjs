@@ -10,6 +10,7 @@ export const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, "data");
 export const RUNTIME_DIR = path.join(DATA_DIR, "runtime");
 export const CACHE_DIR = path.join(DATA_DIR, "cache");
 export const SEED_DIR = path.join(DATA_DIR, "seed");
+export const CATALOG_DIR = path.join(DATA_DIR, "catalog");
 export const PROBLEM_DATA_DIR = path.join(RUNTIME_DIR, "problems");
 
 function renameIfAbsent(from, to) {
@@ -68,6 +69,7 @@ function ensureDirs() {
   fs.mkdirSync(PROBLEM_DATA_DIR, { recursive: true });
   fs.mkdirSync(path.join(RUNTIME_DIR, "tmp"), { recursive: true });
   fs.mkdirSync(path.join(SEED_DIR, "gesp"), { recursive: true });
+  fs.mkdirSync(path.join(CATALOG_DIR, "problems"), { recursive: true });
 }
 
 function schema(database) {
@@ -207,179 +209,59 @@ function migrate(database) {
   }
 }
 
-export const DEMO_CONTEST_TITLE = "测试试卷";
 
-function upsertDemoProblem(database, spec) {
-  const existing = database.prepare("SELECT id FROM problems WHERE code = ?").get(spec.code);
-  const fields = [
-    spec.title,
-    spec.source,
-    spec.difficulty,
-    spec.time_ms,
-    spec.memory_mb,
-    spec.languages,
-    spec.type,
-    spec.statement,
-    spec.sample_in,
-    spec.sample_out,
-    spec.sample_note,
-    spec.choice_json,
-    spec.full_score,
-    spec.review_note,
-  ];
-  if (existing) {
-    database
-      .prepare(
-        `UPDATE problems SET title=?, source=?, difficulty=?, time_ms=?, memory_mb=?,
-         languages=?, type=?, statement=?, sample_in=?, sample_out=?, sample_note=?,
-         choice_json=?, full_score=?, published=0, review_note=? WHERE id=?`,
-      )
-      .run(...fields, existing.id);
-    return existing.id;
-  }
-  const info = database
-    .prepare(
-      `INSERT INTO problems (code, title, source, difficulty, time_ms, memory_mb, io_mode,
-         languages, type, statement, sample_in, sample_out, sample_note, choice_json, full_score,
-         published, review_note)
-       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,?)`,
-    )
-    .run(
-      spec.code,
-      spec.title,
-      spec.source,
-      spec.difficulty,
-      spec.time_ms,
-      spec.memory_mb,
-      "stdin",
-      spec.languages,
-      spec.type,
-      spec.statement,
-      spec.sample_in,
-      spec.sample_out,
-      spec.sample_note,
-      spec.choice_json,
-      spec.full_score,
-      spec.review_note,
-    );
-  return Number(info.lastInsertRowid);
+function tableExists(database, name) {
+  return Boolean(
+    database.prepare("SELECT 1 FROM sqlite_master WHERE type='table' AND name = ?").get(name),
+  );
 }
 
-function resetDemoPaper(database) {
-  const c01 = upsertDemoProblem(database, {
-    code: "EH-DEMO-C01",
-    title: "测试题：循环结构",
-    source: "demo",
-    difficulty: "入门",
-    time_ms: 0,
-    memory_mb: 0,
-    languages: "[]",
-    type: "choice",
-    statement: "C++ 中，已知循环次数时，下列哪个语句最合适？",
-    sample_in: "",
-    sample_out: "",
-    sample_note: "",
-    choice_json: JSON.stringify({
-      options: [
-        { key: "A", text: "if" },
-        { key: "B", text: "for" },
-        { key: "C", text: "return" },
-        { key: "D", text: "cin" },
-      ],
-      answer: "B",
-    }),
-    full_score: 100,
-    review_note: "测试题，有标准答案。重启后会收回。",
-  });
-  const c02 = upsertDemoProblem(database, {
-    code: "EH-DEMO-C02",
-    title: "测试题：判断（无答案）",
-    source: "demo",
-    difficulty: "入门",
-    time_ms: 0,
-    memory_mb: 0,
-    languages: "[]",
-    type: "choice",
-    statement: "C++ 中，变量必须先声明再使用。",
-    sample_in: "",
-    sample_out: "",
-    sample_note: "",
-    choice_json: JSON.stringify({
-      options: [
-        { key: "T", text: "正确" },
-        { key: "F", text: "错误" },
-      ],
-      answer: "",
-    }),
-    full_score: 100,
-    review_note: "测试题，故意不给答案。学生侧始终不显示。",
-  });
-  const p01 = upsertDemoProblem(database, {
-    code: "EH-DEMO-P01",
-    title: "测试题：两数之和",
-    source: "demo",
-    difficulty: "入门",
-    time_ms: 1000,
-    memory_mb: 128,
-    languages: JSON.stringify(["cpp", "python"]),
-    type: "traditional",
-    statement: `输入两个整数 A 和 B，输出它们的和。
-
-## 输入
-一行两个整数 A、B（−1000 ≤ A, B ≤ 1000），以空格分隔。
-
-## 输出
-一个整数，即 A+B。`,
-    sample_in: "1 2\n",
-    sample_out: "3\n",
-    sample_note: "1+2=3",
-    choice_json: null,
-    full_score: 100,
-    review_note: "测试题，有样例。重启后会收回。",
-  });
-
-  database.prepare("DELETE FROM testcases WHERE problem_id = ?").run(p01);
-  const insT = database.prepare(
-    `INSERT INTO testcases (problem_id, seq, score, is_sample, input_rel, output_rel)
-     VALUES (?, ?, ?, ?, ?, ?)`,
-  );
-  insT.run(p01, 1, 0, 1, "1.in", "1.out");
-  insT.run(p01, 2, 50, 0, "2.in", "2.out");
-  insT.run(p01, 3, 50, 0, "3.in", "3.out");
-
-  const start = new Date(Date.now() - 3600 * 1000).toISOString();
-  const end = "2099-12-31T00:00:00.000Z";
-  let contest = database.prepare("SELECT * FROM contests WHERE is_demo = 1").get();
-  if (!contest) {
-    contest = database.prepare("SELECT * FROM contests WHERE title = ?").get(DEMO_CONTEST_TITLE);
-    if (contest) {
-      database.prepare("UPDATE contests SET is_demo = 1 WHERE id = ?").run(contest.id);
-    } else {
-      database
-        .prepare(
-          `INSERT INTO contests (title, rule, duration_min, start_at, end_at, published, is_demo)
-           VALUES (?, 'practice', 120, ?, ?, 0, 1)`,
-        )
-        .run(DEMO_CONTEST_TITLE, start, end);
-    }
-    contest = database.prepare("SELECT * FROM contests WHERE is_demo = 1").get();
+function deleteContest(database, contestId) {
+  database.prepare("DELETE FROM contest_problems WHERE contest_id = ?").run(contestId);
+  database.prepare("DELETE FROM paper_drafts WHERE contest_id = ?").run(contestId);
+  database.prepare("DELETE FROM paper_cursors WHERE contest_id = ?").run(contestId);
+  database.prepare("DELETE FROM submissions WHERE contest_id = ?").run(contestId);
+  if (tableExists(database, "contest_registrations")) {
+    database.prepare("DELETE FROM contest_registrations WHERE contest_id = ?").run(contestId);
   }
-  database
-    .prepare(
-      `UPDATE contests SET title = ?, rule = 'practice', duration_min = 120,
-       start_at = ?, end_at = ?, published = 0, is_demo = 1 WHERE id = ?`,
-    )
-    .run(DEMO_CONTEST_TITLE, start, end, contest.id);
-  database.prepare("DELETE FROM contest_problems WHERE contest_id = ?").run(contest.id);
-  const insCp = database.prepare(
-    "INSERT INTO contest_problems (contest_id, problem_id, seq) VALUES (?,?,?)",
-  );
-  insCp.run(contest.id, c01, 1);
-  insCp.run(contest.id, c02, 2);
-  insCp.run(contest.id, p01, 3);
-  database
-    .prepare("UPDATE problems SET published = 0 WHERE id IN (?, ?, ?)")
-    .run(c01, c02, p01);
+  database.prepare("DELETE FROM contests WHERE id = ?").run(contestId);
+}
+
+function removeHomemadeProblems(database) {
+  const rows = database.prepare("SELECT id FROM problems WHERE code LIKE 'EH-%'").all();
+  database.exec("BEGIN");
+  try {
+    for (const p of rows) {
+      database.prepare("DELETE FROM testcases WHERE problem_id = ?").run(p.id);
+      database.prepare("DELETE FROM submissions WHERE problem_id = ?").run(p.id);
+      database.prepare("DELETE FROM paper_drafts WHERE problem_id = ?").run(p.id);
+      database.prepare("DELETE FROM paper_cursors WHERE problem_id = ?").run(p.id);
+      database.prepare("DELETE FROM contest_problems WHERE problem_id = ?").run(p.id);
+      database.prepare("DELETE FROM problem_list_items WHERE problem_id = ?").run(p.id);
+      database.prepare("DELETE FROM problems WHERE id = ?").run(p.id);
+    }
+    const demos = database
+      .prepare("SELECT id FROM contests WHERE is_demo = 1 OR title = ?")
+      .all("测试试卷");
+    for (const c of demos) deleteContest(database, c.id);
+    const emptyPractice = database
+      .prepare(
+        `SELECT c.id FROM contests c
+         LEFT JOIN contest_problems cp ON cp.contest_id = c.id
+         WHERE c.title = '周末练习'
+         GROUP BY c.id
+         HAVING COUNT(cp.problem_id) = 0`,
+      )
+      .all();
+    for (const c of emptyPractice) deleteContest(database, c.id);
+    database.exec("COMMIT");
+  } catch (err) {
+    database.exec("ROLLBACK");
+    throw err;
+  }
+  for (const p of rows) {
+    fs.rmSync(path.join(PROBLEM_DATA_DIR, String(p.id)), { recursive: true, force: true });
+  }
 }
 
 function seedIfEmpty(database) {
@@ -458,96 +340,6 @@ function seedIfEmpty(database) {
   ]);
   database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("timeline", timeline);
 
-  const insP = database.prepare(`
-    INSERT INTO problems (code, title, source, difficulty, time_ms, memory_mb, languages, type, statement, sample_in, sample_out, sample_note, full_score)
-    VALUES (@code, @title, @source, @difficulty, @time_ms, @memory_mb, @languages, @type, @statement, @sample_in, @sample_out, @sample_note, @full_score)
-  `);
-  insP.run({
-    code: "EH-1001",
-    title: "A+B 问题",
-    source: "gesp",
-    difficulty: "入门",
-    time_ms: 1000,
-    memory_mb: 128,
-    languages: JSON.stringify(["cpp", "python"]),
-    type: "traditional",
-    statement: `输入两个整数 A 和 B，输出它们的和。
-
-## 输入
-一行两个整数 A、B（−1000 ≤ A, B ≤ 1000），以空格分隔。
-
-## 输出
-一个整数，即 A+B。`,
-    sample_in: "1 2\n",
-    sample_out: "3\n",
-    sample_note: "1+2=3",
-    full_score: 100,
-  });
-  insP.run({
-    code: "EH-1002",
-    title: "奇偶判断",
-    source: "csp-j",
-    difficulty: "入门",
-    time_ms: 1000,
-    memory_mb: 128,
-    languages: JSON.stringify(["cpp", "python"]),
-    type: "traditional",
-    statement: `给定一个整数 N，若为偶数输出 even，若为奇数输出 odd（小写，不含引号）。
-
-## 输入
-一行一个整数 N（−10^9 ≤ N ≤ 10^9）。
-
-## 输出
-一行，even 或 odd。`,
-    sample_in: "7\n",
-    sample_out: "odd\n",
-    sample_note: "",
-    full_score: 100,
-  });
-  insP.run({
-    code: "EH-1003",
-    title: "选择：循环结构",
-    source: "csp-j",
-    difficulty: "入门",
-    time_ms: 0,
-    memory_mb: 0,
-    languages: JSON.stringify([]),
-    type: "choice",
-    statement: "C++ 中，下列哪个语句适合在已知次数时重复执行一段代码？",
-    sample_in: "",
-    sample_out: "",
-    sample_note: "",
-    full_score: 100,
-  });
-  database
-    .prepare("UPDATE problems SET choice_json = ? WHERE code = ?")
-    .run(
-      JSON.stringify({
-        options: [
-          { key: "A", text: "if" },
-          { key: "B", text: "for" },
-          { key: "C", text: "return" },
-          { key: "D", text: "cin" },
-        ],
-        answer: "B",
-      }),
-      "EH-1003",
-    );
-
-  const p1 = database.prepare("SELECT id FROM problems WHERE code = 'EH-1001'").get().id;
-  const p2 = database.prepare("SELECT id FROM problems WHERE code = 'EH-1002'").get().id;
-  const p3 = database.prepare("SELECT id FROM problems WHERE code = 'EH-1003'").get().id;
-  const insT = database.prepare(
-    `INSERT INTO testcases (problem_id, seq, score, is_sample, input_rel, output_rel)
-     VALUES (?, ?, ?, ?, ?, ?)`,
-  );
-  insT.run(p1, 1, 0, 1, "1.in", "1.out");
-  insT.run(p1, 2, 50, 0, "2.in", "2.out");
-  insT.run(p1, 3, 50, 0, "3.in", "3.out");
-  insT.run(p2, 1, 0, 1, "1.in", "1.out");
-  insT.run(p2, 2, 50, 0, "2.in", "2.out");
-  insT.run(p2, 3, 50, 0, "3.in", "3.out");
-
   const lists = [
     ["gesp", "GESP 1–8 级", "gesp", "语法与简单算法"],
     ["csp-j", "CSP-J", "csp-j", "入门级"],
@@ -559,28 +351,6 @@ function seedIfEmpty(database) {
     "INSERT INTO problem_lists (slug, title, source, blurb) VALUES (?, ?, ?, ?)",
   );
   for (const row of lists) insL.run(...row);
-  const gespId = database.prepare("SELECT id FROM problem_lists WHERE slug='gesp'").get().id;
-  const cspjId = database.prepare("SELECT id FROM problem_lists WHERE slug='csp-j'").get().id;
-  database.prepare("INSERT INTO problem_list_items (list_id, problem_id, seq) VALUES (?,?,?)").run(gespId, p1, 1);
-  database.prepare("INSERT INTO problem_list_items (list_id, problem_id, seq) VALUES (?,?,?)").run(cspjId, p2, 1);
-  database.prepare("INSERT INTO problem_list_items (list_id, problem_id, seq) VALUES (?,?,?)").run(cspjId, p3, 2);
-
-  const start = new Date();
-  const end = new Date(start.getTime() + 7 * 24 * 3600 * 1000);
-  database
-    .prepare(
-      `INSERT INTO contests (title, rule, duration_min, start_at, end_at) VALUES (?, ?, ?, ?, ?)`,
-    )
-    .run(
-      "周末练习",
-      "practice",
-      120,
-      start.toISOString(),
-      end.toISOString(),
-    );
-  const cid = database.prepare("SELECT id FROM contests ORDER BY id DESC LIMIT 1").get().id;
-  database.prepare("INSERT INTO contest_problems (contest_id, problem_id, seq) VALUES (?,?,?)").run(cid, p1, 1);
-  database.prepare("INSERT INTO contest_problems (contest_id, problem_id, seq) VALUES (?,?,?)").run(cid, p2, 2);
 
   const ext = database.prepare(
     `INSERT INTO external_events (month_label, title, audience, prep, official_url, official_label, problem_list_slug, seq)
@@ -592,44 +362,6 @@ function seedIfEmpty(database) {
   ext.run("11–12 月", "NOIP", "具备省资格者", "提高组水平", "https://www.noi.cn/", "前往 NOI 官网", "noip", 4);
 }
 
-function writeCasesByCode(database) {
-  const map = {
-    "EH-1001": [
-      ["1.in", "1 2\n"],
-      ["1.out", "3\n"],
-      ["2.in", "10 20\n"],
-      ["2.out", "30\n"],
-      ["3.in", "0 0\n"],
-      ["3.out", "0\n"],
-    ],
-    "EH-1002": [
-      ["1.in", "7\n"],
-      ["1.out", "odd\n"],
-      ["2.in", "8\n"],
-      ["2.out", "even\n"],
-      ["3.in", "-1\n"],
-      ["3.out", "odd\n"],
-    ],
-    "EH-DEMO-P01": [
-      ["1.in", "1 2\n"],
-      ["1.out", "3\n"],
-      ["2.in", "10 20\n"],
-      ["2.out", "30\n"],
-      ["3.in", "0 0\n"],
-      ["3.out", "0\n"],
-    ],
-  };
-  for (const [code, pairs] of Object.entries(map)) {
-    const row = database.prepare("SELECT id FROM problems WHERE code = ?").get(code);
-    if (!row) continue;
-    const dir = path.join(PROBLEM_DATA_DIR, String(row.id));
-    fs.mkdirSync(dir, { recursive: true });
-    for (const [name, content] of pairs) {
-      fs.writeFileSync(path.join(dir, name), content);
-    }
-  }
-}
-
 export function getDb() {
   if (db) return db;
   ensureDirs();
@@ -639,8 +371,7 @@ export function getDb() {
   schema(db);
   migrate(db);
   seedIfEmpty(db);
-  resetDemoPaper(db);
-  writeCasesByCode(db);
+  removeHomemadeProblems(db);
   return db;
 }
 

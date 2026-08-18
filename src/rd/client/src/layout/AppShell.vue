@@ -37,9 +37,8 @@ async function submit() {
       <nav class="nav" @click="menuOpen = false">
         <router-link to="/" :class="{ 'router-link-active': route.path === '/' }">首页</router-link>
         <router-link to="/problems">题库</router-link>
-        <router-link to="/contests">竞赛</router-link>
-        <router-link to="/external">外部竞赛</router-link>
-        <router-link to="/progress">进度</router-link>
+        <router-link to="/external">外部资料</router-link>
+        <router-link to="/progress">榜单</router-link>
         <router-link v-if="session.user?.role === 'coach'" to="/studio">管理</router-link>
       </nav>
       <div class="top-right">

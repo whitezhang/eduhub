@@ -8,45 +8,76 @@ const route = useRoute();
 const router = useRouter();
 const session = useSession();
 const lists = ref([]);
-const problems = ref([]);
+const papers = ref([]);
 const q = ref("");
 const err = ref("");
 const noAnswerCount = ref(0);
+const loading = ref(false);
+let loadSeq = 0;
 
 const source = computed(() => String(route.query.source || ""));
 
+const filteredPapers = computed(() => {
+  const needle = q.value.trim().toLowerCase();
+  if (!needle) return papers.value;
+  return papers.value.filter((c) => String(c.title || "").toLowerCase().includes(needle));
+});
+
 async function load() {
+  const seq = ++loadSeq;
+  const src = source.value;
   err.value = "";
+  loading.value = true;
+  papers.value = [];
   try {
-    const [l, p] = await Promise.all([
+    const [l, c] = await Promise.all([
       api("/api/problem-lists"),
-      api(`/api/problems?source=${encodeURIComponent(source.value)}&q=${encodeURIComponent(q.value)}`),
+      api(`/api/contests?source=${encodeURIComponent(src)}`),
     ]);
+    if (seq !== loadSeq) return;
     lists.value = l.lists;
-    problems.value = p.problems;
+    papers.value = c.contests || [];
     noAnswerCount.value = 0;
     if (session.user?.role === "coach") {
       const studio = await api("/api/studio/problems");
+      if (seq !== loadSeq) return;
       noAnswerCount.value = (studio.problems || []).filter((x) => !x.has_answer).length;
     }
   } catch (e) {
+    if (seq !== loadSeq) return;
     err.value = e.message;
+    papers.value = [];
+  } finally {
+    if (seq === loadSeq) loading.value = false;
   }
 }
 
-function scoreText(p) {
-  if (p.my_score == null) return "—";
-  if (p.my_score >= p.full_score) return String(p.my_score);
-  return String(p.my_score);
+function goSource(slug) {
+  q.value = "";
+  router.push({ path: "/problems", query: slug ? { source: slug } : {} });
+}
+
+function clearSearch() {
+  q.value = "";
+}
+
+function scoreHint(c) {
+  const n = c.problem_count || 0;
+  if (!n) return "暂无题目";
+  if (c.full_count) return `满分 ${c.full_count} / ${n}`;
+  if (c.done_count) return `已做 ${c.done_count} / ${n}`;
+  return `${n} 题`;
 }
 
 onMounted(load);
-watch(() => route.query.source, load);
+watch(
+  () => route.query.source,
+  () => {
+    q.value = "";
+    load();
+  },
+);
 watch(() => session.user?.role, load);
-
-function goSource(slug) {
-  router.push({ path: "/problems", query: slug ? { source: slug } : {} });
-}
 </script>
 
 <template>
@@ -59,38 +90,69 @@ function goSource(slug) {
     <p v-if="err" class="err">{{ err }}</p>
     <div class="chips">
       <a href="#" :class="{ on: !source }" @click.prevent="goSource('')">全部</a>
-      <a v-for="l in lists" :key="l.slug" href="#" :class="{ on: source === l.source }" @click.prevent="goSource(l.source)">{{ l.title }}</a>
+      <a
+        v-for="l in lists"
+        :key="l.slug"
+        href="#"
+        :class="{ on: source === l.source }"
+        @click.prevent="goSource(l.source)"
+      >{{ l.title }}</a>
     </div>
     <div class="problems-layout">
       <aside class="side">
         <a href="#" :class="{ on: !source }" @click.prevent="goSource('')">全部</a>
-        <a v-for="l in lists" :key="l.id" href="#" :class="{ on: source === l.source }" @click.prevent="goSource(l.source)">{{ l.title }}</a>
+        <a
+          v-for="l in lists"
+          :key="l.id"
+          href="#"
+          :class="{ on: source === l.source }"
+          @click.prevent="goSource(l.source)"
+        >{{ l.title }}</a>
       </aside>
       <div>
-        <div class="filter-row">
-          <input v-model="q" class="search" placeholder="搜索题号或标题" @keyup.enter="load" />
-          <button class="btn-ghost" type="button" @click="load">搜索</button>
+        <div class="search-wrap">
+          <input v-model="q" class="search search-fill" placeholder="搜索试卷名" type="search" autocomplete="off" />
+          <button v-if="q" class="search-clear" type="button" aria-label="清除" @click="clearSearch">×</button>
         </div>
-        <table class="table desk">
+        <p v-if="loading" class="muted problem-bank-sum">载入中</p>
+        <p v-else-if="filteredPapers.length" class="muted problem-bank-sum">
+          <template v-if="q.trim()">筛选 {{ filteredPapers.length }} / {{ papers.length }} 套</template>
+          <template v-else>共 {{ papers.length }} 套试卷</template>
+        </p>
+        <table v-if="filteredPapers.length" class="table desk">
           <thead>
-            <tr><th>状态</th><th>题号</th><th>标题</th><th>来源</th><th>分</th><th>难度</th></tr>
+            <tr>
+              <th>试卷</th>
+              <th>题数</th>
+              <th>进度</th>
+              <th></th>
+            </tr>
           </thead>
           <tbody>
-            <tr v-for="p in problems" :key="p.id">
-              <td :class="p.my_score == null ? '' : p.my_score >= p.full_score ? 'ok' : 'mid'">{{ scoreText(p) }}</td>
-              <td class="mono"><router-link :to="`/problems/${p.id}`">{{ p.code }}</router-link></td>
-              <td><router-link :to="`/problems/${p.id}`">{{ p.title }}</router-link></td>
-              <td><span class="tag">{{ p.source }}</span></td>
-              <td>{{ p.full_score }}</td>
-              <td>{{ p.difficulty }}</td>
+            <tr v-for="c in filteredPapers" :key="c.id">
+              <td>{{ c.title }}</td>
+              <td class="mono">{{ c.problem_count }}</td>
+              <td class="muted">{{ scoreHint(c) }}</td>
+              <td>
+                <router-link :to="{ path: `/problems/papers/${c.id}`, query: source ? { source } : {} }">进入</router-link>
+              </td>
             </tr>
           </tbody>
         </table>
-        <p v-if="!problems.length" class="muted">本题单暂无题目。</p>
+        <p v-else-if="!loading" class="muted">
+          <template v-if="q.trim() && papers.length">没有名称含「{{ q.trim() }}」的试卷。</template>
+          <template v-else>本题单暂无试卷。</template>
+        </p>
         <div class="mobile">
-          <router-link v-for="p in problems" :key="p.id" class="card" :to="`/problems/${p.id}`" style="display:block;text-decoration:none;color:inherit">
-            <div><span class="mono">{{ p.code }}</span> {{ p.title }}</div>
-            <div class="muted">{{ p.source }} · {{ scoreText(p) }} / {{ p.full_score }}</div>
+          <router-link
+            v-for="c in filteredPapers"
+            :key="c.id"
+            class="problem-card"
+            :to="{ path: `/problems/papers/${c.id}`, query: source ? { source } : {} }"
+          >
+            <span class="muted mono">{{ c.problem_count }}</span>
+            <span>{{ c.title }}</span>
+            <span class="muted">{{ scoreHint(c) }}</span>
           </router-link>
         </div>
       </div>

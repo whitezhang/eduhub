@@ -6,7 +6,8 @@ import { localDraft, writeLocalProgress } from "../paper-save.js";
 import { useSession } from "../stores/session.js";
 import CodeEditor from "./CodeEditor.vue";
 import StatementView from "./StatementView.vue";
-import { optionCaption } from "../statement.js";
+import { formatOptionText } from "../statement.js";
+
 
 const route = useRoute();
 const router = useRouter();
@@ -24,6 +25,7 @@ const hydrating = ref(false);
 let timer = null;
 let saveTimer = null;
 let judgeGen = 0;
+let loadSeq = 0;
 let recording = false;
 let pendingRecord = false;
 let lastSentKey = "";
@@ -48,8 +50,9 @@ if __name__ == "__main__":
 
 const paper = computed(() => problem.value?.paper || null);
 const paperIndex = computed(() => {
-  if (!paper.value || !problem.value) return -1;
-  return paper.value.problems.findIndex((p) => p.id === problem.value.id);
+  if (!paper.value) return -1;
+  const id = Number(route.params.id);
+  return paper.value.problems.findIndex((p) => Number(p.id) === id);
 });
 const prevProblem = computed(() => {
   const i = paperIndex.value;
@@ -74,14 +77,14 @@ function paperHref(pid) {
 
 function goNeighbor(p) {
   if (!p) return;
-  recordAnswer();
   router.push(paperHref(p.id));
 }
 
 function chipClass(p) {
   const full = p.full_score || 100;
+  const currentId = Number(route.params.id);
   return {
-    on: problem.value && p.id === problem.value.id,
+    on: Number(p.id) === currentId,
     ok: p.my_score != null && p.my_score >= full,
     mid: p.my_score != null && p.my_score < full,
     draft: p.my_score == null && p.has_draft,
@@ -178,6 +181,16 @@ async function recordAnswer() {
 }
 
 async function loadProblem() {
+  const outgoing = problem.value
+    ? {
+        id: problem.value.id,
+        language: problem.value.type === "choice" ? "choice" : lang.value,
+        code: problem.value.type === "choice" ? choice.value : code.value,
+        keep: hasContent(),
+        contestId: contestId.value,
+        paperId: paper.value?.id,
+      }
+    : null;
   if (timer) {
     clearInterval(timer);
     timer = null;
@@ -185,11 +198,34 @@ async function loadProblem() {
   clearTimeout(saveTimer);
   pendingRecord = false;
   lastSentKey = "";
+  judgeGen += 1;
+  const seq = ++loadSeq;
   hydrating.value = true;
   err.value = "";
+  if (outgoing?.paperId) {
+    writeLocalProgress(
+      session.user,
+      outgoing.paperId,
+      outgoing.id,
+      outgoing.language,
+      outgoing.code,
+      outgoing.keep,
+    );
+    if (outgoing.keep) markDraft(outgoing.id);
+    if (session.user) {
+      api(`/api/papers/${outgoing.paperId}/progress`, {
+        method: "PUT",
+        body: { problem_id: outgoing.id, language: outgoing.language, code: outgoing.code },
+      }).catch(() => {});
+      if (outgoing.keep) sendOutgoing(outgoing);
+    }
+  } else if (outgoing?.keep) {
+    writeLocalProgress(session.user, `p${outgoing.id}`, outgoing.id, outgoing.language, outgoing.code, true);
+  }
   const contestQ = route.query.contest ? `?contest=${encodeURIComponent(route.query.contest)}` : "";
   try {
     const next = await api(`/api/problems/${route.params.id}${contestQ}`);
+    if (seq !== loadSeq) return;
     result.value = null;
     waiting.value = "";
     unofficial.value = false;
@@ -237,19 +273,18 @@ async function loadProblem() {
       );
     }
   } catch (e) {
+    if (seq !== loadSeq) return;
     err.value = e.message;
     if (!problem.value) problem.value = null;
   }
+  if (seq !== loadSeq) return;
   await nextTick();
   hydrating.value = false;
 }
 
 watch(
   () => [route.params.id, route.query.contest],
-  async (now, prev) => {
-    if (prev && problem.value && !hydrating.value) {
-      await recordAnswer();
-    }
+  () => {
     loadProblem();
   },
   { immediate: true },
@@ -265,25 +300,30 @@ onUnmounted(() => {
   recordAnswer();
 });
 
-async function poll(id, gen) {
-  waiting.value = "评测中";
-  unofficial.value = false;
+async function poll(id, gen, forProblemId) {
+  const show = () => gen === judgeGen;
+  if (show()) {
+    waiting.value = "评测中";
+    unofficial.value = false;
+  }
+  let localTimer = null;
   const tick = async () => {
-    if (gen !== judgeGen) return;
     const s = await api(`/api/submissions/${id}`);
     if (s.status === "queued" || s.status === "judging") {
-      waiting.value = s.status === "queued" ? "排队中" : "评测中";
-      return;
+      if (show()) waiting.value = s.status === "queued" ? "排队中" : "评测中";
+      return false;
     }
-    if (timer) {
-      clearInterval(timer);
-      timer = null;
+    if (localTimer) {
+      clearInterval(localTimer);
+      localTimer = null;
     }
-    waiting.value = "";
-    result.value = s;
-    unofficial.value = Boolean(s.result?.unofficial);
+    if (show()) {
+      waiting.value = "";
+      result.value = s;
+      unofficial.value = Boolean(s.result?.unofficial);
+    }
     if (paper.value) {
-      const item = paper.value.problems.find((p) => p.id === problem.value.id);
+      const item = paper.value.problems.find((p) => Number(p.id) === Number(forProblemId));
       if (item) {
         if (s.score != null) {
           item.my_score = s.score;
@@ -293,10 +333,32 @@ async function poll(id, gen) {
         }
       }
     }
+    return true;
   };
-  await tick();
-  if (gen !== judgeGen) return;
-  timer = setInterval(tick, 1200);
+  if (await tick()) return;
+  localTimer = setInterval(async () => {
+    if (await tick()) {
+      clearInterval(localTimer);
+      localTimer = null;
+    }
+  }, 1200);
+  if (show()) timer = localTimer;
+}
+
+async function sendOutgoing(outgoing) {
+  try {
+    const payload = {
+      problem_id: outgoing.id,
+      mode: "full",
+      language: outgoing.language === "choice" ? "cpp" : outgoing.language,
+      contest_id: outgoing.contestId,
+      code: outgoing.code,
+    };
+    const r = await api("/api/submissions", { method: "POST", body: payload });
+    await poll(r.id, -1, outgoing.id);
+  } catch {
+    /* 换题后的后台评测失败不影响当前页 */
+  }
 }
 
 async function send(mode, { interactive = true } = {}) {
@@ -319,8 +381,9 @@ async function send(mode, { interactive = true } = {}) {
       clearInterval(timer);
       timer = null;
     }
+    const judgedId = problem.value.id;
     const r = await api("/api/submissions", { method: "POST", body: payload });
-    await poll(r.id, gen);
+    await poll(r.id, gen, judgedId);
     return true;
   } catch (e) {
     err.value = e.message;
@@ -342,12 +405,7 @@ function resultLabel() {
 }
 
 function optionBody(opt) {
-  return optionCaption(opt);
-}
-
-function optionRich(opt) {
-  const t = optionCaption(opt);
-  return /```|^\s*(#include|int main|def )/m.test(t) || t.includes("\n");
+  return formatOptionText(opt);
 }
 </script>
 
@@ -357,7 +415,7 @@ function optionRich(opt) {
     <div class="wide" style="margin-bottom:0.75rem">
       <nav v-if="paper" class="exam-nav">
         <div class="exam-nav-head">
-          <router-link :to="`/contests/${paper.id}`">{{ paper.title }}</router-link>
+          <router-link :to="`/problems/papers/${paper.id}`">{{ paper.title }}</router-link>
           <span class="muted mono">{{ paperIndex + 1 }} / {{ paper.problems.length }}</span>
           <span v-if="saveHint" class="muted">{{ saveHint }}</span>
         </div>
@@ -369,6 +427,8 @@ function optionRich(opt) {
               :to="paperHref(p.id)"
               class="exam-num"
               :class="chipClass(p)"
+              active-class="exam-num-active"
+              exact-active-class="exam-num-active"
               :title="chipTitle(p)"
             >{{ i + 1 }}</router-link>
           </div>
@@ -413,8 +473,7 @@ function optionRich(opt) {
             <input type="radio" :value="opt.key" v-model="choice" />
             <span class="choice-body">
               <span class="choice-key">{{ opt.key }}.</span>
-              <StatementView v-if="optionRich(opt)" class="choice-rich" :text="optionBody(opt)" />
-              <span v-else class="choice-text">{{ optionBody(opt) }}</span>
+              <StatementView v-if="optionBody(opt)" class="choice-rich" :text="optionBody(opt)" />
             </span>
           </label>
           <p v-if="!(problem.choice?.options || []).length" class="muted">本题选项不完整，仍可保存作答。</p>
@@ -440,7 +499,7 @@ function optionRich(opt) {
             <span v-if="result.score != null && result.status !== 'submitted'"> · {{ result.score }} 分</span>
           </p>
           <p v-if="paper && !nextProblem" class="muted">
-            <router-link :to="`/contests/${paper.id}`">本卷最后一题，返回试卷</router-link>
+            <router-link :to="`/problems/papers/${paper.id}`">本卷最后一题，返回试卷</router-link>
           </p>
           <p v-if="result.result?.error" class="pre">{{ result.result.error }}</p>
           <table v-if="result.result?.cases?.length && result.status !== 'submitted'" class="table">
@@ -453,7 +512,7 @@ function optionRich(opt) {
           </table>
         </div>
         <p v-else-if="paper && !nextProblem" class="muted">
-          <router-link :to="`/contests/${paper.id}`">本卷最后一题，返回试卷</router-link>
+          <router-link :to="`/problems/papers/${paper.id}`">本卷最后一题，返回试卷</router-link>
         </p>
       </div>
     </div>

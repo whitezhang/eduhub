@@ -3,7 +3,7 @@
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export EDUHUB_SRC="${EDUHUB_SRC:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
-export WEB="${WEB:-/www/wwwroot/eduhub}"
+export WEB="${WEB:-/www/wwwroot/edu.jsoner.cn}"
 SKIP_SERVER="${SKIP_SERVER:-0}"
 SKIP_CLIENT="${SKIP_CLIENT:-0}"
 

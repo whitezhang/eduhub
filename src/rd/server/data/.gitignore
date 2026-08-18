@@ -1,12 +1,12 @@
-# 本目录不进 git。本机与服务器用同一套相对路径，差别只在有没有 cache。
+# 本目录：runtime / seed / cache 不进 git。catalog/problems 进 git（正式改题）。
 runtime/
 seed/
 cache/
-# 旧布局
-eduhub.db
-eduhub.db-wal
-eduhub.db-shm
-tmp/
-imports/
-crawls/
-problems/
+# 旧布局（仅 data 根下，勿误伤 catalog/problems）
+/eduhub.db
+/eduhub.db-wal
+/eduhub.db-shm
+/tmp/
+/imports/
+/crawls/
+/problems/

@@ -2,9 +2,12 @@ node_modules/
 src/rd/client/dist/
 
 # data 按角色拆：runtime 两边都有，seed 可同步，cache 只留本机。均不进 git。
+# catalog/problems/*.json 进 git：管理员网页改题后的正式题面，deploy 时导入。
 src/rd/server/data/runtime/
 src/rd/server/data/seed/
 src/rd/server/data/cache/
+!src/rd/server/data/catalog/
+!src/rd/server/data/catalog/**/
 # 旧路径，避免误提交尚未迁完的文件
 src/rd/server/data/eduhub.db
 src/rd/server/data/eduhub.db-wal

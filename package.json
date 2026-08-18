@@ -12,6 +12,7 @@
     "dev": "node src/op/dev.mjs",
     "restart": "node src/op/restart.mjs",
     "import:gesp": "python src/op/gesp_import.py",
+    "apply:catalog": "node src/op/apply-catalog.mjs",
     "build:client": "vite build --config src/rd/client/vite.config.js",
     "build": "npm run build:client"
   },

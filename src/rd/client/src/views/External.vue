@@ -10,8 +10,7 @@ onMounted(async () => {
 
 <template>
   <div class="read">
-    <h1 class="serif">外部竞赛</h1>
-    <p class="muted">本站不承办官方认证。报名、准考证与证书请走官网。</p>
+    <h1 class="serif">外部资料</h1>
     <div class="timeline" style="margin-top:2rem">
       <template v-for="e in events" :key="e.id">
         <div class="mono muted">{{ e.month_label }}</div>
