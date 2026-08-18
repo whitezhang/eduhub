@@ -1,0 +1,16 @@
+[Unit]
+Description=EduHub API (Node)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/deploy/eduhub
+Environment=PORT=8080
+Environment=NODE_ENV=production
+# Environment=SSO_SECRET=change-me
+ExecStart=/usr/bin/node src/rd/server/index.mjs
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

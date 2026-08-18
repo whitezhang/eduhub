@@ -1,0 +1,33 @@
+{
+  "name": "eduhub",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node src/rd/server/index.mjs",
+    "dev:server": "node src/rd/server/index.mjs",
+    "dev:client": "vite --config src/rd/client/vite.config.js",
+    "dev": "node src/op/dev.mjs",
+    "restart": "node src/op/restart.mjs",
+    "import:gesp": "python src/op/gesp_import.py",
+    "build:client": "vite build --config src/rd/client/vite.config.js",
+    "build": "npm run build:client"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dompurify": "^3.4.13",
+    "highlight.js": "^11.12.0",
+    "marked": "^18.0.10"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "element-plus": "^2.9.11",
+    "monaco-editor": "^0.52.2",
+    "pinia": "^3.0.2",
+    "vite": "^6.3.5",
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1"
+  }
+}
