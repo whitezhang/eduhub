@@ -9,5 +9,10 @@ cd "$EDUHUB_SRC"
 npm ci
 npm run build:client
 mkdir -p "$WEB"
-rsync -a --delete "$EDUHUB_SRC/src/rd/client/dist/" "$WEB/"
+# 宝塔会在站点根放不可删的 .user.ini（常带 chattr +i）；--delete 时跳过，避免 rsync code 23
+rsync -a --delete \
+  --exclude '.user.ini' \
+  --exclude '.htaccess' \
+  --exclude '.well-known' \
+  "$EDUHUB_SRC/src/rd/client/dist/" "$WEB/"
 echo "==> [client] done -> $WEB"
