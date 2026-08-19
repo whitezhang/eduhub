@@ -1,0 +1,591 @@
+{
+  "meta": {
+    "ym": "202309",
+    "lang": "cpp",
+    "level": 1,
+    "title": "GESP 9月认证C++一级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10105.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1570611155435552.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202309-cpp-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "我们通常说的 “ 内存 ” 属于计算机中的(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "输出设备"
+        },
+        {
+          "key": "B",
+          "text": "输入设备"
+        },
+        {
+          "key": "C",
+          "text": "存储设备"
+        },
+        {
+          "key": "D",
+          "text": "打印设备"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "以下 C++ 不可以作为变量的名称的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "redStar"
+        },
+        {
+          "key": "B",
+          "text": "RedStar"
+        },
+        {
+          "key": "C",
+          "text": "red_star"
+        },
+        {
+          "key": "D",
+          "text": "red star"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "C++ 表达式2 - 1 && 2 % 10的值是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下面 C++ 代码段执行后的输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "3+4= 7"
+        },
+        {
+          "key": "B",
+          "text": "3+4=7"
+        },
+        {
+          "key": "C",
+          "text": "a+b=7"
+        },
+        {
+          "key": "D",
+          "text": "a+b=a+b"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "在 C++ 语言中,int类型的变量x、y、z的值分别为2、4、6,以下表达式的值为真的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "x > y || x > z"
+        },
+        {
+          "key": "B",
+          "text": "x != z - y"
+        },
+        {
+          "key": "C",
+          "text": "z > y + x"
+        },
+        {
+          "key": "D",
+          "text": "x < y || !x < z"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "对int类型的变量a、b、c,下列语句不符合 C++ 语法是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "c += 5;"
+        },
+        {
+          "key": "B",
+          "text": "b = c % 2.5;"
+        },
+        {
+          "key": "C",
+          "text": "a = (b = 3, c = 4, b + c);"
+        },
+        {
+          "key": "D",
+          "text": "a -= a = (b = 6) / (c = 2);"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "都是偶数"
+        },
+        {
+          "key": "B",
+          "text": "都是奇数"
+        },
+        {
+          "key": "C",
+          "text": "不都是偶数或奇数"
+        },
+        {
+          "key": "D",
+          "text": "以上说法都不正确"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "都是偶数"
+        },
+        {
+          "key": "B",
+          "text": "都是奇数"
+        },
+        {
+          "key": "C",
+          "text": "不都是偶数或奇数"
+        },
+        {
+          "key": "D",
+          "text": "以上说法都不正确"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 C++ 代码段执行后的输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面 C++ 代码用于求正整数的所有因数,即输出所有能整除一个正整数的数。如,输入 10 ,则输出为 1 、\n2、 5 、 10 ;输入 12 ,则输出为 1 、 2 、 3 、 4 、 6 、 12 ;输入 17 ,则输出为 1 、 17 。在横线处应填入代码是(   )。\n\n```\nint i = 1; i < n; i + 1\nint i = 1; i < n + 1; i + 1\nint i = 1; i < n; i++\nint i = 1; i < n + 1; i++\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "在下列代码的横线处填写(   ),可以使得输出是正整数1234各位数字的平方和。",
+      "options": [
+        {
+          "key": "A",
+          "text": "n / 10"
+        },
+        {
+          "key": "B",
+          "text": "(n / 10) * (n / 10)"
+        },
+        {
+          "key": "C",
+          "text": "n % 10"
+        },
+        {
+          "key": "D",
+          "text": "(n % 10) * (n % 10)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "执行以下 C++ 语言程序后,输出结果是(   )。\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "无法确定"
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "早期计算机内存不够大,可以将字库固化在一个包含只读存储器的扩展卡中插入计算机主板帮助处理汉字。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "神威 · 太湖之光超级计算机是中国自主研制的超级计算机,在全球超级计算机 TOP500 排行榜中多次荣膺榜\n首。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "C++ 表达式int(3.14)的值为3。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "C++ 语句cout << (2, 3, \"23\")的输出为2, 3, 23。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "C++ 的循环语句for (int i = 0; i < 10; i += 2)表示i从0开始到10结束但不包含10,间隔为\n2。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "C++ 表达式('1' + '1')的值为'2'。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "在 C++ 语言中,do-while循环不可能导致死循环,但while有可能。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "在下面的 C++ 代码中,由于循环中的continue是无条件被执行,因此将导致死循环。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在 C++ 代码中,不可以将变量命名为cout,因为cout是 C++ 的关键字。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "C++ 是一种高级程序设计语言。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "买文具",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n开学了,小明来到文具店选购文具。签字笔 2 元一支,他需要支;记事本 5 元一本,他需要本;直尺 3 元一把,他\n需要把。小明手里有元钱。请你通过编程帮小明算算,他手里的钱是否够买他需要的文具。\n3.1.2 输入描述\n输入 4 行。\n第一行包含一个正整数,是小明购买签字笔的数量。约定 。\n第二行包含一个正整数,是小明购买记事本的数量。约定 。\n第三行包含一个正整数,是小明购买直尺的数量。约定 。\n第四行包含一个正整数,是小明手里的钱数(单位:元)。\n3.1.3 输出描述\n输出 2 行。如果小明手里的钱够买他需要的文具,则第一行输出 \"Yes\" ,第二行输出小明会剩下的钱数(单位:元);\n否则,第一行输出 \"No\" ,第二行输出小明缺少的钱数(单位:元)。\n3.1.4 样例输入 1\n3.1.5 样例输出 1\n3.1.6 样例输入 2\n3.1.7 样例输出 2\n3.1.8",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "小明的幸运数",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n所有个位数为的正整数,以及所有的倍数,都被小明称为 “幸运数 ” 。小明想知道正整数和之间(包括和)\n所有幸运数的和,你能帮帮他吗?\n3.2.2 输入描述\n输入 3 行。第一行包含一个正整数,第二行包含一个正整数,第三行包含一个正整数。约定 ,\n。\n3.2.3 输出描述\n输出 1 行,符合题意的幸运数之和。\n3.2.4 样例输入 1\n3.2.5 样例输出 1\n3.2.6 样例解释 1\n1和 10 之间共有 1 个 7 幸运数: 7 。因为 7 既是 7 的倍数,个位数又为 7 。因此,结果为 7 。\n3.2.7 样例输入 2\n        cout << q - t << endl;\n    } else {\n        cout << \"No\" << endl;\n        cout << t - q << endl;\n    }\n    return 0;\n}\n\n3.2.8 样例输出 2\n3.2.9 样例解释 2\n10 和 20 之间共有 2 个 7 幸运数: 14 和 17 。 14 是 7 的倍数, 17 的个位数为 7 。因此,结果为 31 。\n3.2.10",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [
+        {
+          "in": "7\n",
+          "out": "10\n",
+          "suspect": false
+        },
+        {
+          "in": "10\n20\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "D",
+      "B",
+      "C",
+      "D",
+      "B",
+      "A",
+      "C",
+      "A",
+      "C",
+      "B",
+      "B",
+      "D",
+      "D",
+      "A",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "meta": {
+    "ym": "202409",
+    "lang": "python",
+    "level": 1,
+    "title": "GESP 9月认证 Python 一级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10166.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1633836412698656.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202409-python-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "据有关资料,山东大学于 1972 年研制成功 DJL-1 计算机,并于 1973 年投入运行,其综合性能居当时全国第三\n位。 DJL-1 计算机运算控制部分所使用的磁心存储元件由磁心颗粒组成,设计存贮周期为 2μs (微秒)。那么该磁心\n存储元件相当于现代计算机的(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "内存"
+        },
+        {
+          "key": "B",
+          "text": "磁盘"
+        },
+        {
+          "key": "C",
+          "text": "CPU"
+        },
+        {
+          "key": "D",
+          "text": "显示器"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "Python 程序执行出现错误,不太常见的调试手段是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "阅读源代码"
+        },
+        {
+          "key": "B",
+          "text": "单步调试"
+        },
+        {
+          "key": "C",
+          "text": "输出执行中间结果"
+        },
+        {
+          "key": "D",
+          "text": "跟踪计算机执行的底层代码(如二进制机器码,汇编码)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "在 Python 中,下列表达式错误的是 (  ) 。\n\n```\nprint(\"Hello,GESP!\")\nprint('Hello,GESP!')\nprint(\"\"\"Hello,GESP!\"\"\")\nprint(\"Hello,GESP!')\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "Python 表达式10 - 3 * 2的值是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "在 Python 中,假设 N 为正整数 10 ,则print(N // 3 + N % 3)将输出 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": "4.3"
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "Python 语句print(f\"6%2={6%2}\")执行后的输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "f\"6%2={6%2}\""
+        },
+        {
+          "key": "B",
+          "text": "6%2={6%2}"
+        },
+        {
+          "key": "C",
+          "text": "0=0"
+        },
+        {
+          "key": "D",
+          "text": "6%2=0"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "执行下面的 Python 代码,先后从键盘上输入 5 回车和 2 回车,输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "将输出整数 7"
+        },
+        {
+          "key": "B",
+          "text": "将输出 52 , 5 和 2 之间没有空格"
+        },
+        {
+          "key": "C",
+          "text": "将输出 5 和 2 , 5 和 2 之间有空格"
+        },
+        {
+          "key": "D",
+          "text": "语句执行将报错,因为 input() 函数的括号内没有提示字符串"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后,相关说法 的是( )。错误",
+      "options": [
+        {
+          "key": "A",
+          "text": "如果 N 是小于 10 的正整数,则输出 0"
+        },
+        {
+          "key": "B",
+          "text": "如果 N 是大于等于 0 的整数,则输出 N 的个位数【 N 的最后一位数】"
+        },
+        {
+          "key": "C",
+          "text": "如果 N 是负整数,则输出不是 N 的个位数【 N 的最后一位数】"
+        },
+        {
+          "key": "D",
+          "text": "如果 N 是大于 10 的正整数,则输出 N 的个位数【 N 的最后一位数】"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后,相关说法 的是( )。错误",
+      "options": [
+        {
+          "key": "A",
+          "text": "如果输入正整数、负整数或 0 ,输出都将是大于等于 0 的数,即其绝对值 a = input() b = input() print(a + b) N = input() N = int(N) print(N % 10) N = input() N = int(N) if N < 0: print(-N) else: print(N)"
+        },
+        {
+          "key": "B",
+          "text": "如果输入正浮点数、负浮点数或 0 ,输出都将是大于等于 0 的浮点数,即其绝对值"
+        },
+        {
+          "key": "C",
+          "text": "如果输入正浮点数或负浮点数,程序将报错"
+        },
+        {
+          "key": "D",
+          "text": "如果输入形如 5+2 类似的表达式,程序将报错"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "为在 Python Turtle 中输出如下图形,代码横线处应填入(     )。\nSum = 0\nfor i in range(10):\n    Sum += i\nprint(Sum)\n1\n2\n3\n4\nN = 0\nfor i in range(10):\n    N += 1\nprint(N)\n1\n2\n3\n4\nN = 0\nfor i in range(1, 10, 2):\n    if i % 2 == 1:\n        continue\n    N += 1\nprint(N)\n1\n2\n3\n4\n5\n6",
+      "options": [
+        {
+          "key": "A",
+          "text": "right(90)"
+        },
+        {
+          "key": "B",
+          "text": "left(90)"
+        },
+        {
+          "key": "C",
+          "text": "right(-90)"
+        },
+        {
+          "key": "D",
+          "text": "left(-180)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面 Python 执行后,有关说法,正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "以红色线段开始,长度为 20"
+        },
+        {
+          "key": "B",
+          "text": "以红色线段开始,长度为 25"
+        },
+        {
+          "key": "C",
+          "text": "以蓝色线段开始,长度为 20"
+        },
+        {
+          "key": "D",
+          "text": "以蓝色线段开始,长度为 25"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出的是(     )。\nimport turtle\nfor i in range(1,5):\n    turtle._________\n    turtle.forward(100)\n1\n2\n3\n4\nimport turtle\nfor i in range(10):\n    if i % 2 == 0:\n        turtle.color(\"red\")\n    else:\n        turtle.color(\"blue\")\n    turtle.forward(20+i*5)\n1\n2\n3\n4\n5\n6\n7\nimport turtle\nfor i in range(4):\n    turtle.left(180)\n    if i % 2 == 0:\n        turtle.color(\"red\")\n    else:\n        turtle.color(\"blue\")\n    if i < 2:\n        turtle.circle(25)\n    else:\n        turtle.circle(50)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小杨最近开始学习 Python 编程,老师说 Python 是一门高级语言。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "在 Python 中,表达式10/2和10//2的值相同,都是整数 5 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 语句 print(int(input())) 能接收形如正整数、负整数和 0 输入,输入含字母或带小数点数,将导致错误。  (\n)",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "下面的 Python 代码执行过程中不会出现错误,且其输出为 45 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后将输出 100 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后,最后一次输出是 10 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "在 Python 循环语句中, break 通常与 if 语句配合使用。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "在 Python 代码中,不可以将变量命名为 five-star ,因为变量名中不可以出现 - (减号)符号。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "Python 代码 turtle.home() 可以清除海龟绘图,且海龟将回到原点,海龟方向重置为初识方向。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后将绘制从左到右逐步升高的台阶。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "小杨购物",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有   元钱用于购物。商品   的单价是   元,商品   的单价是   元。小杨想购买  相同数量 的商品   和商品  。\n请你编写程序帮小杨计算出他最多能够购买多少个商品   和商品  。\n    Sum += i\nprint(Sum)\n\n    continue\nprint(i)\n\n    print(i)\n\nimport turtle\n    turtle.forward(20)\n    turtle.left(90)\n    turtle.forward(10)\n    turtle.right(90)\n\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,代表小杨用于购物的钱的金额。\n第二行包含一个正整数  ,代表商品   的单价。\n第三行包含一个正整数  ,代表商品   的单价。\n3.1.3 输出格式\n输出一行,包含一个整数,代表小杨最多能够购买的商品   和商品   的数量。\n3.1.4 样例 1\n在样例 1 中,第 1 行输入的 12 表示小杨拥有的资金总额为 12 元,第 2 行的 1 表示第一种商品(即商品 A )的单价,第 3 行\n的 2 表示第二种商品(即商品 B )的单价。\n对于样例 1 ,由于需要购买相同数量的两种商品,因此小杨最多能够购买   件商品   和   件商品  ,共花费\n 元。因此,样例 1 的答案为  。\n对于本题,输入皆为大于 0 的正整数,不必考虑其他情况。\n3.1.5 样例 2\n对于样例 2 ,由于需要购买相同数量的两种商品,因此小杨最多能够购买   件商品   和   件商品  ,共花费\n 元。如果小杨想购买   件商品   和   件商品  ,则需花费   元,超过了小杨的\n预算   元。因此,样例 2 的答案为  。\n对于全部数据,保证有  【此处为严谨题目所需,本级考生不必考虑本行描述】。\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "美丽数字",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨有   个正整数,他认为一个正整数是美丽数字当且仅当该正整数是   的倍数但不是   的倍数。\n小杨想请你编写一个程序计算   个正整数中美丽数字的数量。\n3.2.2\n\n输入格式\n第一行包含一个正整数  ,代表正整数个数。\n第二行包含   个正整数  。\n3.2.3 输出格式\n输出一个整数,代表其中美丽数字的数量。\n3.2.4 样例 1\n对于样例 1 :\n 既不是   的倍数,也不是   的倍数;\n 是   的倍数,不是   的倍数;\n 既是   的倍数,也是   的倍数;\n因此答案为  。\n对于全部数据,均保证输入为大于 0 的正整数,保证有  【此处为严谨题目所需,本级考生\n可不考虑】。\n3.2.5",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "A",
+      "D",
+      "D",
+      "B",
+      "C",
+      "D",
+      "B",
+      "A",
+      "B",
+      "B",
+      "C",
+      "D",
+      "A",
+      "A",
+      "A"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

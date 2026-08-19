@@ -1,0 +1,1060 @@
+{
+  "slug": "cspj-computer-encoding",
+  "url": "https://adacpp.com/practice/cspj-computer-encoding",
+  "title": "计算机编码",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "1ZAWS7LVQzESBFAnsoCcg",
+      "type": "single_choice",
+      "content": "已知大写字符'A'的 ASCII 编码的十六进制表示为 0x41，则字符'F'的ASCII编码的十六进制表示为",
+      "options": [
+        {
+          "label": "A",
+          "text": "46"
+        },
+        {
+          "label": "B",
+          "text": "47"
+        },
+        {
+          "label": "C",
+          "text": "48"
+        },
+        {
+          "label": "D",
+          "text": "49"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识中的 ASCII 码；已知'A'的ASCII 编码十六进制表示为 0x41，则'F'的 ASCII 编码比'A'的 ASCII 编码大5，所以字符'F'的ASCII 编码十六进制表示为 46。所以本题正确答案为 A。"
+    },
+    {
+      "id": "IeSx2aCozqDfKNERpKqRS",
+      "type": "single_choice",
+      "content": "一个int类型的值，做以下哪个操作，一定会变回原来的值",
+      "options": [
+        {
+          "label": "A",
+          "text": "左移 3 位，再右移 3 位"
+        },
+        {
+          "label": "B",
+          "text": "右移 3 位，再左移 3 位"
+        },
+        {
+          "label": "C",
+          "text": "按位或 7，再按位与-8"
+        },
+        {
+          "label": "D",
+          "text": "按位异或 7，再按位异或 7"
+        }
+      ],
+      "answer": "D",
+      "explanation": "本题属于考察计算机基础知识中的位运算相关概念，A 选项可能存在越界的问题，B 选项会将低位的 3 位清零，C 选项肯定是错的，D 选项异或两次7等同于原数，所以本题正确答案为 D。"
+    },
+    {
+      "id": "-419rzsyOspaJWOFxgZ3a",
+      "type": "true_false",
+      "content": "数据编码方式只有原码、反码、补码三种",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题属于考察数据编码相关概念，数据编码的方式非常多，例如格雷码、哈夫曼编码等，它们适合使用的场景各不相同。所以本题错误。"
+    },
+    {
+      "id": "SbdfKY3Rbi0J6eZXyIga2",
+      "type": "true_false",
+      "content": "字符常量'\\0'常用来表示字符串结束，它和字符常量'0'是不同的",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题属于考察字符串相关概念，字符常量'\\0'是字符串和字符数组的结束标记，它的 ASCII 码为 0，字符常量'0'的 ASCII 码为 48，与'\\0'是不同的字符常量。所以本题正确。"
+    },
+    {
+      "id": "Q8wtzxmZJ8sbwrzkiuEhr",
+      "type": "true_false",
+      "content": "计算机中存储的数据都是二进制形式。因此，在使用C++语言编写程序时，将所有十进制数改写为相同数值的二进制数，会使得程序运行效率更高",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题属于考察程序的基本概念，无论编写程序时使用十进制还是二进制，编译器都会翻译为二进制机器指令运行，所以运行效率是一样的，所以本题错误。"
+    },
+    {
+      "id": "1vAZlCMSb6nqmt7QgTkq4",
+      "type": "single_choice",
+      "content": "已知大写字符'A'的ASCII编码的十六进制表示为 0x41，则字符'L'的ASCII编码的十六进制表示为",
+      "options": [
+        {
+          "label": "A",
+          "text": "4A"
+        },
+        {
+          "label": "B",
+          "text": "4B"
+        },
+        {
+          "label": "C",
+          "text": "4C"
+        },
+        {
+          "label": "D",
+          "text": "52"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题属于考察计算机字符编码知识。‘A’的ASCII值是65，可以推出‘L’是76，将其转换成十六进制，答案是4C。"
+    },
+    {
+      "id": "Cq-G6zmHxmy25M4dC5goo",
+      "type": "single_choice",
+      "content": "在补码表示中，最小的负数的反码是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "1111111"
+        },
+        {
+          "label": "B",
+          "text": "10000000"
+        },
+        {
+          "label": "C",
+          "text": "11111111"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "A",
+      "explanation": "补码表示中，最小的负数是10000000（表示-128）。将其按位取反（即反码）：1→0，0→1，0→1，0→1，0→1，0→1，0→1，0→1，得到01111111，省略前导0即为1111111，对应选项A。"
+    },
+    {
+      "id": "i-5hHNAwr4jxn_uZJmQtE",
+      "type": "single_choice",
+      "content": "以下哪个选项正确表示了8位二进制数-128的补码？",
+      "options": [
+        {
+          "label": "A",
+          "text": "10000000"
+        },
+        {
+          "label": "B",
+          "text": "1111111"
+        },
+        {
+          "label": "C",
+          "text": "11111111"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在8位二进制补码表示中，-128直接表示为10000000，这是因为-128在补码表示中是其自身。"
+    },
+    {
+      "id": "T5-QvO2riER4Q7VNBe7mE",
+      "type": "single_choice",
+      "content": "正数在补码表示中与其原码是怎样的关系？",
+      "options": [
+        {
+          "label": "A",
+          "text": "完全相同"
+        },
+        {
+          "label": "B",
+          "text": "全部位取反"
+        },
+        {
+          "label": "C",
+          "text": "全部位取反后加一"
+        },
+        {
+          "label": "D",
+          "text": "与符号位相反"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正数的补码表示与其原码完全相同。"
+    },
+    {
+      "id": "n3VnjYejLnWu8nuBVjg76",
+      "type": "single_choice",
+      "content": "一个字节(byte)的二进制补码表示，其能表示的最大正数是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "127"
+        },
+        {
+          "label": "B",
+          "text": "128"
+        },
+        {
+          "label": "C",
+          "text": "255"
+        },
+        {
+          "label": "D",
+          "text": "-128"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正数的补码是一个数的二进制表示，负数的补码是这个负数的反码加1，因此如果最左边一位是1就是负数，所以一个字节的补码可以表示的最大正数是01111111，即十进制的127。"
+    },
+    {
+      "id": "hsqChn-2FHbcBW5Lie0EC",
+      "type": "single_choice",
+      "content": "如果一个整数的原码是00000001，那么它的补码是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "11111111"
+        },
+        {
+          "label": "B",
+          "text": "00000001"
+        },
+        {
+          "label": "C",
+          "text": "10000001"
+        },
+        {
+          "label": "D",
+          "text": "1111111"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正数的原码和补码相同"
+    },
+    {
+      "id": "uZaAhyM6-7yOp63Kb3qQ2",
+      "type": "single_choice",
+      "content": "对于负整数的补码表示，以下哪种说法是错误的？",
+      "options": [
+        {
+          "label": "A",
+          "text": "是原码取反加一"
+        },
+        {
+          "label": "B",
+          "text": "可以通过反码加一得到"
+        },
+        {
+          "label": "C",
+          "text": "与原码表示的数值完全不同"
+        },
+        {
+          "label": "D",
+          "text": "是一种能表示更广泛范围整数的编码方式"
+        }
+      ],
+      "answer": "C",
+      "explanation": "对于负整数，补码是原码取反加一，可以通过反码加一得到，并且补码可以表示比原码更广泛的整数范围，但并不意味着与原码表示的数值完全不同。"
+    },
+    {
+      "id": "SAeeANIFz-a8LBjqiIuoN",
+      "type": "single_choice",
+      "content": "在二进制补码表示中，正数和负数的最高位（符号位）分别是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "0和1"
+        },
+        {
+          "label": "B",
+          "text": "1和0"
+        },
+        {
+          "label": "C",
+          "text": "1和1"
+        },
+        {
+          "label": "D",
+          "text": "0和0"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在补码表示中，正数的最高位（符号位）是0，负数的符号位是1。"
+    },
+    {
+      "id": "OAwpoHgx4qfyq0hI9cx7u",
+      "type": "single_choice",
+      "content": "以下关于反码和补码的说法中，哪个是正确的？",
+      "options": [
+        {
+          "label": "A",
+          "text": "所有正数的反码和补码相同"
+        },
+        {
+          "label": "B",
+          "text": "所有负数的反码和补码相同"
+        },
+        {
+          "label": "C",
+          "text": "只有0的反码和补码不相同"
+        },
+        {
+          "label": "D",
+          "text": "只有负数的补码是反码加一"
+        }
+      ],
+      "answer": "A",
+      "explanation": "所有正数的反码和补码相同，因为正数的反码和补码都与原码相同。"
+    },
+    {
+      "id": "1w3_yvXF_blUHoB-marvt",
+      "type": "single_choice",
+      "content": "在补码系统中，以下哪个选项正确地描述了-0的表示？",
+      "options": [
+        {
+          "label": "A",
+          "text": "不存在-0的概念"
+        },
+        {
+          "label": "B",
+          "text": "11111111"
+        },
+        {
+          "label": "C",
+          "text": "0"
+        },
+        {
+          "label": "D",
+          "text": "10000000"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在补码表示中，-0与+0表示相同，都是00000000，因此不存在-0的特殊表示。"
+    },
+    {
+      "id": "tzJK0CWf5uGmukSIwQz2a",
+      "type": "single_choice",
+      "content": "(    ) 是一种通用的字符编码，它为世界上绝大部分语言设定了统一并且唯一的二进制编码，以满足跨语言、跨平台的文本交换。目前它已经收录了超过十万个不同字符。",
+      "options": [
+        {
+          "label": "A",
+          "text": "ASCII"
+        },
+        {
+          "label": "B",
+          "text": "Unicode"
+        },
+        {
+          "label": "C",
+          "text": "GBK2312"
+        },
+        {
+          "label": "D",
+          "text": "BIG5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "ASCII是美国标砖字符编码，GBK2312是简体中文编码，BIG5是繁体中文编码"
+    },
+    {
+      "id": "G90anq2giseA2BQDs2DiX",
+      "type": "single_choice",
+      "content": "字符“a”的ASCII码值为97，请问字符“c”的ASCII码值是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "95"
+        },
+        {
+          "label": "B",
+          "text": "96"
+        },
+        {
+          "label": "C",
+          "text": "98"
+        },
+        {
+          "label": "D",
+          "text": "99"
+        }
+      ],
+      "answer": "D",
+      "explanation": "ASCII码值中，每个字符的值依次递增，“a”的ASCII码值为97，因此“c”的ASCII码值为97+2=99。"
+    },
+    {
+      "id": "EoG6GJ3cPqo2nfIOqlhXx",
+      "type": "single_choice",
+      "content": "字符“0”的ASCII码值为48，请问字符“9”的ASCII码值是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "56"
+        },
+        {
+          "label": "B",
+          "text": "57"
+        },
+        {
+          "label": "C",
+          "text": "58"
+        },
+        {
+          "label": "D",
+          "text": "59"
+        }
+      ],
+      "answer": "B",
+      "explanation": "ASCII码值中，“0”到“9”的字符依次递增，字符“0”的ASCII码值为48，因此“9”的ASCII码值为48+9=57。"
+    },
+    {
+      "id": "sPqXTSL8FkJzWM-CGxdSq",
+      "type": "single_choice",
+      "content": "如果 a 为 int 类型的变量，且 a 的值为 6，则执行 a &= 3，之后，a 的值会是",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "9"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题属于考察位运算的基本概念；a &= 3，等价于a = a & 3。&为按位与运算，a 的原值为 6，6 & 3 的结果为 2。所以本题正确答案为C。"
+    },
+    {
+      "id": "8NkMkDluK8XYa4cyVWBmR",
+      "type": "single_choice",
+      "content": "如果 a 为 int 类型的变量，且 a 的值为6，则执行a = ~a， 之后，a的值会是",
+      "options": [
+        {
+          "label": "A",
+          "text": "-6"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "-7"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题属于考察C++位运算知识。6按位取反运算，注意符号位也取反，呈现的是补码，转换过来就是-7。具体过程：00000110（原码）取反得11111001（补码），因为是负数，所以补码表示的值为-7。所以本题正确答案为C。"
+    },
+    {
+      "id": "jDG-tyaPcLTsuk1mvntXK",
+      "type": "single_choice",
+      "content": "如果 a 和 b 均为 int 类型的变量，且 b 的值不为0，那么下列能正确判断“a 是 b 的 3 倍”的表达式是",
+      "options": [
+        {
+          "label": "A",
+          "text": "(a >> 3 == b)"
+        },
+        {
+          "label": "B",
+          "text": "(a - b) % 3 == 0"
+        },
+        {
+          "label": "C",
+          "text": "(a / b == 3)"
+        },
+        {
+          "label": "D",
+          "text": "(a == 3 * b)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "本题属于考察运算表达式和位运算知识。b 不等于0，a 是b 的3倍。选D是最直接且正确的表达式。"
+    },
+    {
+      "id": "_TQfDeKIg9BQKm1ykg5xw",
+      "type": "single_choice",
+      "content": "定义整数 int x=-5，则执行C++代码 cout << (x == (x<<1>>1)) 输出是",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "-5"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "对于有符号整数，左移再右移可能改变符号位的值，特别是当值为负数时。但是对于-5，左移1位再右移1位得到的结果仍然是-5，所以表达式的值为true，输出1。因此，本题的答案是B。"
+    },
+    {
+      "id": "VFcXPKbmw6V_KKKwutFqk",
+      "type": "single_choice",
+      "content": "对于8位二进制数，以下哪个表示-1的补码?",
+      "options": [
+        {
+          "label": "A",
+          "text": "11111110"
+        },
+        {
+          "label": "B",
+          "text": "11111111"
+        },
+        {
+          "label": "C",
+          "text": "00000001"
+        },
+        {
+          "label": "D",
+          "text": "10000001"
+        }
+      ],
+      "answer": "B",
+      "explanation": "补码表示负数时，是该数的绝对值的二进制表示取反加一。因此，-1的补码表示为11111111。"
+    },
+    {
+      "id": "x9R4Zo9-eeY3HC9p-mnmZ",
+      "type": "single_choice",
+      "content": "一个字长为 8 位的整数的补码是 11111001，则它的原码是(    )",
+      "options": [
+        {
+          "label": "A",
+          "text": "00000111"
+        },
+        {
+          "label": "B",
+          "text": "1111001"
+        },
+        {
+          "label": "C",
+          "text": "11111001"
+        },
+        {
+          "label": "D",
+          "text": "10000111"
+        }
+      ],
+      "answer": "D",
+      "explanation": "补码11111001符号位为1，是负数。补码转原码：先减1，再将除符号位外的其余位取反。11111001−1=11111000，除符号位外取反得0000111，故原码为10000111，对应选项D。验证：11111001作为8位补码的无符号值为249，真值为249−256=−7；−7的原码为符号位1加上7的二进制0000111，即10000111，与前述一致。"
+    },
+    {
+      "id": "pLpPkNi0qaEGP0O8AYQmk",
+      "type": "single_choice",
+      "content": "如果 a 为 int 类型的变量，且 a 的值为 6，则执行 a &= 3，之后，a 的值会是",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "9"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题属于考察位运算的基本概念；a &= 3，等价于a = a & 3。&为按位与运算，a 的原值为 6，6 & 3 的结果为 2。所以本题正确答案为C。"
+    },
+    {
+      "id": "V1nn4D0BVYfaB_wE9N8h8",
+      "type": "single_choice",
+      "content": "如果 a 为 int 类型的变量，且 a 的值为6，则执行a = ~a， 之后，a的值会是",
+      "options": [
+        {
+          "label": "A",
+          "text": "-6"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "-7"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题属于考察C++位运算知识。6按位取反运算，注意符号位也取反，呈现的是补码，转换过来就是-7。具体过程：00000110（原码）取反得11111001（补码），因为是负数，所以补码表示的值为-7。所以本题正确答案为C。"
+    },
+    {
+      "id": "Juy9iHCXpbyaKafz7a7oT",
+      "type": "single_choice",
+      "content": "如果 a 和 b 均为 int 类型的变量，且 b 的值不为0，那么下列能正确判断“a 是 b 的 3 倍”的表达式是",
+      "options": [
+        {
+          "label": "A",
+          "text": "(a >> 3 == b)"
+        },
+        {
+          "label": "B",
+          "text": "(a - b) % 3 == 0"
+        },
+        {
+          "label": "C",
+          "text": "(a / b == 3)"
+        },
+        {
+          "label": "D",
+          "text": "(a == 3 * b)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "本题属于考察运算表达式和位运算知识。b 不等于0，a 是b 的3倍。选D是最直接且正确的表达式。"
+    },
+    {
+      "id": "3EPhhRnDKo4l9B37fLsz_",
+      "type": "single_choice",
+      "content": "定义整数 int x=-5，则执行C++代码 cout << (x == (x<<1>>1)) 输出是",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "-5"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "对于有符号整数，左移再右移可能改变符号位的值，特别是当值为负数时。但是对于-5，左移1位再右移1位得到的结果仍然是-5，所以表达式的值为true，输出1。因此，本题的答案是B。"
+    },
+    {
+      "id": "kVUntGhzTW_Q5KDv9oRpk",
+      "type": "single_choice",
+      "content": "对于8位二进制数，以下哪个表示-1的补码?",
+      "options": [
+        {
+          "label": "A",
+          "text": "11111110"
+        },
+        {
+          "label": "B",
+          "text": "11111111"
+        },
+        {
+          "label": "C",
+          "text": "00000001"
+        },
+        {
+          "label": "D",
+          "text": "10000001"
+        }
+      ],
+      "answer": "B",
+      "explanation": "补码表示负数时，是该数的绝对值的二进制表示取反加一。因此，-1的补码表示为11111111。"
+    },
+    {
+      "id": "TKKZRMZyDSj-3zYh1ydCB",
+      "type": "single_choice",
+      "content": "对于二进制数1010和0110进行AND操作的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "1010"
+        },
+        {
+          "label": "B",
+          "text": "1110"
+        },
+        {
+          "label": "C",
+          "text": "0010"
+        },
+        {
+          "label": "D",
+          "text": "0110"
+        }
+      ],
+      "answer": "C",
+      "explanation": "AND操作对每一位进行逻辑与运算，所以结果是0010。"
+    },
+    {
+      "id": "BAMclhz3zYeDKqNa_wHJ5",
+      "type": "single_choice",
+      "content": "对于二进制数1010和0110进行OR操作的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "1010"
+        },
+        {
+          "label": "B",
+          "text": "1110"
+        },
+        {
+          "label": "C",
+          "text": "0110"
+        },
+        {
+          "label": "D",
+          "text": "0010"
+        }
+      ],
+      "answer": "B",
+      "explanation": "OR操作对每一位进行逻辑或运算，所以结果是1110。"
+    },
+    {
+      "id": "sZEb8GdbxVtDksOt27Npn",
+      "type": "single_choice",
+      "content": "对于二进制数1010进行NOT操作的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "0101"
+        },
+        {
+          "label": "B",
+          "text": "1010"
+        },
+        {
+          "label": "C",
+          "text": "1101"
+        },
+        {
+          "label": "D",
+          "text": "0000"
+        }
+      ],
+      "answer": "A",
+      "explanation": "NOT操作对每一位进行逻辑非运算，所以结果是0101。"
+    },
+    {
+      "id": "svG_IPYcI-8vjRxcmu3-r",
+      "type": "single_choice",
+      "content": "对于二进制数1010和0110进行XOR操作的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "1111"
+        },
+        {
+          "label": "B",
+          "text": "1010"
+        },
+        {
+          "label": "C",
+          "text": "0110"
+        },
+        {
+          "label": "D",
+          "text": "1100"
+        }
+      ],
+      "answer": "D",
+      "explanation": "XOR操作对每一位进行逻辑异或运算，所以结果是1100。"
+    },
+    {
+      "id": "istY7OuE615mZDo94NdoP",
+      "type": "single_choice",
+      "content": "二进制数1010左移两位的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "101000"
+        },
+        {
+          "label": "B",
+          "text": "001010"
+        },
+        {
+          "label": "C",
+          "text": "000101"
+        },
+        {
+          "label": "D",
+          "text": "010100"
+        }
+      ],
+      "answer": "A",
+      "explanation": "左移操作是向左移动位数，并在右边补零，所以结果是101000。"
+    },
+    {
+      "id": "lqKXLXfM81EQ_diFQZgth",
+      "type": "single_choice",
+      "content": "二进制数1010右移一位的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "1001"
+        },
+        {
+          "label": "B",
+          "text": "1010"
+        },
+        {
+          "label": "C",
+          "text": "0101"
+        },
+        {
+          "label": "D",
+          "text": "1101"
+        }
+      ],
+      "answer": "C",
+      "explanation": "右移操作是向右移动位数，并在左边补零（或符号位），所以结果是0101。"
+    },
+    {
+      "id": "c0g_-OTensF9rKvgc3JK9",
+      "type": "single_choice",
+      "content": "对于二进制数1100和0011进行AND操作的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "0000"
+        },
+        {
+          "label": "B",
+          "text": "1111"
+        },
+        {
+          "label": "C",
+          "text": "1100"
+        },
+        {
+          "label": "D",
+          "text": "0011"
+        }
+      ],
+      "answer": "A",
+      "explanation": "AND操作对每一位进行逻辑与运算，所以结果是0000。"
+    },
+    {
+      "id": "-zw4SbTIWs8CimxFsQIxo",
+      "type": "single_choice",
+      "content": "对于二进制数1100和0011进行OR操作的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "0000"
+        },
+        {
+          "label": "B",
+          "text": "1100"
+        },
+        {
+          "label": "C",
+          "text": "0011"
+        },
+        {
+          "label": "D",
+          "text": "1111"
+        }
+      ],
+      "answer": "D",
+      "explanation": "OR操作对每一位进行逻辑或运算，所以结果是1111。"
+    },
+    {
+      "id": "Y-AFW-LSFlFZqErKHr3hw",
+      "type": "single_choice",
+      "content": "对于二进制数1100进行NOT操作的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "0011"
+        },
+        {
+          "label": "B",
+          "text": "1100"
+        },
+        {
+          "label": "C",
+          "text": "1111"
+        },
+        {
+          "label": "D",
+          "text": "0000"
+        }
+      ],
+      "answer": "A",
+      "explanation": "NOT操作对每一位进行逻辑非运算，所以结果是0011。"
+    },
+    {
+      "id": "hYbfq49nZt3tHA24-N4If",
+      "type": "single_choice",
+      "content": "对于二进制数1100和0011进行XOR操作的结果是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "1111"
+        },
+        {
+          "label": "B",
+          "text": "1100"
+        },
+        {
+          "label": "C",
+          "text": "0011"
+        },
+        {
+          "label": "D",
+          "text": "0000"
+        }
+      ],
+      "answer": "A",
+      "explanation": "XOR操作对每一位进行逻辑异或运算，所以结果是1111。"
+    },
+    {
+      "id": "e_cHI8EjyyH7z4vO2yK8a",
+      "type": "single_choice",
+      "content": "如果a为int类型的变量，下列哪个表达式可以正确求出满足“小于等于a且是4的倍数”的整数中最大的",
+      "options": [
+        {
+          "label": "A",
+          "text": "(a & (~3))"
+        },
+        {
+          "label": "B",
+          "text": "((a << 2) >> 2)"
+        },
+        {
+          "label": "C",
+          "text": "(a ^ 3)"
+        },
+        {
+          "label": "D",
+          "text": "((a - 1) | 3) + 1"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识中的位运算相关概念，a&一个数得到的必然是小于等于 a 的数，同时题目要求是 4 的倍数，也就是最后两位要等于0，(~3)正好是除了最后两位是 0，其余全是 1，满足要求，所以本题正确答案为A。"
+    },
+    {
+      "id": "9VJ6J63l6GEAeY2SMcxCQ",
+      "type": "single_choice",
+      "content": "下⾯有关格雷码的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在格雷码中，任意两个相邻的代码只有⼀位二进制数不同。"
+        },
+        {
+          "label": "B",
+          "text": "格雷码是⼀种唯⼀性编码。"
+        },
+        {
+          "label": "C",
+          "text": "在格雷码中，最⼤数和最⼩数只有⼀位二进制数不同。"
+        },
+        {
+          "label": "D",
+          "text": "格雷码是⼀种可靠性编码。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题属于考察计算机编码的知识。格雷码的编码不是唯一的编码。任意两个相邻的代码只有一位二进制数不同,则称这种编码为格雷码。所以不是唯一性编码。"
+    },
+    {
+      "id": "_DFxDsHgPMK8iNWVBY848",
+      "type": "single_choice",
+      "content": "3位格雷编码的正确顺序是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "000, 001, 010, 011, 100, 101, 110, 111"
+        },
+        {
+          "label": "B",
+          "text": "000, 001, 011, 010, 110, 111, 101, 100"
+        },
+        {
+          "label": "C",
+          "text": "000, 010, 001, 011, 100, 110, 101, 111"
+        },
+        {
+          "label": "D",
+          "text": "000, 010, 110, 100, 111, 101, 011, 001"
+        }
+      ],
+      "answer": "B",
+      "explanation": "可以模拟手动构造法构造格雷码"
+    },
+    {
+      "id": "iQ5AvpV9xOFLUzdo_3WgK",
+      "type": "single_choice",
+      "content": "下列各无符号十进制整数中，能用八位二进制表示的数中最大的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "296"
+        },
+        {
+          "label": "B",
+          "text": "133"
+        },
+        {
+          "label": "C",
+          "text": "256"
+        },
+        {
+          "label": "D",
+          "text": "199"
+        }
+      ],
+      "answer": "D",
+      "explanation": "八位二进制能表示的最大数是11111111，即255"
+    }
+  ]
+}

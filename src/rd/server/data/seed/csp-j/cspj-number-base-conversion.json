@@ -1,0 +1,651 @@
+{
+  "slug": "cspj-number-base-conversion",
+  "url": "https://adacpp.com/practice/cspj-number-base-conversion",
+  "title": "进制转换",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "1dW7lfTWM_TcUJfIG22YF",
+      "type": "single_choice",
+      "content": "八进制数12345670(8) 和07654321(8)的和为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "22222221(8)"
+        },
+        {
+          "label": "B",
+          "text": "21111111(8)"
+        },
+        {
+          "label": "C",
+          "text": "22111111(8)"
+        },
+        {
+          "label": "D",
+          "text": "22222211(8)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "12345670(8)转十进制：1×8⁷+2×8⁶+3×8⁵+4×8⁴+5×8³+6×8²+7×8¹+0×8⁰=2739128；07654321(8)转十进制：7×8⁶+6×8⁵+5×8⁴+4×8³+3×8²+2×8¹+1×8⁰=2054353。两数之和为4793481。将4793481转换为八进制：不断除以8取余，依次得到1、1、2、2、2、2、2、2（从低位到高位），即22222211(8)，对应选项D。"
+    },
+    {
+      "id": "jPSxm4tsYA6QZUCXWhbNm",
+      "type": "single_choice",
+      "content": "数101010(2)和166(8)的和为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "10110000(2)"
+        },
+        {
+          "label": "B",
+          "text": "236(8)"
+        },
+        {
+          "label": "C",
+          "text": "158(10)"
+        },
+        {
+          "label": "D",
+          "text": "A0(16)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "101010(2)转十进制为42；166(8)转十进制为118；两者之和为42+118=160(10)。160转换成十六进制为A0(16)（10×16+0=160），对应选项D。"
+    },
+    {
+      "id": "3nCgC8Nsy0jK6XW2XUIdt",
+      "type": "single_choice",
+      "content": "八进制数32.1对应的十进制数是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "24.125"
+        },
+        {
+          "label": "B",
+          "text": "24.25"
+        },
+        {
+          "label": "C",
+          "text": "26.125"
+        },
+        {
+          "label": "D",
+          "text": "26.25"
+        }
+      ],
+      "answer": "C",
+      "explanation": "32.1(8)转换为十进制是3*8^1 + 2*8^0 + 1*8^(-1) = 26.125。"
+    },
+    {
+      "id": "Is0JsT8ResI8lHasF-n5Q",
+      "type": "single_choice",
+      "content": "二进制数101.11对应的十进制数是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6.5"
+        },
+        {
+          "label": "B",
+          "text": "5.5"
+        },
+        {
+          "label": "C",
+          "text": "5.75"
+        },
+        {
+          "label": "D",
+          "text": "5.25"
+        }
+      ],
+      "answer": "C",
+      "explanation": "101.11(2)对应的十进制是5*2^0 + 1*2^2 + 1*2^(-1) + 1*2^(-2) = 5.75。"
+    },
+    {
+      "id": "BBw9SKcmWh_-SSiDPlkJD",
+      "type": "single_choice",
+      "content": "二进制数1011转换成十进制数是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "11"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "13"
+        },
+        {
+          "label": "D",
+          "text": "12"
+        }
+      ],
+      "answer": "A",
+      "explanation": "1011(2)对应的十进制是1*2^0 + 1*2^1 + 0*2^2 + 1*2^3 = 11。"
+    },
+    {
+      "id": "07AN6oFPeqsTOSN3L68vw",
+      "type": "single_choice",
+      "content": "二进制数 11.01 在十进制下是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "3.01"
+        },
+        {
+          "label": "B",
+          "text": "3.05"
+        },
+        {
+          "label": "C",
+          "text": "3.125"
+        },
+        {
+          "label": "D",
+          "text": "3.25"
+        }
+      ],
+      "answer": "D",
+      "explanation": "二进制11.01 换算成 10 进制为 1*2^1+1*2^0+0*2^(-1)+1*2^(-2) = 3.25。"
+    },
+    {
+      "id": "eN7cSDoY579oUD9yIJ2H7",
+      "type": "single_choice",
+      "content": "下列关于进制的叙述，不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正整数的二进制表示中只会出现 0 和 1。"
+        },
+        {
+          "label": "B",
+          "text": "10 不是 2 的整数次幂，所以十进制数无法转换为二进制数。"
+        },
+        {
+          "label": "C",
+          "text": "从二进制转换为 8 进制时，可以很方便地由低到高将每3 位二进制位转换为对应的一位 8 进制位。"
+        },
+        {
+          "label": "D",
+          "text": "从二进制转换为 16 进制时，可以很方便地由低到高将每4 位二进制位转换为对应的一位 16 进制位。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "任意数字都可以在不同的进制之间转换，所以十进制数完全可以转换为二进制数。"
+    },
+    {
+      "id": "-fo55ITLsrrHxUQVu1FGu",
+      "type": "single_choice",
+      "content": "下列关于进制的叙述 ，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "只有十进制和二进制能够⽤来表示⼩数 ，八进制和十六进制不可以。"
+        },
+        {
+          "label": "B",
+          "text": "常用的进制包括二进制、八进制、⼗进制、十六进制，其他进制在日常⽣活中很少使用。"
+        },
+        {
+          "label": "C",
+          "text": "对任意正整数 ，其二进制表示不会⽐它的⼗进制表示更短。"
+        },
+        {
+          "label": "D",
+          "text": "正整数的八进制表⽰中 ，每⼀位可能出现的最大数字是8。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "日常生活中，十进制最常用；八进制和十六进制也可以表示小数；正整数的二进制表示通常比它的十进制表示要长。"
+    },
+    {
+      "id": "ieDwOkm2Wm5CzrOfBXGYC",
+      "type": "true_false",
+      "content": "在C++语⾔中，表达式(0xff == 255) 的值为true。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "0xff的十进制是255，所以表达式(0xff == 255) 为true。"
+    },
+    {
+      "id": "6UvOg3-SlE-BlVV1kqetw",
+      "type": "single_choice",
+      "content": "如果16位短整数 -2 的二进制是\"FFFE\"，则短整数 -4 的十六进制是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "FF04"
+        },
+        {
+          "label": "B",
+          "text": "FFFA"
+        },
+        {
+          "label": "C",
+          "text": "FFFC"
+        },
+        {
+          "label": "D",
+          "text": "FFFH"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在二进制补码表示法中，-2的16位表示为\"FFFE\"，每次减少1，最低位减1，因此-4的十六进制表示为\"FFFC\"。"
+    },
+    {
+      "id": "tkufom9kOkmZgXGqbpB_5",
+      "type": "single_choice",
+      "content": "十进制数255转换成二进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 11111111(2)"
+        },
+        {
+          "label": "B",
+          "text": "B. 10101010(2)"
+        },
+        {
+          "label": "C",
+          "text": "C. 10000000(2)"
+        },
+        {
+          "label": "D",
+          "text": "D. 11110000(2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "255的二进制表示为11111111。"
+    },
+    {
+      "id": "nqSD72B2UR1pR4Y_raxZQ",
+      "type": "single_choice",
+      "content": "十进制数45转换成八进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 54(8)"
+        },
+        {
+          "label": "B",
+          "text": "B. 55(8)"
+        },
+        {
+          "label": "C",
+          "text": "C. 56(8)"
+        },
+        {
+          "label": "D",
+          "text": "D. 57(8)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "45的八进制表示为55。"
+    },
+    {
+      "id": "8KY6D74TpobXlg3mPcQtV",
+      "type": "single_choice",
+      "content": "二进制数1101101.101转换成十进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 109.625"
+        },
+        {
+          "label": "B",
+          "text": "B. 108.5"
+        },
+        {
+          "label": "C",
+          "text": "C. 107.625"
+        },
+        {
+          "label": "D",
+          "text": "D. 106.5"
+        }
+      ],
+      "answer": "A",
+      "explanation": "1101101.101的十进制表示为109.625。"
+    },
+    {
+      "id": "4zsZ0sQR7DMyjz5vyAZm4",
+      "type": "single_choice",
+      "content": "二进制数1101.1101转换成十六进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 1D.D(16)"
+        },
+        {
+          "label": "B",
+          "text": "B. D.D(16)"
+        },
+        {
+          "label": "C",
+          "text": "C. 1D.8(16)"
+        },
+        {
+          "label": "D",
+          "text": "D. D.8(16)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "将二进制数按4位一组（整数部分从右往左分组，小数部分从左往右分组，不足4位补0）：整数部分1101(2)恰好4位，对应十六进制D；小数部分.1101(2)也恰好4位，对应十六进制D。所以1101.1101(2)=D.D(16)，对应选项B（选项A的1D.D多出了不存在的高位1，是错误的）。"
+    },
+    {
+      "id": "CAJG241wQYzkogBdeX9aW",
+      "type": "single_choice",
+      "content": "十六进制数FACE(16)对应的二进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 1111101011001110(2)"
+        },
+        {
+          "label": "B",
+          "text": "B. 1111101011001111(2)"
+        },
+        {
+          "label": "C",
+          "text": "C. 1111101011001100(2)"
+        },
+        {
+          "label": "D",
+          "text": "D. 1111101011001101(2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "FACE(16)对应的二进制数是1111101011001110。"
+    },
+    {
+      "id": "3abQEFgmnQ3U5gtlVKkkj",
+      "type": "single_choice",
+      "content": "十进制数1984转换成二进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 11111000000(2)"
+        },
+        {
+          "label": "B",
+          "text": "B. 11110100000(2)"
+        },
+        {
+          "label": "C",
+          "text": "C. 11111010000(2)"
+        },
+        {
+          "label": "D",
+          "text": "D. 11110110000(2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "1984的二进制表示为11111000000。"
+    },
+    {
+      "id": "MIZCLPgWQJHG5F69uoQ9X",
+      "type": "single_choice",
+      "content": "二进制数11110000.01101转换成十六进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. F0.68(16)"
+        },
+        {
+          "label": "B",
+          "text": "B. F0.34(16)"
+        },
+        {
+          "label": "C",
+          "text": "C. F0.13(16)"
+        },
+        {
+          "label": "D",
+          "text": "D. F0.D(16)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "整数部分11110000(2)按4位分组为1111和0000，对应十六进制F和0，即F0；小数部分.01101(2)从左往右按4位分组（不足4位在右侧补0）为0110和1000，对应十六进制6和8，即.68。所以11110000.01101(2)=F0.68(16)，对应选项A。"
+    },
+    {
+      "id": "SMvuppmvsePqf1BFwo5ev",
+      "type": "single_choice",
+      "content": "八进制数345(8)转换成十进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 229"
+        },
+        {
+          "label": "B",
+          "text": "B. 230"
+        },
+        {
+          "label": "C",
+          "text": "C. 231"
+        },
+        {
+          "label": "D",
+          "text": "D. 232"
+        }
+      ],
+      "answer": "A",
+      "explanation": "345(8)=3×8²+4×8¹+5×8⁰=192+32+5=229，对应选项A。"
+    },
+    {
+      "id": "9NCV2VEKVgYqK_qDcpUfM",
+      "type": "single_choice",
+      "content": "二进制数100101.011转换成八进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 45.3(8)"
+        },
+        {
+          "label": "B",
+          "text": "B. 45.5(8)"
+        },
+        {
+          "label": "C",
+          "text": "C. 45.7(8)"
+        },
+        {
+          "label": "D",
+          "text": "D. 46.3(8)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "整数部分100101(2)从右往左按3位分组为100和101，对应八进制4和5，即45；小数部分.011(2)按3位分组为011，对应八进制3，即.3。所以100101.011(2)=45.3(8)，对应选项A。"
+    },
+    {
+      "id": "GUvbTCN1CsSk9DooOry2L",
+      "type": "single_choice",
+      "content": "十进制数1024对应的十六进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 400(16)"
+        },
+        {
+          "label": "B",
+          "text": "B. 4F0(16)"
+        },
+        {
+          "label": "C",
+          "text": "C. 4FF(16)"
+        },
+        {
+          "label": "D",
+          "text": "D. 4D0(16)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "1024=4×16²+0×16+0=4×256，所以1024(10)=400(16)，对应选项A。"
+    },
+    {
+      "id": "RkXFoG_iTXedPAUG2b6nE",
+      "type": "single_choice",
+      "content": "二进制数10101010转换成十六进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. AA(16)"
+        },
+        {
+          "label": "B",
+          "text": "B. BB(16)"
+        },
+        {
+          "label": "C",
+          "text": "C. CC(16)"
+        },
+        {
+          "label": "D",
+          "text": "D. DD(16)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "10101010的十六进制表示为AA。"
+    },
+    {
+      "id": "3HFyAl3OHZK00F_zbCUVV",
+      "type": "single_choice",
+      "content": "八进制数672(8)对应的二进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 110111010(2)"
+        },
+        {
+          "label": "B",
+          "text": "B. 110111000(2)"
+        },
+        {
+          "label": "C",
+          "text": "C. 111100010(2)"
+        },
+        {
+          "label": "D",
+          "text": "D. 111000010(2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "八进制数672(8)对应的二进制数是110111010。"
+    },
+    {
+      "id": "9V8zQhKQt9tYzJT2xyaeQ",
+      "type": "single_choice",
+      "content": "十进制数786转换成二进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 1100010010(2)"
+        },
+        {
+          "label": "B",
+          "text": "B. 1100010001(2)"
+        },
+        {
+          "label": "C",
+          "text": "C. 1100010011(2)"
+        },
+        {
+          "label": "D",
+          "text": "D. 1100010100(2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "786的二进制表示为1100010010。"
+    },
+    {
+      "id": "L60biPlKnamEzgJNzsYWW",
+      "type": "single_choice",
+      "content": "十六进制数1C2(16)转换成二进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 111000010(2)"
+        },
+        {
+          "label": "B",
+          "text": "B. 111100010(2)"
+        },
+        {
+          "label": "C",
+          "text": "C. 111110010(2)"
+        },
+        {
+          "label": "D",
+          "text": "D. 111110001(2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "十六进制每一位对应4位二进制：1→0001，C→1100，2→0010，拼接得0001 1100 0010，去掉最高位多余的0，得111000010(2)，对应选项A。"
+    },
+    {
+      "id": "RFx6SkuDG5-Z0Aexy_QoO",
+      "type": "single_choice",
+      "content": "二进制数11100111.1101转换成十进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "A. 231.8125"
+        },
+        {
+          "label": "B",
+          "text": "B. 231.625"
+        },
+        {
+          "label": "C",
+          "text": "C. 231.4375"
+        },
+        {
+          "label": "D",
+          "text": "D. 231.3125"
+        }
+      ],
+      "answer": "A",
+      "explanation": "整数部分11100111(2)=128+64+32+4+2+1=231；小数部分.1101(2)=0.5+0.25+0+0.0625=0.8125。所以11100111.1101(2)=231.8125，对应选项A。"
+    },
+    {
+      "id": "HIgQFNB6-W6xPWzpTH5Vf",
+      "type": "single_choice",
+      "content": "C++的字符变量的码值是整数，下面字面量形式的字符码值最大的是？注：在计算机科学中，字面量（literal）是用于表达源代码中一个固定值的表示法（notation）。字面量就是指由字幕数值构成的字符串，例如100是十进制的100，75(8)是八进制的数75，0x70是16进制的数70。对这些数字进行比较需要都转换成同一进制下的数。",
+      "options": [
+        {
+          "label": "A",
+          "text": "100"
+        },
+        {
+          "label": "B",
+          "text": "75"
+        },
+        {
+          "label": "C",
+          "text": "0x70"
+        },
+        {
+          "label": "D",
+          "text": "0x60"
+        }
+      ],
+      "answer": "C",
+      "explanation": "字面量100是十进制的100，75(8)是八进制的数，相当于十进制的61，0x70和0x60是十六进制的数，分别等于十进制的112和96。因此，0x70（即十进制的112）是最大的。所以本题正确答案为C。"
+    }
+  ]
+}

@@ -1,0 +1,572 @@
+{
+  "meta": {
+    "ym": "202606",
+    "lang": "cpp",
+    "level": 2,
+    "title": "CCF GESP 2026年6月认证 C++ 2级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10284.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1753295276212256.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202606-cpp-2.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "学校组织到未来农场参观,小明听讲解员介绍,在智能温室中,湿度传感器可以连续检测土壤的湿度变化,\n并将检测到的湿度数据实时发送给中央控制器。中央控制器根据这些数据判断是否开启灌溉系统。请问,这里的湿\n度传感器所发挥的作用,类似于计算机系统中的哪一类组件?(   )",
+      "options": [
+        {
+          "key": "A",
+          "text": "处理器"
+        },
+        {
+          "key": "B",
+          "text": "存储器"
+        },
+        {
+          "key": "C",
+          "text": "输入设备"
+        },
+        {
+          "key": "D",
+          "text": "输出设备"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "小明去农场参观回来后就在自己的电脑上安装了一个  3D 农场仿真模拟系统,因为他今年买的二手电脑有点\n老旧,系统运行时经常弹出 “ 系统内存不足 ” 的警告,导致系统卡顿严重。他计划通过增加物理内存来解决问题。请\n问他应该购买以下哪种硬件组件?(   )",
+      "options": [
+        {
+          "key": "A",
+          "text": "机械硬盘"
+        },
+        {
+          "key": "B",
+          "text": "内存条"
+        },
+        {
+          "key": "C",
+          "text": "图形显卡"
+        },
+        {
+          "key": "D",
+          "text": "移动硬盘"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "有关如下  C++ 代码的说法,正确的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码执行将报错。如果将 a = 3 + 3.5 改为 a = float(3) + 3.5 将能正常执行。"
+        },
+        {
+          "key": "B",
+          "text": "代码执行将报错。如果将 a = 3 + 3.5 改为 a = 3.0 + 3.5 将能正常执行。"
+        },
+        {
+          "key": "C",
+          "text": "代码能正常执行,将输出 6。"
+        },
+        {
+          "key": "D",
+          "text": "代码能正常执行,将输出 6.5。"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下面选择项中,与  C++ 表达式  not (x > 5 or y <= 10) 等价的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "x <= 5 or y > 10"
+        },
+        {
+          "key": "B",
+          "text": "x > 5 and y <= 10"
+        },
+        {
+          "key": "C",
+          "text": "x <= 5 and y > 10"
+        },
+        {
+          "key": "D",
+          "text": "not x > 5 and not y <= 10 float a = 3 + 3.5; cout << a;"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "小明在某开发环境中执行  C++ 代码  cout << (2.5 + 2.25) << ' ' << (2.2 + 2.1) 时输出  4.75\n4.300000000000001,其原因最可能是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "C++ 的 + 运算符在处理浮点数时有时正确,有时错误"
+        },
+        {
+          "key": "B",
+          "text": "某些浮点数难以精确表示,导致微小误差"
+        },
+        {
+          "key": "C",
+          "text": "+ 运算符不能用于浮点数,只能用于整数"
+        },
+        {
+          "key": "D",
+          "text": "因为 cout 函数难以输出太长的数值"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "执行如下  C++ 程序后,当输入  4 时,输出的最后一行是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": "1 2"
+        },
+        {
+          "key": "D",
+          "text": "1 2 3 4"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面的  C++ 代码执行后其输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1#5#5"
+        },
+        {
+          "key": "B",
+          "text": "1#5#5#"
+        },
+        {
+          "key": "C",
+          "text": "1#5#12#12"
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面的  C++ 代码执行之后的输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "-2#-1#1#2"
+        },
+        {
+          "key": "B",
+          "text": "-2#-1#1#2#3"
+        },
+        {
+          "key": "C",
+          "text": "1#2#3"
+        },
+        {
+          "key": "D",
+          "text": "0#1#2#3"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面的  C++ 代码执行后其输出是(   )。\nint n;\ncin >> n;\nfor (int i = n; i > 0; i--) {\n    for (int j = 0; j < i; j++)\n        cout << j + 1 << ' ';\n    cout << endl;\n}\n1\n2\n3\n4\n5\n6\n7\nint tnt = 0;\nfor (int i = 1; i < 5; i += 3) {\n    for (int j = 0; j < i; j++)\n        tnt += 1;\n    cout << tnt << \"#\";\n}\ncout << tnt;\n1\n2\n3\n4\n5\n6\n7\nint i;\nfor (i = -2; i < 2; i++)\n    if (not i % 3 == 0)\n        cout << i << \"#\";\ncout << i;\n1\n2\n3\n4\n5",
+      "options": [
+        {
+          "key": "A",
+          "text": "3 0 3"
+        },
+        {
+          "key": "B",
+          "text": "2 0 4"
+        },
+        {
+          "key": "C",
+          "text": "2 0 5"
+        },
+        {
+          "key": "D",
+          "text": "3 0 5"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面  C++ 代码执行后其输出是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "4 0 4"
+        },
+        {
+          "key": "B",
+          "text": "3 0 0"
+        },
+        {
+          "key": "C",
+          "text": "3 2 0"
+        },
+        {
+          "key": "D",
+          "text": "4 0 3"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "如下  C++ 代码执行后输出是  1 2 3 4 5 6 7 8 9 10 11 5 6 7 8 9 10 11 5 6 7 8 9 10 11 5 6 7\n8 9 10 11 5 6 7。横线处应该填入的运算符是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "> /= +="
+        },
+        {
+          "key": "B",
+          "text": ">= %= +="
+        },
+        {
+          "key": "C",
+          "text": "> /= =+"
+        },
+        {
+          "key": "D",
+          "text": ">= %= =+"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "如下数字图形在通过执行后续的  C++ 代码时,输入  10 来输出。横线处应填入的代码是(   )。\nint cnt = 0, i, j;\nfor (i = 0; i < 3; i++) {\n    j = i;\n    while (j) {\n        cnt += 1;\n        j -= 1;\n    }\n}\ncout << i << ' ' << j << ' ' << cnt;\n1\n2\n3\n4\n5\n6\n7\n8\n9\nint count = 0, i, j;\nfor (i = 1; i < 4; i++)\n    for (j = 0; j < i; j++) {\n        if (j % 3 != 0)\n            continue;\n        count += 1;\n        break;\n    }\ncout << i << ' ' << j << ' ' << count;\n1\n2\n3\n4\n5\n6\n7\n8\n9\nint num = 1;\nfor (int i = 0; i < 35; i++) {\n    cout << num << \" \";\n    if (num _______ 10)\n        num _______ 2;\n    else\n        num _______ 1;\n}\n1\n2\n3\n4\n5\n6\n7\n8",
+      "options": [
+        {
+          "key": "A",
+          "text": "i == j and i == 1 and j == 1 and i == N and j == N"
+        },
+        {
+          "key": "B",
+          "text": "i == j or i == 1 or j == 1 or i == N or j == N"
+        },
+        {
+          "key": "C",
+          "text": "i == j or i == 0 or j == 0 or i == (N + 1) or j == (N + 1)"
+        },
+        {
+          "key": "D",
+          "text": "i == j and i == 1 and j == 1 and i == (N + 1) and j == (N + 1)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "英文  corner case 通常翻译为极端案例或边角案例,通常指正常范围以外的问题或者情形。在如下  C++\n代码中,变量都是整型,则  corner case 最应该是(   )。\n\n```\ncin >> score 是 corner case,因为输入数据前应该提示整型数据\ncout << tnt / cnt 是 corner case,因为如果直接输入 -1,将导致执行错误,虽然这种情况较为罕 见\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": "tnt = 0, cnt = 0 是 corner case,应分为两行"
+        },
+        {
+          "key": "B",
+          "text": "while(1) 是 corner case,因为 while(1) 将会导致死循环"
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "如下  C++ 代码执行后,输入  4 后,输出的数字图形是(   )。\n1 1 1 1 1 1 1 1 1 1\n1 1 0 0 0 0 0 0 0 1\n1 0 1 0 0 0 0 0 0 1\n1 0 0 1 0 0 0 0 0 1\n1 0 0 0 1 0 0 0 0 1\n1 0 0 0 0 1 0 0 0 1\n1 0 0 0 0 0 1 0 0 1\n1 0 0 0 0 0 0 1 0 1\n1 0 0 0 0 0 0 0 1 1\n1 1 1 1 1 1 1 1 1 1\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint N;\ncin >> N;\nfor (int i = 1; i < N + 1; i++) {\n    for (int j = 1; j < N + 1; j++)\n        if (________)\n            cout << \"1 \";\n        else\n            cout << \"0 \";\n    cout << endl;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint tnt = 0, cnt = 0;\nwhile (1) {\n    int score;\n    cin >> score;\n    if (score == -1)\n        break;\n    tnt += score;\n    cnt += 1;\n}\ncout << tnt / cnt;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "某学校举办 “ 校园演讲比赛 ” ,每位选手由   位评委打分(分数为   的整数),且每位评委必须打分。\n计分规则:去掉一个最高分,去掉一个最低分。如下程序通过键盘先输入选手编号,然后依次输入   个分数,并计\n算最终得分。下列说法正确的是(   )。\nint n;\ncin >> n;\nfor (int i = n; i > 0; i--) {\n    for (int j = 0; j < n - i; j++)\n        cout << \"0 \";\n    for (int k = 0; k < i; k++)\n        cout << k + 1 << \" \";\n    cout << endl;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n1 2 3 4\n1 2 3 0\n1 2 0 0\n1 0 0 0\n1\n2\n3\n4\n1 2 3 4\n0 1 2 3\n0 0 1 2\n0 0 0 1\n1\n2\n3\n4\n1 2 3 4\n2 3 4 0\n3 4 0 0\n4 0 0 0\n1\n2\n3\n4\n0 0 0 1\n0 0 1 2\n0 1 2 3\n1 2 3 4\n1\n2\n3\n4\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "上述代码能完成题目要求"
+        },
+        {
+          "key": "B",
+          "text": "max_score = 0, min_score = 100 应修改为 max_score = 0, min_score = 0"
+        },
+        {
+          "key": "C",
+          "text": "max_score < score 和 min_score > score 必须相应修改为 <= 和 >="
+        },
+        {
+          "key": "D",
+          "text": "total_score = total_score - max_score - min_score 不能达到预期,可修改如下:"
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "又到期末考试周,小明发现这次许多闭卷考试不仅禁止携带手机、平板电脑,还有最近比较时髦的各类  AI\n眼镜(也有叫智能眼镜)也同样不允许带入考场。这些  AI 眼镜应该也是内置了操作系统并可能支持  Wi-Fi 或蓝牙连\n接。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "C++ 代码  cout << (not ('5' % 2 == 0) == ((not '5' % 2) == 0)) 执行后的输出是  1。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "执行  C++ 语句  cout << (int(3.5) * 2) 将输出  6。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "下面  C++ 代码执行后将输出  1-4-7-。\nfor (int i = 0; i < 10; i++) {\n    int id, score;\n    printf(\" 输入选手编号 : \");\n    scanf(\"%d\", &id);\n    int max_score = 0, min_score = 100; // 最高分和最低分\n    int total_score = 0; // 总分\n    for (int j = 1; j < 9; j++) {\n        printf(\" 输入选手第 %d 个成绩 :\", j);\n        scanf(\"%d\", &score);\n        if (max_score < score)\n            max_score = score;\n        if (min_score > score)\n            min_score = score;\n        total_score += score;\n    }\n    total_score = total_score - max_score - min_score;\n    printf(\"%d 号选手的成绩 :\\\n            去掉一个最高分 %d,\\\n            去掉一个最低分 %d,\\\n            最后成绩是: %d\", id, max_score, min_score, total_score);\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint total = total_score - max_score - min_score;\ntotal_score = total;\n\n\nfor (int i = 1; i < 10; i += 3) {\n    if (not i % 3)\n        break;\n    cout << i << \"-\";\n}",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "执行如下  C++ 代码,将从小到大依次输出  abs(N) 个整数,并在最后输出  1。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "如下  C++ 代码执行后,输出值为  9。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "如下  C++ 代码执行时如输入  10,输出将是  100。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "如下  C++ 代码执行其输出是  3。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "如下  C++ 代码执行时如果输入正整数,其输出将是输入的正整数。\nint N;\ncin >> N;\nint start_num = 1, end_num = N + 1, i;\nif (N < 0)\n    start_num = N, end_num = 0;\nfor (i = start_num; i < end_num; i++)\n    cout << i << \" \";\ncout << endl << ((i - 1) == abs(N)) << endl;\n\n\n\n\n\n\n\n\n\n\n\nint cnt = 0, i;\nfor (i = 0; i < 10; i++) {\n    for (int j = 0; j < i; j++)\n        cnt += 1;\n    break;\n}\ncout << i;\n\n\n\n\n\n\n\nint cnt = 0, N;\ncout << \" 请输入正整数: \";\ncin >> N;\nfor (int i = 0; i < N; i++)\n    for (int j = -i; j < i; j++)\n        cnt += 1;\ncout << cnt;\n\n\n\n\n\n\n\nint count = 0;\nint i = 0;\nwhile (i < 3) {\n    int j = 0;\n    while (j < 3) {\n        if (i + j >= 3)\n            count += 1;\n        j += 1;\n    }\n    i += 1;\n}\ncout << count;",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "如下  C++ 代码执行时如输入  5,将输出代码后的字符图形。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "完全平方数计数",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小杨同学正在研究完全平方数。\n平方:一个数的平方等于这个数乘以这个数本身。\n完全平方数:指可以恰好表示为某个正整数的平方的数。\n例如, 是完全平方数,因为  ;但   不是,因为   不能表示为任何正整数的平方。\n给定两个正整数   和  (保证  ),小杨同学想知道   到   之间的所有正整数中(包含   和  ),有多少个数是完\n全平方数。\n    rst = rst + N % 10 * Nbase;\n    N /= 10, Nbase *= 10;\n    i += 1;\n\n        else\n\n3.1.2\n\n输入格式\n输入两行,第一行为一个正整数  ,第二行为一个正整数  。\n3.1.3 输出格式\n输出一个非负整数,表示   到   中,有多少个正整数是完全平方数。如果   到   中没有完全平方数,则输出  0。\n3.1.4 样例\n3.1.5 输入样例  1\n3.1.6 输出样例  1\n3.1.7 样例解释  1\n在   到   中,有以下   个整数是完全平方数:\n3.1.8 数据范围\n。\n3.1.9",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "菱形",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n给定正整数  ,在   个网格的画布中,使用字符画一个边长为   个网格的菱形。其中,空白网格\n使用  . 表示,菱形边所在的网格用  + 表示。\n例如当   时,图形如下:",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "B",
+      "D",
+      "C",
+      "B",
+      "B",
+      "A",
+      "A",
+      "A",
+      "D",
+      "A",
+      "B",
+      "D",
+      "B",
+      "A",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

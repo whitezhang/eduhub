@@ -1,0 +1,571 @@
+{
+  "meta": {
+    "ym": "202409",
+    "lang": "cpp",
+    "level": 5,
+    "title": "GESP 9月认证 C++ 五级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10166.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1633836261703712.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202409-cpp-5.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "下面关于链表和数组的描述,错误的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "数组大小固定,链表大小可动态调整。"
+        },
+        {
+          "key": "B",
+          "text": "数组支持随机访问,链表只能顺序访问。"
+        },
+        {
+          "key": "C",
+          "text": "存储相同数目的整数,数组比链表所需的内存多。"
+        },
+        {
+          "key": "D",
+          "text": "数组插入和删除元素效率低,链表插入和删除元素效率高。"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "通过(   )操作,能完成在双向循环链表结点p之后插入结点s的功能(其中next域为结点的直接后继,\nprev域为结点的直接前驱)。",
+      "options": [
+        {
+          "key": "A",
+          "text": "p->next->prev = s; s->prev = p; p->next = s; s->next = p->next;"
+        },
+        {
+          "key": "B",
+          "text": "p->next->prev = s; p->next = s; s->prev = p; s->next = p->next;"
+        },
+        {
+          "key": "C",
+          "text": "s->prev = p; s->next = p->next; p->next = s; p->next->prev = s;"
+        },
+        {
+          "key": "D",
+          "text": "s->next = p->next; p->next->prev = s; s->prev = p; p->next = s;"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "对下面两个函数,说法错误的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "sumA 体现了迭代的思想。"
+        },
+        {
+          "key": "B",
+          "text": "SumB 采用的是递归方式。 int sumA(int n) { int res = 0; for (int i = 1; i <= n; i++) { res += i; } return res; } int sumB(int n) { if (n == 1) return 1; int res = n + sumB(n - 1); return res; }"
+        },
+        {
+          "key": "C",
+          "text": "SumB 函数比 SumA 的时间效率更高。"
+        },
+        {
+          "key": "D",
+          "text": "两个函数的实现的功能相同。"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "有如下函数fun,则fun(20, 12)的返回值为(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下述代码实现素数表的埃拉托斯特尼筛法,筛选出所有小于等于n的素数,则横线上应填的最佳代码是 ( ) 。\n\n```\nfor (int j = i; j <= n; j++)\nfor (int j = i * i; j <= n; j++)\nfor (int j = i * i; j <= n; j += i)\nfor (int j = i; j <= n; j += i)\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下述代码实现素数表的线性筛法,筛选出所有小于等于n的素数,则横线上应填的代码是 ( ) 。\nint fun(int a, int b) {\n    if (a % b == 0)\n        return b;\n    else\n        return fun(b, a % b);\n}\n1\n2\n3\n4\n5\n6\nvoid sieve_Eratosthenes(int n) {\n    vector<bool> is_prime(n + 1, true);\n    vector<int> primes;\n    for (int i = 2; i * i <= n; i++) {\n        if (is_prime[i]) {\n            primes.push_back(i);\n            ________________________________ {    // 在此处填入代码\n                is_prime[j] = false;\n            }\n        }\n    }\n    for (int i = sqrt(n) + 1; i <= n; i++) {\n        if (is_prime[i]) {\n            primes.push_back(i);\n        }\n    }\n    return primes;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\nvector<int> sieve_linear(int n) {\n    vector<bool> is_prime(n + 1, true);\n1\n2\n\n```\nfor (int j = 0; j < primes.size() && i * primes[j] <= n; j++)\nfor (int j = 1; j < primes.size() && i * j <= n; j++)\nfor (int j = 2; j < primes.size() && i * primes[j] <= n; j++)\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面函数可以将n的所有质因数找出来,其时间复杂度是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "vector<int> primes; for (int i = 2; i <= n / 2; i++) { if (is_prime[i]) primes.push_back(i); ________________________________ { // 在此处填入代码 is_prime[i * primes[j]] = 0; if (i % primes[j] == 0) break; } } for (int i = n / 2 + 1; i <= n; i++) { if (is_prime[i]) primes.push_back(i); } return primes; } #include <iostream> #include <vector> vector<int> get_prime_factors(int n) { vector<int> factors; while (n % 2 == 0) { factors.push_back(2); n /= 2; } for (int i = 3; i * i <= n; i += 2) { while (n % i == 0) { factors.push_back(i); n /= i; } } if (n > 2) { factors.push_back(n); } return factors; }"
+        },
+        {
+          "key": "B",
+          "text": "C."
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "现在用如下代码来计算 ( 个 相乘),其时间复杂度为(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "假设快速排序算法的输入是一个长度为 的已排序数组,且该快速排序算法在分治过程总是选择第一个元素\n作为基准元素。下面选项(  )描述的是在这种情况下的快速排序行为。",
+      "options": [
+        {
+          "key": "A",
+          "text": "快速排序对于此类输入的表现最好,因为数组已经排序。"
+        },
+        {
+          "key": "B",
+          "text": "快速排序对于此类输入的时间复杂度是 。"
+        },
+        {
+          "key": "C",
+          "text": "快速排序对于此类输入的时间复杂度是 。"
+        },
+        {
+          "key": "D",
+          "text": "快速排序无法对此类数组进行排序,因为数组已经排序。"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "考虑以下 C++ 代码实现的归并排序算法:\ndouble quick_power(double x, unsigned n) {\n    if (n == 0) return 1;\n    if (n == 1) return x;\n    return quick_power(x, n / 2) * quick_power(x, n / 2) * ((n & 1) ? x : 1);\n}\n1\n2\n3\n4\n5\nvoid merge(int arr[], int left, int mid, int right) {\n    int n1 = mid - left + 1;\n    int n2 = right - mid;\n    int L[n1], R[n2];\n    for (int i = 0; i < n1; i++)\n        L[i] = arr[left + i];\n    for (int j = 0; j < n2; j++)\n        R[j] = arr[mid + 1 + j];\n    int i = 0, j = 0, k = left;\n    while (i < n1 && j < n2) {\n        if (L[i] <= R[j]) {\n            arr[k] = L[i];\n            i++;\n        }\n        else {\n            arr[k] = R[j];\n            j++;\n        }\n        k++;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n对长度为n的数组arr,挑用函数merge_sort(a, 0, n-1),在排序过程中merge函数的递归调用次数大约是\n(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "现在有n个人要过河,每只船最多载 2 人,船的承重为 100kg 。下列代码中,数组weight中保存有n个人\n的体重(单位为 kg ),已经按从小到大排好序,代码输出过河所需要的船的数目,采用的思想为(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "枚举算法"
+        },
+        {
+          "key": "B",
+          "text": "贪心算法"
+        },
+        {
+          "key": "C",
+          "text": "迭代算法 } while (i < n1) { arr[k] = L[i]; i++; k++; } while (j < n2) { arr[k] = R[j]; j++; k++; } } void merge_sort(int arr[], int left, int right) { if (left < right) { int mid = left + (right - left) / 2; merge_sort(arr, left, mid); merge_sort(arr, mid + 1, right); merge(arr, left, mid, right); } } int i, j; int count = 0; for (i = 0, j = n - 1; i < j; j--) { if (weight[i] + weight[j] <= 100) { i++; } count++; } printf(\" 过河的船数: %d\\n\", count);"
+        },
+        {
+          "key": "D",
+          "text": "递归算法"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "关于分治算法,以下哪个说法正确?",
+      "options": [
+        {
+          "key": "A",
+          "text": "分治算法将问题分成子问题,然后分别解决子问题,最后合并结果。"
+        },
+        {
+          "key": "B",
+          "text": "归并排序不是分治算法的应用。"
+        },
+        {
+          "key": "C",
+          "text": "分治算法通常用于解决小规模问题。"
+        },
+        {
+          "key": "D",
+          "text": "分治算法的时间复杂度总是优于 。"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "根据下述二分查找法,在排好序的数组1 , 3 , 6 , 9 , 17 , 31 , 39 , 52 , 61 , 79中查找数值31,循环\nwhile (left <= right)执行的次数为(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "以下关于高精度运算的说法错误的是 ( ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "高精度计算主要是用来处理大整数或需要保留多位小数的运算。"
+        },
+        {
+          "key": "B",
+          "text": "大整数除以小整数的处理的步骤可以是,将被除数和除数对齐,从左到右逐位尝试将除数乘以某个数,通过 减法得到新的被除数,并累加商。"
+        },
+        {
+          "key": "C",
+          "text": "高精度乘法的运算时间只与参与运算的两个整数中长度较长者的位数有关。"
+        },
+        {
+          "key": "D",
+          "text": "高精度加法运算的关键在于逐位相加并处理进位。"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "当 时,下面函数的返回值为(   )。\nint binary_search(vector<int>& nums, int target) {\n    int left = 0;\n    int right = nums.size() - 1;\n    while (left <= right) {\n        int mid = left + (right - left) / 2;\n        if (nums[mid] == target) {\n            return mid;\n        }\n        else if (nums[mid] < target) {\n            left = mid + 1;\n        }\n        else {\n            right = mid - 1;\n        }\n    }\n    return -1; // 如果找不到目标元素,返回 -1\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "在操作系统中,需要对一组进程进行循环。每个进程被赋予一个时间片,当时间片用完时, CPU 将切换到下\n一个进程。这种循环操作可以通过环形链表来实现。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "找出自然数n以内的所有质数,常用算法有埃拉托斯特尼(埃氏)筛法和线性筛法,其中线性筛法效率更\n高。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "唯一分解定理表明任何一个大于1的整数都可以唯一地分解为素数之和。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "贪心算法通过每一步选择局部最优解,从而一定能获得最优解。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "快速排序和归并排序的平均时间复杂度均为 ,且都是稳定排序。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "插入排序的时间复杂度总是比快速排序低。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "引入分治策略往往可以提升算法效率。一方面,分治策略减少了操作数量;另一方面,分治后有利于系统的\n并行优化。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "二分查找要求被搜索的序列是有序的,否则无法保证正确性。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在 C++ 语言中,递归的实现方式通常会占用更多的栈空间,可能导致栈溢出。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "对于已经定义好的标准数学函数sin(x),应用程序中的语句y=sin(sin(x));是一种递归调用。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "小杨的武器",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n    else if (n >= 5) return n * fun(n - 2);\n    else return n * fun(n - 1);\n\n子任务编号 数据点占比\n1 20%\n2 20%\n3 60%\n3.1.1 题面描述\n小杨有   种不同的武器,他对第   种武器的初始熟练度为  。\n小杨会依次参加   场战斗,每场战斗小杨只能且必须选择一种武器使用,假设小杨使用了第   种武器参加了第   场\n战斗,战斗前该武器的熟练度为  ,则战斗后小杨对该武器的熟练度会变为  。需要注意的是,  可能是正\n数, 或负数,这意味着小杨参加战斗后对武器的熟练度可能会提高,也可能会不变,还有可能降低。\n小杨想请你编写程序帮他计算出如何选择武器才能使得   场战斗后,自己对   种武器的熟练度的最大值尽可能大。\n3.1.2\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n第二行包含   个正整数  ,代表小杨对武器的初始熟练度。\n第三行包含   个正整数  ,代表每场战斗后武器熟练度的变化值。\n3.1.3 输出格式\n输出一个整数,代表   场战斗后小杨对   种武器的熟练度的最大值最大是多少。\n3.1.4 样例 1\n一种最优的选择方案为,第一场战斗小杨选择第一种武器,第二场战斗小杨选择第二种武器。\n对于全部数据,保证有  , 。\n3.1.5",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "挑战怪物",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨正在和一个怪物战斗,怪物的血量为  ,只有当怪物的血量恰好为   时小杨才能够成功击败怪物。\n小杨有两种攻击怪物的方式:\n物理攻击。假设当前为小杨第   次使用物理攻击,则会对怪物造成   点伤害。\n魔法攻击。小杨选择任意一个质数  (  不能超过怪物当前血量),对怪物造成   点伤害。由于小杨并不擅长魔\n法,他只能使用至多一次魔法攻击。\n小杨想知道自己能否击败怪物,如果能,小杨想知道自己最少需要多少次攻击。\n3.2.2\n\n输入格式\n第一行包含一个正整数  ,代表测试用例组数。\n接下来是   组测试用例。对于每组测试用例,第一行包含一个正整数  ,代表怪物血量。\n3.2.3 输出格式\n对于每组测试用例,如果小杨能够击败怪物,输出一个整数,代表小杨需要的最少攻击次数,如果不能击败怪物,\n输出  。\n3.2.4 样例 1\n对于第一组测试用例,一种可能的最优方案为,小杨先对怪物使用魔法攻击,选择质数   造成   点伤害,之后对怪\n物使用第   次物理攻击,造成   点伤害,怪物血量恰好为  ,小杨成功击败怪物。\n        cin>>a[i];\n    }\n    for (int i = 1; i <= m; ++ i){\n        if (n == 1 || a[i] > 0){\n            mx += a[i];\n        }\n    }\n    cout<<mx<<\"\\n\";\n    return 0;\n}\n\n-1\n\n子任务编号 数据点占比\n1 20%\n2 20%\n3 60%\n对于全部数据,保证有  。\n3.2.5",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "3\n6\n188\n9999\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n-1\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "D",
+      "C",
+      "C",
+      "C",
+      "A",
+      "C",
+      "A",
+      "C",
+      "B",
+      "B",
+      "A",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

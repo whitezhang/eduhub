@@ -1,0 +1,568 @@
+{
+  "meta": {
+    "ym": "202603",
+    "lang": "python",
+    "level": 4,
+    "title": "CCF GESP 2026年3月认证 Python 4级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10269.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1734124815515680.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202603-python-4.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "2026 年春节联欢晚会上一个武术表演节目《武  BOT 》。节目中多个人形机器人会表演空翻,它们落地可能会\n有微微踉跄,但都会迅速调整姿态站稳,并适当移动来和前后左右的其他机器人保持原来队列。如果将机器人视作\n一个计算机系统,那么在该计算机系统中下面哪一项不能作为输入设备 (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "用于检测重心的重力传感器"
+        },
+        {
+          "key": "B",
+          "text": "预装的 AI 算法程序"
+        },
+        {
+          "key": "C",
+          "text": "接收动作指令的遥控器"
+        },
+        {
+          "key": "D",
+          "text": "拍摄其他机器人的摄像头"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下面代码用来找出输入的  N 个正整数中最大的一个。如果将代码段用流程图来表示,则  L1 标记的代码行\n应该使用的图形是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "圆形框"
+        },
+        {
+          "key": "B",
+          "text": "椭圆形框"
+        },
+        {
+          "key": "C",
+          "text": "平行四边形框"
+        },
+        {
+          "key": "D",
+          "text": "菱形框"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "执行以下  Python 代码后,输出的结果是?(  )\nMax = 0\nN = int(input())\nwhile(N):\n    val = int(input())\n    if val > Max: #L1\n        Max = val\n    N -= 1\nprint(Max)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nmatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntotal = 0\nfor row in matrix:\n    for element in row:\n        if element % 2 == 0:\n            total += element\nprint(total)\n1\n2\n3\n4\n5\n6\n7\n第  1 页  / 共  9 页",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "执行以下  Python 代码,说法正确的是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "元组被成功修改为(1, [5, 6], 4)"
+        },
+        {
+          "key": "B",
+          "text": "代码可以执行,但元组内容未改变"
+        },
+        {
+          "key": "C",
+          "text": "抛出TypeError异常"
+        },
+        {
+          "key": "D",
+          "text": "元组被修改为(1, 2, 3, 4, 5, 6)"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行以下 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "函数定义  def func(*args): pass 中的  *args 会将传入的参数打包成什么类型?",
+      "options": [
+        {
+          "key": "A",
+          "text": "列表"
+        },
+        {
+          "key": "B",
+          "text": "字典"
+        },
+        {
+          "key": "C",
+          "text": "元组"
+        },
+        {
+          "key": "D",
+          "text": "集合"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "在嵌套函数中,需要修改外层函数(非全局作用域)的变量,应使用哪个关键字?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "global"
+        },
+        {
+          "key": "B",
+          "text": "nonlocal"
+        },
+        {
+          "key": "C",
+          "text": "local"
+        },
+        {
+          "key": "D",
+          "text": "outer"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "执行以下  Python 代码后,输出的结果是?(  )\ntup = (1, [2, 3], 4)\ntup[1] = [5, 6]\n1\n2\nwords = [\"hello\", \"world\", \"python\"]\nresult = [char for word in words for char in word if char in 'aeiou']\nprint(len(result))\n1\n2\n3\n第  2 页  / 共  9 页",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "关于 lambda 匿名函数,以下描述正确的是?( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "lambda 匿名函数可以包含多个表达式,用分号分隔"
+        },
+        {
+          "key": "B",
+          "text": "lambda 匿名函数必须有参数"
+        },
+        {
+          "key": "C",
+          "text": "lambda 匿名函数可以接受多个参数,但只能有一个表达式"
+        },
+        {
+          "key": "D",
+          "text": "lambda 匿名函数必须有 return 语句"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "文件 text.txt  的内容如下:\n以下程序统计单词 \"Python\" 在文件中出现的次数。Python 后面是空格或行尾,且不跟标点。请补全代码。( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "readlines()"
+        },
+        {
+          "key": "B",
+          "text": "read()"
+        },
+        {
+          "key": "C",
+          "text": "readline()"
+        },
+        {
+          "key": "D",
+          "text": "readlines"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "以下代码的时间复杂度是?( )\ndef process_data(data):\n    result = []\n    for item in data:\n        if item > 0:\n            result.append(item * 2)\n        elif item < 0:\n            result.append(abs(item))\n        else:\n            result.append(0)\n    return result\noutput = process_data([-2, 0, 3, -1])\nprint(sum(output))\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nPython is a programming language.\nPython is easy to learn.\n1\n2\ncount = 0\nwith open(\"text.txt\", \"r\") as f:\n    content = f.________  # 补全代码\n    words = content.split()\n    for word in words:\n        if word == \"Python\":\n            count += 1\nprint(\"Python出现次数:\", count)\n1\n2\n3\n4\n5\n6\n7\n8\ndef func(n):\n    sum = 0\n    for i in range(n):\n        for j in range(i):\n            sum += j\n1\n2\n3\n4\n5\n页 9 共 / 页 3 第",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "执行以下  Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "程序报错"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "以下代码使用插入排序对列表进行升序排序。空白处应填入?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "arr[j + 1] = key"
+        },
+        {
+          "key": "B",
+          "text": "arr[j - 1] = key"
+        },
+        {
+          "key": "C",
+          "text": "key = arr[j]"
+        },
+        {
+          "key": "D",
+          "text": "arr[i] = key"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "阅读以下  Python 代码,下列说法正确的是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "找出所有n位数 try: print(1, end=\"\") raise ValueError(\"x\") except ValueError as e: print(2, end=\"\") else: print(3, end=\"\") finally: print(4, end=\"\") def insertion_sort_optimized(arr): n = len(arr) for i in range(1, n): key = arr[i] # 当前待插入元素 j = i - 1 while j >= 0 and arr[j] > key: arr[j + 1] = arr[j] # 元素后移 j -= 1 _______________ # 插入元素到正确位置 n = int(input()) def is_palindrome(s): return s == s[::-1] max_palindrome = 0 for i in range(10 ** (n - 1), 10 ** n): for j in range(i, 10 ** n): product = i * j if is_palindrome(str(product)) and product > max_palindrome: max_palindrome = product print(max_palindrome) 第 4 页 / 共 9 页 题 号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "B",
+          "text": "找出由两个 n 位数相乘得到的最大回文数"
+        },
+        {
+          "key": "C",
+          "text": "找出所有回文数"
+        },
+        {
+          "key": "D",
+          "text": "计算两个 n 位数乘积的最大值"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "以下代码实现了根据分数返回等级(A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: 0-59)的功能,请选择正确的\n选项填入12处。( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 grade_map[score] 2 grade"
+        },
+        {
+          "key": "B",
+          "text": "1 key 2 get_grade(score)"
+        },
+        {
+          "key": "C",
+          "text": "1 grade_map[key] 2 score"
+        },
+        {
+          "key": "D",
+          "text": "1 grade_map[key] 2 grade"
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小明的妈妈最近刚刚给他买了一块电话手表,除了可以看时间,小明也可以用它和妈妈打电话、收发信息,\n那么可以推测这块手表中装有一款特定操作系统。(  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "在 Python 语言中,一个集合可以作为另一个集合的元素。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "执行以下 Python 代码后,输出的结果是 <class 'set'> 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "执行以下 Python 代码后,输出的结果是 20 10 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "执行以下 Python 代码后,输出的结果是 [6, 7] 。\ngrade_map = {90: \"A\", 80: \"B\", 70: \"C\", 60: \"D\", 0: \"F\"}\ndef get_grade(score):\n    if score < 0 or score > 100:\n        return \"无效分数\"\n    for key in sorted(grade_map.keys(), reverse=True):\n        if score >= key:\n            return _____1_____\nscore = int(input())\ngrade = get_grade(score)\nprint(f\"分数 {score} 的等级是 {_____2_____}\")\n\n\n\n\n\n\n\n\n\n\n\n\nmy_set = {i: j for i, j in zip([1, 2], [3, 4])}\nprint(type(my_set))\n\n\ndef func(a, b):\n    a = a ^ b\n    b = a ^ b\n    a = a ^ b\n    return a, b\na, b = func(10, 20)\nprint(a, b)\n\n\n\n\n\n\n\n\n\nprint(list(filter(lambda x: x > 5, [3, 6, 7, 2])))1\n页 9 共 / 页 5 第",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "执行以下 Python 代码后,输出的结果是  '789\\n456'。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "下面这段程序的时间复杂度为平方阶  。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "执行以下  Python 代码后,会抛出异常  ZeroDivisionError。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在对列表进行排序时,sorted()函数会返回一个新的排序后的列表,不修改原列表,而sort()方法会直\n接修改原列表,返回值为None。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "阅读以下递推算法的  Python 代码,执行后的输出结果是  13。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "山之谷",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n现有一片山地,可以视为一个   行   列的网格图,第   行   列的海拔为  。\n如果一个单元格的海拔不高于其所有相邻单元格(相邻包括上、下、左、右、左上、右上、左下、右下,最多   个\n方向)的海拔,则称该单元格为山谷。\n请你数一数该片山地中有多少山谷。\nwith open('test.txt', 'w') as f:\n    f.write('123\\n456')\nwith open('test.txt', 'r+') as f:\n    f.seek(0, 2)\n    f.write('789')\n    f.seek(0)\n    print(repr(f.read()))\n\ndef func(n):\n            if i % 2 == 0:\n                break\n\ndata = {'a': 1}\nindex = int(input())\nprint(data['b'] / index)\n\na, b = 1, 2\n    a, b = b, a + b\nprint(b)\n\n第  6 页  / 共  9 页\n3.1.2\n\n输入格式\n第一行包含   个整数  ,表示山地的大小。\n之后   行,每行包含   个整数  ,表示海拔。\n3.1.3 输出格式\n输出  1 行,包含  1 个整数  ,表示山谷的数量。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.5 样例解释\n样例  1 如图所示,绿色单元格代表山谷:\n3.1.6 数据范围\n保证  , 。\n3 5\n7 6 6 7 9\n6 5 6 7 6\n6 5 7 8 9\n\n第  7 页  / 共  9 页\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "礼盒排序",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n商店推出了许多礼盒,每个礼盒中包含   件商品,每件商品都有一个价格。\n现在需要对这些礼盒进行排序,排序规则如下:\n1. 先按礼盒总价格从小到大排序;\n2. 如果总价格相同,按礼盒中最贵商品的价格从小到大排序;\n3. 如果仍然相同,按礼盒中最便宜商品的价格从小到大排序;\n4. 如果仍然相同,按礼盒编号从小到大排序。\n请输出排序后的礼盒编号。\n3.2.2\n\n输入格式\n第一行包含两个整数   和  ,分别表示礼盒数量和每个礼盒中商品的数量。\n接下来   行,每行包含   个整数,第   行表示第   个礼盒中各商品的价格。\n# 输入行列数\nn, m = map(int, input().split())\n# 输入每一行的海拔\nh = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    h.append(row)\nans = 0\n# 先遍历行\nfor i in range(n):\n    # 再遍历列\n    for j in range(m):\n        ok = True\n        # 遍历周边 8 个格子\n        for k in range(-1, 2):\n            for l in range(-1, 2):\n                # 边界判定,不能超列表边界\n                if 0 <= i + k < n and 0 <= j + l < m and h[i + k][j + l] < h[i][j]:\n                    ok = False\n        if(ok):\n            ans += 1\nprint(ans)\n\n第  8 页  / 共  9 页\n编 号 商 品 价 格 总 价 最 大 值 最 小 值\n1 3 5 2 10 5 2\n2 4 1 5 10 5 1\n3 2 2 4 8 4 2\n4 3 4 3 10 4 3\n3.2.3 输出格式\n输出一行,包含排序后的礼盒编号(编号从  开始),用空格分隔。\n3.2.4 样例\n3.2.4.1 输入样例\n3.2.4.2 输出样例\n3.2.5 样例解释\n4 个礼盒分别为:\n排序过程:\n1. 按总价排序,3号礼盒总价最小;\n2. 其余总价均为 10,再按最大值排序,4号最大值更小;\n3. 1号和2号最大值相同,再按最小值排序,2号更小。\n最终顺序为:3 4 2 1\n3.2.6 数据范围\n保证 , ,商品价格 。\n3.2.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "D",
+      "C",
+      "C",
+      "B",
+      "C",
+      "B",
+      "D",
+      "C",
+      "B",
+      "C",
+      "B",
+      "A",
+      "B",
+      "D"
+    ]
+  ]
+}

@@ -1,0 +1,569 @@
+{
+  "meta": {
+    "ym": "202406",
+    "lang": "python",
+    "level": 5,
+    "title": "GESP 6月认证 Python 五级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10147.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1627717353078816.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202406-python-5.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "在Python中,print((c for c in \"GESP\"))的输出是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "('G', 'E', 'S', 'P')"
+        },
+        {
+          "key": "B",
+          "text": "['G', 'E', 'S', 'P']"
+        },
+        {
+          "key": "C",
+          "text": "{'G', 'E', 'S', 'P'}"
+        },
+        {
+          "key": "D",
+          "text": "以上选项均不正确"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下面有关快速排序的说法,错误的是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "快速排序算法通常采用递归实现。"
+        },
+        {
+          "key": "B",
+          "text": "快速排序算法是一种稳定排序算法。"
+        },
+        {
+          "key": "C",
+          "text": "如果被排序数组或者list已排序或逆序,其时间复杂度是 。"
+        },
+        {
+          "key": "D",
+          "text": "快速排序是一种原地(in-place)排序算法。"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "内排序有不同的类别,从排序算法的实现思路上考虑,下面哪种排序算法和插入排序是同一类?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "希尔排序"
+        },
+        {
+          "key": "B",
+          "text": "快速排序"
+        },
+        {
+          "key": "C",
+          "text": "堆排序"
+        },
+        {
+          "key": "D",
+          "text": "冒泡排序"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下面Python代码用于求斐波那契数列,该数列第1、2项为1,以后各项均是前两项之和。函数Fibo()属于(\n)。",
+      "options": [
+        {
+          "key": "A",
+          "text": "枚举算法"
+        },
+        {
+          "key": "B",
+          "text": "贪心算法"
+        },
+        {
+          "key": "C",
+          "text": "迭代算法"
+        },
+        {
+          "key": "D",
+          "text": "递归算法"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面 Python 代码用于将输入金额换成最少币种组合方案,其实现算法是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "枚举算法"
+        },
+        {
+          "key": "B",
+          "text": "贪心算法"
+        },
+        {
+          "key": "C",
+          "text": "迭代算法"
+        },
+        {
+          "key": "D",
+          "text": "递归算法"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "有关下面 Python 的代码,错误的是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "执行print(count_if(range(100)))将输出100 def Fibo(N): if N == 1 or N == 2: return 1 fiboList = [1, 1] for i in range(2, N): fiboList.append(fiboList[i - 1] + fiboList[i - 2]) return fiboList[N-1] def findCoins(coins, Money): coins_used = [] for coin in coins: while Money >= coin: coins_used.append(coin) Money -= coin return coins_used coins = [100, 50, 20, 10, 5, 2, 1] # 货币种类,单位相同 M = int(input()) # 输入换算的金额 coins_needed = find_coins(coins, M) result = [(c,coins_needed.count(c)) for c in coins] result = [x for x in result if x[1] > 0] def count_if(iterData,*,key=None): if key == None: return len(iterData) Count = 0 for i in iterData: Count += bool(key(i)) return Count"
+        },
+        {
+          "key": "B",
+          "text": "执行print(count_if(range(-10,10), key = abs))将输出19"
+        },
+        {
+          "key": "C",
+          "text": "执行print(count_if(range(-100,10),key = lambda x:x > 5))将输出4"
+        },
+        {
+          "key": "D",
+          "text": "代码Count += bool(key(i))存在错误"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "在下面的 Python 代码中,最后一行用于输出小于 0 的 list ,横线处不能填入的代码是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[x for x in lstData if x < 0 ]"
+        },
+        {
+          "key": "B",
+          "text": "list(filter(lambda x: x < 0, lstData))"
+        },
+        {
+          "key": "C",
+          "text": "list(filter(LT(x,0), lstData))"
+        },
+        {
+          "key": "D",
+          "text": "[x for x in lstData if LT(x, 0)]"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "汉字的 unicode 编码界于 0x4E00 和 0x9FA5 之间。下面 Python 的代码用于读取红楼们和水浒传文本。如果要能完\n整阅读这两本小说,求出需要认识的汉字集合,横线处应填入代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "{x for x in (sSet + hSet) if 0x4E00 <= ord(x) <= 0x9FA5 }"
+        },
+        {
+          "key": "B",
+          "text": "{x for x in (sSet | hSet) if 0x4E00 <= x <= 0x9FA5 }"
+        },
+        {
+          "key": "C",
+          "text": "{x for x in (sSet + hSet) if 0x4E00 <= x <= 0x9FA5 }"
+        },
+        {
+          "key": "D",
+          "text": "{x for x in (sSet | hSet) if 0x4E00 <= ord(x) <= 0x9FA5 }"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "求回文子字符串,如:在 ABCDDCBAXz 中, DD 、 CDDC 、 BCDDCB 、 ABCDDCBA 均为回文子字符串。下\n面 Python 代码是其实现,横线处应填入的代码是(     )。\ndef LT(a, b):\n    return a < b\nlstData = list(range(-100,100))\nprint(___________________________)\n1\n2\n3\n4\n5\nshzFile = open(\" 水浒传 .txt\", \"r\", encoding = \"utf-8\")\nhlmFile = open(\" 红楼梦 .txt\", \"r\", encoding = \"utf-8\")\nsSet = set(shzFile.read())\nhSet = set(hlmFile.read())\nshzFile.close()\nhlmFile.close()\nprint(________________________________)\n1\n2\n3\n4\n5\n6\n7\n8\nsrcStr = input()\nsymList = [] # 保存回文子字符串\nfor i in range(len(srcStr)):\n    for j in range(i + 2, len(srcStr) + 1):\n        subStr = ___________\n        if subStr == _____________:\n            symList.append(subStr)\nfor i in sorted(symList, key = lambda x: len(x)):\n    print(i)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
+      "options": [
+        {
+          "key": "A",
+          "text": "srcStr[i:j],subStr[::-1]"
+        },
+        {
+          "key": "B",
+          "text": "srcStr[i:j],subStr[j:i:-1]"
+        },
+        {
+          "key": "C",
+          "text": "srcStr[i+2:j],subStr[j-1:i:-1]"
+        },
+        {
+          "key": "D",
+          "text": "srcStr[i:j+2],subStr[j-1:i-1:-1]"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "上面代码的时间复杂度是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "有关下面 Python 代码的说法,错误的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "该段代码是插入排序算法的实现"
+        },
+        {
+          "key": "B",
+          "text": "如果 lst 完全有序,则时间复杂度为"
+        },
+        {
+          "key": "C",
+          "text": "如果 lst 完全逆序,则时间复杂度为"
+        },
+        {
+          "key": "D",
+          "text": "由于 Sort() 函数没有返回值,没有最终达到排序效果"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 Python 函数 nGram() 用于逐一从字符串中截取 n 个字符,如: nGram(\"ABCDEF\",2) 将逐一截取为 AB 、\nBC 、 CD 、 DE 、 EF ,如: nGram(\"ABCDEF\",3) 将逐一截取为 ABC 、 BCD 、 CDE 、 DEF ,并统计每种截取的数量,横\n线处应填入代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "len(S)-n,S[i:n]"
+        },
+        {
+          "key": "B",
+          "text": "len(S)-n+1,S[i:i+n]"
+        },
+        {
+          "key": "C",
+          "text": "len(S),S[i:i+n]"
+        },
+        {
+          "key": "D",
+          "text": "len(S)-n,S[i:i+n] def Sort(lst): for i in range(1, len(lst)): key = lst[i] j = i - 1 while j >= 0 and key < lst[j]: lst[j + 1] = lst[j] j -= 1 lst[j + 1] = key lst = [4,5,13,2,7,10,1,3,8,11,6,9,12] lst = Sort(lst) print(\"sorted list:\", lst) def nGram(S,n): Result = {}# 保存截取字符串及其数量 for i in range(________________): nChar = ________________ Result[nChar] = Result.get(nChar,0) + 1 return Result 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "上题代码的时间复杂度是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面是埃氏素数筛的 Python 实现,横线上应填入的代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "i + i, N + 1, 2"
+        },
+        {
+          "key": "B",
+          "text": "i * i, N + 1, i"
+        },
+        {
+          "key": "C",
+          "text": "i * i, N, i * i"
+        },
+        {
+          "key": "D",
+          "text": "i, N + 1, i"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "上题代码的时间复杂度是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "在程序设计中, i * i 的效率通常比 i ** 2 更高。(    )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "求解指定正整数范围内所有质数,采用线性筛算法比埃氏筛效率更高。(    )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 没有指针语法,不能实现 C++ 中涉及指针的算法。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "如果将双向链表的最后一个元素指向第一个元素,则构成环状链表。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "链表不能采用快速排序或堆排序,但可以采用插入排序。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "在 Python 中, set 或 dict 因为存储时即自动排序,因此可以用二分法查找,时间复杂度为 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "如果自定义 class 已经定义了__lt__()魔术方法,则包含该类实例的数据结构,则将自动支持内置函数\nsorted() 。(   )\ndef listPrime(N):\n    primeList = list(range(N+1))\n    primeList[0] = primeList[1] = False\n    for i in range(2,int(N ** 0.5) + 1):\n        if primeList[i] != False:\n            for j in range(_____________):\n                primeList[j] = False\n    return [x for x in primeList if x != False]",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "归并排序和快速排序都采用递归实现,也都是不稳定排序。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下面的 Python 代码能实现十进制正整数 N 转换为 2 、 8 、 10 、 16 ,可适用于 16 进制以内进制。其中 n 和 ds 分别表\n示将转换的数以及目标进制。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "Python 代码print(sorted(range(10),key=lambda x:x%5))执行时将报错。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "黑白格",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有一个   行   列的网格图,其中每个格子要么是白色,要么是黑色。\n小杨想知道至少包含   个黑色格子的最小子矩形包含了多少个格子。\n3.1.2\n\n输入格式\n第一行包含三个正整数  ,含义如题面所示。\n之后   行,每行一个长度为   的   串,代表网格图第   行格子的颜色,如果为  ,则对应格子为白色,否则为黑\n色。\n3.1.3 输出格式\n输出一个整数,代表至少包含   个黑色格子的最小子矩形包含格子的数量,如果不存在则输出  。\n3.1.4 样例 1\nn,ds = map(int,input().split())\nrst = \"\" # 保存转换结果\ndigDict = {i:c for i,c in enumerate(\"0123456789ABCDEF\")}\nwhile n != 0:\n    rst = digDict[n % ds] + rst\n    n //= ds\nprint(rst)\n\n4 5 5\n\n子任务编号 数据点占比\n1 20%\n2 40%\n3 40%\n3.1.5 样例解释\n对于样例 1 ,假设  ( ) 代表第   行第   列,至少包含   个黑色格子的最小子矩形的四个顶点为  ( ) , ( ) , ( ) , (\n) ,共包含   个格子。\n3.1.6 数据范围\n对于全部数据,保证有  。\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "8\n00000\n01111\n00011\n00011\n",
+          "out": "6\n",
+          "suspect": true
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "小杨的幸运数字",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨认为他的幸运数字应该恰好有两种不同的质因子,例如,  的质因子有  ,恰好为两种不同的质\n因子,因此   是幸运数字,而   的质因子有  ,不符合要求,不为幸运数字。\n小杨现在有   个正整数,他想知道每个正整数是否是他的幸运数字。\n3.2.2\n\n输入格式\n第一行包含一个正整数  ,代表正整数个数。\n之后   行,每行一个正整数。\n3.2.3 输出格式\n输出   行,对于每个正整数,如果是幸运数字,输出  ,否则输出  。\n3.2.4 样例 1\n3.2.5 样例解释\n 的质因子有  ,只有一种。\n 的质因子有  ,恰好有两种。,\n 的质因子有  ,有三种。, ,\n3.2.6 数据范围\n对于全部数据,保证有  ,每个正整数   满足  。\nif __name__ == \"__main__\":\n    main()\n\n3.2.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "3\n7\n12\n30\n",
+          "out": "0\n",
+          "suspect": false
+        },
+        {
+          "in": "1\n0\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "D",
+      "B",
+      "A",
+      "C",
+      "B",
+      "D",
+      "C",
+      "D",
+      "A",
+      "D",
+      "D",
+      "B",
+      "C",
+      "B",
+      "C"
+    ]
+  ]
+}

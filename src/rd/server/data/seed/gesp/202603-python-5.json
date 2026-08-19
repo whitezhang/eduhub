@@ -1,0 +1,511 @@
+{
+  "meta": {
+    "ym": "202603",
+    "lang": "python",
+    "level": 5,
+    "title": "CCF GESP 2026年3月认证 Python 5级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10269.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1734124834390048.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202603-python-5.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "关于  Python 实现的单链表、双链表和循环链表,下列说法正确的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "在 Python 实现的单链表中,若已知任意结点对象的引用,则可以在 时间内删除该结点。"
+        },
+        {
+          "key": "B",
+          "text": "Python 实现的循环链表中一定不存在值为 None 的引用属性。"
+        },
+        {
+          "key": "C",
+          "text": "在 Python 实现的循环双链表中,尾结点对象的 next 属性值一定为 None。"
+        },
+        {
+          "key": "D",
+          "text": "在 Python 实现的带头结点的循环单链表中,判定链表是否为空只需判断头结点对象的 next 属性是否引用 头结点自身(即 head.next is head)。"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "双向循环链表中要在结点  p 之前插入新结点  s(均非空),以下操作正确的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面函数删除单向链表中  val == x 的节点,并且使用哑结点统一对头结点和中间节点的删除操作。横线\n处应填(  )。\ns.next=p\np.prev=s\nq.next=s\ns.prev=q\n1\n2\n3\n4\ns.prev=p\ns.next=p.next\np.next.prev=s\np.next=s\n1\n2\n3\n4\ns.next=p\ns.prev=p.prev\np.prev.next=s\np.prev=s\n1\n2\n3\n4\ns.next=p\ns.prev=nullptr\np.prev=s\n1\n2\n3\n第  1 页  / 共  14 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "对如下代码实现的欧几里得算法(辗转相除法),调用  gcd(48, 18) 得到的调用序列为(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面代码实现了欧拉(线性)筛,横线处应填写(   )。\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.next = None\ndef eraseAll(head, x):\n    dummy = Node(0)\n    dummy.next = head\n    cur = dummy\n\n    while cur.next:\n        if cur.next.val == x:\n            ____________________  # 填空处\n        else:\n            cur = cur.next\n\n    return dummy.next\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\ncur = cur.next1\ncur.next = cur.next.next 1\n cur.next = None  1\ncur.next = nullptr  1\ndef gcd(a, b):\n    if b == 0:\n        return a\n    else:\n        return gcd(b, a % b)\n1\n2\n3\n4\n5\ngcd(48,18) -> gcd(18,12) -> gcd(12,6) -> gcd(6,0)1\ngcd(48,18) -> gcd(30,18) -> gcd(12,18)1\ngcd(48,18) -> gcd(18,30) -> gcd(30,6)1\ngcd(48,18) -> gcd(12,18) -> gcd(6,12)1\n第  2 页  / 共  14 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "埃氏筛中将内层循环从  j = i*i 开始而不是  j = 2*i 的主要原因是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "因为 2*i 一定不是合数"
+        },
+        {
+          "key": "B",
+          "text": "i*i 一定是质数"
+        },
+        {
+          "key": "C",
+          "text": "小于 i*i 的 i 的倍数已被更小质因子筛过"
+        },
+        {
+          "key": "D",
+          "text": "这样可以把时间复杂度降为"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面程序的运行结果为(  )。\ndef euler_sieve_for(n):\n    if n < 2:\n        return []\n    is_composite = [False] * (n + 1)\n    primes = []\n    for i in range(2, n + 1):\n        if not is_composite[i]:\n            primes.append(i)\n\n        ___________________________\n            p = primes[j]\n            if i * p > n:\n                break\n            is_composite[i * p] = True\n            if i % p == 0:\n                break\n    return primes\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\nfor j in range(len(primes+1)):   1\nfor j in range(len(primes)+1): 1\nfor j in range(len(primes)): 1\nfor j in range(len(primes)-1): 1\ndef eratosthenes_sieve_for(n):\n    if n < 2:\n        return []\n    is_composite = [False] * (n + 1)\n    primes = []\n    for i in range(2, n + 1):\n        if is_composite[i]:\n            continue\n        primes.append(i)\n\n        # 用 for 循环模拟 C++ 的  j = i*i; j <=n; j +=i\n        for j in range(i * i, n + 1, i):\n            is_composite[j] = True\n\n    return primes\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n第  3 页  / 共  14 页",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "在升序数组中查找第一个大于等于x的位置,下面循环中横线应填(  )。\n\n```\ndef check(n, a, k, dist): cnt = 1 last = a[0] for i in range(1, n): if a[i] - last >= dist: cnt += 1 last = a[i] return cnt >= k def solve(n, a, k): a.sort() l = 0 r = a[-1] - a[0] while l < r: mid = (l + r + 1) // 2 if check(n, a, k, mid): l = mid else: r = mid - 1 return l if __name__ == \"__main__\": a = [1, 2, 8, 4, 9] n = 5 k = 3 result = solve(n, a, k) print(result) def lowerBound(a, x): l = 0 r = len(a) while l < r: mid = l + (r - l) // 2 if a[mid] >= x: __________________ else: l = mid + 1 return l if __name__ == \"__main__\": a1 = [1, 3, 5, 7, 9] x1 = 5 print(f\" 数组{a1}中第一个 ≥{x1}的位置:{lowerBound(a1, x1)}\") r = mid 1 第 4 页 / 共 14 页\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": "C."
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "关于递归函数调用,下列说法错误的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "递归调用层次过深时,可能会耗尽栈空间导致栈溢出"
+        },
+        {
+          "key": "B",
+          "text": "尾递归函数可以通过编译器优化来避免栈溢出"
+        },
+        {
+          "key": "C",
+          "text": "所有递归函数都可以通过循环结构来改写,从而避免栈溢出"
+        },
+        {
+          "key": "D",
+          "text": "栈溢出发生时,程序会抛出异常并可以继续执行后续代码"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "给定  n 根木头,第  i 根长度为  a[i]。要切成不少于  m 段等长木段,求最大可能长度,则横线上应填\n写(    )。\nr = mid - 1  1\nl = mid1\nl = mid + 11\n第  5 页  / 共  14 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面代码用分治求 “ 最大连续子段和 ” ,其时间复杂度为(  )。\ndef check(a, m, x):\n    cnt = 0\n    for length in a:\n        if x == 0:\n            return True\n        cnt += length\n        if cnt >= m:\n            return True\n    return cnt >= m\ndef main():\n    import sys\n    input = sys.stdin.read().split()\n    idx = 0\n    n = int(input[idx])\n    idx += 1\n    m = int(input[idx])\n    idx += 1\n\n    a = []\n    mx = 0\n    for _ in range(n):\n        num = int(input[idx])\n        idx += 1\n        a.append(num)\n        mx = max(mx, num)\n\n    l = 1\n    r = mx\n    ans = 0\n\n    while l <= r:\n        mid = l + (r - l) // 2\n        if check(a, m, mid):\n            ans = mid\n            _______________\n        else:\n            _______________\n\n    print(ans)\nif __name__ == \"__main__\":\n    main()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\nl = mid + 1 和 r = mid - 11\nr = mid - 1 和 l = mid + 1 1\nl = mid + 1 和 r = mid1\nl = mid - 1 和 r = mid + 11\n第  6 页  / 共  14 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "游戏大赛决赛,两组选手分别按得分从小到大排好队,现在要把他们合并成一个有序排行榜。\nA 组:A = {12, 35, 67, 89}, B 组:B = {20, 45, 55, 78},下面是归并合并函数的核心循环,横线处应填\n入(  )。\nimport sys\ndef solve(a, l, r):\n    if l == r:\n        return a[l]\n\n    mid = l + (r - l) // 2\n\n    left = solve(a, l, mid)\n    right = solve(a, mid + 1, r)\n\n    sum_val = 0\n    lmax = -sys.maxsize - 1\n    for i in range(mid, l - 1, -1):\n        sum_val += a[i]\n        lmax = max(lmax, sum_val)\n\n    sum_val = 0\n    rmax = -sys.maxsize - 1\n    for i in range(mid + 1, r + 1):\n        sum_val += a[i]\n        rmax = max(rmax, sum_val)\n\n    return max(left, right, lmax + rmax)\nif __name__ == \"__main__\":\n    a1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\n    print(solve(a1, 0, len(a1)-1))\n\n    a2 = [-5, -3, -1, -4]\n    print(solve(a2, 0, len(a2)-1))\n\n    a3 = [10]\n    print(solve(a3, 0, 0))\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n第  7 页  / 共  14 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "if A[i+1] <= B[j]:"
+        },
+        {
+          "key": "B",
+          "text": "if A[i] <= B[j+1]:"
+        },
+        {
+          "key": "C",
+          "text": "if A[i] <= B[j]:"
+        },
+        {
+          "key": "D",
+          "text": "if i < j:"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "有   位同学的成绩已经从小到大排好序,现在对它执行下面这段以第一个元素为  pivot 的快速排序,请\n问此次排序的时间复杂度是(   )。\nA = [12, 35, 67, 89]\nB = [20, 45, 55, 78]\ni = 0\nj = 0\nresult = []\nwhile i < len(A) and j < len(B):\n    ————————————————————————\n        result.append(A[i])\n        i += 1\n    else:\n        result.append(B[j])\n        j += 1\nwhile i < len(A):\n    result.append(A[i])\n    i += 1\nwhile j < len(B):\n    result.append(B[j])\n    j += 1\nprint(\" 合并后的有序排行榜: \", result)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n第  8 页  / 共  14 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面关于排序算法的描述中,不正确的是 (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "冒泡排序和插入排序都是稳定的排序算法"
+        },
+        {
+          "key": "B",
+          "text": "快速排序和归并排序都是不稳定的排序算法"
+        },
+        {
+          "key": "C",
+          "text": "冒泡排序和插入排序最好时间复杂度均为"
+        },
+        {
+          "key": "D",
+          "text": "归并排序在最好、最坏和平均三种情况的时间复杂度均为"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "下面代码实现两个整数除法,其中被除数为一个 “ 大整数 ” ,用字符串表示,除数是一个小整数,用  int 表\n示,则横线处应该填写(   )。\ndef quicksort(a, l, r):\n    if l >= r:\n        return\n    pivot = a[l]\n    i, j = l, r\n\n    while i < j:\n        while i < j and a[j] >= pivot:\n            j -= 1\n        while i < j and a[i] <= pivot:\n            i += 1\n        if i < j:\n            a[i], a[j] = a[j], a[i]\n\n    a[l], a[i] = a[i], a[l]\n    quicksort(a, l, i - 1)\n    quicksort(a, i + 1, r)\nif __name__ == \"__main__\":\n    scores = [60, 70, 80, 90, 100]\n    print(\" 排序前: \", scores)\n    quicksort(scores, 0, len(scores)-1)\n    print(\" 排序后: \", scores)  # 输出: [60, 70, 80, 90, 100]\n    def quicksort_with_log(a, l, r, depth=0):\n        if l >= r:\n            return\n        print(f\" 递归深度{depth},处理区间 [{l},{r}] ,数组:{a[l:r+1]}\")\n        pivot = a[l]\n        i, j = l, r\n        while i < j:\n            while i < j and a[j] >= pivot: j -= 1\n            while i < j and a[i] <= pivot: i += 1\n            if i < j: a[i], a[j] = a[j], a[i]\n        a[l], a[i] = a[i], a[l]\n        quicksort_with_log(a, l, i-1, depth+1)\n        quicksort_with_log(a, i+1, r, depth+1)\n\n    scores2 = [60,70,80,90,100]\n    print(\"\\n 递归过程: \")\n    quicksort_with_log(scores2, 0, 4)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n第  9 页  / 共  14 页\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "有一个存储了  n 个整数的线性表,分别用  Python 列表(数组)和自定义单链表两种方式实现。在已知元素\n下标(或结点对象引用)的前提下, Python 列表的随机访问操作时间复杂度为  ;而在  Python 实现的单链表中,\n已知某结点对象的引用时,在该结点之后插入一个新结点的操作时间复杂度也为  。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "若数组  a 已按升序排列,则下面代码可以正确实现  “ 在  a 中查找第一个大于等于  x 的元素的位置 ” 。\ndef big_integer_division():\n    s, b = input().split()\n    b = int(b)\n\n    a = [int(c) for c in s]\n\n    c = []\n    rem = 0\n\n    for i in range(len(a)):\n        rem = rem * 10 + a[i]\n        q = rem // b\n        c.append(q)\n        ______________\n\n    pos = 0\n    while pos < len(c) - 1 and c[pos] == 0:\n        pos += 1\n\n    for i in range(pos, len(c)):\n        print(c[i], end='')\n    print()\n\n    print(rem)\nif __name__ == \"__main__\":\n    big_integer_division()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrem =rem / b1\nrem = rem % b1\nrem = b1\nrem = q1\n第  10 页  / 共  14 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "快速排序只要每次都选取中间元素作为枢轴,就一定是稳定排序。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "若某算法满足递推式:\n则其时间复杂度为  。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "在一个数组中,如果两个元素  a[i] 和  a[j]满足i < j且  a[i] > a[j],则a[i] 和  a[j]是一个逆\n序对。\n下面代码可以正确统计数组a区间  [l,r] 内的逆序对总数。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "唯一分解定理保证:若一个数未被任何不超过其平方根的质数筛去,则它一定是质数。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "假设数组   的值域范围是  ,以下程序的时间复杂度是  。\ndef lowerBound(a, x):\n    l = 0\n    r = len(a)\n    while l < r:\n        mid = (l + r) // 2\n        if a[mid] >= x:\n            r = mid\n        else:\n            l = mid + 1\n    return l\nif __name__ == \"__main__\":\n    a1 = [1, 3, 5, 7, 9]\n    x1 = 5\n    print(f\" 数组{a1}中第一个 ≥{x1}的位置:{lowerBound(a1, x1)}\")\n    x2 = 6\n    print(f\" 数组{a1}中第一个 ≥{x2}的位置:{lowerBound(a1, x2)}\")\n    x3 = 10\n    print(f\" 数组{a1}中第一个 ≥{x3}的位置:{lowerBound(a1, x3)}\")\n    x4 = 0\n    print(f\" 数组{a1}中第一个 ≥{x4}的位置:{lowerBound(a1, x4)}\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT(n) = 2T(n/2) + O(n)1\ncnt = 0\ndef merge_count(a, l, m, r):\n    global cnt\n    i = l\n    j = m + 1\n\n    while i <= m and j <= r:\n        if a[i] <= a[j]:\n            i += 1\n        else:\n            cnt += (m - i + 1)\n            j += 1\nif __name__ == \"__main__\":\n    a = [2, 4, 1, 3]\n    merge_count(a, 0, 1, 3)\n    print(f\" 跨区间逆序对数量:{cnt}\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n第  11 页  / 共  14 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "若一个问题满足最优子结构性质,则一定可以用贪心算法得到最优解。(  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "线性筛相比埃氏筛的核心改进在于:埃氏筛中一个合数可能被多个质数重复标记,线性筛通过 \" 每个合数只\n被其最大质因子筛去 \" 的策略,保证每个合数恰好被标记一次,从而实现   的时间复杂度。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "任何递归程序都可以改写为等价的非递归程序,但改写后的非递归程序一定需要显式地使用栈来模拟递归\n调用过程。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "有限不循环小数",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n若   可化为一个有限的,不循环的小数,则称   为终止数。\n请你求出在   到   中终止数的数量。\ndef check(n, a, k, dist):\n    cnt = 1\n    last = a[0]\n\n        if a[i] - last >= dist:\n            cnt += 1\n            last = a[i]\n\n    return cnt >= k\ndef solve(n, a, k):\n    a_sorted = a.copy()\n    a_sorted.sort()\n\n    l = 0\n    r = a_sorted[-1] - a_sorted[0]\n\n        mid = (l + r + 1) // 2\n        if check(n, a_sorted, k, mid):\n            l = mid\n        else:\n            r = mid - 1\n\n    return l\nif __name__ == \"__main__\":\n    a = [1, 2, 8, 4, 9]\n    n = 5\n    k = 3\n    result = solve(n, a, k)\n    print(result)\n\n第  12 页  / 共  14 页\n3.1.2\n\n输入格式\n输入一行,包含两个整数  。\n3.1.3 输出格式\n输出一行,包含一个整数,表示   到   中终止数的数量。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.5 样例解释\n在   终止数有  。、 、 、 、\n3.1.6 数据范围\n保证  。\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "找数",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n给定一个包含   个互不相同的正整数的数组   与一个包含   个互不相同的正整数的数组  ,请你帮忙计算有多少数\n在数组   与  数组   中均出现。\n2 111\n\n# L , R 输入\nl, r = map(int, input().split())\n# 最终的答案,初始化为 0\nans = 0\n    t = i\n    # 不断除以 2\n        t //= 2\n    # 不断除以 5\n        t //= 5\n    # 如果不含其他因子,则这个数能够表示为不循环的小数\n    if t == 1:\n        ans += 1\nprint(ans)\n\n第  13 页  / 共  14 页\n3.2.2\n\n输入格式\n第一行包含两个整数  。\n第二行包含   个正整数   表示数组  。\n第二行包含   个正整数   表示数组  。\n3.2.3 输出格式\n输出一个整数,表示在数组   与  数组   中均出现的数的个数。\n3.2.4 样例\n3.2.4.1 输入样例\n3.2.4.2 输出样例\n3.2.5 样例解释\n样例  1 中, 、 在数组   与   中均出现。\n3.2.6 数据范围\n对于   的数据,保证  。\n对于   的数据,保证  , 。\n3.2.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "D",
+      "C",
+      "B",
+      "A",
+      "C",
+      "C",
+      "B",
+      "A",
+      "D",
+      "A",
+      "B",
+      "C",
+      "C",
+      "B",
+      "B"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "meta": {
+    "ym": "202512",
+    "lang": "python",
+    "level": 2,
+    "title": "CCF GESP 2025年12月认证 Python 2级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10242.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1723013082906656.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202512-python-2.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "近日,空中客车公司表示,约 6000 架空客 A320 系列飞机需要紧急更换一种易受太阳辐射影响的飞行控制软\n件。空客表示,在对一起飞行事故进行分析后,表明强烈的太阳辐射可能会损坏飞行控制系统所需的关键数据,导\n致判断失误,进而可能引发飞行异常。在这里的飞行控制系统中,执行判断的部件最可能是下面的 (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "辐射传感器"
+        },
+        {
+          "key": "B",
+          "text": "处理器"
+        },
+        {
+          "key": "C",
+          "text": "内存单元"
+        },
+        {
+          "key": "D",
+          "text": "输出设备"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "小杨最近为了备考 GESP ,开始看网络上关于网络知识的视频。其中提到计算机网络系统有不同的划分标\n准,其中之一就是按照地理覆盖的范围来划分。那他平时上学所在的教学楼内的网络是一个(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "PAN"
+        },
+        {
+          "key": "B",
+          "text": "LAN"
+        },
+        {
+          "key": "C",
+          "text": "MAN"
+        },
+        {
+          "key": "D",
+          "text": "WAN"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面有关 Python 变量的说法,正确的是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "不可以用 for 作为变量名,因为 for 是 Python 的关键字(保留字)。"
+        },
+        {
+          "key": "B",
+          "text": "_tnt 不可以是变量名,因为变量名的第一个字符必须是英文字母。"
+        },
+        {
+          "key": "C",
+          "text": "_tnt_ 不可以是变量名,因为最后一个字符容易与减号混淆。"
+        },
+        {
+          "key": "D",
+          "text": "可以用 print 作为变量名,因为 print 是关键字,但这不是好习惯,因为 print 有约定的功能与含义。"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "一个无限循环小数是  0.123123123...... ,其小数点后第 1 位是 1 ,后第 2 位是 2 ,后第 3 位是 3 ,后第 4 位是 1 ,依\n此类推,求第 N 位。横线处应填入的代码是 (  ) 。\nN = int(input())\nremainder = ______________\nif remainder == 0:\n    print(1)\nelif remainder == 1:\n    print(2)\nelse:\n    print(3)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n第  1 页  / 共  10 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "N % 3"
+        },
+        {
+          "key": "B",
+          "text": "(N - 1) % 3"
+        },
+        {
+          "key": "C",
+          "text": "N // 3"
+        },
+        {
+          "key": "D",
+          "text": "(N - 1) // 3"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "某同学执行 Python 代码  print(3 + 3.14) 时输出  6.140000000000001,其原因是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "Python 中整数和浮点数相加时,整数会被转换为浮点数,而某些十进制小数如 3.14 无法用有限位二进制精确 表示,从而产生微小的舍入误差。"
+        },
+        {
+          "key": "B",
+          "text": "Python 的 print 函数在输出浮点数时有默认小数点位数,因此输出了更多位数。"
+        },
+        {
+          "key": "C",
+          "text": "3.14 是一个无限循环小数,在计算机中无法精确表示。"
+        },
+        {
+          "key": "D",
+          "text": "由于计算机 CPU 的运算错误导致。"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "某单位工号的编码规则:编码总长 5 位,均为数字,前 4 位依次整除以 3 ,其值累加之和除以 10 的余数为第 5 位\n数字。如某工号为 76587 ,前 4 位分别整除 3 后,商分别为 2 、 2 、 1 、 2 ,其累加之和为 7 ,除以 10 的余数为 7 ,故第 5 位\n为 7 。下面的程序依次输入前 4 位数字,并计算输出最后一位。程序逐行输入前 4 位数字,要输出第 5 位数字。则在横\n线处应填上的代码是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面的 Python 代码执行之后的输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "-1#1#"
+        },
+        {
+          "key": "B",
+          "text": "-1#0#1#"
+        },
+        {
+          "key": "C",
+          "text": "-2#-1#1#2#"
+        },
+        {
+          "key": "D",
+          "text": "-2#-1#0#1# rst = 0 for _ in range(4): N = int(input()) rst += ___________ print(___________) N % 3 rst // 10 N // 3 rst % 10 N % 3 rst % 10 N // 3 rst // 10 for i in range(-2, 2): if i % 2: print(i, end = \"#\") 第 2 页 / 共 10 页"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面的 Python 代码执行后其输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后其输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "0 0"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "0 11"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "与下面 Python 输出效果不一致的代码是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B. cnt = 0 for i in range(1, 10, 2): for j in range(i): cnt += 1 print(cnt) for i in range(1, 12): if i % 2 == 0: continue for j in range(i): if i * j % 2 == 0: break else: print(i * j, end=\" \") else: print(i * j) for i in range(10): print(i) i = 0 while i < 10: print(i) i += 1 i = 0 while i < 10: i += 1 print(i) 第 3 页 / 共 10 页"
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出是(      )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "3#6#"
+        },
+        {
+          "key": "B",
+          "text": "3#6#6"
+        },
+        {
+          "key": "C",
+          "text": "1#2#3#4#5#6#"
+        },
+        {
+          "key": "D",
+          "text": "1#2#3#4#5#6#6"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后,其输出是(      )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "漂亮数的定义是:如果 N 能被 M 整除,或者某位是 M ,或者 N 的每位数之和能被 M 整除,则说 N 是 M 的漂亮\n数。如果三个条件都满足,则是完整漂亮数。 123 是 3 的完整漂亮数,因为 123 能被 3 整除,也含有 3 ,其每位数之和为\n6 也能被 3 整除。下面的代码用于判断 N 是否为 M 的完整漂亮数并输出。相关说法正确的是(      )。\ni = 0\nwhile True:\n    print(i)\n    i += 1\n    if i >= 10:\n        break\n1\n2\n3\n4\n5\n6\ni = 0\nwhile True:\n    if i >= 10:\n        break\n    print(i)\n    i += 1\n1\n2\n3\n4\n5\n6\nnum = 0\nwhile num <= 5:\n    num += 1\n    if num % 3:\n        continue\n    print(num, end='#')\nelse:\n    print(num)\n1\n2\n3\n4\n5\n6\n7\n8\ncnt = 0\nfor i in range(5):\n    for j in range(i,4):\n        cnt += 1\nprint(cnt)\n1\n2\n3\n4\n5\n第  4 页  / 共  10 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码能完成题目设定目标。"
+        },
+        {
+          "key": "B",
+          "text": "在 while 循环中 N 最终将变成 0 ,因为代码 N % M 将总是满足条件,可以在 while 前增加一行代码 old_num = N,并将 N % M 改为 old_num % M,随后print()中的{N}改为{old_num}。"
+        },
+        {
+          "key": "C",
+          "text": "while 循环中 if 判断语句可以增加 else 子句,其内容为 Flag = False。"
+        },
+        {
+          "key": "D",
+          "text": "如果先后输入 0 和 3,则肯定会输出 0 是 3 的完整漂亮数。"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "阅读下面的 Python 代码。执行后如输入  5,其输出的字符图形是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "N = int(input(\" 请输入 N , N 必须是 0 或正整数: \")) M = int(input(\" 请输入 M : M 必须大于 1 小于等于 9 : \")) Sum = 0 # 记录各位数之和 Flag = False # 记录 N 是否含有 M while N != 0: num = N % 10 Sum += num if num == M: Flag = True N //= 10 if (N % M == 0) and (Flag == True) and (Sum % M == 0): print(f\"{N}是{M}的完整漂亮数 \") else: print(f\"{N}不是{M}的完整漂亮数 \") n = int(input()) for i in range(n): for j in range(n - i - 1): print(\" \", end=\"\") for k in range(2 * i + 1): print(\"*\", end=\"\") print() ***** **** *** ** * * *** ***** ******* ********* * ** *** **** ***** 第 5 页 / 共 10 页 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "某学校举办 “ 十佳歌手大奖赛 ” ,经过选拔最终参赛选手有 25 人,评委 10 人,最终计分规则去掉一个最高分\n去掉一个最低分作为该参赛选手的最终得分,并输出该得分。每位评委都必须打分,且分数都大于等 0 。相关说法正\n确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "程序总体逻辑错误。因为要去掉最高分和最低分,需要排序,而程序没有相关代码。"
+        },
+        {
+          "key": "B",
+          "text": "内层循环和外层循环之间的三行代码也就是 max_score = 0 开始的三行代码应该移动到外层循环外。"
+        },
+        {
+          "key": "C",
+          "text": "if now_score > max_score 和 if now_score < min_score 中的 > 和 < 分别调整为 >= 和 <= 不 影响程序执行结果。"
+        },
+        {
+          "key": "D",
+          "text": "total_score += now_score 不可以更改为 total_score = total_score + now_score。"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "鸿蒙是华为公司开发的一款操作系统,那么它能够将正确的源程序翻译成目标程序,并运行。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "Python 表达式5 < 10 and 20的值为True。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 表达式10 ** 0.5 == 10 ** 1 / 2的值为False。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行时如果输入整数(包括负整数、0和正整数),其输出都将是0。  (  )\n    *\n   **\n  ***\n ****\n*****\n\n\n\n\n\nfor _ in range(25):\n    max_score = 0 # 记录最高分\n    min_score = 9999 # 记录最低分\n    total_score = 0 # 记录总分\n    for _ in range(10):\n        now_score = float(input()) # 录入评委打分\n        if now_score > max_score:\n            max_score = now_score\n        if now_score < min_score:\n            min_score = now_score\n        total_score += now_score\n    print(total_score - max_score - min_score)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN = int(input())\nwhile N:\n    N //= 10\nprint(N)\n\n\n\n\n第  6 页  / 共  10 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "下面的 Python 代码执行后,其输出是4 False。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后将输出5。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "下面的 Python 代码可以用于判断正整数 N 的位数(即几位数,如123是3位数,12为2位数)。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "计算交叉加减的结果,形如1-2+3-4+5-......。将下面 Python 代码中的Flag = -Flag改为Flag -= Flag效\n果相同。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下列 Python 代码执行后将输出55。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后输出如下,因为代码print()的括号中没有任何内容,删除不影响输出效果。(   )\n\na = 4\nb = a == 5\nprint(a, b)\n\n\n\ni = 0\nwhile i < 5:\n    i += 1\n    continue\nprint(i)\n\n\n\n\n\nN = int(input())\ni = 1\nwhile True:\n    if N % (10 ** i) == N:\n        print(f\"{N}是{i}位数 \")\n        break\n    i += 1\n\n\n\n\n\n\n\nN = int(input())\nFlag = -1\ntnt = 0\nfor i in range(1, N + 1):\n    Flag = -Flag\n    tnt += Flag * i\nprint(tnt)\n\n\n\n\n\n\n\ncnt = 0\nfor i in range(10):\n    for j in range(i,10):\n        cnt += 1\nprint(cnt)\n\n\n\n\n\nfor i in range(1,10):\n    for j in range(1,10):\n        print(f\"{i*j:3}\",end=\"\")\n    print()\n\n\n\n\n第  7 页  / 共  10 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "环保能量球",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小杨最近在玩一个环保主题的游戏。在游戏中,小杨每行走  1 公里就可以获得  1 点 “ 环保能量 ” 。\n为了激励玩家,游戏设置了 “ 里程奖励 ” :小杨每行走   公里,游戏就会额外奖励  1 点能量。\n现在已知小杨总共行走了   公里,请你帮他计算,他一共能获得多少点环保能量?\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,代表测试数据组数。\n对于每组测试数据:\n第一行包含一个正整数  ,代表行走的公里数。\n第二行包含一个正整数  ,代表奖励触发的间隔。\n3.1.3 输出格式\n对于每组测试数据,输出一个整数,代表小杨获得的环保能量总数。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.4.3 样例解释\n对于第  1 组数据, :小杨行走获得  5 点能量。此外,他在第  2 公里和第  4 公里时各获得  1 点额外奖\n励,总共   点。\n对于第  2 组数据, :行走获得  10 点。他在第  3 、 6 、 9 公里时各获得  1 点额外奖励,总共\n 点。\n对于第  3 组数据, :行走获得  2 点。由于行走路程不足  5 公里,没有额外奖励,总共  2 点。\n\n第  8 页  / 共  10 页\n3.1.5 数据范围\n对于全部数据,保证: , 。\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "3\n5\n2\n10\n3\n2\n5\n",
+          "out": "7\n",
+          "suspect": false
+        },
+        {
+          "in": "13\n2\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "黄金格",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小杨在探险时发现了一张神奇的矩形地图,地图有   行和   列。每个格子的坐标是  ( ) ,其中   表示行号从   到\n, 表示列号   到  。\n小杨听说地图中隐藏着一些 “ 黄金格 ” ,这些格子满足一个神秘的数学挑战:当格子坐标   代入特定的不等式关系\n成立时,该格子就是黄金格。具体来说,黄金格的条件是:  。\n例如,如果参数   ,那么格子   就是黄金格。因为左边坐标平方和的平方根   算出来是  ,而右边\n 算出来是  , 小于等于  ,符合条件。\n3.2.2\n\n输入格式\n三行,每行一个正整数,分别表示  。含义如题面所示。\n3.2.3 输出格式\n一行一个整数,代表黄金格数量。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n# 读取测试数据组数\nline_count = int(input()) # 读取数据组数\nfor _ in range(line_count):\n    # 一行读取一个数\n    n = int(input()) # 读取行走的公里数\n    x = int(input()) # 读取奖励间隔数\n\n    ans = n # 基础奖励点数\n    add_point = n // x\n    print(ans + add_point) # 输出基础奖励点数和额外奖励数\n\n第  9 页  / 共  10 页\n3.2.4.3 样例解释\n图中标注为黄色的四个格子是黄金格,坐标分别为  , , , 。\n3.2.5 数据范围\n对于所有测试点,保证给出的正整数不超过  。\n3.2.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "4\n4\n2\n",
+          "out": "4\n",
+          "suspect": true
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "B",
+      "A",
+      "B",
+      "A",
+      "B",
+      "A",
+      "D",
+      "C",
+      "B",
+      "B",
+      "B",
+      "B",
+      "B",
+      "C"
+    ],
+    [
+      "D"
+    ]
+  ]
+}

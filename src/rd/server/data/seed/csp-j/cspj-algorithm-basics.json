@@ -1,0 +1,581 @@
+{
+  "slug": "cspj-algorithm-basics",
+  "url": "https://adacpp.com/practice/cspj-algorithm-basics",
+  "title": "算法概念",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "-mbo-YTFS0E9k8fViUHSX",
+      "type": "single_choice",
+      "content": "（）就是把一个复杂的问题分成两个或更多的相同类似的子问题，再把子问题分解成更小的子问题……直到最后的子问题可以简单地直接求解。而原问题的解就是子问题解的并。",
+      "options": [
+        {
+          "label": "A",
+          "text": "动态规划"
+        },
+        {
+          "label": "B",
+          "text": "贪心"
+        },
+        {
+          "label": "C",
+          "text": "分治"
+        },
+        {
+          "label": "D",
+          "text": "搜索"
+        }
+      ],
+      "answer": "C",
+      "explanation": "题目描述就是分治法的定义。"
+    },
+    {
+      "id": "_T-b2hNsc1Do8aRIECQqf",
+      "type": "single_choice",
+      "content": "体育课的铃声响了，同学们都陆续地奔向操场，按老师的要求从高到矮站成一排。每个同学按顺序来到操场时，都从排尾走到排头，找到第一个比自己高的同学，并站在他的后面。这种站队的方法类似于（ ）算法。",
+      "options": [
+        {
+          "label": "A",
+          "text": "快速排序"
+        },
+        {
+          "label": "B",
+          "text": "插入排序"
+        },
+        {
+          "label": "C",
+          "text": "冒泡排序"
+        },
+        {
+          "label": "D",
+          "text": "归并排序"
+        }
+      ],
+      "answer": "B",
+      "explanation": "插入排序：将无序序列插入到有序序列中。"
+    },
+    {
+      "id": "wJXD2pVEqecH-UdewnDfr",
+      "type": "single_choice",
+      "content": "使用冒泡排序对序列进行升序排列，每执行一次交换操作系统将会减少 1 个逆序对，因此序列 5，4，3，2，1 需要执行（ ）次操作，才能完成冒泡排序。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "15"
+        }
+      ],
+      "answer": "C",
+      "explanation": "一次交换后会减少1个逆序对。\n①4 5 3 2 1 ②4 3 5 2 1\n③4 3 2 5 1 ④4 3 2 1 5\n⑤3 4 2 1 5 ⑥3 2 4 1 5\n⑦3 2 1 4 5 ⑧2 3 1 4 5\n⑨2 1 3 4 5 ⑩1 2 3 4 5"
+    },
+    {
+      "id": "p919kWT2z1wHcGOUplPH5",
+      "type": "true_false",
+      "content": "一个算法可以用不同的形式来描述，但要求描述比较规范，因此不能用自然语言描述",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "算法不仅可以用程序语言描述，也可以通过自然语言描述，例如中文等，所以本题错误。"
+    },
+    {
+      "id": "Y2pEIsRiR2IClKzJCJKKU",
+      "type": "true_false",
+      "content": "著名的哥德巴赫猜想：任一大于2的偶数都可写成两个素数之和。我们可以通过枚举法来证明它",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "枚举法是枚举所有的可能，枚举不出所有的偶数，所以不能用枚举法证明哥德巴赫猜想。"
+    },
+    {
+      "id": "JAakpz2N5I-Vl-HF7GGgp",
+      "type": "single_choice",
+      "content": "排序算法是稳定的（Stable Sorting），就是指排序算法可以保证，在待排序数据中有两个相等记录的关键字R和S（R出现在S之前），在排序后的列表中R也一定在S前。下面关于排序稳定性的描述，正确的是",
+      "options": [
+        {
+          "label": "A",
+          "text": "冒泡排序是不稳定的"
+        },
+        {
+          "label": "B",
+          "text": "插入排序是不稳定的"
+        },
+        {
+          "label": "C",
+          "text": "选择排序是不稳定的"
+        },
+        {
+          "label": "D",
+          "text": "以上都不正确"
+        }
+      ],
+      "answer": "C",
+      "explanation": "冒泡排序、插入排序一般是稳定的，而选择排序一般是不稳定的，所以本题正确答案为C。"
+    },
+    {
+      "id": "eSvHezWf1cdAxweix2W2j",
+      "type": "single_choice",
+      "content": "在上题的归并排序算法中，mergeSort(listData, start, middle)和mergeSort(listData, middle + 1, end)涉及到的算法为",
+      "options": [
+        {
+          "label": "A",
+          "text": "搜索算法"
+        },
+        {
+          "label": "B",
+          "text": "分治算法"
+        },
+        {
+          "label": "C",
+          "text": "贪心算法"
+        },
+        {
+          "label": "D",
+          "text": "递推算法"
+        }
+      ],
+      "answer": "B",
+      "explanation": "归并排序采用的是分治算法思想，正确答案B选项。"
+    },
+    {
+      "id": "ICsRPCtnKA2F29hmxaumX",
+      "type": "single_choice",
+      "content": "归并排序算法的基本思想是",
+      "options": [
+        {
+          "label": "A",
+          "text": "将数组分成两个子数组，分别排序后再合并"
+        },
+        {
+          "label": "B",
+          "text": "随机选择一个元素作为枢轴，将数组划分为两个部分"
+        },
+        {
+          "label": "C",
+          "text": "从数组的最后一个元素开始，依次与前一个元素比较并交换位置"
+        },
+        {
+          "label": "D",
+          "text": "比较相邻的两个元素，如果顺序错误就交换位置"
+        }
+      ],
+      "answer": "A",
+      "explanation": "归并排序基本思想就是将数组分成两个子数组，分别排序后再合并，正确答案A选项。"
+    },
+    {
+      "id": "uThabX9hdfZ4TV_N7awAJ",
+      "type": "true_false",
+      "content": "在特殊情况下流程图中可以出现三角框和圆形框",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "流程图中没有三角框。"
+    },
+    {
+      "id": "J51SXeYuCoCu1ivTOiE1V",
+      "type": "true_false",
+      "content": "在C++中，可以使用二分法查找链表中的元素",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "使用二分法查找元素，元素必须是顺序存储的，链表不是顺序存储数据，因此不能使用二分法。"
+    },
+    {
+      "id": "3_84BL9XRl992NCvZVu5-",
+      "type": "true_false",
+      "content": "贪心算法的解可能不是最优解",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "贪心算法找到的不一定是最优解。"
+    },
+    {
+      "id": "2jFdnh8f19YJyDFhepoHV",
+      "type": "true_false",
+      "content": "一般说来，冒泡排序算法优于归并排序",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "冒泡排序时间复杂度为O(n^2)，归并排序的时间复杂度为O(nlogn)，因此归并优于冒泡，说法错误。"
+    },
+    {
+      "id": "xSKeM6BoFD1oSiFEv3HyC",
+      "type": "true_false",
+      "content": "C++语言中的qsort库函数是不稳定排序",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "qsort函数内部使用的是不稳定的排序算法。"
+    },
+    {
+      "id": "0gSKezZLKexzTg4XLoRkd",
+      "type": "single_choice",
+      "content": "小西想编写一个判断任意输入的整数N是否为素数的程序，下面哪个方法不合适",
+      "options": [
+        {
+          "label": "A",
+          "text": "埃筛法"
+        },
+        {
+          "label": "B",
+          "text": "线性筛法"
+        },
+        {
+          "label": "C",
+          "text": "二分答案"
+        },
+        {
+          "label": "D",
+          "text": "枚举法"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题考察数学知识。线筛和埃筛都可以判断素数，枚举也可以，二分规模减半，不能合理判断。"
+    },
+    {
+      "id": "niRFq25ZSC5fiaOERNRGY",
+      "type": "true_false",
+      "content": "小西在生日聚会时拿一块H*W的巧克力招待来的K个小朋友，保证每位小朋友至少能获得一块相同大小的巧克力。那么小西想分出来最大边长的巧克力可以使用二分法",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "因为考纲中对二分法同时列出了“二分查找”和“二分答案（或二分枚举）”。"
+    },
+    {
+      "id": "IkwVKUSe6kPSytDyQdSB_",
+      "type": "true_false",
+      "content": "贪心算法可以达到局部最优，但可能不是全局最优解",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题考察贪心算法知识。贪心是局部达到最优。"
+    },
+    {
+      "id": "PXUnY1iro4nh0KUi4sgQF",
+      "type": "true_false",
+      "content": "给定一个数字序列A1，A2，A3，...，An，要求i和（j 1<=i<=j<=n），使Ai+…+Aj最大，可以使用动态规划方法来求解",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "问题为最大子段和，动态规划的经典例题，设f[i]为以i结尾的子段最大值，则f[i]=max(a[i],f[i-1]+a[i])。"
+    },
+    {
+      "id": "u_JfZBD80LGJHrKdvSsec",
+      "type": "true_false",
+      "content": "动态规划只要推导出状态转移方程，就可以写出递归程序来求出最优解",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "错误，用递归法求解动态规划方程会造成重复计算，可能导致超时。另外，动态规划算法的核心是状态转移方程，但同时也需要定义状态、初始条件和边界条件等。"
+    },
+    {
+      "id": "tCEnelzVnqhLTslpjy9E-",
+      "type": "single_choice",
+      "content": "贪心算法的核心思想是",
+      "options": [
+        {
+          "label": "A",
+          "text": "在每一步选择中都做当前状态下的最优选择"
+        },
+        {
+          "label": "B",
+          "text": "在每一步选择中都选择局部最优解"
+        },
+        {
+          "label": "C",
+          "text": "在每一步选择中都选择全局最优解"
+        },
+        {
+          "label": "D",
+          "text": "以上都对"
+        }
+      ],
+      "answer": "A",
+      "explanation": "贪心算法的核心思想是在每一步选择中都做出在当前状态下的最优选择，以期望通过局部最优达到全局最优。"
+    },
+    {
+      "id": "O2XaiHKn7uNmbqUXENbVg",
+      "type": "single_choice",
+      "content": "归并排序的基本思想是",
+      "options": [
+        {
+          "label": "A",
+          "text": "动态规划"
+        },
+        {
+          "label": "B",
+          "text": "分治"
+        },
+        {
+          "label": "C",
+          "text": "贪心算法"
+        },
+        {
+          "label": "D",
+          "text": "回溯算法"
+        }
+      ],
+      "answer": "B",
+      "explanation": "归并排序的基本思想是分治法，即将原问题分解成若干个规模较小但类似于原问题的子问题，递归解决这些子问题，然后合并其结果，得到原问题的解。"
+    },
+    {
+      "id": "uic1CkLLGbYKyhJsM0oQQ",
+      "type": "single_choice",
+      "content": "递归函数在调用自身时，必须满足（），以避免无限递归",
+      "options": [
+        {
+          "label": "A",
+          "text": "有终止条件"
+        },
+        {
+          "label": "B",
+          "text": "函数参数递减（或递增）"
+        },
+        {
+          "label": "C",
+          "text": "函数返回值固定"
+        },
+        {
+          "label": "D",
+          "text": "以上都对"
+        }
+      ],
+      "answer": "A",
+      "explanation": "递归函数在调用自身时，必须有一个明确的终止条件，否则会形成无限递归，最终导致程序崩溃。"
+    },
+    {
+      "id": "12BdJUeqmZ8lleJrEbX5A",
+      "type": "true_false",
+      "content": "二分查找要求被搜索的序列是有序的，否则无法保证正确性",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "二分查找的前提条件是序列有序，如果序列无序，则无法通过二分查找来保证查找的正确性。"
+    },
+    {
+      "id": "zV43H5gelYZo4G9IeloB-",
+      "type": "true_false",
+      "content": "使用贪心算法解决问题时，每一步的局部最优解一定会导致全局最优解",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "贪心算法在每一步选择当前状态下的最优解，但这并不总能保证结果就是全局最优解。"
+    },
+    {
+      "id": "0lwpjt-YHXBUJZun9QPxN",
+      "type": "true_false",
+      "content": "分治算法的核心思想是将一个大问题分解成多个相同或相似的子问题进行解决，最后合并得到原问题的解",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "分治算法正是通过分解问题，并对每个子问题求解后再合并结果来解决原问题。"
+    },
+    {
+      "id": "yH7QI7upYNTfJCX_ZT2Am",
+      "type": "true_false",
+      "content": "贪心算法是一种可以应用于所有问题的通用解决方案",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "贪心算法并不适用于所有问题，它只适用于能通过局部最优解能够达到全局最优解的特定问题。"
+    },
+    {
+      "id": "6UZFySX3Ko_WxoLb_0we2",
+      "type": "single_choice",
+      "content": "在求解最优化问题时，动态规划常常涉及到两个重要性质，即最优子结构和",
+      "options": [
+        {
+          "label": "A",
+          "text": "重叠子问题"
+        },
+        {
+          "label": "B",
+          "text": "分治法"
+        },
+        {
+          "label": "C",
+          "text": "贪心策略"
+        },
+        {
+          "label": "D",
+          "text": "回溯算法"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在动态规划中，最优子结构和重叠子问题是求解最优化问题时常常涉及到的两个重要性质。"
+    },
+    {
+      "id": "2XpA2kJg10oZulBYS7S5n",
+      "type": "true_false",
+      "content": "在动态规划中，状态转移方程的作用是定义状态之间的关系",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在动态规划中，状态转移方程定义了状态之间的关系，是求解动态规划问题的核心。"
+    },
+    {
+      "id": "1nsbHxGCTKWpKe7xgFrvs",
+      "type": "single_choice",
+      "content": "下列关于排序的说法，正确的是",
+      "options": [
+        {
+          "label": "A",
+          "text": "冒泡排序是最快的排序算法之一"
+        },
+        {
+          "label": "B",
+          "text": "快速排序通常是不稳定的"
+        },
+        {
+          "label": "C",
+          "text": "最差情况，n个元素做归并排序的时间复杂度为O(nlogn)"
+        },
+        {
+          "label": "D",
+          "text": "以上均不正确"
+        }
+      ],
+      "answer": "C",
+      "explanation": "最差情况下，n个元素进行归并排序的时间复杂度为O(nlogn)，这是归并排序性能的特点之一。"
+    }
+  ]
+}

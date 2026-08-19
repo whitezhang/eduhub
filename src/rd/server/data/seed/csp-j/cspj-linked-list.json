@@ -1,0 +1,234 @@
+{
+  "slug": "cspj-linked-list",
+  "url": "https://adacpp.com/practice/cspj-linked-list",
+  "title": "链表",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "oRefyWxFLXUSW52Uxi07K",
+      "type": "single_choice",
+      "content": "双向链表中有两个指针域llink和rlink，分别指向该结点的前驱及后继。设p指向链表中的一个结点，它的左右结点均非空。现要求删除结点p，则下面语句序列中错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "p->rlink->llink = p->rlink; p->llink->rlink = p->llink; delete p;"
+        },
+        {
+          "label": "B",
+          "text": "p->llink->rlink = p->rlink; p->rlink->llink = p->llink; delete p;"
+        },
+        {
+          "label": "C",
+          "text": "p->rlink->llink = p->llink; p->rlink->llink->rlink = p->rlink; delete p;"
+        },
+        {
+          "label": "D",
+          "text": "p->llink->rlink = p->rlink; p->llink->rlink->llink = p->llink; delete p;"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A的第一行的结果是使得结点p的后继结点的前驱指向了它本身，逻辑错误；第二行错误同理，与之相对且正确的是C。"
+    },
+    {
+      "id": "ILWFIrA6tOYEKHToZsJ8V",
+      "type": "single_choice",
+      "content": "在含有n个元素的双向链表中查询是否存在关键字为k的元素，最坏情况下运行的时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n log n)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "双向链表只是查找前驱节点方便而已。假如链表长度为n，待查找的节点在链表的尾部，和单向链表一样要查n次才能查到。"
+    },
+    {
+      "id": "vKIuqo1Aolg4LzPfBTWcR",
+      "type": "single_choice",
+      "content": "链表不具备的特点是(   )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "可随机访问任何一个元素"
+        },
+        {
+          "label": "B",
+          "text": "插入、删除操作不需要移动元素"
+        },
+        {
+          "label": "C",
+          "text": "无需事物估计存储空间大小"
+        },
+        {
+          "label": "D",
+          "text": "所需存储空间与存储元素个数成正比"
+        }
+      ],
+      "answer": "A",
+      "explanation": "链表只能从头结点开始按顺序访问，不能随机访问。"
+    },
+    {
+      "id": "ROWx6ntwAq2KNHBKuluMx",
+      "type": "single_choice",
+      "content": "线性表若采用链表存储结构，要求内存中可用存储单元地址( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "必须连续"
+        },
+        {
+          "label": "B",
+          "text": "部分地址必须连续"
+        },
+        {
+          "label": "C",
+          "text": "一定不连续"
+        },
+        {
+          "label": "D",
+          "text": "连续不连续均可"
+        }
+      ],
+      "answer": "D",
+      "explanation": "最常见的操作方式：先开辟出一段连续空间（类似数组），如果不够用，再一点点开辟新空间，因此所用的内存很可能是连续与不连续混合的。\n链表可以不连续，便于数据的插入和删除。\n线性表是最基本、最简单、也是最常用的一种数据结构。线性表（linear list）是数据结构的一种，一个线性表是$n$个具有相同特性的数据元素的有限序列。\n线性表中数据元素之间的关系是一对一的关系，即除了第一个和最后一个数据元素之外，其它数据元素都是首尾相接的（注意，这句话只适用大部分线性表，而不是全部。比如，循环链表逻辑层次上也是一种线性表（存储层次上属于链式存储），但是把最后一个数据元素的尾指针指向了首位结点）。\n在实际应用中，线性表常以链表、栈、队列、字符串等形式使用。\n数组与链表的区别：\n0）链表相邻元素是逻辑上的连续，数组相邻元素是物理上的连续；\n1）链表的长度可以改变，但数组的长度是固定的；\n2）链表可以插入元素，数组不能插入元素；\n3）链表可以删除元素，数组无法删除元素，数组只能将指定元素赋为$null$，但各种元素依然存在；\n4）链表提供方法来搜索指定元素的位置，数组一般无该方法；\n5）链表提供方法来清空所有元素，但数组一般无该方法\n数组的存储空间要求连续的内存；链表不要求连续的内存，当然连续的内存也可以。选D。"
+    },
+    {
+      "id": "t3gGazuROROJ6T_G5HNma",
+      "type": "single_choice",
+      "content": "链表不具有的特点是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "插入删除不需要移动元素"
+        },
+        {
+          "label": "B",
+          "text": "不必事先估计存储空间"
+        },
+        {
+          "label": "C",
+          "text": "所需空间与线性表长度成正比"
+        },
+        {
+          "label": "D",
+          "text": "可随机访问任一元素"
+        }
+      ],
+      "answer": "D",
+      "explanation": "A.插入、删除无需改变元素位置，只需改变存储的下一元素地址信息。\nB.链表无需事先预留足够大的储存空间，可以动态分配内存。\nC.链表为线性结构，空间与长度成正比。\nD.链表只能从头开始依次访问每个元素，无法随机访问任意元素。"
+    },
+    {
+      "id": "C8ZhFfgIRqMIm8FwqaV__",
+      "type": "single_choice",
+      "content": "链表不具有的特点是(    )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "可随机访问任一元素"
+        },
+        {
+          "label": "B",
+          "text": "不必事先估计存储空间"
+        },
+        {
+          "label": "C",
+          "text": "插入删除不需要移动元素"
+        },
+        {
+          "label": "D",
+          "text": "所需空间与线性表长度成正比"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A. 链表只能从头开始依次访问每个元素，无法随机访问任意元素。\nB. 链表无需事先预留足够大的储存空间，可以动态分配内存。\nC. 插入、删除无需改变元素位置，只需改变存储的下一元素地址信息。\nD. 目前学习的数据结构均为线性结构，空间皆与长度成正比。"
+    },
+    {
+      "id": "kBeYC6gJvp6F1W8rYf8C7",
+      "type": "single_choice",
+      "content": "链表和数组的区别包括（",
+      "options": [
+        {
+          "label": "A",
+          "text": "数组不能排序，链表可以"
+        },
+        {
+          "label": "B",
+          "text": "链表比数组能存储更多的信息"
+        },
+        {
+          "label": "C",
+          "text": "数组大小固定，链表大小可动态调整"
+        },
+        {
+          "label": "D",
+          "text": "以上均正确"
+        }
+      ],
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "id": "GJbxm4Ig5JPA97Hde-xAW",
+      "type": "single_choice",
+      "content": "以下哪组操作能完成在双向循环链表结点 p 之后插入结点 s 的效果（其中，next 域为结点的直接后继，prev 域为结点的直接前驱）：（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "p->next->prev=s; s->prev=p; p->next=s; s->next=p->next;"
+        },
+        {
+          "label": "B",
+          "text": "p->next->prev=s; p->next=s; s->prev=p; s->next=p->next;"
+        },
+        {
+          "label": "C",
+          "text": "s->prev=p; s->next=p->next; p->next=s; p->next->prev=s;"
+        },
+        {
+          "label": "D",
+          "text": "s->next=p->next; p->next->prev=s; s->prev=p; p->next=s;"
+        }
+      ],
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "id": "k6xfWcTXaOgWHTlF3CqIJ",
+      "type": "single_choice",
+      "content": "假设有一个链表的节点定义如下：\n ``\n struct Node {\n  int data;\n  Node* next;\n }\n ``\n 现在有一个指向链表头部的指针：Node* head。如果想要在链表中插入一个新节点，其成员data的值为42，并使新节点成为链表的第一个节点，下面哪个操作是正确的？\n A. Node* newNode = new Node; newNode->data = 42; newNode->next = head; head = newNode;\n B. Node* newNode = new Node; head->data = 42; newNode->next = head; head = newNode;\n C. Node* newNode = new Node; newNode->data = 42; head->next = newNode;\n D. Node* newNode = new Node; newNode->data = 42; newNode->next = head;",
+      "options": [
+        {
+          "label": "A",
+          "text": "Node* newNode = new Node; newNode->data = 42; newNode->next = head; head = newNode;"
+        },
+        {
+          "label": "B",
+          "text": "Node* newNode = new Node; head->data = 42; newNode->next = head; head = newNode;"
+        },
+        {
+          "label": "C",
+          "text": "Node* newNode = new Node; newNode->data = 42; head->next = newNode;"
+        },
+        {
+          "label": "D",
+          "text": "Node* newNode = new Node; newNode->data = 42; newNode->next = head;"
+        }
+      ],
+      "answer": "A",
+      "explanation": null
+    }
+  ]
+}

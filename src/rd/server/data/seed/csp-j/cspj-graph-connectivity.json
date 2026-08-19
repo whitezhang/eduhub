@@ -1,0 +1,259 @@
+{
+  "slug": "cspj-graph-connectivity",
+  "url": "https://adacpp.com/practice/cspj-graph-connectivity",
+  "title": "图的连通性",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "_R0jPOFI2VXeq131KP9pp",
+      "type": "single_choice",
+      "content": "对一个有向图而言，如果每个节点都存在到达其他任何节点的路径，那么就称它是强连通的。例如，下图就是一个强连通图。事实上，在删掉边（ ）后，它依然是强连通的。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a"
+        },
+        {
+          "label": "B",
+          "text": "b"
+        },
+        {
+          "label": "C",
+          "text": "c"
+        },
+        {
+          "label": "D",
+          "text": "d"
+        }
+      ],
+      "answer": "A",
+      "explanation": "因为边a指向的顶点还有另一条边指向它，其他选项对应的边指向的顶点仅有唯一一条边指向它，所以不可删除。"
+    },
+    {
+      "id": "4Okf7m4KK_RMe2PP_2tHz",
+      "type": "single_choice",
+      "content": "在一个无向图中，如果任意两点之间都存在路径相连，则称其为连通图。下图是一个有4个顶点、6条边的连通图。若要使它不再是连通图，至少要删去其中的（ ）条边。\n\n![](https://ydschool-video.nosdn.127.net/16530597888862013-10.png)",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "不再是连通图需要使得其中一个点与其他点无路径相连，该图每一个点都有3条路径，因此可以删去与任意一个顶点相连的3条边。"
+    },
+    {
+      "id": "IGVZdqPdyx6Jkysa-vnJh",
+      "type": "single_choice",
+      "content": "由四个没有区别的点构成的简单无向连通图的个数是（ ）。\n\n![](https://ydschool-video.nosdn.127.net/16532141491572018-11.pn)",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "A",
+      "explanation": "去掉相似的后剩6个"
+    },
+    {
+      "id": "2RInb_H63nWa2Car5W_3W",
+      "type": "single_choice",
+      "content": "考虑由 N 个顶点构成的有向连通图，采用邻接矩阵的数据结构表示时，该矩阵中至少存在（",
+      "options": [
+        {
+          "label": "A",
+          "text": "N-1"
+        },
+        {
+          "label": "B",
+          "text": "N"
+        },
+        {
+          "label": "C",
+          "text": "N+1"
+        },
+        {
+          "label": "D",
+          "text": "N的平方"
+        }
+      ],
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "id": "QXUqgIIML1bBx4pAwcx9h",
+      "type": "single_choice",
+      "content": "广度优先搜索时，需要用到的数据结构是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "链表"
+        },
+        {
+          "label": "B",
+          "text": "队列"
+        },
+        {
+          "label": "C",
+          "text": "栈"
+        },
+        {
+          "label": "D",
+          "text": "散列表"
+        }
+      ],
+      "answer": "B",
+      "explanation": "深度优先遍历可以用栈或递归方法。\n广度优先遍历，需要使用队列做辅助。每个队首元素出队时，需要把下一层的顶点入队。入队或出队的顺序，即是遍历的顺序。"
+    },
+    {
+      "id": "1PIyyC9uYk0vZ4CHXZBkt",
+      "type": "single_choice",
+      "content": "以 A_0作为起点，对下面的无向图进行深度优先遍历时，遍历顺序不可能是(    )。\n\n![](https://ydschool-video.nosdn.127.net/16530600919982013-12.png)",
+      "options": [
+        {
+          "label": "A",
+          "text": "A0, A1, A2, A3"
+        },
+        {
+          "label": "B",
+          "text": "A0, A1, A3, A2"
+        },
+        {
+          "label": "C",
+          "text": "A0, A2, A1, A3"
+        },
+        {
+          "label": "D",
+          "text": "A0, A3, A1, A2"
+        }
+      ],
+      "answer": "A",
+      "explanation": "按照深度优先搜索的方式，A选项中，如果A_3没被遍历，在A_1之后只能是A_3，正确顺序是A_0——A_1——A_3——A_2。"
+    },
+    {
+      "id": "JMWyF-5nN3Pi7ywxU-Rdq",
+      "type": "single_choice",
+      "content": "6 个顶点的连通图的最小生成树，其边数为( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "B",
+      "explanation": "棵n个节点的树有n-1条边，因此答案为5。"
+    },
+    {
+      "id": "0r804WL2jweus9_q7Krqg",
+      "type": "single_choice",
+      "content": "以a为起点，对右边的无向图进行深度优先遍历，则b、c、d、e四个点中有可能作为最后一个遍历到的点个数为（ ）。\n\n![](https://ydschool-video.nosdn.127.net/16532954060082021-14.png)",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "B",
+      "explanation": "从$a→b$方向的遍历：$a-b-d-c-e$; 从$a→c$方向的遍历：$a-c-e-d-b$和$a-c-d-b-e$. 则最多有两个终点：$e$和$b$"
+    },
+    {
+      "id": "nwDd8AX2tNI5g_HK765Kb",
+      "type": "single_choice",
+      "content": "对于有n个顶点、m条边的无向联通图（m>n），需要删掉（ ）条边才能使其成为一棵树。",
+      "options": [
+        {
+          "label": "A",
+          "text": "n - 1"
+        },
+        {
+          "label": "B",
+          "text": "m - n"
+        },
+        {
+          "label": "C",
+          "text": "m - n - 1"
+        },
+        {
+          "label": "D",
+          "text": "m - n + 1"
+        }
+      ],
+      "answer": "D",
+      "explanation": "n个顶点的树有n-1条边，需删除 m-(n-1)= m-n+1 条边"
+    },
+    {
+      "id": "nc_gtSGuUvdNHCrx1whzz",
+      "type": "single_choice",
+      "content": "以下对数据结构的表述不恰当的一项为：（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "图的深度优先遍历算法常使用的数据结构为栈。"
+        },
+        {
+          "label": "B",
+          "text": "栈的访问原则为后进先出，队列的访问原则是先进先出。"
+        },
+        {
+          "label": "C",
+          "text": "队列常常被用于广度优先搜索算法。"
+        },
+        {
+          "label": "D",
+          "text": "栈与队列存在本质不同，无法用栈实现队列。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "A、B、C 均为正确表述：图的深度优先遍历常用栈（或递归调用栈）实现；栈的访问原则是后进先出，队列是先进先出；广度优先搜索常用队列实现。D 的表述不正确——用两个栈可以模拟实现一个队列（经典的\"用栈实现队列\"问题），栈与队列在功能上并非无法互相实现，因此 D 是表述不恰当的一项。"
+    }
+  ]
+}

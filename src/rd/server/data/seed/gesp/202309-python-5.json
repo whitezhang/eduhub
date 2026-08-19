@@ -1,0 +1,579 @@
+{
+  "meta": {
+    "ym": "202309",
+    "lang": "python",
+    "level": 5,
+    "title": "GESP 9月认证 Python五级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10105.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1580942705557536.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202309-python-5.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "近年来,线上授课变得普遍,很多有助于改善教学效果的设备也逐渐流行,其中包括比较常用的手写板,那\n么它属于哪类设备?(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "输入"
+        },
+        {
+          "key": "B",
+          "text": "输出"
+        },
+        {
+          "key": "C",
+          "text": "控制"
+        },
+        {
+          "key": "D",
+          "text": "记录"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "以下关于Python语言的描述,错误的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "Python提供了常用的数据结构,并支持面向对象编程"
+        },
+        {
+          "key": "B",
+          "text": "Python是解释型语言"
+        },
+        {
+          "key": "C",
+          "text": "Python是一种高级程序设计语言"
+        },
+        {
+          "key": "D",
+          "text": "Python程序在运行前需要预先编译"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下列Python代码执行后输出的是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[4, 5, 6, lstA]"
+        },
+        {
+          "key": "B",
+          "text": "[4, 5, 6, 1, 2, 3]"
+        },
+        {
+          "key": "C",
+          "text": "[4, 5, 6, [1, 2, 3]]"
+        },
+        {
+          "key": "D",
+          "text": "执行将报错,因为 lstA已经被删除"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "有关下面Python代码说法错误的是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "sumA()用循环方式求 之和, sumB()用递归方式求 之和"
+        },
+        {
+          "key": "B",
+          "text": "默认情况下,倒数第二行被执行时如果输入较小的正整数如 100,即倒数第一行能正确被执行,则能实现求 到 之和"
+        },
+        {
+          "key": "C",
+          "text": "默认情况下,倒数第二行被执行时如果输入较大的正整数如 10000,倒数第一行被能正确被执行,能实现求 到 之和"
+        },
+        {
+          "key": "D",
+          "text": "默认情况下,一般说来, sumA()和效率高于 sumB()"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面Python代码以递归方式实现字符串反序,横线处应填上代码是 ( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "sReverse(sIn[1:]) + sIn[:1]"
+        },
+        {
+          "key": "B",
+          "text": "sReverse(sIn[:1]) + sIn[1:]"
+        },
+        {
+          "key": "C",
+          "text": "sIn[:1] + sReverse(sIn[1:])"
+        },
+        {
+          "key": "D",
+          "text": "sIn[1:] + sReverse(sIn[:1])"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "印度古老传说:创世时有三根金刚柱,其中一柱从下往上按照大小顺序摞着 片黄金圆盘,当圆盘逐一从一\n柱借助另外一柱全部移动到另外一柱时,宇宙毁灭。移动规则:在小圆盘上不能放大圆盘,在三根柱子之间一次只\n能移动一个圆盘。下面的Python代码以递归方式实现汉诺塔,横线处应填入代码是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hanoi(B, C, A, N-2)"
+        },
+        {
+          "key": "B",
+          "text": "Hanoi(B, A, C, N-1)"
+        },
+        {
+          "key": "C",
+          "text": "Hanoi(A, B, C, N-2)"
+        },
+        {
+          "key": "D",
+          "text": "Hanoi(C, B, A, N-1)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "根据下面Python代码的注释,横线处应填入(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "isOdd isOdd(x)"
+        },
+        {
+          "key": "B",
+          "text": "isOdd(x) isOdd"
+        },
+        {
+          "key": "C",
+          "text": "isOdd isOdd"
+        },
+        {
+          "key": "D",
+          "text": "isOdd(x) isOdd(x)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "有关下面Python代码正确的是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "checkNum()函数定义错误"
+        },
+        {
+          "key": "B",
+          "text": "最后一行代码将isEven作为checkNum()参数将导致错误"
+        },
+        {
+          "key": "C",
+          "text": "最后一行代码执行后将输出True"
+        },
+        {
+          "key": "D",
+          "text": "触发异常"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "有关下面 Python 代码正确的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "checkNum()函数定义错误"
+        },
+        {
+          "key": "B",
+          "text": "倒数第行代码将isOdd作为checkNum()参数将导致错误"
+        },
+        {
+          "key": "C",
+          "text": "最后一行代码将Add作为checkNum()参数将导致错误"
+        },
+        {
+          "key": "D",
+          "text": "倒数两行代码执行后都将没有错误"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面代码执行后的输出是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "4#3#2#2#4"
+        },
+        {
+          "key": "B",
+          "text": "4#3#2#2#1#5"
+        },
+        {
+          "key": "C",
+          "text": "4#3#2#1#2#4"
+        },
+        {
+          "key": "D",
+          "text": "4#3#2#1#2#5"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 Python 代码中的isPrimeA()和isPrimeB()都用于判断参数是否为素数,有关其时间复杂度的正确\n说法是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "isPrimeA()的最坏时间复杂度是 ,isPrimeB()的最坏时间复杂度是 ,isPrimeA()优于 isPrimeB()"
+        },
+        {
+          "key": "B",
+          "text": "isPrimeA()的最坏时间复杂度是 ,isPrimeB()的最坏时间复杂度是 ,isPrimeB()优于 isPrimeA()"
+        },
+        {
+          "key": "C",
+          "text": "isPrimeA()的最坏时间复杂度是 ,isPrimeB()的最坏时间复杂度是 ,isPrimeA()优于 isPrimeB()"
+        },
+        {
+          "key": "D",
+          "text": "isPrimeA()的最坏时间复杂度是 ,isPrimeB()的最坏时间复杂度是 ,isPrimeB()优于 isPrimeB()"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 Python 代码用于归并排序,其中merge()函数被调用次数为(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "在上题的归并排序算法中,代码 Left, Right = mergeSort(listData[:Middle]),\nmergeSort(listData[Middle:])涉及到的算法有(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "搜索算法"
+        },
+        {
+          "key": "B",
+          "text": "分治算法"
+        },
+        {
+          "key": "C",
+          "text": "贪心算法"
+        },
+        {
+          "key": "D",
+          "text": "递推算法"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "归并排序算法的基本思想是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "将数组分成两个子数组,分别排序后再合并。"
+        },
+        {
+          "key": "B",
+          "text": "随机选择一个元素作为枢轴,将数组划分为两个部分。"
+        },
+        {
+          "key": "C",
+          "text": "从数组的最后一个元素开始,依次与前一个元素比较并交换位置。"
+        },
+        {
+          "key": "D",
+          "text": "比较相邻的两个元素,如果顺序错误就交换位置。"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "有关下面Python代码的说法正确的是( )。\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "上述代码构成单向链表"
+        },
+        {
+          "key": "B",
+          "text": "上述代码构成双向链表"
+        },
+        {
+          "key": "C",
+          "text": "上述代码构成循环链表"
+        },
+        {
+          "key": "D",
+          "text": "上述代码构成指针链表"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "TCP/IP 的传输层的两个不同的协议分别是 UDP 和 TCP 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "在特殊情况下流程图中可以出现三角框和圆形框。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "找出自然数 N 以内的所有质数常用埃氏筛法,其时间复杂度为 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "Python 的 in 运算符相当于通过查找算法判断元素是否存在,其查找通常采用二分法。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "在以下 Python 代码中,最后一行代码执行时将报错,因为 y 所代表的数已经被删除。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "贪心算法的解可能不是最优解。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "一般说来,冒泡排序算法优于归并排序。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "Python 的内置函数sorted()可以对支持for-in循环的str、list、tuple、dict、set排序,且是\n稳定排序。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下面的 Python 代码将输出 0-99 (包含 0 和 99 )之间的整数,顺序随机。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下面的Python代码执行后将输出 [0, 5, 1, 6, 2, 3, 4]。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "因数分解",
+      "statement": "时间限制:1.0 s\n内存限制:128.0 MB\n3.1.1 问题描述\n每个正整数都可以分解成素数的乘积,例如: 、\n现在,给定一个正整数 ,请按要求输出它的因数分解式。\n3.1.2 输入描述\n输入第一行,包含一个正整数 。约定\n3.1.3 输出描述\n输出一行,为 的因数分解式。要求按质因数由小到大排列,乘号用星号*表示,且左右各空一格。当且仅当一个素\n数出现多次时,将它们合并为指数形式,用上箭头^表示,且左右不空格。\n3.1.4 样例输入1\n3.1.5 样例输出1\n\n2 * 31\n3.1.6 样例输入2\n3.1.7 样例输出2\n3.1.8 样例输入3\n3.1.9 样例输出3\n3.1.10",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "巧夺大奖",
+      "statement": "时间限制:1.0 s\n内存限制:128.0 MB\n3.2.1 问题描述\n小明参加了一个巧夺大奖的游戏节目。主持人宣布了游戏规则:\n1、游戏分为 个时间段,参加者每个时间段可以选择一个小游戏。\n2、游戏中共有 个小游戏可供选择。\n3、每个小游戏有规定的时限和奖励。对于第个小游戏,参加者必须在第 个时间段结束前完成才能得到奖励 。\n小明发现,这些小游戏都很简单,不管选择哪个小游戏,他都能在一个时间段内完成。关键问题在于,如何安排每\n个时间段分别选择哪个小游戏,才能使得总奖励最高?\n3.2.2 输入描述\n输入第一行,包含一个正整数 。 既是游戏时间段的个数,也是小游戏的个数。约定 。\n输入第二行,包含 个正整数。第个正整数为 ,即第个小游戏的完成期限。约定 。\n输入第三行,包含 个正整数。第个正整数为 ,即第个小游戏的完成奖励。约定 。\n3.2.3 输出描述\n输出一行,包含一个正整数 ,为最高可获得的奖励。\n3.2.4 样例输入1\n3.2.5 样例输出1\n3.2.6 样例解释1\n7个时间段可分别安排完成第4、2、3、1、6、7、5个小游戏,其中第4、2、3、1、7个小游戏在期限内完成。因此,\n可以获得总计 的奖励。\n3.2.7",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "A",
+      "D",
+      "C",
+      "C",
+      "A",
+      "B",
+      "A",
+      "C",
+      "D",
+      "D",
+      "B",
+      "C",
+      "B",
+      "A",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

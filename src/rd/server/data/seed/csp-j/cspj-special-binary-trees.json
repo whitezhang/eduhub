@@ -1,0 +1,109 @@
+{
+  "slug": "cspj-special-binary-trees",
+  "url": "https://adacpp.com/practice/cspj-special-binary-trees",
+  "title": "特殊树",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "Q7mPl45XljLleoMUU51V1",
+      "type": "single_choice",
+      "content": "完全二叉树的顺序存储方案，是指将完全二叉树的结点从上至下、从左至右依次存放到一个顺序结构的数组中。假定根结点存放在数组的1号位置，则第$k$号结点的父结点如果存在的话，应当存放在数组的（ ）号位置。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2k"
+        },
+        {
+          "label": "B",
+          "text": "2k+1"
+        },
+        {
+          "label": "C",
+          "text": "k/2下取整"
+        },
+        {
+          "label": "D",
+          "text": "(k+1)/2下取整"
+        }
+      ],
+      "answer": "C",
+      "explanation": "因为是完全二叉树，相邻两层的结点数一定是2倍的关系，父结点的编号是k，左孩子的编号一定是2k，右孩子的编号一定是2k+1。同理反之，如果子节点编号为k，k为偶数则为k/2，k为奇数则为(k-1)/2，综合起来答案选C。"
+    },
+    {
+      "id": "0kYW34In7l7rkApgkjP2k",
+      "type": "single_choice",
+      "content": "如果一棵二叉树只有根结点，那么这棵二叉树高度为1。请问高度为5的完全二叉树有（ ）种不同形态?",
+      "options": [
+        {
+          "label": "A",
+          "text": "16"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "17"
+        },
+        {
+          "label": "D",
+          "text": "32"
+        }
+      ],
+      "answer": "A",
+      "explanation": "h=5 的完全二叉树共有 2^4  个节点，第五层最少1个节点，最多16个节点，因此一共有1"
+    },
+    {
+      "id": "aU6GjNo2Giuht_MLLqTMS",
+      "type": "single_choice",
+      "content": "一棵有 n 个结点的完全二叉树用数组进行存储与表示，已知根结点存储在数组的第 1 个位置。若存储在数组第 9 个位置的结点存在兄弟结点和两个子结点，则它的兄弟结点和右子结点的位置分别是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "8 、18"
+        },
+        {
+          "label": "B",
+          "text": "10、 18"
+        },
+        {
+          "label": "C",
+          "text": "8、 19"
+        },
+        {
+          "label": "D",
+          "text": "10、19"
+        }
+      ],
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "id": "xFqnPO9qSGVfReXTX9f74",
+      "type": "single_choice",
+      "content": "一棵具有5层的满二叉树中结点数为( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "31"
+        },
+        {
+          "label": "B",
+          "text": "32"
+        },
+        {
+          "label": "C",
+          "text": "33"
+        },
+        {
+          "label": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "A",
+      "explanation": "2^0 + 2^1 + 2^2 + 2^3 + 2^4 = 31。\n满二叉树 第n层有2^(n-1)个节点\n前n层共有2^n -1个节点"
+    }
+  ]
+}

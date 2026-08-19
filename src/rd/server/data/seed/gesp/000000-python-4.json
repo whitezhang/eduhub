@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "ym": "000000",
+    "lang": "python",
+    "level": 4,
+    "title": "GESP 6月认证 Python四级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10092.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1554539828215840.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/000000-python-4.pdf"
+  },
+  "choice": [],
+  "tf": [],
+  "program": [],
+  "answer_rows": [
+    [
+      "D",
+      "C",
+      "D",
+      "A",
+      "B",
+      "D",
+      "B",
+      "D",
+      "C",
+      "D",
+      "C",
+      "C",
+      "A",
+      "A",
+      "A"
+    ]
+  ]
+}

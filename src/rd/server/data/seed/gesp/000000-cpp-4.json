@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "ym": "000000",
+    "lang": "cpp",
+    "level": 4,
+    "title": "GESP 6月认证C++四级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10092.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1553241699516448.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/000000-cpp-4.pdf"
+  },
+  "choice": [],
+  "tf": [],
+  "program": [],
+  "answer_rows": [
+    [
+      "D",
+      "C",
+      "C",
+      "D",
+      "A",
+      "D",
+      "D",
+      "B",
+      "C",
+      "C",
+      "A",
+      "A",
+      "B",
+      "D",
+      "A"
+    ],
+    [
+      "×",
+      "√",
+      "×",
+      "×",
+      "√",
+      "×",
+      "×",
+      "×",
+      "√",
+      "√"
+    ]
+  ]
+}

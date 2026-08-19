@@ -1,0 +1,596 @@
+{
+  "meta": {
+    "ym": "202503",
+    "lang": "python",
+    "level": 3,
+    "title": "CCF GESP 2025年3月认证 Python 3级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1669257133817888.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202503-python-3.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "2025 年春节有两件轰动全球的事件,一个是 DeepSeek 横空出世,另一个是贺岁片《哪吒 2 》票房惊人,入了\n全球票房榜。下面关于 DeepSeek 与《哪吒 2 》的描述成立的是 (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "《哪吒 2 》是一款新型操作系统"
+        },
+        {
+          "key": "B",
+          "text": "DeepSeek 是深海钻探软件"
+        },
+        {
+          "key": "C",
+          "text": "《哪吒 2 》可以生成新的软件"
+        },
+        {
+          "key": "D",
+          "text": "DeepSeek 可以根据《哪吒 2 》的场景生成剧情脚本"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "对整型变量 N ,如果它能够同时被 3 和 5 整出,则输出N 是含有至少两个质因数。如果用流程图来描述处理过\n程,则输出语句应该在哪种图形框中(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "圆形框"
+        },
+        {
+          "key": "B",
+          "text": "椭圆形框"
+        },
+        {
+          "key": "C",
+          "text": "平行四边形框"
+        },
+        {
+          "key": "D",
+          "text": "菱形框"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "十进制数 13 的二进制表示是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下列代码的输出结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[1, 2] a = [1, 2] b = a a.append(3) print(b)"
+        },
+        {
+          "key": "B",
+          "text": "[1, 2, 3]"
+        },
+        {
+          "key": "C",
+          "text": "[3, 2, 1]"
+        },
+        {
+          "key": "D",
+          "text": "报错"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行  a = [1, 2]; a.extend([3, 4]) 后, a 的值是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[1, 2, [3, 4]]"
+        },
+        {
+          "key": "B",
+          "text": "[1, 2, 3, 4]"
+        },
+        {
+          "key": "C",
+          "text": "[3, 4, 1, 2]"
+        },
+        {
+          "key": "D",
+          "text": "[1, 3, 2, 4]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "执行  a, b, c = (10, 20, 30) 后, b 的值是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "报错"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "将列表  [7, 8, 9] 转换为元组的正确方式是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "tuple([7, 8, 9])"
+        },
+        {
+          "key": "B",
+          "text": "([7, 8, 9]).tuple()"
+        },
+        {
+          "key": "C",
+          "text": "(7, 8, 9).tuple()"
+        },
+        {
+          "key": "D",
+          "text": "tuple(7, 8, 9)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "字典的键( key )可以是以下哪种数据类型?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "列表"
+        },
+        {
+          "key": "B",
+          "text": "字典"
+        },
+        {
+          "key": "C",
+          "text": "元组"
+        },
+        {
+          "key": "D",
+          "text": "集合"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "字典推导式  {k: v for k, v in {'a':1, 'b':2, 'c':3}.items() if v % 2 == 0} 的结果是?(\n)",
+      "options": [
+        {
+          "key": "A",
+          "text": "{'a':1, 'b':2, 'c':3}"
+        },
+        {
+          "key": "B",
+          "text": "{}"
+        },
+        {
+          "key": "C",
+          "text": "{'a':1, 'c':3}"
+        },
+        {
+          "key": "D",
+          "text": "{'b':2}"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "执行  s = \"hello\"; print(s.find(\"x\")) 的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "-1"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": "报错"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "字符串  s = \"Python\",执行  s[::2] 的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "\"Pyt\""
+        },
+        {
+          "key": "B",
+          "text": "\"yhn\""
+        },
+        {
+          "key": "C",
+          "text": "\"Pto\""
+        },
+        {
+          "key": "D",
+          "text": "\"yh\""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "创建空集合的正确方式是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "a = []"
+        },
+        {
+          "key": "B",
+          "text": "a = {}"
+        },
+        {
+          "key": "C",
+          "text": "a = set()"
+        },
+        {
+          "key": "D",
+          "text": "B 和 C 均正确"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "执行  s = {1, 2}; s.update([3, 4]) 后, s 的值是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "报错"
+        },
+        {
+          "key": "B",
+          "text": "{3, 4}"
+        },
+        {
+          "key": "C",
+          "text": "{1, 2, [3, 4]}"
+        },
+        {
+          "key": "D",
+          "text": "{1, 2, 3, 4}"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "需要将文本中的敏感词替换为保留首字母并用*号覆盖剩余字符。例如: \" 密码 \" ( 2 字)替换为 \" 密\n*\" , \" 身份证 \" ( 3 字)替换为 \" 身 **\" 。请填写横线处的代码。",
+      "options": [
+        {
+          "key": "A",
+          "text": "word[0] + '*' * (len(word) - 1)"
+        },
+        {
+          "key": "B",
+          "text": "word[0] + '**'"
+        },
+        {
+          "key": "C",
+          "text": "'*' * len(word)"
+        },
+        {
+          "key": "D",
+          "text": "word[0] + '*' * len(word)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "以下代码用于生成前  n 项斐波那契数列。请填写横线处的代码。\nwords = [\" 密码 \", \" 账号 \", \" 身份证 \"]\ntext = \" 请勿泄露您的密码和身份证号码 \"\nfor word in words:\n    if word in text:\n        text = text.replace(word, ________)\nprint(text)  # 期望输出 \" 请勿泄露您的密 * 和身 ** 号码 \"\n1\n2\n3\n4\n5\n6\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "a"
+        },
+        {
+          "key": "B",
+          "text": "b"
+        },
+        {
+          "key": "C",
+          "text": "a + b"
+        },
+        {
+          "key": "D",
+          "text": "a * b"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "C++ 、 Python 都是高级编程语言,它们每条语句的执行最终都要通过机器指令来完成。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "表达式  hex(int('17', 8)) 的返回值为0x11。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "在 Python 中,in关键词用于检查某个元素是否存在于序列或集合中,以下表达式都是合法的。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "表达式  y = 0x0f; y << 4 的结果是  0xff 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出的结果为 6 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出的结果可能是{'a', 1,'123'}。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "自幂数是指一个  n 位数,它的每个位上的数字的  n 次幂之和等于它本身。(例如:当n为3时,有\n,153即是n为3时的一个自幂数),若找出1000以内的所有自幂数。可以使用枚举的方法来\n求解这个问题。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "下列程序用于删除列表  nums 中的重复项。\nn = 5\na, b = 0, 1\nfib = []\nfor _ in range(n):\n    fib.append(a)\n    a, b = b, ________\nprint(fib)  # 期望输出  [0, 1, 1, 2, 3]\n\n\n\n\n\n\n\n\"a\" in \"gesp\"\n\"a\" in {\"g\", \"e\", \"s\", \"p\"}\n\"a\" in [\"g\", \"e\", \"s\", \"p\"]\n\"a\" in (\"g\", \"e\", \"s\", \"p\")\n\"a\" in {1: \"g\", 2: \"e\", 3: \"s\", 4: \"p\"}\n\n\n\n\n\ndata = {'ids': [1, 2], 'name': 'test'}\ndata['ids'].append(['g', 'e', 's', 'p'])\nprint(len(data['ids']))\n\n\n\nlst = ['a', 'a', 1, 1]\ns = set(lst)\ns.update('123')\nprint(s)",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下列程序用于统计字符串中元音字母( a, e, i, o, u )的数量。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下列程序用于去除列表中的负整数元素。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "编程题 1",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 2025\n3.1.2 题目描述\n小  A 有一个整数  ,他想找到最小的正整数   使得下式成立:\n其中   表示二进制按位与运算,  表示二进制按位或运算。如果不存在满足条件的  ,则输出  。\n3.1.3\n\n输入格式\n一行,一个整数  。\n3.1.4 输出格式\n一行,一个整数,若满足条件的   存在则输出  ,否则输出  。\n3.1.5 样例\n3.1.5.1 输入样例  1\n3.1.5.2 输出样例  1\nnums = [1, 2, 2, 3, 4, 4]\nunique = list(set(nums))\nprint(unique)\n\ns = \"hello world\"\nvowels = \"aeiou\"\ncount = sum(1 for c in s if c == vowels)\nprint(count)\n\nraw = [1, -2, 3, 5, -7, 0]\nclean = [x for x in raw if x >= 0]\nprint(clean)\n\n3.1.6 数据范围\n对于所有测试点,保证  。\n3.1.7 提示\n其中:\n 表示按位与运算,运算符为  &。\n 表示按位或运算,运算符为  |。\n3.1.8",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "2\n3\n",
+          "out": "3\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": false
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "编程题 2",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.9 词频统计\n3.2.10 题目描述\n在文本处理中,统计单词出现的频率是一个常见的任务。现在,给定   个单词,你需要找出其中出现次数最多的单\n词。在本题中,忽略单词中字母的大小写(即  Apple、apple、APPLE、aPPle 等均视为同一个单词)。\n请你编写一个程序,输入   个单词,输出其中出现次数最多的单词。\n3.2.11\n\n输入格式\n第一行,一个整数  ,表示单词的个数;\n接下来   行,每行包含一个单词,单词由大小写英文字母组成。\n输入保证,出现次数最多的单词只会有一个。\n3.2.12 输出格式\n输出一行,包含出现次数最多的单词(输出单词为小写形式)。\n3.2.13 样例\n3.2.13.3 输入样例  1\nx = int(input())\nfor y in range(1,2026):\n    if (x&y)+(x|y) == 2025:\n        print(y)\n        exit(0)\nprint(-1)\n\nApple\nbanana\napple\nOrange\nbanana\n\n3.2.13.4 输出样例  1\n3.2.14 数据范围\n对于所有测试点, ,每个单词的长度不超过  ,且仅由大小写英文字母组成。\n3.2.15",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "3\n4\n5\n6\n6\n",
+          "out": "6\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "D",
+      "C",
+      "A",
+      "B",
+      "B",
+      "B",
+      "A",
+      "C",
+      "D",
+      "A",
+      "C",
+      "C",
+      "D",
+      "A",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

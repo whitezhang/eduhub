@@ -1,0 +1,523 @@
+{
+  "meta": {
+    "ym": "202412",
+    "lang": "python",
+    "level": 5,
+    "title": "CCF GESP 2024年12月认证 Python 5级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10178.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1733579503566880.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202412-python-5.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "下面的程序中, x,y 都是正整数,完成的算法是(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "最小公倍数"
+        },
+        {
+          "key": "B",
+          "text": "最大公约数"
+        },
+        {
+          "key": "C",
+          "text": "数字 x 能够整除 y 的最小数"
+        },
+        {
+          "key": "D",
+          "text": "数字 x 与数字 y 的所有公约数"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下列程序中实现的是(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "实现了求 x,y 的最小公约数"
+        },
+        {
+          "key": "B",
+          "text": "实现了求 x,y 的最大公约数"
+        },
+        {
+          "key": "C",
+          "text": "实现了求 x,y 的最小公倍数"
+        },
+        {
+          "key": "D",
+          "text": "实现了求 x,y 的平均值"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "欧几里得算法又称作辗转相除算法,下面程序中是这种算法的是(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "B. def chenadai(x, y): while y: x, y = y, x % y return x def chenadai(x, y): return x * y // (x,y 的最大公约数) def gcd(a,b): if b == 0: return a return gcd(b, a % b)"
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下列程序是二分法的程序,横线处应该填上(   )。\n\n```\ndef gcd(a, b): if a < b: a, b = b, a while b != 0: a,b = b,a%b return b def gcd(a,b): if b == 0: return a return gcd(a, a % b) def gcd(a,b): if b == 0: return a return gcd(b, b % a) def binary_search(arr, target): left = 0 right = len(arr) - 1 while left <= right: mid = (left + right) // 2 _________________________ return -1 if arr[mid] == target: return mid elif arr[mid] > target: right = mid - 1 if arr[mid] == target: return mid elif arr[mid] > target: right = mid else: left = mid\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面折半查找程序的时间复杂度为(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下列程序中,使用了埃氏筛法,横线处应该填写的是()\n\n```\nfor p in range(2, n ** 0.5 + 1):\nfor p in range(2, int(n ** 0.5) + 1):\nfor p in range(2, int(n ** 0.5) + 0.5): if arr[mid] == target: return mid elif arr[mid] > target: right = mid - 1 else: left = mid + 1 if arr[mid] == target: return mid else: left = mid + 1 def binary_search(arr, x): low = 0 high = len(arr) - 1 while low <= high: mid = (low + high) // 2 if arr[mid] == x: return mid elif arr[mid] > x: high = mid - 1 else: low = mid + 1 return -1 def aishishai(n): if n < 2: return [] prime = [True] * (n + 1) prime[0] = prime[1] = False —————————————————————————————————— if prime[p]: for i in range(p * p, n + 1, p): prime[i] = False return [p for p in range(n + 1) if prime[p]]\nfor p in range(2, n ** 0.5 + 0.5):\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "18 到 100 之间的所有素数的和为多少 ( )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面程序是对 2024 进行唯一分解,最后的结果应该是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,2,3,13,23"
+        },
+        {
+          "key": "B",
+          "text": "2,7,11,23"
+        },
+        {
+          "key": "C",
+          "text": "2:3,11:1,23:1"
+        },
+        {
+          "key": "D",
+          "text": "2,3,13,23"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面关于循环链表的说法正确的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "循环链表的最后一个结点指向头结点,形成一个闭环"
+        },
+        {
+          "key": "B",
+          "text": "必须通过特定结点才可以遍历整个链表"
+        },
+        {
+          "key": "C",
+          "text": "不属于链式存储结构"
+        },
+        {
+          "key": "D",
+          "text": "在长度为 n 的顺序表下标为 i 的位置前插入一个元素( 1 ≤ i ≤ n+1 ),元素的移动次数为 n-i+1"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下列归并算法程序中,横线处应该填入的是(  )\ndef weiyi(n):\n    factors = {}\n    for i in range(2, n+1):\n        while n % i == 0:\n            if i in factors:\n                factors[i] += 1\n            else:\n                factors[i] = 1\n            n //= i\n    return factors\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\ndef merge_sort(array):\n    if len(array) == 1:\n        return array\n    _________________________\n    return merge(left, right)\ndef merge(left, right):\n    left_index, right_index, merge_array = 0, 0, list()\n    while left_index < len(left) and right_index < len(right):\n        if left[left_index] <= right[right_index]:\n            merge_array.append(left[left_index])\n            left_index += 1\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "关于算法复杂度,下列说法不正确的是()\n`",
+      "options": [
+        {
+          "key": "A",
+          "text": "简单的 for 循环的时间复杂度是"
+        },
+        {
+          "key": "B",
+          "text": "归并排序的时间复杂度是"
+        },
+        {
+          "key": "C",
+          "text": "选择排序中的内循环时间复杂度是"
+        },
+        {
+          "key": "D",
+          "text": "递归的 Fibonacci 数列计算时间复杂度是"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下列程序中,实现了 16 进制转到 8 进制。横线处应该填入的是(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "else: merge_array.append(right[right_index]) right_index += 1 merge_array = merge_array + left[left_index:] + right[right_index:] return merge_array left = merge_sort(array[:len(array)-1//2]) right = merge_sort(array[len(array)-1//2:]) left = merge_sort(array[len(array)//2-1]) right = merge_sort(array[len(array)//2:]) left = merge_sort(array[len(array)//2-1]) right = merge_sort(array[len(array)//2]) left = merge_sort(array[:len(array)//2]) right = merge_sort(array[len(array)//2:]) def dec_conversion_n(n, base): str_list = \"0123456789ABCDEF\" if n < base: return str_list[n] else: ___________________________ return dec_conversion_n(n // base, base) + str_list[n % base]1 return dec_conversion_n(n // base, n) + str_list[n % base]1"
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "水仙花数是指一个  3 位数,它的每个数位上的数字的  3 次幂之和等于它本身。下面代码是计算 100 到 n 之间有\n多少个水仙花数的程序,横线处应该填写的一行或多行代码是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面程序输出的是\nreturn dec_conversion_n(n // base, base) + str_list[n // base]1\nreturn dec_conversion_n(n // base, n) + str_list[n // base]1\nn = int(input(\" 输入一个正整数 N:\"))\nsum = 0\nfor i in range(100,n+1):\n   _______________________\nprint(sum)\n1\n2\n3\n4\n5\nge = i%10\nshi = i//10%10\nbai = i//100\nif i == ge*ge*ge+shi*shi*shi+bai*bai*bai:\n    sum+=1\n1\n2\n3\n4\n5\nge = i%10\nshi = i%10%10\nbai = i//100\nif i == ge*ge*ge+shi*shi*shi+bai*bai*bai:\n    sum+=1\n1\n2\n3\n4\n5\nge = i%10\nshi = i//10%10\nbai = i%100\nif i == ge*ge*ge+shi*shi*shi+bai*bai*bai:\n    sum+=1\n1\n2\n3\n4\n5\nge = i%10\nshi = i%10%10\nbai = i%100\nif i == ge*ge*ge+shi*shi*shi+bai*bai*bai:\n    sum+=1\n1\n2\n3\n4\n5",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "旋转数组是一种常见的数据结构问题,通常是指一个有序数组经过旋转后,使得所有元素逆序排列。整数\n数组  nums 按升序排列,数组中的值互不相同。在预先未知的某个下标  k ( 0 <= k < nums.length )上进行了旋转,使\n数组变为  [nums[k], nums[k + 1],..., nums[n - 1], nums[0], nums[1],..., nums[k - 1]] (下标从  0 开始计数)。\n现在给定旋转后的数组  nums 和一个整数  target ,如果  nums 中存在这个目标值  target ,则返回它的下标,否则返回\n-1 。\n下面程序中()处应填入的程序是:例如,给定一个数组  [4,5,6,7,0,1,2] ,它可能经过旋转变为  [0,1,2,4,5,6,7] 。二分查\n找算法搜索旋转排序数组的程序,下面横线中,应填入的一行或多行代码是(  )\ndef func(x):\n    if x%2 == 1:\n        return x+1\n    else:\n        return func(x-1)\nprint(func(9))\nprint(func(6))\n1\n2\n3\n4\n5\n6\n7\n10\n6\n1\n2\n9\n6\n1\n2\n10\n7\n1\n2\n9\n7\n1\n2\ndef search(nums, target):\n    left, right = 0, len(nums) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if nums[mid] == target:\n            return True\n        if nums[mid] > nums[right]:\n            if nums[mid] > target or nums[left] <= target:\n                right = mid - 1\n            else:\n                left = mid + 1\n        elif nums[mid] < nums[right]:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "两个整数的最大公约数等于其中较小的那个数和两数相除余数的最大公约数",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "任何一个大于1的自然数都可以分解成若干个不同的质数的乘积,且分解方式是唯一的。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "要得到不大于某个自然数 (不等于0)的所有素数,只要在2至  中将不大于   的素数的倍数全部划去即\n可",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "任何一个大于1的自然数,要么所有质因子都小于等于 ,要么只有一个质因子大于 ,其余质因子都小\n于 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "贪心算法的空间复杂度通常是",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "归并排序的空间复杂度为\n            _________________________\n        else:\n            right -= 1\n    return False\n\n\n\n\n\n\n\nif nums[mid] < target or nums[right] >= target:\n\n\nleft = mid - 1\nelse:\nright = mid + 1\n\n\n\n\nif nums[mid-1] < target and nums[right+1] >= target:\n    left = mid + 1\nelse:\n    right = mid - 1\n\n\n\n\nif nums[mid] < target or nums[right] >= target:\n\n\nleft = mid\nelse:\nright = mid\n\n\n\n\nif nums[mid] < target and nums[right] >= target:\n\n\nleft = mid + 1\nelse:\nright = mid - 1",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "时间复杂度对比  。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "对于任意整数  。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下列程序输出的是  21",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "CCF( 十六进制 ) = 1653(13 进制 )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "奇妙数字",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨认为一个数字   是奇妙数字当且仅当  ,其中   为任意质数且   为正整数。例如, ,所以   是奇妙\n数字,而   不是。\n对于一个正整数  ,小杨想要构建一个包含   个奇妙数字的集合  ,使其满足以下条件:\n集合中不包含相同的数字。\n 是   的因子(即  , , ,  这   个数字的乘积是   的因子)。\n小杨希望集合包含的奇妙数字尽可能多,请你帮他计算出满足条件的集合最多包含多少个奇妙数字。\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,含义如题面所示。\n3.1.3 输出格式\n输出一个正整数,代表满足条件的集合最多包含的奇妙数字个数。\n3.1.4 样例\ndef digui(n):\n    if n <= 1:\n        return n\n    else:\n        return digui(n-1) + digui(n-2)\nprint(digui(8))\n\n子任务编号 数据点占比\n1 20%\n2 20%\n3 60%\n3.1.5 样例解释\n关于本样例,符合题意的一个包含  个奇妙数字的集合是 。首先,因为 , , ,所以 , ,\n均为奇妙数字。同时,  是  的因子。\n由于无法找到符合题意且同时包含  个奇妙数字的集合,因此本样例的答案为 。\n对于全部数据,保证有 。\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "武器强化",
+      "statement": "时间限制:2.0 s\n内存限制:512.0 MB\ndef calc(x):\n    ans = 0\n    tmp = 1\n        ans += 1\n        x -= tmp\n        tmp += 1\n    return ans\nn = int(input())\nans = 0\ni = 2\n    if n % i == 0:\n        cnt = 0\n            cnt += 1\n            n //= i\n        ans += calc(cnt)\n    i += 1\nif n != 1:\n    ans += calc(1)\nprint(ans)\n\n子任务编号 数据点占比\n1 20%\n2 20%\n3 60%\n3.2.1 题面描述\n小杨有   种武器和   种强化材料。第   种强化材料会适配第   种武器,小杨可以花费   金币将该材料对应的适配\n武器修改为任意武器。\n小杨最喜欢第   种武器,因此他希望适配该武器的强化材料种类数严格大于其他的武器,请你帮小杨计算为了满足\n该条件最少需要花费多少金币。\n3.2.2\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n之后   行,每行包含两个正整数  ,代表第   种强化材料的适配武器和修改花费。\n3.2.3 输出格式\n输出一个整数,代表能够使适配第   种武器的强化材料种类数严格大于其他的武器最少需要花费的金币。\n3.2.4 样例\n3.2.5 样例解释\n花费  ,将第三种强化材料的适配武器由   改为  。此时,武器   有   种强化材料适配,武器   和武器   都各有   种\n强化材料适配。满足适配第   种武器的强化材料种类数严格大于其他的武器。\n对于全部数据,保证有  。\n3.2.6",
+      "time_ms": 2000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "C",
+      "A",
+      "C",
+      "C",
+      "B",
+      "C",
+      "C",
+      "A",
+      "D",
+      "A",
+      "A",
+      "A",
+      "A",
+      "D"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "slug": "cspj-binary-tree-traversal",
+  "url": "https://adacpp.com/practice/cspj-binary-tree-traversal",
+  "title": "二叉树遍历",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "c7ByLTzxLPz1ARUpUBLFn",
+      "type": "single_choice",
+      "content": "一棵二叉树的前序遍历序列是ABCDEFG，后序遍历序列是CBFEGDA，则根结点的左子树的结点个数可能是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "A",
+      "explanation": "前序遍历：根结点 ---> 左子树 --->右子树。后序遍历：左子树 ---> 右子树 --->根结点。前后序均可知A是根节点，把根节点刨除后前序和后序中均是先左后右，前序中D在BC后，后序中D在最后，那么只存在两种可能，要么D属于右子树，要么所有结点均属于左子树，那么左子树可能的节点个数要么为2(B,C)，要么为6(B,C,D,E,F,G)。"
+    },
+    {
+      "id": "9SOsASnb1G-wtUjQsPGas",
+      "type": "single_choice",
+      "content": "如果一棵二叉树的中序遍历是 BAC，那么它的先序遍历不可能是(    )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "ABC"
+        },
+        {
+          "label": "B",
+          "text": "CBA"
+        },
+        {
+          "label": "C",
+          "text": "ACB"
+        },
+        {
+          "label": "D",
+          "text": "BAC"
+        }
+      ],
+      "answer": "C",
+      "explanation": "中序遍历：左 -> 根  -> 右。先序遍历：根 -> 左 -> 右。后序遍历：左 -> 右 -> 根。上述图中从左到右三棵树都满足中序遍历是 BAC，先序遍历从左往右依次对应选项中的 A, B, D。"
+    },
+    {
+      "id": "WyO9QxAdQ_BC6PDAsklIl",
+      "type": "single_choice",
+      "content": "二叉树的（ ）第一个访问的节点是根节点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "先序遍历"
+        },
+        {
+          "label": "B",
+          "text": "中序遍历"
+        },
+        {
+          "label": "C",
+          "text": "后序遍历"
+        },
+        {
+          "label": "D",
+          "text": "以上都是"
+        }
+      ],
+      "answer": "A",
+      "explanation": "前序遍历：根结点 ---> 左子树 --->右子树。\n中序遍历：左根右          后序遍历：左右根"
+    },
+    {
+      "id": "5hwBJdVg2cOLjVU_E2CEA",
+      "type": "single_choice",
+      "content": "前序遍历序列与中序遍历序列相同的二叉树为(    )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "根结点无左子树"
+        },
+        {
+          "label": "B",
+          "text": "根结点无右子树"
+        },
+        {
+          "label": "C",
+          "text": "只有根结点的二叉树或非叶子结点只有左子树的二叉树"
+        },
+        {
+          "label": "D",
+          "text": "只有根结点的二叉树或非叶子结点只有右子树的二叉树"
+        }
+      ],
+      "answer": "D",
+      "explanation": "前序遍历：根结点 ---> 左子树 --->右子树；中序遍历：左子树 ---> 根结点 --->右子树。前序和中序遍历的区别在于根节点和左子树的先后顺序，因为根节点一定存在，所以如果相同则一定是左子树不存在，有两种情况，一是存在多个结点，任意结点均没有左子树；二是只有根节点。"
+    },
+    {
+      "id": "EuX_4kZTJFg_SkPWObTKq",
+      "type": "single_choice",
+      "content": "假设一棵二叉树的后序遍历序列为DGJHEBIFCA,中序遍历序列为DBGEHJACIF,则其前序遍历序列为（）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "ABCDEFGHIJ"
+        },
+        {
+          "label": "B",
+          "text": "ABDEGHJCFI"
+        },
+        {
+          "label": "C",
+          "text": "ABDEGJHCFI"
+        },
+        {
+          "label": "D",
+          "text": "ABDEGHJFIC"
+        }
+      ],
+      "answer": "B",
+      "explanation": "由后序知根节点为A，结合中序知左子树为DBGEHJ，右子树为CIF。\n对于左子树，对比后序和中序遍历可知B为A的左孩子，继而由中序得知D为B的左孩子，E为B的右孩子。由中序知G是E的左孩子，由中序和后序判定J为H的右孩子，H为E的右孩子，左子树完整画出。对于右子树，由后序可知$C$是$A$的右孩子；由中序和后序判定I是F的左孩子，右子树完整画出。如图所示，则前序遍历为B。"
+    },
+    {
+      "id": "kNPr1cSj5EkEyXt2jnHcn",
+      "type": "single_choice",
+      "content": "给 定 一 棵 二 叉 树 ， 其 前 序 遍 历 结 果 为 ：ABDECFG,     中 序 遍 历 结 果 为 ：DEBACFG。\n请 问 这 棵树 的 正 确 后 序 遍 历 结 果 是 什 么 ?",
+      "options": [
+        {
+          "label": "A",
+          "text": "EDBGFCA"
+        },
+        {
+          "label": "B",
+          "text": "EDBGCF"
+        },
+        {
+          "label": "C",
+          "text": "DEBGFCA"
+        },
+        {
+          "label": "D",
+          "text": "DBEGFCA"
+        }
+      ],
+      "answer": "A",
+      "explanation": null
+    }
+  ]
+}

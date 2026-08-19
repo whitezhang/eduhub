@@ -1,0 +1,575 @@
+{
+  "meta": {
+    "ym": "202509",
+    "lang": "python",
+    "level": 1,
+    "title": "CCF GESP 2025年9月认证 Python 1级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10229.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1703973140561952.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202509-python-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "人工智能现在非常火,小杨就想多了解一下,其中就经常听人提到 “ 大模型 ” 。那么请问这里说的 “ 大模型 ” 最\n贴切是指  (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "大电脑模型"
+        },
+        {
+          "key": "B",
+          "text": "大规模智能"
+        },
+        {
+          "key": "C",
+          "text": "智能的单位"
+        },
+        {
+          "key": "D",
+          "text": "大语言模型"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "小杨这学期刚开学就选修了一门编程课,然后就想编写程序来计算 1 到 10001 之间的所有偶数的和。他希望程\n序采用简单累加整数的方法,同时希望源程序尽可能清晰、简洁,则下面关于实现累加时采用的主要控制结构的哪\n个说法最不合适(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "使用循环结构"
+        },
+        {
+          "key": "B",
+          "text": "使用循环和分支的组合"
+        },
+        {
+          "key": "C",
+          "text": "仅使用顺序结构"
+        },
+        {
+          "key": "D",
+          "text": "不使用分支结构"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面的 Python 代码用于输入姓名,然后输出姓名,正确的说法是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "XingMing 是汉语拼音,不能作为变量名称"
+        },
+        {
+          "key": "B",
+          "text": "可以将 XingMing 改为 Xing Ming"
+        },
+        {
+          "key": "C",
+          "text": "可以将 XingMing 改为 xingming"
+        },
+        {
+          "key": "D",
+          "text": "可以将 XingMing 改为 Xing-Ming"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下列 Python 代码执行后,其输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.6 2 3"
+        },
+        {
+          "key": "B",
+          "text": "2.623 XingMing = input(\" 请输入您的姓名: \") print(XingMing) a = 13 b = 5 print(a / b, a // b, a % b)"
+        },
+        {
+          "key": "C",
+          "text": "2 2 3"
+        },
+        {
+          "key": "D",
+          "text": "2 3 4"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "Python表达式 3 * 3 ** 3 // 3 的值是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面的Python代码执行时如果先输入 10  回车后输入 20  并回车,其输出是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": "{N+M}"
+        },
+        {
+          "key": "D",
+          "text": "N+M"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "当前是9月,编写Python代码求N个月后的月份。横线处应填入的代码是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "N % 12"
+        },
+        {
+          "key": "B",
+          "text": "9 + N % 12"
+        },
+        {
+          "key": "C",
+          "text": "(9 + N) // 12"
+        },
+        {
+          "key": "D",
+          "text": "(9 + N) % 12"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面Python代码执行后的输出是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面的Python代码执行后输出是( )。\nN = input(\"第一个数:\")\nM = input(\"第二个数:\")\nprint(f\"{N+M}\")\n1\n2\n3\nN = int(input())\nM = _____________\nif M == 0:\n    print(f\"{N}个月后是12月\")\nelse:\n    print(f\"{N}个月后是{M}月\")\n1\n2\n3\n4\n5\n6\nn = 0\nfor i in range(100):\n    n += i % 2\nprint(n)\n1\n2\n3\n4\nN = 0\nfor i in range(-100,100):\n    N += i % 10\nprint(N)\n1\n2\n3\n4",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1#2#"
+        },
+        {
+          "key": "B",
+          "text": "1#2#END"
+        },
+        {
+          "key": "C",
+          "text": "1#2"
+        },
+        {
+          "key": "D",
+          "text": "1#2#3#4#END"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面的 Python 代码用于求 N 的镜面数( N 的个位到最高位的各位数字依次反过来出现在数字中,但高位 0 将被\n忽略,不输出),如输入  1234,则将输出4321,又如输入  120,则将输出21,错误的选项是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "N != 0"
+        },
+        {
+          "key": "B",
+          "text": "not (N == 0)"
+        },
+        {
+          "key": "C",
+          "text": "N = 0"
+        },
+        {
+          "key": "D",
+          "text": "N > 0"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 Python 代码用于交换两个正整数,其不能实现的代码是(     )。\n\n```\nfor i in range(1, 5): if i % 3 == 0: break print(i,end=\"#\") else: print(\"END\") N = int(input(\" 请输入个位数不为 0 的正整数: \")) rst = 0 # 保存逆序结果 while ______________: rst = rst * 10 + N % 10 N = N // 10 print(rst) a = int(input(\" 输入第一个正整数 : \")) b = int(input(\" 输入第二个正整数 : \")) temp = a a = b b = temp print(\"a=\", a, \"b=\", b) a = int(input(\" 输入第一个正整数 : \")) b = int(input(\" 输入第二个正整数 : \")) a, b = b, a print(\"a=\", a, \"b=\", b)\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "有关下面 Python 代码说法正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码执行后,海龟会水平向右画一条 100 像素的直线"
+        },
+        {
+          "key": "B",
+          "text": "因为在turtle.forward(100)之前没有执行turtle.pendown(),因此只会水平向右移动 100 像素,但不 会绘制直线"
+        },
+        {
+          "key": "C",
+          "text": "因为在turtle.forward(100)之前没有执行turtle.pensize(n),其中 n 为正整数,因此只会水平向右移 动 100 像素,但不会绘制直线"
+        },
+        {
+          "key": "D",
+          "text": "因为在turtle.forward(100)之前没有执行turtle.pencolor(color),color 为合法的颜色值,因此 只会水平向右移动 100 像素,但不会绘制直线或者说绘制了直线,但与背景颜色保持一致,看不出是直线"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "为在 Python Turtle 中输出如下图形,代码横线处应填入(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": "a = int(input(\" 输入第一个正整数 : \")) b = int(input(\" 输入第二个正整数 : \")) a = a + b b = a - b a = a - b print(\"a=\", a, \"b=\", b) a = int(input(\" 输入第一个正整数 : \")) b = int(input(\" 输入第二个正整数 : \")) a = b b = a print(\"a=\", a, \"b=\", b) import turtle turtle.forward(100) import turtle for i in range(12): turtle.circle(100) turtle.right(___________) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "为在 Python Turtle 中输出如下图形,代码横线处应填入(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "在集成开发环境里调试程序时,要注意不能修改源程序,因为如果修改,就要终止调试、关闭该文件并重新\n打开,才能再次开始调试。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "执行 Python 表达式10 ** 0.5将报错,因为  0.5 所在位置只能是正整数。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后将输出  9。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后将输出  55。(   )\nimport turtle\nfor i in range(4):\n    turtle.circle(100, steps = ______)\n    turtle.right(90)\n\n\n\n\nfor i in range(10):\n    break\nprint(i)",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "将下面 Python 代码中的  range(100) 修改为  range(1,100),其输出与当前代码输出相同。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "将下面 Python 代码中的i < 10修改为i <= 10,其执行后输出相同。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "下面的 Python 代码执行后将输出  45。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "执行下面的 Python 代码后,将输出  30。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下面的 Python 代码执行后,海龟指向不会发生变化。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下面的 Python 代码执行后将能绘制出大于 3 的正多边形。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "商店折扣",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\nn = 0\n    n = n + i * -1\nprint(n)\n\ncnt = 0\n    cnt += i\nprint(cnt)\n\nn, i = 0, 0\n    n += i\n    i += 1\nprint(n)\n\nn, i = 0, 0\n    i += 1\n    n += i\nprint(n)\n\nN, M = 10, 20\nprint(f\"{N}+{M}\")\n\nimport turtle\n    turtle.right(30)\n    continue\n\nimport turtle\nN = int(input(\" 请输入大于 3 的正整数: \"))\n    turtle.forward(100)\n    turtle.right(360 % N)\n\n3.1.1 题目描述\n商店正在开展促销活动,给出了两种方案的折扣优惠。第一种方案是购物满  元减  元;第二种方案是直接打\n折,也就是说价格变为原先的 。这里的  均是正整数,并且 , 。\n小明在商店挑选了价格总和为  元的物品,结账时只能使用一种优惠方案。小明最少需要支付多少钱呢?\n3.1.2\n\n输入格式\n四行,四个正整数 ,含义见题目描述。\n3.1.3 输出格式\n一行,一个小数,表示小明最少需要支付多少钱,保留两位小数。\n3.1.4 样例\n3.1.4.1 输入样例 1\n3.1.4.2 输出样例 1\n3.1.4.3 输入样例 2\n3.1.4.4 输出样例 2\n3.1.5 数据范围\n对于所有测试点,保证 , , 。\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "金字塔",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n金字塔由   层石块垒成。从塔底向上,每层依次需要   块石块。请问搭建金\n字塔总共需要多少块石块?\n3.2.2\n\n输入格式\n一行,一个正整数  ,表示金字塔的层数。\n3.2.3 输出格式\n一行,一个正整数,表示搭建金字塔所需的石块数量。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于所有测试点,保证  。\n3.2.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "D",
+      "C",
+      "C",
+      "A",
+      "C",
+      "B",
+      "D",
+      "C",
+      "C",
+      "A",
+      "C",
+      "D",
+      "A",
+      "B",
+      "D"
+    ],
+    [
+      "C"
+    ]
+  ]
+}

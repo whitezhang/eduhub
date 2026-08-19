@@ -1,0 +1,293 @@
+{
+  "slug": "cspj-computer-history",
+  "url": "https://adacpp.com/practice/cspj-computer-history",
+  "title": "计算机发展史",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "Q6wN0A4_qPM3W__ZZ-kNF",
+      "type": "single_choice",
+      "content": "以下和计算机领域密切相关的奖项是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "奥斯卡奖"
+        },
+        {
+          "label": "B",
+          "text": "图灵奖"
+        },
+        {
+          "label": "C",
+          "text": "诺贝尔奖"
+        },
+        {
+          "label": "D",
+          "text": "普利策奖"
+        }
+      ],
+      "answer": "B",
+      "explanation": "奥斯卡奖是电影类奖项。诺贝尔有六种奖项：物理、化学、生物和医疗、文学、经济、和平，普利策奖是新闻类奖项"
+    },
+    {
+      "id": "yE3epJpiCu2eLE0f_c672",
+      "type": "true_false",
+      "content": "诞生于1958年的103机是中国第一台通用数字电子计算机，比1946年在美国诞生的第一台通用电子计算机ENIAC晚了十多年",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题属于对计算机历史的考察；中国第一台通用数字电子计算机于1958年8月研制成功，美国第一台通用电子计算机ENIAC诞生于1946年2月14日。所以本题正确。"
+    },
+    {
+      "id": "_tXpMNWj18QxldMQxk0GH",
+      "type": "true_false",
+      "content": "神威·太湖之光超级计算机是中国自主研制的超级计算机，在全球超级计算机TOP500排行榜中多次荣膺榜首",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "神威·太湖之光超级计算机是中国自主研发的超级计算机，它在全球超级计算机TOP500排行榜中确实多次获得第一，展现了中国在超级计算机领域的实力。"
+    },
+    {
+      "id": "u2Xa5f2b0R0YwtjP2vQJJ",
+      "type": "single_choice",
+      "content": "我国第一台大型通用电子计算机使用的逻辑部件是",
+      "options": [
+        {
+          "label": "A",
+          "text": "集成电路"
+        },
+        {
+          "label": "B",
+          "text": "大规模集成电路"
+        },
+        {
+          "label": "C",
+          "text": "晶体管"
+        },
+        {
+          "label": "D",
+          "text": "电子管"
+        }
+      ],
+      "answer": "D",
+      "explanation": "本题属于考察计算机基础知识。中国第一台计算机通用数字电子计算机于1958年6月由中科院计算所研制成功。那时候的逻辑部件是电子管。"
+    },
+    {
+      "id": "EsfItxhoSdlmHuRVDqIn1",
+      "type": "single_choice",
+      "content": "中国计算机学会（CCF）在2024年1月27日的颁奖典礼上颁布了王选奖，王选先生的重大贡献是",
+      "options": [
+        {
+          "label": "A",
+          "text": "制造自动驾驶汽车"
+        },
+        {
+          "label": "B",
+          "text": "创立培训学校"
+        },
+        {
+          "label": "C",
+          "text": "发明汉字激光照排系统"
+        },
+        {
+          "label": "D",
+          "text": "成立方正公司"
+        }
+      ],
+      "answer": "C",
+      "explanation": "王选先生的重大贡献是发明汉字激光照排系统，这项发明极大地促进了中文出版的现代化进程，因此C选项是正确的。"
+    },
+    {
+      "id": "ldO7jwcv8tVaOfBN9H8tO",
+      "type": "single_choice",
+      "content": "全国青少年信息学奥林匹克系列活动的主办单位是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "教育部"
+        },
+        {
+          "label": "B",
+          "text": "科技部"
+        },
+        {
+          "label": "C",
+          "text": "共青团中央"
+        },
+        {
+          "label": "D",
+          "text": "中国计算机学会"
+        }
+      ],
+      "answer": "D",
+      "explanation": "中国计算机学会于1984年创办全国青少年计算机程序设计竞赛(简称：NOI)."
+    },
+    {
+      "id": "1Jyao9R3qyD1RBEmqHdGN",
+      "type": "single_choice",
+      "content": "CCF NOIP 复赛全国统一评测时使用的系统软件是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "NOI Windows"
+        },
+        {
+          "label": "B",
+          "text": "NOI Linux"
+        },
+        {
+          "label": "C",
+          "text": "NOI Mac OS"
+        },
+        {
+          "label": "D",
+          "text": "NOI DOS"
+        }
+      ],
+      "answer": "B",
+      "explanation": "CCF NOIP复赛全国统一评测时使用的系统软件是NOI Linux。"
+    },
+    {
+      "id": "AgonV-MT59jKfK9MhTsQT",
+      "type": "single_choice",
+      "content": "在 NOI 系列赛事中参赛选手必须使用累承办单位统一提供的设备。下列物品中不允许选手自带的是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "鼠标"
+        },
+        {
+          "label": "B",
+          "text": "笔"
+        },
+        {
+          "label": "C",
+          "text": "身份证"
+        },
+        {
+          "label": "D",
+          "text": "准考证"
+        }
+      ],
+      "answer": "A",
+      "explanation": "电子产品不可带入"
+    },
+    {
+      "id": "W5_UIXz9teddgSeFXt_K2",
+      "type": "single_choice",
+      "content": "参加NOI比赛，以下不能带入考场的是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "钢笔"
+        },
+        {
+          "label": "B",
+          "text": "适量的衣服"
+        },
+        {
+          "label": "C",
+          "text": "U盘"
+        },
+        {
+          "label": "D",
+          "text": "铅笔"
+        }
+      ],
+      "answer": "C",
+      "explanation": "电子产品不可带入"
+    },
+    {
+      "id": "Fec_Ny22MuhH8d7NFtiGv",
+      "type": "single_choice",
+      "content": "NOI 的中文意思是( ).",
+      "options": [
+        {
+          "label": "A",
+          "text": "中国信息学联赛"
+        },
+        {
+          "label": "B",
+          "text": "全国青少年信息学奥林匹克竞赛"
+        },
+        {
+          "label": "C",
+          "text": "中国青少年信息学奥林匹克竞赛"
+        },
+        {
+          "label": "D",
+          "text": "中国计算机协会"
+        }
+      ],
+      "answer": "B",
+      "explanation": "中国计算机学会于1984年创办全国青少年计算机程序设计竞赛(简称：NOI)."
+    },
+    {
+      "id": "hrlSeppF7z3TvC9cwb4Uq",
+      "type": "single_choice",
+      "content": "从（ ）年开始，NOIP 竞赛将不再支持 Pascal 语言。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2020"
+        },
+        {
+          "label": "B",
+          "text": "2021"
+        },
+        {
+          "label": "C",
+          "text": "2022"
+        },
+        {
+          "label": "D",
+          "text": "2023"
+        }
+      ],
+      "answer": "C",
+      "explanation": "CCF于2016年11月1日发布《CCF关于NOI系列赛事程序设计语言变更的公告》从2022年开始，NOIP竞赛也将不再支持Pascal语言。"
+    },
+    {
+      "id": "Xamf-FHrDbtny5YWRDXI-",
+      "type": "single_choice",
+      "content": "中国计算机学会于( )年创办全国青少年计算机程序设计竞赛。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1983"
+        },
+        {
+          "label": "B",
+          "text": "1984"
+        },
+        {
+          "label": "C",
+          "text": "1985"
+        },
+        {
+          "label": "D",
+          "text": "1986"
+        }
+      ],
+      "answer": "B",
+      "explanation": "中国计算机学会于1984年创办全国青少年计算机程序设计竞赛(简称：NOI)."
+    }
+  ]
+}

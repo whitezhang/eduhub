@@ -1,0 +1,1002 @@
+{
+  "slug": "cspj-computer-architecture",
+  "url": "https://adacpp.com/practice/cspj-computer-architecture",
+  "title": "计算机组成",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "UQeHYIM2zd29N55xl4Yw-",
+      "type": "single_choice",
+      "content": "主存储器的存取速度比中央处理器（CPU）的工作速度慢得多，从而使得后者的效率受到影响。而根据局部性原理，CPU所访问的存储单元通常都趋于聚集在一个较小的连续区域中。于是，为了提高系统整体的执行效率，在CPU中引入了( ).",
+      "options": [
+        {
+          "label": "A",
+          "text": "寄存器"
+        },
+        {
+          "label": "B",
+          "text": "高速缓存"
+        },
+        {
+          "label": "C",
+          "text": "闪存"
+        },
+        {
+          "label": "D",
+          "text": "外存"
+        }
+      ],
+      "answer": "B",
+      "explanation": "CPU高速缓存是用于减少处理器访问内存所需平均时间的部件。 仅次于CPU寄存器。 其容量远小于内存，但速度却可以接近处理器的频率。 当处理器发出内存访问请求时，会先查看缓存内是否有请求数据。"
+    },
+    {
+      "id": "SglU7YDA_USYF8Ck5v3IB",
+      "type": "single_choice",
+      "content": "寄存器是（ ）的重要组成部分。",
+      "options": [
+        {
+          "label": "A",
+          "text": "硬盘"
+        },
+        {
+          "label": "B",
+          "text": "高速缓存"
+        },
+        {
+          "label": "C",
+          "text": "内存"
+        },
+        {
+          "label": "D",
+          "text": "中央处理器(CPU)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "中央处理器主要包括两个部分，即控制器、运算器。运算器由算术逻辑单元（ALU）、累加器、状态寄存器、通用寄存器组等组成。运算器由算术逻辑单元（ALU）、累加器、状态寄存器、通用寄存器组等组成。A，硬盘是电脑的主要存储媒介之一。B，高速缓存,称为高速缓冲存储器,是介于中央处理器cpu和主存储器之间的高速小容量存储器。"
+    },
+    {
+      "id": "6N70qCeeyguNyYw4LoXpX",
+      "type": "single_choice",
+      "content": "计算机如果缺少（ ），将无法正常启动。",
+      "options": [
+        {
+          "label": "A",
+          "text": "内存"
+        },
+        {
+          "label": "B",
+          "text": "鼠标"
+        },
+        {
+          "label": "C",
+          "text": "U盘"
+        },
+        {
+          "label": "D",
+          "text": "摄像头"
+        }
+      ],
+      "answer": "A",
+      "explanation": "内存属于存储器，是冯诺依曼结构体系中构成计算机的五大部件（存储器、运算器、控制器、输入设备、输出设备）之一。鼠标、U盘和摄像头都是外部设备，没有电脑也能启动。"
+    },
+    {
+      "id": "7FKY0SauEXWWZubQzGkAQ",
+      "type": "single_choice",
+      "content": "以下哪一种设备属于输出设备（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "扫描仪"
+        },
+        {
+          "label": "B",
+          "text": "键盘"
+        },
+        {
+          "label": "C",
+          "text": "鼠标"
+        },
+        {
+          "label": "D",
+          "text": "打印机"
+        }
+      ],
+      "answer": "D",
+      "explanation": "前三者均为输入设备"
+    },
+    {
+      "id": "kGXLuE6F0lo7fg4jJXCwC",
+      "type": "single_choice",
+      "content": "CPU、存储器、I/O设备是通过( )连接起来的。",
+      "options": [
+        {
+          "label": "A",
+          "text": "接口"
+        },
+        {
+          "label": "B",
+          "text": "总线"
+        },
+        {
+          "label": "C",
+          "text": "控制线"
+        },
+        {
+          "label": "D",
+          "text": "系统文件"
+        }
+      ],
+      "answer": "B",
+      "explanation": "总线是计算机各种功能部件之间传送信息的公共通信干线。"
+    },
+    {
+      "id": "HXeeerObD9qx9um3QdRuQ",
+      "type": "single_choice",
+      "content": "断电后会丢失数据的存储器是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "RAM"
+        },
+        {
+          "label": "B",
+          "text": "ROM"
+        },
+        {
+          "label": "C",
+          "text": "硬盘"
+        },
+        {
+          "label": "D",
+          "text": "光盘"
+        }
+      ],
+      "answer": "A",
+      "explanation": "随机存取存储器RAM(Random Access Memory)在计算期间被用作高速暂存记忆区，当计算机在运行时RAM是可得到的，当关闭计算机时信息将会丢失。ROM(Read Only Memory)断电后，不受影响。"
+    },
+    {
+      "id": "3_tZBfy4Sq0Pm6mR_hOGU",
+      "type": "single_choice",
+      "content": "在 PC 机中，PENTIUM(奔腾)、酷睿、赛扬等是指( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "生产厂家名称"
+        },
+        {
+          "label": "B",
+          "text": "硬盘的型号"
+        },
+        {
+          "label": "C",
+          "text": "CPU 的型号"
+        },
+        {
+          "label": "D",
+          "text": "显示器的型号"
+        }
+      ],
+      "answer": "C",
+      "explanation": "全球两大个人电脑处理器厂商：Intel和AMD。奔腾、酷睿、赛扬都是Intel生产的处理器型号。性能：赛扬（低端）< 奔腾（中低端）< 酷睿（高端）。i3, i5, i7都是酷睿的系列。目前市场上主流使用的型号为酷睿i5和酷睿i7。"
+    },
+    {
+      "id": "TwfRCNYx0kF2Zf9SmBJje",
+      "type": "single_choice",
+      "content": "下列说法正确的是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "CPU的主要任务是执行数据运算和程序控制"
+        },
+        {
+          "label": "B",
+          "text": "存储器具有记忆能力，其中信息任何时候都不会丢失"
+        },
+        {
+          "label": "C",
+          "text": "两个显示器屏幕尺寸相同，则它们的分辨率必定相同"
+        },
+        {
+          "label": "D",
+          "text": "个人用户只能使用 Wifi 的方式连接到 Internet"
+        }
+      ],
+      "answer": "A",
+      "explanation": "CPU的功能主要是解释计算机指令，控制程序以及处理计算机软件中的数据。RAM断电后信息丢失，B错；分辨率指单位面积中存储的信息量，是每英寸屏幕内有多少个像素点，分辨率的单位为PPI(Pixels Per Inch)，通常叫做像素每英寸，跟屏幕尺寸无关，C错；用户通过物理连接(有线通信)的方式也可以连接到网络，D错。"
+    },
+    {
+      "id": "hcxR-IrZxOzSidCuT7uag",
+      "type": "single_choice",
+      "content": "以下不是存储设备的是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "光盘"
+        },
+        {
+          "label": "B",
+          "text": "磁盘"
+        },
+        {
+          "label": "C",
+          "text": "固态硬盘"
+        },
+        {
+          "label": "D",
+          "text": "鼠标"
+        }
+      ],
+      "answer": "D",
+      "explanation": "剩下3个选项都是内存或者外存。"
+    },
+    {
+      "id": "C6VYlCKxZybmKX_tlksYP",
+      "type": "single_choice",
+      "content": "在内存储器中每个存储单元都被赋予一个唯一的序号，称为( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "地址"
+        },
+        {
+          "label": "B",
+          "text": "序号"
+        },
+        {
+          "label": "C",
+          "text": "下标"
+        },
+        {
+          "label": "D",
+          "text": "编号"
+        }
+      ],
+      "answer": "A",
+      "explanation": "存储器是许多存储单元的集合，按单元号顺序排列。每个存储单元的地址是唯一且固定不变的，而存储在其中的信息是可以更换的。"
+    },
+    {
+      "id": "UdgPHLyiWVP6Zs-g9qvxz",
+      "type": "single_choice",
+      "content": "以下不属于计算机输入设备的有",
+      "options": [
+        {
+          "label": "A",
+          "text": "键盘"
+        },
+        {
+          "label": "B",
+          "text": "音箱"
+        },
+        {
+          "label": "C",
+          "text": "鼠标"
+        },
+        {
+          "label": "D",
+          "text": "传感器"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题属于考察计算机基础知识中的“输入”和“输出”概念；“输入”指外界向机器内部传递信息，“输出”指计算机内部信息向外界展示。此题中，“音箱”属于向外部播放声音，故属于输出概念。"
+    },
+    {
+      "id": "WuRZ9PHfGHAADQwRgK9qD",
+      "type": "single_choice",
+      "content": "以下存储器中的数据不会受到附近强磁场干扰的是",
+      "options": [
+        {
+          "label": "A",
+          "text": "硬盘"
+        },
+        {
+          "label": "B",
+          "text": "U盘"
+        },
+        {
+          "label": "C",
+          "text": "内存"
+        },
+        {
+          "label": "D",
+          "text": "光盘"
+        }
+      ],
+      "answer": "D",
+      "explanation": "光盘是光存储介质，是通过激光高温改变光盘涂覆层的形状来记录数据的，不会因为磁场而改变记录特性。"
+    },
+    {
+      "id": "0Ogr_zrJJaGyKMi-4p10k",
+      "type": "single_choice",
+      "content": "以下不属于计算机输出设备的有",
+      "options": [
+        {
+          "label": "A",
+          "text": "麦克风"
+        },
+        {
+          "label": "B",
+          "text": "音箱"
+        },
+        {
+          "label": "C",
+          "text": "打印机"
+        },
+        {
+          "label": "D",
+          "text": "显示器"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识中的“输入”和“输出”概念；“输入”指外界向机器内部传递信息，“输出”指计算机内部信息向外界展示信息。此题中，“麦克风”属于向内部输入声音，属于输入概念。"
+    },
+    {
+      "id": "SH8G2VB0iJVM8b3xEzFrF",
+      "type": "single_choice",
+      "content": "计算机硬件主要包括运算器、控制器、存储器、输入设备和输出设备。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题考察计算机基础知识中的计算机组成五大部分；分别是：存储器、控制器、运算器、输入设备和输出设备。"
+    },
+    {
+      "id": "4bhl6Zrh_7kw9BRJO4LWp",
+      "type": "single_choice",
+      "content": "我们通常说的“内存”属于计算机中的",
+      "options": [
+        {
+          "label": "A",
+          "text": "输出设备"
+        },
+        {
+          "label": "B",
+          "text": "输入设备"
+        },
+        {
+          "label": "C",
+          "text": "存储设备"
+        },
+        {
+          "label": "D",
+          "text": "打印设备"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题属于考察计算机基础知识中的存储设备问题；内存是一种存储设备。"
+    },
+    {
+      "id": "7s38zgct8YkXmon9A8zBI",
+      "type": "single_choice",
+      "content": "早期计算机内存不够大，可以将字库固化在一个包含只读存储器的扩展卡中插入计算机主板帮助处理汉字。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题考察计算机基础知识和计算机历史，早期计算机为了处理汉字，确实采用了将字库固化在ROM中的方法。"
+    },
+    {
+      "id": "NkIkDT6eevHYJ3yJ3RH2d",
+      "type": "single_choice",
+      "content": "人们所使用的手机上安装的App通常指的是",
+      "options": [
+        {
+          "label": "A",
+          "text": "一款操作系统"
+        },
+        {
+          "label": "B",
+          "text": "一款应用软件"
+        },
+        {
+          "label": "C",
+          "text": "一种通话设备"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题属于考察计算机基础知识。APP是英语单词application的简写，代表应用软件的意思。"
+    },
+    {
+      "id": "9P8PJ0LAOQpj9n48LVLyR",
+      "type": "single_choice",
+      "content": "近年来，线上授课变得普遍，很多有助于改善教学效果的设备也逐渐流行，其中包括比较常用的手写板，那么它属于哪类设备？",
+      "options": [
+        {
+          "label": "A",
+          "text": "输入"
+        },
+        {
+          "label": "B",
+          "text": "输出"
+        },
+        {
+          "label": "C",
+          "text": "控制"
+        },
+        {
+          "label": "D",
+          "text": "记录"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识知识。手写板是输入信息的设备。"
+    },
+    {
+      "id": "9-a9S3VFo2e0yjq8vDj7T",
+      "type": "single_choice",
+      "content": "小西最近刚买了一块华为手表，手表上写着一个鸿蒙，请问这个鸿蒙是",
+      "options": [
+        {
+          "label": "A",
+          "text": "小程序"
+        },
+        {
+          "label": "B",
+          "text": "计时器"
+        },
+        {
+          "label": "C",
+          "text": "操作系统"
+        },
+        {
+          "label": "D",
+          "text": "神话人物"
+        }
+      ],
+      "answer": "C",
+      "explanation": "鸿蒙是华为开发的操作系统，用于多种设备上，包括智能手表。"
+    },
+    {
+      "id": "dKilZ7qjPFoK3CYpsl7OJ",
+      "type": "single_choice",
+      "content": "一个字节（byte）由（ ）个二进制位组成。",
+      "options": [
+        {
+          "label": "A",
+          "text": "8"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "32"
+        },
+        {
+          "label": "D",
+          "text": "以上都有可能"
+        }
+      ],
+      "answer": "A",
+      "explanation": "byte是计算机存储的基本单位，bit是计算机存储的最小单位，一个字节由8个二进制位组成，1 byte(字节) = 8 bit(位)。"
+    },
+    {
+      "id": "HP5lOIlPVQg_W-QGPD83g",
+      "type": "single_choice",
+      "content": "地址总线的位数决定了 CPU 可直接寻址的内存空间大小，例如地址总线为 16 位，其最大的可寻址空间为 64KB。如果地址总线是 32 位，则理论上最大可寻址的内存空间为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "128KB"
+        },
+        {
+          "label": "B",
+          "text": "1MB"
+        },
+        {
+          "label": "C",
+          "text": "1GB"
+        },
+        {
+          "label": "D",
+          "text": "4GB"
+        }
+      ],
+      "answer": "D",
+      "explanation": "一般来说，若地址总线为n位，则可寻址空间为2^n字节。2^16=64×2^10，即：64KB；2^32=4×2^20，即4GB。"
+    },
+    {
+      "id": "FhXTLyoTBAQ-gRi16r8KP",
+      "type": "single_choice",
+      "content": "一个 32 位整型变量占用（ ）个字节。",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "32"
+        },
+        {
+          "label": "D",
+          "text": "128"
+        }
+      ],
+      "answer": "A",
+      "explanation": "32bit=4×8bit=4byte"
+    },
+    {
+      "id": "I1YPjt0h3K173o_yRCXUN",
+      "type": "single_choice",
+      "content": "1TB代表的字节数是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2的10次方"
+        },
+        {
+          "label": "B",
+          "text": "2的20次方"
+        },
+        {
+          "label": "C",
+          "text": "2的30次方"
+        },
+        {
+          "label": "D",
+          "text": "2的40次方"
+        }
+      ],
+      "answer": "D",
+      "explanation": "1TB=1024GB=1024×1024MB=1024×1024×1024KB=1024×1024×1024×1024B"
+    },
+    {
+      "id": "6kjLzAzXtjZOTfldfQnXe",
+      "type": "single_choice",
+      "content": "分辨率为 800x600、16 位色的位图，存储图像信息所需的空间为( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "937.5KB"
+        },
+        {
+          "label": "B",
+          "text": "4218.75KB"
+        },
+        {
+          "label": "C",
+          "text": "4320KB"
+        },
+        {
+          "label": "D",
+          "text": "2880KB"
+        }
+      ],
+      "answer": "A",
+      "explanation": "800×600×16bit=800×600×2(16/8)B=960×1000B=937.5(960×1000/1024)KB。"
+    },
+    {
+      "id": "Dt5YG7zAhoPemtGhsYsxi",
+      "type": "single_choice",
+      "content": "计算机系统中存储的基本单位用B来表示，它代表的是",
+      "options": [
+        {
+          "label": "A",
+          "text": "Byte"
+        },
+        {
+          "label": "B",
+          "text": "Block"
+        },
+        {
+          "label": "C",
+          "text": "Bulk"
+        },
+        {
+          "label": "D",
+          "text": "Bit"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识中，关于存储的基本单位；计算机中，表示存储大小的最小单位为“字节”，英文为“Byte”，表示一个字节存储空间大小的单位，用大写字母B表示。"
+    },
+    {
+      "id": "zoey65D3T8CILOAhNM6C_",
+      "type": "true_false",
+      "content": "小北和小西在“小庙会”上分别抽到一个4GB和4096MB的U盘，容量大的盘是小西的",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题属于考察数据单位的换算，1GB=1024MB，4GB和4096MB容量一样大。"
+    },
+    {
+      "id": "Z9u35dNVyqq9CrojVtvCU",
+      "type": "true_false",
+      "content": "诞生于1986年的中华学习机CEC-I入选了2021年的CCF计算机历史记忆（一类），它的内存只有64KB。当时的汉字编码字符集GB2312中共有6763个汉字，假如每个汉字用2个字节编码，将整个GB2312汉字字符集都放入CEC-I的内存，也只占用了不超过1/5的内存空间",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题考察数据类型与内存空间的计算；6763个汉字，占用6763×2=13526字节，除以1024约为13.21KB，超过了64KB的1/5。"
+    },
+    {
+      "id": "u5vZ_wkEd-8Bbpb1VuYnn",
+      "type": "single_choice",
+      "content": "如果数组定义为long long array[] = {3, 5, 7, 2}，则数组array占用的字节数为",
+      "options": [
+        {
+          "label": "A",
+          "text": "32"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "A",
+      "explanation": "本题属于考察C++语言知识，包括数组和数据类型。一维数组中有4个元素，long long类型每个数字占8个字节，4*8=32。"
+    },
+    {
+      "id": "AfKPWLN-X41I0os37pZW1",
+      "type": "single_choice",
+      "content": "一个二维数组定义为double array[3][10]，则这个二维数组占用内存的大小为",
+      "options": [
+        {
+          "label": "A",
+          "text": "30"
+        },
+        {
+          "label": "B",
+          "text": "60"
+        },
+        {
+          "label": "C",
+          "text": "120"
+        },
+        {
+          "label": "D",
+          "text": "240"
+        }
+      ],
+      "answer": "D",
+      "explanation": "本题属于考察内存的基本概念；double类型的数据占用内存是8字节，array数组共使用了30个double类型的数据，占用内存为30*8=240字节。"
+    },
+    {
+      "id": "9vjEj9QFAy2Ej3KLCbMeo",
+      "type": "single_choice",
+      "content": "一个二维数组定义为int array[5][3]，则array[1][2]和array[2][1]在内存中的位置相差多少字节？",
+      "options": [
+        {
+          "label": "A",
+          "text": "2字节"
+        },
+        {
+          "label": "B",
+          "text": "4字节"
+        },
+        {
+          "label": "C",
+          "text": "8字节"
+        },
+        {
+          "label": "D",
+          "text": "无法确定"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题属于考察内存地址的基本概念；array[1][2]和array[2][1]中间差了array[2][0]，相当于差了2个int，也就是8字节。"
+    },
+    {
+      "id": "Qqa_rU2sIw3oWpz0YQOnz",
+      "type": "single_choice",
+      "content": "一个二维数组定义为char array[3][10]，则这个二维数组占用内存的大小为",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "30"
+        },
+        {
+          "label": "C",
+          "text": "32"
+        },
+        {
+          "label": "D",
+          "text": "48"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题属于考察C++二维字符数组知识。内存大小和数组需要用的空间有关。3行10列，需要3*10=30个空间。"
+    },
+    {
+      "id": "7dKR9oSYpkvvpeNF8bgKM",
+      "type": "single_choice",
+      "content": "一个三维数组定义为long long array[6][6][6]，则array[1][2][3]和array[3][2][1]在内存中的位置相差多少字节？",
+      "options": [
+        {
+          "label": "A",
+          "text": "70字节"
+        },
+        {
+          "label": "B",
+          "text": "198字节"
+        },
+        {
+          "label": "C",
+          "text": "560字节"
+        },
+        {
+          "label": "D",
+          "text": "无法确定"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题属于考察C++三维数组知识。数组是long long类型，每间隔一下数字就间隔8个字节，假设三维数组用长宽高来描述，array[0][0][0]到array[0][5][5]有36个元素，array[1][2][3]包含36+12+4=52个元素；到长度3宽度2高度1，包括36*3+12+2=122个元素，隔离70个"
+    },
+    {
+      "id": "U4GuhUGJl4yTb2o85Cx8E",
+      "type": "single_choice",
+      "content": "对二维数组int arr[3][16]，则arr[1]占用内存的大小为多少字节",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "48"
+        },
+        {
+          "label": "D",
+          "text": "64"
+        }
+      ],
+      "answer": "D",
+      "explanation": "int类型在大多数系统上占用4字节，二维数组arr[3][16]的一个子数组（如arr[1]）有16个int元素，因此占用16*4=64字节。"
+    },
+    {
+      "id": "2FiKTUv-h-JE0a_Xra41L",
+      "type": "single_choice",
+      "content": "对二维数组int arr[3][16]，若arr的地址是0x28cbc0，则arr[1]的值是多少",
+      "options": [
+        {
+          "label": "A",
+          "text": "0x28cbc4"
+        },
+        {
+          "label": "B",
+          "text": "0x28cbd0"
+        },
+        {
+          "label": "C",
+          "text": "0x28cc00"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "answer": "C",
+      "explanation": "二维数组在内存中是连续存储的。arr[1]是arr[0]之后的第16个int元素，每个int元素占用4字节，所以arr[1]的地址是初始地址0x28cbc0 + 16*4 = 0x28cbd0。"
+    },
+    {
+      "id": "iEzRzFyI_X8OZe_DeewDY",
+      "type": "single_choice",
+      "content": "在计算机中，以下哪个选项描述的数据存储容量最小",
+      "options": [
+        {
+          "label": "A",
+          "text": "字节（byte）"
+        },
+        {
+          "label": "B",
+          "text": "比特（bit）"
+        },
+        {
+          "label": "C",
+          "text": "字（word）"
+        },
+        {
+          "label": "D",
+          "text": "千字节（kilobyte）"
+        }
+      ],
+      "answer": "B",
+      "explanation": "数据存储容量最小的单位是比特（bit），一个比特代表一个二进制位，是最基本的信息单位。"
+    },
+    {
+      "id": "5Dk3B8NPVvKWQSUn15orb",
+      "type": "single_choice",
+      "content": "现有一张分辨率为2048×1024像素的32位真彩色图像。请问要存储这张图像，需要多大的存储空间",
+      "options": [
+        {
+          "label": "A",
+          "text": "16MB"
+        },
+        {
+          "label": "B",
+          "text": "4MB"
+        },
+        {
+          "label": "C",
+          "text": "8MB"
+        },
+        {
+          "label": "D",
+          "text": "2MB"
+        }
+      ],
+      "answer": "C",
+      "explanation": "一张2048×1024像素的32位图像，每个像素需要32位，即4字节的存储空间。因此总存储空间为2048×1024×4字节=8388608字节，即8MB。"
+    },
+    {
+      "id": "WWea8Jgup0TpzmHLavpSh",
+      "type": "single_choice",
+      "content": "（）不属于操作系统。",
+      "options": [
+        {
+          "label": "A",
+          "text": "Windows"
+        },
+        {
+          "label": "B",
+          "text": "DOS"
+        },
+        {
+          "label": "C",
+          "text": "Photoshop"
+        },
+        {
+          "label": "D",
+          "text": "NOI Linux"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Adobe Photoshop，简称“PS”，是由Adobe Systems开发和发行的图像处理软件，不是操作系统，所以C错。"
+    },
+    {
+      "id": "4jYYoiWmbqOCfL20tshHx",
+      "type": "single_choice",
+      "content": "在 Windows 资源管理器中，用鼠标右键单击一个文件时，会出现一个名为“复制”的操作选项，它的意思是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "用剪切板中的文件替换该文件"
+        },
+        {
+          "label": "B",
+          "text": "在该文件所在文件夹中，将该文件克隆一份"
+        },
+        {
+          "label": "C",
+          "text": "将该文件复制到剪切板，并保留原文件"
+        },
+        {
+          "label": "D",
+          "text": "将该文件复制到剪切板，并删除原文件"
+        }
+      ],
+      "answer": "C",
+      "explanation": "计算机基本操作。"
+    },
+    {
+      "id": "3dkPo9IHDkVNgc8mhJRCi",
+      "type": "single_choice",
+      "content": "下列对操作系统功能的描述最为完整的是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "负责外设与主机之间的信息交换"
+        },
+        {
+          "label": "B",
+          "text": "负责诊断机器的故障"
+        },
+        {
+          "label": "C",
+          "text": "控制和管理计算机系统的各种硬件和软件资源的使用"
+        },
+        {
+          "label": "D",
+          "text": "将源程序编译成目标程序"
+        }
+      ],
+      "answer": "C",
+      "explanation": "操作系统是一组主管并控制计算机操作、运用和运行硬件、软件资源和提供公共服务来组织用户交互的相互关联的系统软件程序。"
+    },
+    {
+      "id": "sJFbTcdl4zu7zi4Whpptq",
+      "type": "single_choice",
+      "content": "操作系统的作用是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "把源程序译成目标程序"
+        },
+        {
+          "label": "B",
+          "text": "便于进行数据管理"
+        },
+        {
+          "label": "C",
+          "text": "控制和管理系统资源"
+        },
+        {
+          "label": "D",
+          "text": "实现硬件之间的连接"
+        }
+      ],
+      "answer": "C",
+      "explanation": "A是编译器的作用，B是数据库的作用，D是主板的作用。"
+    },
+    {
+      "id": "XLKGoHpsZR9KD7q8bZqPH",
+      "type": "single_choice",
+      "content": "下是 32 位机器和 64 位机器的区别是( ).",
+      "options": [
+        {
+          "label": "A",
+          "text": "显示器不同"
+        },
+        {
+          "label": "B",
+          "text": "硬盘大小不同"
+        },
+        {
+          "label": "C",
+          "text": "寻址空间不同"
+        },
+        {
+          "label": "D",
+          "text": "输入法不同"
+        }
+      ],
+      "answer": "C",
+      "explanation": "寻址空间一般指的是CPU对于内存寻址的能力，CPU最大能查找多大范围的地址叫做寻址能力 ，CPU的寻址能力以字节为单位 ，如32位寻址的CPU可以寻址2的32次方大小的地址也就是4G，这也是为什么32位的CPU最大能搭配4G内存的原因 ，再多的话CPU就找不到了。"
+    }
+  ]
+}

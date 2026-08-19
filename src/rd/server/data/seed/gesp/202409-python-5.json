@@ -1,0 +1,574 @@
+{
+  "meta": {
+    "ym": "202409",
+    "lang": "python",
+    "level": 5,
+    "title": "GESP 9月认证 Python 五级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10166.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1644750914453536.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202409-python-5.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "在升序数组 nums 中寻找目标值 target,下列程序可以填入的是( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "mid = (right + left) // 2 + left"
+        },
+        {
+          "key": "B",
+          "text": "mid = (right - left) // 2 + left"
+        },
+        {
+          "key": "C",
+          "text": "mid = (right - left) // 2 -right"
+        },
+        {
+          "key": "D",
+          "text": "mid = (right + left) // 2 - left"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "500个病毒样本中,已知有一个是病毒检测呈阳性,用试纸测试阳性病毒以后,试纸在3天以后会变色,用试\n纸测试时间不计,三天以后要出结果,请问最少用多少个试纸能够找出哪一个病毒样本有毒()",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "一名收银员,给顾客找零,找零的目标是给出确定金额的同时,使用尽可能少的硬币。有不同面额的硬币:\n1分,5分,10分,25分.如果需要给顾客准确的零钱77分,同时使用最少的硬币下列程序中横线应该填写( )。\nclass Search(object):\n def search(self, nums, target):\n left, right = 0, len(nums) - 1\n while left <= right:\n ________________________________________\n if nums[mid] == target:\n return mid\n elif nums[mid] > target:\n right = mid - 1\n else:\n   left = mid + 1\n return -1\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
+      "options": [
+        {
+          "key": "A",
+          "text": "amount -= coin"
+        },
+        {
+          "key": "B",
+          "text": "amount <= coin"
+        },
+        {
+          "key": "C",
+          "text": "amount >= coin"
+        },
+        {
+          "key": "D",
+          "text": "amount += coin"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下列程序是素数筛的程序,横线处应该填上(  )。\n\n```\nfor j in range(i, n+1, i):\nfor j in range(i*i, 1, n):\nfor j in range(i*i, n+1, i):\nfor j in range(i, n, i):\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面程序是埃氏筛的一个实现,横线处应该填写( )。\n\n```\nfor i in range(i*i,n+1,i):\nfor j in range(i*i,n,j): def coin_change(amount, coins): result = [] for coin in sorted(coins, reverse=True): while amount >= coin: ___________________ result.append(coin) return result coins = [1, 5, 10, 25] amount = 63 def sieve(n): if n < 2: return [] prime = [True] * (n+1) prime[0] = prime[1] = False for i in range(2, int(math.sqrt(n)) + 1): if prime[i]: _______________________ prime[j] = False return [p for p in range(2, n+1) if prime[p]] for prime in sieve_of_eratosthenes(100): print(prime) n = 10**8 s = [0]*(n+1) k=0 for i in range(2,n+1): if s[i]==0: k+=1 ___________________________ s[j]=1\nfor j in range(i*i,n+1,i):\nfor j in range(j*j,n+1,i):\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下列程序中,使用了二分查找算法,横线处应该填写的是()。",
+      "options": [
+        {
+          "key": "A",
+          "text": "mid = (low - high) // 2"
+        },
+        {
+          "key": "B",
+          "text": "mid = (low + high) // 2"
+        },
+        {
+          "key": "C",
+          "text": "mid = (low + high) / 2"
+        },
+        {
+          "key": "D",
+          "text": "mid = (low - high) / 2"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "正整数1024的所有约数的和为多少( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面程序是对n!进行唯一分解,横线处应该填入的是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "while n % i != 0 and i != n:"
+        },
+        {
+          "key": "B",
+          "text": "while n % i == 0 and i == n:"
+        },
+        {
+          "key": "C",
+          "text": "while n % i == 0 and i != n: def search(arr, x): low = 0 high = len(arr) - 1 while low <= high: __________________ if arr[mid] == x: return mid elif arr[mid] > x: high = mid - 1 else: low = mid + 1 return -1 def unique_fac(n): print(n, '=', end='') for i in range(2, n + 1): _____________________________ print(' {}*'.format(i), end='') n //= i if n % i == 0 and i == n: print(' {}'.format(i), end='') break unique_fac(math.factorial(5))"
+        },
+        {
+          "key": "D",
+          "text": "while n % i != 0 and i == n:"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "假设有一些物品,每个物品都有自己的重量,我们需要将这些物品装入箱子中,每个箱子也有自己的重量限\n制。贪心算法每次都选择重量最轻的物品放入当前最轻的箱子中,如果箱子可以装下,就放入;如果箱子不能装\n下,就尝试下一个箱子,直到找到可以放入的箱子。下列贪心算法程序中,横线处应该填入的是(\n)。",
+      "options": [
+        {
+          "key": "A",
+          "text": "if not taken[i] and box[0] >= items[i]:"
+        },
+        {
+          "key": "B",
+          "text": "if not taken[0] and box[0] >= items[i]:"
+        },
+        {
+          "key": "C",
+          "text": "if not taken[i] and box[i] >= items[0]:"
+        },
+        {
+          "key": "D",
+          "text": "if not taken[0] and box[0] >= items[i]:"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下列归并算法程序中,横线处应该填入的是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "while i > len(left) and j < len(right):"
+        },
+        {
+          "key": "B",
+          "text": "while i < len(left) and j > len(right): def merge_sort(arr): if len(arr) <= 1: return arr mid = len(arr) // 2 left = arr[:mid] right = arr[mid:] merge_sort(left) merge_sort(right) return merge(left, right) def merge(left, right): result = [] i, j = 0, 0 ——————————————————————————————— if left[i] < right[j]: result.append(left[i]) i += 1 else: result.append(right[j]) j += 1 result += left[i:] result += right[j:] return result"
+        },
+        {
+          "key": "C",
+          "text": "while i > len(left) and j > len(right):"
+        },
+        {
+          "key": "D",
+          "text": "while i < len(left) and j < len(right):"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下列快速排序算法中,横线处应该填入的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "p = arr[len() // 2]"
+        },
+        {
+          "key": "B",
+          "text": "p = arr[len(arr)+1 // 2]"
+        },
+        {
+          "key": "C",
+          "text": "p = arr[len(arr)-1 // 2]"
+        },
+        {
+          "key": "D",
+          "text": "p = arr[len(arr) // 2]"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下列二分枚举算法中,{ }处应该填入的程序是({}不算做程序的一部分)(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "```Python mid = (low + high) // 2 if arr[mid] == x: return mid elif arr[mid+1] > x: high = mid - 1 else: low = mid + 1 def quick(arr): if len(arr) <= 1: return arr ____________________ left = [x for x in arr if x < p] middle = [x for x in arr if x == p] right = [x for x in arr if x > p] return quick(left) + middle + quick(right) def binary_search(arr, x): low = 0 high = len(arr) - 1 while low <= high: { } return -1 - [ ] **B.** ```Python mid = (low + high) // 2 if arr[mid] != x: return mid elif arr[mid+1] > x: high = mid - 1 else: low = mid + 1"
+        },
+        {
+          "key": "C",
+          "text": "```Python mid = (low + high) // 2 if arr[mid] == x: return mid elif arr[mid] > x: high = mid - 1 else: low = mid + 1"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面代码是寻找水仙花数的程序,横线处应该填写的代码是(  )。【是指一个 n 位数( n≥3 ),其每位数字\n的 n 次幂之和等于它本身】",
+      "options": [
+        {
+          "key": "A",
+          "text": "```Python sum_of_powers = sum(int(digit) ** num_digits for digit in num)"
+        },
+        {
+          "key": "C",
+          "text": "```Python sum_of_powers = sum(int(num) ** num_digits for digit in str_num)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "对于正整数 n ,欧拉函数 f(n), 表示小于或等于 n 的正整数中与 n 互质的数的数目,例如 f(8)=4 。 f(100)= (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": "- [ ] **D.** ```Python mid = (low + high) // 2 if arr[mid] ! = x: return mid elif arr[mid] > x: high = mid - 1 else: low = mid + 1 def is_narcissistic_num(num): str_num = str(num) num_digits = len(str_num) ———————————————————————————— return num == sum_of_powers for i in range(100, 10000): if is_narcissistic_num(i): print(i, \" 是水仙花数 \") - [ ] **B.** ```Python sum_of_powers = sum(int(digit) ** num for digit in str_num) - [ ] **D.** ```Python sum_of_powers = sum(int(digit) ** num_digits for digit in str_num) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "下列程序输出的是 ( ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "chen a dai"
+        },
+        {
+          "key": "B",
+          "text": "dai a chen"
+        },
+        {
+          "key": "C",
+          "text": "iad a nehc"
+        },
+        {
+          "key": "D",
+          "text": "chenadai"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "(-1) mod 127 和 126 mod 127 的结果是一样的",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "一个数的反码,实际上是这个数对于一个模的同余数",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "1997 和 615 用欧几里得算法计算最大公约数的过程如下:",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "欧几里得算法适用于实数",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "每个大于 1 的整数可以唯一地写成质数的乘积的形式",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "贪婪算法的复杂度通常是线性的,即 O(n) ,其中 n 是输入的大小",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "归并排序的时间复杂度为 O(n log n)",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "根据同余计算,可以推导出 (a ∗ b)%m=(a%m ∗ b%m)%m",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "二分查找算法的复杂度通常表示为 O(log n) ,其中 n 是数组的长度",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "def( 十六进制 ) = 103231( 五进制 )\ndef reverse(string):\n    if len(string) == 0:\n        return\n    temp = string[0]\n    reverse(string[1:])\n    print(temp, end='')\nstring = \"chen a dai\"\nreverse(string)\n\n\n\n\n\n\n\n\n1997/615=3( 余 152)\n615/152=4( 余 7)\n152/7=21( 余 5)\n7/5=1( 余 2)\n5/2=2( 余 1)\n2/1=2( 余 0)\n得出最大公约是是 1\n\n\n\n\n\n\n\n子任务编号 数据点占比\n1 20%\n2 20%\n3 60%",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "小杨的武器",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有   种不同的武器,他对第   种武器的初始熟练度为  。\n小杨会依次参加   场战斗,每场战斗小杨只能且必须选择一种武器使用,假设小杨使用了第   种武器参加了第   场\n战斗,战斗前该武器的熟练度为  ,则战斗后小杨对该武器的熟练度会变为  。需要注意的是,  可能是正\n数, 或负数,这意味着小杨参加战斗后对武器的熟练度可能会提高,也可能会不变,还有可能降低。\n小杨想请你编写程序帮他计算出如何选择武器才能使得   场战斗后,自己对   种武器的熟练度的最大值尽可能大。\n3.1.2\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n第二行包含   个正整数  ,代表小杨对武器的初始熟练度。\n第三行包含   个正整数  ,代表每场战斗后武器熟练度的变化值。\n3.1.3 输出格式\n输出一个整数,代表   场战斗后小杨对   种武器的熟练度的最大值最大是多少。\n3.1.4 样例 1\n一种最优的选择方案为,第一场战斗小杨选择第一种武器,第二场战斗小杨选择第二种武器。\n对于全部数据,保证有  , 。\n3.1.5",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "挑战怪物",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨正在和一个怪物战斗,怪物的血量为  ,只有当怪物的血量恰好为   时小杨才能够成功击败怪物。\n小杨有两种攻击怪物的方式:\n物理攻击。假设当前为小杨第   次使用物理攻击,则会对怪物造成   点伤害。\n魔法攻击。小杨选择任意一个质数  (  不能超过怪物当前血量),对怪物造成   点伤害。由于小杨并不擅长魔\n法,他只能使用至多一次魔法攻击。\n小杨想知道自己能否击败怪物,如果能,小杨想知道自己最少需要多少次攻击。\n3.2.2\n\n输入格式\n第一行包含一个正整数  ,代表测试用例组数。\n接下来是   组测试用例。对于每组测试用例,第一行包含一个正整数  ,代表怪物血量。\n3.2.3 输出格式\n对于每组测试用例,如果小杨能够击败怪物,输出一个整数,代表小杨需要的最少攻击次数,如果不能击败怪物,\n输出  。\n3.2.4 样例 1\nmx = -10000\ns = input().split()\nfor i in range(1, n + 1):\n    c[i] = int(s[i-1])\n    mx = max(mx, c[i])\ns = input().split()\nfor i in range(1, m + 1):\n    a[i] = int(s[i-1])\nfor i in range(1, m + 1):\n    if n == 1 or a[i] > 0:\n        mx += a[i]\nprint(mx)\n\n-1\n\n子任务编号 数据点占比\n1 20%\n2 20%\n3 60%\n对于第一组测试用例,一种可能的最优方案为,小杨先对怪物使用魔法攻击,选择质数   造成   点伤害,之后对怪\n物使用第   次物理攻击,造成   点伤害,怪物血量恰好为  ,小杨成功击败怪物。\n对于全部数据,保证有  。\n3.2.5",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "3\n6\n188\n9999\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n-1\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "C",
+      "A",
+      "C",
+      "C",
+      "B",
+      "C",
+      "C",
+      "A",
+      "D",
+      "D",
+      "C",
+      "D",
+      "D",
+      "C"
+    ],
+    [
+      "D"
+    ]
+  ]
+}

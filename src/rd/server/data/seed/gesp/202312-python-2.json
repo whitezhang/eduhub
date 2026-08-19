@@ -1,0 +1,578 @@
+{
+  "meta": {
+    "ym": "202312",
+    "lang": "python",
+    "level": 2,
+    "title": "GESP 12月认证 Python二级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10119.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1586016620118048.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202312-python-2.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "某公司新出了一款无人驾驶的小汽车,通过声控智能驾驶系统,乘客只要告诉汽车目的地,车子就能自动选\n择一条优化路线,告诉乘客后驶达那里。请问下面哪项不是驾驶系统完成选路所必须的。(   )",
+      "options": [
+        {
+          "key": "A",
+          "text": "麦克风"
+        },
+        {
+          "key": "B",
+          "text": "扬声器"
+        },
+        {
+          "key": "C",
+          "text": "油量表"
+        },
+        {
+          "key": "D",
+          "text": "传感器"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "现代计算机是指电子计算机,它所基于的是(   )体系结构。",
+      "options": [
+        {
+          "key": "A",
+          "text": "艾伦 · 图灵"
+        },
+        {
+          "key": "B",
+          "text": "冯 · 诺依曼"
+        },
+        {
+          "key": "C",
+          "text": "阿塔纳索夫"
+        },
+        {
+          "key": "D",
+          "text": "埃克特 - 莫克利"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面有关 Python 的说法,错误的是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "Python 是适合初学者学习程序设计的低级程序设计语言"
+        },
+        {
+          "key": "B",
+          "text": "在 Python 中一切皆对象"
+        },
+        {
+          "key": "C",
+          "text": "Python 是动态类型的程序设计语言"
+        },
+        {
+          "key": "D",
+          "text": "Python 是脚本型程序设计语言"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "以下不可以做为 Python 变量的是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "FiveStar"
+        },
+        {
+          "key": "B",
+          "text": "fiveStar"
+        },
+        {
+          "key": "C",
+          "text": "5Star"
+        },
+        {
+          "key": "D",
+          "text": "Star5"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "在 Python 中,与range(10,20,2)值相同的是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "range(10,19,2)B. range(11,19,2)"
+        },
+        {
+          "key": "C",
+          "text": "range(10,21,2)"
+        },
+        {
+          "key": "D",
+          "text": "以上均不对"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "以下Python代码实现从小到大的顺序输出能整除N的数(因子),例如N=18时输出 1 2 3 6 9 18,横线处应\n填入( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "range(N)"
+        },
+        {
+          "key": "B",
+          "text": "range(1,N)"
+        },
+        {
+          "key": "C",
+          "text": "range(N+1)"
+        },
+        {
+          "key": "D",
+          "text": "range(1,N+1)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面Python代码用于判断输入的整数是否为对称数,如1221是对称数。下面对该题对应代码的说法,正确的\n是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码没有语法错误,如果N为对称数,第7行将能正确输出。"
+        },
+        {
+          "key": "B",
+          "text": "代码没有语法错误,即便N为负数,循环也能正常结束。"
+        },
+        {
+          "key": "C",
+          "text": "代码存在语法错误,程序不能被执行。"
+        },
+        {
+          "key": "D",
+          "text": "代码没有语法错误,但不能达到预期目标,因为循环结束N总为0。"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面Python代码用于判断N(大于等于2的正整数)是否为质数(素数)。下面对题面对应代码的说法,正确\n的是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码能正确判断N是否为质数。"
+        },
+        {
+          "key": "B",
+          "text": "代码总是不能判断N是否质数。"
+        },
+        {
+          "key": "C",
+          "text": "删除第5行 break,将能正确判断N是否质数。"
+        },
+        {
+          "key": "D",
+          "text": "代码存在漏洞,边界存在问题,应将第2行 N // 2改为 N // 2 + 1。"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面Python代码执行后的输出是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "2#3#0"
+        },
+        {
+          "key": "B",
+          "text": "1#2#0"
+        },
+        {
+          "key": "C",
+          "text": "1#0#"
+        },
+        {
+          "key": "D",
+          "text": "2#3#"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面Python代码执行后的输出是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": "8#8"
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "4#4"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面Python代码执行后的输出是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面Python代码执行后的输出是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": "1,3"
+        },
+        {
+          "key": "C",
+          "text": "15,17"
+        },
+        {
+          "key": "D",
+          "text": "1,10,12"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面Python代码执行后的输出是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "以下Python代码用于输出1-100(含)的整数平方数(完全平方数),如16是4的平方,横线处应填写(\n)。",
+      "options": [
+        {
+          "key": "A",
+          "text": "int(i ** 0.5) ** 2 = i"
+        },
+        {
+          "key": "B",
+          "text": "int(i ** 0.5) = i ** 0.5"
+        },
+        {
+          "key": "C",
+          "text": "int(i ** 0.5) ** 2 == i"
+        },
+        {
+          "key": "D",
+          "text": "int(i * 0.5) * int(i * 0.5) == i"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "下面的Python代码用于实现如下图所示的效果,应在以下Python代码横线处填入(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "与第8行的 nowNum对齐,填入 print(nowNum)"
+        },
+        {
+          "key": "B",
+          "text": "与第2行 for对齐,填入 print()"
+        },
+        {
+          "key": "C",
+          "text": "与第7行 if对齐,填入 print(nowNum)"
+        },
+        {
+          "key": "D",
+          "text": "与第4行 for对齐,填入 print() 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小杨最近在准备考 GESP ,他用的 Python IDLE 来练习和运行程序,所以 Python IDLE 也是一个小型操作系统。\n(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "任何一个while循环都可以转化为等价的for循环(   )。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "3.Python 表达式-7//2的值为整数 -3 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "Python 表达式2**5*2的值为 1024 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "Python 表达式3+2 and 5-5的值为False。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "在 Python 代码中,range(10)与range(0,10)的值相等。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "下面 Python 代码第 4 行的else因为没有与第 2 行的 if 对齐,将导致语法错误。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "执行以下 Python 代码后将输出 0 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在 Python 代码中,运算符只能处理相同的数据类型,不同类型之间必须转换为相同的数据类型。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "在 Python 代码中,虽然变量都有数据类型,但同一个变量可以先后代表不同类型的值。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "小杨做题",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n为了准备考试,小杨每天都要做题。第  1 天,小杨做了   道题;第  2 天,小杨做了   道题;从第  3 天起,小杨每天\n做的题目数量是前两天的总和。\n此外,小杨还规定,当自己某一天做了大于或等于   题时,接下来的所有日子里,他就再也不做题了。\n请问,到了第   天,小杨总共做了多少题呢?\n3.1.2 输入描述\n总共  4 行。第一行一个整数  ,第二行一个整数  ,第三行一个整数  ,第四行一个整数  。\n保证  ; ; 。\n3.1.3 输出描述\n一行一个整数,表示小杨   天里总共做了多少题目。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7 样例解释  1\n小杨第一天做   题,第二天做   题,第三天做   题,第四天做   题,第五天做   题。因此\n他总共做了   题。\n3.1.8 样例输入  2\n3.1.9 样例输出  2\n3.1.10 样例解释  2\n小杨前  5 天分别做了   题,由于第  5 天小杨做了   题,而  ,于是小杨从此以后不再做题。因此小杨\n总共做了   题。\n3.1.11",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "小杨的  H 字矩阵",
+      "statement": "时间限制: 10 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n小杨想要构造一个   的  H 字矩阵(  为奇数),具体来说,这个矩阵共有   行,每行   个字符,其中最左\n列、最右列都是  |,而中间一行(即第   行)的第   个字符都是  -,其余所有字符都是半角小写字母\na。例如,一个   的  H 字矩阵如下:\n请你帮小杨根据给定的   打印出对应的 “H 字矩阵 ” 。\n3.2.2 输入描述\n一行一个整数  ( ,保证   为奇数)。\n3.2.3 输出描述\n输出对应的 “H 字矩阵 ” 。\n请严格按格式要求输出,不要擅自添加任何空格、标点、空行等任何符号。你应该恰好输出   行,每行除了换行符\n外恰好包含   个字符,这些字符要么是  -,要么是  |,要么是  a。你的输出必须和标准答案完全一致才能得分,\n请在提交前仔细检查。\n3.2.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.2.5 样例输入  1\n    ans += c\n    a = b\n    b = c\n    if c >= m:\n        break\nprint(ans)\n\n|aaa|\n|aaa|\n|---|\n|aaa|\n|aaa|\n\n3.2.6 样例输出  1\n3.2.7 样例输入  2\n3.2.8 样例输出  2\n3.2.9",
+      "time_ms": 10000,
+      "memory_mb": 128,
+      "samples": [
+        {
+          "in": "10\n11\n12\n13\n14\n",
+          "out": "5\n",
+          "suspect": true
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "B",
+      "A",
+      "C",
+      "A",
+      "D",
+      "D",
+      "D",
+      "A",
+      "D",
+      "C",
+      "D",
+      "B",
+      "C",
+      "D"
+    ]
+  ]
+}

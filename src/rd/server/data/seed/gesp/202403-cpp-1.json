@@ -1,0 +1,596 @@
+{
+  "meta": {
+    "ym": "202403",
+    "lang": "cpp",
+    "level": 1,
+    "title": "GESP 3月认证C++一级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10134.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1602047004639264.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202403-cpp-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "C++ 表达式(3 - 2) * 3 + 5的值是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "-13"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "C++ 语句cout << \"5%2=\" << 5 % 2执行后的输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 2"
+        },
+        {
+          "key": "B",
+          "text": "1 1"
+        },
+        {
+          "key": "C",
+          "text": "5%2=2"
+        },
+        {
+          "key": "D",
+          "text": "5%2=1"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "执行 C++ 语句cin >> a时如果输入 5+2 ,下述说法正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "变量 a 将被赋值为整数 7"
+        },
+        {
+          "key": "B",
+          "text": "变量 a 将被赋值为字符串,字符串内容为 5+2"
+        },
+        {
+          "key": "C",
+          "text": "语句执行将报错,不能输入表达式"
+        },
+        {
+          "key": "D",
+          "text": "依赖于变量 a 的类型。如果没有定义,会有编译错误"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "a+1= 2"
+        },
+        {
+          "key": "B",
+          "text": "a+1=2"
+        },
+        {
+          "key": "C",
+          "text": "2=2"
+        },
+        {
+          "key": "D",
+          "text": "2= 2 int a = 1; cout << \"a+1= \" << a+1 << endl;"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "a+1= 2"
+        },
+        {
+          "key": "B",
+          "text": "a+1=2"
+        },
+        {
+          "key": "C",
+          "text": "2=2"
+        },
+        {
+          "key": "D",
+          "text": "2= 2"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行时输入 21 后,有关描述正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码第 4 行被执行"
+        },
+        {
+          "key": "B",
+          "text": "第 4 和第 7 行代码都被执行"
+        },
+        {
+          "key": "C",
+          "text": "仅有代码第 7 行被执行"
+        },
+        {
+          "key": "D",
+          "text": "第 8 行代码将被执行,因为 input() 输入为字符串"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面 C++ 代码第 2 行,总共被执行次数是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(     )。\n\n```\nint a = 1; printf(\"a+1=%d\\n\", a+1); int N; cin >> N; if(N% 3 == 0) cout << \" 能被 3 整除 \"; else if (N % 7 == 0) cout << \" 能被 7 整除 \"; else cout << \" 不能被 3 和 7 整除 \"; cout << endl; for(int i=-10; i<10; i++) cout << i << \" \"; int tnt = 0; for(int i=0; i<10; i++) if(i%3 && i%7) tnt +=i; cout << tnt << endl;\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "9#6#3#"
+        },
+        {
+          "key": "B",
+          "text": "9#6#3#0#"
+        },
+        {
+          "key": "C",
+          "text": "8#7#5#4#2#1#"
+        },
+        {
+          "key": "D",
+          "text": "10#8#7#5#4#2#1#"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 C++ 代码用于判断键盘输入的整数是否为质数。质数是只能被 1 和它本身整除的数。在横线处应填入代\n码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "N % i"
+        },
+        {
+          "key": "B",
+          "text": "N % i == 0"
+        },
+        {
+          "key": "C",
+          "text": "N / i == 0"
+        },
+        {
+          "key": "D",
+          "text": "N / i"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面关于整型变量 int x 的赋值语句不正确是 ( ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "x=(3.16);"
+        },
+        {
+          "key": "B",
+          "text": "x=3.16;"
+        },
+        {
+          "key": "C",
+          "text": "x=int(3.16);"
+        },
+        {
+          "key": "D",
+          "text": "x=3.16 int;"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "C++ 语言中下面可以完成数据输入的语句是(       )。\n\n```\nprintf 语句 int N = 10; while(N){ N -= 1; if(N%3 == 0) cout << N << \"#\"; } int N; cin >> N; int cnt = 0; // 记录 N 被整除的次数 for(int i=1; i<N+1; i++) if(________________) cnt +=1; if(cnt == 2) cout << N << \" 是质数 \"; else cout << N << \" 不是质数 \"; 题号 1 2 3 4 5 6 7 8 9 10 答案\ncout 语句\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": "scanf 语句"
+        },
+        {
+          "key": "C",
+          "text": "default 语句"
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "在 Dev C++ 中对一个写好的 C++ 源文件要生成一个可执行程序需要执行下面哪个处理步骤?(   )",
+      "options": [
+        {
+          "key": "A",
+          "text": "创建"
+        },
+        {
+          "key": "B",
+          "text": "编辑"
+        },
+        {
+          "key": "C",
+          "text": "编译"
+        },
+        {
+          "key": "D",
+          "text": "调试"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "小杨的父母最近刚刚给他买了一块华为手表,他说手表上跑的是鸿蒙,这个鸿蒙是?(   )",
+      "options": [
+        {
+          "key": "A",
+          "text": "小程序"
+        },
+        {
+          "key": "B",
+          "text": "计时器"
+        },
+        {
+          "key": "C",
+          "text": "操作系统"
+        },
+        {
+          "key": "D",
+          "text": "神话人物"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "中国计算机学会( CCF )在 2024 年 1 月 27 日的颁奖典礼上颁布了王选奖,王选先生的重大贡献是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "制造自动驾驶汽车"
+        },
+        {
+          "key": "B",
+          "text": "创立培训学校"
+        },
+        {
+          "key": "C",
+          "text": "发明汉字激光照排系统"
+        },
+        {
+          "key": "D",
+          "text": "成立方正公司"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "在 C++ 代码中变量 n 被赋值为 27 ,则cout << n%10执行后输出的是 7 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "C++ 语句printf(\"%d#%d&\",2,3)执行后输出的是 2#3& 。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "C++ 函数 scanf() 必须含有参数,且其参数为字符串型字面量,其功能是提示输入。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "C++ 表达式\"10\"*2执行时将报错,因为\"10\"是字符串类型而 2 是整数类型,它们数据类型不同,不能在一\n起运算。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "在 C++ 中, while 可能是死循环,而 for 循环不可能是死循环。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "在 C++ , break 语句用于提前终止当前层次循环,适用于 while 循环,但不适用于 for 循环。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "C++ 语言中 3.0 和 3 的值相等,所以它们占用的存储空间也相同。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "在 C++ 的程序中, cin 是一个合法的变量名。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "小杨今年春节回奶奶家了,奶奶家的数字电视可以通过遥控器输入电视剧名称来找到想播放的电视剧,所以\n可以推知里面有交互式程序在运行。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "任何一个 for 循环都可以转化为等价的 while 循环(   )。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "小杨买书",
+      "statement": "3.1.1 题面描述\n小杨同学积攒了一部分零用钱想要用来购买书籍,已知一本书的单价是 13 元,请根据小杨零用钱的金额,编写程序\n计算最多可以购买多少本书,还剩多少零用钱。\n3.1.2\n\n输入格式\n输入一个正整数  ,表示小杨拥有的零用钱数。\n3.1.3 输出格式\n输出包含两行,第一行,购买图书的本书,第二行剩余的零用钱数。\n3.1.4 样例 1\n3.1.5 样例 2\n对于全部数据,保证有  。\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "找因数",
+      "statement": "3.2.1 问题描述\n小  A 最近刚刚学习了因数的概念,具体来说,如果一个正整数   可以被另一个正整数   整除,那么我们就说   是\n的因数。\n请你帮忙写一个程序,从小到大输出正整数   的所有因数。\n3.2.2 输入描述\n输入一行一个正整数  。保证  。\n3.2.3 输出描述\n输出若干行,为   的所有约数,从小到大排列。\n3.2.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.2.5 样例输入  1\n3.2.6 样例输出  1\n3.2.7 样例输入  2\n3.2.8 样例输出  2\n3.2.9 样例输入  3\n3.2.10 样例输出  2\n\n3.2.11",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "11\n11\n61\n",
+          "out": "6\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n101\n",
+          "out": "5\n",
+          "suspect": false
+        },
+        {
+          "in": "10\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "D",
+      "D",
+      "A",
+      "B",
+      "A",
+      "C",
+      "D",
+      "B",
+      "B",
+      "D",
+      "B",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    [
+      "B"
+    ]
+  ]
+}

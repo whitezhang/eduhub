@@ -1,0 +1,580 @@
+{
+  "meta": {
+    "ym": "202406",
+    "lang": "cpp",
+    "level": 1,
+    "title": "GESP 6月认证 C++ 一级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10147.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1621071329493024.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202406-cpp-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "在 C++ 中,下列不可做变量的是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "five-Star"
+        },
+        {
+          "key": "B",
+          "text": "five_star"
+        },
+        {
+          "key": "C",
+          "text": "fiveStar"
+        },
+        {
+          "key": "D",
+          "text": "_fiveStar"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "C++ 表达式3 - 3 * 3 / 5的值是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "-1.2"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "在 C++ 中,假设 N 为正整数,则表达式cout << (N % 3 + N % 7)可能输出的最大值是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "C++ 语句printf(\"5%%2={%d}\\n\",5 % 2)执行后的输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1={1}"
+        },
+        {
+          "key": "B",
+          "text": "5%2={5%2}"
+        },
+        {
+          "key": "C",
+          "text": "5%2={1}"
+        },
+        {
+          "key": "D",
+          "text": "5 ={1}"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "对整型变量 i ,执行 C++ 语句cin >> i, cout << i时如果输入5+2,下述说法正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "将输出整数 7"
+        },
+        {
+          "key": "B",
+          "text": "将输出5"
+        },
+        {
+          "key": "C",
+          "text": "语句执行将报错,输入表达式不能作为输出的参数"
+        },
+        {
+          "key": "D",
+          "text": "语句能执行,但输出内容不确定"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "102={102}"
+        },
+        {
+          "key": "B",
+          "text": "a+1={a+1}"
+        },
+        {
+          "key": "C",
+          "text": "a+1={102}"
+        },
+        {
+          "key": "D",
+          "text": "a 先被赋值为浮点数,后被赋值为整数,执行将报错"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "表达式9/4 - 6 % (6 - 2) * 10的值是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "-17.75"
+        },
+        {
+          "key": "B",
+          "text": "-18"
+        },
+        {
+          "key": "C",
+          "text": "-14"
+        },
+        {
+          "key": "D",
+          "text": "-12.75"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行时输入 10 后,正确的输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "第 5 行代码 1"
+        },
+        {
+          "key": "B",
+          "text": "第 6 行代码 1"
+        },
+        {
+          "key": "C",
+          "text": "第 5 行代码 1"
+        },
+        {
+          "key": "D",
+          "text": "第 6 行代码 1"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "9 45 float a; a = 101.101; a = 101; printf(\"a+1={%.0f}\",a+1); int N; cout << \" 请输入正整数: \"; cin >> N; if (N % 3) printf(\" 第 5 行代码 %2d\", N % 3); else printf(\" 第 6 行代码 %2d\", N % 3); int Sum = 0, i = 0; for ( ; i < 10; ) Sum += i++; cout << i << \" \" << Sum;"
+        },
+        {
+          "key": "B",
+          "text": "10 55"
+        },
+        {
+          "key": "C",
+          "text": "10 45"
+        },
+        {
+          "key": "D",
+          "text": "11 55"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 C++ 代码用于判断 N 是否为质数(只能被 1 和它本身整除的正整数)。程序执行后,下面有关描述正确\n的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "如果输入负整数,可能输出 “ 是质数 ”"
+        },
+        {
+          "key": "B",
+          "text": "如果输入 2 ,将输出 “ 不是质数 ” ,因为此时循环不起作用"
+        },
+        {
+          "key": "C",
+          "text": "如果输入 2 ,将输出 “ 是质数 ” ,即便此时循环体没有被执行"
+        },
+        {
+          "key": "D",
+          "text": "如果将if (N >= 2)改为if (N > 2)将能正确判断 N 是否质数"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面的 C++ 代码用于求 1~N 之间所有奇数之和,其中 N 为正整数,如果 N 为奇数,则求和时包括 N 。有关描述\n错误的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "执行代码时如果输入 10 ,则最后一行输出将是11 25 int N; cout << \" 请输入整数: \"; cin >> N; bool Flag = false; if (N >= 2){ Flag = true; for (int i=2; i < N; i++) if (N % i == 0){ Flag = false; break; } } if(Flag) cout << \" 是质数 \"; else cout << \" 不是质数 \"; int N; cout << \" 请输入正整数: \"; cin >> N; int i = 1, Sum = 0; while (i <= N){ if (i % 2 == 1) Sum += i; i += 1; } cout << i << \" \" << Sum;"
+        },
+        {
+          "key": "B",
+          "text": "执行代码时如果输入 5 ,则最后一行输出将是6 9"
+        },
+        {
+          "key": "C",
+          "text": "将i += 1移到if (i % 2 == 1)前一行,同样能实现题目要求"
+        },
+        {
+          "key": "D",
+          "text": "删除if (i % 2 == 1),并将i += 1改为i += 2,同样可以实现题目要求"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "如果一个整数 N 能够表示为X*X的形式,那么它就是一个完全平方数,下面 C++ 代码用于完成判断 N 是否为\n一个完全平方数,在横线处应填入的代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "i == N*N"
+        },
+        {
+          "key": "B",
+          "text": "i*10 == N"
+        },
+        {
+          "key": "C",
+          "text": "i+i == N"
+        },
+        {
+          "key": "D",
+          "text": "i*i == N"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "执行下面 C++ 代码后输出的 cnt 的值是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "小杨父母带他到某培训机构给他报名参加 CCF 组织的 GESP 认证考试的第 1 级,那他可以选择的认证语言有几\n种?(       )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "ENIAC 于 1946 年投入运行,是世界上第一台真正意义上的计算机,它的主要部件都是(    )组成的。",
+      "options": [
+        {
+          "key": "A",
+          "text": "感应线圈"
+        },
+        {
+          "key": "B",
+          "text": "电子管"
+        },
+        {
+          "key": "C",
+          "text": "晶体管 int N; cin >> N; for(int i = 0; i <= N; i++) if(___________________) cout << N << \" 是一个完全平方数 \\n\"; int cnt=0; for(int i = 0; i*i < 64; i+=2) cnt++; cout << cnt; 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "D",
+          "text": "集成电路"
+        }
+      ],
+      "answer": "B"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "在 C++ 代码中变量X被赋值为 16.44 ,则cout << X / 10执行后输出的一定是1。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "C++ 的整型变量N被赋值为 10 ,则语句cout << N / 4 << \"->\" << N % 4 << \"->\" << N / 4.0执行\n后输出是2->2->2.0。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "定义 C++ 的float型变量N,则语句cin >> N; cout << int(float(N))可以输入正负整数和浮点数,\n并将其转换为整数后输出。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "C++ 的整型N被赋值为 5 ,语句printf(\"%d*2\",N)执行后将输出10。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "在 C++ 中,break语句用于终止当前层次的循环,循环可以是for循环,也可以是while循环。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "在 C++ ,continue语句通常与if语句配合使用。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "在 C++ 代码中,不可以将变量命名为printf,因为printf是 C++ 语言的关键字。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "在 C++ 中有整型变量 N ,则表达式N += 8/4//2相当于N += 8/(4/2)。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "C++ 中定义变量int N,则表达式(!!N)的值也是N的值。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "GESP 测试是对认证者的编程能力进行等级认证,同一级别的能力基本上与编程语言无关。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "休息时间",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨计划在某个时刻开始学习,并决定在学习   秒后开始休息。\n小杨想知道自己开始休息的时刻是多少。\n3.1.2\n\n输入格式\n前三行每行包含一个整数,分别表示小杨开始学习时刻的时  、分  、秒  ( , , 的值符合\n)。\n第四行包含一个整数  ,表示小杨学习的总秒数(注:  的值符合  )。\n3.1.3 输出格式\n输出一行,包含三个整数,分别表示小杨开始休息时刻的时、分、秒。\n3.1.4 样例 1\n3.1.5 样例解释\n小杨在时刻  12:59:59 开始学习,学习   秒后开始休息,即在  13:0:9 时刻开始休息。\n3.1.6 数据范围\n对于全部数据,保证有  。\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "立方数",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨有一个正整数  ,他想知道   是否是一个立方数。\n一个正整数   是立方数当且仅当存在一个正整数   满足  。\n\n13 0 91",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "A",
+      "D",
+      "B",
+      "C",
+      "B",
+      "C",
+      "B",
+      "C",
+      "C",
+      "C",
+      "C",
+      "D",
+      "C",
+      "C",
+      "B",
+      "C"
+    ],
+    [
+      "D"
+    ]
+  ]
+}

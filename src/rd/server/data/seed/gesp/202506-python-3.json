@@ -1,0 +1,579 @@
+{
+  "meta": {
+    "ym": "202506",
+    "lang": "python",
+    "level": 3,
+    "title": "CCF GESP 2025年6月认证 Python 3级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1687196163637344.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202506-python-3.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "2025年4月19日在北京举行了一场颇为瞩目的人形机器人半程马拉松赛。比赛期间,跑动着的机器人会利用\n身上安装的多个传感器所反馈的数据来调整姿态、保持平衡等,那么这类传感器类似于计算机的(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "处理器"
+        },
+        {
+          "key": "B",
+          "text": "存储器"
+        },
+        {
+          "key": "C",
+          "text": "输入设备"
+        },
+        {
+          "key": "D",
+          "text": "输出设备"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "小杨购置的计算机使用一年后觉得内存不够用了,想购置一个容量更大的内存条,这时需要的内存条是(\n)。",
+      "options": [
+        {
+          "key": "A",
+          "text": "RAM"
+        },
+        {
+          "key": "B",
+          "text": "ROM"
+        },
+        {
+          "key": "C",
+          "text": "CACHE"
+        },
+        {
+          "key": "D",
+          "text": "EPROM"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下列哪个Python表达式能正确将十六进制数\"2A\"转换为十进制?( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "int('2A', 10)"
+        },
+        {
+          "key": "B",
+          "text": "int('2A', 16)"
+        },
+        {
+          "key": "C",
+          "text": "bin(0x2A)"
+        },
+        {
+          "key": "D",
+          "text": "hex(42)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "执行下面Python代码后,输出的结果是?( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "['apple', 'grape', 'banana', 'cherry', 'orange']"
+        },
+        {
+          "key": "B",
+          "text": "['apple', 'banana', 'grape', 'cherry', 'orange'] fruits = ['apple', 'banana', 'cherry'] fruits.append('orange') fruits.insert(1, 'grape') print(fruits)"
+        },
+        {
+          "key": "C",
+          "text": "['apple', 'grape', 'banana', 'cherry']"
+        },
+        {
+          "key": "D",
+          "text": "['apple', 'grape', 'orange', 'banana', 'cherry']"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[2, 4, 6, 7, 4]"
+        },
+        {
+          "key": "B",
+          "text": "[2, 4, 6, 6, 3, 0]"
+        },
+        {
+          "key": "C",
+          "text": "[2, 4, 6, 7, 4, 1]"
+        },
+        {
+          "key": "D",
+          "text": "[2, 4, 6, 7, 4, 1, 0]"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "关于 Python 元组,以下说法错误的是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "元组是不可变的数据类型"
+        },
+        {
+          "key": "B",
+          "text": "元组可以作为字典的键"
+        },
+        {
+          "key": "C",
+          "text": "元组支持切片操作"
+        },
+        {
+          "key": "D",
+          "text": "元组中的元素可以被重新赋值"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "True"
+        },
+        {
+          "key": "B",
+          "text": "False"
+        },
+        {
+          "key": "C",
+          "text": "报错"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "关于字典的.get() 方法,以下说法错误的是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "当键不存在时,.get() 方法可以返回None"
+        },
+        {
+          "key": "B",
+          "text": ".get() 方法可以设置默认返回值"
+        },
+        {
+          "key": "C",
+          "text": ".get() 方法比直接使用[] 访问更安全"
+        },
+        {
+          "key": "D",
+          "text": ".get() 方法会修改原字典"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "以下哪个字典推导式能正确将列表['Python', 'Java', 'C++'] 转换为{'Python':6, 'Java':4, 'C++':3}\n(字符串作为键,长度作为值)?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{len(x): x for x in ['Python', 'Java', 'C++']}"
+        },
+        {
+          "key": "B",
+          "text": "{x: len(x) for x in ['Python', 'Java', 'C++']}"
+        },
+        {
+          "key": "C",
+          "text": "{x: x.length() for x in ['Python', 'Java', 'C++']} numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] result = numbers[2:7:2] + numbers[-3::-3] print(result) print((1, 2, 3) < (1, 2, 4))1"
+        },
+        {
+          "key": "D",
+          "text": "{x: size(x) for x in ['Python', 'Java', 'C++']}"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hello, python!"
+        },
+        {
+          "key": "B",
+          "text": "Hello, Python!"
+        },
+        {
+          "key": "C",
+          "text": "hello, python!"
+        },
+        {
+          "key": "D",
+          "text": "hello, Python!"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "o-t-t"
+        },
+        {
+          "key": "B",
+          "text": "one-two-three"
+        },
+        {
+          "key": "C",
+          "text": "on-tw-th"
+        },
+        {
+          "key": "D",
+          "text": "one,two,three"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "以下哪个操作会修改集合  s = {1, 2, 3} 的内容?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "s.union({4, 5})"
+        },
+        {
+          "key": "B",
+          "text": "s.difference({1})"
+        },
+        {
+          "key": "C",
+          "text": "s.intersection_update({2, 3})"
+        },
+        {
+          "key": "D",
+          "text": "s.issubset({1, 2, 3, 4})"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{1, 2, 3, 4, 5}"
+        },
+        {
+          "key": "B",
+          "text": "{1, 2, 4, 5}"
+        },
+        {
+          "key": "C",
+          "text": "{3}"
+        },
+        {
+          "key": "D",
+          "text": "set()"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下列哪个选项可以将字符串  \"hello\" 转换为列表  ['h', 'e', 'l', 'l', 'o'] ?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "list(\"hello\") s = \" Hello, World! \" result = s.strip().lower().replace('world', 'Python').capitalize() print(result) s = \"one,two,three\" parts = s.split(',') new_s = '-'.join([p[:2] for p in parts]) print(new_s) set1 = {1, 2, 3} set2 = {3, 4, 5} print(set1 ^ set2) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "B",
+          "text": "\"hello\".split()"
+        },
+        {
+          "key": "C",
+          "text": "\"hello\".to_list()"
+        },
+        {
+          "key": "D",
+          "text": "[\"hello\"]"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "凯撒加密是一种经典的加密方法,它通过将字母表中的每个字母按照固定的位移量进行替换来实现加密。\n例如,当位移量为 1 时:\na→b, b→c, ..., y→z\nz→a (循环回到字母表开头)\n其他字符(如大写字母、数字、符号等)保持不变\n现在需要实现一个凯撒加密程序,具体要求如下:\n只对小写字母进行加密\n位移量为 1\n非小写字母字符保持原样不变\n加密后的字符需要保持原始的大小写格式\n请补全下面代码中的空白处,使其能够正确实现上述加密功能:",
+      "options": [
+        {
+          "key": "A",
+          "text": "code - ord('a') + 1"
+        },
+        {
+          "key": "B",
+          "text": "code + 1"
+        },
+        {
+          "key": "C",
+          "text": "ord(char) + 1"
+        },
+        {
+          "key": "D",
+          "text": "(code - ord('a')) * 2"
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "现在,人们参加各种闭卷考试时通常都不允许将智能手机、平板电脑等带入考场,因为智能手表通常都有嵌\n入操作系统及通信等功能,所以也不允许携带入考场。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出的结果是  True 。\ntext = input(\" 请输入要加密的字符串: \")\nencrypted = []\nfor char in text:\n    if char.islower():\n        code = ord(char)  # 获取字符的 ASCII 码\n        new_code = (________) % 26 + ord('a')  # 填空处\n        encrypted.append(chr(new_code))\n    else:\n        encrypted.append(char)\nprint(\" 加密结果: \", ''.join(encrypted))",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "表达式  ~0b0011 << 2 的结果是  -0b1100 (即十进制-12 )。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "若用枚举算法解决 \" 密码锁破解 \" 问题,则十进制 3 位数字密码最多需要尝试 1000 次就一定能打开。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,会将列表  a 的前两个元素替换为  [10, 20] 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "使用update() 方法合并字典时,如果键重复,新值会覆盖旧值。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "执行下列 Python 代码,输出的结果是  2 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "Python 代码set1 = {1, 2, 3}; set1.remove(4) 能正常执行,且  set1 保持不变。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在 Python 中,字符串是不可变对象,因此执行s = \"hello\"; s[0] = \"H\" 会导致程序报错。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "在 Python 中使用  list({\"a\": 1, \"b\": 2}) 可以将字典  {\"a\": 1, \"b\": 2} 转换为  [(\"a\", 1), (\"b\",\n2)] 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "奇偶校验",
+      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n数据在传输过程中可能出错,因此接收方收到数据后通常会校验传输的数据是否正确,奇偶校验是经典的校验方式\n之一。\n给定   个非负整数   代表所传输的数据,它们的校验码取决于这些整数在二进制下   的数量之和的奇偶\n性。如果这些整数在二进制下共有奇数个  ,那么校验码为  ;否则校验码为  。你能求出这些整数的校验码吗?\n3.1.2\n\n输入格式\n第一行,一个正整数  ,表示所传输的数据量。\n第二行,  个非负整数  ,表示所传输的数据。\nx = 15\ny = 7\nprint((x ^ y) < (x & y))\n\na = [1, 2, 3, 4, 5]\na[:2] = [10, 20]\nprint(a)\n\nt = (1, 2, 3) * 2\nprint(len(t))\n\n3.1.3 输出格式\n输出一行,两个整数,以一个空格分隔:\n第一个整数表示   在二进制下   的总数量;\n第二个整数表示校验码( 0 或 1 )。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于所有测试点,保证  , 。\n3.1.6",
+      "time_ms": 3000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "分糖果",
+      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n\n71 69 83 80\n\n13 11\n\n1 2 4 8 16 32\n\n6 01\nn = int(input()) # 随后将输入的数据个数\nnums = input().split() # 输入的数据行\nnums = list(map(int,nums)) # 将每个数都转换为整数,最后转换为 list\none_count = 0\n    string_bin = bin(i)[2:] # 注意转换为二进制后,前导有 0b ,如 bin(10) 的结果为 0b1010\n    one_count += string_bin.count(\"1\") # 统计 1 的数量,并累加到 one_count 变量\n# 求出校验码\nif one_count % 2 == 1:\n    check_number = 1 # 奇数时\nelse:\n    check_number = 0 # 偶数时\nprint(one_count,check_number) # 按要求输出\n\n3.2.1 题目描述\n有   位小朋友排成一队等待老师分糖果。第   位小朋友想要至少   颗糖果,并且分给他的糖果数量必须比分给前一\n位小朋友的糖果数量更多,不然他就会不开心。\n老师想知道至少需要准备多少颗糖果才能让所有小朋友都开心。你能帮帮老师吗?\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示小朋友的人数。\n第二行,  个正整数  ,依次表示每位小朋友至少需要的糖果数量。\n3.2.3 输出格式\n输出一行,一个整数,表示最少需要准备的糖果数量。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于所有测试点,保证  , 。\n3.2.6",
+      "time_ms": 3000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "A",
+      "B",
+      "A",
+      "C",
+      "D",
+      "A",
+      "D",
+      "B",
+      "B",
+      "C",
+      "C",
+      "B",
+      "A",
+      "A"
+    ],
+    [
+      "B"
+    ]
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "slug": "cspj-prime-numbers",
+  "url": "https://adacpp.com/practice/cspj-prime-numbers",
+  "title": "素数问题",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "zptUDTGR-sX714h8E-70j",
+      "type": "true_false",
+      "content": "找出⾃然数 N 以内的所有质数，常⽤算法有埃⽒筛法和线性筛法，其中埃⽒筛法效率更⾼。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "线性筛法和埃氏筛法虽然都用于筛选素数，但线性筛法效率更高。"
+    },
+    {
+      "id": "Dz-m_wimPuMC69CETQBUa",
+      "type": "true_false",
+      "content": "质数的判定和筛法的目的并不相同，质数判定旨在判断特定的正整数是否为质数，而质数筛法意在筛选出范围内的所有质数。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "质数的判定和筛选确实有不同的目的，质数判定是针对特定的正整数，而质数筛法是为了找出范围内的所有质数。"
+    },
+    {
+      "id": "S-556JmK39PZs8ORRRLyd",
+      "type": "true_false",
+      "content": "小西设计了⼀个拆数程序，它能够将任意的⾮质数⾃然数N 转换成若⼲个质数的乘积，这个程序是可以设计出来的。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "素数分解定理规定:任何一个整数都可以被分解为一系列因子的乘积,乘积中所有的因子都是质数(即素数)。（更严谨一点：大于1的整数）"
+    },
+    {
+      "id": "xXxUrXEftqSwEe7tdjX2U",
+      "type": "true_false",
+      "content": "小西想写⼀个程序来算出正整数 N 有多少个因数 ，经过思考他写出了⼀个重复没有超过 N/2 次的循环就能够算 出来了 。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正整数 N 的因数一般不会超过 N 的一半，所以循环 N 的一半即可找到所有因数。"
+    },
+    {
+      "id": "u7YC4RlRamGbSW7PjE802",
+      "type": "single_choice",
+      "content": "唯一分解定理描述的内容是（ ）？",
+      "options": [
+        {
+          "label": "A",
+          "text": "任意整数都可以分解为素数的乘积"
+        },
+        {
+          "label": "B",
+          "text": "每个合数都可以唯一分解为一系列素数的乘积"
+        },
+        {
+          "label": "C",
+          "text": "两个不同的整数可以分解为相同的素数乘积"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "唯一分解定理指出每个合数（大于1的整数）都可以唯一地分解为一系列素数（质数）的乘积。"
+    },
+    {
+      "id": "BGTBrF0Hp8HodFCWhpXQt",
+      "type": "single_choice",
+      "content": "线性筛法与埃氏筛法相比的优势是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "更容易实现"
+        },
+        {
+          "label": "B",
+          "text": "更节省内存"
+        },
+        {
+          "label": "C",
+          "text": "更快速"
+        },
+        {
+          "label": "D",
+          "text": "更准确"
+        }
+      ],
+      "answer": "C",
+      "explanation": "线性筛法相比埃氏筛法的优势在于速度更快。"
+    },
+    {
+      "id": "Mx6mVhxacXWJLFSS4H2Yb",
+      "type": "single_choice",
+      "content": "在素数筛选算法中，埃拉托斯特尼筛法是一种（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "递归算法"
+        },
+        {
+          "label": "B",
+          "text": "迭代算法"
+        },
+        {
+          "label": "C",
+          "text": "动态规划算法"
+        },
+        {
+          "label": "D",
+          "text": "回溯算法"
+        }
+      ],
+      "answer": "B",
+      "explanation": "埃拉托斯特尼筛法是一种基于迭代的素数筛选算法。"
+    },
+    {
+      "id": "oREML8hoh8Lznklny2FGD",
+      "type": "single_choice",
+      "content": "判断一个数是否为素数时，下列说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "若一个数只能被1和它本身整除，则它一定是素数"
+        },
+        {
+          "label": "B",
+          "text": "若一个数能被除了1和它本身之外的其他整数整除，则它一定不是素数"
+        },
+        {
+          "label": "C",
+          "text": "素数只能被1整除"
+        },
+        {
+          "label": "D",
+          "text": "若一个数能被2整除，则它一定不是素数"
+        }
+      ],
+      "answer": "B",
+      "explanation": "素数定义为大于1且除了1和自身外没有其他因子的数。"
+    },
+    {
+      "id": "6zaOMzruk6qreeReX3Q4g",
+      "type": "single_choice",
+      "content": "在素数筛选算法中，欧式筛法与埃拉托斯特尼筛法相比，其优势在于（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "更容易实现"
+        },
+        {
+          "label": "B",
+          "text": "更节省内存"
+        },
+        {
+          "label": "C",
+          "text": "更快速"
+        },
+        {
+          "label": "D",
+          "text": "更准确"
+        }
+      ],
+      "answer": "C",
+      "explanation": "线性筛法相比埃拉托斯特尼筛法的优势在于速度更快。"
+    },
+    {
+      "id": "xidLi5McQy_u4si9sG09n",
+      "type": "single_choice",
+      "content": "要判断一个数是否为素数，最简单的方法是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "逐个除以2到该数的平方根之间的数"
+        },
+        {
+          "label": "B",
+          "text": "逐个除以2到该数减1之间的数"
+        },
+        {
+          "label": "C",
+          "text": "逐个除以1到该数的平方根之间的数"
+        },
+        {
+          "label": "D",
+          "text": "逐个除以1到该数减1之间的数"
+        }
+      ],
+      "answer": "A",
+      "explanation": "最简单的判断素数的方法是逐个除以2到该数的平方根之间的数，如果都不能整除，则该数为素数。"
+    },
+    {
+      "id": "KQbYs_GKznva2OCrfJAln",
+      "type": "single_choice",
+      "content": "将非质数自然数拆分为质数乘积的过程叫做（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "质因数分解"
+        },
+        {
+          "label": "B",
+          "text": "素数筛选"
+        },
+        {
+          "label": "C",
+          "text": "质数判定"
+        },
+        {
+          "label": "D",
+          "text": "整数分解"
+        }
+      ],
+      "answer": "A",
+      "explanation": "将非质数自然数拆分为质数乘积的过程叫做质因数分解。"
+    },
+    {
+      "id": "Eo4uxyC78SL0JIzfNek1-",
+      "type": "single_choice",
+      "content": "下列哪个算法不适合用于判断一个数是否为素数？",
+      "options": [
+        {
+          "label": "A",
+          "text": "埃拉托斯特尼筛法"
+        },
+        {
+          "label": "B",
+          "text": "质数检测算法"
+        },
+        {
+          "label": "C",
+          "text": "分解质因数算法"
+        },
+        {
+          "label": "D",
+          "text": "费马小定理"
+        }
+      ],
+      "answer": "A",
+      "explanation": "埃拉托斯特尼筛法是用于筛选素数而不是判断一个数是否为素数的算法。"
+    },
+    {
+      "id": "m1A0-ABrEyVAymDqndDq-",
+      "type": "single_choice",
+      "content": "分解质因数时，下列哪个算法常用于大整数的分解？",
+      "options": [
+        {
+          "label": "A",
+          "text": "质数检测算法"
+        },
+        {
+          "label": "B",
+          "text": "欧几里得算法"
+        },
+        {
+          "label": "C",
+          "text": "Pollard rho 算法"
+        },
+        {
+          "label": "D",
+          "text": "埃拉托斯特尼筛法"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Pollard rho 算法常用于大整数的质因数分解。"
+    },
+    {
+      "id": "DlkYtDJ15PWni9e2_72pY",
+      "type": "single_choice",
+      "content": "一个合数可以被分解为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "一个质数的乘积"
+        },
+        {
+          "label": "B",
+          "text": "两个以上质数的乘积"
+        },
+        {
+          "label": "C",
+          "text": "两个相同的质数的乘积"
+        },
+        {
+          "label": "D",
+          "text": "一个素数的平方"
+        }
+      ],
+      "answer": "B",
+      "explanation": "一个合数可以被分解为两个以上质数的乘积。"
+    },
+    {
+      "id": "G97Z5Lhi--bAT0PBU5Ufi",
+      "type": "single_choice",
+      "content": "判断一个数是否为素数时，最有效的方法是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "线性筛法"
+        },
+        {
+          "label": "B",
+          "text": "欧几里得算法"
+        },
+        {
+          "label": "C",
+          "text": "埃式筛法"
+        },
+        {
+          "label": "D",
+          "text": "Miller-Rabin算法"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Miller-Rabin算法是判断素数的高效方法之一。"
+    }
+  ]
+}

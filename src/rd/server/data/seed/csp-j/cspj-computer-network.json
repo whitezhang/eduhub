@@ -1,0 +1,378 @@
+{
+  "slug": "cspj-computer-network",
+  "url": "https://adacpp.com/practice/cspj-computer-network",
+  "title": "计算机网络",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "zFPsxpdB2oCS7qeAtnliE",
+      "type": "single_choice",
+      "content": "（ ）是目前互联网上常用的 E-mail 服务协议。",
+      "options": [
+        {
+          "label": "A",
+          "text": "HTTP"
+        },
+        {
+          "label": "B",
+          "text": "FTP"
+        },
+        {
+          "label": "C",
+          "text": "POP3"
+        },
+        {
+          "label": "D",
+          "text": "Telnet"
+        }
+      ],
+      "answer": "C",
+      "explanation": "HTTP（Hypertext Transfer Protocol）- 超文本传输协议；FTP（File Transfer Protocol）- 文件传输协议；POP3（Post Office Protocol – Version 3）- 邮局协议版本 3；Telnet 协议是 TCP/IP 协议中的一员，是 Internet 远程登陆服务的标准 协议和主要方式。"
+    },
+    {
+      "id": "qfegOzpf6jtxaFQYMBwir",
+      "type": "single_choice",
+      "content": "蓝牙和Wi-Fi都是（ ）设备.",
+      "options": [
+        {
+          "label": "A",
+          "text": "无线广域网"
+        },
+        {
+          "label": "B",
+          "text": "无线城域网"
+        },
+        {
+          "label": "C",
+          "text": "无线局域网"
+        },
+        {
+          "label": "D",
+          "text": "无线路由器"
+        }
+      ],
+      "answer": "C",
+      "explanation": "无线局域网利用射频的技术，使用电磁波在空中进行通信连接。无线局域网利用射频的技术，使用电磁波在空中进行通信连接。\nWi-Fi和蓝牙都属于无线通信，且仅能在有限范围内实现各种通信设备的互连，因此是无线局域网。"
+    },
+    {
+      "id": "-QDO7xkhD7w33o7y7KPkG",
+      "type": "single_choice",
+      "content": "IPv4 协议使用32 位地址，随着其不断被分配，地址资源日趋枯竭。因此，它正逐渐被使用（ ）位地址的 IPv6 协议所取代。",
+      "options": [
+        {
+          "label": "A",
+          "text": "40"
+        },
+        {
+          "label": "B",
+          "text": "48"
+        },
+        {
+          "label": "C",
+          "text": "64"
+        },
+        {
+          "label": "D",
+          "text": "128"
+        }
+      ],
+      "answer": "D",
+      "explanation": "IPv6采用128位(16字节)地址来避免地址资源的枯竭。"
+    },
+    {
+      "id": "DqY9LtRx_AzbYGuIN536f",
+      "type": "single_choice",
+      "content": "中国的国家顶级域名是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": ".cn"
+        },
+        {
+          "label": "B",
+          "text": ".ch"
+        },
+        {
+          "label": "C",
+          "text": ".chn"
+        },
+        {
+          "label": "D",
+          "text": ".china"
+        }
+      ],
+      "answer": "A",
+      "explanation": "中国国家顶级域名即是.cn，.cn域名由国家工业和信息化部管理，.cn域名注册的管理机构为中国互联网信息中心（CNNIC）。国家代码顶级域名指示国家区域（如.cn代表中国，.us代表美国，.fr代表法国等等）；"
+    },
+    {
+      "id": "Vk9zKabG4tb_3iYjpYnln",
+      "type": "single_choice",
+      "content": "以下哪一种是属于电子邮件收发的协议（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "SMTP"
+        },
+        {
+          "label": "B",
+          "text": "UDP"
+        },
+        {
+          "label": "C",
+          "text": "P2P"
+        },
+        {
+          "label": "D",
+          "text": "FTP"
+        }
+      ],
+      "answer": "A",
+      "explanation": "SMTP(Simple Mail Transfer Protocol)是一种提供可靠且有效的电子邮件传输的协议,是建立在FTP文件传输服务上的一种邮件服务，主要用于系统之间的邮件信息传递，并提供有关来信的通知。UDP，用户数据报协议（User Datagram Protocol）,为应用程序提供了一种无需建立连接就可以发送封装的 IP 数据包的方法。对等网络（Peer-to-peer networking）或对等计算（Peer-to-peer computing），网络的参与者共享他们所拥有的一部分硬件资源（处理能力、存储能力、网络连接能力、打印机等），这些共享资源通过网络提供服务和内容，能被其它对等节点（Peer）直接访问而无需经过中间实体。FTP,文件传输协议（File Transfer Protocol）是用于在网络上进行文件传输的一套标准协议。"
+    },
+    {
+      "id": "7GKTXPXQ0RXpvIPR4mlCs",
+      "type": "single_choice",
+      "content": "FTP 可以用于( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "远程传输文件"
+        },
+        {
+          "label": "B",
+          "text": "发送电子邮件"
+        },
+        {
+          "label": "C",
+          "text": "浏览网页"
+        },
+        {
+          "label": "D",
+          "text": "网上聊天"
+        }
+      ],
+      "answer": "A",
+      "explanation": "文件传输协议(File Transfer Protocol, FTP)是用于在网络上进行文件传输的一套标准协议"
+    },
+    {
+      "id": "9lEbsdic5vrsXgHhgHhkS",
+      "type": "single_choice",
+      "content": "以下不属于无线通信技术的是( ).",
+      "options": [
+        {
+          "label": "A",
+          "text": "蓝牙"
+        },
+        {
+          "label": "B",
+          "text": "Wifi"
+        },
+        {
+          "label": "C",
+          "text": "GPRS"
+        },
+        {
+          "label": "D",
+          "text": "以太网"
+        }
+      ],
+      "answer": "D",
+      "explanation": "以太网是一种计算机局域网技术，以太网是目前应用最普遍的有线网技术。以太网的每个版本都有电缆的最大长度限制(即无须放大的长度),这个范围内的信号可以正常传播,超过这个范围信号将无法传播。"
+    },
+    {
+      "id": "2Yyv3PLPyrMbBUwwnyu3N",
+      "type": "single_choice",
+      "content": "下列协议中与电子邮件无关的是( ).",
+      "options": [
+        {
+          "label": "A",
+          "text": "POP3"
+        },
+        {
+          "label": "B",
+          "text": "SMTP"
+        },
+        {
+          "label": "C",
+          "text": "WTO"
+        },
+        {
+          "label": "D",
+          "text": "IMAP"
+        }
+      ],
+      "answer": "C",
+      "explanation": "常用的电子邮件协议有SMTP、POP3、IMAP4"
+    },
+    {
+      "id": "6q5_OxhPoKEqvTGi--zVY",
+      "type": "single_choice",
+      "content": "广域网的英文缩写是( ).",
+      "options": [
+        {
+          "label": "A",
+          "text": "LAN"
+        },
+        {
+          "label": "B",
+          "text": "WAN"
+        },
+        {
+          "label": "C",
+          "text": "MAN"
+        },
+        {
+          "label": "D",
+          "text": "LNA"
+        }
+      ],
+      "answer": "B",
+      "explanation": "广域网(WAN)是在一个广泛地理范围内所建立的计算机通信网，其范围可以超越城市和国家以至全球。此外还有局域网(LAN)和城域网(MAN)。"
+    },
+    {
+      "id": "GaFtqEWoPtsJrD3dHhIWO",
+      "type": "true_false",
+      "content": "IPv4的地址通常用“点分十进制”的表示形式，形如（a.b.c.d），其中a、b、c、d都是1~255之间的十进制整数",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "IP地址是一个32位的二进制数，通常被分隔为4个8位二进制数，常用“点分十进制”的表示形式，形如（a.b.c.d），其中a、b、c、d都是0~255之间的十进制整数。所以本题错误。"
+    },
+    {
+      "id": "gaqsQW-rP7z8exjrBhPdt",
+      "type": "true_false",
+      "content": "域名是由一串用点分隔的名字来标识互联网上一个计算机或计算机组的名称，CCF编程能力等级认证官方网站的域名是 http://gesp.ccf.org.cn ，其中顶级域名是gesp",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "顶级域名是指域名最右边的那个词， http://gesp.ccf.org.cn 的顶级域名是.cn。所以本题错误。"
+    },
+    {
+      "id": "KOchYJjzsPOmnWlTdarom",
+      "type": "true_false",
+      "content": "我们常说的互联网（Internet）是一个覆盖全球的广域网络，它不属于任何一个国家",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "互联网是一个全球性的网络，它不属于任何一个国家，而是由无数个小网络组成的网络的网络。"
+    },
+    {
+      "id": "4ZyPZ9efIiwoSIA9oiaq2",
+      "type": "true_false",
+      "content": "TCP/IP的传输层的两个不同的协议分别是UDP和TCP",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "传输层的主要协议确实是UDP（用户数据报协议）和TCP（传输控制协议），它们是TCP/IP协议族中的核心协议。"
+    },
+    {
+      "id": "2WQsc41PT0tiOPReEytke",
+      "type": "single_choice",
+      "content": "通讯卫星在通信网络系统中主要起到的作用",
+      "options": [
+        {
+          "label": "A",
+          "text": "信息过滤"
+        },
+        {
+          "label": "B",
+          "text": "信号中继"
+        },
+        {
+          "label": "C",
+          "text": "避免攻击"
+        },
+        {
+          "label": "D",
+          "text": "数据加密"
+        }
+      ],
+      "answer": "B",
+      "explanation": "通信卫星可以转发无线电信号，实现通信地球站间或地球站与航天器间的无线电通信，因此具有信号中继作用。"
+    },
+    {
+      "id": "yXZg1uBTMdrdjJcy9Cr1P",
+      "type": "true_false",
+      "content": "TCP/IP的传输层的两个不同的协议分别是UDP和TCP",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "传输层的主要协议确实是UDP（用户数据报协议）和TCP（传输控制协议），它们是TCP/IP协议族中的核心协议。"
+    },
+    {
+      "id": "ZYIMEeM7Lf0IZAleVxWHt",
+      "type": "true_false",
+      "content": "5G网络中，5G中的G表示Gigabytes/s，其中1GB = 1024MB",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "5G网络中的G代表的是“Generation”，即第五代移动通信技术，而不是Gigabytes/s。所以本题错误。"
+    },
+    {
+      "id": "9V7koEfyBmDhgvzpcJlHu",
+      "type": "true_false",
+      "content": "小西今年春节回老家了，老家的数字电视要设置ip地址并接入到WIFI盒子才能收看节目，那这个WIFI盒子具有路由器的功能",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "要设置IP地址并接入到WIFI，说明WIFI盒子需要具备分配IP地址和管理网络流量的能力，这是路由器的基本功能。"
+    }
+  ]
+}

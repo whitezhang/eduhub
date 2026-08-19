@@ -1,0 +1,571 @@
+{
+  "meta": {
+    "ym": "202503",
+    "lang": "cpp",
+    "level": 3,
+    "title": "CCF GESP 2025年3月认证 C++ 3级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1670868226801696.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202503-cpp-3.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "Base64 编码将每 3 字节的输入数据编码为  4 字节的输出数据。如果输入数据长度不是  3 的倍数,会用=号填\n充。在 Base64 编码中,如果输入字符串的长度为 10 字节,编码后的字符串长度是多少(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "12 字节"
+        },
+        {
+          "key": "B",
+          "text": "13 字节"
+        },
+        {
+          "key": "C",
+          "text": "14 字节"
+        },
+        {
+          "key": "D",
+          "text": "16 字节"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "UTF-8 编码规则如下:\n1 字节: 0xxxxxxx\n2 字节: 110xxxxx 10xxxxxx\n3 字节: 1110xxxx 10xxxxxx 10xxxxxx\n4 字节: 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx\n以下哪个字节序列是合法的  UTF-8 编码(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "0xC0 0x80"
+        },
+        {
+          "key": "B",
+          "text": "0xF0 0x90 0x80 0x80"
+        },
+        {
+          "key": "C",
+          "text": "0x80 0x80 0x80"
+        },
+        {
+          "key": "D",
+          "text": "0xFF 0xFE 0xFD"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "在  8 位二进制原码表示中,八进制数  -5 的二进制形式是什么(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "十进制数  111.111 的二进制表示可以是下面的(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1101111.0001110001"
+        },
+        {
+          "key": "B",
+          "text": "1101110.1001110001"
+        },
+        {
+          "key": "C",
+          "text": "1101111.1001110001"
+        },
+        {
+          "key": "D",
+          "text": "1101111.0011110001"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "在 C++ 中,补码的主要作用是()",
+      "options": [
+        {
+          "key": "A",
+          "text": "提高浮点数的精度"
+        },
+        {
+          "key": "B",
+          "text": "简化整数的加减法运算"
+        },
+        {
+          "key": "C",
+          "text": "增加整数的表示范围"
+        },
+        {
+          "key": "D",
+          "text": "优化内存分配"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "在 C++ 中,一个 8 位有符号整数(使用补码表示)的范围是()",
+      "options": [
+        {
+          "key": "A",
+          "text": "-128 到 127"
+        },
+        {
+          "key": "B",
+          "text": "-127 到 128"
+        },
+        {
+          "key": "C",
+          "text": "-256 到 255"
+        },
+        {
+          "key": "D",
+          "text": "0 到 255"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "在 C++ 中,以下代码的输出是什么 ()",
+      "options": [
+        {
+          "key": "A",
+          "text": "-5"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "编译错误"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下列程序的作用是()",
+      "options": [
+        {
+          "key": "A",
+          "text": "将十进制数转换成八进制数"
+        },
+        {
+          "key": "B",
+          "text": "将八进制数转换成十进制数"
+        },
+        {
+          "key": "C",
+          "text": "将二进制数转换成八进制数"
+        },
+        {
+          "key": "D",
+          "text": "将八进制数转换成 16 进制数"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面程序是将十进制转十六进制,横线处应该填入的是()\n    int a = -5;\n    unsigned int b = a;\n    cout << b;\n1\n2\n3\nint main() {\n    int decimal = 25;\n    cout << oct << decimal;\n    return 0;\n}\n1\n2\n3\n4\n5\n\n```\ncout << oct << decimal;\ncout << decimal << decimal;\ncout << hex << decimal;\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "不能正确执行"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "以下代码的说法正确的是什么 ( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "进行的是整体异或运算"
+        },
+        {
+          "key": "B",
+          "text": "进行的是按位同或运算"
+        },
+        {
+          "key": "C",
+          "text": "进行的是按位与运算"
+        },
+        {
+          "key": "D",
+          "text": "进行的是按位异或运算"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面枚举法查找最大值索引程序中,横线处应该填写的是()\n#include <iostream>\nusing namespace std;\nint main() {\n    int decimal = 255;\n    ——————————————————\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n#include <iostream>\nusing namespace std;\nint main() {\n    int a = 0b1101;\n    int b = 0b1011;\n    cout << (a ^ b);\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n#include <iostream>\nusing namespace std;\nint main() {\n    int arr[] = {3, 7, 2, 9, 5};\n    int maxIndex = 0;\n    for (int i = 1; i < 5; i++) {\n        ————————————————————————————————\n        {\n            maxIndex = i;\n        }\n    }\n    cout << maxIndex;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15",
+      "options": [
+        {
+          "key": "A",
+          "text": "if (arr[maxIndex] > arr[i])"
+        },
+        {
+          "key": "B",
+          "text": "if (arr[i]-1 > arr[maxIndex])"
+        },
+        {
+          "key": "C",
+          "text": "if (arr[i]+1 > arr[maxIndex])"
+        },
+        {
+          "key": "D",
+          "text": "if (arr[i] > arr[maxIndex])"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "以下代码的功能是将数组中的奇数和偶数分别放在数组的前半部分和后半部分 , 横线处应该填入的是()",
+      "options": [
+        {
+          "key": "A",
+          "text": "while (arr[left] % 2 == 0 && left < right) right--;"
+        },
+        {
+          "key": "B",
+          "text": "while (arr[right] % 2 == 0 && left < right) left--;"
+        },
+        {
+          "key": "C",
+          "text": "while (arr[right] % 2 != 0 && left < right) right--;"
+        },
+        {
+          "key": "D",
+          "text": "while (arr[right] % 2 == 0 && left < right) right--;"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面程序最后能够得到HelloC++的是()\n\n```\n#include <iostream> using namespace std; int main() { int arr[] = {1, 2, 3, 4, 5}; int left = 0, right = 4; while (left < right) { while (arr[left] % 2 == 1 && left < right) left++; ———————————————————————————————————————————————————— if (left < right) { swap(arr[left], arr[right]); } } for (int i = 0; i < 5; i++) { cout << arr[i] << \" \"; } return 0; } int main() { string str = \"HelloWorld\"; ___________________ cout << str; return 0; } str.replace(0, 5, \"C++\");1 str.replace(5, 5, \"C++\");1\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "想要得到字符串world, 下面程序横线处应该填入的是()",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "有  n 个正整数,假设一个正整数是美丽数字当且仅当该正整数是  9 的倍数但不是  8 的倍数。下面的程序是\n编写计算  n 个正整数中美丽数字的数量,横线处应该填入的是()\n\n```\n#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n    string str = \"HelloC++\";\n    _________________\n    _________________\n    return 0;\n}\n\n\n\n\n\n\n\n\n\n\n   str.insert(4, \"World\");\n    cout << str.substr(4, 4);\n\n\n    cout << str.substr(5, 5);1\n   str.insert(\"World\");\n    cout << str.substr(5, 5);\n\n\n   str.insert(5, \"World\");\n    cout << str.substr(5, 5);\n\n\nfor (int i = 1; i <= n; i++) {\n    cin >> a;\n    __________________________\n        cnt++;\n}\n\n\n\n\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": "if (a % 9 != 0 && a % 8 != 0)"
+        },
+        {
+          "key": "B",
+          "text": "if (a % 9 == 0 & a % 8 == 0)"
+        },
+        {
+          "key": "C",
+          "text": "if (a % 9 == 0 && a % 8 != 0)"
+        },
+        {
+          "key": "D",
+          "text": "if (a % 9 == 0 & a % 8 != 0) str.replace(1, 5, \"C++\");1 str.replace(4, 5, \"C++\");1"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "判断一个三角形是否成立的条件只有:任意两边长度之和大于第三条边的长度",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "这段程序进行的是判断一个从键盘输入的字符的ASCII 是否是奇数,若是,输出 YES,否则,输出 NO",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "闰年的定义:\n普通闰年:公历年份是 4 的倍数,且不是 100 的倍数的,为闰年(如 2004 年、2020 年等就是闰年)。\n世纪闰年:公历年份是整百数的,必须是 400 的倍数才是闰年(如 1900 年不是闰年,2000 年是闰年)。\n下面程序是判断是否是闰年的正确程序",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "C++语句 cout<<(n%15==0? \"YES\":\"NO\"); 能够判断一个整数能否被3和5同时整除",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "有n个同学,从中抽取任意个人数来参加学校组织的大合唱,共有2的n次幂个方法",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "若将一个正整数化为二进制数,在此二进制数中,我们将数字 1 的个数是偶数的这类二进制数称为 A 类数,\n否则就称其为 B 类数。\n例如:\n(13) 10 =(1101) 2 ,其中 1 的个数为 3则称此数为 B 类数;\n(10) 10 =(1010) 2 ,其中 1 的个数为 2,称此数为 A 类数;\n判断(2025)10化为二进制后,1的个数为偶数个,因此2025为A类数。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "该段程序将 n 不停地除以 2,并输出此时的商和余数,直到 n=0 为止。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "两个13进制的数A和B,在10进制下分别表示10和11。(A+B)13=(18)13,也就是说13进制数A加上13进\n制数B,和是13进制数18。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "k 进制,逢 k 进第二位,   进百位,   进千位;",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "CCF(十九进制) = 21AC(十三进制)(不区分大小写)\nint main()\n{\n    char x;\n    scanf(\"%c\", &x);\n    int ASCII = (int)x;\n    cout << (x & 1 ? \"YES\" : \"NO\") << '\\n';\n    return 0;\n}\n\n\n\n\n\n\n\n\n    cin>>n;\n    cout<<((n%4==0&&n%100!=0)||(n%400==0))?1:0;\n    return 0;\n\n\n\nlong long n;\ncin >> n;\nwhile(n != 0) {\n    cout << n/2 << ' ' << n%2 << '\\n';\n    n /= 2;\n}",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "编程题 1",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 2025\n3.1.2 题目描述\n小  A 有一个整数  ,他想找到最小的正整数   使得下式成立:\n其中   表示二进制按位与运算,  表示二进制按位或运算。如果不存在满足条件的  ,则输出  。\n3.1.3\n\n输入格式\n一行,一个整数  。\n3.1.4 输出格式\n一行,一个整数,若满足条件的   存在则输出  ,否则输出  。\n3.1.5 样例\n3.1.5.1 输入样例  1\n3.1.5.2 输出样例  1\n3.1.6 数据范围\n对于所有测试点,保证  。\n3.1.7 提示\n其中:\n 表示按位与运算,运算符为  &。\n 表示按位或运算,运算符为  |。\n3.1.8",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "编程题 2",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.9 词频统计\n3.2.10 题目描述\n在文本处理中,统计单词出现的频率是一个常见的任务。现在,给定   个单词,你需要找出其中出现次数最多的单\n词。在本题中,忽略单词中字母的大小写(即  Apple、apple、APPLE、aPPle 等均视为同一个单词)。\n请你编写一个程序,输入   个单词,输出其中出现次数最多的单词。\n3.2.11\n\n输入格式\n第一行,一个整数  ,表示单词的个数;\n接下来   行,每行包含一个单词,单词由大小写英文字母组成。\n输入保证,出现次数最多的单词只会有一个。\n3.2.12 输出格式\n输出一行,包含出现次数最多的单词(输出单词为小写形式)。\n3.2.13 样例\n3.2.13.3 输入样例  1\n3.2.13.4 输出样例  1\n3.2.14 数据范围\n对于所有测试点, ,每个单词的长度不超过  ,且仅由大小写英文字母组成。\n    for (int i = 1; i <= 2025; i++)\n        if ((x & i) + (x | i) == 2025) {\n            printf(\"%d\\n\", i);\n            return 0;\n        }\n    printf(\"-1\\n\");\n    return 0;\n}\n\nApple\nbanana\napple\nOrange\nbanana\napple\n\napple1\n\n3.2.15",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "11\n12\n13\n14\n15\n6\n",
+          "out": "7\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "D",
+      "B",
+      "A",
+      "A",
+      "B",
+      "A",
+      "C",
+      "A",
+      "C",
+      "D",
+      "D",
+      "D",
+      "B",
+      "D",
+      "C",
+      "C"
+    ]
+  ]
+}

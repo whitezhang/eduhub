@@ -2,10 +2,8 @@ node_modules/
 src/rd/client/dist/
 # 正式前端产物在仓根 output/，本机构建后提交，服务器直接部署
 
-# data 按角色拆：runtime 两边都有，seed 可同步，cache 只留本机。均不进 git。
-# catalog/problems/*.json 进 git：管理员网页改题后的正式题面，deploy 时导入。
+# data：runtime / cache 不进 git；seed（gesp、csp-j）与 catalog 进 git，deploy 时导入。
 src/rd/server/data/runtime/
-src/rd/server/data/seed/
 src/rd/server/data/cache/
 !src/rd/server/data/catalog/
 !src/rd/server/data/catalog/**/

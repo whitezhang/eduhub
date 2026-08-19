@@ -1,0 +1,284 @@
+{
+  "slug": "cspj-euclidean-algorithm",
+  "url": "https://adacpp.com/practice/cspj-euclidean-algorithm",
+  "title": "欧几里得算法",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "ljMNll3aPIXKC4mWqSzl6",
+      "type": "single_choice",
+      "content": "欧几里得算法是用来计算两个数的最大公约数，请问计算gcd(48,18)的结果是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "12"
+        },
+        {
+          "label": "C",
+          "text": "18"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "A",
+      "explanation": "欧几里得算法通过不断地将较大数替换为两数的差，直至两数相等，那个数即为最大公约数。gcd(48,18)的计算过程是：48-18=30，30-18=12，18-12=6，12-6=6，得到最大公约数是6。"
+    },
+    {
+      "id": "K-Z5c1VKaVYY63i38FZs5",
+      "type": "single_choice",
+      "content": "使用欧几里得算法计算gcd(270,192)的结果是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "18"
+        },
+        {
+          "label": "C",
+          "text": "78"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "D",
+      "explanation": "欧几里得算法是通过连续除法操作直到余数为0，最后的非零余数即为两数的最大公约数。270和192的最大公约数通过欧几里得算法计算得到是6。"
+    },
+    {
+      "id": "ErqTF6FIMxVhBT3qS7z9p",
+      "type": "single_choice",
+      "content": "欧几里得算法也可以用来计算多个数的最大公约数。计算gcd(100,80,20)应首先计算哪两个数的gcd？",
+      "options": [
+        {
+          "label": "A",
+          "text": "任意两个"
+        },
+        {
+          "label": "B",
+          "text": "80和20"
+        },
+        {
+          "label": "C",
+          "text": "100和20"
+        },
+        {
+          "label": "D",
+          "text": "100和80"
+        }
+      ],
+      "answer": "A",
+      "explanation": "计算多个数的最大公约数时，可以先计算任意两个数的最大公约数，然后用这个结果与第三个数计算最大公约数，依此类推。因此，首先计算100和80的gcd是一种策略。"
+    },
+    {
+      "id": "omEs0W3uCCF7dQ0rRnO0t",
+      "type": "single_choice",
+      "content": "若gcd(a,b)=1，下列哪个选项一定为真？",
+      "options": [
+        {
+          "label": "A",
+          "text": "b是a的因数"
+        },
+        {
+          "label": "B",
+          "text": "a是b的因数"
+        },
+        {
+          "label": "C",
+          "text": "a和b是互质数"
+        },
+        {
+          "label": "D",
+          "text": "a和b都是偶数"
+        }
+      ],
+      "answer": "C",
+      "explanation": "gcd(a,b)=1意味着a和b的最大公约数是1，即a和b是互质的，没有除了1之外的其他公约数。"
+    },
+    {
+      "id": "zH18PT3eMm4wRl1zqejKU",
+      "type": "single_choice",
+      "content": "使用欧几里得算法计算gcd(147,105)的结果是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "42"
+        },
+        {
+          "label": "B",
+          "text": "21"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "14"
+        }
+      ],
+      "answer": "B",
+      "explanation": "通过连续进行除法操作，可以找到147和105的最大公约数为21。"
+    },
+    {
+      "id": "Pla04w29kKOZdfBlqqLQJ",
+      "type": "single_choice",
+      "content": "欧几里得算法的基本步骤是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "相加后求平均"
+        },
+        {
+          "label": "B",
+          "text": "连续相乘直到其中一个数变为0"
+        },
+        {
+          "label": "C",
+          "text": "较大数除以较小数，直到余数为0"
+        },
+        {
+          "label": "D",
+          "text": "较大数减去较小数，直到两数相等"
+        }
+      ],
+      "answer": "C",
+      "explanation": "欧几里得算法通过较大数除以较小数，然后用较小数除以余数，如此迭代，直到余数为0，最后的除数即为最大公约数。"
+    },
+    {
+      "id": "SYiOC7T-ArZIE05aMGxjH",
+      "type": "single_choice",
+      "content": "计算gcd(252,198)的结果是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "18"
+        },
+        {
+          "label": "C",
+          "text": "36"
+        },
+        {
+          "label": "D",
+          "text": "54"
+        }
+      ],
+      "answer": "B",
+      "explanation": "使用欧几里得算法，252和198的最大公约数是18。"
+    },
+    {
+      "id": "uj1gNNMMLhW1oP5dEcY3_",
+      "type": "single_choice",
+      "content": "若两个数的最大公约数为其其中较小的数，这说明了什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "两数相等"
+        },
+        {
+          "label": "B",
+          "text": "较小的数是较大数的因数"
+        },
+        {
+          "label": "C",
+          "text": "两数是质数"
+        },
+        {
+          "label": "D",
+          "text": "两数相互质"
+        }
+      ],
+      "answer": "B",
+      "explanation": "如果两个数的最大公约数是其中较小的数，这意味着较小的数是较大数的因数。"
+    },
+    {
+      "id": "YsJeKvNX-xQ0lOJ_LfTPM",
+      "type": "single_choice",
+      "content": "欧几里得算法除了计算最大公约数外，还可以用来做什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "计算最小公倍数"
+        },
+        {
+          "label": "B",
+          "text": "解线性方程"
+        },
+        {
+          "label": "C",
+          "text": "进行加密"
+        },
+        {
+          "label": "D",
+          "text": "解决迷宫问题"
+        }
+      ],
+      "answer": "A",
+      "explanation": "欧几里得算法计算出最大公约数后，可以利用最大公约数来计算两个数的最小公倍数。"
+    },
+    {
+      "id": "Qhj6bYLrP7N95s1w6BsZH",
+      "type": "single_choice",
+      "content": "在欧几里得算法中，若一开始较小的数是较大数的倍数，会发生什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "算法立即结束"
+        },
+        {
+          "label": "B",
+          "text": "算法无法继续"
+        },
+        {
+          "label": "C",
+          "text": "需要交换两个数"
+        },
+        {
+          "label": "D",
+          "text": "需要重新选择两个数"
+        }
+      ],
+      "answer": "A",
+      "explanation": "如果一开始较小的数是较大数的倍数，那么第一步除法的余数为0，算法会立即结束，因为找到了最大公约数。"
+    },
+    {
+      "id": "XUcH3CpO1JIEE-GmrCj6Y",
+      "type": "single_choice",
+      "content": "辗转相除法也被称为",
+      "options": [
+        {
+          "label": "A",
+          "text": "高斯消元法"
+        },
+        {
+          "label": "B",
+          "text": "费马定理"
+        },
+        {
+          "label": "C",
+          "text": "欧几里德算法"
+        },
+        {
+          "label": "D",
+          "text": "牛顿迭代法"
+        }
+      ],
+      "answer": "C",
+      "explanation": "欧几里得算法的过程是重复相除然后交换位置，因此也被称作辗转相除法"
+    }
+  ]
+}

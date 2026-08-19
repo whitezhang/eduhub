@@ -1,0 +1,573 @@
+{
+  "meta": {
+    "ym": "202603",
+    "lang": "python",
+    "level": 1,
+    "title": "CCF GESP 2026年3月认证 Python 1级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10269.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1734124750503968.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202603-python-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "2026 年春节联欢晚会上一个武术表演节目《武  BOT 》。节目中多个人形机器人会表演空翻,它们落地可能会\n有微微踉跄,但都会迅速调整姿态站稳,并适当移动来和前后左右的其他机器人保持原来队列。如果将机器人视作\n一个计算机系统,那么在该计算机系统中下面哪一项不能作为输入设备 (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "用于检测重心的重力传感器"
+        },
+        {
+          "key": "B",
+          "text": "预装的 AI 算法程序"
+        },
+        {
+          "key": "C",
+          "text": "接收动作指令的遥控器"
+        },
+        {
+          "key": "D",
+          "text": "拍摄其他机器人的摄像头"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "小明学习编程有一段时间了,他想在图形环境下把当前目录(或文件夹)下的文本文件20260314.txt的名\n字改一下。他用鼠标左键点击选中该文件后,立即完成下面哪个操作后将处于输入新文件名的状态  ( ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "单击右键并选择弹出菜单中的 “ 重命名 ”"
+        },
+        {
+          "key": "B",
+          "text": "双击左键"
+        },
+        {
+          "key": "C",
+          "text": "按功能键 F1"
+        },
+        {
+          "key": "D",
+          "text": "按回车键"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "有关下面 Python 的说法,正确的是 (  ) 。\n\n```\nprint(PI)修改为print(Pi)能正常执行\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": "为了方便初学者,print(PI)和print(pi)效果相同,即变量的大小写不敏感"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": "不能用 PI 做变量名,因为要保存圆周率这个常量"
+        },
+        {
+          "key": "D",
+          "text": "将程序中 PI 全部改写为 Pai,将能正常执行,不会报错"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "Python 表达式3 * 3 ** 2的值为 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "PI = 3.1415926 print(PI) 第 1 页 / 共 9 页"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面的  Python 代码执行后,其输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面  Python 代码的相关说法,正确的是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "执行时如输入 10 ,则将输出 10"
+        },
+        {
+          "key": "B",
+          "text": "执行时如输入 3.14 ,则将输出 3.14"
+        },
+        {
+          "key": "C",
+          "text": "执行时如输入 ABC ,则将输出 0"
+        },
+        {
+          "key": "D",
+          "text": "执行时如输入 -10 ,则将输出 10"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行时,其说法正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "不管输入是正数负数还是 0 ,其输出结果肯定是大于等于 0"
+        },
+        {
+          "key": "B",
+          "text": "不管是负整数、正整数亦或 0 ,其结果肯定是大于等于 0"
+        },
+        {
+          "key": "C",
+          "text": "如果 N 和 M 是相等的整数,将不会有输出"
+        },
+        {
+          "key": "D",
+          "text": "如果 N 和 M 输入带有小数点的数,将按整数部分计算"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是( )。\na, b = 3, 4\nprint(a + 2, b - 2)\nprint(a, b)\n1\n2\n3\n5 2\n3 4\n1\n2\n5 2\n5 2\n1\n2\n52\n34\n1\n2\n52\n52\n1\n2\nN = int(input())\nprint(N)\n1\n2\nN = int(input())\nM = int(input())\nif N > M:\n    print(N - M)\nelse:\n    print(M - N)\n1\n2\n3\n4\n5\n6\n7\ntnt = 1\nfor i in range(5):\n    tnt *= i\nprint(tnt, i)\n1\n2\n3\n4\n第  2 页  / 共  9 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "24 5"
+        },
+        {
+          "key": "B",
+          "text": "10 5"
+        },
+        {
+          "key": "C",
+          "text": "24 4"
+        },
+        {
+          "key": "D",
+          "text": "0 4"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "Python 编程求数列-1+2+3-4+5+6-7+8+9-10+11+12-13+......之值。如输入 4 ,则计算 1 到 4 包含 1 和 4 之间\n的值,规律如数列所示。下面说法,正确的是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "range(1, N + 1)应该修为range(1, N)才会符合预期"
+        },
+        {
+          "key": "B",
+          "text": "i % 3 == 1应修改为i % 3 == 0才会符合预期"
+        },
+        {
+          "key": "C",
+          "text": "i % 3 == 1修改为i % 3与当前程序效果相同"
+        },
+        {
+          "key": "D",
+          "text": "当前代码能达到题目所描述目标"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 Python 代码的相关说法,正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "上述代码执行后,其输出是1#3#5#7#9#9END"
+        },
+        {
+          "key": "B",
+          "text": "删除else:后的执行效果与当前代码相同"
+        },
+        {
+          "key": "C",
+          "text": "删除else:且print(i, end = \"#\")与 if 对齐,则执行效果与当前代码相同"
+        },
+        {
+          "key": "D",
+          "text": "将print(i,\"END\")与 if 对齐,其执行效果与当前代码相同"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面的 Python 代码用于求正整数各位数之和(即数位和),约定高位不为 0 ,如 123 则各位数之和为1+2+3\n结果为 6 。为实现该目标,横线处应该填写的代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "N = int(input(\" 请输入正整数: \")) tnt = 0 for i in range(1, N + 1): if i % 3 == 1: tnt += -i else: tnt += i print(tnt) for i in range(1, 10): if i % 2 == 0: continue else: print(i, end = \"#\") print(i,\"END\") N = int(input()) tnt = 0 while N != 0: ____________ ____________ print(\" 各位数数之和为: \", tnt) tnt += N // 10 N //= 10 第 3 页 / 共 9 页"
+        },
+        {
+          "key": "B",
+          "text": "C."
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "某个功能需要知道一个输入的正整数的各位数字中有多少个奇数,下面的 Python 代码是其实现,横线处应\n该填入的代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "N % 10 % 2 == 0"
+        },
+        {
+          "key": "B",
+          "text": "N % 10 % 2 == 1"
+        },
+        {
+          "key": "C",
+          "text": "N // 10 // 2 == 1"
+        },
+        {
+          "key": "D",
+          "text": "N // 2 // 10 == 0"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面的 Python 执行后如果输入  8,希望输出如下图形。相关说法,正确的是(     )。\ntnt += N % 10\nN //= 10\n1\n2\ntnt += N % 10\nN /= 10\n1\n2\ntnt = tnt + N % 10\nN /= 10\n1\n2\nN = int(input())\nodd_count = 0 # 记录奇数的个数\nold_number = N # 保存原数\nwhile N != 0:\n    if _________________:\n        odd_count += 1\n    N = (N - N % 10) // 10\nprint(f\"{old_number}中共有{odd_count}个奇数 \")\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n第  4 页  / 共  9 页\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "Angle = 360 / N应该修为Angle = 360 // N才能实现输出效果"
+        },
+        {
+          "key": "B",
+          "text": "range(N)修改为range(1, N + 1)效果相同,都能实现输出效果"
+        },
+        {
+          "key": "C",
+          "text": "range(N)修改为range(1, N)效果相同,都能实现输出效果"
+        },
+        {
+          "key": "D",
+          "text": "turtle.right(Angle)应该修正为turtle.right(i * Angle)才能达到预期效果"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "有关下面  Python 代码的说法,正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码执行后,将输出等腰直角三角形"
+        },
+        {
+          "key": "B",
+          "text": "代码执行后,将输出等长的两条边,其夹角为 90 度,因为没有画出斜边,因此不是三角形"
+        },
+        {
+          "key": "C",
+          "text": "代码执行后, 90 度夹角位于原点"
+        },
+        {
+          "key": "D",
+          "text": "因为没有执行turtle.pendown(),所以不会画出图形"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "在 Python 中,turtle.write()用于在当前坐标处输出文字。下面说法,错误的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1+1=2输出在坐标原点,即(0,0)"
+        },
+        {
+          "key": "B",
+          "text": "1+1=2的起点与2+2=4的起点间隔 40 个像素"
+        },
+        {
+          "key": "C",
+          "text": "最后输出是10+10=20"
+        },
+        {
+          "key": "D",
+          "text": "1+1=2等输出文字的下面将有一条直线"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小明的妈妈最近刚刚给他买了一块电话手表,除了可以看时间,小明也可以用它和妈妈打电话、收发信息,\n那么可以推测这块手表中装有一款特定操作系统。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "Python 表达式4 ** 2和2 * 2 ** 2的结果相同。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后将输出 0 。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "下面 Python 代码用于求 1 到 N 之和, N 为正整数。因为 中为 ,因此是 1 到 N 且包含 N 之和。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "执行下面的 Python 代码,其语句 print(N) 将被执行 0 次或无数次(即死循环)。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "下面的 Python 代码能实现判断输入的正整数是否为对称数。所谓对称数是指从左到右和从右到左读该数,其\n值相同,如 121 或 414 等是对称数,而 123 不是对称数。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "执行下面的  Python 代码,如果输入为大于  0 的整数,则输出一定为  。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "执行  Python 语句print(int(3.14))将报错。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下面的  Python 代码执行后,将输出等边三角形。(   )\nfor i in range(1, 10):\n    if i % 3 == 0:\n        break\nprint(i)\n\n\n\n\nN = int(input(\" 请输入正整数: \"))\ntotal = 0\nfor i in range(1, N + 1):\ntotal += i\nprint(total)\n\n\n\n\n\nN = input()\nwhile N:\n    print(N)\n\n\n\nn = int(input(\" 请输入正整数 :\"))\nold_number = n\nnew_number = 0\nwhile n != 0:\n    new_number = new_number * 10 + n % 10\n    n //= 10\nif old_number == new_number:\n    print(\" 对称数 \")\nelse:\n    print(\" 非对称数 \")\n\n\n\n\n\n\n\n\n\n\n\n\nN = int(input())\ntotal = 0\nfor i in range(-N,N,2):\n    total += i\nprint(total)\n\n\n\n\n\nimport turtle\nturtle.circle(50, steps = 3)\nturtle.done()\n\n\n\n\n第  6 页  / 共  9 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下面的  Python 代码执行后第一条直线与第二条直线相交于原点,两线之间的夹角为 120 度。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "交朋友",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\nAlice 班上共有  4 个小朋友,身高分别为  ,其中  Alice 的身高为  。\nAlice 想要和身高最接近她的人交朋友,如果有多个人符合条件,则  Alice 想和其中较矮的那一人做朋友,你能告诉\n她这个人的身高是多少吗?\n3.1.2\n\n输入格式\n输入共   行,第   行包含一个整数  ,表示班上小朋友的身高。\n3.1.3 输出格式\n输出   行,包含一个整数  ,表示  Alice 想交的朋友的身高。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.5 样例解释\n样例  1 中, Alice 身高为  150 ,第  2 、 3 个小朋友与  Alice 身高差距为  15 ,同样最接近, Alice 选较矮的一个即第  3 个\n身高为  135 的小朋友交朋友。\nimport turtle\nturtle.forward(100)\nturtle.right(60)\nturtle.forward(100)\nturtle.right(60)\nturtle.forward(100)\nturtle.done()\n\n第  7 页  / 共  9 页\n3.1.6 数据范围\n保证   且   互不相同。\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "150\n165\n135\n133\n",
+          "out": "135\n",
+          "suspect": true
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "数字替换",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n# 读入 4 个小朋友的身高\nH1 = int(input())  # Alice 的身高\nH2 = int(input())\nH3 = int(input())\nH4 = int(input())\n# 我们只关心  H2, H3, H4 (其他三个小朋友)\n# 先算出每个人和  Alice 的身高差(用绝对值,这样不会负数)\n# 与 H2 小朋友的身高差\n# 如果身高差为负数,转换为正数。\ndiff2 = H2 - H1\nif diff2 < 0:\n    diff2 = -diff2\n# 与 H3 小朋友的身高差\ndiff3 = H3 - H1\nif diff3 < 0:\n    diff3 = -diff3\n# 与 H4 小朋友的身高差\ndiff4 = H4 - H1\nif diff4 < 0:\n    diff4 = -diff4\n# 刚开始假设最好的朋友是  H2\nbest = H2 # 最好的小朋友身高,\nbest_diff = diff2 # 与最好小朋友的身高差\n# 比较  H3 小朋友\nif diff3 < best_diff:  # 如果  H3 更接近,即身高差更小\n    best = H3 # 最好小朋友的身高进行更新\n    best_diff = diff3 # 与最好小朋友的身高差更新\nelif diff3 == best_diff and H3 < best:  # 如果一样近,但  H3 小朋友更矮\n    best = H3\n# 比较  H4\nif diff4 < best_diff:          # 如果  H4 更接近\n    best = H4 # 最好小朋友的身高进行更新\n    best_diff = diff4 # 与最好小朋友的身高差更新\nelif diff4 == best_diff and H4 < best:  # 如果一样近,但  H4 更矮\n    best = H4\n# 输出结果,即输出最好小朋友的身高\nprint(best)\n\n第  8 页  / 共  9 页\n3.2.1 题目描述\nAlice 不喜欢数字 4,但觉得数字 8 寓意好,她想把数中的 4 全都替换成 8,若数中不含 4 则无需修改,你能帮帮她\n吗?\n3.2.2\n\n输入格式\n输入一行,包含一个整数 ,表示替换前的数。\n3.2.3 输出格式\n输出一行,包含一个整数 ,表示替换后的数。\n3.2.4 样例\n3.2.4.1 输入样例 #1\n3.2.4.2 输出样例 #1\n3.2.4.3 输入样例 #2\n3.2.4.4 输出样例 #2\n3.2.4.5 样例解释\n对于样例1,输入 8459045 中有两个 4,都将其替换为了 8,得到 8859085。\n对于样例2,输入 123 中不包含 4,无需修改输入数字,输出 123。\n3.2.5 数据范围\n。\n3.2.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "A",
+      "D",
+      "B",
+      "A",
+      "A",
+      "B",
+      "D",
+      "D",
+      "C",
+      "B",
+      "B",
+      "B",
+      "A",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

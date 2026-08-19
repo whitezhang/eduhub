@@ -1,0 +1,259 @@
+{
+  "slug": "cspj-stack",
+  "url": "https://adacpp.com/practice/cspj-stack",
+  "title": "栈",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "tb7qBnvbVWeF0UbdkX0Lz",
+      "type": "single_choice",
+      "content": "元素R_1、R_2、R_3、R_4、R_5入栈的顺序为R_1、R_2、R_3、R_4、R_5。如果第1个出栈的是R_3，那么第5个出栈的不可能是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "R1"
+        },
+        {
+          "label": "B",
+          "text": "R2"
+        },
+        {
+          "label": "C",
+          "text": "R4"
+        },
+        {
+          "label": "D",
+          "text": "R5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "可能R_3出栈后接着让R_2、R_1也出栈，再让R_4、R_5入栈，最后让R_5、R_4出栈，所以C是可能的；或是R_3出栈后接着让R_2、R_1也出栈，而后R_4入栈后直接出栈，最后R_5入栈后出栈，所以D是可能的；若R_3出栈后让R_4、R_5入栈，最后再按顺序R_5、R_4、R_2、R_1出栈，所以A是可能的；答案选B,因为无论如何R_2会在R_1前出栈。"
+    },
+    {
+      "id": "30sDAmjzAvUn_gvnD7MGF",
+      "type": "single_choice",
+      "content": "如果一个栈初始时为空，且当前栈中的元素从栈底到栈顶依次为a,b,c，另有元素d已经出栈，则可能的入栈顺序是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a, d, c, b"
+        },
+        {
+          "label": "B",
+          "text": "b, a, c, d"
+        },
+        {
+          "label": "C",
+          "text": "a, c, b, d"
+        },
+        {
+          "label": "D",
+          "text": "d, a, b, c"
+        }
+      ],
+      "answer": "D",
+      "explanation": "a, b, c 的相对顺序必须保持不变，d 可以在任意某个位置插入。"
+    },
+    {
+      "id": "tsT1JaZbM-kTBHh43ebZy",
+      "type": "single_choice",
+      "content": "下图中所使用的数据结构是(   )。\n\n![](https://ydschool-video.nosdn.127.net/16530593615582013-7.png)",
+      "options": [
+        {
+          "label": "A",
+          "text": "哈希表"
+        },
+        {
+          "label": "B",
+          "text": "栈"
+        },
+        {
+          "label": "C",
+          "text": "队列"
+        },
+        {
+          "label": "D",
+          "text": "二叉树"
+        }
+      ],
+      "answer": "B",
+      "explanation": "由图可知，B元素后进先出，符合栈的特点。"
+    },
+    {
+      "id": "GaXpizg95I-19ewTJmX27",
+      "type": "single_choice",
+      "content": "今有一空栈 S，对下列待进栈的数据元素序列 a，b，c，d，e，f 依次进行进栈，进栈，出栈，进栈， 进栈，出栈的操作，则此操作完成后，栈 S 的栈顶元素为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "f"
+        },
+        {
+          "label": "B",
+          "text": "c"
+        },
+        {
+          "label": "C",
+          "text": "a"
+        },
+        {
+          "label": "D",
+          "text": "b"
+        }
+      ],
+      "answer": "B",
+      "explanation": "栈的特点：后入先出"
+    },
+    {
+      "id": "_9_InmL9k9pREh9xC-DKV",
+      "type": "single_choice",
+      "content": "对于入栈顺序为 a, b, c, d, e, f, g 的序列，下列（ ）不可能是合法的出栈序列。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a, b, c, d, e, f, g"
+        },
+        {
+          "label": "B",
+          "text": "a, d, c, b, e, g, f"
+        },
+        {
+          "label": "C",
+          "text": "a, d, b, c, g, f, e"
+        },
+        {
+          "label": "D",
+          "text": "g, f, e, d, c, b, a"
+        }
+      ],
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "id": "NWLUgofEU6GS3Pqe4Z2Ef",
+      "type": "single_choice",
+      "content": "下图中所使用的数据结构是（ ）。\n\n![](https://ydschool-video.nosdn.127.net/16532148419792018-15.png)",
+      "options": [
+        {
+          "label": "A",
+          "text": "哈希表"
+        },
+        {
+          "label": "B",
+          "text": "栈"
+        },
+        {
+          "label": "C",
+          "text": "队列"
+        },
+        {
+          "label": "D",
+          "text": "二叉树"
+        }
+      ],
+      "answer": "B",
+      "explanation": "栈的特点为：先进后出，图例显然符合此规律。"
+    },
+    {
+      "id": "uXRiCqt3GDLo8tWPUIX-r",
+      "type": "single_choice",
+      "content": "有 6 个元素，按照 6、5、4、3、2、1 的顺序进入栈 S，请问下列哪个出栈序列是非法的（",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 4 3 6 1 2"
+        },
+        {
+          "label": "B",
+          "text": "4 5 3 1 2 6"
+        },
+        {
+          "label": "C",
+          "text": "3 4 6 5 2 1"
+        },
+        {
+          "label": "D",
+          "text": "2 3 4 1 5 6"
+        }
+      ],
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "id": "pmuILgnjL6oib1dO18zvF",
+      "type": "single_choice",
+      "content": "后缀表达式 “ 6 2 3 + - 3 8 2 / + * 2 ^ 3 + ” 对应的中缀表达式是",
+      "options": [
+        {
+          "label": "A",
+          "text": "((6-(2+3))*(3+8/2))^2+3"
+        },
+        {
+          "label": "B",
+          "text": "6-2+3*3+8/2^2+3"
+        },
+        {
+          "label": "C",
+          "text": "(6-(2+3))*((3+8/2)^2)+3"
+        },
+        {
+          "label": "D",
+          "text": "6-((2+3)*(3+8/2))^2+3"
+        }
+      ],
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "id": "fyXN-E7mamhz731RT_IWE",
+      "type": "single_choice",
+      "content": "表达式 a+(b-c)*d 的前缀表达式为（ ），其中+、-、*是运算符。",
+      "options": [
+        {
+          "label": "A",
+          "text": "\"*+a-bcd\""
+        },
+        {
+          "label": "B",
+          "text": "\"+a*-bcd\""
+        },
+        {
+          "label": "C",
+          "text": "\"abc-d*+\""
+        },
+        {
+          "label": "D",
+          "text": "\"abc-+d\""
+        }
+      ],
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "id": "MYHwJYiaahZRs2rEP26nF",
+      "type": "single_choice",
+      "content": "表达式a*(b+c)*d 的后缀表达式为（ ），其中“*”和“+”是运算符。",
+      "options": [
+        {
+          "label": "A",
+          "text": "**a+bcd"
+        },
+        {
+          "label": "B",
+          "text": "abc+*d*"
+        },
+        {
+          "label": "C",
+          "text": "abc+d**"
+        },
+        {
+          "label": "D",
+          "text": "*a*+bcd"
+        }
+      ],
+      "answer": "B",
+      "explanation": "考察前后缀表达式。表示为( a [ bc +] * ) d *，后缀表达式为 abc+*d*"
+    }
+  ]
+}

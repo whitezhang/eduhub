@@ -1,0 +1,326 @@
+{
+  "slug": "cspj-huffman-coding",
+  "url": "https://adacpp.com/practice/cspj-huffman-coding",
+  "title": "哈夫曼编码与哈夫曼树",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "cYP1p4cgsgt8VxDF6MK53",
+      "type": "single_choice",
+      "content": "假设有一组字符{a,b,c,d,e,f}，对应的频率分别为5%，9%，12%，13%，16%，45%。请问以下哪个选项是字符a,b,c,d,e,f分别对应的一组哈夫曼编码？",
+      "options": [
+        {
+          "label": "A",
+          "text": "1111，1110，101，100，110，0"
+        },
+        {
+          "label": "B",
+          "text": "1010，1001，1000，011，010，00"
+        },
+        {
+          "label": "C",
+          "text": "000，001，010，011，10，11"
+        },
+        {
+          "label": "D",
+          "text": "1010，1011，110，111，00，01"
+        }
+      ],
+      "answer": "A",
+      "explanation": "哈夫曼编码是一种根据字符频率进行编码的方法，字符频率越高的编码长度越短。因此，最高频率的字符（'f'）应该有最短的编码。选项A中，字符'f'对应的编码最短，是符合哈夫曼编码原则的。"
+    },
+    {
+      "id": "JkDCMqoFoGEvsiL1m6OVw",
+      "type": "single_choice",
+      "content": "假设字母表 {a, b, c, d, e} 在字符串出现的频率分别为 10%, 15%, 30%, 16%, 29%。若使用哈夫曼编码方式对字母进行不定长的二进制编码，字母 d 的编码长度为",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "2 或 3"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "B",
+      "explanation": "按频率从小到大排序：a10、b15、d16、e29、c30。第一步合并最小两个a(10)和b(15)得到节点ab(25)；剩下d(16)、ab(25)、e(29)、c(30)，最小两个是d(16)和ab(25)，合并得到节点d_ab(41)；剩下e(29)、c(30)、d_ab(41)，合并e和c得到ec(59)；最后d_ab(41)与ec(59)合并为根。因此d所在路径为：根→d_ab→d，深度为2，即d的编码长度为2位，对应选项B。"
+    },
+    {
+      "id": "Afr3PnrLRETrk6uJ0J0Oh",
+      "type": "single_choice",
+      "content": "在数据压缩编码中的哈夫曼编码方法，在本质上是一种",
+      "options": [
+        {
+          "label": "A",
+          "text": "枚举"
+        },
+        {
+          "label": "B",
+          "text": "贪心"
+        },
+        {
+          "label": "C",
+          "text": "递归"
+        },
+        {
+          "label": "D",
+          "text": "动态规划"
+        }
+      ],
+      "answer": "B",
+      "explanation": "哈夫曼编码基于贪心算法构建最优二叉树，每一步都选择最佳选项以达到整体最优，因此它是贪心策略的一种体现。"
+    },
+    {
+      "id": "GUBG_zTLJ5iwrNoZ9U4Zl",
+      "type": "single_choice",
+      "content": "某内容仅会出现 ABCDEFG ，其对应的出现概率为0.40、0.30、0.15、0.05、0.04、0.03、0.03，如下图所示。按照哈夫曼编码规则，假设B 的编码为11，则 D 的编码为",
+      "options": [
+        {
+          "label": "A",
+          "text": "10010"
+        },
+        {
+          "label": "B",
+          "text": "10011"
+        },
+        {
+          "label": "C",
+          "text": "10111"
+        },
+        {
+          "label": "D",
+          "text": "10001"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题考察的知识点是数据结构中的哈夫曼，哈夫曼树左边的边权是用0来表示，右边的边权值是1，通常是左0右1。走到D是右左左右右，也就是10011，因此选项是B。"
+    },
+    {
+      "id": "z3EhUAw7pOsCm0OMIXB4c",
+      "type": "true_false",
+      "content": "哈夫曼编码是一种有损压缩算法。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "本题是C++数据结构的知识，有损压缩算法是一种用于压缩数字媒体数据的算法，而哈夫曼编码是一种无损压缩算法。"
+    },
+    {
+      "id": "s4FPYLWQJJqHns-0h8Zp4",
+      "type": "single_choice",
+      "content": "对 hello world 使用霍夫曼编码（Huffman Coding），最少bit（比特）为",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "32"
+        },
+        {
+          "label": "C",
+          "text": "64"
+        },
+        {
+          "label": "D",
+          "text": "88"
+        }
+      ],
+      "answer": "B",
+      "explanation": "按照出现次数进行哈夫曼编码，每个字符根据其出现频率被分配一定长度的编码，计算得到整个字符串使用哈夫曼编码后所需的最少位数是32bit。"
+    },
+    {
+      "id": "9vUJFt0ZgfOyM6wl1aXkq",
+      "type": "single_choice",
+      "content": "在构建哈夫曼树时，每次应该选择",
+      "options": [
+        {
+          "label": "A",
+          "text": "最小权值的节点"
+        },
+        {
+          "label": "B",
+          "text": "最大权值的节点"
+        },
+        {
+          "label": "C",
+          "text": "随机节点"
+        },
+        {
+          "label": "D",
+          "text": "深度最深的节点"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在构建哈夫曼树时，每次应选择两个最小权值的节点合并，以此方式构建出最优的哈夫曼树。"
+    },
+    {
+      "id": "EqIkVcFZEjV0c-EbcFNtZ",
+      "type": "single_choice",
+      "content": "给定频率分布 {A: 45, B: 13, C: 12, D: 16, E: 9, F: 5}，构建的哈夫曼树中，哪两个字符最先被组合？",
+      "options": [
+        {
+          "label": "A",
+          "text": "A和B"
+        },
+        {
+          "label": "B",
+          "text": "E和F"
+        },
+        {
+          "label": "C",
+          "text": "C和D"
+        },
+        {
+          "label": "D",
+          "text": "B和C"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在构建哈夫曼树的过程中，首先会组合频率最低的两个字符，即E和F。"
+    },
+    {
+      "id": "EJbL3If0kv5UD1ZjqKCZV",
+      "type": "single_choice",
+      "content": "假设字符集 {X, Y, Z} 的频率分别为 10, 15, 75。在构建的哈夫曼树中，字符Z的编码是什么？",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "11"
+        },
+        {
+          "label": "D",
+          "text": "1"
+        }
+      ],
+      "answer": "D",
+      "explanation": "在哈夫曼编码中，频率最高的字符通常获得最短的编码。由于Z的频率最高，它的编码是最短的，这里是1。"
+    },
+    {
+      "id": "8Z4exJg7xKAIJ4_uiBw7K",
+      "type": "single_choice",
+      "content": "对于字符集 {R, S, T, U, V}，其频率为 {5, 9, 12, 13, 16}。在构建的哈夫曼树中，哪个字符与U最先被合并？",
+      "options": [
+        {
+          "label": "A",
+          "text": "R"
+        },
+        {
+          "label": "B",
+          "text": "S"
+        },
+        {
+          "label": "C",
+          "text": "T"
+        },
+        {
+          "label": "D",
+          "text": "V"
+        }
+      ],
+      "answer": "C",
+      "explanation": "按频率从小到大排序：R(5)、S(9)、T(12)、U(13)、V(16)。第一步合并最小两个R(5)和S(9)，得到节点RS(14)；R、S已合并进RS节点，不再是独立字符。剩下T(12)、U(13)、RS(14)、V(16)，最小两个是T(12)和U(13)，所以U最先与T合并，对应选项C。"
+    },
+    {
+      "id": "8XuhjjKlehaJSafrUbMm3",
+      "type": "single_choice",
+      "content": "在对字符集 {m, n, o, p, q, r} 进行哈夫曼编码时，其频率依次为 4%, 4%, 8%, 20%, 30%, 34%。那么字符m和n最可能的编码分别是",
+      "options": [
+        {
+          "label": "A",
+          "text": "000和001"
+        },
+        {
+          "label": "B",
+          "text": "110和111"
+        },
+        {
+          "label": "C",
+          "text": "1010和1011"
+        },
+        {
+          "label": "D",
+          "text": "000和010"
+        }
+      ],
+      "answer": "C",
+      "explanation": "按频率从小到大排序：m(4)、n(4)、o(8)、p(20)、q(30)、r(34)。依次合并：m+n=mn(8)；o与mn(均为8)合并得omn(16)；omn与p(20)合并得omnp(36)；q(30)与r(34)合并得qr(64)；最后omnp与qr合并为根。m、n的路径为：根→omnp→omn→mn→{m,n}，深度为4，即编码长度为4位，只有选项C（1010和1011，均为4位）符合，选项A、B、D给出的都是3位编码，长度不对。"
+    },
+    {
+      "id": "EoJ1sFbU3YgSNUXDmwnBb",
+      "type": "single_choice",
+      "content": "考虑到频率为 {S: 17, T: 23, U: 29, V: 31} 的字符集，使用哈夫曼编码进行编码。关于这些字符编码长度的正确描述是",
+      "options": [
+        {
+          "label": "A",
+          "text": "T的编码长度小于U"
+        },
+        {
+          "label": "B",
+          "text": "S和T的编码长度相等"
+        },
+        {
+          "label": "C",
+          "text": "V的编码长度最短"
+        },
+        {
+          "label": "D",
+          "text": "U的编码长度大于S"
+        }
+      ],
+      "answer": "B",
+      "explanation": "按频率排序：S(17)、T(23)、U(29)、V(31)，无并列。合并S(17)和T(23)得ST(40)；合并U(29)和V(31)得UV(60)；最后ST与UV合并为根。四个字符S、T、U、V的编码长度全部相等，均为2位。因此\"S和T的编码长度相等\"（选项B）成立，而\"V的编码长度最短\"不成立，因为四个字符长度都相同，并非V独有最短。"
+    },
+    {
+      "id": "6eHRZ-WHyyGr5x-qB1ntz",
+      "type": "single_choice",
+      "content": "一个字符集 {H, I, J, K, L} 的出现频率分别为 21%, 20%, 19%, 20%, 20%。关于这个字符集的哈夫曼编码，以下哪项是正确的？",
+      "options": [
+        {
+          "label": "A",
+          "text": "所有字符的编码长度都相同"
+        },
+        {
+          "label": "B",
+          "text": "J的编码长度最短"
+        },
+        {
+          "label": "C",
+          "text": "H的编码长度最长"
+        },
+        {
+          "label": "D",
+          "text": "L的编码可能是01"
+        }
+      ],
+      "answer": "D",
+      "explanation": "按频率排序：J(19)最小，其余I(20)、K(20)、L(20)、H(21)。第一步必然合并J(19)与频率20的某个字符（I、K、L之一，因三者并列可任意选择），得到39的节点；剩下另外两个频率20的字符合并得到40的节点；最终J及其最先合并的伙伴所在分支深度为3，而H和另外两个频率20的字符深度为2。由于具体是谁先与J合并存在并列、可任意选择，L的深度可能是2也可能是3——当L不是最先与J合并的那个时，其编码长度为2位，此时编码取\"01\"是可能出现的，因此选项D是唯一在所有合并顺序下都可能成立的描述；而\"所有字符编码长度都相同\"\"J最短\"\"H最长\"在任何合并顺序下都不成立。"
+    }
+  ]
+}

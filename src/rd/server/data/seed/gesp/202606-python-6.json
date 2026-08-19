@@ -1,0 +1,571 @@
+{
+  "meta": {
+    "ym": "202606",
+    "lang": "python",
+    "level": 6,
+    "title": "CCF GESP 2026年6月认证 Python 6级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10284.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1753295565619232.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202606-python-6.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "下列关于  Python 中继承和多态的描述中,错误的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "当使用父类类型变量指向子类对象并调用方法时,会执行子类重写后的方法"
+        },
+        {
+          "key": "B",
+          "text": "子类通过重写父类中已有的方法,可以实现多态的效果"
+        },
+        {
+          "key": "C",
+          "text": "Python 中不需要手动声明虚方法,普通方法默认就支持多态调用"
+        },
+        {
+          "key": "D",
+          "text": "构造方法 __init__ 可以在运行时动态绑定,因此能像普通方法一样实现多态创建对象"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下列代码中,执行  d1.work() 和  d2.work() 输出不同结果的主要原因是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "Printer 和 Scanner 使用了相同的构造函数"
+        },
+        {
+          "key": "B",
+          "text": "子类重写了父类的 work 方法, Python 会根据对象实际类型调用对应版本的方法"
+        },
+        {
+          "key": "C",
+          "text": "d1 和 d2 是不同的变量"
+        },
+        {
+          "key": "D",
+          "text": "程序中使用了 del 释放对象"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面代码在  main() 中有一行会导致错误,请找出来(   )。\nclass Device:\n    def work(self):\n        print(\"Device is working\")\nclass Printer(Device):\n    def work(self):\n        print(\"Printer is printing\")\nclass Scanner(Device):\n    def work(self):\n        print(\"Scanner is scanning\")\nif __name__ == '__main__':\n    d1 = Printer()\n    d2 = Scanner()\n    d1.work()\n    d2.work()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18",
+      "options": [
+        {
+          "key": "A",
+          "text": "第 1 行"
+        },
+        {
+          "key": "B",
+          "text": "第 2 行"
+        },
+        {
+          "key": "C",
+          "text": "第 3 行"
+        },
+        {
+          "key": "D",
+          "text": "第 4 行"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "某文本编辑器把用户输入的字符依次压入栈  S。用户依次输入  X, Y, Z, W 后,连续执行两次撤销操作。\n每次撤销都会弹出栈顶一个字符。此时栈从栈底到栈顶的内容是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "X Y"
+        },
+        {
+          "key": "B",
+          "text": "X Y Z"
+        },
+        {
+          "key": "C",
+          "text": "Y Z"
+        },
+        {
+          "key": "D",
+          "text": "X Z"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "假设循环队列数组长度为  N = 7,队空判断条件为  front == rear。入队和出队操作如下:\n依次执行:\nclass Student:\n    def __init__(self, n, s):\n        self.__name = n\n        self.__score = s\n    def get_name(self):\n        return self.__name\n    def set_score(self, s):\n        self.__score = s\nif __name__ == '__main__':\n    stu = Student(\"Tom\", 85)\n    print(stu.get_name())    # 1\n    stu.set_score(90)        # 2\n    print(stu.__score)       # 3\n    print(stu.get_name())    # 4\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nN = 7\nq = [0] * N\nfront = 3\nrear = 3\ndef enqueue(x):\n    global rear\n    q[rear] = x\n    rear = (rear + 1) % N\ndef dequeue():\n    global front\n    front = (front + 1) % N\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nenqueue(10)\nenqueue(20)\nenqueue(30)\ndequeue()\nenqueue(40)\ndequeue()\nenqueue(50)\n1\n2\n3\n4\n5\n6\n7\n最终  (front, rear) 的值是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "(5, 1)"
+        },
+        {
+          "key": "B",
+          "text": "(4, 0)"
+        },
+        {
+          "key": "C",
+          "text": "(5, 0)"
+        },
+        {
+          "key": "D",
+          "text": "(3, 1)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "以下函数  check() 用于判断一棵二叉树是否为(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "满二叉树"
+        },
+        {
+          "key": "B",
+          "text": "完全二叉树"
+        },
+        {
+          "key": "C",
+          "text": "二叉搜索树"
+        },
+        {
+          "key": "D",
+          "text": "平衡二叉树"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "以下代码实现了二叉树的哪种遍历方式?(   )\nfrom collections import deque\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef check(root):\n    if not root:\n        return True\n    q = deque()\n    q.append(root)\n    has_null = False\n    while q:\n        cur = q.popleft()\n        if not cur:\n            has_null = True\n        else:\n            if has_null:\n                return False\n            q.append(cur.left)\n            q.append(cur.right)\n    return True\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef traverse(root):\n    if not root:\n        return\n    print(root.val, end=' ')\n    traverse(root.left)\n    traverse(root.right)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
+      "options": [
+        {
+          "key": "A",
+          "text": "前序遍历"
+        },
+        {
+          "key": "B",
+          "text": "中序遍历"
+        },
+        {
+          "key": "C",
+          "text": "后序遍历"
+        },
+        {
+          "key": "D",
+          "text": "层序遍历"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "已知一棵二叉树的先序遍历序列为:A B D E H C F G,中序遍历序列为:D B H E A F C G,\n则该二叉树的后序遍历序列是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "D H E B F G C A"
+        },
+        {
+          "key": "B",
+          "text": "D E H B F G C A"
+        },
+        {
+          "key": "C",
+          "text": "H D E B F C G A"
+        },
+        {
+          "key": "D",
+          "text": "D H E B G F C A"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "有   个字符,它们出现的次数分别为: ,现在用哈夫曼编码为这些字符编码,最小加权路\n径长度  WPL 的值为(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "对  n 个不同符号进行哈夫曼编码。若生成的哈夫曼树共有   个结点,则  n 的值是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "在格雷码中,相邻两个编码只能有一位不同。若当前编码为  110,则它的下一个编码不可能是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "给定一棵二叉树,采用广度优先搜索  BFS 返回其右视图,其中右视图中的每个节点都是该层最右侧的节\n点。横线处应填写(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "if i == 0: result.append(node.val)"
+        },
+        {
+          "key": "B",
+          "text": "if i == sz - 1: result.append(node.val)"
+        },
+        {
+          "key": "C",
+          "text": "result.append(q[0].val)"
+        },
+        {
+          "key": "D",
+          "text": "if node.right: result.append(node.right.val)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面代码实现二叉搜索树的插入操作。假设树中不存在重复值,横线处应填写(   )。\n\n```\ndef __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef rightSideView(root):\n    result = []\n    if not root:\n        return result\n    q = deque([root])\n    while q:\n        sz = len(q)\n        for i in range(sz):\n            node = q.popleft()\n            __________________________\n            if node.left:\n                q.append(node.left)\n            if node.right:\n                q.append(node.right)\n    return result\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef insertNode(root, x):\n    if not root:\n        return TreeNode(x)\n    if x < root.val:\n        __________________________\n    else:\n        root.right = insertNode(root.right, x)\n    return root\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": "root.left = insertNode(root.left, x)"
+        },
+        {
+          "key": "B",
+          "text": "root = insertNode(root.left, x)"
+        },
+        {
+          "key": "C",
+          "text": "root.right = insertNode(root.left, x)"
+        },
+        {
+          "key": "D",
+          "text": "insertNode(root.left, x) from collections import deque class TreeNode:"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "给定一个整数数组  a,每个元素表示一个位置上的数值。要求从数组中选择若干个元素,使得任意两个被\n选择的元素在原数组中都不相邻,并且所选元素的总和最大。函数  choose(a) 返回能够得到的最大总和,则横线\n处应填写(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "dp[i - 1] + a[i]"
+        },
+        {
+          "key": "B",
+          "text": "max(dp[i - 1], dp[i - 2] + a[i])"
+        },
+        {
+          "key": "C",
+          "text": "max(dp[i - 2], a[i])"
+        },
+        {
+          "key": "D",
+          "text": "dp[i - 1] + dp[i - 2]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "下面代码实现  0/1 背包的一维动态规划。第  i 个物品重量为  wt[i],价值为  val[i],背包容量为  W。\n横线处应填写(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "dp[w] = max(dp[w], dp[w - wt[i]] + val[i])"
+        },
+        {
+          "key": "B",
+          "text": "dp[w] = max(dp[w - 1], dp[w - wt[i]] + val[i])"
+        },
+        {
+          "key": "C",
+          "text": "dp[w] = dp[w] + val[i]"
+        },
+        {
+          "key": "D",
+          "text": "dp[w - wt[i]] = max(dp[w], val[i])"
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "Python 中没有虚方法的概念,__init__ 也不能声明为虚方法,且构造方法不实现运行时多态。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "在  Python 中,执行  del 删除一个子类对象时,会自动先调用子类的  __del__ 方法,再调用父类的\n__del__ 方法。\ndef choose(a):\n    if not a:\n        return 0\n    n = len(a)\n    if n == 1:\n        return a[0]\n    dp = [0] * n\n    dp[0] = a[0]\n    dp[1] = max(a[0], a[1])\n    for i in range(2, n):\n        dp[i] = __________________________\n    return dp[-1]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef knapsack(W, wt, val):\n    n = len(wt)\n    dp = [0] * (W + 1)\n    for i in range(n):\n        for w in range(W, wt[i] - 1, -1):\n            __________________________\n    return dp[W]",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "在  Python 标准库中,list 模拟栈时,list 非空的场景下,pop() 函数不传参数被调用时,会返回栈顶\n元素并将其删除。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "程序运行后会输出  2。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "以下函数可以正确完成二叉搜索树的插入,并保持二叉搜索树性质。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "哈夫曼编码一定唯一,只要字符频率相同,得到的编码也一定完全相同。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "若用数组按层序存储完全二叉树,且根节点下标为  0,则下标为  i 的节点左孩子下标为  2 * i + 1,右\n孩子下标为  2 * i + 2。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "以下代码可以正确地按层换行输出二叉树的节点值。\nfrom collections import deque\nq = deque()\nq.append(1)\nq.append(2)\nq.append(3)\nq.popleft()\nprint(q[0])\n\n\n\n\n\n\n\n\nclass TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\ndef insertNode(root, x):\n    if not root:\n        return TreeNode(x)\n    if x < root.val:\n        root.right = insertNode(root.right, x)\n    else:\n        root.left = insertNode(root.left, x)\n    return root",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "使用栈非递归实现二叉树前序遍历时,若希望先访问左子树,通常应先将右孩子入栈,再将左孩子入栈。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "动态规划问题通常要求具有最优子结构,并且常常存在重叠子问题。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "条形蛋糕",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n寒假到了,小杨同学打算找一份兼职,顺便体验一下打工人的生活。\n小杨同学给一家蛋糕店发送了一份自己的简历,希望可以在寒假来这里帮忙。店长最近正好遇到了一个难题:店里\n每天会做一条长条蛋糕,但是不同长度的蛋糕块卖出的价格不同,应该怎么分才能卖得最多呢?\n有趣的是店长曾经学习过计算机专业。他最近对动态规划算法很感兴趣,于是打算用这个问题考一考小杨同学,问\n题如下:\n给定一条长度为   的长条蛋糕和一个价格表,该价格表表示长度为  ( )的蛋糕块的价格为  。求\n蛋糕的分割方案,使得总销售价格最大,注意蛋糕块的长度必须为整数。\n3.1.2\n\n输入格式\n第一行一个正整数  ( ),表示长条蛋糕的总长度。\n第二行   个正整数  ( ),表示不同长度蛋糕块的价格。\nfrom collections import deque\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef printByLevel(root):\n    if not root:\n        return\n    q = deque([root])\n    while q:\n        for i in range(len(q)):\n            cur = q.popleft()\n            print(cur.val, end=' ')\n            if cur.left:\n                q.append(cur.left)\n            if cur.right:\n                q.append(cur.right)\n        print()\n\n3.1.3 输出格式\n一行一个正整数,表示最大总销售价格。\n3.1.4 输入样例  1\n3.1.5 输出样例  1\n3.1.6 输入样例  2\n3.1.7 输出样例  2\n3.1.8 样例解释\n第一个样例中,长度为   的蛋糕价值为  ,长度为   的蛋糕价值为  ,长度为   的蛋糕价值为  ,长度为   的蛋糕价\n值为  ;\n总长度为   的长条蛋糕,有   五种本质不同的分法。\n其对应的总销售价格分别为  ,故最大总销售价格为  。\n第二个样例中,长度为   的长条蛋糕,销售价格最大的分法为  ,最大总销售价格为  。\n3.1.9",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "满二叉树",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n给定一棵包含   个结点的有根二叉树,结点依次以   编号,根结点编号为  。\n对于结点  ,其左儿子的编号记为  ,右儿子编号记为  。特别地,如果左儿子不存在则  ,如果右儿子不存在\n则  。\n树中每个结点都对应一棵以其为根的子树。请你求出给定有根树的所有   棵子树中,有多少棵子树是满二叉树。\n满二叉树是指所有叶子深度均相同,且除叶子外均有两个儿子的二叉树,例如以下三棵二叉树均是满二叉树:\n例如,\n在上面这棵有   个节点的二叉树中,有   个子树是满二叉树(包括整个树本身,及所有的单个叶子节点);\n又例如,\n# 蛋糕长度\nn = int(input())\n# 蛋糕长度及其对应的价钱\np = list(map(int, input().split()))\np = [0] + p\n# f[i][j] = 只使用长度  1..i 的蛋糕块,总长度为  j 时的最大总价,但是 i 维度被隐藏了。这个版本耗费的空间更\n小,时间复杂度一样\nf = [0] * (n + 1)\n# 当前最大的蛋糕长度\n    # 蛋糕长度 j\n        # 长度为 j ,且最大分块不超过 i 的蛋糕的价钱,要么是原有的方案,要么是最后一刀为 i 的方案。\n        # 需要注意的是 f[j-i] 可能其最优价格已经包含了长度为 i 的蛋糕,因此 f[j] 不一定只包含一块长度为 i 的蛋糕\n        f[j] = max(f[j], f[j - i] + p[i])\nprint(f[n])\n\n()      ()            ()\n       /  \\          /  \\\n     ()    ()      ()    ()\n                  /  \\  /  \\\n                ()   ()()   ()\n\n   ()\n  /  \\\n()    ()\n\n   (1)\n  /   \\\n(2)   (3)\n     /   \\\n   (4)   (5)\n\n在上面这棵有   个节点的二叉树中,有   个子树是满二叉树(包括节点   的子树,以及所有单个叶子节点)。\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示有根二叉树结点数量。\n接下来   行,每行两个非负整数  ,表示结点   的左儿子编号和右儿子编号,整数之间以空格分隔。\n3.2.3 输出格式\n输出一行,一个整数,表示所有子树中满二叉树的数量。\n3.2.4 样例\n3.2.5 输入样例  1\n3.2.6 输出样例  1\n3.2.7 输入样例  2\n3.2.8 输出样例  2\n3.2.9 数据范围\n对于   的测试点,保证  。\n对于所有测试点,保证  。\n\n2 3\n4 0\n0 0\n0 0\n\n2 3\n0 0\n0 0\n\n3.2.10",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n5\n21\n3\n",
+          "out": "3\n",
+          "suspect": true
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "D",
+      "B",
+      "C",
+      "A",
+      "A",
+      "B",
+      "A",
+      "A",
+      "B",
+      "B",
+      "D",
+      "B",
+      "A",
+      "B",
+      "A"
+    ]
+  ]
+}

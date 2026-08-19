@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "ym": "000000",
+    "lang": "python",
+    "level": 3,
+    "title": "GESP 6月认证 Python三级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10092.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1553040171597856.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/000000-python-3.pdf"
+  },
+  "choice": [],
+  "tf": [],
+  "program": [],
+  "answer_rows": [
+    [
+      "D",
+      "D",
+      "D",
+      "D",
+      "D",
+      "C",
+      "D",
+      "D",
+      "C",
+      "A",
+      "B",
+      "A",
+      "D",
+      "C",
+      "B"
+    ]
+  ]
+}

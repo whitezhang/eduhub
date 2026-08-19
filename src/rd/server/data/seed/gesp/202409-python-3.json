@@ -1,0 +1,568 @@
+{
+  "meta": {
+    "ym": "202409",
+    "lang": "python",
+    "level": 3,
+    "title": "GESP 9月认证 Python 三级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10166.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1633836513361952.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202409-python-3.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "据有关资料,山东大学于 1972 年研制成功 DJL-1 计算机,并于 1973 年投入运行,其综合性能居当时全国第三\n位。 DJL-1 计算机运算控制部分所使用的磁心存储元件由磁心颗粒组成,设计存贮周期为 2μs (微秒)。那么该磁心\n存储元件相当于现代计算机的(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "内存"
+        },
+        {
+          "key": "B",
+          "text": "磁盘"
+        },
+        {
+          "key": "C",
+          "text": "CPU"
+        },
+        {
+          "key": "D",
+          "text": "显示器"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "Python 程序执行出现错误,不太常见的调试手段是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "阅读源代码"
+        },
+        {
+          "key": "B",
+          "text": "单步调试"
+        },
+        {
+          "key": "C",
+          "text": "输出执行中间结果"
+        },
+        {
+          "key": "D",
+          "text": "跟踪计算机执行的底层代码(如二进制机器码,汇编码)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下列表达式的值与其它三个选项不相等的是哪一个?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "如果要遍历字典 my_dict 中的所有项(键和值),应该使用如下哪种语句?(  )\n\n```\nfor key in my_dict:\nfor key, value in my_dict.items():\nfor value in my_dict:\nfor key, value in my_dict:\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{1: 1, 2: 2, 4: 4, 5: 5}"
+        },
+        {
+          "key": "B",
+          "text": "{1: 1, 2: 2, 3: 3}"
+        },
+        {
+          "key": "C",
+          "text": "{1: 1, 2: 2, 5: 5}"
+        },
+        {
+          "key": "D",
+          "text": "{1: 1, 2: 2, 3: 4, 4: 5}"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "对于元组  t = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) ,执行  t[::5] 将返回哪个子元组?",
+      "options": [
+        {
+          "key": "A",
+          "text": "(1, 6)"
+        },
+        {
+          "key": "B",
+          "text": "(1, 2, 3, 4, 5)"
+        },
+        {
+          "key": "C",
+          "text": "(6, )"
+        },
+        {
+          "key": "D",
+          "text": "(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "出错,因为 index 方法需要两个参数"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "对于列表  lst = [1, 2, 3, 4] ,执行以下哪个列表推导式可以得到  [1, 4, 9, 16] ?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[x*2 for x in lst]"
+        },
+        {
+          "key": "B",
+          "text": "[x for x in lst if x > 2]"
+        },
+        {
+          "key": "C",
+          "text": "[x**2 for x in lst]"
+        },
+        {
+          "key": "D",
+          "text": "[x for x in range(len(lst))]"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[1, 2, 4, 5]"
+        },
+        {
+          "key": "B",
+          "text": "[2, 3, 4, 5] my_dict = {i: i for i in range(1, 6)} del my_dict[3] print(my_dict) my_tuple = (1, 2, 3, 3, 2, 1) print(my_tuple.index(2)) my_list = [1, 2, 3, 4, 5] temp = [num for num in my_list if num % 2 == 0] my_list.remove(temp[1]) print(my_list)"
+        },
+        {
+          "key": "C",
+          "text": "[1, 3, 4, 5]"
+        },
+        {
+          "key": "D",
+          "text": "[1, 2, 3, 5]"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "在 Python 中,以下哪个方法可以用于去除字符串两端的空白字符?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "count()"
+        },
+        {
+          "key": "B",
+          "text": "index()"
+        },
+        {
+          "key": "C",
+          "text": "strip()"
+        },
+        {
+          "key": "D",
+          "text": "remove()"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输入 “CCF2024” 输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "CCF2024"
+        },
+        {
+          "key": "B",
+          "text": "&&&202&"
+        },
+        {
+          "key": "C",
+          "text": "CCF&&&4"
+        },
+        {
+          "key": "D",
+          "text": "&&&2024"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "假设有一个集合  s = {1, 2, 3} ,以下哪个操作会添加元素  4 到集合中?()",
+      "options": [
+        {
+          "key": "A",
+          "text": "s.add(4)"
+        },
+        {
+          "key": "B",
+          "text": "s.update(4)"
+        },
+        {
+          "key": "C",
+          "text": "s.append(4)"
+        },
+        {
+          "key": "D",
+          "text": "s.extend(4)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{2, 3}"
+        },
+        {
+          "key": "B",
+          "text": "{2, 3, 4}"
+        },
+        {
+          "key": "C",
+          "text": "{3, 4}"
+        },
+        {
+          "key": "D",
+          "text": "{1, 2, 3, 4, 5} w = input() for x in w: if x == '0' or x == '2': continue else: w.replace(x, '&') print(w) set1 = {1, 2, 3} set2 = {2, 3, 4} set3 = {3, 4, 5} set4 = (set1 & set2) | (set2 & set3) print(set4) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,不可能输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "['a', 'e', 'a', 'e', 'e', 'e', 'a']"
+        },
+        {
+          "key": "B",
+          "text": "['a', 'a', 'a', 'e', 'e', 'e']"
+        },
+        {
+          "key": "C",
+          "text": "['a', 'e', 'a', 'a', 'a', 'e']"
+        },
+        {
+          "key": "D",
+          "text": "['a', 'e', 'i', 'o', 'u']"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小杨最近开始学习 C++ 编程,老师说 C++ 是一门面向对象的编程语言 , 也是一门高级语言。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "程序不一定满足有穷性,而算法必须满足有穷性的特征。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 代码a = {}被执行后, a 的数据类型为 dict 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "执行语句  int('2b',16) 后输出的结果是 43 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "Python 代码print(list(range(100))[::-2])被执行后,将从大到小输出所有 0-100 之间所有偶数,不含\n100 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "Python 代码print(\"\".join(sorted(\"GESP\")))被执行后,输出为'EGPS'。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "在 Python 中,使用加法运算符+可以对两个字符串、列表、元组甚至是字典进行合并,即以下赋值语句都是\n合法的。\nmy_str = \"1234554321\"\nmy_list = list(my_str)\nmy_set = set(my_list)\nprint(\"\".join(my_set))\n\n\n\n\nwords = [\"apple\", \"banana\", \"cherry\"]\nvowels = 'aeiou'\nresult = []\nfor word in words:\n    for char in word:\n        if char in vowels:\n            result.append(char)\nprint(result)",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "执行下列两段 Python 代码,输出的结果相同。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "执行下列 Python 代码,输出的结果是  [\"banana\", \"orange\"] 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "用 50 元钱兑换面值为 1 元、 2 元、 5 元的纸币共 25 张。每种纸币不少于 1 张,问有多少种兑换方案。可以使用\n枚举的方法来求解这个问题。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "平衡序列",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有一个包含   个正整数的序列  ,他认为一个序列是平衡的当且仅当存在一个正整数  ( )使得序列第\n 个到第   个数字的总和等于第   个到第   个数字的总和。\n小杨想请你判断序列   是否是平衡的。\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,代表测试用例组数。\n接下来是   组测试用例。对于每组测试用例,一共两行。\n第一行包含一个正整数  ,代表序列长度。\n第二行包含   个正整数,代表序列  。\nmy_str = \"ccf\" + \"2024\"\nmy_list = [1, 2, 3] + [3, 4, 5]\nmy_tuple = (1, 2, 3) + (4,)\nmy_dict = {1: 'one', 2: 'two'} + {3: 'three'}\n\ns = list(\"CCF-GESP\")\ni, j = 0, len(s) - 1\nwhile i < j:\n    s[i], s[j] = s[j], s[i]\n    i += 1\n    j -= 1\nprint(\"\".join(s))\n\ns = list(\"CCF-GESP\")\ns[:] = s[::-1]\nprint(\"\".join(s))\n\nmy_set = set(\"banana\")\nmy_list = list(my_set)\nmy_list.extend(\"orange\")\nprint(my_list)\n\n3.1.3 输出格式\n对于每组测试用例,如果序列   是否是平衡的,输出  Yes ,否则输出  No 。\n3.1.4 样例 1\n对于第一组测试用例,令  ,则有  ,因此序列是平衡的;\n对于第二组测试用例,令  ,则有  ,因此序列是平衡的;\n对于第三组测试用例,不存在满足要求的   。\n对于全部数据,保证有  。\n3.1.5",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "回文拼接",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n一个字符串是回文串,当且仅当该字符串从前往后读和从后往前读是一样的,例如,  和   都是回文串,\n但   不是。\n小杨有   个仅包含小写字母的字符串,他想请你编写程序判断每个字符串是否由两个长度至少为   的回文串前后拼\n接而成。\n3.2.2\n\n输入格式\n第一行包含一个正整数  ,代表字符串数量。\n之后   行每行一个仅包含小写字母的字符串。\n3.2.3 输出格式\n对于每个字符串输出一行,如果该字符串由两个长度至少为   的回文串前后拼接而成则输出  Yes ,否则输出  No 。\n3.2.4 样例 1\n对于第   个字符串,都不是由两个长度至少为   的回文串前后拼接而成。\n第   个字符串由回文串   和   前后拼接而成,并且两个回文串长度都至少为  。\n对于全部数据,保证有  ,并且每个字符串的长度不超过  。\n3.2.5",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "A",
+      "D",
+      "B",
+      "B",
+      "A",
+      "A",
+      "D",
+      "C",
+      "D",
+      "C",
+      "A",
+      "A",
+      "B",
+      "D",
+      "C"
+    ]
+  ]
+}

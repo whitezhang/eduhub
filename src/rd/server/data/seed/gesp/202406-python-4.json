@@ -1,0 +1,577 @@
+{
+  "meta": {
+    "ym": "202406",
+    "lang": "python",
+    "level": 4,
+    "title": "GESP 6月认证 Python 四级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10147.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1621071855878176.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202406-python-4.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "小杨父母带他到某培训机构给他报名参加 CCF 组织的 GESP 认证考试的第 1 级,那他可以选择的认证语言有几\n种?(       )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下面流程图在 yr 输入 2024 时,可以判定 yr 代表闰年,并输出2 月是 29 天,则图中菱形框中应该填入(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "(yr%400==0) || (yr%4==0)"
+        },
+        {
+          "key": "B",
+          "text": "(yr%400==0) || (yr%4==0 && yr%100!=0)"
+        },
+        {
+          "key": "C",
+          "text": "(yr%400==0) && (yr%4==0)"
+        },
+        {
+          "key": "D",
+          "text": "(yr%400==0) && (yr%4==0 && yr%100!=0)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果可能是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{'Tom': 10, 'Join': 13, 'Gaia': 12}"
+        },
+        {
+          "key": "B",
+          "text": "{'TOM': 10, 'JOIN': 13, 'GAIA': 12}"
+        },
+        {
+          "key": "C",
+          "text": "{('JOIN', 13), ('TOM', 10), ('GAIA', 12)}"
+        },
+        {
+          "key": "D",
+          "text": "{('Join', 13), ('Tom', 10), ('Gaia', 12)}"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "函数 fun 的定义如下,调用该函数的语句错误的是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "fun(1, 2, 3)"
+        },
+        {
+          "key": "B",
+          "text": "fun(1, 2)"
+        },
+        {
+          "key": "C",
+          "text": "fun(y=2, x=1)"
+        },
+        {
+          "key": "D",
+          "text": "fun(1, y=2, 3)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "语法错误"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "name = ('Tom', 'Join', 'Gaia') age = (10, 13, 12) print({(a.upper(), b) for a, b in zip(name, age)}) def fun(x, y, z=3): print(x, y, z) def fun(x, y, *nums): res = x + y for i in nums: res += i return res print(fun(10, 20, 15, 25, 30)) def fun(x, y, **kwargs): res = x + y for i in kwargs.values(): res += i return res print(fun(10, 20, A=6, B=1, C=3))"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "语法错误"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "执行下面 python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "1#3#"
+        },
+        {
+          "key": "B",
+          "text": "1#1#"
+        },
+        {
+          "key": "C",
+          "text": "3#3#"
+        },
+        {
+          "key": "D",
+          "text": "add 函数语法错误"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "执行下面 python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "5#5#"
+        },
+        {
+          "key": "B",
+          "text": "5#1#"
+        },
+        {
+          "key": "C",
+          "text": "1#1#"
+        },
+        {
+          "key": "D",
+          "text": "1#5#"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "执行下面 python 代码后,输出的结果是?(  )\ndef add():\n    count = 1\n    def fun():\n        nonlocal count\n        print(count, end=\"#\")\n        count += 2\n    return fun\na = add()\na()\na()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\ns = 1\ndef sums(n):\n    global s\n    s = 0\n    s = s + n\n    print(s, end=\"#\")\nsums(5)\nprint(s, end=\"#\")\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
+      "options": [
+        {
+          "key": "A",
+          "text": "[10, 20, 30] [10, 20, 30]"
+        },
+        {
+          "key": "B",
+          "text": "[10, 20, 30, 40] [10, 20, 30, 40]"
+        },
+        {
+          "key": "C",
+          "text": "[10, 20, 30] [10, 20, 30, 40]"
+        },
+        {
+          "key": "D",
+          "text": "[10, 20, 30, 40] None"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "在一个农场上,有一头母牛。根据农场的规则,这头母牛每年年初都会生出一头小母牛。每头新生的小母\n牛从它们出生的第四个年头开始,也会每年年初生出一头新的小母牛。假设没有母牛死亡,并且每头母牛都严格遵\n循这个规则。下列程序用来计算在第 年时,农场上共有多少头母牛,其中横线处填写的代码为?()",
+      "options": [
+        {
+          "key": "A",
+          "text": "lst[i - 1] + lst[i - 3]"
+        },
+        {
+          "key": "B",
+          "text": "lst[i - 2] + lst[i - 3]"
+        },
+        {
+          "key": "C",
+          "text": "lst[i - 1] + lst[i - 2]"
+        },
+        {
+          "key": "D",
+          "text": "lst[-1] + lst[-3]"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "程序段如下:\n其中, n 为正整数,则该段程序的最坏时间复杂度是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "B. def add(c): d = c.append(40) return d a = [10, 20, 30] b = add(a) print(a, b) lst = [0] * 100 lst[1:4] = [1, 2, 3, 4] def calculate_cows(n): if n <= 4: return lst[n] i = 5 while i <= n: lst[i] = __________ i += 1 return lst[i - 1] def fun(arr: list): n = len(arr) for i in range(n - 1): for j in range(0, n - i - 1): if arr[j] > arr[j + 1]: arr[j], arr[j + 1] = arr[j + 1], arr[j]"
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{'Java', Python'}"
+        },
+        {
+          "key": "B",
+          "text": "{SQL', 'C++'}"
+        },
+        {
+          "key": "C",
+          "text": "{'Java', 'SQL', 'Python', 'C++'}"
+        },
+        {
+          "key": "D",
+          "text": "{'Java'}"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[3, 1, 2, 4, 0]"
+        },
+        {
+          "key": "B",
+          "text": "[0, 4, 2, 1, 3]"
+        },
+        {
+          "key": "C",
+          "text": "[3, 0, 2, 1, 4]"
+        },
+        {
+          "key": "D",
+          "text": "[0, 3, 2, 4, 1]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,文件 ip.txt 中的内容用记事本打开时显示为?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "202.206.224.21192.168.224.1"
+        },
+        {
+          "key": "B",
+          "text": "202.206.224.21 192.168.224.1"
+        },
+        {
+          "key": "C",
+          "text": "202.206.224.21\\n192.168.224.1"
+        },
+        {
+          "key": "D",
+          "text": "202.206.224.21\\n192.168.224.1\\n"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码,输入 0 和字符串 “abc” 后,输出的结果是?(  )\nusers = [\n    {\"name\": \"Tom\", \"skills\": {\"Python\", \"Java\", \"C++\"}},\n    {\"name\": \"Join\", \"skills\": {\"Python\", \"Java\"}},\n    {\"name\": \"Gaia\", \"skills\": {\"Java\", \"C++\", \"SQL\"}}\n]\nskills_sets = (user['skills'] for user in users)\ncommon_skills = set.intersection(*skills_sets)\nprint(common_skills)\n1\n2\n3\n4\n5\n6\n7\n8\n9\nlst = [1, 4, 3, 5, 2]\nlst = [i[0] for i in sorted(enumerate(lst), key=lambda x: x[1])]\nprint(lst)\n1\n2\n3\nwith open(\"ip.txt\", \"w\") as f:\n    lst = [\"202.206.224.21\\n\", \"192.168.224.1\\n\"]\n    f.writelines(lst)\n1\n2\n3\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "0#2#3#"
+        },
+        {
+          "key": "B",
+          "text": "0#3#"
+        },
+        {
+          "key": "C",
+          "text": "1#2#3#"
+        },
+        {
+          "key": "D",
+          "text": "1#3#"
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "GESP 测试是对认证者的编程能力进行等级认证,同一级别的能力基本上与编程语言无关。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "在 Python 中, print(list(\"GESP\")) 执行后输出 ['G', 'E', 'S', 'P'] 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出两个 True 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出两个 True 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码,调用函数 fun 可以得到一个元组类型的数据。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "Python 程序中,全局变量与局部变量不允许重名。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "下面这段程序的时间复杂度为平方阶 。(  )\ntry:\n    a = int(input())\n    b = int(input())\n    x = a / b\n    print(x, end=\"#\")\nexcept ZeroDivisionError:\n    print(0, end=\"#\")\nexcept:\n    print(1, end=\"#\")\nelse:\n    print(2, end=\"#\")\nfinally:\n    print(3, end=\"#\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nprint(\"h\" in \"hello\")\nprint(\"he\" in \"hello\")\n\n\nlst1 = [1, 2, 3]\nlst2 = lst1[:]\nprint(lst1 == lst2, lst1 is lst2)\n\n\n\ndef fun(a, b):\n    return a // b, a % b\nprint(type(fun(8, 5)))",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "Python 在处理程序异常时,异常处理结构能够发现程序段中的语法错误。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "要打开一个已经存在的图片文件并读取但不修改数据,则打开模式应该设定为 rb 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出的结果为 za 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "黑白方块",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有一个   行   列的网格图,其中每个格子要么是白色,要么是黑色。\n对于网格图中的一个子矩形,小杨认为它是平衡的当且仅当其中黑色格子与白色格子数量相同。\n小杨想知道最大的平衡子矩形包含了多少个格子。\n3.1.2\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n之后   行,每行一个长度为   的   串,代表网格图第   行格子的颜色,如果为  ,则对应格子为白色,否则为黑\n色。\n3.1.3 输出格式\n输出一个整数,代表最大的平衡子矩形包含格子的数量,如果不存在则输出  。\n3.1.4 样例 1\ndef fun(n):\n    sum1 = 0\n    for i in range(n):\n        sum1 += i\n\nprint(max('az', 'za', key=lambda a: a[0]))1\n4 5\n\n3.1.5 样例解释\n对于样例 1 ,假设  ( ) 代表第   行第   列,最大的平衡子矩形的四个顶点分别为  ( ) , ( ) , ( ) , ( ) 。\n3.1.6 数据范围\n对于全部数据,保证有  。\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "4\n00000\n01111\n00011\n00011\n",
+          "out": "16\n",
+          "suspect": true
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "宝箱",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨发现了   个宝箱,其中第   个宝箱的价值是  。\n小杨可以选择一些宝箱放入背包并带走,但是小杨的背包比较特殊,假设小杨选择的宝箱中最大价值为  ,最小价值\n为  ,小杨需要保证  ,否则小杨的背包会损坏。\n小杨想知道背包不损坏的情况下,自己能够带走宝箱的总价值最大是多少。\nN = 55\nw = [[0] * N for _ in range(N)]\ndef check(xa, ya, xb, yb):\n    a = [0, 0]\n            a[w[i][j]] += 1\n    return a[0] == a[1]\ndef main():\n    n, m = map(int, input().split())\n        s = input()\n            w[i][j] = int(s[j - 1])\n    ans = 0\n                    if check(i, j, ii, jj):\n                        ans = max(ans, (ii - i + 1) * (jj - j + 1))\n    print(ans)\nif __name__ == \"__main__\":\n    main()\n\n3.2.2\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n第二行包含   个正整数  ,代表宝箱的价值。\n3.2.3 输出格式\n输出一个整数,代表带走宝箱的最大总价值。\n3.2.4 样例 1\n3.2.5 样例解释\n在背包不损坏的情况下,小杨可以拿走两个价值为   的宝箱和一个价值为   的宝箱。\n3.2.6 数据范围\n对于全部数据,保证有  。\n3.2.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "B",
+      "C",
+      "D",
+      "C",
+      "A",
+      "A",
+      "A",
+      "D",
+      "A",
+      "D",
+      "D",
+      "B",
+      "B",
+      "D"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

@@ -1,0 +1,535 @@
+{
+  "meta": {
+    "ym": "202506",
+    "lang": "cpp",
+    "level": 8,
+    "title": "CCF GESP 2025年6月认证 C++ 8级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1687196088139808.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202506-cpp-8.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "一间的机房要安排 6 名同学进行上机考试,座位共 2 行 3 列。考虑到在座位上很容易看到同一行的左右两侧的\n屏幕,安排中间一列的同学做 A 卷,左右两列的同学做 B 卷。请问共有多少种排座位的方案?(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "又到了毕业季,学长学姐们都在开心地拍毕业照。现在有 3 位学长、 3 位学姐希望排成一排拍照,要求男生不\n相邻、女生不相邻。请问共有多少种拍照方案?(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下列关于 C++ 类和对象的说法,错误的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "通过语句const int x = 5; 定义了一个对象x 。"
+        },
+        {
+          "key": "B",
+          "text": "通过语句std::string t = \"12345\"; 定义了一个对象t 。"
+        },
+        {
+          "key": "C",
+          "text": "通过语句void (*fp)() = NULL; 定义了一个对象fp 。"
+        },
+        {
+          "key": "D",
+          "text": "通过语句class MyClass; 定义了一个类MyClass 。"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "关于生成树的说法,错误的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "一个无向连通图,一定有生成树。"
+        },
+        {
+          "key": "B",
+          "text": "个顶点的无向图,其生成树要么不存在,要么一定包含 条边。"
+        },
+        {
+          "key": "C",
+          "text": "个顶点、 条边的无向图,不可能有多颗生成树。"
+        },
+        {
+          "key": "D",
+          "text": "个顶点、 条边的无向图,它本身就是自己的生成树。"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "一对夫妻生男生女的概率相同。这对夫妻希望儿女双全。请问这对夫妻生下两个孩子时,实现儿女双全的概\n率是多少?(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "已定义变量 double a, b; ,下列哪个表达式可以用来判断一元二次方程 是否有实根?(\n)。",
+      "options": [
+        {
+          "key": "A",
+          "text": "4 * b - a * a < 0"
+        },
+        {
+          "key": "B",
+          "text": "4 * b <= a * a"
+        },
+        {
+          "key": "C",
+          "text": "a * a - 4 * b"
+        },
+        {
+          "key": "D",
+          "text": "b * 4 - a * a"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "个结点的二叉树,执行广度优先搜索的平均时间复杂度是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "以下关于动态规划的说法中,错误的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "动态规划方法通常能够列出递推公式。"
+        },
+        {
+          "key": "B",
+          "text": "动态规划方法的时间复杂度通常为状态的个数。"
+        },
+        {
+          "key": "C",
+          "text": "动态规划方法有递推和递归两种实现形式。"
+        },
+        {
+          "key": "D",
+          "text": "对很多问题,递推实现和递归实现动态规划方法的时间复杂度相当。"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面的 sum_digit 函数试图求出从 1 到 n (包含 1 和 n )的数中,包含数字 d 的个数。该函数的时间复杂\n度为(  )。\n#include <string>\nint count_digit(int n, char d) {\n    int cnt = 0;\n    std::string s = std::to_string(n);\n    for (int i = 0; i < s.length(); i++)\n        if (s[i] == d)\n            cnt++;\n    return cnt;\n}\nint sum_digit(int n, char d) {\n    int sum = 0;\n    for (int i = 1; i <= n; i++)\n        sum += count_digit(i, d);\n    return sum;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面程序的输出为(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 count_triple 函数的时间复杂度为(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B. #include <iostream> const int N = 10; int ch[N][N][N]; int main() { for (int x = 0; x < N; x++) for (int y = 0; y < N; y++) for (int z = 0; z < N; z++) if (x == 0 && y == 0 && z == 0) ch[x][y][z] = 1; else { if (x > 0) ch[x][y][z] += ch[x - 1][y][z]; if (y > 0) ch[x][y][z] += ch[x][y - 1][z]; if (z > 0) ch[x][y][z] += ch[x][y][z - 1]; } std::cout << ch[1][2][3] << std::endl; return 0; } int gcd(int a, int b) { if (a == 0) return b; return gcd(b % a, a); } int count_triple(int n) { int cnt = 0; for (int v = 1; v * v * 4 <= n; v++) for (int u = v + 1; u * (u + v) * 2 <= n; u += 2) if (gcd(u, v) == 1) { int a = u * u - v * v; int b = u * v * 2; int c = u * u + v * v; cnt += n / (a + b + c); } return cnt; }"
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 quick_sort 函数试图实现快速排序算法,两处横线处分别应该填入的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面 LIS 函数试图求出最长上升子序列的长度,横线处应该填入的是(  )。\nvoid swap(int & a, int & b) {\n    int temp = a; a = b; b = temp;\n}\nint partition(int a[], int l, int r) {\n    int pivot = a[l], i = l + 1, j = r;\n    while (i <= j) {\n        while (i <= j && a[j] >= pivot)\n            j--;\n        while (i <= j && a[i] <= pivot)\n            i++;\n        if (i < j)\n            swap(a[i], a[j]);\n    }\n    ________;         // 在此处填入选项\n    return ________;  // 在此处填入选项\n}\nvoid quick_sort(int a[], int l, int r) {\n    if (l < r) {\n        int pivot = partition(a, l, r);\n        quick_sort(a, l, pivot - 1);\n        quick_sort(a, pivot + 1, r);\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\nswap(a[l], a[i])\ni\n1\n2\nswap(a[l], a[j])\ni\n1\n2\nswap(a[l], a[i])\nj\n1\n2\nswap(a[l], a[j])\nj\n1\n2\nint max(int a, int b) {\n    return (a > b) ? a : b;\n}\nint LIS(vector<int> & nums) {\n    int n = nums.size();\n    if (n == 0)\n        return 0;\n    vector<int> dp(n, 1);\n    int maxLen = 1;\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面LIS 函数试图求出最长上升子序列的长度,其时间复杂度为(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "下面的程序使用邻接矩阵表达的带权无向图,则从顶点 0 到顶点 3 的最短距离为(   )。\n    for (int i = 1; i < n; i++) {\n        for (int j = 0; j < i; j++)\n            if (nums[j] < nums[i])\n                ________;  // 在此处填入选项\n        maxLen = max(maxLen, dp[i]);\n    }\n    return maxLen;\n}\n10\n11\n12\n13\n14\n15\n16\n17\ndp[j] = max(dp[j] + 1, dp[i])1\ndp[j] = max(dp[j], dp[i] + 1)1\ndp[i] = max(dp[i] + 1, dp[j])1\ndp[i] = max(dp[i], dp[j] + 1)1\n#define INT_MIN (-1000)\nint LIS(vector<int> & nums) {\n    int n = nums.size();\n    vector<int> tail;\n    tail.push_back(INT_MIN);\n    for (int i = 0; i < n; i++) {\n        int x = nums[i], l = 0, r = tail.size();\n        while (l < r) {\n            int mid = (l + r) / 2;\n            if (tail[mid] < x)\n                l = mid + 1;\n            else\n                r = mid;\n        }\n        if (r == tail.size())\n            tail.push_back(x);\n        else\n            tail[r] = x;\n    }\n    return tail.size() - 1;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "C++ 语言中,表达式9 | 12 的结果类型为int 、值为13 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "C++ 语言中,访问数据发生下标越界时,总是会产生运行时错误,从而使程序异常退出。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "对 个元素的数组进行归并排序,最差情况的时间复杂度为 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "5 个相同的红球和 4 个相同的蓝球排成一排,要求每个蓝球的两侧都必须至少有一个红球,则一共有 15 种排列\n方案。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "使用math.h 或cmath 头文件中的函数,表达式log(8) 的结果类型为double 、值约为3 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "C++ 是一种面向对象编程语言, C 则不是。继承是面向对象三大特性之一,因此,使用 C 语言无法实现继承。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "个顶点的无向完全图,有 棵生成树。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "已知三个double 类型的变量a 、b 和theta 分别表示一个三角形的两条边长及二者的夹角(弧度),则三\n角形的周长可以通过表达式sqrt(a * a + b * b - 2 * a * b * cos(theta)) 求得。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "有 个顶点、 条边的图的深度优先搜索遍历时间复杂度为 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "从 32 名学生中选出 4 人分别担任班长、副班长、学习委员和组织委员,老师要求班级综合成绩排名最后的 4\n名学生不得参选班长或学习委员(仍可以参选副班长和组织委员),则共有 种不同的选法。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "树上旅行",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n    { 0,  5,  8, 10},\n    { 5,  0,  1,  7},\n    { 8,  1,  0,  3},\n    {10,  7,  3,  0}};\n\n3.1.1 题目描述\n给定一棵有   个结点的有根树,结点依次以   编号,其中根结点的编号为  。\n小  A 计划在这棵有根树上进行   次旅行。在第   次旅行中,小  A 首先会选定结点   作为起点,并移动若干次。移动\n分为以下两种:\n1. 移动至当前结点的父结点。特殊地,如果当前位于根结点,则不进行移动。\n2. 移动至当前结点的所有子结点中编号最小的结点。特殊地,如果当前位于叶子结点,则不进行移动。\n由于移动次数可能很大,对于第   次旅行,旅行中的移动将以   个不为零的整数构成的序列   表\n示。对于  ,若   则代表进行   次第一种移动;若   则代表进行   次第二种移动。根据给出的序\n列从左至右完成所有移动后,小  A 所在的结点即是旅行的终点。\n给定每次旅行的起点与移动序列,请你求出旅行终点的结点编号。\n3.1.2\n\n输入格式\n第一行,两个正整数  ,分别表示有根树的结点数量,以及旅行次数。\n第二行,  个整数  ,其中   表示结点   的父结点编号。\n接下来   行中的第   行( )包含两个正整数  ,分别表示第   次旅行的起点编号,以及移动序列\n的长度。第   行包含   个整数  ,表示移动序列。\n3.1.3 输出格式\n输出共   行,第   行包含一个整数,表示第   次旅行终点的结点编号。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n5 4\n1 1 2 2\n3 3\n1 -1 -1\n2 5\n1 -1 1 -1 1\n5 8\n1 1 1 -1 -1 -1 -1 -1\n5 3\n-1 -1 1\n\n子任务编号 测试点占比 特殊性质\n1 % 保证  为  或\n2 % 仅包含第一种移动\n3 % 仅包含第二种移动\n4 % -\n3.1.4.3 输入样例 2\n3.1.4.4 输出样例 2\n3.1.5 数据范围\n对于所有测试点,保证 , , , ,  且 ,\n。\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "4\n",
+          "suspect": false
+        },
+        {
+          "in": "2\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "遍历计数",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n给定一棵有   个结点的树  ,结点依次以   标号。树   的深度优先遍历序可由以下过程得到:\n1. 选定深度优先遍历的起点  ( ),当前所在结点即是起点。\n2. 若当前结点存在未被遍历的相邻结点   则遍历  ,也即令当前所在结点为   并重复这一步;否则回溯。\n3. 按照遍历结点的顺序依次写下结点编号,即可得到一组深度优先遍历序。\n第一步中起点的选择是任意的,并且第二步中遍历相邻结点的顺序是任意的,因此对于同一棵树   可能有多组不同\n的深度优先遍历序。请你求出树   有多少组不同的深度优先遍历序。由于答案可能很大,你只需要求出答案对\n取模之后的结果。\n3.2.2\n\n输入格式\n第一行,一个整数  ,表示树   的结点数。\n接下来   行,每行两个正整数  ,表示树   中的一条连接结点   的边。\n3.2.3 输出格式\n输出一行,一个整数,表示树   的不同的深度优先遍历序数量对   取模的结果。",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "A",
+      "B",
+      "D",
+      "D",
+      "C",
+      "B",
+      "C",
+      "B",
+      "A",
+      "A",
+      "C",
+      "D",
+      "D",
+      "C",
+      "A",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

@@ -1,0 +1,568 @@
+{
+  "meta": {
+    "ym": "202312",
+    "lang": "python",
+    "level": 4,
+    "title": "GESP 12月认证 Python四级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10119.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1584919090298912.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202312-python-4.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "某公司新出了一款无人驾驶的小汽车,通过声控智能驾驶系统,乘客只要告诉汽车目的地,车子就能自动选\n择一条优化路线,告诉乘客后驶达那里。请问下面哪项不是驾驶系统完成选路所必须的。(   )",
+      "options": [
+        {
+          "key": "A",
+          "text": "麦克风"
+        },
+        {
+          "key": "B",
+          "text": "扬声器"
+        },
+        {
+          "key": "C",
+          "text": "油量表"
+        },
+        {
+          "key": "D",
+          "text": "传感器"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "现代计算机是指电子计算机,它所基于的是(   )体系结构。",
+      "options": [
+        {
+          "key": "A",
+          "text": "艾伦 · 图灵"
+        },
+        {
+          "key": "B",
+          "text": "冯 · 诺依曼"
+        },
+        {
+          "key": "C",
+          "text": "阿塔纳索夫"
+        },
+        {
+          "key": "D",
+          "text": "埃克特 - 莫克利"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面有关 Python 的说法,错误的是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "Python 是适合初学者学习程序设计的低级程序设计语言"
+        },
+        {
+          "key": "B",
+          "text": "在 Python 中一切皆对象"
+        },
+        {
+          "key": "C",
+          "text": "Python 是动态类型的程序设计语言"
+        },
+        {
+          "key": "D",
+          "text": "Python 是脚本型程序设计语言"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下面有关input()函数的说法,正确的是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "input()函数在使用时,必须有参数,通常为字符串字面量"
+        },
+        {
+          "key": "B",
+          "text": "input()函数用于输入,可以输入任何字符,包括回车符"
+        },
+        {
+          "key": "C",
+          "text": "input()函数可以输入数值,包括浮点数和整数,正数或负数,可以通过int()函数将其转换为整数"
+        },
+        {
+          "key": "D",
+          "text": "input()函数在使用时,参数功能是提示,可以有,也可以没有"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后,第 4 行输出是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[[1, 1, 1], [3, 3, 3]]"
+        },
+        {
+          "key": "B",
+          "text": "[[0, 0, 0], [3, 3, 3]]"
+        },
+        {
+          "key": "C",
+          "text": "[[1, 1, 1], [2, 2, 2]]"
+        },
+        {
+          "key": "D",
+          "text": "[[0, 0, 0], [2, 2, 2]]"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面 Python 代码最后执行后最后一行输出是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "9 109 99"
+        },
+        {
+          "key": "B",
+          "text": "109 109 99"
+        },
+        {
+          "key": "C",
+          "text": "109 109 100"
+        },
+        {
+          "key": "D",
+          "text": "触发异常"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "Python 代码  print([[i]*i for i in range(5)]) 执行后输出是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[[], [1], [2, 2], [3, 3, 3], [4, 4, 4, 4]]"
+        },
+        {
+          "key": "B",
+          "text": "[[0], [1], [2, 2], [3, 3, 3], [4, 4, 4, 4]]"
+        },
+        {
+          "key": "C",
+          "text": "[[1], [2, 2], [3, 3, 3], [4, 4, 4, 4]]"
+        },
+        {
+          "key": "D",
+          "text": "[[1], [2, 2], [3, 3, 3], [4, 4, 4, 4], [5, 5, 5, 5, 5]]"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[1, 2, 3] [1, 2, 3]"
+        },
+        {
+          "key": "B",
+          "text": "[1, 1, 2, 4, 3, 9] [1, 2, 3]"
+        },
+        {
+          "key": "C",
+          "text": "[(1, 1), (2, 4), (3, 9)] [1, 2, 3]"
+        },
+        {
+          "key": "D",
+          "text": "[(1, 1), (2, 4), (3, 9)] [(1, 1), (2, 4), (3, 9)]"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "Python 内置函数id()返回值是数据在内存中地址值。下面 Python 代码执行,其输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "True False"
+        },
+        {
+          "key": "B",
+          "text": "False True"
+        },
+        {
+          "key": "C",
+          "text": "True True"
+        },
+        {
+          "key": "D",
+          "text": "False False"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "在 Python 中,对list类型in运算,其时间复杂度是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下列 Python 表达式的值为True的是(      )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "bool(\" \")"
+        },
+        {
+          "key": "B",
+          "text": "bool([])"
+        },
+        {
+          "key": "C",
+          "text": "bool(())"
+        },
+        {
+          "key": "D",
+          "text": "bool({})"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "在如下 Python 代码中,假设变量zen代表很多字符此处仅为示例,代码实现按字母频次升序,如频次相同\n则按字符 ASCII 降序输出,横线处应填入是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "alphaCount, key = lambda x:(x[1],ord(x[0]))"
+        },
+        {
+          "key": "B",
+          "text": "alphaCount, key = lambda x:(x[0],x[1])"
+        },
+        {
+          "key": "C",
+          "text": "alphaCount.items(), key = lambda x:(x[0],x[1])"
+        },
+        {
+          "key": "D",
+          "text": "alphaCount.items(), key = lambda x:(x[1],-ord(x[0]))"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后生成的文件其字节数为(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "题号 1 2 3 4 5 6 7 8 9 10 答案"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下列 Python 代码执行时如果输入1,2,3,4,0,将输出的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1#5#"
+        },
+        {
+          "key": "B",
+          "text": "1#4#"
+        },
+        {
+          "key": "C",
+          "text": "2#5#"
+        },
+        {
+          "key": "D",
+          "text": "2#4#5#"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "以下 Python 代码用于实现每个整数对应的因数,如{12: [1, 2, 3, 4, 6, 12],18: [1, 2, 3, 6, 9,\n18]},横线处应填入代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "Factor.get(i, [None]) + [j]"
+        },
+        {
+          "key": "B",
+          "text": "Factor.get(i, []) + j"
+        },
+        {
+          "key": "C",
+          "text": "Factor.get(i, None) + j"
+        },
+        {
+          "key": "D",
+          "text": "Factor.get(i, []) + [j]"
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小杨最近在准备考 GESP ,他用的 Python IDLE 来练习和运行程序,所以 Python IDLE 也是一个小型操作系统。\n(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "任何一个while循环都可以转化为等价的for循环(   )。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 的内置函数sorted()支持对list、tuple、str排序,但不支持  dict和set。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "当对dict或set类型数据执行in运算时,其时间复杂度为 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "[(1,2)*2]*3在 Python 中是合法的表达式。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "在with中打开文件时,如果显式关闭文件,将导致异常,因为with将能自动关闭文件,因此下列 Python\n代码执行将触发异常。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "某文本文件第 1 行由01234共 5 个字符组成其间没有空格,当用 Python 代码正常打开文件成功并执行文件读取\n函数readlines()后,第 1 行长度为 5 (   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "Python 的tuple类型不可以被修改,因此在list之中可以包含tuple类型数据,但不可以在tuple之中\n包含list类型。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在 Python 中,两个集合相加的运算符为+相当于集合的并集运算,如果两个集合中有相同的成员,将自动去\n重。下面 Python 代码执行后,将输出 6 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "Python 内置函数sorted()可以将  list、str、tuple、set 以及其他很多支持  for-in 类型的数据\n排序,不管被排序类型如何,其排序结果均为list类型,且对被排序数据没有影响。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "小杨的字典",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n在遥远的星球,有两个国家  A 国和  B 国,他们使用着不同的语言: A 语言和  B 语言。小杨是  B 国的翻译官,他的工\n作是将  A 语言的文章翻译成  B 语言的文章。\n为了顺利完成工作,小杨制作了一本字典,里面记录了   个  A 语言单词对应的  B 语言单词,巧合的是,这些单词都\n由地球上的  26 个小写英文字母组成。\n小杨希望你写一个程序,帮助他根据这本字典翻译一段  A 语言文章。这段文章由标点符号  !()-[]{}\\|;:'\",./?\n<> 和一些  A 语言单词构成,每个单词之间必定由至少一个标点符号分割,你的程序需要把这段话中的所有  A 语言\n单词替换成它的  B 语言翻译。特别地,如果遇到不在字典中的单词,请使用大写  UNK 来替换它。\n例如,小杨的字典中包含  2 个  A 语言单词  abc 和  d,它们的  B 语言翻译分别为  a 和  def,那么我们可以把  A\n语言文章  abc.d.d.abc.abcd. 翻译成  B 语言文章  a.def.def.a.UNK.,其中,单词  abcd 不在词典内,因此我\n们需要使用  UNK 来替换它。\n3.1.2 输入描述\n第一行一个整数  ,表示词典中的条目数。保证  。\n接下来   行,每行两个用单个空格隔开的字符串  ,分别表示字典中的一个  A 语言单词以及它对应的  B 语言翻\n译。保证所有   不重复;保证   和   的长度不超过  。\n最后一行一个字符串  ,表示需要翻译的  A 语言文章。保证字符串   的长度不超过  ,保证字符串   只包含小写\n字母以及标点符号  !()-[]{}\\|;:'\",./?<>。\n3.1.3 输出描述\n输出一行,表示翻译后的结果。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7 样例输入  2\n3.1.8 样例输出  2\n3.1.9 样例输入  3\n3.1.10 样例输出  3\n3.1.11",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "田忌赛马",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n你要和田忌赛马。你们各自有   匹马,并且要进行   轮比赛,每轮比赛,你们都要各派出一匹马决出胜负。\n你的马匹的速度分别为  ,田忌的马匹的速度分别为  。田忌会按顺序派出他的马匹,请问\n你要如何排兵布阵,才能赢得最多轮次的比赛?巧合的是,你和田忌的所有马匹的速度两两不同,因此不可能出现\n平局。\n3.2.2 输入描述\n第一行一个整数  。保证  。\n接下来一行   个用空格隔开的整数,依次为  ,表示你的马匹们的速度。保证  。\n接下来一行   个用空格隔开的整数,依次为  ,表示田忌的马匹们的速度。保证  。\n3.2.3 输出描述\n输出一行,表示你最多能获胜几轮。\n3.2.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\ncurr_token = \"\"\nans = \"\"\nfor ch in st:\n    if ch in punc:\n        if curr_token in d:\n            ans += d[curr_token]\n        elif curr_token:\n            ans += UNK\n        curr_token = \"\"\n        ans += ch\n    else:\n        assert ch.islower()\n        curr_token += ch\nif curr_token in d:\n    ans += d[curr_token]\nelif curr_token:\n    ans += UNK\nprint(ans)\n\n3.2.5 样例输入  1\n3.2.6 样例输出  1\n3.2.7 样例解释  1\n第  1 轮,田忌派出速度为   的马匹,你可以派出速度为   的马匹迎战,本轮你获胜。\n第  2 轮,田忌派出速度为   的马匹,你可以派出速度为   的马匹迎战,本轮你获胜。\n第  3 轮,田忌派出速度为   的马匹,你可以派出速度为   的马匹迎战,本轮田忌获胜。\n如此,你可以赢得  2 轮比赛。\n3.2.8 样例输入  2\n3.2.9 样例输出  2\n3.2.10",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "B",
+      "A",
+      "D",
+      "A",
+      "D",
+      "A",
+      "C",
+      "B",
+      "A",
+      "A",
+      "D",
+      "D",
+      "A",
+      "D"
+    ]
+  ]
+}

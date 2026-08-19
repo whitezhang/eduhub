@@ -1,0 +1,588 @@
+{
+  "meta": {
+    "ym": "202512",
+    "lang": "python",
+    "level": 3,
+    "title": "CCF GESP 2025年12月认证 Python 3级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10242.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1723013110169632.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202512-python-3.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "近日,空中客车公司表示,约 6000 架空客 A320 系列飞机需要紧急更换一种易受太阳辐射影响的飞行控制软\n件。空客表示,在对一起飞行事故进行分析后,表明强烈的太阳辐射可能会损坏飞行控制系统所需的关键数据,导\n致判断失误,进而可能引发飞行异常。在这里的飞行控制系统中,执行判断的部件最可能是下面的 (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "辐射传感器"
+        },
+        {
+          "key": "B",
+          "text": "处理器"
+        },
+        {
+          "key": "C",
+          "text": "内存单元"
+        },
+        {
+          "key": "D",
+          "text": "输出设备"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "小杨最近为了备考 GESP ,开始看网络上关于网络知识的视频。其中提到计算机网络系统有不同的划分标\n准,其中之一就是按照地理覆盖的范围来划分。那他平时上学所在的教学楼内的网络是一个(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "PAN"
+        },
+        {
+          "key": "B",
+          "text": "LAN"
+        },
+        {
+          "key": "C",
+          "text": "MAN"
+        },
+        {
+          "key": "D",
+          "text": "WAN"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面选项中最大的数是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "在 Python 中,有一个整数变量  ,现需要将其二进制表示中的第三位(从右向左,最低位为第 0 位)设置为\n1 ,而其它位保持不变。下列哪段代码可以正确实现此功能?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = x | (1 << 3)"
+        },
+        {
+          "key": "B",
+          "text": "x = x & (1 << 3)"
+        },
+        {
+          "key": "C",
+          "text": "x = x ^ (1 << 2)"
+        },
+        {
+          "key": "D",
+          "text": "x = x | 0b100"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )\n第  1 页  / 共  7 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "[3, 2]"
+        },
+        {
+          "key": "B",
+          "text": "[1, 2]"
+        },
+        {
+          "key": "C",
+          "text": "[1, 3]"
+        },
+        {
+          "key": "D",
+          "text": "[3, 3]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "Python 表达式  [x % 3 for x in range(10) if x % 2 == 0] 的值是?",
+      "options": [
+        {
+          "key": "A",
+          "text": "[0, 1, 0, 1, 0]"
+        },
+        {
+          "key": "B",
+          "text": "[0, 2, 1, 0, 2]"
+        },
+        {
+          "key": "C",
+          "text": "[0, 1, 2, 0, 1]"
+        },
+        {
+          "key": "D",
+          "text": "[0, 2, 4, 6, 8]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "已知  lst = list(range(10)),即  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]。要获取切片  [8, 6, 4,\n2],应该使用的切片操作是?",
+      "options": [
+        {
+          "key": "A",
+          "text": "lst[-2:2:-2]"
+        },
+        {
+          "key": "B",
+          "text": "lst[8:1:-2]"
+        },
+        {
+          "key": "C",
+          "text": "lst[8:2:-2]"
+        },
+        {
+          "key": "D",
+          "text": "lst[-2:1:2]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "分析以下代码段,最终的输出结果是什么?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "True"
+        },
+        {
+          "key": "B",
+          "text": "False"
+        },
+        {
+          "key": "C",
+          "text": "程序报错"
+        },
+        {
+          "key": "D",
+          "text": "{'debug': True, 'port': 8080, 'timeout': 30}"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "合并两个字典  d1 = {'a':1} 和  d2 = {'b':2} 的正确方式是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "d1 + d2"
+        },
+        {
+          "key": "B",
+          "text": "d1.update(d2)"
+        },
+        {
+          "key": "C",
+          "text": "d1.extend(d2)"
+        },
+        {
+          "key": "D",
+          "text": "d1.append(d2)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "关于字符串的不可变性,下列说法正确的是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "可以通过索引直接修改字符串中的某个字符 a = [1, 2] b = a.copy() a[0] = 3 print(b) config = { 'debug': True, 'port': 8080, 'debug': False, 'timeout': 30 } print(config['debug']) 第 2 页 / 共 7 页 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "B",
+          "text": "字符串的 replace 方法会直接修改原字符串"
+        },
+        {
+          "key": "C",
+          "text": "任何看似修改字符串内容的操作(如 upper(), lower() 等)都会返回一个新字符串,原始字符串不受影 响。"
+        },
+        {
+          "key": "D",
+          "text": "字符串拼接操作 += 会直接在原字符串末尾追加内容"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "对于字符串  s = \"Hello, Python\",执行  s.find(\"Java\") 和  s.index(\"Java\") 的结果分别是?(\n)",
+      "options": [
+        {
+          "key": "A",
+          "text": "-1,-1"
+        },
+        {
+          "key": "B",
+          "text": "程序报错,程序报错"
+        },
+        {
+          "key": "C",
+          "text": "-1,程序报错"
+        },
+        {
+          "key": "D",
+          "text": "程序报错,-1"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "执行  (1, 2) + (3, 4) 的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "(1, 2, 3, 4)"
+        },
+        {
+          "key": "B",
+          "text": "(4, 3, 2, 1)"
+        },
+        {
+          "key": "C",
+          "text": "(1, 3, 2, 4)"
+        },
+        {
+          "key": "D",
+          "text": "报错"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "在以下场景中,使用元组比使用列表更合适的是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "存储一个需要频繁更新用户分数的排行榜。"
+        },
+        {
+          "key": "B",
+          "text": "表示一个二维平面上的点坐标 。"
+        },
+        {
+          "key": "C",
+          "text": "缓存一批需要动态增删的临时数据。"
+        },
+        {
+          "key": "D",
+          "text": "存储一组程序运行时需要不断追加记录的日志信息。"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "表达式  {x**2 for x in range(-2, 3)} 的显示结果可能是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{0, 1, 4}"
+        },
+        {
+          "key": "B",
+          "text": "{4, 1, 0, 1, 4}"
+        },
+        {
+          "key": "C",
+          "text": "{0, 1, 2, 4}"
+        },
+        {
+          "key": "D",
+          "text": "{1, 4, 9}"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "现有集合  s1 = {1, 2, 3} 和  s2 = {3, 4, 5},表达式  (s1 - s2) | (s2 - s1) 的结果是:",
+      "options": [
+        {
+          "key": "A",
+          "text": "{1, 2}"
+        },
+        {
+          "key": "B",
+          "text": "{4, 5}"
+        },
+        {
+          "key": "C",
+          "text": "{3}"
+        },
+        {
+          "key": "D",
+          "text": "{1, 2, 4, 5}"
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "鸿蒙是华为公司开发的一款操作系统,那么它能够将正确的源程序翻译成目标程序,并运行。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "二进制数的奇偶性可以通过其最低位(最右边的位)来判断:最低位为 0 是偶数,为 1 是奇数。\n第  3 页  / 共  7 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "在 Python 中,print(~0) 的输出结果仍是  0。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出的结果是  ['apple', 'grape', 'banana', 'cherry', 'orange']。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "下面 Python 代码的作用是统计字符串  s 中每个字符出现的次数。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出的结果是  2。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "执行代码  a = (1, 2, 3); a.sort() 后,打印  a 会输出  [1, 2, 3]。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "表达式  {} 在  Python 中可以创建一个空集合。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "字符串可以通过  list() 函数直接转换为列表,但无法通过  tuple() 函数直接转换为元组。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "以下代码是使用枚举算法,找出所有各位数字的立方和等于该数本身的三位数。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "密码强度",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小杨是学校网络安全小组的成员,今天他的任务是设计一个 “ 密码强度检测器 ” ,帮助同学们检查自己的密码是否足\n够安全。一个安全的密码需要满足以下条件:\n密码至少包含 8 个字符(太短的密码容易被猜出来哦!)。\n密码至少包含一个大写字母( A 、 B 、 C 、 ... 、 Z 都可以)。\n密码至少包含一个数字( 0 、 1 、 2 、 3 、 ... 、 9 都可以)。\n例如:\nfruits = ['apple', 'banana', 'cherry']\nfruits.insert(1, 'grape')\nfruits.append('orange')\nprint(fruits)\n\ns = \"abacab\"\ndict_count = {}\n    dict_count[char] = dict_count.get(char) + 1\nprint(dict_count)\n\ns = \"aaaaa\"\nprint(s.count(\"aa\"))\n\n    hundreds = num // 100\n    tens = (num // 10) % 10\n    units = num % 10\n    if hundreds**3 + tens**3 + units**3 == num:\n        print(num)\n\n第  4 页  / 共  7 页\n密码  PAs1s2an 是安全密码(有 8 位、包含大写字母  P、A 和数字  1、2)。\n密码  ab1da3cd 不是安全密码(没有大写字母)。\n密码  Paabdbcd 不是安全密码(没有数字)。\n密码  Pa2 不是安全密码(只有 3 位,太短了)。\n3.1.2\n\n输入格式\n第一行一个正整数  ,代表 1 需要安全检测的密码组数。\n对于每组密码,一行包含一个字符串,代表需要安全检测的密码。\n3.1.3 输出格式\n对于每组密码,输出一行,如果满足强度要求输出  Y ,否则输出  N 。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.4.3 样例解释\n密码  PAs1s2an 是安全密码(有 8 位、包含大写字母  P、A 和数字  1、2)。\n密码  1a2bCql3 是安全密码(有 8 位、包含大写字母  C 和数字  1、2、3)。\n密码  Pa12bsna 是安全密码(有 8 位、包含大写字母  P 和数字  1、2)。\n密码  ab1da3cd 不是安全密码(没有大写字母)。\n密码  Paabdbcd 不是安全密码(没有数字)。\n密码  Pa2 不是安全密码(只有 3 位,太短了)。\n3.1.5 数据范围\n对于所有测试点,保证  ,并且每组密码长度不超过   且至少为  ,每组密码仅由大小写字母和数字组\n成。\n\nPAs1s2an\n1a2bCql3\nPa12bsna\nab1da3cd\nPaabdbcd\nPa2\n\nY\nY\nY\nN\nN\nN\n\n第  5 页  / 共  7 页\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "6\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n4\n5\n6\n7\n",
+          "out": "6\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "小杨的智慧购物",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小杨的班级要举办一个环保手工作品展览,老师请小杨去文具店购买   种不同的文具(例如:铅笔、橡皮、尺子\n等)。\n商店里共有   件文具,每件文具都有一个种类编号(从   到  )和价格。\n小杨的预算有限,他想了一个聪明的办法:对于每种文具,他只买最便宜的那一件(如果同种文具有多件价格相同\n且都是最便宜的,他只会购买其中的一件)。请你帮小杨计算出,买齐这   种文具一共需要花费多少钱。\n3.2.2\n\n输入格式\n第一行两个正整数  ,代表文具的种类数和总数。\n之后   行,每行两个正整数   和  ,分别代表第   件文具的种类编号和它的价格。数据保证每个种类至少有一件\n文具可供购买。\n3.2.3 输出格式\n输出一行,代表购买文具的总价。\n3.2.4 样例\n3.2.4.1 输入样例\n# 通过 int(input()) 获取输入数据的组数,然后遍历每一条输入数据\nfor _ in range(int(input())):\n    # 接收当前的代码\n    password = input()\n    # 这个 flag 表示密码是否包含至少 8 位\n    flag_8 = len(password) >= 8\n    # 这个 flag 表示密码是否包含至少一个大写字母\n    flag_upper = False\n    for c in password:\n        if c.isupper():\n            flag_upper = True\n    # 这个 flag 表示密码是否包含至少一个数字\n    flag_digit = False\n    for c in password:\n        if c.isdigit():\n            flag_digit = True\n    if flag_8 and flag_upper and flag_digit:\n        print(\"Y\")\n    else:\n        print(\"N\")\n\n2 5\n1 1\n1 2\n1 1\n2 3\n\n第  6 页  / 共  7 页\n3.2.4.2 输出样例\n3.2.4.3 样例解释\n文具清单如下:\n文具  1 :种类  1 ,价格  1\n文具  2 :种类  1 ,价格  2\n文具  3 :种类  1 ,价格  1\n文具  4 :种类  2 ,价格  3\n文具  5 :种类  2 ,价格  10\n小杨的选择过程:对于种类  1 :有三件商品,价格分别为  。其中最便宜的价格是  。对于种类  2 :有两件商\n品,价格分别为  。其中最便宜的价格是  。\n计算总价:小杨购买这两类文具的总花费为  。\n3.2.5 数据范围\n对于所有测试点,保证  。\n3.2.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "17\n18\n19\n20\n",
+          "out": "5\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "B",
+      "C",
+      "A",
+      "B",
+      "B",
+      "B",
+      "B",
+      "B",
+      "C",
+      "C",
+      "A",
+      "B",
+      "A",
+      "D"
+    ],
+    [
+      "B"
+    ]
+  ]
+}

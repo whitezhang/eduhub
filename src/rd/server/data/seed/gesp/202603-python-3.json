@@ -1,0 +1,578 @@
+{
+  "meta": {
+    "ym": "202603",
+    "lang": "python",
+    "level": 3,
+    "title": "CCF GESP 2026年3月认证 Python 3级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10269.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1734124794544160.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202603-python-3.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "2026 年春节联欢晚会上一个武术表演节目《武  BOT 》。节目中多个人形机器人会表演空翻,它们落地可能会\n有微微踉跄,但都会迅速调整姿态站稳,并适当移动来和前后左右的其他机器人保持原来队列。如果将机器人视作\n一个计算机系统,那么在该计算机系统中下面哪一项不能作为输入设备 (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "用于检测重心的重力传感器"
+        },
+        {
+          "key": "B",
+          "text": "预装的 AI 算法程序"
+        },
+        {
+          "key": "C",
+          "text": "接收动作指令的遥控器"
+        },
+        {
+          "key": "D",
+          "text": "拍摄其他机器人的摄像头"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下面代码用来找出输入的 N 个正整数中最大的一个。如果将代码段用流程图来表示,则 L1 标记的代码行应该\n使用的图形是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "圆形框"
+        },
+        {
+          "key": "B",
+          "text": "椭圆形框"
+        },
+        {
+          "key": "C",
+          "text": "平行四边形框"
+        },
+        {
+          "key": "D",
+          "text": "菱形框"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下列哪个表达式不能正确转换为十进制整数 10 ?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "int('10')"
+        },
+        {
+          "key": "B",
+          "text": "int('12', 8)"
+        },
+        {
+          "key": "C",
+          "text": "int('0b1010', 2)"
+        },
+        {
+          "key": "D",
+          "text": "int('10', 2)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "要获取 32 位整数  0x48B2D6F1 的最低字节(比特位 0-7 ),正确的表达式是?(  )\nMax = 0\nN = int(input())\nwhile(N):\n    val = int(input())\n    if val > Max: #L1\n        Max = val\n    N -= 1\nprint(Max)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n第  1 页  / 共  7 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "0x48B2D6F1 & 0xFF"
+        },
+        {
+          "key": "B",
+          "text": "0x48B2D6F1 | 0xFF"
+        },
+        {
+          "key": "C",
+          "text": "(0x48B2D6F1 >> 8) & 0xFF"
+        },
+        {
+          "key": "D",
+          "text": "0x48B2D6F1 ^ 0xFF"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行以下代码后,输出结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[10, 30, 20]"
+        },
+        {
+          "key": "B",
+          "text": "[10, 30]"
+        },
+        {
+          "key": "C",
+          "text": "[10, 20, 30]"
+        },
+        {
+          "key": "D",
+          "text": "上述代码执行后报错"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "对于列表  data = [1, 2, 3, 4, 5],执行  data[1:4] = [10, 20] 后,data 的值是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[1, 10, 20, 4, 5]"
+        },
+        {
+          "key": "B",
+          "text": "[10, 20, 5]"
+        },
+        {
+          "key": "C",
+          "text": "[1, 10, 20]"
+        },
+        {
+          "key": "D",
+          "text": "[1, 10, 20, 5]"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "执行以下代码后,输出结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[1, 2, 3, 4]"
+        },
+        {
+          "key": "B",
+          "text": "[0, 0, 3, 4]"
+        },
+        {
+          "key": "C",
+          "text": "[0, 2, 3, 4]"
+        },
+        {
+          "key": "D",
+          "text": "[1, 0, 3, 4]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "执行以下代码后,输出结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "lst = [10, 20, 30, 20] lst.remove(20) print(lst) result = [x if x > 2 else 0 for x in range(1, 5)] print(result) my_zip = zip((1, 2), ('a', 'b')) print(tuple(my_zip)) print(list(my_zip)) (1, 'a', 2, 'b') [] (1, 'a', 2, 'b') [(1, 'a'), (2, 'b')] ((1, 'a'), (2, 'b')) [] 第 2 页 / 共 7 页"
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下列关于元组解包的说法,哪一项是正确的?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "元组解包时,左侧变量个数必须与元组元素个数严格相等,否则会报错。"
+        },
+        {
+          "key": "B",
+          "text": "可以使用星号(*)操作符来捕获元组解包时多余的元素,并将其放入一个列表中。"
+        },
+        {
+          "key": "C",
+          "text": "解包只能用于等号右侧是元组的情况,不能用于其他可迭代对象。"
+        },
+        {
+          "key": "D",
+          "text": "元组解包操作会修改原始元组的内容。"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "执行以下代码后,输出结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "A"
+        },
+        {
+          "key": "B",
+          "text": "B"
+        },
+        {
+          "key": "C",
+          "text": "C"
+        },
+        {
+          "key": "D",
+          "text": "上述代码执行后报错"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "在 Python 中,已知  d = {'a': 1, 'b': 2}, 则d.keys() 的数据类型是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "list"
+        },
+        {
+          "key": "B",
+          "text": "dict_keys"
+        },
+        {
+          "key": "C",
+          "text": "set"
+        },
+        {
+          "key": "D",
+          "text": "tuple"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "执行以下代码后,输出结果是?(  )\n\n```\nprint(level)\n\n\n\n\n\n\n\n\n\n\n\ns = \"programming\"\nvowels = \"aeiou\"\ncount = 0\nfor char in s:\n    if char not in vowels:\n        count += 1\nprint(count)\n\n\n\n\n\n\n\n第  3 页  / 共  7 页\n题号 1 2 3 4 5 6 7 8 9 10\n答案\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "11 ((1, 'a'), (2, 'b')) [(1, 'a'), (2, 'b')] 1 2 data = {'Math': 90, 'Science': 85, 'English': 92} subject = 'Science' if subject in data: grade = data.get(subject, 0) if grade >= 90: level = 'A' elif grade >= 80: level = 'B' else: level = 'C'"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "以下哪个操作可以返回两个集合中独有的元素(对称差集)?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "s1 - s2"
+        },
+        {
+          "key": "B",
+          "text": "s1 & s2"
+        },
+        {
+          "key": "C",
+          "text": "s1 ^ s2"
+        },
+        {
+          "key": "D",
+          "text": "s1 | s2"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "执行以下代码后,输出结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{1, 2, 3, 4}"
+        },
+        {
+          "key": "B",
+          "text": "{1, 2, 3}"
+        },
+        {
+          "key": "C",
+          "text": "None"
+        },
+        {
+          "key": "D",
+          "text": "上述代码执行后报错"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "有 10 根长度分别为  1,2,3,...,10 的木棒,现需要从中选出  3 根木棒组成一个三角形。三角形的成立条件是任意\n两边之和大于第三边。以下程序通过枚举顺序递增的三边长度组合来统计有效三角形的数量,请补全代码中缺失的\n条件判断部分。(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "a + b > c"
+        },
+        {
+          "key": "B",
+          "text": "a + b + c < 30"
+        },
+        {
+          "key": "C",
+          "text": "a*a + b*b == c*c"
+        },
+        {
+          "key": "D",
+          "text": "所有选项都错误"
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小明的妈妈最近刚刚给他买了一块电话手表,除了可以看时间,小明也可以用它和妈妈打电话、收发信息,\n那么可以推测这块手表中装有一款特定操作系统。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "对于  8 位有符号整数(补码表示),1000 0000 表示的是  -128 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "在  Python 中,任何一个十进制整数都可以精确地转换为一个二进制整数,但并非所有十进制小数都能精确\n地转换为二进制小数。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "表达式  (x << 3) - (x << 1) 的计算结果与  x * 10 等价。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "使用=运算符将一个列表赋值给另一个变量时,会创建一个内容相同但独立的新列表。\nset1 = {1, 2, 3}\nset2 = set1\nset2.add(4)\nprint(set1)\n\n\n\n\ncount = 0\nfor a in range(1, 11):\n    for b in range(a, 11):\n        for c in range(b, 11):\n            if ________:  # 填空处\n                count += 1\n\n\n\n\n\n\n第  4 页  / 共  7 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "执行以下代码后,输出结果是  True。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "执行以下代码后,输出结果是  1。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "str.join()方法可以高效地连接一个列表中的多个元素,但要求该列表内的所有元素必须是字符串类型,\n否则会引发错误。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在  Python 中,集合的元素可以是列表或字典。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "str() 函数可以将任何列表转换为一个字符串,该字符串是只由列表中的所有元素直接拼接而成的字符\n串。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "二进制回文串",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n对于一个正整数  ,我们将其转换为不含前导零的二进制表示 , 如果这个二进制序列从左向右读与从右向左读完全相\n同,则称该数为二进制回文数。例如, 的二进制表示为   ,是二进制回文数;  的二进制表示为  ,\n不是二进制回文数。\n你的任务是:给定一个正整数  ,计算在   到   的范围内二进制回文数的数量。\n3.1.2\n\n输入格式\n输入一行,包含一个正整数  。\n3.1.3 输出格式\n输出一行,包含一个数,表示在   到   的范围内二进制回文数的数量。\n3.1.4 样例\n3.1.4.1 输入样例\ntuple1 = (1, 2)\ntuple2 = (3, 4)\nresult = tuple1 + tuple2\nprint(result is (1, 2, 3, 4))\n\ntext = \"i love china\"\nchar_count = {}\nfor char in text:\n    if char != ' ':\n        char_count[char] = char_count.get(char, 0) + 1\nprint(char_count.get('i', 0))\n\n第  5 页  / 共  7 页\n3.1.4.2 输出样例\n3.1.5 样例解释\n样例  1 中, 到   范围内  、 、 、 、 、  是二进制回文数。\n3.1.6 数据范围\n。\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "2\n3\n4\n",
+          "out": "4\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "凯撒密码",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n凯撒密码是一种替换加密技术,明文中的所有字母都在字母表上向后(或向前)按照一个固定数目进行偏移后被替\n换成密文。例如,例如,当偏移量是   的时候,所有的字母   将被替换成  ,  被替换成  ,  被替换成  ,以此\n类推,  被替换成  ,  被替换成  ,  被替换成  ,  被替换成  。这个加密方法是以罗马共和时期凯撒的名字\n命名的,据称当年凯撒曾用此方法与其将军们进行联系。\n但是和所有的利用字母表进行替换的加密技术一样,凯撒密码非常容易被破解,而且在实际应用中也无法保证通信\n安全。\n现在给你一个已破解的凯撒密码明文与密文,与一个有相同偏移量的未破解凯撒密码密文,请你帮忙破解它。\n\nn = int(input())\nans = 0\n    t = i\n    a = []\n    # 分解为二进制表示,最高位在后,最低位在前\n        a.append(t % 2)\n        t //= 2\n\n    b = a[:]\n    # 反转二进制表示\n    a.reverse()\n    # 如果二进制表示反转前后相等则为回文串\n    if b == a:\n        ans += 1\nprint(ans)\n\n第  6 页  / 共  7 页\n3.2.2\n\n输入格式\n输入共三行:\n第一行包含一个字符串,表示已破解的凯撒密码明文;\n第二行包含一个字符串,表示已破解的凯撒密码密文;\n第三行包含一个字符串,表示待破解的凯撒密码密文。\n3.2.3 输出格式\n输出一行,包含一个字符串,表示待破解的凯撒密码对应的明文。\n3.2.4 样例\n3.2.4.1 输入样例\n3.2.4.2 输出样例\n3.2.5 样例解释\n样例  1 中,通过已破解的密码得出偏移量为  'D' - 'A' = 3,因此,对未破解部分进行逆向偏移:密文中的  W 对\n应明文中的  T('W' - 3 = 'T'),密文中的  K 对应明文中的  H('K' - 3 = 'H'),以此类推。\n3.2.6 数据范围\n保证密码长度均不超过  ,所有字符串由大写字母组成。\n3.2.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "D",
+      "D",
+      "A",
+      "A",
+      "D",
+      "B",
+      "C",
+      "B",
+      "B",
+      "B",
+      "C",
+      "C",
+      "A",
+      "A"
+    ]
+  ]
+}

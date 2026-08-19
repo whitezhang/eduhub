@@ -1,0 +1,575 @@
+{
+  "meta": {
+    "ym": "202309",
+    "lang": "python",
+    "level": 4,
+    "title": "GESP 9月认证 Python四级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10105.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1570611870564384.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202309-python-4.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "人们所使用的手机上安装的 App 通常指的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "一款操作系统"
+        },
+        {
+          "key": "B",
+          "text": "一款应用软件"
+        },
+        {
+          "key": "C",
+          "text": "一种通话设备"
+        },
+        {
+          "key": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下列流程图的输出结果是  ( ) ?",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面有关print()函数的说法,错误的是   ( ) 。\nA print()函数的sep和end参数为带有默认值的命名关键字参数\n\n```\nprint()函数的sep和end参数为带有默认值的命名关键字参数B. print()函数可以输出多个表达式的值,其参数为变长参数\nprint()函数可以输出多个不同数据类型表达式的值\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": "如果print()函数同时使用sep和end参数,则要求sep在前end在后"
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出是  ( ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[1]"
+        },
+        {
+          "key": "B",
+          "text": "[1, 2, 4]"
+        },
+        {
+          "key": "C",
+          "text": "[1, 2, 4, 4]"
+        },
+        {
+          "key": "D",
+          "text": "触发异常"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面代码执行后输出是  ( ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1, 2, 3"
+        },
+        {
+          "key": "B",
+          "text": "1, 2, 22"
+        },
+        {
+          "key": "C",
+          "text": "11, 11, 22"
+        },
+        {
+          "key": "D",
+          "text": "11, 11, 3"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面代码执行后输出是  ( ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[1, 2, 3]"
+        },
+        {
+          "key": "B",
+          "text": "[1, 2, 3, 4]"
+        },
+        {
+          "key": "C",
+          "text": "[4]"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "(1, 2, 3),(1, 2, 3)"
+        },
+        {
+          "key": "B",
+          "text": "(1, 2, 3, 4),(1, 2, 3)"
+        },
+        {
+          "key": "C",
+          "text": "(1, 2, 3),(1, 2, 3, 4)"
+        },
+        {
+          "key": "D",
+          "text": "(1, 2, 3, 4),(1, 2, 3, 4)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[2, 3, 7, 11, 15]"
+        },
+        {
+          "key": "B",
+          "text": "[15, 11, 7, 3, 2]"
+        },
+        {
+          "key": "C",
+          "text": "[11, 2, 3, 7, 15]"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "上题bubbleSort()函数的时间复杂度是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 Python 代码中的dictA存储为字典, key (键)为 i 和 j 的组合, value (值)为 i*j ,形如{(1,1):1,\n(1,2):2},横线处应填上代码是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "dict99[(i, j)]"
+        },
+        {
+          "key": "B",
+          "text": "dict99[[i, j]]"
+        },
+        {
+          "key": "C",
+          "text": "dict99(i, j)"
+        },
+        {
+          "key": "D",
+          "text": "dict99{i, j}"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 Python 代码中的dictA变量存储形如{1: [1], 2: [1, 2], 3: [1, 3], 4: [1, 2, 4], 5: [1,\n5], 6: [1, 2, 3, 6]}的数据,即 1~99 之间每个整数的因数(所有能被整除的正整数),横线处应填入是(\n)。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[j for j in range(i) if i % j != 0]"
+        },
+        {
+          "key": "B",
+          "text": "[j for j in range(1,i+1) if i % j == 0]"
+        },
+        {
+          "key": "C",
+          "text": "[j for j in range(1,i+1) if i % j]"
+        },
+        {
+          "key": "D",
+          "text": "[j for j in range(i) if i % j == 0]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "要打开一个已经存在的图片文件并读取但不修改数据,则打开模式应该设定为(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "wb"
+        },
+        {
+          "key": "B",
+          "text": "w+"
+        },
+        {
+          "key": "C",
+          "text": "rb"
+        },
+        {
+          "key": "D",
+          "text": "r+"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下列 Python 代码执行时如果输入3.14,将输出的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "2#"
+        },
+        {
+          "key": "B",
+          "text": "1#4#"
+        },
+        {
+          "key": "C",
+          "text": "2#4#"
+        },
+        {
+          "key": "D",
+          "text": "2#3#4#"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "以下选项在 Python 中能输出(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)的是(  )。\n\n```\nprint(tuple(i**2 for i in range(10)))\nprint(tuple([i*i for i in range(1,10+1)]))\nprint(tuple(i*i for i in range(10+1)))\nprint(tuple(map(lambda x:x**2,range(10))))\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "Python 赋值语句是lstA = [6, 7, 8, 9],删除值为 8 的元素,错误的语句是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "lstA.remove(8)"
+        },
+        {
+          "key": "B",
+          "text": "lstA.pop(2)"
+        },
+        {
+          "key": "C",
+          "text": "del lstA[2]"
+        },
+        {
+          "key": "D",
+          "text": "lstA.del[2] 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "我们常说的互联网( Internet )是一个覆盖全球的广域网络,它不属于任何一个国家。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "我国第一台大型通用电子计算机使用的逻辑部件是晶体管。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 的内置函数sorted()函数是稳定排序。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "对包含 N 个元素列表( list )进行冒泡排序算法,其时间复杂度是 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "()+()在 Python 中是合法的表达式,其值为()。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "下面代码中的 Nums.txt 文本文件中含有 0-9 共计 10 个数字,分为两行存储,第 1 行为 0-4 ,第 2 行为 5-9 ,程序执\n行后将输出 10 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "Python 文本文件读取函数readlines()能按行读取文本文件,且返回值为list类型。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "下面的 Python 代码执行后最后一行将输出没有偶数的lst。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在与异常处理相关的关键字中,finally所属内容不管是否发生异常都将会被执行。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "global关键字只能用于自定义函数内,其功能是允许在函数内修改全局变量的值。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "进制转换",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n 进制数指的是逢   进一的计数制。例如,人们日常生活中大多使用十进制计数,而计算机底层则一般使用二进\n制。除此之外,八进制和十六进制在一些场合也是常用的计数制(十六进制中,一般使用字母  A 至  F 表示十至十\n五;本题中,十一进制到十五进制也是类似的)。\n在本题中,我们将给出   个不同进制的数。你需要分别把它们转换成十进制数。\n3.1.2 提示\n对于任意一个   位   进制数,假设其最右边的数位为第   位,最左边的数位为第   位,我们只需要将其第   位\n的数码乘以权值  ,再将每位的结果相加,即可得到原   进制数对应的十进制数。下面是两个例子:\n1. 八进制数  1362 对应的十进制数为  ;\n2. 十六进制数  3F0 对应的十进制数为  。\n3.1.3 输入描述\n输入的第一行为一个十进制表示的整数  。接下来   行,每行一个整数  ,随后是一个空格,紧接着是一个   进\n制数,表示需要转换的数。保证所有   进制数均由数字和大写字母组成,且不以  0 开头。保证   进制数合法。\n保证  ;保证\n保证所有   进制数的位数不超过  。\n3.1.4 输出描述\n输出   行,每一个十进制数,表示对应   进制数的十进制数值。\n3.1.5 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.6 样例输入  1\n3.1.7 样例输出  1\n3.1.8 样例输入  2\n\n8 1362\n16 3F0\n\n2 11011\n10 123456789\n\n3.1.9 样例输出  2\n3.1.10",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [
+        {
+          "in": "2\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "754\n1008\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "变长编码",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n小明刚刚学习了三种整数编码方式:原码、反码、补码,并了解到计算机存储整数通常使用补码。但他总是觉得,\n生活中很少用到 这么大的数,生活中常用的 这种数也同样需要用个字节的补码表示,太浪费了些。\n热爱学习的小明通过搜索,发现了一种正整数的变长编码方式。这种编码方式的规则如下:\n1. 对于给定的正整数,首先将其表达为二进制形式。例如, , 。\n2. 将二进制数从低位到高位切分成每组 bit ,不足 bit 的在高位用填补。例如, 变为 的一组,\n变为 和 的两组。\n3. 由代表低位的组开始,为其加入最高位。如果这组是最后一组,则在最高位填上,否则在最高位填上。于\n是,的变长编码为 一个字节, 的变长编码为 和 两个字节。\n这种编码方式可以用更少的字节表达比较小的数,也可以用很多的字节表达非常大的数。例如,\n的二进制为\n,于是它的变长编码为(十六进制表示)CE 96 C8 A6 F4 CB B6 DA 0D,共个字节。\n你能通过编写程序,找到一个正整数的变长编码吗?\n3.2.2 输入描述\n输入第一行,包含一个正整数。约定 。\n\nn = int(input())\nfor i in range(n):\n    k, st = input().strip().split(' ')\n    k = int(k)\n    ans = 0\n    for j, ch in enumerate(reversed(st)):\n        if ch <= '9':\n            bit = ord(ch) - ord('0')\n        else:\n            bit = ord(ch) - ord('A') + 10\n        ans += bit * (k ** j)\n    print(ans)\n\n3.2.3 输出描述\n输出一行,输出对应的变长编码的每个字节,每个字节均以 2 位十六进制表示(其中, A-F 使用大写字母表示),\n两个字节间以空格分隔。\n3.2.4 样例输入 1\n3.2.5 样例输出 1\n3.2.6 样例输入 2\n3.2.7 样例输出 2\n3.2.8 样例输入 3\n3.2.9 样例输出 3\n3.2.10",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "A",
+      "C",
+      "C",
+      "A",
+      "B",
+      "B",
+      "A",
+      "B",
+      "A",
+      "B",
+      "C",
+      "C",
+      "B",
+      "D"
+    ]
+  ]
+}

@@ -1,0 +1,579 @@
+{
+  "meta": {
+    "ym": "202406",
+    "lang": "python",
+    "level": 3,
+    "title": "GESP 6月认证 Python 三级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10147.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1621071824420896.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202406-python-3.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "小杨父母带他到某培训机构给他报名参加 CCF 组织的 GESP 认证考试的第 1 级,那他可以选择的认证语言有几\n种?(    )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下面流程图在 yr 输入 2024 时,可以判定 yr 代表闰年,并输出2 月是 29 天,则图中菱形框中应该填入(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "(yr%400==0) || (yr%4==0)"
+        },
+        {
+          "key": "B",
+          "text": "(yr%400==0) || (yr%4==0 && yr%100!=0)"
+        },
+        {
+          "key": "C",
+          "text": "(yr%400==0) && (yr%4==0)"
+        },
+        {
+          "key": "D",
+          "text": "(yr%400==0) && (yr%4==0 && yr%100!=0)"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下列流程图的输出结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "将十进制 2024 转化成八进制,可以使用下列哪个表达式?( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "bin(2024)"
+        },
+        {
+          "key": "B",
+          "text": "int(2024)"
+        },
+        {
+          "key": "C",
+          "text": "oct(2024)"
+        },
+        {
+          "key": "D",
+          "text": "hex(2024)"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果不可能是哪一项?(  )\n\n```\nprint(len(b))\n\n\n\n\na = dict(zip(range(8, 0, -2), range(0, 8, 2)))\nprint(a)\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": "{0: 8, 4: 4, 6: 2, 2: 6}"
+        },
+        {
+          "key": "B",
+          "text": "{8: 0, 6: 2, 4: 4, 2: 6}"
+        },
+        {
+          "key": "C",
+          "text": "{4: 4, 6: 2, 8: 0, 2: 6}"
+        },
+        {
+          "key": "D",
+          "text": "{8: 0, 2: 6, 4: 4, 6: 2} a = {'name': 'Tom', 'age': 12} b = {'name': 'Join', 'email': 'join@qq.com'} b.update(a)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?( )",
+      "options": [
+        {
+          "key": "A",
+          "text": "('scratch', 'c++', 'python')"
+        },
+        {
+          "key": "B",
+          "text": "('python', 'scratch', 'c++')"
+        },
+        {
+          "key": "C",
+          "text": "('scratch', 'python','c++')"
+        },
+        {
+          "key": "D",
+          "text": "( 'c++','python','scratch')"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "(3, 4, 5, 6, 7, 'c', 'd', 'e')"
+        },
+        {
+          "key": "B",
+          "text": "(3, 4, 5, 6, 7, 'f', 'e', 'd', 'c')"
+        },
+        {
+          "key": "C",
+          "text": "(3, 4, 5, 6, 'f', 'e', 'd', 'c')"
+        },
+        {
+          "key": "D",
+          "text": "(3, 4, 5, 6, 7, 'f', 'e', 'd')"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[9, 7, 5, 3, 1] [8, 6, 4, 2, 0]"
+        },
+        {
+          "key": "B",
+          "text": "[8, 6, 4, 2, 0] [9, 7, 5, 3, 1]"
+        },
+        {
+          "key": "C",
+          "text": "[0, 2, 4, 6, 8] [1, 3, 5, 7, 9]"
+        },
+        {
+          "key": "D",
+          "text": "[1, 3, 5, 7, 9] [0, 2, 4, 6, 8]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "['a', 'e', 'g', 'n', 'o', 'r'] t1 = (\"python\", \"c++\", \"scratch\") t2 = tuple(i for i in t1[::-1]) print(t2) t1 = (1, 2, 3, 4, 5, 6, 7) t2 = ('a', 'b', 'c', 'd', 'e', 'f') s = t1[2:] + t2[5:2:-1] print(s) a = [i % 10 for i in range(10, 20)] b, c = [], [] while len(a) > 0: s = a.pop() if s % 2 == 0: b.append(s) else: c.append(s) print(b, c) a = ['o', 'r', 'a', 'n', 'g', 'e'] a.sort() a.reverse() print(a)"
+        },
+        {
+          "key": "B",
+          "text": "['e', 'g', 'n', 'a', 'r', 'o']"
+        },
+        {
+          "key": "C",
+          "text": "['r', 'o', 'n', 'g', 'e', 'a']"
+        },
+        {
+          "key": "D",
+          "text": "['o', 'r', 'a', 'n', 'g', 'e']"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面可以正确输出  They're planning a party for their friend's birthday. 的 Python 语句是?\n( )\n\n```\nprint('They\\'re planning a party for their friend\\'s birthday.\")\nprint(\"They\\'re planning a party for their friend\\'s birthday.')\nprint('They're planning a party for their friend's birthday.')\nprint('They\\'re planning a party for their friend\\'s birthday.')\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "['gesp', 'ccf.org.cn']"
+        },
+        {
+          "key": "B",
+          "text": "['gesp', 'ccf', 'org.cn']"
+        },
+        {
+          "key": "C",
+          "text": "['gesp', 'ccf', 'org', 'cn']"
+        },
+        {
+          "key": "D",
+          "text": "['gesp.ccf.org.cn']"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "执行下面 Python 代码后,输出的结果可能是?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "{'H', 'p', 'w', 'e', 'y', 'a', 'r', 'p', 'n'}"
+        },
+        {
+          "key": "B",
+          "text": "{'p', 'n', 'w', 'r', 'H', 'y', 'a', 'e'}"
+        },
+        {
+          "key": "C",
+          "text": "{'r', 'y', 'w', 'n', 'e', 'a', 'p', 'H', ' '}"
+        },
+        {
+          "key": "D",
+          "text": "{'r', 'p', 'e', 'a', 'H', 'w', 'n', 'a', 'y'}"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "小杨在做数学题,题目要求找出从 1 到 35 中能被 7 整除的数字,即 [7, 14, 21, 28, 35] ,以下哪个解析式可以完\n成这样的任务?(  )",
+      "options": [
+        {
+          "key": "A",
+          "text": "[i for i in range(36) if i % 7 == 0]"
+        },
+        {
+          "key": "B",
+          "text": "[i for i in range(1, 36) if i % 7 == 0]"
+        },
+        {
+          "key": "C",
+          "text": "[i for i in range(1, 35) if i % 7 == 0]"
+        },
+        {
+          "key": "D",
+          "text": "[i for i in range(1, 36) if i // 7 == 0]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "某小学男子篮球队招募新成员,要求加入球队的成员身高在 135 厘米以上(不含 135 厘米)。本次报名的人\n员有 10 人,她们的身高分别是 125 、 127 、 136 、 134 、 137 、 138 、 126 、 135 、 140 、 145 。完善以下代码,求出本次球\n队能够招募到新成员的人数?(  )\ns = 'gesp.ccf.org.cn'\nprint(s.split('.', 1))\n1\n2\nstr=\"Happy new year\"\na = set(str)\nprint(a)\n1\n2\n3\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "a.index(135)"
+        },
+        {
+          "key": "B",
+          "text": "sum(b)"
+        },
+        {
+          "key": "C",
+          "text": "len(b)"
+        },
+        {
+          "key": "D",
+          "text": "b.count('True')"
+        }
+      ],
+      "answer": "B"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "GESP 测试是对认证者的编程能力进行等级认证,同一级别的能力基本上与编程语言无关。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "在 Python 中, print(list(\"GESP\")) 将输出 ['G', 'E', 'S', 'P'] 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "集合是一个无序的不重复元素序列,用 {} 作为界定符,如集合{1, 2, {3: 4}, 5, 6}。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "集合支持索引操作,可以通过索引访问元素。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "整数 -6 的 16 位补码可用十六进制表示为 FFFA 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "十六进制 FB 转成八进制为 363 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "a , b 为整数,如果表达式a ^ b == 0为 True ,那么说明 a 与 b 相等。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出的结果是 8 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "执行下面 Python 代码后,输出的结果不可能是 89781 。(  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "把整数 3025 从中剪开分为 30 和 25 两个数,此时再将这两数之和平方,计算结果又等于原数。 (30 + 25) × (30\n+ 25) = 55 × 55 = 3025 ,这样的数叫 “ 雷劈数 ” 。可以使用枚举的方法求出所有符合这样条件的四位数。(  )\na = [125, 127, 136, 134, 137, 138, 126, 135, 140, 145]\nb = [i > 135 for i in a]\nc = __________\nprint(c)\n\n\n\n\na = 0b1010\nb = 0o1100\nc = a & b\nprint(c)\n\n\n\n\nimport random\ni = 1\ns = \"\"\nwhile i <= 5:\n    a = random.randint(0, 9)\n    if a % 3 == (i + 1) % 3:\n        s += str(a)\n        i += 1\nprint(s)",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "移位",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨学习了加密技术移位,所有大写字母都向后按照一个固定数目进行偏移。偏移过程会将字母表视作首尾相接的\n环,例如,当偏移量是 3 的时候,大写字母  A 会替换成  D ,大写字母  Z 会替换成  C ,总体来看,大写字母表\nABCDEFGHIJKLMNOPQRSTUVWXYZ 会被替换成  DEFGHIJKLMNOPQRSTUVWXYZABC 。\n注:当偏移量是 26 的倍数时,每个大写字母经过偏移后会恰好回到原来的位置,即大写字母表\nABCDEFGHIJKLMNOPQRSTUVWXYZ 经过偏移后会保持不变。\n3.1.2\n\n输入格式\n第一行包含一个正整数  。\n3.1.3 输出格式\n输出在偏移量为   的情况下,大写字母表  ABCDEFGHIJKLMNOPQRSTUVWXYZ 移位替换后的结果。\n3.1.4 样例 1\n3.1.5 样例解释\n当偏移量是 3 的时候,大写字母  A 会替换成  D ,大写字母  Z 会替换成  C ,总体来看,大写字母表\nABCDEFGHIJKLMNOPQRSTUVWXYZ 会被替换成  DEFGHIJKLMNOPQRSTUVWXYZABC 。\n3.1.6 数据范围\n对于全部数据,保证有  。\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "寻找倍数",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨有一个包含   个正整数的序列  ,他想知道是否存在   ( ) 使得   是序列   中所有数\n的倍数。\n3.2.2\n\n输入格式\n第一行包含一个正整数  ,代表测试用例组数。\n接下来是   组测试用例。\n对于每组测试用例,一共两行。其中,第一行包含一个正整数  ;第二行包含   个正整数,代表序列  。\n3.2.3 输出格式\n对于每组测试用例,如果存在   ( ) 满足对于所有   ( )  是   的倍数,输出  Yes ,否则输出  No 。\n3.2.4 样例 1\n3.2.5 样例解释\n对于第一组数据,对于  ,满足   是   和   的倍数。\n3.2.6 数据范围\n对于全部数据,保证有  。\n3.2.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "B",
+      "B",
+      "C",
+      "C",
+      "A",
+      "A",
+      "D",
+      "B",
+      "C",
+      "D",
+      "A",
+      "C",
+      "B",
+      "B"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

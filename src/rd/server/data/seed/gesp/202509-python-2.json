@@ -1,0 +1,581 @@
+{
+  "meta": {
+    "ym": "202509",
+    "lang": "python",
+    "level": 2,
+    "title": "CCF GESP 2025年9月认证 Python 2级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10229.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1719086167883808.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202509-python-2.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "人工智能现在非常火,小杨就想多了解一下,其中就经常听人提到 “ 大模型 ” 。那么请问这里说的 “ 大模型 ” 最\n贴切是指  (   ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "大电脑模型"
+        },
+        {
+          "key": "B",
+          "text": "大规模智能"
+        },
+        {
+          "key": "C",
+          "text": "智能的单位"
+        },
+        {
+          "key": "D",
+          "text": "大语言模型"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "在 TCP 协议中,完成连接建立需要通过(   )握手。",
+      "options": [
+        {
+          "key": "A",
+          "text": "一次"
+        },
+        {
+          "key": "B",
+          "text": "二次"
+        },
+        {
+          "key": "C",
+          "text": "三次"
+        },
+        {
+          "key": "D",
+          "text": "四次"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面的 Python 代码用于输入姓名,然后输出姓名,正确的说法是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "XingMing是汉语拼音,不能作为变量名称"
+        },
+        {
+          "key": "B",
+          "text": "可以将 XingMing 改为 Xing Ming"
+        },
+        {
+          "key": "C",
+          "text": "可以将 XingMing 改为 xingming"
+        },
+        {
+          "key": "D",
+          "text": "可以将 XingMing 改为 Xing-Ming"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下面 Python 代码用于获得正整数 N 的第 M 位数,如 N 等于 1234 , M 等于 2 ,则输出 3 。此题假设 M 的值大于等于\n1 小于等于 N 的位数。横线处应填入的代码是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "N % div // 10 XingMing = input(\" 请输入您的姓名: \") print(XingMing) N = int(input(\" 请输入一个正整数: \")) M = int(input(\" 请输入从右到左取第几位数: \")) div = 10 ** (M - 1) print(______________)"
+        },
+        {
+          "key": "B",
+          "text": "N // div // 10"
+        },
+        {
+          "key": "C",
+          "text": "N % div % 10"
+        },
+        {
+          "key": "D",
+          "text": "N // div % 10"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面Python代码执行,其输出是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "False 4 4"
+        },
+        {
+          "key": "B",
+          "text": "3 3 3"
+        },
+        {
+          "key": "C",
+          "text": "4 4 4"
+        },
+        {
+          "key": "D",
+          "text": "3 4 False"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "某种编号的规则是“XX-Y”,其中XX从00到11,Y从0到9,X和Y均为10进制。第一个编号是00-0,第二个编\n号是01-1,第12个编号11-1,第13个编号00-2,即其编码规则是XX和Y同时增1,到XX到11时下一个变为00,Y到9\n时,下一个变为0。下面的Python代码用于生成第N个编号,横线处应填上的代码是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "12 10"
+        },
+        {
+          "key": "B",
+          "text": "10 10"
+        },
+        {
+          "key": "C",
+          "text": "11 9"
+        },
+        {
+          "key": "D",
+          "text": "9 9"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面的Python代码执行后,将输出(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "-2#-1#1#"
+        },
+        {
+          "key": "B",
+          "text": "-2#-1#0#1#"
+        },
+        {
+          "key": "C",
+          "text": "-2#-1#1#2#"
+        },
+        {
+          "key": "D",
+          "text": "-2#-1#0#1#2#"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面的Python代码执行后其输出是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "a, b = 3, 4 c = a == b print(a, b, c) N = int(input(\"请输入编号位置:\")) part1 = N % _____ part2 = N % _____ if part1 < 10: print(f\"0{part1}-{part2}\") else: print(f\"{part1}-{part2}\") for i in range(-2, 2): if i: print(i, end = \"#\") cnt = 0 for i in range(-10,10): for j in range(i): cnt += 1 print(cnt)"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后其输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "没有输出"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "阅读下面的 Python 代码,正确的是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "b 不能为 0 ,因为 a % b 将导致错误"
+        },
+        {
+          "key": "B",
+          "text": "a 必须小于 b,否则 a % b 将导致错误"
+        },
+        {
+          "key": "C",
+          "text": "a 和 b 都必须为正整数,否则 a % b 将导致错误"
+        },
+        {
+          "key": "D",
+          "text": "如果 a 为 0 ,则不管 b 为多少,输出都将是 b"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出是(      )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1#2#4#5#6#"
+        },
+        {
+          "key": "B",
+          "text": "1#2#4#5#6"
+        },
+        {
+          "key": "C",
+          "text": "1#2#3#4#5#6#"
+        },
+        {
+          "key": "D",
+          "text": "1#2#3#4#5#6"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 Python 代码用于记录多个输入数中的最大数和最小数(输入  -999 则输入结束),相关说法错误的是\n(      )。\nfor i in range(1, 12):\n    if i % 2 == 0:\n        continue\n    for j in range(i):\n        if i * j % 2:\n            break\nelse:\n    print(i * j)\n1\n2\n3\n4\n5\n6\n7\n8\n9\na = int(input())\nb = int(input())\nwhile b != 0:\n    remainder = a % b\n    a = b\n    b = remainder\nprint(a)\n1\n2\n3\n4\n5\n6\n7\n8\n9\nnum = 0\nwhile num <= 5:\n    num += 1\n    if num == 3:\n        continue\n    print(num, end='#')\n1\n2\n3\n4\n5\n6",
+      "options": [
+        {
+          "key": "A",
+          "text": "程序运行时如果第一个数输入 -999 ,则输出将是 -999 -999"
+        },
+        {
+          "key": "B",
+          "text": "程序输入过程中,如果输入的第一个数不是 -999 ,且如果待输入的实际数据中没有 -999 【即: -999 仅 作为结束程序的标志数据】,则程序能求出最大数和最小数"
+        },
+        {
+          "key": "C",
+          "text": "如果用于输入考试成绩,即成绩中不可能有 -999 ,则程序能求出最高成绩和最低成绩"
+        },
+        {
+          "key": "D",
+          "text": "可以将 now_num = int(input()) 移动到 while now_num != -999: 之后"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面Python代码执行后输出与 5 有关数的数量。与5有关的数定义为含有 5 或者能被 5 整除的数。相关说法\n正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "删除代码中 continue 不影响程序执行结果"
+        },
+        {
+          "key": "B",
+          "text": "删除代码中 break 不影响程序执行结果"
+        },
+        {
+          "key": "C",
+          "text": "删除 j = i 并将 while 循环的j修改为i,不影响程序执行结果"
+        },
+        {
+          "key": "D",
+          "text": "将 while j > 0 修正为 while j>= 0 不影响程序执行的结果"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面Python代码实现输出如下图形,应该在横线处填入的代码是(    )【注:字符串乘以一个正整数,相\n当于相同字符重复】。\n\nnow_num = int(input())\nmin_num = max_num = now_num\nwhile now_num != -999:\n    if max_num < now_num:\n        max_num = now_num\n    if min_num > now_num:\n        min_num = now_num\n    now_num = int(input())\nprint(min_num, max_num)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\ncnt = 0\nfor i in range(1,1000):\n    if i % 5 == 0:\n        cnt += 1\n        continue\n    j = i\n    while j > 0:\n        if j % 10 == 5:\n            cnt += 1\n            break\n        else:\n            j //= 10\nprint(cnt)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nn = int(input(\"输入行数量:\"))1",
+      "options": [
+        {
+          "key": "A",
+          "text": "(n % 2 == 1 and i == mid_row) or (n % 2 == 0 and (i == mid_row - 1 or i == mid_row))"
+        },
+        {
+          "key": "B",
+          "text": "(n % 2 == 0 and i == mid_row) or (n % 2 == 1 and (i == mid_row - 1 or i == mid_row))"
+        },
+        {
+          "key": "C",
+          "text": "(n % 2 == 1 and i == mid_row) or (n % 2 == 0 and (i == mid_row or i == mid_row + 1))"
+        },
+        {
+          "key": "D",
+          "text": "(n % 2 == 1 and i == mid_row) or (n % 2 == 0 and i == mid_row - 1) and (n % 2 == 0 and i == mid_row)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "下面Python代码实现输出如下图形,应该在横线处填入的代码是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "m = int(input(\"输入每行字符数量:\")) # 计算行和列的中间位置 mid_row = n // 2 mid_col = m // 2 for i in range(n): # 判断当前行是否为中间行(或中间两行) if _____________________________________: print('*' * m) else: # 根据列数奇偶性构建行字符串 if m % 2 == 1: # 奇数列:左侧- + 中间* + 右侧- left = '-' * mid_col center = '*' right = '-' * mid_col print(left + center + right) else: # 偶数列:左侧- + 中间** + 右侧- left = '-' * (mid_col - 1) center = '**' right = '-' * (mid_col - 1) print(left + center + right) N = int(input(\"请输入层数:\")) K = 1 for i in range (1, N + 1): for _ in range(1, ___________): print(\" \", end = \"\") for _ in range(1, ________): print(K, end = \"\") K += 1 if K == 10: K = 1 print() 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "B",
+          "text": "C."
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "在集成开发环境里调试程序时,要注意不能修改源程序,因为如果修改,就要终止调试、关闭该文件并重新\n打开,才能再次开始调试。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "在 Python 代码中,假设 N 为正整数且大于 100 ,则N // 100将舍弃个位和十位,如 N 为 1234 则print(N //\n100)将输出  12。如果 N 小于 100 且大于 0 ,则其值为 0 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "下列 Python 代码执行后将输出  True,因为  a 确实小于  20 和  10 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "下面的 Python 执行后将输出  True。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "下面 Python 执行后,将输出  10。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行时如输入  99.99,将输出及格两个汉字。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行时将导致无限循环(也称死循环)。(   )\nN - i + 1\ni + 1\n\n\nN - i\ni\n\n\nN\ni\n\n\nN - i\ni + 1\n\n\na = 5\nprint(a < 10 and 20)\n\n\nx, y, z = 5, 10, 15\nresult = x < y < z\nprint(result)\n\n\n\na = 10\nprint(a + True)\n\n\nscore = int(input(\" 请输入学生成绩: \"))\nif score >= 60:\n    print(\" 及格 \")\nelse:\n    print(\" 不及格 \")",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "下面的 Python 代码执行后将输出  +#+#2#。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下列 Python 代码用于求斐波那契数列,即第 1 个数 0 ,第 2 个数 1 ,从第三个数开始,是前两个数之和。如果输\n入的值为大于 1 的正整数,该代码能输出第 N 个数的值。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下面的 Python 不能实现如下输出,但如果将print(0, end='')与 if 对齐,则可以。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "优美的数字",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\ncount = 0\n    count += 1\n    if count == 3:\n        continue\n    print(count, end=' ')\n\n    if i == 2:\n        continue\n    print(\"+\", end = \"#\")\nprint(i, end='#')\n\nn = int(input())\na, b = 0, 1\n    print(a, end=\" \")\n    a, b = b, a+b\n\nn = int(input(\" 请输入矩阵大小 n: \"))\n        if i == j:\n            print(i + 1, end='')\n            continue\n            print(0, end='')\n    print()\n\n3.1.1 题目描述\n如果一个正整数的所有数位都相同,小  A 就会觉得这个正整数很优美。例如,正整数   的数位都是  ,所以   是优\n美的。正整数   的数位都是  ,所以   是优美的。正整数   的数位不都相同,所以   并不优美。\n小  A 想知道不超过   的正整数中有多少优美的数字。你能帮他数一数吗?\n3.1.2\n\n输入格式\n一行,一个正整数  。\n3.1.3 输出格式\n一行,一个正整数,表示不超过   的优美正整数的数量。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于所有测试点,保证  。\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "菱形",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小  A 想绘制一个菱形。具体来说,需要绘制的菱形是一个   行   列的字符画,  是一个大于   的奇数。菱形的四个\n顶点依次位于第   行、第   列、第   行、第   列的正中间,使用  # 绘制。相邻顶点之间也用  # 连接。其余位置都\n是  .。例如,一个   行   列的菱形字符画是这样的:\n给定  ,请你帮小  A 绘制对应的菱形。\n3.2.2\n\n输入格式\n一行,一个正整数  。\n3.2.3 输出格式\n输出共   行,表示对应的菱形。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n3.2.4.4 输出样例  2\n..#..\n.#.#.\n#...#\n.#.#.\n..#..\n\n.#.\n#.#\n.#.\n\n....#....\n...#.#...\n..#...#..\n.#.....#.\n#.......#\n.#.....#.\n..#...#..\n...#.#...\n....#....\n\n3.2.5 数据范围\n对于所有测试点,保证   并且   为奇数。\n3.2.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "3\n4\n5\n31\n1\n2\n3\n91\n",
+          "out": "9\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "D",
+      "C",
+      "C",
+      "D",
+      "D",
+      "A",
+      "A",
+      "D",
+      "B",
+      "D",
+      "A",
+      "D",
+      "C",
+      "A",
+      "A"
+    ],
+    [
+      "B"
+    ]
+  ]
+}

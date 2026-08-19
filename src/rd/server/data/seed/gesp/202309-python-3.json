@@ -1,0 +1,591 @@
+{
+  "meta": {
+    "ym": "202309",
+    "lang": "python",
+    "level": 3,
+    "title": "GESP 9月认证 Python三级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10105.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1570611839107104.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202309-python-3.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "人们所使用的手机上安装的 App 通常指的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "一款操作系统"
+        },
+        {
+          "key": "B",
+          "text": "一款应用软件"
+        },
+        {
+          "key": "C",
+          "text": "一种通话设备"
+        },
+        {
+          "key": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下列流程图的输出结果是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "已知大写字符'A'的 ASCII 编码的十六进制表示为0x41,则字符'L'的 ASCII 编码的十六进制表示为(\n)。",
+      "options": [
+        {
+          "key": "A",
+          "text": "4A"
+        },
+        {
+          "key": "B",
+          "text": "4B"
+        },
+        {
+          "key": "C",
+          "text": "4C"
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "下面有关 Python 的 dict 类型 key (键)的说法,正确的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "dict 类型的 key 可以是 list 数据"
+        },
+        {
+          "key": "B",
+          "text": "dict 类型的 key 可以是 set 数据"
+        },
+        {
+          "key": "C",
+          "text": "dict 类型的 key 可以是 dict 数据"
+        },
+        {
+          "key": "D",
+          "text": "dict 类型的 key 可以是 tuple 数据"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "下面 Python 赋值语句,不正确的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "a = [12, 12]"
+        },
+        {
+          "key": "B",
+          "text": "b = (12, 12)"
+        },
+        {
+          "key": "C",
+          "text": "c = {12, 12}"
+        },
+        {
+          "key": "D",
+          "text": "以上没有不正确"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "有关下面 Python 代码的描述,正确的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "上述代码执行将报错"
+        },
+        {
+          "key": "B",
+          "text": "加号运算符不适用 tuple 类型"
+        },
+        {
+          "key": "C",
+          "text": "tuple 是不可更改类型,不能切片( slice )操作"
+        },
+        {
+          "key": "D",
+          "text": "输出结果是 (2, 3, 4, 5)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下列 Python 赋值语句错误的是  (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "a = [1, 2] + [3, 4]"
+        },
+        {
+          "key": "B",
+          "text": "b = (1, 2) + (3, 4)"
+        },
+        {
+          "key": "C",
+          "text": "c = {1, 2} + {3, 4}"
+        },
+        {
+          "key": "D",
+          "text": "d = \"1, 2\" + \"3, 4\""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是  (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[],[13, 14]"
+        },
+        {
+          "key": "B",
+          "text": "[13, 14],[]"
+        },
+        {
+          "key": "C",
+          "text": "[13, 14],[13, 14]"
+        },
+        {
+          "key": "D",
+          "text": "[],[]"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是   (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "['1', 'A', 'x']"
+        },
+        {
+          "key": "B",
+          "text": "['1', 'x', 'A']"
+        },
+        {
+          "key": "C",
+          "text": "\"1Ax\""
+        },
+        {
+          "key": "D",
+          "text": "\"A1x\""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是  (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[8, 7, 6, 5, 4, -3, 3, -2, 2]"
+        },
+        {
+          "key": "B",
+          "text": "[8, 7, 6, 5, 4, -3, 3, 2, -2]"
+        },
+        {
+          "key": "C",
+          "text": "[2, -2, -3, 3, 4, 5, 6, 7, 8]"
+        },
+        {
+          "key": "D",
+          "text": "[-2, 2, -3, 3, 4, 5, 6, 7, 8]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是  (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "'P'"
+        },
+        {
+          "key": "B",
+          "text": "'p'"
+        },
+        {
+          "key": "C",
+          "text": "{'P'}"
+        },
+        {
+          "key": "D",
+          "text": "{'p'}"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "某机构职工编码规则是 “ 入职年份顺序码 ” ,其中入职年份为 2 位数,顺序码 3 位数表示入职顺序。下面代码\n要求输入职工编码,并在输入大写字母 Q 时结束输入,要求输出每个年份入职人数,应在横线填入代码是  (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "statData[Year] += statData.get(Year) + 1"
+        },
+        {
+          "key": "B",
+          "text": "statData[Year] = statData.get(Year, 0) + 1"
+        },
+        {
+          "key": "C",
+          "text": "statData[Year] = statData.get(Year, None) + 1"
+        },
+        {
+          "key": "D",
+          "text": "statData[Year] += 1"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "Python 表达式[x for x in range(2,20) if x % 3 and x % 5 == 0]的值是  (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "[15]"
+        },
+        {
+          "key": "B",
+          "text": "[5, 10]"
+        },
+        {
+          "key": "C",
+          "text": "[2, 4, 7, 8, 11, 13, 14, 16, 17, 19]"
+        },
+        {
+          "key": "D",
+          "text": "[3, 6, 9, 12, 18]"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面 Python 代码用于实现十进制到 M 进制( M 为二进制到十六进制)的转换,横线处应填入代码是  (   )。\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "options": [
+        {
+          "key": "A",
+          "text": "rst += Alpha[Remainder]"
+        },
+        {
+          "key": "B",
+          "text": "rst = Alpha[Remainder] + rst"
+        },
+        {
+          "key": "C",
+          "text": "rst = rst + Alpha[Remainder]"
+        },
+        {
+          "key": "D",
+          "text": "rst = str(Remainder) + rst"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "下面 Python 代码实现字符串乱序【随机打乱】,横线处应填入代码  (   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "key = random.random"
+        },
+        {
+          "key": "B",
+          "text": "key = lambda x:random.random(x)"
+        },
+        {
+          "key": "C",
+          "text": "key = lambda x:random.random()"
+        },
+        {
+          "key": "D",
+          "text": "key = lambda x:random.random"
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "我们常说的互联网( Internet )是一个覆盖全球的广域网络,它不属于任何一个国家。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "二进制数101.101在十进制下是  5.005 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 内置函数 len() 对 list 、 tuple 和 str 有效,对 set 和 dict 无效。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "Python 表达式 len(set(\"12,34,56\")) 的值为 3 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "Python 表达式 2&3 的值为 5.",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "执行 Python 代码 print(\" 李白 \".replace(\" 白 \",\" 杜 \")) 后将输出 \" 李杜 \" 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "执行 Python 代码 print(list(filter(lambda n:n%5,range(10)))) 后将输出 [0, 5] 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "执行 Python 代码 print([i for i in range(10) if i % 5 == 0]) 后将输出 [0, 5] 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行时输入 10,20 后将输出 30 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "在 Python 代码中先执行a = (5,6,3,10),  然后执行 print(a.sort()) 其输出结果是 None 。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "小杨的储蓄",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n小杨共有   个储蓄罐,编号从   到  。从第  1 天开始,小杨每天都会往存钱罐里存钱。具体来说,第   天他会\n挑选一个存钱罐  ,并存入   元钱。过了   天后,他已经忘记每个储蓄罐里都存了多少钱了,你能帮帮他吗?\n3.1.2 输入描述\n输入  2 行,第一行两个整数  ;第二行   个整数,其中第   个整数为  (保证  )。\n每行的各个整数之间用单个空格分隔。\n保证  ;\n3.1.3 输出描述\n输出   个用单个空格隔开的整数,其中第   个整数表示编号为   的存钱罐中有多少钱( )。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7 样例解释  1\n小杨在第   天、第   天、第   天分别向   号、 号、 号存钱罐存了   元钱、 元钱、 元钱,因此   号存钱罐有\n 元钱,而   号存钱罐有   元钱。\n3.1.8 样例输入  2\n2 3\n0 1 0\n\n4 21\n3 5\n0 0 0 2 0\n\n3.1.9 样例输出  2\n3.1.10",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [
+        {
+          "in": "2\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "进制判断",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n 进制数指的是逢   进一的计数制。例如,人们日常生活中大多使用十进制计数,而计算机底层则一般使用二进\n制。除此之外,八进制和十六进制在一些场合也是常用的计数制(十六进制中,一般使用字母  A 至  F 表示十至十\n五)。\n现在有   个数,请你分别判断他们是否可能是二进制、八进制、十进制、十六进制。例如,15A6F 就只可能是十\n六进制,而  1011 则是四种进制皆有可能。\n3.2.2 输入描述\n输入的第一行为一个十进制表示的整数  。接下来   行,每行一个字符串,表示需要判断的数。保证所有字符串均\n由数字和大写字母组成,且不以  0 开头。保证不会出现空行。\n保证  ,保证所有字符串长度不超过  。\n3.2.3 输出描述\n输出   行,每行   个数,用空格隔开,分别表示给定的字符串是否可能表示一个二进制数、八进制数、十进制数、\n十六进制数。使用  1 表示可能,使用  0 表示不可能。\n例如,对于只可能是十六进制数的  15A6F,就需要输出  0 0 0 1;而对于四者皆有可能的  1011,则需要输出  1\n1 1 1。\n3.2.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.2.5 样例输入  1\n11 0 41\nn, d = map(int, input().split(' '))\nx = list(map(int, input().split(' ')))\narr = [0 for i in range(n)]\nfor i in range(d):\n    arr[x[i]] += (i+1)\nprint(' '.join(map(str, arr)))\n\n15A6F\n\n3.2.6 样例输出  1\n3.2.7 样例输入  2\n3.2.8 样例输出  2\n3.2.9",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [
+        {
+          "in": "2\n1011\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "B",
+      "B",
+      "C",
+      "D",
+      "D",
+      "D",
+      "C",
+      "A",
+      "A",
+      "B",
+      "C",
+      "B",
+      "B",
+      "B",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

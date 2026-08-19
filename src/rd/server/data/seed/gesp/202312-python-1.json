@@ -1,0 +1,571 @@
+{
+  "meta": {
+    "ym": "202312",
+    "lang": "python",
+    "level": 1,
+    "title": "GESP 12月认证 Python一级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10119.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1585703664222240.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202312-python-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "某公司新出了一款无人驾驶的小汽车,通过声控智能驾驶系统,乘客只要告诉汽车目的地,车子就能自动选\n择一条优化路线,告诉乘客后驶达那里。请问下面哪项不是驾驶系统完成选路所必须的。(   )",
+      "options": [
+        {
+          "key": "A",
+          "text": "麦克风"
+        },
+        {
+          "key": "B",
+          "text": "扬声器"
+        },
+        {
+          "key": "C",
+          "text": "油量表"
+        },
+        {
+          "key": "D",
+          "text": "传感器"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "现代计算机是指电子计算机,它所基于的是(   )体系结构。",
+      "options": [
+        {
+          "key": "A",
+          "text": "艾伦 · 图灵"
+        },
+        {
+          "key": "B",
+          "text": "冯 · 诺依曼"
+        },
+        {
+          "key": "C",
+          "text": "阿塔纳索夫"
+        },
+        {
+          "key": "D",
+          "text": "埃克特 - 莫克利"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "以下 Python 不可以作为变量的名称的是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "CCF GESP"
+        },
+        {
+          "key": "B",
+          "text": "ccfGESP"
+        },
+        {
+          "key": "C",
+          "text": "CCFgesp"
+        },
+        {
+          "key": "D",
+          "text": "CCF_GESP"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "Python 表达式10 - 3 ** 2 % 10的值是 (  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "假设现在是上午十点,求出N小时(正整数)后是第几天及时,如输入20小时则为第2天6点,如N输入4则为\n今天14点。为实现相应功能,应在横线处填写代码是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "(10 + N) % 24 , (10 + N) // 24"
+        },
+        {
+          "key": "B",
+          "text": "(10 + N) // 24 , (10 + N) % 24"
+        },
+        {
+          "key": "C",
+          "text": "N % 24 , N // 24"
+        },
+        {
+          "key": "D",
+          "text": "10 // 24 , 10 % 24"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面的程序用于判断N是否为偶数,横线处应填写代码是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "N % 2 == 0"
+        },
+        {
+          "key": "B",
+          "text": "N % 2 = 0"
+        },
+        {
+          "key": "C",
+          "text": "N % 2"
+        },
+        {
+          "key": "D",
+          "text": "N % 2 != 0"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面对Python代码执行后输出的描述,正确的是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "如果输入的N是小于等于2的整数,第5行将输出0。"
+        },
+        {
+          "key": "B",
+          "text": "如果输入的N是大于等于2的整数,第5行将输出N-1。"
+        },
+        {
+          "key": "C",
+          "text": "如果输入的N是大于等于2的整数,第5行将输出N。"
+        },
+        {
+          "key": "D",
+          "text": "以上说法均不正确。"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面Python代码执行后的输出是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 Python 代码用于判断一个数是否为质数(素数),在横线处应填入代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "cnt = 1"
+        },
+        {
+          "key": "B",
+          "text": "cnt = 2"
+        },
+        {
+          "key": "C",
+          "text": "cnt =+ 1"
+        },
+        {
+          "key": "D",
+          "text": "cnt += 1"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "当执行turtle.forward()时,提示如下信息:NameError: name 'turtle' is not defined. Did\nyou mean: 'tuple'?,下面描述正确的是(       )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "提示的含义有 “turtle没有定义 ” 之意,故先执行turtle = 0即可"
+        },
+        {
+          "key": "B",
+          "text": "将turtle修改为tuple后将不会报错"
+        },
+        {
+          "key": "C",
+          "text": "turtle.forward()中的forward错误,必须先执行turtle.pendown()"
+        },
+        {
+          "key": "D",
+          "text": "因为没有执行import turtle,故有此错误。"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "先后执行 Python 代码import turtle和turtle.circle(10,steps = 3)后,正确的说法是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "将绘制出半径为 10 ,弧度为 3 的圆"
+        },
+        {
+          "key": "B",
+          "text": "将绘制出半径为 10 ,角度为 3 的圆"
+        },
+        {
+          "key": "C",
+          "text": "将绘制出边长为 10 的正三边形,即等边三角形"
+        },
+        {
+          "key": "D",
+          "text": "将绘制出半径为 10 的内接圆正三边形,即等边三角形"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出的正确图形是 ( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "为实现下图所示效果,请完善随后的 Python 代码,并在横线上填入相应代码 ( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "-10"
+        },
+        {
+          "key": "B",
+          "text": "10 * i 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "C",
+          "text": "10 * (i + 1)"
+        },
+        {
+          "key": "D",
+          "text": "-10 * (i + 1)"
+        }
+      ],
+      "answer": "D"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小杨最近在准备考 GESP ,他用的 Python IDLE 来练习和运行程序,所以 Python IDLE 也是一个小型操作系统。\n(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "任何一个while循环都可以转化为等价的for循环(   )。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 表达式int(3.14)的值为 3 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "Python 语句print(2 ** 3, 3 % 10, 2+3)的输出为8,3,5。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "Python 内置函数range(1,10,3)表示从 1 开始到 10 结束间隔为 3 ,相当于 1 、 4 、 7 、 10 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "Python 表达式int(\"10\"*2+\"10\")+101的值为 101111 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "在 Python 中,判断语句如果有多个条件,条件之间通常不应重叠,否则可能导致误判。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "在下面的 Python 代码中,由于循环中的continue是无条件被执行,因此将导致死循环。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在 Python 代码中,turtle.reset()和turtle.clear()功能相同,都是清除画面,海龟回到原点,朝向\n置为默认方向。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "在 Python 的 turtle 库中,turtle.right()与turtle.rt()等价。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "小杨的考试",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n今天是星期  ,小杨还有   天就要考试了,你能推算出小杨考试那天是星期几吗?(本题中使用   表示星期日)\n3.1.2 输入描述\n输入  2 行,第一行一个整数  ( );第二行一个整数  ( )。\n3.1.3 输出描述\n输出一个整数,表示小杨考试那天是星期几。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7 样例解释  1\n今天是星期  1 ,那么  6 天后就是星期日,星期日在本题中用   表示。\n3.1.8 样例输入  2\n3.1.9 样例输出  2\n3.1.10 样例解释  2\n今天是星期  5 ,那么  3 天后就是星期  1 。\n3.1.11",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "小杨报数",
+      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n小杨需要从   到   报数。在报数过程中,小杨希望跳过   的倍数。例如,如果  , ,那么小杨就需要\n依次报出  、、。\n现在,请你依次输出小杨报的数。\n\nx = int(input())\nn = int(input())\nprint((x - 1 + n % 7) % 7 + 1)\n\n3.2.2 输入描述\n输入  2 行,第一行一个整数  ( );第二行一个整数  ( )。\n3.2.3 输出描述\n输出若干行,依次表示小杨报的数。\n3.2.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.2.5 样例输入  1\n3.2.6 样例输出  1\n3.2.7 样例输入  2\n3.2.8 样例输出  2\n3.2.9",
+      "time_ms": 1000,
+      "memory_mb": 128,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "B",
+      "A",
+      "B",
+      "B",
+      "A",
+      "B",
+      "C",
+      "A",
+      "C",
+      "D",
+      "D",
+      "D",
+      "A",
+      "D"
+    ],
+    [
+      "C"
+    ]
+  ]
+}

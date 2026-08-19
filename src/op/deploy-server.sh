@@ -13,6 +13,22 @@ npm ci --omit=dev
 echo "==> [server] apply catalog"
 node src/op/apply-catalog.mjs
 
+echo "==> [server] import seed (gesp / csp-j)"
+if command -v python3 >/dev/null 2>&1; then
+  PY=python3
+elif command -v python >/dev/null 2>&1; then
+  PY=python
+else
+  echo "error: python3 not found (need to import seed JSON)"
+  exit 1
+fi
+if [[ -d "$EDUHUB_SRC/src/rd/server/data/seed/gesp" ]]; then
+  $PY src/op/gesp_import.py --skip-crawl
+fi
+if [[ -d "$EDUHUB_SRC/src/rd/server/data/seed/csp-j" ]]; then
+  $PY src/op/cspj_adacpp_import.py --skip-crawl
+fi
+
 if ! command -v systemctl >/dev/null 2>&1; then
   echo "error: systemctl not found"
   exit 1

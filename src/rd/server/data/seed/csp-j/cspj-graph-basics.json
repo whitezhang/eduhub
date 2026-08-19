@@ -1,0 +1,34 @@
+{
+  "slug": "cspj-graph-basics",
+  "url": "https://adacpp.com/practice/cspj-graph-basics",
+  "title": "图的存储",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "LSMbS55WQeyBOthpehhdE",
+      "type": "single_choice",
+      "content": "无向完全图是图中每对顶点之间都恰好有一条边的简单图。已知无向完全图G有7个顶点，则它共有（ ）条边。",
+      "options": [
+        {
+          "label": "A",
+          "text": "7"
+        },
+        {
+          "label": "B",
+          "text": "21"
+        },
+        {
+          "label": "C",
+          "text": "42"
+        },
+        {
+          "label": "D",
+          "text": "49"
+        }
+      ],
+      "answer": "B",
+      "explanation": "如果顶点为n的话每个点可与其它n-1个点相连共有n*(n-1)，但是每条线均被计算了2次(比如从A到B和从B连到A是一样的)，再除以2即可n*(n-1)/2。\n当n=7时，7*(7 – 1 )/ 2 = 21"
+    }
+  ]
+}

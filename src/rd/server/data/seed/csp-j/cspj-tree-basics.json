@@ -1,0 +1,209 @@
+{
+  "slug": "cspj-tree-basics",
+  "url": "https://adacpp.com/practice/cspj-tree-basics",
+  "title": "二叉树",
+  "source": "csp-j",
+  "origin": "adacpp.com/practice",
+  "questions": [
+    {
+      "id": "8e35VTVA6O6gPc4OdTZdr",
+      "type": "single_choice",
+      "content": "如果树根算第1层，那么一棵n层的二叉树最多有（ ）个结点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2^(n) - 1"
+        },
+        {
+          "label": "B",
+          "text": "2^(n)"
+        },
+        {
+          "label": "C",
+          "text": "2^(n) + 1"
+        },
+        {
+          "label": "D",
+          "text": "2^(n+1)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "一棵n层的二叉树结点最多的情况是该二叉树是满二叉树的情况，因为第1层有1个结点(根节点)，第2层有2个结点 ，……，第n层有2^{n-1}个结点，一共有2^0 + 2^1 + 2^2 + …… + 2^{n-1} = 2^n – 1 个结点。"
+    },
+    {
+      "id": "VgBGnmqNXE0GdxO46X5dO",
+      "type": "single_choice",
+      "content": "如果根结点的深度记为1，则一棵恰有2011个叶结点的二叉树的深度最少是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "11"
+        },
+        {
+          "label": "C",
+          "text": "12"
+        },
+        {
+          "label": "D",
+          "text": "13"
+        }
+      ],
+      "answer": "C",
+      "explanation": "注意审题，题中说恰好有2011个叶节点的二叉树，深度最少是多少？要想深度最少，应该是每层结点数都达到最大，要往满二叉树上靠，可能是一个完全二叉树。满二叉树第i层结点数是2^{i – 1}。 所以求解2^{i – 1} >= 2011的i值即为答案。\n2^{10} = 1024 ; 2^{11} = 2048。 所以i是12。"
+    },
+    {
+      "id": "1yS3GpuF0I1-8JGI_bZDO",
+      "type": "single_choice",
+      "content": "已知一棵二叉树有10 个节点，则其中至多有（ ）个节点有 2 个子节点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "A",
+      "explanation": "尽量让底层的每个结点都先用有两个孩子，则最多有4个结点满足条件。"
+    },
+    {
+      "id": "yw1A-droK52rO9iHY6LKq",
+      "type": "single_choice",
+      "content": "如果根的高度为 1,具有 61 个结点的完全二叉树的高度为(   )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "B",
+      "explanation": "2^{k-1} - 1 < 节点总数 < 2^k - 1\n完全二叉树：除了最下面那层以外，都排满了；最下面那层从左往右排"
+    },
+    {
+      "id": "xFbjjVwA5nghHYMphQ_rT",
+      "type": "single_choice",
+      "content": "一棵二叉树如右图所示，若采用顺序存储结构，即用一 维数组元素存储该二叉树中的结点（根结点的下标为 1， 若某结点的下标为 i，则其左孩子位于下标 2i 处、 右孩子位于下标(2i+1)处） ，则图中所有结点的最大下标为( ) 。\n\n![](https://ydschool-video.nosdn.127.net/16531763091272016-11.png)",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "12"
+        },
+        {
+          "label": "D",
+          "text": "15"
+        }
+      ],
+      "answer": "D",
+      "explanation": "1×2+1=3；3×2+1=7；7×2+1=15"
+    },
+    {
+      "id": "pIpJvivbsyvUhRv6kDcAy",
+      "type": "single_choice",
+      "content": "根节点深度为 0，一棵深度为 h 的满 k（k>1）叉树，即除最后一层无任何子节点外，每一层上的所有结点都有 k 个子结点的树，共有(    )个结点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "(k^(h+1)-1)/(k-1)"
+        },
+        {
+          "label": "B",
+          "text": "k^(h-1)"
+        },
+        {
+          "label": "C",
+          "text": "k^h"
+        },
+        {
+          "label": "D",
+          "text": "k^(h-1)/(k-1)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "第0层    \\\\     1(k^0)个结点\n第1层    \\\\       k(k^1)个结点        \n第2层    \\\\      k^2个结点    \n第3层    \\\\    k^3个结点    \n第4层    \\\\     k^4个结点 \n......\n第h-1层   \\\\    k^{h-1}个结点\n第h层      \\\\     k^h个结点\n一共有k^0 + k^1 + k^2 + k^3 + k^4 + ……\n+ k^{h-1} + k^h个，这是一个等比数列，按照等比数列求和公式计算，(k^{h+1}-1)/(k-1)，选A"
+    },
+    {
+      "id": "ZXjW-fgrp60GpEkPRzOdg",
+      "type": "single_choice",
+      "content": "独根树的高度为 1,具有 61 个结点的完全二叉树的高度为(   )",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "B",
+      "explanation": "拥有61个结点的完全二叉树，高度为6。\n第1层    \\  1个结点   \\   累计结点：1个\n第2层    \\  2个结点   \\   累计结点：3个\n第3层    \\ 4个结点    \\    累计结点：7个\n第4层    \\  8个结点   \\   累计结点：15个\n......\n第6层    \\ 32个结点   \\  累计结点：63个"
+    },
+    {
+      "id": "XYjl_yNWRoxRppdvFwqZ5",
+      "type": "single_choice",
+      "content": "根节点的高度为1，一 棵拥有2023个节点的三叉树高度至少为（）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "C",
+      "explanation": "根节点高度记为1，一棵满三叉树（每个内部节点恰有3个子节点）在高度为 h 时最多可容纳 (3^h-1)/2 个节点。h=7 时最多容纳 (3^7-1)/2=1093 个节点，不足以容纳 2023 个节点；h=8 时最多可容纳 (3^8-1)/2=3280 个节点，足够容纳 2023 个节点。因此该三叉树的高度至少为 8。"
+    }
+  ]
+}

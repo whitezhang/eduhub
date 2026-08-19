@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "ym": "202506",
+    "lang": "cpp",
+    "level": 1,
+    "title": "CCF GESP 2025年6月认证 C++ 1级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1687195805024288.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202506-cpp-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "2025年4月19日在北京举行了一场颇为瞩目的人形机器人半程马拉松赛。比赛期间,跑动着的机器人会利用\n身上安装的多个传感器所反馈的数据来调整姿态、保持平衡等,那么这类传感器类似于计算机的(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "处理器"
+        },
+        {
+          "key": "B",
+          "text": "存储器"
+        },
+        {
+          "key": "C",
+          "text": "输入设备"
+        },
+        {
+          "key": "D",
+          "text": "输出设备"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "在某集成开发环境中调试下面代码段时尝试设置断点和检查局部变量,下面哪个说法是错误的(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "断点不可以设在L1标记的代码行"
+        },
+        {
+          "key": "B",
+          "text": "执行暂停在L2标记的代码行时,可以检测i的值"
+        },
+        {
+          "key": "C",
+          "text": "执行暂停在L3标记的代码行时,可以修改i的值"
+        },
+        {
+          "key": "D",
+          "text": "执行有可能暂停在L4标记的代码行"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "对下列C++的代码,描述准确的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "执行后输出10"
+        },
+        {
+          "key": "B",
+          "text": "执行后输出 {First}"
+        },
+        {
+          "key": "C",
+          "text": "执行后输出 \"{First}\""
+        },
+        {
+          "key": "D",
+          "text": "编译报错,因为First应该是first"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "在C++中,下列可以做变量名的是(  )。\nint i,N = 0; // L1\ncin >> N; // L2\nfor (i = 1; i < 9; i++)\n    if (N % i == 0) break;  // L3\nif (i < 9)\n    printf(\"N不能大于9\\n\"); // L4\n1\n2\n3\n4\n5\n6\nint first = 10;\nprintf(\"{%d}\\n\", First)\n1\n2",
+      "options": [
+        {
+          "key": "A",
+          "text": "X.cpp"
+        },
+        {
+          "key": "B",
+          "text": "X-cpp"
+        },
+        {
+          "key": "C",
+          "text": "X#cpp"
+        },
+        {
+          "key": "D",
+          "text": "X_cpp"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "C++表达式 14-3*3%2 的值是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "-67"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面的C++代码执行后,其输出是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "10 20"
+        },
+        {
+          "key": "B",
+          "text": "20 10"
+        },
+        {
+          "key": "C",
+          "text": "10 10"
+        },
+        {
+          "key": "D",
+          "text": "20 20"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "定义整型变量 int a=16 ,则执行 ++a += 3 之后,a的值会是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "C++的 int 类型变量 X 的值为8,如果执行 cout << (++X)++; ,则输出和执行后 X 的值分别是(    )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "8 9"
+        },
+        {
+          "key": "B",
+          "text": "9 9"
+        },
+        {
+          "key": "C",
+          "text": "9 10"
+        },
+        {
+          "key": "D",
+          "text": "编译错误,无法执行"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面C++代码执行后的输出是( )。\nint x = 10, y = 20;\nx = x + y;\ny = x - y;\nx = x - y;\ncout << x << ' ' << y;\n1\n2\n3\n4\n5\nint a,b;\na = 3;\nb = 4;\nprintf(\"a+b=%02d#a+b={a+b}\", a+b, a+b);\n1\n2\n3\n4",
+      "options": [
+        {
+          "key": "A",
+          "text": "a+b=07#a+b={a+b}"
+        },
+        {
+          "key": "B",
+          "text": "a+b= 7#a+b=7"
+        },
+        {
+          "key": "C",
+          "text": "a+b=7#a+b={a+b}"
+        },
+        {
+          "key": "D",
+          "text": "a+b=7#a+b=7"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面的 C++ 代码用于求 M 天后是星期几,两处横线处分别应填入的代码是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "END"
+        },
+        {
+          "key": "B",
+          "text": "1#"
+        },
+        {
+          "key": "C",
+          "text": "1#4#END int N, M, D; cout << \" 当前星期几 ? \"; // 星期日是 0 cin >> N; cout << \" 求多少天后 ? \"; // 输入正整数 cin >> M; D = ____________; if (____________) printf(\"%d 天后是星期日 \", M); else printf(\"%d 天后是星期 %d\", M, D); (N + M) / 7 D == 0 (N + M) % 7 D == 0 (N + M) / 7 D <= 0 (N + M) % 7 D = 0 int i; for (i = 1; i < 11; i += 3){ continue; if (i % 2 == 0) break; printf(\"%d#\", i); } if (i >= 11) printf(\"END\");"
+        },
+        {
+          "key": "D",
+          "text": "1#4#7#10#END"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面的 C++ 代码用于求 N 的所有因数(即能将 N 整除的数),如输入 12 则将输出12,6,4,3,2,1 。(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "i -= 1"
+        },
+        {
+          "key": "B",
+          "text": "i == 1"
+        },
+        {
+          "key": "C",
+          "text": "i > 1"
+        },
+        {
+          "key": "D",
+          "text": "i >= 1"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后输出的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "试图编译并执行下面 C++ 代码,下面描述正确的是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "输出101"
+        },
+        {
+          "key": "B",
+          "text": "输出102"
+        },
+        {
+          "key": "C",
+          "text": "输出103"
+        },
+        {
+          "key": "D",
+          "text": "编译将报错,无法执行"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "以下 C++ 代码可以找出百位、十位和个位满足特定条件的三位数,横线处应该填入的是(    )\nint i, N;\ncin >> N;\ni = N;\nwhile (_______){\n    if (N % i == 0)\n        printf(\"%d,\", i);\n    i -= 1;\n}\nprintf(\"1\");\n1\n2\n3\n4\n5\n6\n7\n8\n9\nint Sum = 0;\nfor (int i = 0; i < 10; i++){\n    if (i % 2 == 0)\n        continue;\n    if (i % 5 == 0)\n        break;\n    Sum += i;\n}\ncout << Sum;\n1\n2\n3\n4\n5\n6\n7\n8\n9\nfloat x;\nx = 101;\nx++;\ncout << ++x;\n1\n2\n3\n4\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案\n\n```\nint b = (i / 10) / 10;\nint b = (i / 10) % 10;\nint b = (i % 10) / 10;\nint b = (i % 10) % 10;\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "人们现在参加很多闭卷考试时通常都不允许带智能手机、平板电脑等,此外很多种智能手表同样因为具有嵌\n入操作系统及通信等功能,所以也不允许随身携带。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "如果 N 是 C++ 的整型变量,值为 5 ,则表达式(N + !N) 的值为 4 。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "在下面 C++ 代码中,删除 break 语句对程序执行结果没有影响。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "删除下面 C++ 代码中的 continue 后其输出是 0#2#4#6#8# 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "将下面 C++ 代码中的i < 100; i = i + 1 修改为i < 200; i += i + 1 ,其输出与当前代码输出相同。(\n)\nint count = 0;\nfor (int i = 100; i <= 999; i++) {\n    int a = i / 100;\n    _________________________\n    int c = i % 10;\n    if (a * a + b * b == c * c) {\n        count++;\n    }\n}\n\n\n\n\n\n\n\n\n\nint i;\nfor (i = 0; i < 10; i++){\n    continue;\n    cout << i << \"#\";\n    break;\n}\nif (i >= 10)\n    cout << \"END\";\n\n\n\n\n\n\n\n\nint i;\nfor (i = 0; i < 10; i++){\n    if (i % 2 == 0){\n        cout << i << \"#\";\n        continue;\n    }\n}\nif (i >= 10)\n    cout << \"END\";\n\n\n\n\n\n\n\n\n\nint cnt = 0;\nfor (int i = 0; i < 100; i = i + 1)\n    cnt += 1;\ncout << cnt;",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "交换下面 C++ 代码中的i += 2 和cnt += 1 ,交换前后分别运行的两次输出相同。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "下面的 C++ 代码执行后将输出 45 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "执行 C++ 代码cout << (12 + 12.12) 将报错,因为 12 是 int 类型,而 12.12 是 float 类型,不同类型不能直接运\n算。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "在 C++ 代码中,不可以将变量命名为 false ,因为 false 是 C++ 语言的关键字。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "X 是 C++ 的整型变量,则表达式3 < X < 5 求值结果是 4 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "假期阅读",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小  A 有一本厚厚的书。这本书总共有   页,小  A 一天中最多只能阅读完其中的   页。小  A 的假期总共有   天,他想\n知道在假期中最多能阅读完这本书的多少页。\n3.1.2\n\n输入格式\n第一行,一个正整数  ,表示书的页数。\n第二行,一个正整数  ,表示小  A 每天最多阅读的页数。\n第三行,一个正整数  ,表示小  A 假期的天数。\n3.1.3 输出格式\n一行,一个整数,表示假期中所能阅读的最多页数。\n3.1.4 样例\n3.1.4.1 输入样例  1\nint i, cnt = 0;\ncnt = 0;\nwhile (i < 10){\n    i += 2;\n    cnt += 1;\n}\ncout << cnt;\n\nint cnt;\nfor (int i = 0; i < 10; i++)\n    cnt += 1;\ncout << cnt;\n\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于所有测试点,保证   均不超过  。\n3.1.6",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "4\n5\n6\n7\n",
+          "out": "8\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n2\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "值日",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小杨和小红是值日生,负责打扫教室。小杨每   天值日一次,小红每   天值日一次。今天他们两个一起值日,请问\n至少多少天后,他们会再次同一天值日?\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示小杨的值日周期;\n第二行,一个正整数  ,表示小红的值日周期。",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "A",
+      "D",
+      "D",
+      "C",
+      "B",
+      "D",
+      "C",
+      "A",
+      "B",
+      "A",
+      "C",
+      "D",
+      "C",
+      "B",
+      "C"
+    ],
+    [
+      "A"
+    ]
+  ]
+}

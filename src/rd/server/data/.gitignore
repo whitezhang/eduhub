@@ -1,6 +1,5 @@
-# 本目录：runtime / seed / cache 不进 git。catalog/problems 进 git（正式改题）。
+# runtime / cache 不进 git。seed（gesp、csp-j）与 catalog/problems 进 git。
 runtime/
-seed/
 cache/
 # 旧布局（仅 data 根下，勿误伤 catalog/problems）
 /eduhub.db

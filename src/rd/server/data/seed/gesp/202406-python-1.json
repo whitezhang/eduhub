@@ -1,0 +1,585 @@
+{
+  "meta": {
+    "ym": "202406",
+    "lang": "python",
+    "level": 1,
+    "title": "GESP 6月认证 Python 一级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10147.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1621071709077536.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202406-python-1.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "小杨父母带他到某培训机构给他报名参加 CCF 组织的 GESP 认证考试的第 1 级,那他可以选择的认证语言有几\n种?(       )",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "ENIAC 于 1946 年投入运行,是世界上第一台真正意义上的计算机,它的主要部件都是(    )组成的。",
+      "options": [
+        {
+          "key": "A",
+          "text": "感应线圈"
+        },
+        {
+          "key": "B",
+          "text": "电子管"
+        },
+        {
+          "key": "C",
+          "text": "晶体管"
+        },
+        {
+          "key": "D",
+          "text": "集成电路"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "在 Python 中,假设 N 为正整数,则表达式print(N % 3 + N % 7)的最大值是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "最大值为 6"
+        },
+        {
+          "key": "B",
+          "text": "最大值为 8"
+        },
+        {
+          "key": "C",
+          "text": "最大值为 9"
+        },
+        {
+          "key": "D",
+          "text": "最大值为 10"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "Python 语句print(f\"5%2={5%2}\",5 % 2)执行后的输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "1={1} 1"
+        },
+        {
+          "key": "B",
+          "text": "5%2={5%2}1"
+        },
+        {
+          "key": "C",
+          "text": "5%2={5%2} 1"
+        },
+        {
+          "key": "D",
+          "text": "5%2=1 1"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "执行 Python 语句print(input())时如果输入 5+2 ,下述说法正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "将输出整数 7"
+        },
+        {
+          "key": "B",
+          "text": "将输出 5+2"
+        },
+        {
+          "key": "C",
+          "text": "语句执行将报错,函数不能作为函数的参数"
+        },
+        {
+          "key": "D",
+          "text": "语句执行将报错,因为 input() 函数的括号内没有提示字符串"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "102={102}"
+        },
+        {
+          "key": "B",
+          "text": "a+1={a+1}"
+        },
+        {
+          "key": "C",
+          "text": "a+1=102"
+        },
+        {
+          "key": "D",
+          "text": "a 先被赋值为浮点数,后被赋值为整数,执行将报错"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "5+5"
+        },
+        {
+          "key": "B",
+          "text": "5+'5'"
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行时输入 10 后,正确的输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "第 3 行代码 1"
+        },
+        {
+          "key": "B",
+          "text": "第 4 行代码 1"
+        },
+        {
+          "key": "C",
+          "text": "第 3 行代码 1"
+        },
+        {
+          "key": "D",
+          "text": "第 4 行代码 1"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后,最终输出是(     )。\na = 101.101\na = 101\nprint(f\"a+1={a+1}\")\n1\n2\n3\na = \"5\"\nb = 5\nprint(f\"{a}+{b}\")\n1\n2\n3\nN = int(input(\" 请输入正整数: \"))\nif N % 3:\n    print(\" 第 3 行代码 \", N % 3, sep = \"\")\nelse:\n    print(\" 第 4 行代码 \", N % 3, sep = \"\")\n1\n2\n3\n4\n5",
+      "options": [
+        {
+          "key": "A",
+          "text": "9 45"
+        },
+        {
+          "key": "B",
+          "text": "10 55"
+        },
+        {
+          "key": "C",
+          "text": "10 45"
+        },
+        {
+          "key": "D",
+          "text": "11 55"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 Python 代码用于判断 N 是否为质数(只能被 1 和它本身整除的正整数)。程序执行后,下面有关描述错\n误的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "如果输入负整数,将输出 “ 不是质数 ”"
+        },
+        {
+          "key": "B",
+          "text": "如果输入 2 ,将输出 “ 是质数 ” ,因为 Flag 已被改变为 True"
+        },
+        {
+          "key": "C",
+          "text": "如果输入 2 ,将输出 “ 是质数 ” ,即便此时循环体没有被执行"
+        },
+        {
+          "key": "D",
+          "text": "如果将if N >= 2:改为if N > 2:同样能正确判断 N 是否质数"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下面的 Python 代码用于求 1-N 之间所有奇数之和,其中 N 为正整数,如果 N 为奇数求和时包括 N 。有关描述错\n误的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "执行代码时如果输入 10 ,则最后一行输出将是11 25 Sum = 0 for i in range(10): Sum += i print(i,Sum) N = int(input(\" 请输入整数: \")) Flag = False if N >= 2: Flag = True for i in range(2,N): if N % i == 0: Flag = False break if Flag == True: print(\" 是质数 \") else: print(\" 不是质数 \") N = int(input(\" 请输入正整数: \")) i = 1 Sum = 0 while i <= N: if i % 2 == 1: Sum += i i += 1 print(i,Sum)"
+        },
+        {
+          "key": "B",
+          "text": "执行代码时如果输入 5 ,则最后一行输出将是6 9"
+        },
+        {
+          "key": "C",
+          "text": "将i += 1移到if i % 2 == 1:前一行且同样对齐,同样能实现题目要求"
+        },
+        {
+          "key": "D",
+          "text": "删除if i % 2 == 1:,并将i += 1改为i += 2,且将Sum += i与i += 2同样对齐,同样可以实现 题目要求"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的描述,正确的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "共有 5 条线段,蓝红相间,即蓝红蓝红蓝"
+        },
+        {
+          "key": "B",
+          "text": "共有 3 条线段,全部是蓝色,看起来是 1 条线段"
+        },
+        {
+          "key": "C",
+          "text": "共有 6 条线段,其中两条红色线段, 4 条蓝色线段"
+        },
+        {
+          "key": "D",
+          "text": "以上说法都不正确"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后的描述,错误的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码turtle.circle(100)将绘制一个半径为 100 的圆"
+        },
+        {
+          "key": "B",
+          "text": "代码turtle.circle(100, 360, 8)将绘制半径为 100 的完整内接正八边形"
+        },
+        {
+          "key": "C",
+          "text": "代码turtle.circle(100, 360, 8)将绘制半径为 100 的宽度为 8 的圆"
+        },
+        {
+          "key": "D",
+          "text": "代码turtle.circle(100, 180, 4) 将绘制半径为 100 的正八边形的右侧一半( 4 条边) , 因为 第 2 个参数是 180 度(只绘制一半)且第 3 个参数为 4 (只绘制出 4 个边)。"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "下面 Python 代码执行后输出的图形如下,横线处应填写的代码是(       )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "import turtle for i in range(1,10,2): if i % 3 == 0: turtle.pencolor(\"red\") else: turtle.pencolor(\"blue\") turtle.forward(50) import turtle turtle.circle(100) turtle.circle(100, 360, 8) turtle.circle(100, 180, 4) import turtle for d in range(10,_______,10): turtle.left(90) turtle.forward(d) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "为画出如下所示图形,下面 Python 代码横线处应填入 ( ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "GESP 测试是对认证者的编程能力进行等级认证,同一级别的能力基本上与编程语言无关。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "Python 语句print(N // 3,N % 3, N ** 3, sep = \"->\",end = \"END\")中的 N 已被赋值为 10 ,则该语句\n执行后输出是 3->1->1000->END 。  (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "Python 语句print(int(float(input())))可以输入正负整数和浮点数,并将其转换为整数后输出。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "Python 语句print(f\"{N}*2\")中的 N 已被赋值为 5 。该语句执行后将输出 10 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "在 Python 中, break 语句用于终止当前层次的循环,可以是 for-in 循环,也可以是 while 循环。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "在 Python , continue 语句通常与 if 语句配合使用。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "在 Python 代码中,不可以将变量命名为 print ,因为 print 是 Python 语言的关键字。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "在 Python turtle 中, turtle.forward() 与 turtle.fd() 具有相同的功能。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "Python 代码 turtle.clear() 可以清除海龟绘图,且海龟将回到原点。(   )\nimport turtle\nfor i in range(4):\n    turtle.circle(50)\n    turtle.left(__________)",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下面 Python 代码执行后将绘制正多边形,如输入 5 将绘制正 5 边形,输入 8 将绘制正 8 边形,以此类推。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "休息时间",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨计划在某个时刻开始学习,并决定在学习   秒后开始休息。\n小杨想知道自己开始休息的时刻是多少。\n3.1.2\n\n输入格式\n前三行每行包含一个整数,分别表示小杨开始学习时刻的时  、分  、秒  ( , , 的值符合\n)。\n第四行包含一个整数  ,表示小杨学习的总秒数(注:  的值符合  )。\n3.1.3 输出格式\n输出一行,包含三个整数,分别表示小杨开始休息时刻的时、分、秒。\n3.1.4 样例 1\n3.1.5 样例解释\n小杨在时刻  12:59:59 开始学习,学习   秒后开始休息,即在  13:0:9 时刻开始休息。\n3.1.6 数据范围\n对于全部数据,保证有  。\nimport turtle\nN = int(input(\" 请输入正整数: \"))\nfor i in range(N):\n    turtle.forward(100)\n    turtle.left(360/N)\n\n13 0 91\n3.1.7",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "59\n59\n10\n",
+          "out": "4\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "立方数",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨有一个正整数  ,他想知道   是否是一个立方数。\n一个正整数   是立方数当且仅当存在一个正整数   满足  。\n3.2.2\n\n输入格式\n第一行包含一个正整数  。\n3.2.3 输出格式\n如果正整数   是一个立方数,输出  Yes ,否则输出  No 。\n3.2.4 样例 1\n3.2.5 样例 2\n3.2.6 样例解释\n对于样例 1 ,存在正整数   使得  ,因此   为立方数。\n对于样例 2 ,不存在满足条件的正整数,因此   不为立方数。\nh = int(input())\nm = int(input())\ns = int(input())\nk = int(input())\nnow = int(h)*60*60+int(m)*60+int(s)\nnow+=k\nhh = int(now/3600)\nnow %= 3600\nmm = int(now/60)\nnow %= 60\nprint(str(hh)+\" \"+str(mm)+\" \"+str(now))\n\nYes1\n\nNo1\n3.2.7 数据范围\n对于全部数据,保证有  。\n3.2.8",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "C",
+      "B",
+      "B",
+      "D",
+      "B",
+      "C",
+      "A",
+      "A",
+      "A",
+      "D",
+      "C",
+      "D",
+      "C",
+      "C",
+      "C"
+    ],
+    [
+      "B"
+    ]
+  ]
+}

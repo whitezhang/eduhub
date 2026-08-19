@@ -1,0 +1,591 @@
+{
+  "meta": {
+    "ym": "202603",
+    "lang": "cpp",
+    "level": 6,
+    "title": "CCF GESP 2026年3月认证 C++ 6级试题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10269.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1738426015547424.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202603-cpp-6.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "下列关于  C++ 中类的描述,正确的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "如果类没有用户声明的构造函数,那么编译器会隐式声明一个默认构造函数"
+        },
+        {
+          "key": "B",
+          "text": "类的析构函数可以被重载,一个类可以有多个析构函数"
+        },
+        {
+          "key": "C",
+          "text": "类中的所有成员都必须声明为 public"
+        },
+        {
+          "key": "D",
+          "text": "类和结构体在 C++ 中没有区别,包括默认访问权限也相同"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "下列代码中,s1->draw(); 和  s2->draw();输出不同结果的主要原因是(  )。\n第  1 页  / 共  12 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "draw() 是普通成员函数"
+        },
+        {
+          "key": "B",
+          "text": "Shape 中的 draw() 被声明为虚函数"
+        },
+        {
+          "key": "C",
+          "text": "Circle 和 Rectangle 中使用了 public 继承"
+        },
+        {
+          "key": "D",
+          "text": "指针变量名不同"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "下面的代码在  main() 中有一行会导致编译错误,请找出来。",
+      "options": [
+        {
+          "key": "A",
+          "text": "第 1 行 class Shape { public: virtual void draw() { cout << \" 绘制图形 \" << endl; } virtual ~Shape() {} }; class Circle : public Shape { public: void draw() override { cout << \" 绘制圆形 \" << endl; } }; class Rectangle : public Shape { public: void draw() override { cout << \" 绘制矩形 \" << endl; } }; int main() { Shape* s1 = new Circle(); Shape* s2 = new Rectangle(); s1->draw(); s2->draw(); delete s1; delete s2; return 0; } class Pet { public: Pet(string n, int a) : name(n), age(a) {} string getName() { return name; } void birthday() { age++; } private: string name; int age; }; int main() { Pet cat(\" 奶茶 \", 2); cout << cat.getName(); // 1 cat.birthday(); // 2 cat.name = \" 大橘 \"; // 3 cout << cat.getName(); // 4 } 第 2 页 / 共 12 页"
+        },
+        {
+          "key": "B",
+          "text": "第 2 行"
+        },
+        {
+          "key": "C",
+          "text": "第 3 行"
+        },
+        {
+          "key": "D",
+          "text": "第 4 行"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "游乐园的过山车每次限坐 4  人,用循环队列管理排队(容量 MAX=5 ,空一格判满)。下面代码执行后,循\n环队列是否已满? rear  的值是多少?",
+      "options": [
+        {
+          "key": "A",
+          "text": "已满, rear = 1"
+        },
+        {
+          "key": "B",
+          "text": "未满, rear = 1"
+        },
+        {
+          "key": "C",
+          "text": "已满, rear = 2"
+        },
+        {
+          "key": "D",
+          "text": "未满, rear = 4"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "在以下计算机系统应用场景中,最适合使用循环队列的是(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "函数调用过程中,保存局部变量和返回地址"
+        },
+        {
+          "key": "B",
+          "text": "表达式求值中的运算符优先级处理"
+        },
+        {
+          "key": "C",
+          "text": "操作系统中的进程优先级调度(高优先级先执行)"
+        },
+        {
+          "key": "D",
+          "text": "生产者和消费者问题中的共享缓冲区"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "在二叉搜索树(BST)中,若中序遍历的序列为{1, 2, 3, 4, 5},且先序遍历的第一个序列元素为3,则下列说\n法正确的是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "该树一定是一棵完全二叉树。"
+        },
+        {
+          "key": "B",
+          "text": "元素4和5不可能是兄弟节点。"
+        },
+        {
+          "key": "C",
+          "text": "元素1所在节点的深度可能大于3(根节点深度为1)。"
+        },
+        {
+          "key": "D",
+          "text": "元素2一定是元素1的父节点。"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "某二叉树共有10个结点,记为A~J,已知它的先序遍历序列为:A B D H I E C F J G,中序遍历序列为:H D\nI B E A F J C G,则该二叉树的后序遍历序列是( )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "H I D E B J F G C A"
+        },
+        {
+          "key": "B",
+          "text": "H I D B E J F G C A"
+        },
+        {
+          "key": "C",
+          "text": "I H D E B J F G C A const int MAX = 5; int queue[MAX]; int front = 0, rear = 0; // 入队 void enqueue(int x) { queue[rear] = x; rear = (rear + 1) % MAX; } // 出队 void dequeue() { front = (front + 1) % MAX; } int main() { enqueue(1); enqueue(2); enqueue(3); enqueue(4); dequeue(); dequeue(); enqueue(5); enqueue(6); } 第 3 页 / 共 12 页"
+        },
+        {
+          "key": "D",
+          "text": "H I D E B F J G C A"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下列关于树的遍历的说法中,正确的一项是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "对任意一棵树进行深度优先遍历,所得序列一定唯一。"
+        },
+        {
+          "key": "B",
+          "text": "已知一棵二叉树的先序遍历和后序遍历序列,可以唯一确定这棵二叉树。"
+        },
+        {
+          "key": "C",
+          "text": "已知一棵二叉树的先序遍历和中序遍历序列,可以唯一确定这棵二叉树。"
+        },
+        {
+          "key": "D",
+          "text": "已知一棵二叉树的先序遍历序列,可以唯一确定这棵二叉树。"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "有6个字符,它们出现的次数分别为:{2, 3, 3, 4, 6, 8},现在用哈夫曼编码为这些字符编码,最小\n加权路径长度 WPL (每个字符的出现次数 它的编码长度,再把每个字符结果加起来)的值为(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "对   个不同符号的符号进行哈夫曼编码。若生成的哈夫曼树共有   个结点,则   的值是()。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "关于格雷编码( Gray Code ),下列说法正确的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "格雷编码中,编码位数越多,相邻编码之间变化的位数也越多"
+        },
+        {
+          "key": "B",
+          "text": "格雷编码中,相邻两个编码的二进制位恰好有一位不同"
+        },
+        {
+          "key": "C",
+          "text": "格雷编码就是把普通二进制编码按位取反后得到的结果"
+        },
+        {
+          "key": "D",
+          "text": "格雷编码不能用于数字电路和状态转换的设计中"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "给定一棵二叉树,采用广度优先搜索  (BFS) 算法,返回右视图所有节点的值。其中右视图定义为:二叉树\n的右视图是从树的右侧看过去时可见的节点集合,即右视图中的每个节点都是某一层中最右侧的节点。\n第  4 页  / 共  12 页",
+      "options": [
+        {
+          "key": "A",
+          "text": "B."
+        },
+        {
+          "key": "C",
+          "text": "D. struct TreeNode { int val; TreeNode* left; TreeNode* right; TreeNode(int x): val(x), left(nullptr), right(nullptr) {} }; vector<int> rightSideView(TreeNode* root) { unordered_map<int, int> rightmostValueAtDepth; int max_depth = -1; queue<TreeNode*> nodeQueue; queue<int> depthQueue; nodeQueue.push(root); depthQueue.push(0); while (!nodeQueue.empty()) { TreeNode* node = nodeQueue.front(); nodeQueue.pop(); int depth = depthQueue.front(); depthQueue.pop(); if (node != NULL) { max_depth = max(max_depth, depth); rightmostValueAtDepth[depth] = node->val; nodeQueue.push(node->left); nodeQueue.push(node->right); depthQueue.push(________); depthQueue.push(________); } } vector<int> rightView; for (int depth = 0; ________; ++depth) { rightView.push_back(rightmostValueAtDepth[depth]); } return rightView; }; depth depth depth < max_depth depth + 1 depth + 1 depth <= max_depth depth + 1 depth + 1 depth < max_depth depth depth depth <= max_depth 第 5 页 / 共 12 页 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下列关于树的深度优先搜索( DFS )的说法中,正确的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "对树进行 DFS 时,一定是按层从上到下依次访问结点"
+        },
+        {
+          "key": "B",
+          "text": "对任意一棵树进行 DFS ,得到的遍历序列唯一"
+        },
+        {
+          "key": "C",
+          "text": "对一棵树进行 DFS 时,常借助递归或栈实现"
+        },
+        {
+          "key": "D",
+          "text": "DFS 只能用于二叉树,不能用于普通树"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "小朋友们去邻里拜年,每个家里有不同数量的糖果。规则是:不能连续进入两个相邻的房子(即不能同时\n取相邻两家的糖果)。目标是拿到最多糖果。以下是代码实现,请补全横线。",
+      "options": [
+        {
+          "key": "A",
+          "text": "dp[i] = dp[i - 1] + nums[i];"
+        },
+        {
+          "key": "B",
+          "text": "dp[i] = max(dp[i - 1], dp[i - 2] * nums[i]);"
+        },
+        {
+          "key": "C",
+          "text": "dp[i] = max(dp[i - 1], dp[i - 2] + nums[i]);"
+        },
+        {
+          "key": "D",
+          "text": "dp[i] = dp[i - 2] + nums[i];"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "元宵节晚上,小朋友沿着一条发光石板路前进,每次可向前走  1 块或  2 块石板。动态规划定义如下:\ndp[i] = dp[i - 1] + dp[i - 2],下面关于  dp[i] 的含义最合适的是(  )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "走到第 i 块石板的不同走法数量"
+        },
+        {
+          "key": "B",
+          "text": "走到第 i 块石板时,已经走过的石板总数"
+        },
+        {
+          "key": "C",
+          "text": "从第 i 块石板走回起点的最少步数"
+        },
+        {
+          "key": "D",
+          "text": "从第 i 块石板走回起点的最大步数"
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "下面定义了一个表示二维坐标点的类  Point,  并提供了一个带参数的构造函数,但第  2  行  Point b; 会\n调用编译器自动生成的默认构造函数,将b.x 和  b.y 被初始化为  0.0 ,程序可以正常编译运行。\nint visit(vector<int>& nums) {\n    if (nums.empty()) {\n        return 0;\n    }\n    int size = nums.size();\n    if (size == 1) {\n        return nums[0];\n    }\n    vector<int> dp = vector<int>(size, 0);\n    dp[0] = nums[0];\n    dp[1] = max(nums[0], nums[1]);\n    for (int i = 2; i < size; i++) {\n        dp[i] = ______;  // 在此处填写代码\n    }\n    return dp[size - 1];\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n第  6 页  / 共  12 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "C++ 中的继承支持单继承和多继承,但子类无法直接访问父类的私有成员。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "对如下结构的树,执行travel函数,输出结果是   1 2 3 4 5。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "若所有字符出现频率相同,则哈夫曼编码一定会得到完全二叉树。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "哈夫曼编码是一种变长的前缀编码,在解码时不需要额外的分隔符就能唯一还原,这是因为在哈夫曼树中,\n任何一个字符的叶子结点都不会成为另一个字符结点的祖先。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "在  C++ 中使用一维数组  vector<int> tree 存储按层序遍历的完全二叉树时,若根节点存储在\ntree[0],则对于任意非空节点  tree[i],其右孩子(如果存在)必然位于  tree[2 * i + 2]。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "在  C++ 中使用栈来非递归地实现二叉树的前序遍历时,为了保证遍历顺序正确,在处理完当前结点后,应\n该先将该结点的左孩子压入栈中,然后再将右孩子压入栈中。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "设二叉树共有   个结点,函数  preorderTraversal 以下代码的时间复杂度为 ,空间复杂度为  。\nclass Point {\npublic:\n    double x, y;\n    Point(double px, double py) : x(px), y(py) {}\n    void print() {\n        cout << \"(\" << x << \", \" << y << \")\";\n    }\n};\nint main() {\n    Point a(3.0, 4.0);   // 1\n    Point b;             // 2\n    a.print();\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        1\n       / \\\n      2   3\n     / \\\n    4   5\n\n\n\n\n\nstruct Node {\n    int val;\n    Node *left, *right;\n    Node(int v) : val(v), left(nullptr), right(nullptr) {}\n};\nvoid travel(Node* root) {\n    if (!root) return;\n    stack<Node*> s;\n    s.push(root);\n\n    while (!s.empty()) {\n        Node* cur = s.top(); s.pop();\n        cout << cur->val << \" \";\n\n        if (cur->right) s.push(cur->right);\n        if (cur->left)  s.push(cur->left);\n    }\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n第  7 页  / 共  12 页",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "下列代码实现了一个 0-1 背包的一维动态规划代码,内层循环是经典的逆序写法。若将内层循环改成正序遍\n历(即  for (int j = w[i]; j <= W; j++)),仍能得到正确答案。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "在动态规划问题中,状态空间相同且没有重复计算的情况下, “ 状态转移方程 + 递推 ” 与 “ 递归 + 记忆化搜索 ”\n的时间复杂度通常相同。",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "选数",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n给定两个包含   个整数的数组   与  。你需要指定若干下标   ( )\n使得以下条件成立:\n( );\n( )。\nstruct TreeNode {\n    int val;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int x): val(x), left(nullptr), right(nullptr) {}\n};\nvoid preorder(TreeNode *root, vector<int> &res) {\n    if (root == nullptr) {\n        return;\n    }\n    res.push_back(root->val);\n    preorder(root->left, res);\n    preorder(root->right, res);\n}\nvector<int> preorderTraversal(TreeNode *root) {\n    vector<int> res;\n    preorder(root, res);\n    return res;\n};",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n71\n6\n",
+          "out": "11\n",
+          "suspect": true
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "完全二叉树",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n给定一棵包含   个结点的有根二叉树,结点依次以   编号,根结点编号为  。\n对于结点  ,其左儿子的编号记为  ,右儿子编号记为  。特别地,如果左儿子不存在则  ,如果右儿子不存在\n则  。\n树中每个结点都对应一棵以其为根的子树。请你求出给定有根树的所有   棵子树中,有多少棵子树是完全二叉树。\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示有根二叉树结点数量。\n接下来   行,每行两个正整数  ,表示结点   的左儿子编号和右儿子编号。\n3.2.3 输出格式\n输出一行,一个整数,表示所有子树中完全二叉树的数量。",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n4\n5\n41\n4\n",
+          "out": "3\n",
+          "suspect": true
+        }
+      ],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "A",
+      "B",
+      "C",
+      "A",
+      "D",
+      "B",
+      "A",
+      "C",
+      "D",
+      "B",
+      "B",
+      "B",
+      "C",
+      "C",
+      "A",
+      "C"
+    ]
+  ]
+}

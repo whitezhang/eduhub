@@ -1,0 +1,588 @@
+{
+  "meta": {
+    "ym": "202409",
+    "lang": "cpp",
+    "level": 2,
+    "title": "GESP 9月认证 C++ 二级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10166.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1633836163137568.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/202409-cpp-2.pdf"
+  },
+  "choice": [
+    {
+      "seq": 1,
+      "kind": "choice",
+      "stem": "据有关资料,山东大学于 1972 年研制成功 DJL-1 计算机,并于 1973 年投入运行,其综合性能居当时全国第三\n位。 DJL-1 计算机运算控制部分所使用的磁心存储元件由磁心颗粒组成,设计存贮周期为 2μs (微秒)。那么该磁心\n存储元件相当于现代计算机的(   )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "内存"
+        },
+        {
+          "key": "B",
+          "text": "磁盘"
+        },
+        {
+          "key": "C",
+          "text": "CPU"
+        },
+        {
+          "key": "D",
+          "text": "显示器"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 2,
+      "kind": "choice",
+      "stem": "IPv4 版本的因特网总共有(  )个 A 类地址网络。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": "200 万"
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 3,
+      "kind": "choice",
+      "stem": "在 C++ 中,下列不可做变量的是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": "ccf-gesp"
+        },
+        {
+          "key": "B",
+          "text": "ccf_gesp"
+        },
+        {
+          "key": "C",
+          "text": "ccfGesp"
+        },
+        {
+          "key": "D",
+          "text": "_ccfGesp"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 4,
+      "kind": "choice",
+      "stem": "在 C++ 中,与for (int i = 1; i < 10; i++)效果相同的是 (  ) 。\n\n```\nfor (int i = 0; i < 10; i++)\nfor (int i = 0; i < 11; i++)\nfor (int i = 1; i < 10; ++i)\nfor (int i = 0; i < 11; ++i)\n```",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 5,
+      "kind": "choice",
+      "stem": "在 C++ 中,cout << (5 / 2 + 5 % 3)的输出是 (  ) 。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 6,
+      "kind": "choice",
+      "stem": "假定变量 a 和 b 可能是整型、字符型或浮点型,则下面 C++ 代码执行时先后输入-2和3.14后,其输出不可能\n是 (  ) 。 [ 已知字符'+' 、 '-' 、 '='的 ASCII 码值分别是 43 、 45 和 61]",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": "1.14"
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "将触发异常"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "seq": 7,
+      "kind": "choice",
+      "stem": "在 C++ 代码中假设 N 为正整数,则下面代码能获得个位数的是(      )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "N % 10"
+        },
+        {
+          "key": "B",
+          "text": "N / 10"
+        },
+        {
+          "key": "C",
+          "text": "N && 10"
+        },
+        {
+          "key": "D",
+          "text": "以上选项均不正确"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 8,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(      )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "0#"
+        },
+        {
+          "key": "B",
+          "text": "1#"
+        },
+        {
+          "key": "C",
+          "text": "0#0#1"
+        },
+        {
+          "key": "D",
+          "text": "没有输出"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 9,
+      "kind": "choice",
+      "stem": "执行下面 C++ 代码并输入 1 和 0 ,有关说法正确的是(     )。\ncin >> a;\ncin >> b;\ncout << (a + b);\n1\n2\n3\nint i;\nfor (i = 0; i < 10; i++){\n    if (i % 2)\n        break;\n    cout << \"0#\";\n}\nif(i==10) cout << \"1#\";\n1\n2\n3\n4\n5\n6\n7",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 10,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后的输出是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
+        },
+        {
+          "key": "C",
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 11,
+      "kind": "choice",
+      "stem": "下图是 C++ 程序执行后的输出。为实现其功能,横线处应填入代码是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "j = i; j < i; j++ int a,b; cin >> a >> b; if(a&&b) cout << (\"1\"); else if(!(a||b)) cout << (\"2\"); else if(a || b) cout << (\"3\"); else cout << (\"4\"); int loopCount = 0; for (int i = 1; i < 5; i += 2) loopCount += 1; cout << (loopCount); 2 3 3 4 5 4 5 6 7 5 6 7 8 9 6 7 8 9 10 11 7 8 9 10 11 12 13 ////////////////////////////// int lineNum; cin >> lineNum; for (int i= 1; i < lineNum+1; i++){ for(int __________________) cout << j << \" \"; cout << endl; }"
+        },
+        {
+          "key": "B",
+          "text": "j = 1; j < i; j++"
+        },
+        {
+          "key": "C",
+          "text": "j = i; j < i*2; j++"
+        },
+        {
+          "key": "D",
+          "text": "j = i+1; j < i+i; j++"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面 C++ 代码执行后输出逆序数,如输入123则输出321。如输入120则输出21。横线处先后应填入的\n代码是( )  。",
+      "options": [
+        {
+          "key": "A",
+          "text": "rst = rst * 10 + N % 10 N = N / 10"
+        },
+        {
+          "key": "B",
+          "text": "rst += N % 10 N = N / 10"
+        },
+        {
+          "key": "C",
+          "text": "rst = rst * 10 + N / 10 N = N % 10"
+        },
+        {
+          "key": "D",
+          "text": "rst += N / 10 N = N % 10"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 13,
+      "kind": "choice",
+      "stem": "下面的 C++ 代码用于输入学生成绩,并根据人数计算出平均成绩,有关说法错误的是(     )。",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码while (1)写法错误"
+        },
+        {
+          "key": "B",
+          "text": "如果输入负数,将结束输入,并正确输出"
+        },
+        {
+          "key": "C",
+          "text": "如果输入的学生成绩含有小数,程序将无法正常执行"
+        },
+        {
+          "key": "D",
+          "text": "变量int score初始值不确定,但不影响程序执行"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "seq": 14,
+      "kind": "choice",
+      "stem": "以下 C++ 代码判断输入的正整数是否为质数,如果该数字是质数,则输出YES,否则输出NO。质数是指仅\n能被 1 和它本身整除的正整数。请在横线上填写代码。(     )\nint N;\ncin >> N;\nint rst = 0;\nwhile (N){\n    ____________________;\n    ____________________;\n}\ncout << (rst);\n1\n2\n3\n4\n5\n6\n7\n8\nfloat Sum = 0; // 保存总成绩\nint cnt = 0; // 保存学生人数\nwhile (1){\n    int score;\n    cin >> score;\n    if (score < 0)\n        break;\n    cnt += 1;\n    Sum += score;\n}\ncout << \" 总学生数: \" << cnt << \" 平均分: \" << Sum/cnt;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
+      "options": [
+        {
+          "key": "A",
+          "text": "num % i"
+        },
+        {
+          "key": "B",
+          "text": "num % i == 0"
+        },
+        {
+          "key": "C",
+          "text": "num / i"
+        },
+        {
+          "key": "D",
+          "text": "num / i == 0"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 15,
+      "kind": "choice",
+      "stem": "一个数如果能被某个数(比如 7 )整除,或者含有该数,则说该数是某个数的相关数。下面 C++ 代码用于判\n定输入的数与 7 是否有关。下列说法 的是(     )。错误",
+      "options": [
+        {
+          "key": "A",
+          "text": "删除 break 语句不会导致死循环,但有时会导致结果错误"
+        },
+        {
+          "key": "B",
+          "text": "删除M /= 10将可能导致死循环"
+        },
+        {
+          "key": "C",
+          "text": "删除M = N并将其后代码中的 M 变量改为 N ,并调整输出同样能完成相关功能"
+        },
+        {
+          "key": "D",
+          "text": "删除break语句不会导致死循环,但有时会影响效率 int num, i; cin >> num; for(i = 2; i < num; i++) if (__________){ cout << (\"NO\"); break; } if(i == num) cout << (\"YES\"); int N, M; bool Flag = false; cin >> N; M = N; if (M % 7 == 0) Flag = true; while (!Flag && M){ if (M % 10 == 7){ Flag = true; break; } M /= 10; } if (Flag) cout << N << \" 与 7 有关 \"; else cout << N << \" 与 7 无关 \"; 题号 1 2 3 4 5 6 7 8 9 10 答案"
+        }
+      ],
+      "answer": "A"
+    }
+  ],
+  "tf": [
+    {
+      "seq": 1,
+      "kind": "tf",
+      "stem": "小杨最近开始学习 C++ 编程,老师说 C++ 是一门面向对象的编程语言 , 也是一门高级语言。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 2,
+      "kind": "tf",
+      "stem": "在 C++ 中,cout << (3, 4, 5)可以输出3 4 5,且每个输出项之间用空格分开。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 3,
+      "kind": "tf",
+      "stem": "C++ 表达式12 % 10 % 10的值为 2 。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 4,
+      "kind": "tf",
+      "stem": "C++ 语句cout << rand() << ' ' << rand();的第二个输出值较大。 (  )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 5,
+      "kind": "tf",
+      "stem": "定义 C++ 的int类型的变量ch,而且值为'1',则语句cout << int(ch);的输出为1。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 6,
+      "kind": "tf",
+      "stem": "下面 C++ 代码执行后将输出 10 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 7,
+      "kind": "tf",
+      "stem": "下面 C++ 代码能求整数 N 和 M 之间所有整数之和,包含 N 和 M 。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 8,
+      "kind": "tf",
+      "stem": "将下面 C++ 代码中的L3标记的代码行调整为for (int i = 0; i < 5; i++)后输出结果相同。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 9,
+      "kind": "tf",
+      "stem": "某一系列数据的规律是从第 3 个数值开始是前两个数之和。下面的代码求第 N 个数的值, N 限定为大于 2 。(\n)\nint i;\nfor (i = 0; i < 10; i++)\n    continue;\nif(i == 10)\n    cout << i;\n\n\n\n\n\nint N, M, Sum;\ncin >> N >> M;\nif (N > M){\n    int tmp = N;\n    N = M, M = tmp;\n}\nfor (int i = N; i < M+1; i++)\n    Sum += i;\ncout << Sum;\n\n\n\n\n\n\n\n\n\n\n\n\n\nint loopCount = 0;\nfor (int i = 1; i < 5; i++) // L3\n    for (int j = 0; j < i; j++)\n        loopCount += 1;\ncout << loopCount;",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "seq": 10,
+      "kind": "tf",
+      "stem": "下面 C++ 代码执行时如果输入2024,则输出是4202。(   )",
+      "options": [
+        {
+          "key": "T",
+          "text": "正确"
+        },
+        {
+          "key": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": ""
+    }
+  ],
+  "program": [
+    {
+      "seq": 1,
+      "kind": "traditional",
+      "title": "数位之和",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有   个正整数,他认为一个正整数是美丽数字当且仅当该正整数每一位数字的总和是   的倍数。\n小杨想请你编写一个程序判断   个正整数哪些是美丽数字。\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,代表正整数个数。\n之后   行,每行包含一个正整数。\n3.1.3 输出格式\n对于每个正整数,如果是美丽数字则输出  Yes ,否则输出  No 。\n3.1.4 样例 1\nint start1; // 第 1 个数\nint start2; // 第 2 个数\nint N; // 求 N 个数的值\nint tmp;\ncin >> start1 >> start2 >> N;\nfor (int i = 2; i < N; i++){\n    tmp = start1 + start2;\n    start1 = start2;\n    start2 = tmp;\n}\ncout << start2;\n\nint N, flag=0;\ncin >> N;\nwhile (N){\n    if(!flag) cout << N % 10;\n    N /= 10;\n    flag = (flag + 1)%2;\n}\n\n 的各位数字之和为  ,是   的倍数。  的各位数字之和为  ,是   的倍数。  的各位数字之和为\n,不是   的倍数。\n对于全部数据,保证有  。\n3.1.5",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "6\n7\n8\n9\n10\n11\n12\n",
+          "out": "3\n",
+          "suspect": false
+        },
+        {
+          "in": "7\n52\n103\n",
+          "out": "4\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "小杨的",
+      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨想要构造一个   的  N 字矩阵(  为奇数),这个矩阵的从左上角到右下角的对角线、第   列和第   列都\n是半角加号  + ,其余都是半角减号  - 。例如,一个   的  N 字矩阵如下:\n请你帮小杨根据给定的   打印出对应的  N 字矩阵。\nYes\nYes\nNo",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [],
+      "has_ref": true
+    }
+  ],
+  "answer_rows": [
+    [
+      "A",
+      "C",
+      "A",
+      "C",
+      "C",
+      "D",
+      "A",
+      "A",
+      "C",
+      "B",
+      "C",
+      "A",
+      "A",
+      "B",
+      "A",
+      "C"
+    ]
+  ]
+}

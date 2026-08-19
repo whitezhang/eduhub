@@ -1,0 +1,1124 @@
+{
+  "byId": {
+    "-mbo-YTFS0E9k8fViUHSX": {
+      "answer": "C",
+      "explanation": "题目描述就是分治法的定义。"
+    },
+    "_T-b2hNsc1Do8aRIECQqf": {
+      "answer": "B",
+      "explanation": "插入排序：将无序序列插入到有序序列中。"
+    },
+    "wJXD2pVEqecH-UdewnDfr": {
+      "answer": "C",
+      "explanation": "一次交换后会减少1个逆序对。\n①4 5 3 2 1 ②4 3 5 2 1\n③4 3 2 5 1 ④4 3 2 1 5\n⑤3 4 2 1 5 ⑥3 2 4 1 5\n⑦3 2 1 4 5 ⑧2 3 1 4 5\n⑨2 1 3 4 5 ⑩1 2 3 4 5"
+    },
+    "p919kWT2z1wHcGOUplPH5": {
+      "answer": "B",
+      "explanation": "算法不仅可以用程序语言描述，也可以通过自然语言描述，例如中文等，所以本题错误。"
+    },
+    "Y2pEIsRiR2IClKzJCJKKU": {
+      "answer": "B",
+      "explanation": "枚举法是枚举所有的可能，枚举不出所有的偶数，所以不能用枚举法证明哥德巴赫猜想。"
+    },
+    "JAakpz2N5I-Vl-HF7GGgp": {
+      "answer": "C",
+      "explanation": "冒泡排序、插入排序一般是稳定的，而选择排序一般是不稳定的，所以本题正确答案为C。"
+    },
+    "eSvHezWf1cdAxweix2W2j": {
+      "answer": "B",
+      "explanation": "归并排序采用的是分治算法思想，正确答案B选项。"
+    },
+    "ICsRPCtnKA2F29hmxaumX": {
+      "answer": "A",
+      "explanation": "归并排序基本思想就是将数组分成两个子数组，分别排序后再合并，正确答案A选项。"
+    },
+    "uThabX9hdfZ4TV_N7awAJ": {
+      "answer": "B",
+      "explanation": "流程图中没有三角框。"
+    },
+    "J51SXeYuCoCu1ivTOiE1V": {
+      "answer": "B",
+      "explanation": "使用二分法查找元素，元素必须是顺序存储的，链表不是顺序存储数据，因此不能使用二分法。"
+    },
+    "3_84BL9XRl992NCvZVu5-": {
+      "answer": "A",
+      "explanation": "贪心算法找到的不一定是最优解。"
+    },
+    "2jFdnh8f19YJyDFhepoHV": {
+      "answer": "B",
+      "explanation": "冒泡排序时间复杂度为O(n^2)，归并排序的时间复杂度为O(nlogn)，因此归并优于冒泡，说法错误。"
+    },
+    "xSKeM6BoFD1oSiFEv3HyC": {
+      "answer": "A",
+      "explanation": "qsort函数内部使用的是不稳定的排序算法。"
+    },
+    "0gSKezZLKexzTg4XLoRkd": {
+      "answer": "C",
+      "explanation": "本题考察数学知识。线筛和埃筛都可以判断素数，枚举也可以，二分规模减半，不能合理判断。"
+    },
+    "niRFq25ZSC5fiaOERNRGY": {
+      "answer": "A",
+      "explanation": "因为考纲中对二分法同时列出了“二分查找”和“二分答案（或二分枚举）”。"
+    },
+    "IkwVKUSe6kPSytDyQdSB_": {
+      "answer": "A",
+      "explanation": "本题考察贪心算法知识。贪心是局部达到最优。"
+    },
+    "PXUnY1iro4nh0KUi4sgQF": {
+      "answer": "A",
+      "explanation": "问题为最大子段和，动态规划的经典例题，设f[i]为以i结尾的子段最大值，则f[i]=max(a[i],f[i-1]+a[i])。"
+    },
+    "u_JfZBD80LGJHrKdvSsec": {
+      "answer": "B",
+      "explanation": "错误，用递归法求解动态规划方程会造成重复计算，可能导致超时。另外，动态规划算法的核心是状态转移方程，但同时也需要定义状态、初始条件和边界条件等。"
+    },
+    "tCEnelzVnqhLTslpjy9E-": {
+      "answer": "A",
+      "explanation": "贪心算法的核心思想是在每一步选择中都做出在当前状态下的最优选择，以期望通过局部最优达到全局最优。"
+    },
+    "O2XaiHKn7uNmbqUXENbVg": {
+      "answer": "B",
+      "explanation": "归并排序的基本思想是分治法，即将原问题分解成若干个规模较小但类似于原问题的子问题，递归解决这些子问题，然后合并其结果，得到原问题的解。"
+    },
+    "uic1CkLLGbYKyhJsM0oQQ": {
+      "answer": "A",
+      "explanation": "递归函数在调用自身时，必须有一个明确的终止条件，否则会形成无限递归，最终导致程序崩溃。"
+    },
+    "12BdJUeqmZ8lleJrEbX5A": {
+      "answer": "A",
+      "explanation": "二分查找的前提条件是序列有序，如果序列无序，则无法通过二分查找来保证查找的正确性。"
+    },
+    "zV43H5gelYZo4G9IeloB-": {
+      "answer": "B",
+      "explanation": "贪心算法在每一步选择当前状态下的最优解，但这并不总能保证结果就是全局最优解。"
+    },
+    "0lwpjt-YHXBUJZun9QPxN": {
+      "answer": "A",
+      "explanation": "分治算法正是通过分解问题，并对每个子问题求解后再合并结果来解决原问题。"
+    },
+    "yH7QI7upYNTfJCX_ZT2Am": {
+      "answer": "B",
+      "explanation": "贪心算法并不适用于所有问题，它只适用于能通过局部最优解能够达到全局最优解的特定问题。"
+    },
+    "6UZFySX3Ko_WxoLb_0we2": {
+      "answer": "A",
+      "explanation": "在动态规划中，最优子结构和重叠子问题是求解最优化问题时常常涉及到的两个重要性质。"
+    },
+    "2XpA2kJg10oZulBYS7S5n": {
+      "answer": "A",
+      "explanation": "在动态规划中，状态转移方程定义了状态之间的关系，是求解动态规划问题的核心。"
+    },
+    "1nsbHxGCTKWpKe7xgFrvs": {
+      "answer": "C",
+      "explanation": "最差情况下，n个元素进行归并排序的时间复杂度为O(nlogn)，这是归并排序性能的特点之一。"
+    },
+    "c7ByLTzxLPz1ARUpUBLFn": {
+      "answer": "A",
+      "explanation": "前序遍历：根结点 ---> 左子树 --->右子树。后序遍历：左子树 ---> 右子树 --->根结点。前后序均可知A是根节点，把根节点刨除后前序和后序中均是先左后右，前序中D在BC后，后序中D在最后，那么只存在两种可能，要么D属于右子树，要么所有结点均属于左子树，那么左子树可能的节点个数要么为2(B,C)，要么为6(B,C,D,E,F,G)。"
+    },
+    "9SOsASnb1G-wtUjQsPGas": {
+      "answer": "C",
+      "explanation": "中序遍历：左 -> 根  -> 右。先序遍历：根 -> 左 -> 右。后序遍历：左 -> 右 -> 根。上述图中从左到右三棵树都满足中序遍历是 BAC，先序遍历从左往右依次对应选项中的 A, B, D。"
+    },
+    "WyO9QxAdQ_BC6PDAsklIl": {
+      "answer": "A",
+      "explanation": "前序遍历：根结点 ---> 左子树 --->右子树。\n中序遍历：左根右          后序遍历：左右根"
+    },
+    "5hwBJdVg2cOLjVU_E2CEA": {
+      "answer": "D",
+      "explanation": "前序遍历：根结点 ---> 左子树 --->右子树；中序遍历：左子树 ---> 根结点 --->右子树。前序和中序遍历的区别在于根节点和左子树的先后顺序，因为根节点一定存在，所以如果相同则一定是左子树不存在，有两种情况，一是存在多个结点，任意结点均没有左子树；二是只有根节点。"
+    },
+    "EuX_4kZTJFg_SkPWObTKq": {
+      "answer": "B",
+      "explanation": "由后序知根节点为A，结合中序知左子树为DBGEHJ，右子树为CIF。\n对于左子树，对比后序和中序遍历可知B为A的左孩子，继而由中序得知D为B的左孩子，E为B的右孩子。由中序知G是E的左孩子，由中序和后序判定J为H的右孩子，H为E的右孩子，左子树完整画出。对于右子树，由后序可知$C$是$A$的右孩子；由中序和后序判定I是F的左孩子，右子树完整画出。如图所示，则前序遍历为B。"
+    },
+    "kNPr1cSj5EkEyXt2jnHcn": {
+      "answer": "A",
+      "explanation": null
+    },
+    "UQeHYIM2zd29N55xl4Yw-": {
+      "answer": "B",
+      "explanation": "CPU高速缓存是用于减少处理器访问内存所需平均时间的部件。 仅次于CPU寄存器。 其容量远小于内存，但速度却可以接近处理器的频率。 当处理器发出内存访问请求时，会先查看缓存内是否有请求数据。"
+    },
+    "SglU7YDA_USYF8Ck5v3IB": {
+      "answer": "D",
+      "explanation": "中央处理器主要包括两个部分，即控制器、运算器。运算器由算术逻辑单元（ALU）、累加器、状态寄存器、通用寄存器组等组成。运算器由算术逻辑单元（ALU）、累加器、状态寄存器、通用寄存器组等组成。A，硬盘是电脑的主要存储媒介之一。B，高速缓存,称为高速缓冲存储器,是介于中央处理器cpu和主存储器之间的高速小容量存储器。"
+    },
+    "6N70qCeeyguNyYw4LoXpX": {
+      "answer": "A",
+      "explanation": "内存属于存储器，是冯诺依曼结构体系中构成计算机的五大部件（存储器、运算器、控制器、输入设备、输出设备）之一。鼠标、U盘和摄像头都是外部设备，没有电脑也能启动。"
+    },
+    "7FKY0SauEXWWZubQzGkAQ": {
+      "answer": "D",
+      "explanation": "前三者均为输入设备"
+    },
+    "kGXLuE6F0lo7fg4jJXCwC": {
+      "answer": "B",
+      "explanation": "总线是计算机各种功能部件之间传送信息的公共通信干线。"
+    },
+    "HXeeerObD9qx9um3QdRuQ": {
+      "answer": "A",
+      "explanation": "随机存取存储器RAM(Random Access Memory)在计算期间被用作高速暂存记忆区，当计算机在运行时RAM是可得到的，当关闭计算机时信息将会丢失。ROM(Read Only Memory)断电后，不受影响。"
+    },
+    "3_tZBfy4Sq0Pm6mR_hOGU": {
+      "answer": "C",
+      "explanation": "全球两大个人电脑处理器厂商：Intel和AMD。奔腾、酷睿、赛扬都是Intel生产的处理器型号。性能：赛扬（低端）< 奔腾（中低端）< 酷睿（高端）。i3, i5, i7都是酷睿的系列。目前市场上主流使用的型号为酷睿i5和酷睿i7。"
+    },
+    "TwfRCNYx0kF2Zf9SmBJje": {
+      "answer": "A",
+      "explanation": "CPU的功能主要是解释计算机指令，控制程序以及处理计算机软件中的数据。RAM断电后信息丢失，B错；分辨率指单位面积中存储的信息量，是每英寸屏幕内有多少个像素点，分辨率的单位为PPI(Pixels Per Inch)，通常叫做像素每英寸，跟屏幕尺寸无关，C错；用户通过物理连接(有线通信)的方式也可以连接到网络，D错。"
+    },
+    "hcxR-IrZxOzSidCuT7uag": {
+      "answer": "D",
+      "explanation": "剩下3个选项都是内存或者外存。"
+    },
+    "C6VYlCKxZybmKX_tlksYP": {
+      "answer": "A",
+      "explanation": "存储器是许多存储单元的集合，按单元号顺序排列。每个存储单元的地址是唯一且固定不变的，而存储在其中的信息是可以更换的。"
+    },
+    "UdgPHLyiWVP6Zs-g9qvxz": {
+      "answer": "B",
+      "explanation": "本题属于考察计算机基础知识中的“输入”和“输出”概念；“输入”指外界向机器内部传递信息，“输出”指计算机内部信息向外界展示。此题中，“音箱”属于向外部播放声音，故属于输出概念。"
+    },
+    "WuRZ9PHfGHAADQwRgK9qD": {
+      "answer": "D",
+      "explanation": "光盘是光存储介质，是通过激光高温改变光盘涂覆层的形状来记录数据的，不会因为磁场而改变记录特性。"
+    },
+    "0Ogr_zrJJaGyKMi-4p10k": {
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识中的“输入”和“输出”概念；“输入”指外界向机器内部传递信息，“输出”指计算机内部信息向外界展示信息。此题中，“麦克风”属于向内部输入声音，属于输入概念。"
+    },
+    "SH8G2VB0iJVM8b3xEzFrF": {
+      "answer": "A",
+      "explanation": "本题考察计算机基础知识中的计算机组成五大部分；分别是：存储器、控制器、运算器、输入设备和输出设备。"
+    },
+    "4bhl6Zrh_7kw9BRJO4LWp": {
+      "answer": "C",
+      "explanation": "本题属于考察计算机基础知识中的存储设备问题；内存是一种存储设备。"
+    },
+    "7s38zgct8YkXmon9A8zBI": {
+      "answer": "A",
+      "explanation": "本题考察计算机基础知识和计算机历史，早期计算机为了处理汉字，确实采用了将字库固化在ROM中的方法。"
+    },
+    "NkIkDT6eevHYJ3yJ3RH2d": {
+      "answer": "B",
+      "explanation": "本题属于考察计算机基础知识。APP是英语单词application的简写，代表应用软件的意思。"
+    },
+    "9P8PJ0LAOQpj9n48LVLyR": {
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识知识。手写板是输入信息的设备。"
+    },
+    "9-a9S3VFo2e0yjq8vDj7T": {
+      "answer": "C",
+      "explanation": "鸿蒙是华为开发的操作系统，用于多种设备上，包括智能手表。"
+    },
+    "dKilZ7qjPFoK3CYpsl7OJ": {
+      "answer": "A",
+      "explanation": "byte是计算机存储的基本单位，bit是计算机存储的最小单位，一个字节由8个二进制位组成，1 byte(字节) = 8 bit(位)。"
+    },
+    "HP5lOIlPVQg_W-QGPD83g": {
+      "answer": "D",
+      "explanation": "一般来说，若地址总线为n位，则可寻址空间为2^n字节。2^16=64×2^10，即：64KB；2^32=4×2^20，即4GB。"
+    },
+    "FhXTLyoTBAQ-gRi16r8KP": {
+      "answer": "A",
+      "explanation": "32bit=4×8bit=4byte"
+    },
+    "I1YPjt0h3K173o_yRCXUN": {
+      "answer": "D",
+      "explanation": "1TB=1024GB=1024×1024MB=1024×1024×1024KB=1024×1024×1024×1024B"
+    },
+    "6kjLzAzXtjZOTfldfQnXe": {
+      "answer": "A",
+      "explanation": "800×600×16bit=800×600×2(16/8)B=960×1000B=937.5(960×1000/1024)KB。"
+    },
+    "Dt5YG7zAhoPemtGhsYsxi": {
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识中，关于存储的基本单位；计算机中，表示存储大小的最小单位为“字节”，英文为“Byte”，表示一个字节存储空间大小的单位，用大写字母B表示。"
+    },
+    "zoey65D3T8CILOAhNM6C_": {
+      "answer": "B",
+      "explanation": "本题属于考察数据单位的换算，1GB=1024MB，4GB和4096MB容量一样大。"
+    },
+    "Z9u35dNVyqq9CrojVtvCU": {
+      "answer": "B",
+      "explanation": "本题考察数据类型与内存空间的计算；6763个汉字，占用6763×2=13526字节，除以1024约为13.21KB，超过了64KB的1/5。"
+    },
+    "u5vZ_wkEd-8Bbpb1VuYnn": {
+      "answer": "A",
+      "explanation": "本题属于考察C++语言知识，包括数组和数据类型。一维数组中有4个元素，long long类型每个数字占8个字节，4*8=32。"
+    },
+    "AfKPWLN-X41I0os37pZW1": {
+      "answer": "D",
+      "explanation": "本题属于考察内存的基本概念；double类型的数据占用内存是8字节，array数组共使用了30个double类型的数据，占用内存为30*8=240字节。"
+    },
+    "9vjEj9QFAy2Ej3KLCbMeo": {
+      "answer": "C",
+      "explanation": "本题属于考察内存地址的基本概念；array[1][2]和array[2][1]中间差了array[2][0]，相当于差了2个int，也就是8字节。"
+    },
+    "Qqa_rU2sIw3oWpz0YQOnz": {
+      "answer": "B",
+      "explanation": "本题属于考察C++二维字符数组知识。内存大小和数组需要用的空间有关。3行10列，需要3*10=30个空间。"
+    },
+    "7dKR9oSYpkvvpeNF8bgKM": {
+      "answer": "C",
+      "explanation": "本题属于考察C++三维数组知识。数组是long long类型，每间隔一下数字就间隔8个字节，假设三维数组用长宽高来描述，array[0][0][0]到array[0][5][5]有36个元素，array[1][2][3]包含36+12+4=52个元素；到长度3宽度2高度1，包括36*3+12+2=122个元素，隔离70个"
+    },
+    "U4GuhUGJl4yTb2o85Cx8E": {
+      "answer": "D",
+      "explanation": "int类型在大多数系统上占用4字节，二维数组arr[3][16]的一个子数组（如arr[1]）有16个int元素，因此占用16*4=64字节。"
+    },
+    "2FiKTUv-h-JE0a_Xra41L": {
+      "answer": "C",
+      "explanation": "二维数组在内存中是连续存储的。arr[1]是arr[0]之后的第16个int元素，每个int元素占用4字节，所以arr[1]的地址是初始地址0x28cbc0 + 16*4 = 0x28cbd0。"
+    },
+    "iEzRzFyI_X8OZe_DeewDY": {
+      "answer": "B",
+      "explanation": "数据存储容量最小的单位是比特（bit），一个比特代表一个二进制位，是最基本的信息单位。"
+    },
+    "5Dk3B8NPVvKWQSUn15orb": {
+      "answer": "C",
+      "explanation": "一张2048×1024像素的32位图像，每个像素需要32位，即4字节的存储空间。因此总存储空间为2048×1024×4字节=8388608字节，即8MB。"
+    },
+    "WWea8Jgup0TpzmHLavpSh": {
+      "answer": "C",
+      "explanation": "Adobe Photoshop，简称“PS”，是由Adobe Systems开发和发行的图像处理软件，不是操作系统，所以C错。"
+    },
+    "4jYYoiWmbqOCfL20tshHx": {
+      "answer": "C",
+      "explanation": "计算机基本操作。"
+    },
+    "3dkPo9IHDkVNgc8mhJRCi": {
+      "answer": "C",
+      "explanation": "操作系统是一组主管并控制计算机操作、运用和运行硬件、软件资源和提供公共服务来组织用户交互的相互关联的系统软件程序。"
+    },
+    "sJFbTcdl4zu7zi4Whpptq": {
+      "answer": "C",
+      "explanation": "A是编译器的作用，B是数据库的作用，D是主板的作用。"
+    },
+    "XLKGoHpsZR9KD7q8bZqPH": {
+      "answer": "C",
+      "explanation": "寻址空间一般指的是CPU对于内存寻址的能力，CPU最大能查找多大范围的地址叫做寻址能力 ，CPU的寻址能力以字节为单位 ，如32位寻址的CPU可以寻址2的32次方大小的地址也就是4G，这也是为什么32位的CPU最大能搭配4G内存的原因 ，再多的话CPU就找不到了。"
+    },
+    "1ZAWS7LVQzESBFAnsoCcg": {
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识中的 ASCII 码；已知'A'的ASCII 编码十六进制表示为 0x41，则'F'的 ASCII 编码比'A'的 ASCII 编码大5，所以字符'F'的ASCII 编码十六进制表示为 46。所以本题正确答案为 A。"
+    },
+    "IeSx2aCozqDfKNERpKqRS": {
+      "answer": "D",
+      "explanation": "本题属于考察计算机基础知识中的位运算相关概念，A 选项可能存在越界的问题，B 选项会将低位的 3 位清零，C 选项肯定是错的，D 选项异或两次7等同于原数，所以本题正确答案为 D。"
+    },
+    "-419rzsyOspaJWOFxgZ3a": {
+      "answer": "B",
+      "explanation": "本题属于考察数据编码相关概念，数据编码的方式非常多，例如格雷码、哈夫曼编码等，它们适合使用的场景各不相同。所以本题错误。"
+    },
+    "SbdfKY3Rbi0J6eZXyIga2": {
+      "answer": "A",
+      "explanation": "本题属于考察字符串相关概念，字符常量'\\0'是字符串和字符数组的结束标记，它的 ASCII 码为 0，字符常量'0'的 ASCII 码为 48，与'\\0'是不同的字符常量。所以本题正确。"
+    },
+    "Q8wtzxmZJ8sbwrzkiuEhr": {
+      "answer": "B",
+      "explanation": "本题属于考察程序的基本概念，无论编写程序时使用十进制还是二进制，编译器都会翻译为二进制机器指令运行，所以运行效率是一样的，所以本题错误。"
+    },
+    "1vAZlCMSb6nqmt7QgTkq4": {
+      "answer": "C",
+      "explanation": "本题属于考察计算机字符编码知识。‘A’的ASCII值是65，可以推出‘L’是76，将其转换成十六进制，答案是4C。"
+    },
+    "Cq-G6zmHxmy25M4dC5goo": {
+      "answer": "A",
+      "explanation": "补码表示中，最小的负数是10000000（表示-128）。将其按位取反（即反码）：1→0，0→1，0→1，0→1，0→1，0→1，0→1，0→1，得到01111111，省略前导0即为1111111，对应选项A。"
+    },
+    "i-5hHNAwr4jxn_uZJmQtE": {
+      "answer": "A",
+      "explanation": "在8位二进制补码表示中，-128直接表示为10000000，这是因为-128在补码表示中是其自身。"
+    },
+    "T5-QvO2riER4Q7VNBe7mE": {
+      "answer": "A",
+      "explanation": "正数的补码表示与其原码完全相同。"
+    },
+    "n3VnjYejLnWu8nuBVjg76": {
+      "answer": "A",
+      "explanation": "正数的补码是一个数的二进制表示，负数的补码是这个负数的反码加1，因此如果最左边一位是1就是负数，所以一个字节的补码可以表示的最大正数是01111111，即十进制的127。"
+    },
+    "hsqChn-2FHbcBW5Lie0EC": {
+      "answer": "B",
+      "explanation": "正数的原码和补码相同"
+    },
+    "uZaAhyM6-7yOp63Kb3qQ2": {
+      "answer": "C",
+      "explanation": "对于负整数，补码是原码取反加一，可以通过反码加一得到，并且补码可以表示比原码更广泛的整数范围，但并不意味着与原码表示的数值完全不同。"
+    },
+    "SAeeANIFz-a8LBjqiIuoN": {
+      "answer": "A",
+      "explanation": "在补码表示中，正数的最高位（符号位）是0，负数的符号位是1。"
+    },
+    "OAwpoHgx4qfyq0hI9cx7u": {
+      "answer": "A",
+      "explanation": "所有正数的反码和补码相同，因为正数的反码和补码都与原码相同。"
+    },
+    "1w3_yvXF_blUHoB-marvt": {
+      "answer": "A",
+      "explanation": "在补码表示中，-0与+0表示相同，都是00000000，因此不存在-0的特殊表示。"
+    },
+    "tzJK0CWf5uGmukSIwQz2a": {
+      "answer": "B",
+      "explanation": "ASCII是美国标砖字符编码，GBK2312是简体中文编码，BIG5是繁体中文编码"
+    },
+    "G90anq2giseA2BQDs2DiX": {
+      "answer": "D",
+      "explanation": "ASCII码值中，每个字符的值依次递增，“a”的ASCII码值为97，因此“c”的ASCII码值为97+2=99。"
+    },
+    "EoG6GJ3cPqo2nfIOqlhXx": {
+      "answer": "B",
+      "explanation": "ASCII码值中，“0”到“9”的字符依次递增，字符“0”的ASCII码值为48，因此“9”的ASCII码值为48+9=57。"
+    },
+    "sPqXTSL8FkJzWM-CGxdSq": {
+      "answer": "C",
+      "explanation": "本题属于考察位运算的基本概念；a &= 3，等价于a = a & 3。&为按位与运算，a 的原值为 6，6 & 3 的结果为 2。所以本题正确答案为C。"
+    },
+    "8NkMkDluK8XYa4cyVWBmR": {
+      "answer": "C",
+      "explanation": "本题属于考察C++位运算知识。6按位取反运算，注意符号位也取反，呈现的是补码，转换过来就是-7。具体过程：00000110（原码）取反得11111001（补码），因为是负数，所以补码表示的值为-7。所以本题正确答案为C。"
+    },
+    "jDG-tyaPcLTsuk1mvntXK": {
+      "answer": "D",
+      "explanation": "本题属于考察运算表达式和位运算知识。b 不等于0，a 是b 的3倍。选D是最直接且正确的表达式。"
+    },
+    "_TQfDeKIg9BQKm1ykg5xw": {
+      "answer": "B",
+      "explanation": "对于有符号整数，左移再右移可能改变符号位的值，特别是当值为负数时。但是对于-5，左移1位再右移1位得到的结果仍然是-5，所以表达式的值为true，输出1。因此，本题的答案是B。"
+    },
+    "VFcXPKbmw6V_KKKwutFqk": {
+      "answer": "B",
+      "explanation": "补码表示负数时，是该数的绝对值的二进制表示取反加一。因此，-1的补码表示为11111111。"
+    },
+    "x9R4Zo9-eeY3HC9p-mnmZ": {
+      "answer": "D",
+      "explanation": "补码11111001符号位为1，是负数。补码转原码：先减1，再将除符号位外的其余位取反。11111001−1=11111000，除符号位外取反得0000111，故原码为10000111，对应选项D。验证：11111001作为8位补码的无符号值为249，真值为249−256=−7；−7的原码为符号位1加上7的二进制0000111，即10000111，与前述一致。"
+    },
+    "pLpPkNi0qaEGP0O8AYQmk": {
+      "answer": "C",
+      "explanation": "本题属于考察位运算的基本概念；a &= 3，等价于a = a & 3。&为按位与运算，a 的原值为 6，6 & 3 的结果为 2。所以本题正确答案为C。"
+    },
+    "V1nn4D0BVYfaB_wE9N8h8": {
+      "answer": "C",
+      "explanation": "本题属于考察C++位运算知识。6按位取反运算，注意符号位也取反，呈现的是补码，转换过来就是-7。具体过程：00000110（原码）取反得11111001（补码），因为是负数，所以补码表示的值为-7。所以本题正确答案为C。"
+    },
+    "Juy9iHCXpbyaKafz7a7oT": {
+      "answer": "D",
+      "explanation": "本题属于考察运算表达式和位运算知识。b 不等于0，a 是b 的3倍。选D是最直接且正确的表达式。"
+    },
+    "3EPhhRnDKo4l9B37fLsz_": {
+      "answer": "B",
+      "explanation": "对于有符号整数，左移再右移可能改变符号位的值，特别是当值为负数时。但是对于-5，左移1位再右移1位得到的结果仍然是-5，所以表达式的值为true，输出1。因此，本题的答案是B。"
+    },
+    "kVUntGhzTW_Q5KDv9oRpk": {
+      "answer": "B",
+      "explanation": "补码表示负数时，是该数的绝对值的二进制表示取反加一。因此，-1的补码表示为11111111。"
+    },
+    "TKKZRMZyDSj-3zYh1ydCB": {
+      "answer": "C",
+      "explanation": "AND操作对每一位进行逻辑与运算，所以结果是0010。"
+    },
+    "BAMclhz3zYeDKqNa_wHJ5": {
+      "answer": "B",
+      "explanation": "OR操作对每一位进行逻辑或运算，所以结果是1110。"
+    },
+    "sZEb8GdbxVtDksOt27Npn": {
+      "answer": "A",
+      "explanation": "NOT操作对每一位进行逻辑非运算，所以结果是0101。"
+    },
+    "svG_IPYcI-8vjRxcmu3-r": {
+      "answer": "D",
+      "explanation": "XOR操作对每一位进行逻辑异或运算，所以结果是1100。"
+    },
+    "istY7OuE615mZDo94NdoP": {
+      "answer": "A",
+      "explanation": "左移操作是向左移动位数，并在右边补零，所以结果是101000。"
+    },
+    "lqKXLXfM81EQ_diFQZgth": {
+      "answer": "C",
+      "explanation": "右移操作是向右移动位数，并在左边补零（或符号位），所以结果是0101。"
+    },
+    "c0g_-OTensF9rKvgc3JK9": {
+      "answer": "A",
+      "explanation": "AND操作对每一位进行逻辑与运算，所以结果是0000。"
+    },
+    "-zw4SbTIWs8CimxFsQIxo": {
+      "answer": "D",
+      "explanation": "OR操作对每一位进行逻辑或运算，所以结果是1111。"
+    },
+    "Y-AFW-LSFlFZqErKHr3hw": {
+      "answer": "A",
+      "explanation": "NOT操作对每一位进行逻辑非运算，所以结果是0011。"
+    },
+    "hYbfq49nZt3tHA24-N4If": {
+      "answer": "A",
+      "explanation": "XOR操作对每一位进行逻辑异或运算，所以结果是1111。"
+    },
+    "e_cHI8EjyyH7z4vO2yK8a": {
+      "answer": "A",
+      "explanation": "本题属于考察计算机基础知识中的位运算相关概念，a&一个数得到的必然是小于等于 a 的数，同时题目要求是 4 的倍数，也就是最后两位要等于0，(~3)正好是除了最后两位是 0，其余全是 1，满足要求，所以本题正确答案为A。"
+    },
+    "9VJ6J63l6GEAeY2SMcxCQ": {
+      "answer": "B",
+      "explanation": "本题属于考察计算机编码的知识。格雷码的编码不是唯一的编码。任意两个相邻的代码只有一位二进制数不同,则称这种编码为格雷码。所以不是唯一性编码。"
+    },
+    "_DFxDsHgPMK8iNWVBY848": {
+      "answer": "B",
+      "explanation": "可以模拟手动构造法构造格雷码"
+    },
+    "iQ5AvpV9xOFLUzdo_3WgK": {
+      "answer": "D",
+      "explanation": "八位二进制能表示的最大数是11111111，即255"
+    },
+    "Q6wN0A4_qPM3W__ZZ-kNF": {
+      "answer": "B",
+      "explanation": "奥斯卡奖是电影类奖项。诺贝尔有六种奖项：物理、化学、生物和医疗、文学、经济、和平，普利策奖是新闻类奖项"
+    },
+    "yE3epJpiCu2eLE0f_c672": {
+      "answer": "A",
+      "explanation": "本题属于对计算机历史的考察；中国第一台通用数字电子计算机于1958年8月研制成功，美国第一台通用电子计算机ENIAC诞生于1946年2月14日。所以本题正确。"
+    },
+    "_tXpMNWj18QxldMQxk0GH": {
+      "answer": "A",
+      "explanation": "神威·太湖之光超级计算机是中国自主研发的超级计算机，它在全球超级计算机TOP500排行榜中确实多次获得第一，展现了中国在超级计算机领域的实力。"
+    },
+    "u2Xa5f2b0R0YwtjP2vQJJ": {
+      "answer": "D",
+      "explanation": "本题属于考察计算机基础知识。中国第一台计算机通用数字电子计算机于1958年6月由中科院计算所研制成功。那时候的逻辑部件是电子管。"
+    },
+    "EsfItxhoSdlmHuRVDqIn1": {
+      "answer": "C",
+      "explanation": "王选先生的重大贡献是发明汉字激光照排系统，这项发明极大地促进了中文出版的现代化进程，因此C选项是正确的。"
+    },
+    "ldO7jwcv8tVaOfBN9H8tO": {
+      "answer": "D",
+      "explanation": "中国计算机学会于1984年创办全国青少年计算机程序设计竞赛(简称：NOI)."
+    },
+    "1Jyao9R3qyD1RBEmqHdGN": {
+      "answer": "B",
+      "explanation": "CCF NOIP复赛全国统一评测时使用的系统软件是NOI Linux。"
+    },
+    "AgonV-MT59jKfK9MhTsQT": {
+      "answer": "A",
+      "explanation": "电子产品不可带入"
+    },
+    "W5_UIXz9teddgSeFXt_K2": {
+      "answer": "C",
+      "explanation": "电子产品不可带入"
+    },
+    "Fec_Ny22MuhH8d7NFtiGv": {
+      "answer": "B",
+      "explanation": "中国计算机学会于1984年创办全国青少年计算机程序设计竞赛(简称：NOI)."
+    },
+    "hrlSeppF7z3TvC9cwb4Uq": {
+      "answer": "C",
+      "explanation": "CCF于2016年11月1日发布《CCF关于NOI系列赛事程序设计语言变更的公告》从2022年开始，NOIP竞赛也将不再支持Pascal语言。"
+    },
+    "Xamf-FHrDbtny5YWRDXI-": {
+      "answer": "B",
+      "explanation": "中国计算机学会于1984年创办全国青少年计算机程序设计竞赛(简称：NOI)."
+    },
+    "zFPsxpdB2oCS7qeAtnliE": {
+      "answer": "C",
+      "explanation": "HTTP（Hypertext Transfer Protocol）- 超文本传输协议；FTP（File Transfer Protocol）- 文件传输协议；POP3（Post Office Protocol – Version 3）- 邮局协议版本 3；Telnet 协议是 TCP/IP 协议中的一员，是 Internet 远程登陆服务的标准 协议和主要方式。"
+    },
+    "qfegOzpf6jtxaFQYMBwir": {
+      "answer": "C",
+      "explanation": "无线局域网利用射频的技术，使用电磁波在空中进行通信连接。无线局域网利用射频的技术，使用电磁波在空中进行通信连接。\nWi-Fi和蓝牙都属于无线通信，且仅能在有限范围内实现各种通信设备的互连，因此是无线局域网。"
+    },
+    "-QDO7xkhD7w33o7y7KPkG": {
+      "answer": "D",
+      "explanation": "IPv6采用128位(16字节)地址来避免地址资源的枯竭。"
+    },
+    "DqY9LtRx_AzbYGuIN536f": {
+      "answer": "A",
+      "explanation": "中国国家顶级域名即是.cn，.cn域名由国家工业和信息化部管理，.cn域名注册的管理机构为中国互联网信息中心（CNNIC）。国家代码顶级域名指示国家区域（如.cn代表中国，.us代表美国，.fr代表法国等等）；"
+    },
+    "Vk9zKabG4tb_3iYjpYnln": {
+      "answer": "A",
+      "explanation": "SMTP(Simple Mail Transfer Protocol)是一种提供可靠且有效的电子邮件传输的协议,是建立在FTP文件传输服务上的一种邮件服务，主要用于系统之间的邮件信息传递，并提供有关来信的通知。UDP，用户数据报协议（User Datagram Protocol）,为应用程序提供了一种无需建立连接就可以发送封装的 IP 数据包的方法。对等网络（Peer-to-peer networking）或对等计算（Peer-to-peer computing），网络的参与者共享他们所拥有的一部分硬件资源（处理能力、存储能力、网络连接能力、打印机等），这些共享资源通过网络提供服务和内容，能被其它对等节点（Peer）直接访问而无需经过中间实体。FTP,文件传输协议（File Transfer Protocol）是用于在网络上进行文件传输的一套标准协议。"
+    },
+    "7GKTXPXQ0RXpvIPR4mlCs": {
+      "answer": "A",
+      "explanation": "文件传输协议(File Transfer Protocol, FTP)是用于在网络上进行文件传输的一套标准协议"
+    },
+    "9lEbsdic5vrsXgHhgHhkS": {
+      "answer": "D",
+      "explanation": "以太网是一种计算机局域网技术，以太网是目前应用最普遍的有线网技术。以太网的每个版本都有电缆的最大长度限制(即无须放大的长度),这个范围内的信号可以正常传播,超过这个范围信号将无法传播。"
+    },
+    "2Yyv3PLPyrMbBUwwnyu3N": {
+      "answer": "C",
+      "explanation": "常用的电子邮件协议有SMTP、POP3、IMAP4"
+    },
+    "6q5_OxhPoKEqvTGi--zVY": {
+      "answer": "B",
+      "explanation": "广域网(WAN)是在一个广泛地理范围内所建立的计算机通信网，其范围可以超越城市和国家以至全球。此外还有局域网(LAN)和城域网(MAN)。"
+    },
+    "GaFtqEWoPtsJrD3dHhIWO": {
+      "answer": "B",
+      "explanation": "IP地址是一个32位的二进制数，通常被分隔为4个8位二进制数，常用“点分十进制”的表示形式，形如（a.b.c.d），其中a、b、c、d都是0~255之间的十进制整数。所以本题错误。"
+    },
+    "gaqsQW-rP7z8exjrBhPdt": {
+      "answer": "B",
+      "explanation": "顶级域名是指域名最右边的那个词， http://gesp.ccf.org.cn 的顶级域名是.cn。所以本题错误。"
+    },
+    "KOchYJjzsPOmnWlTdarom": {
+      "answer": "A",
+      "explanation": "互联网是一个全球性的网络，它不属于任何一个国家，而是由无数个小网络组成的网络的网络。"
+    },
+    "4ZyPZ9efIiwoSIA9oiaq2": {
+      "answer": "A",
+      "explanation": "传输层的主要协议确实是UDP（用户数据报协议）和TCP（传输控制协议），它们是TCP/IP协议族中的核心协议。"
+    },
+    "2WQsc41PT0tiOPReEytke": {
+      "answer": "B",
+      "explanation": "通信卫星可以转发无线电信号，实现通信地球站间或地球站与航天器间的无线电通信，因此具有信号中继作用。"
+    },
+    "yXZg1uBTMdrdjJcy9Cr1P": {
+      "answer": "A",
+      "explanation": "传输层的主要协议确实是UDP（用户数据报协议）和TCP（传输控制协议），它们是TCP/IP协议族中的核心协议。"
+    },
+    "ZYIMEeM7Lf0IZAleVxWHt": {
+      "answer": "B",
+      "explanation": "5G网络中的G代表的是“Generation”，即第五代移动通信技术，而不是Gigabytes/s。所以本题错误。"
+    },
+    "9V7koEfyBmDhgvzpcJlHu": {
+      "answer": "A",
+      "explanation": "要设置IP地址并接入到WIFI，说明WIFI盒子需要具备分配IP地址和管理网络流量的能力，这是路由器的基本功能。"
+    },
+    "ljMNll3aPIXKC4mWqSzl6": {
+      "answer": "A",
+      "explanation": "欧几里得算法通过不断地将较大数替换为两数的差，直至两数相等，那个数即为最大公约数。gcd(48,18)的计算过程是：48-18=30，30-18=12，18-12=6，12-6=6，得到最大公约数是6。"
+    },
+    "K-Z5c1VKaVYY63i38FZs5": {
+      "answer": "D",
+      "explanation": "欧几里得算法是通过连续除法操作直到余数为0，最后的非零余数即为两数的最大公约数。270和192的最大公约数通过欧几里得算法计算得到是6。"
+    },
+    "ErqTF6FIMxVhBT3qS7z9p": {
+      "answer": "A",
+      "explanation": "计算多个数的最大公约数时，可以先计算任意两个数的最大公约数，然后用这个结果与第三个数计算最大公约数，依此类推。因此，首先计算100和80的gcd是一种策略。"
+    },
+    "omEs0W3uCCF7dQ0rRnO0t": {
+      "answer": "C",
+      "explanation": "gcd(a,b)=1意味着a和b的最大公约数是1，即a和b是互质的，没有除了1之外的其他公约数。"
+    },
+    "zH18PT3eMm4wRl1zqejKU": {
+      "answer": "B",
+      "explanation": "通过连续进行除法操作，可以找到147和105的最大公约数为21。"
+    },
+    "Pla04w29kKOZdfBlqqLQJ": {
+      "answer": "C",
+      "explanation": "欧几里得算法通过较大数除以较小数，然后用较小数除以余数，如此迭代，直到余数为0，最后的除数即为最大公约数。"
+    },
+    "SYiOC7T-ArZIE05aMGxjH": {
+      "answer": "B",
+      "explanation": "使用欧几里得算法，252和198的最大公约数是18。"
+    },
+    "uj1gNNMMLhW1oP5dEcY3_": {
+      "answer": "B",
+      "explanation": "如果两个数的最大公约数是其中较小的数，这意味着较小的数是较大数的因数。"
+    },
+    "YsJeKvNX-xQ0lOJ_LfTPM": {
+      "answer": "A",
+      "explanation": "欧几里得算法计算出最大公约数后，可以利用最大公约数来计算两个数的最小公倍数。"
+    },
+    "Qhj6bYLrP7N95s1w6BsZH": {
+      "answer": "A",
+      "explanation": "如果一开始较小的数是较大数的倍数，那么第一步除法的余数为0，算法会立即结束，因为找到了最大公约数。"
+    },
+    "XUcH3CpO1JIEE-GmrCj6Y": {
+      "answer": "C",
+      "explanation": "欧几里得算法的过程是重复相除然后交换位置，因此也被称作辗转相除法"
+    },
+    "LSMbS55WQeyBOthpehhdE": {
+      "answer": "B",
+      "explanation": "如果顶点为n的话每个点可与其它n-1个点相连共有n*(n-1)，但是每条线均被计算了2次(比如从A到B和从B连到A是一样的)，再除以2即可n*(n-1)/2。\n当n=7时，7*(7 – 1 )/ 2 = 21"
+    },
+    "_R0jPOFI2VXeq131KP9pp": {
+      "answer": "A",
+      "explanation": "因为边a指向的顶点还有另一条边指向它，其他选项对应的边指向的顶点仅有唯一一条边指向它，所以不可删除。"
+    },
+    "4Okf7m4KK_RMe2PP_2tHz": {
+      "answer": "C",
+      "explanation": "不再是连通图需要使得其中一个点与其他点无路径相连，该图每一个点都有3条路径，因此可以删去与任意一个顶点相连的3条边。"
+    },
+    "IGVZdqPdyx6Jkysa-vnJh": {
+      "answer": "A",
+      "explanation": "去掉相似的后剩6个"
+    },
+    "2RInb_H63nWa2Car5W_3W": {
+      "answer": "B",
+      "explanation": null
+    },
+    "QXUqgIIML1bBx4pAwcx9h": {
+      "answer": "B",
+      "explanation": "深度优先遍历可以用栈或递归方法。\n广度优先遍历，需要使用队列做辅助。每个队首元素出队时，需要把下一层的顶点入队。入队或出队的顺序，即是遍历的顺序。"
+    },
+    "1PIyyC9uYk0vZ4CHXZBkt": {
+      "answer": "A",
+      "explanation": "按照深度优先搜索的方式，A选项中，如果A_3没被遍历，在A_1之后只能是A_3，正确顺序是A_0——A_1——A_3——A_2。"
+    },
+    "JMWyF-5nN3Pi7ywxU-Rdq": {
+      "answer": "B",
+      "explanation": "棵n个节点的树有n-1条边，因此答案为5。"
+    },
+    "0r804WL2jweus9_q7Krqg": {
+      "answer": "B",
+      "explanation": "从$a→b$方向的遍历：$a-b-d-c-e$; 从$a→c$方向的遍历：$a-c-e-d-b$和$a-c-d-b-e$. 则最多有两个终点：$e$和$b$"
+    },
+    "nwDd8AX2tNI5g_HK765Kb": {
+      "answer": "D",
+      "explanation": "n个顶点的树有n-1条边，需删除 m-(n-1)= m-n+1 条边"
+    },
+    "nc_gtSGuUvdNHCrx1whzz": {
+      "answer": "D",
+      "explanation": "A、B、C 均为正确表述：图的深度优先遍历常用栈（或递归调用栈）实现；栈的访问原则是后进先出，队列是先进先出；广度优先搜索常用队列实现。D 的表述不正确——用两个栈可以模拟实现一个队列（经典的\"用栈实现队列\"问题），栈与队列在功能上并非无法互相实现，因此 D 是表述不恰当的一项。"
+    },
+    "cYP1p4cgsgt8VxDF6MK53": {
+      "answer": "A",
+      "explanation": "哈夫曼编码是一种根据字符频率进行编码的方法，字符频率越高的编码长度越短。因此，最高频率的字符（'f'）应该有最短的编码。选项A中，字符'f'对应的编码最短，是符合哈夫曼编码原则的。"
+    },
+    "JkDCMqoFoGEvsiL1m6OVw": {
+      "answer": "B",
+      "explanation": "按频率从小到大排序：a10、b15、d16、e29、c30。第一步合并最小两个a(10)和b(15)得到节点ab(25)；剩下d(16)、ab(25)、e(29)、c(30)，最小两个是d(16)和ab(25)，合并得到节点d_ab(41)；剩下e(29)、c(30)、d_ab(41)，合并e和c得到ec(59)；最后d_ab(41)与ec(59)合并为根。因此d所在路径为：根→d_ab→d，深度为2，即d的编码长度为2位，对应选项B。"
+    },
+    "Afr3PnrLRETrk6uJ0J0Oh": {
+      "answer": "B",
+      "explanation": "哈夫曼编码基于贪心算法构建最优二叉树，每一步都选择最佳选项以达到整体最优，因此它是贪心策略的一种体现。"
+    },
+    "GUBG_zTLJ5iwrNoZ9U4Zl": {
+      "answer": "B",
+      "explanation": "本题考察的知识点是数据结构中的哈夫曼，哈夫曼树左边的边权是用0来表示，右边的边权值是1，通常是左0右1。走到D是右左左右右，也就是10011，因此选项是B。"
+    },
+    "z3EhUAw7pOsCm0OMIXB4c": {
+      "answer": "B",
+      "explanation": "本题是C++数据结构的知识，有损压缩算法是一种用于压缩数字媒体数据的算法，而哈夫曼编码是一种无损压缩算法。"
+    },
+    "s4FPYLWQJJqHns-0h8Zp4": {
+      "answer": "B",
+      "explanation": "按照出现次数进行哈夫曼编码，每个字符根据其出现频率被分配一定长度的编码，计算得到整个字符串使用哈夫曼编码后所需的最少位数是32bit。"
+    },
+    "9vUJFt0ZgfOyM6wl1aXkq": {
+      "answer": "A",
+      "explanation": "在构建哈夫曼树时，每次应选择两个最小权值的节点合并，以此方式构建出最优的哈夫曼树。"
+    },
+    "EqIkVcFZEjV0c-EbcFNtZ": {
+      "answer": "B",
+      "explanation": "在构建哈夫曼树的过程中，首先会组合频率最低的两个字符，即E和F。"
+    },
+    "EJbL3If0kv5UD1ZjqKCZV": {
+      "answer": "D",
+      "explanation": "在哈夫曼编码中，频率最高的字符通常获得最短的编码。由于Z的频率最高，它的编码是最短的，这里是1。"
+    },
+    "8Z4exJg7xKAIJ4_uiBw7K": {
+      "answer": "C",
+      "explanation": "按频率从小到大排序：R(5)、S(9)、T(12)、U(13)、V(16)。第一步合并最小两个R(5)和S(9)，得到节点RS(14)；R、S已合并进RS节点，不再是独立字符。剩下T(12)、U(13)、RS(14)、V(16)，最小两个是T(12)和U(13)，所以U最先与T合并，对应选项C。"
+    },
+    "8XuhjjKlehaJSafrUbMm3": {
+      "answer": "C",
+      "explanation": "按频率从小到大排序：m(4)、n(4)、o(8)、p(20)、q(30)、r(34)。依次合并：m+n=mn(8)；o与mn(均为8)合并得omn(16)；omn与p(20)合并得omnp(36)；q(30)与r(34)合并得qr(64)；最后omnp与qr合并为根。m、n的路径为：根→omnp→omn→mn→{m,n}，深度为4，即编码长度为4位，只有选项C（1010和1011，均为4位）符合，选项A、B、D给出的都是3位编码，长度不对。"
+    },
+    "EoJ1sFbU3YgSNUXDmwnBb": {
+      "answer": "B",
+      "explanation": "按频率排序：S(17)、T(23)、U(29)、V(31)，无并列。合并S(17)和T(23)得ST(40)；合并U(29)和V(31)得UV(60)；最后ST与UV合并为根。四个字符S、T、U、V的编码长度全部相等，均为2位。因此\"S和T的编码长度相等\"（选项B）成立，而\"V的编码长度最短\"不成立，因为四个字符长度都相同，并非V独有最短。"
+    },
+    "6eHRZ-WHyyGr5x-qB1ntz": {
+      "answer": "D",
+      "explanation": "按频率排序：J(19)最小，其余I(20)、K(20)、L(20)、H(21)。第一步必然合并J(19)与频率20的某个字符（I、K、L之一，因三者并列可任意选择），得到39的节点；剩下另外两个频率20的字符合并得到40的节点；最终J及其最先合并的伙伴所在分支深度为3，而H和另外两个频率20的字符深度为2。由于具体是谁先与J合并存在并列、可任意选择，L的深度可能是2也可能是3——当L不是最先与J合并的那个时，其编码长度为2位，此时编码取\"01\"是可能出现的，因此选项D是唯一在所有合并顺序下都可能成立的描述；而\"所有字符编码长度都相同\"\"J最短\"\"H最长\"在任何合并顺序下都不成立。"
+    },
+    "oRefyWxFLXUSW52Uxi07K": {
+      "answer": "A",
+      "explanation": "A的第一行的结果是使得结点p的后继结点的前驱指向了它本身，逻辑错误；第二行错误同理，与之相对且正确的是C。"
+    },
+    "ILWFIrA6tOYEKHToZsJ8V": {
+      "answer": "C",
+      "explanation": "双向链表只是查找前驱节点方便而已。假如链表长度为n，待查找的节点在链表的尾部，和单向链表一样要查n次才能查到。"
+    },
+    "vKIuqo1Aolg4LzPfBTWcR": {
+      "answer": "A",
+      "explanation": "链表只能从头结点开始按顺序访问，不能随机访问。"
+    },
+    "ROWx6ntwAq2KNHBKuluMx": {
+      "answer": "D",
+      "explanation": "最常见的操作方式：先开辟出一段连续空间（类似数组），如果不够用，再一点点开辟新空间，因此所用的内存很可能是连续与不连续混合的。\n链表可以不连续，便于数据的插入和删除。\n线性表是最基本、最简单、也是最常用的一种数据结构。线性表（linear list）是数据结构的一种，一个线性表是$n$个具有相同特性的数据元素的有限序列。\n线性表中数据元素之间的关系是一对一的关系，即除了第一个和最后一个数据元素之外，其它数据元素都是首尾相接的（注意，这句话只适用大部分线性表，而不是全部。比如，循环链表逻辑层次上也是一种线性表（存储层次上属于链式存储），但是把最后一个数据元素的尾指针指向了首位结点）。\n在实际应用中，线性表常以链表、栈、队列、字符串等形式使用。\n数组与链表的区别：\n0）链表相邻元素是逻辑上的连续，数组相邻元素是物理上的连续；\n1）链表的长度可以改变，但数组的长度是固定的；\n2）链表可以插入元素，数组不能插入元素；\n3）链表可以删除元素，数组无法删除元素，数组只能将指定元素赋为$null$，但各种元素依然存在；\n4）链表提供方法来搜索指定元素的位置，数组一般无该方法；\n5）链表提供方法来清空所有元素，但数组一般无该方法\n数组的存储空间要求连续的内存；链表不要求连续的内存，当然连续的内存也可以。选D。"
+    },
+    "t3gGazuROROJ6T_G5HNma": {
+      "answer": "D",
+      "explanation": "A.插入、删除无需改变元素位置，只需改变存储的下一元素地址信息。\nB.链表无需事先预留足够大的储存空间，可以动态分配内存。\nC.链表为线性结构，空间与长度成正比。\nD.链表只能从头开始依次访问每个元素，无法随机访问任意元素。"
+    },
+    "C8ZhFfgIRqMIm8FwqaV__": {
+      "answer": "A",
+      "explanation": "A. 链表只能从头开始依次访问每个元素，无法随机访问任意元素。\nB. 链表无需事先预留足够大的储存空间，可以动态分配内存。\nC. 插入、删除无需改变元素位置，只需改变存储的下一元素地址信息。\nD. 目前学习的数据结构均为线性结构，空间皆与长度成正比。"
+    },
+    "kBeYC6gJvp6F1W8rYf8C7": {
+      "answer": "C",
+      "explanation": null
+    },
+    "GJbxm4Ig5JPA97Hde-xAW": {
+      "answer": "D",
+      "explanation": null
+    },
+    "k6xfWcTXaOgWHTlF3CqIJ": {
+      "answer": "A",
+      "explanation": null
+    },
+    "1dW7lfTWM_TcUJfIG22YF": {
+      "answer": "D",
+      "explanation": "12345670(8)转十进制：1×8⁷+2×8⁶+3×8⁵+4×8⁴+5×8³+6×8²+7×8¹+0×8⁰=2739128；07654321(8)转十进制：7×8⁶+6×8⁵+5×8⁴+4×8³+3×8²+2×8¹+1×8⁰=2054353。两数之和为4793481。将4793481转换为八进制：不断除以8取余，依次得到1、1、2、2、2、2、2、2（从低位到高位），即22222211(8)，对应选项D。"
+    },
+    "jPSxm4tsYA6QZUCXWhbNm": {
+      "answer": "D",
+      "explanation": "101010(2)转十进制为42；166(8)转十进制为118；两者之和为42+118=160(10)。160转换成十六进制为A0(16)（10×16+0=160），对应选项D。"
+    },
+    "3nCgC8Nsy0jK6XW2XUIdt": {
+      "answer": "C",
+      "explanation": "32.1(8)转换为十进制是3*8^1 + 2*8^0 + 1*8^(-1) = 26.125。"
+    },
+    "Is0JsT8ResI8lHasF-n5Q": {
+      "answer": "C",
+      "explanation": "101.11(2)对应的十进制是5*2^0 + 1*2^2 + 1*2^(-1) + 1*2^(-2) = 5.75。"
+    },
+    "BBw9SKcmWh_-SSiDPlkJD": {
+      "answer": "A",
+      "explanation": "1011(2)对应的十进制是1*2^0 + 1*2^1 + 0*2^2 + 1*2^3 = 11。"
+    },
+    "07AN6oFPeqsTOSN3L68vw": {
+      "answer": "D",
+      "explanation": "二进制11.01 换算成 10 进制为 1*2^1+1*2^0+0*2^(-1)+1*2^(-2) = 3.25。"
+    },
+    "eN7cSDoY579oUD9yIJ2H7": {
+      "answer": "B",
+      "explanation": "任意数字都可以在不同的进制之间转换，所以十进制数完全可以转换为二进制数。"
+    },
+    "-fo55ITLsrrHxUQVu1FGu": {
+      "answer": "B",
+      "explanation": "日常生活中，十进制最常用；八进制和十六进制也可以表示小数；正整数的二进制表示通常比它的十进制表示要长。"
+    },
+    "ieDwOkm2Wm5CzrOfBXGYC": {
+      "answer": "A",
+      "explanation": "0xff的十进制是255，所以表达式(0xff == 255) 为true。"
+    },
+    "6UvOg3-SlE-BlVV1kqetw": {
+      "answer": "C",
+      "explanation": "在二进制补码表示法中，-2的16位表示为\"FFFE\"，每次减少1，最低位减1，因此-4的十六进制表示为\"FFFC\"。"
+    },
+    "tkufom9kOkmZgXGqbpB_5": {
+      "answer": "A",
+      "explanation": "255的二进制表示为11111111。"
+    },
+    "nqSD72B2UR1pR4Y_raxZQ": {
+      "answer": "B",
+      "explanation": "45的八进制表示为55。"
+    },
+    "8KY6D74TpobXlg3mPcQtV": {
+      "answer": "A",
+      "explanation": "1101101.101的十进制表示为109.625。"
+    },
+    "4zsZ0sQR7DMyjz5vyAZm4": {
+      "answer": "B",
+      "explanation": "将二进制数按4位一组（整数部分从右往左分组，小数部分从左往右分组，不足4位补0）：整数部分1101(2)恰好4位，对应十六进制D；小数部分.1101(2)也恰好4位，对应十六进制D。所以1101.1101(2)=D.D(16)，对应选项B（选项A的1D.D多出了不存在的高位1，是错误的）。"
+    },
+    "CAJG241wQYzkogBdeX9aW": {
+      "answer": "A",
+      "explanation": "FACE(16)对应的二进制数是1111101011001110。"
+    },
+    "3abQEFgmnQ3U5gtlVKkkj": {
+      "answer": "A",
+      "explanation": "1984的二进制表示为11111000000。"
+    },
+    "MIZCLPgWQJHG5F69uoQ9X": {
+      "answer": "A",
+      "explanation": "整数部分11110000(2)按4位分组为1111和0000，对应十六进制F和0，即F0；小数部分.01101(2)从左往右按4位分组（不足4位在右侧补0）为0110和1000，对应十六进制6和8，即.68。所以11110000.01101(2)=F0.68(16)，对应选项A。"
+    },
+    "SMvuppmvsePqf1BFwo5ev": {
+      "answer": "A",
+      "explanation": "345(8)=3×8²+4×8¹+5×8⁰=192+32+5=229，对应选项A。"
+    },
+    "9NCV2VEKVgYqK_qDcpUfM": {
+      "answer": "A",
+      "explanation": "整数部分100101(2)从右往左按3位分组为100和101，对应八进制4和5，即45；小数部分.011(2)按3位分组为011，对应八进制3，即.3。所以100101.011(2)=45.3(8)，对应选项A。"
+    },
+    "GUvbTCN1CsSk9DooOry2L": {
+      "answer": "A",
+      "explanation": "1024=4×16²+0×16+0=4×256，所以1024(10)=400(16)，对应选项A。"
+    },
+    "RkXFoG_iTXedPAUG2b6nE": {
+      "answer": "A",
+      "explanation": "10101010的十六进制表示为AA。"
+    },
+    "3HFyAl3OHZK00F_zbCUVV": {
+      "answer": "A",
+      "explanation": "八进制数672(8)对应的二进制数是110111010。"
+    },
+    "9V8zQhKQt9tYzJT2xyaeQ": {
+      "answer": "A",
+      "explanation": "786的二进制表示为1100010010。"
+    },
+    "L60biPlKnamEzgJNzsYWW": {
+      "answer": "A",
+      "explanation": "十六进制每一位对应4位二进制：1→0001，C→1100，2→0010，拼接得0001 1100 0010，去掉最高位多余的0，得111000010(2)，对应选项A。"
+    },
+    "RFx6SkuDG5-Z0Aexy_QoO": {
+      "answer": "A",
+      "explanation": "整数部分11100111(2)=128+64+32+4+2+1=231；小数部分.1101(2)=0.5+0.25+0+0.0625=0.8125。所以11100111.1101(2)=231.8125，对应选项A。"
+    },
+    "HIgQFNB6-W6xPWzpTH5Vf": {
+      "answer": "C",
+      "explanation": "字面量100是十进制的100，75(8)是八进制的数，相当于十进制的61，0x70和0x60是十六进制的数，分别等于十进制的112和96。因此，0x70（即十进制的112）是最大的。所以本题正确答案为C。"
+    },
+    "zptUDTGR-sX714h8E-70j": {
+      "answer": "B",
+      "explanation": "线性筛法和埃氏筛法虽然都用于筛选素数，但线性筛法效率更高。"
+    },
+    "Dz-m_wimPuMC69CETQBUa": {
+      "answer": "A",
+      "explanation": "质数的判定和筛选确实有不同的目的，质数判定是针对特定的正整数，而质数筛法是为了找出范围内的所有质数。"
+    },
+    "S-556JmK39PZs8ORRRLyd": {
+      "answer": "A",
+      "explanation": "素数分解定理规定:任何一个整数都可以被分解为一系列因子的乘积,乘积中所有的因子都是质数(即素数)。（更严谨一点：大于1的整数）"
+    },
+    "xXxUrXEftqSwEe7tdjX2U": {
+      "answer": "A",
+      "explanation": "正整数 N 的因数一般不会超过 N 的一半，所以循环 N 的一半即可找到所有因数。"
+    },
+    "u7YC4RlRamGbSW7PjE802": {
+      "answer": "B",
+      "explanation": "唯一分解定理指出每个合数（大于1的整数）都可以唯一地分解为一系列素数（质数）的乘积。"
+    },
+    "BGTBrF0Hp8HodFCWhpXQt": {
+      "answer": "C",
+      "explanation": "线性筛法相比埃氏筛法的优势在于速度更快。"
+    },
+    "Mx6mVhxacXWJLFSS4H2Yb": {
+      "answer": "B",
+      "explanation": "埃拉托斯特尼筛法是一种基于迭代的素数筛选算法。"
+    },
+    "oREML8hoh8Lznklny2FGD": {
+      "answer": "B",
+      "explanation": "素数定义为大于1且除了1和自身外没有其他因子的数。"
+    },
+    "6zaOMzruk6qreeReX3Q4g": {
+      "answer": "C",
+      "explanation": "线性筛法相比埃拉托斯特尼筛法的优势在于速度更快。"
+    },
+    "xidLi5McQy_u4si9sG09n": {
+      "answer": "A",
+      "explanation": "最简单的判断素数的方法是逐个除以2到该数的平方根之间的数，如果都不能整除，则该数为素数。"
+    },
+    "KQbYs_GKznva2OCrfJAln": {
+      "answer": "A",
+      "explanation": "将非质数自然数拆分为质数乘积的过程叫做质因数分解。"
+    },
+    "Eo4uxyC78SL0JIzfNek1-": {
+      "answer": "A",
+      "explanation": "埃拉托斯特尼筛法是用于筛选素数而不是判断一个数是否为素数的算法。"
+    },
+    "m1A0-ABrEyVAymDqndDq-": {
+      "answer": "C",
+      "explanation": "Pollard rho 算法常用于大整数的质因数分解。"
+    },
+    "DlkYtDJ15PWni9e2_72pY": {
+      "answer": "B",
+      "explanation": "一个合数可以被分解为两个以上质数的乘积。"
+    },
+    "G97Z5Lhi--bAT0PBU5Ufi": {
+      "answer": "D",
+      "explanation": "Miller-Rabin算法是判断素数的高效方法之一。"
+    },
+    "hkNfGs47nXX68Nfx-EgtW": {
+      "answer": "D",
+      "explanation": "输入输出的cin和cout都是C++的常对象，但不是关键字。"
+    },
+    "QouJ3dEd24TgPpYlYuuDr": {
+      "answer": "B",
+      "explanation": "选项B是先判断a和b是否相等，若相等表达式a==b的值为1，若不相等a==b的值为0，再判断表达式a==b的值是否等于0，只有a和b不相等时，整个表达式成立。"
+    },
+    "MCeiKDpPugdkolWQk7dF_": {
+      "answer": "A",
+      "explanation": "在当前C++标准下，double类型通常占用8个字节，bool类型占用1个字节，int类型通常占用4个字节，char类型占用1字节。int类型的取值范围为−2^31～2^31−1，char类型的范围是-128～127。"
+    },
+    "PpWJcysgRVPdpZwpCxeqC": {
+      "answer": "B",
+      "explanation": "题目中所列举的编程语言，均无法在CPU上直接执行，而是需要通过各自的方式，转换成机器语言后才能被CPU识别和执行。"
+    },
+    "z5JMBoQ__vKLGKl88FdiT": {
+      "answer": "C",
+      "explanation": "ChatGPT聊天机器人程序可以帮助我们完成一些计算机上的操作，A、B、D都属于这个范畴，C选项擦地板无法直接实现。"
+    },
+    "qPB-_iuMsxb3dYp28lTvi": {
+      "answer": "D",
+      "explanation": "如果赋值语句右侧的表达式计算结果与左侧的变量原值相同，则执行赋值语句后变量的值不会变化。"
+    },
+    "IAlcxYmIMdebwa_EH1CQq": {
+      "answer": "D",
+      "explanation": "编译是把高级语言变成计算机可以识别的二进制语言的过程。"
+    },
+    "ArEvIEF9v5hieUcEeIIRJ": {
+      "answer": "A",
+      "explanation": "函数可以没有参数和返回值，同时函数定义可以在调用之后，只需要在调用前要加函数声明，但是函数必须要有名字。"
+    },
+    "coXSFxSi7zpEGtkP9uRCU": {
+      "answer": "C",
+      "explanation": "static修饰的成员可以被共享访问，修改，但C选项中a的地址都可以访问是不对的。"
+    },
+    "y0Sy7KQUxHHkM0Y2cj9ax": {
+      "answer": "D",
+      "explanation": "虚函数是指被virtual关键字修饰的成员函数，构造函数不能定义为虚函数，因此D选项错误。"
+    },
+    "QXCjJdOynqA2D2v0SUc1Y": {
+      "answer": "C",
+      "explanation": "选项A、B、D都是关于static关键字的正确描述：static可以修饰类的成员函数；常量静态成员通常需要在类外进行定义；静态全局对象在main函数执行前完成初始化、main结束后被析构。选项C的说法过于绝对：若类A的常量静态成员a只在类内声明而未在类外提供定义，对其取地址在严格意义上并不保证总是合法可用，其地址并非\"都可以访问\"，因此C的描述不正确，是本题答案。"
+    },
+    "y9ZGi_WhJSZ3eLbBLKYmc": {
+      "answer": "D",
+      "explanation": "C++不支持在函数内部定义另一个函数，因此D选项错误。"
+    },
+    "yzigsfBEQouq2rduO1Pko": {
+      "answer": "C",
+      "explanation": "静态成员变量可以被类的所有对象共享访问，但每个静态成员变量只有一个内存地址，不会因为不同对象而有不同的地址，因此C选项错误。"
+    },
+    "mDEjaCinz4rjzEOGPYVBP": {
+      "answer": "D",
+      "explanation": "C++类可以包含任意类型的成员变量，包括基本类型、对象类型、指针类型等，因此D选项描述是正确的，而题目要求错误的说法。"
+    },
+    "sPX6BkcZpt72xkh2qdDxN": {
+      "answer": "B",
+      "explanation": "在C++中定义二维数组时，只有第一维可以省略大小，第二维及之后的维度大小必须指定。因此B选项符合语法。"
+    },
+    "1jToBcy-2whH1VdOD2U5A": {
+      "answer": "A",
+      "explanation": "C++提供了默认的拷贝构造函数，如果没有显式定义拷贝构造函数，编译器会自动生成一个默认的拷贝构造函数，因此A选项错误。"
+    },
+    "qiUtfRzkPJ_M6rQ813pmn": {
+      "answer": "B",
+      "explanation": "static关键字不仅可以限定静态成员的作用域，使其属于类本身，而不是某个具体的对象，也可以限定函数或全局变量的作用域，使其在定义该static变量的文件内可见。"
+    },
+    "Fuo6bL9LP7qCBoY83XiZZ": {
+      "answer": "B",
+      "explanation": "数组a的初始化列表没有为所有元素提供初始值，未初始化的元素将被自动初始化为0。因此，a[2023][2][15]的值是确定的，将会是0，题目叙述不正确。"
+    },
+    "1yYWlvak_9t0EJCNWk5Bw": {
+      "answer": "B",
+      "explanation": "C++中，可以通过catch子句捕获任何类型的异常，包括基本类型、结构体、类对象等，只要catch子句正确声明了要捕获的异常类型。"
+    },
+    "YBGDN5D2K1nWc3lOVuL1I": {
+      "answer": "D",
+      "explanation": "面向对象编程的三大基本特征是封装、继承、多态。"
+    },
+    "Da8ldOr1ksu4KlP4sqjXu": {
+      "answer": "D",
+      "explanation": "C++中，非explicit修饰的单参数构造函数（转换构造函数）本身就能实现隐式的自动类型转换，这是标准合法的语言特性，所以选项B的说法是正确的，不是错误项。而选项D\"C++类可以包含任意类型的成员变量\"过于绝对：类不能直接包含不完整类型、抽象类类型或自身类型的成员（只能通过指针或引用间接持有），并非\"任意类型\"都可以作为成员变量，因此D的说法才是错误的，应选D。"
+    },
+    "PinqlL5wb_87w3Hg3uYO9": {
+      "answer": "B",
+      "explanation": "在C++中，二维数组的初始化需要指定除了第一维度以外的所有维度的大小，选项B中虽然第一维的大小没有直接指定，但因为提供了初始化列表，所以编译器可以推导出第一维的大小。同时，给定的初始化列表为空，这是合法的，表示所有元素初始化为默认值（对于int类型，是0）。"
+    },
+    "U-wnlGaDI0cYEW74TsaS_": {
+      "answer": "A",
+      "explanation": "C++中如果没有显式定义拷贝构造函数，编译器会为类自动生成一个默认的拷贝构造函数，因此不会因为没有实现拷贝构造函数而导致编译错误，选项A错误。"
+    },
+    "Q7mPl45XljLleoMUU51V1": {
+      "answer": "C",
+      "explanation": "因为是完全二叉树，相邻两层的结点数一定是2倍的关系，父结点的编号是k，左孩子的编号一定是2k，右孩子的编号一定是2k+1。同理反之，如果子节点编号为k，k为偶数则为k/2，k为奇数则为(k-1)/2，综合起来答案选C。"
+    },
+    "0kYW34In7l7rkApgkjP2k": {
+      "answer": "A",
+      "explanation": "h=5 的完全二叉树共有 2^4  个节点，第五层最少1个节点，最多16个节点，因此一共有1"
+    },
+    "aU6GjNo2Giuht_MLLqTMS": {
+      "answer": "C",
+      "explanation": null
+    },
+    "xFqnPO9qSGVfReXTX9f74": {
+      "answer": "A",
+      "explanation": "2^0 + 2^1 + 2^2 + 2^3 + 2^4 = 31。\n满二叉树 第n层有2^(n-1)个节点\n前n层共有2^n -1个节点"
+    },
+    "tb7qBnvbVWeF0UbdkX0Lz": {
+      "answer": "B",
+      "explanation": "可能R_3出栈后接着让R_2、R_1也出栈，再让R_4、R_5入栈，最后让R_5、R_4出栈，所以C是可能的；或是R_3出栈后接着让R_2、R_1也出栈，而后R_4入栈后直接出栈，最后R_5入栈后出栈，所以D是可能的；若R_3出栈后让R_4、R_5入栈，最后再按顺序R_5、R_4、R_2、R_1出栈，所以A是可能的；答案选B,因为无论如何R_2会在R_1前出栈。"
+    },
+    "30sDAmjzAvUn_gvnD7MGF": {
+      "answer": "D",
+      "explanation": "a, b, c 的相对顺序必须保持不变，d 可以在任意某个位置插入。"
+    },
+    "tsT1JaZbM-kTBHh43ebZy": {
+      "answer": "B",
+      "explanation": "由图可知，B元素后进先出，符合栈的特点。"
+    },
+    "GaXpizg95I-19ewTJmX27": {
+      "answer": "B",
+      "explanation": "栈的特点：后入先出"
+    },
+    "_9_InmL9k9pREh9xC-DKV": {
+      "answer": "C",
+      "explanation": null
+    },
+    "NWLUgofEU6GS3Pqe4Z2Ef": {
+      "answer": "B",
+      "explanation": "栈的特点为：先进后出，图例显然符合此规律。"
+    },
+    "uXRiCqt3GDLo8tWPUIX-r": {
+      "answer": "C",
+      "explanation": null
+    },
+    "pmuILgnjL6oib1dO18zvF": {
+      "answer": "A",
+      "explanation": null
+    },
+    "fyXN-E7mamhz731RT_IWE": {
+      "answer": "B",
+      "explanation": null
+    },
+    "MYHwJYiaahZRs2rEP26nF": {
+      "answer": "B",
+      "explanation": "考察前后缀表达式。表示为( a [ bc +] * ) d *，后缀表达式为 abc+*d*"
+    },
+    "XjHyEseKJ9ar_7qLUNnFp": {
+      "answer": "D",
+      "explanation": "每个顶点度数为2，表示通过两条边分别与另外两个顶点相连，因此点和边数量比为1：1，构成了一个或多个环，每个顶点对应一条边，所以共有16个顶点。"
+    },
+    "JAcD_a7X-WnWbOtfGPCPR": {
+      "answer": "B",
+      "explanation": null
+    },
+    "ZhncvUENtUneM_-DdTK7e": {
+      "answer": "D",
+      "explanation": "存在环就不能实现拓扑排序，A错；若有多个入度为0的点，排序不唯一，B错；当图中有多个入度为0的点，当你选择一个点作为起点，它后续的点入度不为0但是排在入度为0的点的前边，C错。"
+    },
+    "8e35VTVA6O6gPc4OdTZdr": {
+      "answer": "A",
+      "explanation": "一棵n层的二叉树结点最多的情况是该二叉树是满二叉树的情况，因为第1层有1个结点(根节点)，第2层有2个结点 ，……，第n层有2^{n-1}个结点，一共有2^0 + 2^1 + 2^2 + …… + 2^{n-1} = 2^n – 1 个结点。"
+    },
+    "VgBGnmqNXE0GdxO46X5dO": {
+      "answer": "C",
+      "explanation": "注意审题，题中说恰好有2011个叶节点的二叉树，深度最少是多少？要想深度最少，应该是每层结点数都达到最大，要往满二叉树上靠，可能是一个完全二叉树。满二叉树第i层结点数是2^{i – 1}。 所以求解2^{i – 1} >= 2011的i值即为答案。\n2^{10} = 1024 ; 2^{11} = 2048。 所以i是12。"
+    },
+    "1yS3GpuF0I1-8JGI_bZDO": {
+      "answer": "A",
+      "explanation": "尽量让底层的每个结点都先用有两个孩子，则最多有4个结点满足条件。"
+    },
+    "yw1A-droK52rO9iHY6LKq": {
+      "answer": "B",
+      "explanation": "2^{k-1} - 1 < 节点总数 < 2^k - 1\n完全二叉树：除了最下面那层以外，都排满了；最下面那层从左往右排"
+    },
+    "xFbjjVwA5nghHYMphQ_rT": {
+      "answer": "D",
+      "explanation": "1×2+1=3；3×2+1=7；7×2+1=15"
+    },
+    "pIpJvivbsyvUhRv6kDcAy": {
+      "answer": "A",
+      "explanation": "第0层    \\\\     1(k^0)个结点\n第1层    \\\\       k(k^1)个结点        \n第2层    \\\\      k^2个结点    \n第3层    \\\\    k^3个结点    \n第4层    \\\\     k^4个结点 \n......\n第h-1层   \\\\    k^{h-1}个结点\n第h层      \\\\     k^h个结点\n一共有k^0 + k^1 + k^2 + k^3 + k^4 + ……\n+ k^{h-1} + k^h个，这是一个等比数列，按照等比数列求和公式计算，(k^{h+1}-1)/(k-1)，选A"
+    },
+    "ZXjW-fgrp60GpEkPRzOdg": {
+      "answer": "B",
+      "explanation": "拥有61个结点的完全二叉树，高度为6。\n第1层    \\  1个结点   \\   累计结点：1个\n第2层    \\  2个结点   \\   累计结点：3个\n第3层    \\ 4个结点    \\    累计结点：7个\n第4层    \\  8个结点   \\   累计结点：15个\n......\n第6层    \\ 32个结点   \\  累计结点：63个"
+    },
+    "XYjl_yNWRoxRppdvFwqZ5": {
+      "answer": "C",
+      "explanation": "根节点高度记为1，一棵满三叉树（每个内部节点恰有3个子节点）在高度为 h 时最多可容纳 (3^h-1)/2 个节点。h=7 时最多容纳 (3^7-1)/2=1093 个节点，不足以容纳 2023 个节点；h=8 时最多可容纳 (3^8-1)/2=3280 个节点，足够容纳 2023 个节点。因此该三叉树的高度至少为 8。"
+    }
+  }
+}

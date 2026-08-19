@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "ym": "000000",
+    "lang": "cpp",
+    "level": 2,
+    "title": "GESP 6月认证C++二级真题",
+    "session_url": "https://gesp.ccf.org.cn/101/1010/10092.html",
+    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1553039846539296.pdf",
+    "pdf_path": "src/rd/server/data/imports/gesp/000000-cpp-2.pdf"
+  },
+  "choice": [],
+  "tf": [],
+  "program": [],
+  "answer_rows": [
+    [
+      "D",
+      "D",
+      "B",
+      "C",
+      "C",
+      "D",
+      "D",
+      "A",
+      "B",
+      "D",
+      "A",
+      "A",
+      "D",
+      "B",
+      "C"
+    ],
+    [
+      "×",
+      "×",
+      "√",
+      "×",
+      "×",
+      "√",
+      "√",
+      "×",
+      "√",
+      "×"
+    ]
+  ]
+}
