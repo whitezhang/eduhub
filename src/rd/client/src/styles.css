@@ -525,6 +525,37 @@ input[type="search"].search-fill::-webkit-search-cancel-button { display: none; 
 .desk { display: table; width: 100%; }
 
 .timeline { display: grid; grid-template-columns: 10rem 1fr; gap: 0.5rem 1.5rem; }
+.home-bridge {
+  margin: 1.25rem 0 1.75rem;
+  padding: 1rem 1.1rem 1rem 1rem;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--indigo);
+  background: var(--surface);
+}
+.home-bridge-title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  color: var(--indigo);
+}
+.home-bridge-note { margin: 0 0 0.75rem; font-size: 0.9rem; }
+.home-bridge-rules {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-bridge-rules li {
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--rule);
+}
+.home-bridge-rules li:first-child { border-top: none; padding-top: 0; }
+.home-bridge-rules strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.home-bridge-rules span { color: var(--muted); font-size: 0.95rem; }
 .syll-block { border-bottom: 1px solid var(--rule); padding-bottom: 1.25rem; margin-bottom: 1.25rem; }
 .syll-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .syll-row {

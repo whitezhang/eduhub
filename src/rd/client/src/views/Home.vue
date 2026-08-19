@@ -47,6 +47,16 @@ onMounted(async () => {
       <section class="chapter">
         <div class="chapter-head"><span class="chapter-num">三</span><h2>学习的时间节点</h2></div>
         <p class="muted">本站不承办官方认证。日期以官网为准。</p>
+        <aside v-if="cms.gesp_csp_bridge?.rules?.length" class="home-bridge">
+          <h3 class="home-bridge-title">{{ cms.gesp_csp_bridge.title }}</h3>
+          <p v-if="cms.gesp_csp_bridge.note" class="muted home-bridge-note">{{ cms.gesp_csp_bridge.note }}</p>
+          <ul class="home-bridge-rules">
+            <li v-for="(rule, i) in cms.gesp_csp_bridge.rules" :key="i">
+              <strong>{{ rule.condition }}</strong>
+              <span>{{ rule.benefit }}</span>
+            </li>
+          </ul>
+        </aside>
         <div class="timeline">
           <template v-for="(row, i) in cms.timeline" :key="i">
             <div class="mono muted">{{ row.month_label }}</div>

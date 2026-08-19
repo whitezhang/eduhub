@@ -298,9 +298,10 @@ function seedIfEmpty(database) {
     const cms = JSON.parse(fs.readFileSync(cmsPath, "utf8"));
     syllabus = JSON.stringify(cms.syllabus || []);
     timeline = JSON.stringify(cms.timeline || []);
-    if (Array.isArray(cms.csp_compare)) {
-      syllabusMeta = JSON.stringify({ csp_compare: cms.csp_compare });
-    }
+    const meta = {};
+    if (Array.isArray(cms.csp_compare)) meta.csp_compare = cms.csp_compare;
+    if (cms.gesp_csp_bridge) meta.gesp_csp_bridge = cms.gesp_csp_bridge;
+    if (Object.keys(meta).length) syllabusMeta = JSON.stringify(meta);
   } else {
     syllabus = "[]";
     timeline = "[]";

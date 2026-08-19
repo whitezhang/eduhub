@@ -214,6 +214,7 @@ export async function handleApi(req, res, pathname, query) {
           const parsed = JSON.parse(r.body);
           if (r.key === "syllabus_meta") {
             if (parsed.csp_compare) cms.csp_compare = parsed.csp_compare;
+            if (parsed.gesp_csp_bridge) cms.gesp_csp_bridge = parsed.gesp_csp_bridge;
           } else {
             cms[r.key] = parsed;
           }

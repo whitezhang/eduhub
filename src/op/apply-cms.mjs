@@ -30,9 +30,13 @@ function main() {
     upsert.run("timeline", JSON.stringify(data.timeline));
     console.log("cms timeline", data.timeline.length, "items");
   }
-  if (Array.isArray(data.csp_compare)) {
-    upsert.run("syllabus_meta", JSON.stringify({ csp_compare: data.csp_compare }));
-    console.log("cms csp_compare", data.csp_compare.length, "rows");
+  const meta = {};
+  if (Array.isArray(data.csp_compare)) meta.csp_compare = data.csp_compare;
+  if (data.gesp_csp_bridge) meta.gesp_csp_bridge = data.gesp_csp_bridge;
+  if (Object.keys(meta).length) {
+    upsert.run("syllabus_meta", JSON.stringify(meta));
+    if (meta.csp_compare) console.log("cms csp_compare", meta.csp_compare.length, "rows");
+    if (meta.gesp_csp_bridge) console.log("cms gesp_csp_bridge");
   }
   console.log("done");
 }
