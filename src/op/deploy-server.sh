@@ -13,6 +13,17 @@ npm ci --omit=dev
 echo "==> [server] apply catalog"
 node src/op/apply-catalog.mjs
 
+if ! command -v systemctl >/dev/null 2>&1; then
+  echo "error: systemctl not found"
+  exit 1
+fi
+if ! systemctl cat "$API_SERVICE" &>/dev/null; then
+  echo "error: systemd unit $API_SERVICE 未安装。在服务器执行一次："
+  echo "  cp $EDUHUB_SRC/src/op/eduhub-api.service /etc/systemd/system/"
+  echo "  systemctl daemon-reload && systemctl enable --now $API_SERVICE"
+  exit 1
+fi
+
 echo "==> [server] restart $API_SERVICE"
 systemctl restart "$API_SERVICE"
 ok=0
