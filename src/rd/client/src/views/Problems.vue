@@ -84,7 +84,7 @@ watch(() => session.user?.role, load);
   <div class="wide">
     <h1 class="serif">题库</h1>
     <p v-if="noAnswerCount" class="muted">
-      另有 {{ noAnswerCount }} 道题目没有标准答案，学生看不到。
+      另有 {{ noAnswerCount }} 道题目没有标准答案（学生可见，不评分）。
       <router-link to="/studio">去管理查看</router-link>
     </p>
     <p v-if="err" class="err">{{ err }}</p>
@@ -130,7 +130,10 @@ watch(() => session.user?.role, load);
           </thead>
           <tbody>
             <tr v-for="c in filteredPapers" :key="c.id">
-              <td>{{ c.title }}</td>
+              <td>
+                {{ c.title }}
+                <span v-if="session.user?.role === 'coach' && c.missing_answer_count" class="tag-warn">无答案 {{ c.missing_answer_count }}</span>
+              </td>
               <td class="mono">{{ c.problem_count }}</td>
               <td class="muted">{{ scoreHint(c) }}</td>
               <td>
@@ -151,7 +154,10 @@ watch(() => session.user?.role, load);
             :to="{ path: `/problems/papers/${c.id}`, query: source ? { source } : {} }"
           >
             <span class="muted mono">{{ c.problem_count }}</span>
-            <span>{{ c.title }}</span>
+            <span>
+              {{ c.title }}
+              <span v-if="session.user?.role === 'coach' && c.missing_answer_count" class="tag-warn">无答案 {{ c.missing_answer_count }}</span>
+            </span>
             <span class="muted">{{ scoreHint(c) }}</span>
           </router-link>
         </div>

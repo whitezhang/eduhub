@@ -441,6 +441,7 @@ function optionBody(opt) {
       </nav>
       <span class="mono indigo">{{ problem.code }}</span>
       <h1 class="serif" style="display:inline;margin-left:0.5rem;font-size:1.4rem">{{ problem.title }}</h1>
+      <span v-if="session.user?.role === 'coach' && !problem.has_answer" class="tag-warn">无答案</span>
       <p v-if="problem.published === 0" class="muted">未发布，仅教练可见。</p>
       <div class="muted" v-if="problem.type === 'traditional'">
         {{ problem.time_ms }} ms · {{ problem.memory_mb }} MB · {{ problem.io_mode === 'stdin' ? '标准输入输出' : problem.io_mode }}

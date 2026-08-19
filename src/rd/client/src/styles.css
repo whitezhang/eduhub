@@ -107,6 +107,18 @@ button, input, select, textarea { font: inherit; }
 }
 .table th { color: var(--muted); font-weight: 400; letter-spacing: 0.04em; font-size: 0.8rem; }
 .tag { background: var(--code-bg); border-radius: 2px; padding: 0.05rem 0.35rem; font-size: 0.8rem; }
+.tag-warn {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: var(--mid);
+  background: color-mix(in srgb, var(--mid) 14%, transparent);
+  vertical-align: middle;
+  white-space: nowrap;
+}
 .indigo { color: var(--indigo); }
 .ok { color: var(--ok); }
 .mid { color: var(--mid); }

@@ -74,7 +74,7 @@ async function submit() {
             {{ form.mode === "login" ? "没有账号，去注册" : "已有账号，去登录" }}
           </button>
         </form>
-        <p class="muted" style="margin-top:1rem">做题需登录。教练示例：coach / eduhub</p>
+        <p class="muted" style="margin-top:1rem">做题需登录。</p>
       </div>
     </div>
   </div>

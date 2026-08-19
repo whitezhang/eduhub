@@ -13,7 +13,7 @@ npm run dev
 
 浏览器打开 http://127.0.0.1:5173 。API 在 8080，由 Vite 反代 `/api`。
 
-示例账号：`coach` / `eduhub`，`student` / `eduhub`。
+示例账号（仅本地/文档，勿写在站点上）：`coach` / `eduhub`，`student` / `eduhub`。
 
 只起后端：`npm start`。
 

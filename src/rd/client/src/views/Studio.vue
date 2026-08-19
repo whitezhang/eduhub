@@ -203,7 +203,7 @@ async function toggleProblem(p) {
     <section v-if="tab === 'review'">
       <h2 class="serif">试卷</h2>
       <p class="muted">
-        所有试卷用同一张表。未发布：学生看不到。已发布：有答案的题进入题库。
+        所有试卷用同一张表。未发布：学生看不到。已发布：题目进入题库（无答案也可作答，但不评分）。
         点「编辑」改题面；保存后写入本机库与 catalog，上线需 git push 再 deploy。
       </p>
       <p class="filter-row">
@@ -222,10 +222,14 @@ async function toggleProblem(p) {
             <tr>
               <td>
                 <a href="#" @click.prevent="togglePaper(c)">{{ c.title }}</a>
+                <span
+                  v-if="(c.problem_count || 0) > (c.answered_count || 0)"
+                  class="tag-warn"
+                >无答案 {{ (c.problem_count || 0) - (c.answered_count || 0) }}</span>
               </td>
               <td>{{ paperKind(c) }}</td>
               <td class="mono">{{ c.problem_count }}</td>
-              <td class="mono">{{ c.answered_count }}</td>
+              <td class="mono" :class="(c.problem_count || 0) > (c.answered_count || 0) ? 'mid' : 'ok'">{{ c.answered_count }}</td>
               <td>{{ c.published ? "已发布" : "未发布" }}</td>
               <td>
                 <button v-if="!c.published" class="btn" type="button" :disabled="paperBusy" @click="publishContest(c, true)">发布</button>
@@ -242,7 +246,10 @@ async function toggleProblem(p) {
                       <td class="mono"><router-link :to="`/problems/${p.id}?contest=${c.id}`">{{ p.code }}</router-link></td>
                       <td>{{ p.title }}</td>
                       <td>{{ typeLabel(p) }}</td>
-                      <td :class="p.has_answer ? 'ok' : 'mid'">{{ p.has_answer ? "有" : "无 · 学生看不到" }}</td>
+                      <td :class="p.has_answer ? 'ok' : 'mid'">
+                        <span v-if="p.has_answer">有</span>
+                        <span v-else class="tag-warn">无答案</span>
+                      </td>
                       <td><router-link :to="`/studio/problems/${p.id}`">编辑</router-link></td>
                     </tr>
                   </tbody>
@@ -259,7 +266,7 @@ async function toggleProblem(p) {
       </p>
 
       <h2 class="serif">全部题目</h2>
-      <p class="muted">共 {{ problems.length }} 道，其中有答案 {{ withAnswerCount }} 道、无答案 {{ noAnswerCount }} 道。无答案题仅教练可见。</p>
+      <p class="muted">共 {{ problems.length }} 道，其中有答案 {{ withAnswerCount }} 道、无答案 {{ noAnswerCount }} 道。无答案题学生可见，作答不评分。</p>
       <p class="filter-row">
         <a href="#" :class="{ on: answerFilter === 'all' }" @click.prevent="answerFilter = 'all'">全部</a>
         <a href="#" :class="{ on: answerFilter === 'yes' }" @click.prevent="answerFilter = 'yes'">有答案</a>
@@ -274,7 +281,10 @@ async function toggleProblem(p) {
             <td class="mono"><router-link :to="`/problems/${p.id}`">{{ p.code }}</router-link></td>
             <td>{{ p.title }}</td>
             <td>{{ typeLabel(p) }}</td>
-            <td :class="p.has_answer ? 'ok' : 'mid'">{{ p.has_answer ? "有" : "无" }}</td>
+            <td :class="p.has_answer ? 'ok' : 'mid'">
+              <span v-if="p.has_answer">有</span>
+              <span v-else class="tag-warn">无答案</span>
+            </td>
             <td class="muted">{{ p.review_note }}</td>
             <td class="filter-row" style="margin:0;gap:0.5rem;flex-wrap:nowrap">
               <router-link :to="`/studio/problems/${p.id}`">编辑</router-link>

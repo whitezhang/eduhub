@@ -414,6 +414,7 @@ onUnmounted(() => {
           >
             <span class="workbook-toc-idx mono">{{ i + 1 }}</span>
             <span class="workbook-toc-name">{{ tocLabel(p, i) }}</span>
+            <span v-if="session.user?.role === 'coach' && !p.has_answer" class="tag-warn">无</span>
           </a>
         </div>
         <p class="workbook-legend muted">
@@ -427,6 +428,7 @@ onUnmounted(() => {
             <span class="mono indigo">{{ i + 1 }}</span>
             <span class="mono muted">{{ p.code }}</span>
             <strong>{{ p.title }}</strong>
+            <span v-if="session.user?.role === 'coach' && !p.has_answer" class="tag-warn">无答案</span>
             <span :class="scoreClass(p)" class="workbook-score">{{ scoreText(p) }}</span>
             <button
               class="btn-ghost workbook-flag"

@@ -71,15 +71,16 @@ function problemHasAnswer(db, p) {
 function studentCanSeeProblem(db, p, me) {
   if (!p) return false;
   if (me?.role === "coach") return true;
-  return p.published === 1 && problemHasAnswer(db, p);
+  return p.published === 1;
 }
 
 function visibleContestProblems(db, contest, me) {
-  let sql = `SELECT p.id, p.code, p.title, p.full_score, p.type, cp.seq
+  let sql = `SELECT p.id, p.code, p.title, p.full_score, p.type, cp.seq,
+      CASE WHEN ${hasAnswerSql("p")} THEN 1 ELSE 0 END AS has_answer
      FROM contest_problems cp JOIN problems p ON p.id = cp.problem_id
      WHERE cp.contest_id = ?`;
   if (me?.role !== "coach") {
-    sql += ` AND p.published = 1 AND ${hasAnswerSql("p")}`;
+    sql += ` AND p.published = 1`;
   }
   sql += " ORDER BY cp.seq";
   return db.prepare(sql).all(contest.id);
@@ -228,7 +229,9 @@ export async function handleApi(req, res, pathname, query) {
   if (method === "GET" && pathname === "/api/problems") {
     const source = query.source || "";
     const q = String(query.q || "").trim();
-    let sql = `SELECT id, code, title, source, difficulty, full_score, type FROM problems WHERE published = 1 AND ${hasAnswerSql()}`;
+    let sql = `SELECT id, code, title, source, difficulty, full_score, type,
+      CASE WHEN ${hasAnswerSql()} THEN 1 ELSE 0 END AS has_answer
+      FROM problems WHERE published = 1`;
     if (me?.role === "coach" && query.all === "1") {
       sql = `SELECT id, code, title, source, difficulty, full_score, type, published, review_note,
         CASE WHEN ${hasAnswerSql()} THEN 1 ELSE 0 END AS has_answer
@@ -440,7 +443,11 @@ export async function handleApi(req, res, pathname, query) {
     const rows = db.prepare("SELECT * FROM contests WHERE published = 1 ORDER BY start_at DESC").all();
     const visibleCount = db.prepare(
       `SELECT COUNT(*) AS n FROM contest_problems cp JOIN problems p ON p.id = cp.problem_id
-       WHERE cp.contest_id = ? AND p.published = 1 AND ${hasAnswerSql("p")}`,
+       WHERE cp.contest_id = ? AND p.published = 1`,
+    );
+    const missingAnswerCount = db.prepare(
+      `SELECT COUNT(*) AS n FROM contest_problems cp JOIN problems p ON p.id = cp.problem_id
+       WHERE cp.contest_id = ? AND p.published = 1 AND NOT (${hasAnswerSql("p")})`,
     );
     const sourceMatch = db.prepare(
       `SELECT COUNT(*) AS n FROM contest_problems cp JOIN problems p ON p.id = cp.problem_id
@@ -453,12 +460,12 @@ export async function handleApi(req, res, pathname, query) {
       const n = me?.role === "coach"
         ? db.prepare("SELECT COUNT(*) AS n FROM contest_problems WHERE contest_id = ?").get(c.id).n
         : visibleCount.get(c.id).n;
-      if (me?.role !== "coach" && n === 0) continue;
+      if (n === 0) continue;
       const problems = visibleContestProblems(db, c, me);
       const ann = annotatePaperProblems(db, c.id, problems, me);
       const full = ann.problems.filter((p) => p.my_score != null && p.my_score >= (p.full_score || 100)).length;
       const done = ann.problems.filter((p) => p.my_score != null).length;
-      contests.push({
+      const item = {
         ...c,
         state: contestState(c),
         problem_count: ann.problems.length || n,
@@ -467,7 +474,11 @@ export async function handleApi(req, res, pathname, query) {
         registered: me
           ? Boolean(db.prepare("SELECT 1 FROM contest_registrations WHERE contest_id=? AND user_id=?").get(c.id, me.id))
           : false,
-      });
+      };
+      if (me?.role === "coach") {
+        item.missing_answer_count = missingAnswerCount.get(c.id).n;
+      }
+      contests.push(item);
     }
     sendJson(res, 200, { contests });
     return true;
