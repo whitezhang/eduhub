@@ -9,7 +9,7 @@ import { handleApi } from "./api.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "../../..");
-const DIST = path.join(ROOT, "src/rd/client/dist");
+const DIST = path.join(ROOT, "output");
 const PORT = Number(process.env.PORT || 8080);
 const production = process.env.NODE_ENV === "production";
 

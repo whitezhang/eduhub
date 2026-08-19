@@ -19,4 +19,4 @@ npm run dev
 
 ## 线上
 
-Nginx 托管 `src/rd/client/dist` 到 `edu.jsoner.cn`。线上 `/api/` 反代 `127.0.0.1:8081`（blog 的 `jsoner-api` 已占用 8080），片段见 `src/op/nginx-api-snippet.conf`。systemd 单元 `src/op/eduhub-api.service`。发布：`src/op/deploy.sh`（`git reset --hard`，不要 `git clean`）。
+前端：本机 `npm run build:client` → 仓根 `output/`（可提交）。Nginx 托管该目录到 `edu.jsoner.cn`；`deploy-client.sh` 只 rsync，不在服务器上 Vite。线上 `/api/` 反代 `127.0.0.1:8081`（blog 已占 8080），见 `src/op/nginx-api-snippet.conf`。systemd：`src/op/eduhub-api.service`。发布：`src/op/deploy.sh`（`git reset --hard`，不要 `git clean`）。

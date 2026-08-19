@@ -16,7 +16,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.join(dir, "dist"),
+    // 仓根 output/：本机构建后提交；服务器 deploy 直接用，不再 vite build
+    outDir: path.resolve(dir, "../../../output"),
     emptyOutDir: true,
   },
 });
