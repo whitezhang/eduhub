@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-4ji-202309",
+  "url": "https://adacpp.com/practice/gesp-cpp-4ji-202309",
+  "title": "GESP C++四级 202309",
+  "description": "CCF编程能力等级认证 GESP C++ 四级 2023年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 4,
+    "ym": "202309"
+  },
+  "questions": [
+    {
+      "id": "PfJLa_JOtAYEcI3pVGm0s",
+      "order": 1,
+      "type": "single_choice",
+      "content": "人们所使用的手机上安装的App通常指的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "一款操作系统"
+        },
+        {
+          "label": "B",
+          "text": "一款应用软件"
+        },
+        {
+          "label": "C",
+          "text": "一种通话设备"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "手机App是“应用程序”（Application）的简称，它是一种安装在手机上，用于执行特定任务的软件，因此属于应用软件。操作系统（如Android或iOS）是手机运行的基础平台，App在其之上运行，App本身不是操作系统。手机本身是通话设备，App是运行在设备上的软件，而不是设备本身。因此，正确答案是B。"
+    },
+    {
+      "id": "Im9ZkTCC_f9Am1F031rBy",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下列流程图的输出结果是？（ ）\n\n流程图描述：开始 -> m=1, n=1 -> 判断 m*n > 20，是则 m = m-2，否则 m = 2*m+1 -> n = n+1 -> 判断 n > 5，否则回到判断 m*n > 20，是则输出m -> 结束。",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "11"
+        }
+      ],
+      "answer": "A",
+      "explanation": "根据流程图逐步执行：\n1.  初始 `m=1, n=1`。\n2.  当 `n=1` 时，`m*n=1` 不"
+    },
+    {
+      "id": "jhpWogcBVaJe5HfV033ZV",
+      "order": 3,
+      "type": "single_choice",
+      "content": "对包含 n 个元素的数组进行冒泡排序，平均时间复杂度一般为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n²)"
+        },
+        {
+          "label": "D",
+          "text": "以上都不正确"
+        }
+      ],
+      "answer": "C",
+      "explanation": "冒泡排序平均时间复杂度为 O(n²)。它通过两层嵌套循环实现：外层循环最多执行 n 趟，内层循环每趟最多执行 n 次比较和交换，因此总操作次数大致为 n 乘以 n。O(n) 和 O(n log n) 是更高效排序算法的时间复杂度，冒泡排序的机制决定了它无法达到。"
+    },
+    {
+      "id": "Ux2-OPfapdsjn6UC7SL2w",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下列关于C++语言中指针的叙述，不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "可以定义指向 `int` 类型的指针。"
+        },
+        {
+          "label": "B",
+          "text": "可以定义指向自定义结构体类型的指针。"
+        },
+        {
+          "label": "C",
+          "text": "自定义结构体类型可以包含指针类型的元素。"
+        },
+        {
+          "label": "D",
+          "text": "不能定义指向 `void` 类型的指针，那没有意义。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D的说法不正确。C++中可以定义 `void*` 类型的指针，它是一种通用指针，可以指向任何类型的数据，在内存管理和泛型编程中非常有用，例如 `void* ptr;` 是合法的。而选项A、B、C的描述都是正确的，C++允许定义指向 `int` 类型或自定义结构体的指针，结构体内部也可以包含指针成员。"
+    },
+    {
+      "id": "zzFSouXLWcq11ZhPkZ0XO",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下列关于C++语言中数组的叙述，不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "一维数组可以用来表示数列。"
+        },
+        {
+          "label": "B",
+          "text": "二维数组可以用来表示矩阵。"
+        },
+        {
+          "label": "C",
+          "text": "三维数组可以用来表示空间中物体的形状。"
+        },
+        {
+          "label": "D",
+          "text": "世界是三维的，所以定义四维数组没有意义。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++数组的维度是数据组织方式的抽象，不局限于物理世界的维度。四维数组可以用于表示更复杂的数据结构，例如三维空间随时间变化的数据，因此“没有意义”的说法是错误的，故D是正确答案。选项A、B、C都正确描述了数组在不同维度下常见的应用场景，例如一维数组表示数列，二维数组表示矩阵，三维数组表示三维空间数据。"
+    },
+    {
+      "id": "P0n6N-BBaq29vsLQgDRge",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下列关于C++语言中函数的叙述，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "函数调用前必须定义。"
+        },
+        {
+          "label": "B",
+          "text": "函数调用时必须提供足够的实际参数。"
+        },
+        {
+          "label": "C",
+          "text": "函数定义前必须声明。"
+        },
+        {
+          "label": "D",
+          "text": "函数声明只能写在函数调用前。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。函数调用时必须提供足够的实际参数，即参数的数量和类型必须与函数声明或定义中预期的参数相匹配，否则会导致编译错误。\n\nA"
+    },
+    {
+      "id": "YgGKRDH85yw1K5-HRtmTd",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下列关于C++语言中函数的叙述，不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "两个函数的声明可以相同。"
+        },
+        {
+          "label": "B",
+          "text": "两个函数的局部变量可以重名。"
+        },
+        {
+          "label": "C",
+          "text": "两个函数的参数可以重名。"
+        },
+        {
+          "label": "D",
+          "text": "两个函数可以重名。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "“两个函数的声明可以相同”是不正确的。在 C++ 中，如果两个函数有完全相同的声明（包括返回类型、函数名和参数列表），它们会被认为是同一个函数，或者导致重定义错误。选项 B 和 C 是正确的，因为局部变量和函数参数的作用域仅限于各自函数内部，不同函数中可以重名。选项 D 也是正确的，C++ 支持函数重载，允许不同函数拥有相同的函数名，只要它们的参数列表不同即可。"
+    },
+    {
+      "id": "7vCBBddDMxHpOP5DDqP7q",
+      "order": 8,
+      "type": "single_choice",
+      "content": "一个二维数组定义为 `char array[3][10];`，则这个二维数组占用内存的大小为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "30"
+        },
+        {
+          "label": "C",
+          "text": "32"
+        },
+        {
+          "label": "D",
+          "text": "48"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`char` 类型在 C++ 中占用 1 字节内存。二维数组 `char array[3][10];` 定义了 3 行 10 列，总共有 3 * 10 = 30 个 `char` 元素。因此，该数组占用的总内存大小为 30 * 1 字节 = 30 字节，所以 B 是正确答案。选项 A (10) 仅为列数，C (32) 和 D (48) 则与数组实际大小不符。"
+    },
+    {
+      "id": "cny827CIwx3ok0GKtWZLo",
+      "order": 9,
+      "type": "single_choice",
+      "content": "如果 `n` 为 `int` 类型的变量，一个指针变量定义为 `int *p = &n;`，则下列说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "指针变量 `p` 的值与变量 `n` 是相同的。"
+        },
+        {
+          "label": "B",
+          "text": "指针变量 `p` 的值与变量 `n` 的地址是相同的。"
+        },
+        {
+          "label": "C",
+          "text": "指针变量 `p` 指向的值为 `'n'`。"
+        },
+        {
+          "label": "D",
+          "text": "指针变量 `p` 指向的值与变量 `n` 的地址是相同的。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。指针变量 `p` 被 `&n` 初始化，这意味着 `p` 存储的就是变量 `n` 在内存中的地址。因此，`p` 的值与变量 `n` 的地址是相同的。选项 A 错误，`p` 的值是地址，而 `n` 的值是它存储的整数，两者不同。选项 C 错误，`p` 指向的是 `n` 的整数值，而不是字符 `'n'`。选项 D 错误，`p` 指向的值（即 `*p` 或 `n` 的值）与 `n` 的地址是两个不同的概念。"
+    },
+    {
+      "id": "0Xf7Qbt_fbAcpHYm3Rz9C",
+      "order": 10,
+      "type": "single_choice",
+      "content": "一个三维数组定义为 `long long array[6][6][6];`，则 `array[1][2][3]` 和 `array[3][2][1]` 在内存中的位置相差多少字节？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "70字节"
+        },
+        {
+          "label": "B",
+          "text": "198字节"
+        },
+        {
+          "label": "C",
+          "text": "560字节"
+        },
+        {
+          "label": "D",
+          "text": "无法确定"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`long long` 类型通常占用 8 字节。对于三维数组 `long long array[6][6][6];`，元素 `array[i][j][k]` 在内存中的偏移量计算公式为 `(i * 6 * 6 + j * 6 + k) * sizeof(long long)`。因此，`array[1][2][3]` 的偏移量是 `(1*36 + 2*6 + 3) * 8 = 51 * 8 = 408` 字节，而 `array[3][2][1]` 的偏移量是 `(3*36 + 2*6 + 1) * 8 = 121 * 8 = 968` 字节。两者在内存中的位置相差 `968 - 408 = 560` 字节，所以 C 选项正确。其他选项的计算结果与实际偏移量不符。"
+    },
+    {
+      "id": "WPV-TUsfpYCLmxw8Ezzw_",
+      "order": 11,
+      "type": "single_choice",
+      "content": "如果 `a` 为 `int` 类型的变量，且 `a` 的值为6，则执行 `a = ~a;` 之后，`a` 的值会是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-6"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "-7"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`~` 是按位取反运算符。当 `a` 的值为 `6` 时，其二进制表示（假设为32位）是 `...00000110`。执行 `a = ~a;` 后，所有二进制位都会翻转，变为 `...11111001`。在计算机中，有符号整数通常使用补码表示，`...11111001` 的补码值是 `-7`。因此，正确答案是 C。其他选项不符合按位取反的计算规则。"
+    },
+    {
+      "id": "rCDhpTzae_TLmOCcurpUV",
+      "order": 12,
+      "type": "single_choice",
+      "content": "一个数组定义为 `int a[5] = {1, 2, 3, 4, 5};`，一个指针定义为 `int * p = &a[2];`，则执行 `*p = a[1];` 后，数组a中的值会变为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "{1, 2, 2, 4, 5}"
+        },
+        {
+          "label": "B",
+          "text": "{1, 3, 3, 4, 5}"
+        },
+        {
+          "label": "C",
+          "text": "{1, 2, 3, 3, 5}"
+        },
+        {
+          "label": "D",
+          "text": "{1, 2, 4, 4, 5}"
+        }
+      ],
+      "answer": "A",
+      "explanation": "初始数组 `a` 为 `{1, 2, 3, 4, 5}`，其中 `a[1]` 的值为 2，`a[2]` 的值为 3。指针 `p` 被初始化为指向 `a[2]` 的地址。执行 `*p = a[1];` 后，`p` 所指向的 `a[2]` 的值会被 `a[1]` 的值（即 2）覆盖。因此，数组 `a` 变为 `{1, 2, 2, 4, 5}`，选项 A 正确。其他选项错误是因为它们没有正确反映 `a[2]` 被 `a[1]` 的值覆盖这一操作。"
+    },
+    {
+      "id": "Pd2sX2P3DsJfkgGV0g3f6",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下列关于C++语言中异常处理的叙述，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "一个 `try` 子句可以有多个 `catch` 子句与之对应。"
+        },
+        {
+          "label": "B",
+          "text": "如果 `try` 子句在执行时发生异常，就一定会进入某一个 `catch` 子句执行。"
+        },
+        {
+          "label": "C",
+          "text": "如果 `try` 子句中没有可能发生异常的语句，会产生编译错误。"
+        },
+        {
+          "label": "D",
+          "text": "`catch` 子句处理异常后，会重新执行与之对应的 `try` 子句。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项A正确，因为C++允许一个 `try` 块后面跟着多个 `catch` 块，每个 `catch` 块可以处理不同类型的异常。选项B错误，如果抛出的异常没有匹配的 `catch` 块，程序会终止。选项C错误，`try` 块中即使没有抛出异常的语句，也不会产生编译错误。选项D错误，`catch` 块处理完异常后，程序会继续执行 `try-catch` 结构之后的代码，不会重新执行 `try` 块。"
+    },
+    {
+      "id": "xDmgL26MGky0WHfWcEfHP",
+      "order": 14,
+      "type": "single_choice",
+      "content": "执行以下C++语言程序后，输出结果是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int fib[10];\n    fib[0] = 0;\n    fib[1] = 1;\n    for (int i = 2; i < 10; i++)\n        fib[i] = fib[i - 1] + fib[i - 2];\n    cout << fib[10] << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "55"
+        },
+        {
+          "label": "D",
+          "text": "无法确定。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "数组 `fib` 被声明为 `int fib[10]`，这意味着它有 10 个元素，有效下标范围是 `0` 到 `9`。程序尝试"
+    },
+    {
+      "id": "ZgwYJNnlKKCpjtTb7jOYT",
+      "order": 15,
+      "type": "single_choice",
+      "content": "在下列代码的横线处填写（ ），完成对有 n 个 `int` 类型元素的数组 `array` 由小到大排序。\n\n```cpp\nvoid BubbleSort(int array[], int n) {\n    for (int i = n; i >= 2; i--)\n        for ((_______)) // 在此处填入代码\n            if (array[j] > array[j + 1]) {\n                int t = array[j];\n                array[j] = array[j + 1];\n                array[j + 1] = t;\n            }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int j = 1; j < n; j++`"
+        },
+        {
+          "label": "B",
+          "text": "`int j = 0; j < n; j++`"
+        },
+        {
+          "label": "C",
+          "text": "`int j = 0; j < i - 1; j++`"
+        },
+        {
+          "label": "D",
+          "text": "`int j = 0; j < i; j++`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n1.  **为什么 C 是对的：** 外层循环 `for (int i = n; i >= 2; i--)` 中，`"
+    },
+    {
+      "id": "wj2d-mqP59doGNXLKNI32",
+      "order": 16,
+      "type": "true_false",
+      "content": "在C++语言中，指针变量在逻辑上指向另一个变量在内存中的位置，指针变量本身不占用内存。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "指针变量本身是一个变量，它需要占用内存来存储所指向变量的内存地址。例如，一个 `int*` 类型的指针在64位系统上通常占用8字节内存。因此，题干中“指针变量本身不占用内存”的说法是错误的，导致整个陈述为假。选项T错误，因为它断言题干是正确的。"
+    },
+    {
+      "id": "7fcD0LaU8b0aq3PeiHSli",
+      "order": 17,
+      "type": "true_false",
+      "content": "对N个元素的数组执行插入排序算法，通常的时间复杂度是O(N²)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "插入排序在最坏情况下（例如数组逆序）需要将每个元素与其前面的所有元素进行比较和移动，总操作次数大约是 `1+2+...+N-1`，这导致时间复杂度为 O(N²)。即使在平均情况下，当元素需要移动时，也需要执行多次比较和移动操作，因此通常的时间复杂度也是 O(N²)。选项 F 错误，因为它否定了插入排序通常为 O(N²) 的事实。"
+    },
+    {
+      "id": "ri6SOmT5mWlmD2TXGDDe3",
+      "order": 18,
+      "type": "true_false",
+      "content": "在C++语言中，每个变量都有其作用域。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，每个变量在声明时都会被赋予一个作用域，它定义了变量在程序中可以被访问的区域和生命周期。例如，函数内部声明的变量只在该函数内部有效，而全局变量则在整个程序中都可访问。因此，所有变量都拥有明确的作用域，选项T是正确的。选项F错误，因为作用域是C++管理变量可见性和生命周期的核心机制，没有作用域的变量概念是不存在的。"
+    },
+    {
+      "id": "QehobUxBFtf17Pwp-r_bH",
+      "order": 19,
+      "type": "true_false",
+      "content": "在C++语言中，在函数调用时，通过引用传递的参数不会复制实际参数，因此不会额外占用内存。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "通过引用传递参数时，虽然避免了复制整个实际参数对象，但函数会创建一个引用变量。这个引用变量本质上是一个指向实际参数的“别名”，它需要占用内存来存储实际参数的地址（通常是4或8字节）。因此，它仍然会占用额外的内存空间，所以原说法“不会额外占用内存”是错误的。"
+    },
+    {
+      "id": "s_hWdyNdanQ9zn1NIqdVV",
+      "order": 20,
+      "type": "true_false",
+      "content": "在C++语言中，可以通过定义结构体，定义一个新的数据类型。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 中的 `struct` 关键字用于组合不同类型的数据，创建一个自定义的复合类型。一旦定义了结构体，例如 `struct Student { int id; string name; };`，`Student` 就成为了一个全新的数据类型，可以用来声明变量。因此，通过定义结构体确实是在 C++ 中定义了一个新的数据类型，选项 T 是正确的。选项 F 错误，因为它否定了 `struct` 的这一基本功能。"
+    },
+    {
+      "id": "VAIPK-H_DebXNnB8f3Lye",
+      "order": 21,
+      "type": "true_false",
+      "content": "在C++语言中，可以定义结构体类型的数组变量，定义结构体时也可以包含数组成员。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，结构体可以像基本数据类型一样，被用来定义数组变量，例如 `Student students[10];`。同时，结构体内部也可以包含数组成员，比如 `char name[50];` 或 `int scores[3];`。题目描述的两种情况都是C++语言完全支持的有效操作，因此该陈述是正确的。选择F则与C++语言规范不符。"
+    },
+    {
+      "id": "Z_6Ie1fWgPIq8uJ0lpa-f",
+      "order": 22,
+      "type": "true_false",
+      "content": "如果希望记录10个最长为99字节的字符串，可以将字符串数组定义为 `char s[10][100];`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`char s[10][100];` 定义了一个包含10个字符数组的数组，每个内部数组 `s[i]` 的大小为100个字符。在C++中，C风格字符串需要一个空字符 `\\0` 作为结束标志。因此，一个100字节的字符数组可以存储最长为99个字符的字符串（99个字符 + 1个空字符），这完全符合题目中“10个最长为99字节的字符串”的要求。所以，选项T是正确的，选项F是错误的。"
+    },
+    {
+      "id": "KUwFJBo7gPMtU3Sw_dbKp",
+      "order": 23,
+      "type": "true_false",
+      "content": "一个可能抛出异常的函数，调用它的位置没有在 `try` 子句中，会引起编译错误。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "调用一个可能抛出异常的函数，即使没有将其放在 `try` 子句中，也不会引起编译错误。C++ 编译器允许这种调用。如果函数在运行时确实抛出了异常，但没有被 `catch` 块捕获，程序会异常终止，但这属于运行时行为，而非编译错误。因此，选项 T 是错误的。"
+    },
+    {
+      "id": "Z14m1J3nHo9GXEy8q8rnJ",
+      "order": 24,
+      "type": "true_false",
+      "content": "`==` 和 `:=` 都是C++语言的运算符。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++语言中，`==` 是用于比较两个值是否相等的运算符。然而，`:=` 并不是C++的标准运算符，它在其他编程语言中可能存在，但在C++中没有此用法。因此，题目中“`==` 和 `:=` 都是C++语言的运算符”的说法是错误的。"
+    },
+    {
+      "id": "6ChBxr4rsau3cbnFkEZwE",
+      "order": 25,
+      "type": "true_false",
+      "content": "通过使用文件重定向操作，可以将程序中输出到 `cout` 的内容输出到文件中，这是常用的记录程序运行日志的方法之一。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "文件重定向操作（如 `>` 或 `>>`）是操作系统提供的功能，它能将程序默认输出到标准输出流（`stdout`，C++ 中 `cout` 默认使用）的内容，直接导向到指定文件。因此，将 `cout` 输出重定向到文件是完全可行的，并且确实是记录程序运行日志的常用且便捷的方法。选项 F 错误，因为它否定了这一事实。"
+    }
+  ]
+}

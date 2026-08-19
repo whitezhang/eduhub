@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202603",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202603",
+  "title": "GESP C++三级 202603",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2026年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202603"
+  },
+  "questions": [
+    {
+      "id": "gvoZf-355oFpj95DQrAHx",
+      "order": 1,
+      "type": "single_choice",
+      "content": "如果字符变量_1 的值是字符1,那么 (int)_1 的值是?()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "-1"
+        },
+        {
+          "label": "C",
+          "text": "49"
+        },
+        {
+          "label": "D",
+          "text": "+1 或者 -1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "字符 '1' 的ASCII码是49。当一个 `char` 类型变量强制转换为 `int` 类型时，会取其对应的ASCII码值。因此，`(int)_1` 的值是49。"
+    },
+    {
+      "id": "ApSqf8pbRpbOEb8MqUeVi",
+      "order": 1,
+      "type": "true_false",
+      "content": "定义 `int arr[5] = {1,2,3};`,则 `arr[3]` 的值为0, `arr[5]` 是合法下标。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`int arr[5] = {1,2,3};` 会将 `arr[0]=1, arr[1]=2, arr[2]=3`，其余元素 `arr[3]` 和 `arr[4]` 默认初始化为0，所以 `arr[3]` 的值为0是正确的。但是，对于大小为5的数组，合法下标范围是0到4，`arr[5]` 超出了数组边界，是非法下标。因为题目中有一部分是错误的，所以整个判断是错误的。"
+    },
+    {
+      "id": "1OeBINbLscNb5sW614DVq",
+      "order": 2,
+      "type": "single_choice",
+      "content": "a,b是整型变量,各自有互不相同的初始值。下列程序实现了什么效果()。\n```cpp\n1 a=a^b;\n2 b=a^b;\n3 a=a^b;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "a,b 的值从始至终都没有改变。"
+        },
+        {
+          "label": "B",
+          "text": "a,b 的值实现了互换。"
+        },
+        {
+          "label": "C",
+          "text": "a,b 的值互换了以后,又还回去了,相当于没有变化。"
+        },
+        {
+          "label": "D",
+          "text": "a,b 的值最后和原值不一样,没有任何意义。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "这段代码是经典的异或交换算法。第一行 `a = a ^ b;`，第二行 `b = a ^ b;` (此时b变为原始a的值)，第三行 `a = a ^ b;` (此时a变为原始b的值)。最终，a和b的值互换了。"
+    },
+    {
+      "id": "NBNr7c5nF8RyrDXLiuDVC",
+      "order": 2,
+      "type": "true_false",
+      "content": "定义 `double arr[10];`,未手动初始化时,数组中所有元素的默认值为0.0。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "对于局部变量（自动存储期）的数组，如 `double arr[10];` 在函数内部定义时，如果未手动初始化，其元素的值是未定义的（随机值），而不是默认的0.0。只有全局或静态存储期的数组才默认初始化为0。"
+    },
+    {
+      "id": "K4zT90pllkVltyfB5yAAM",
+      "order": 3,
+      "type": "single_choice",
+      "content": "关于下列正确的程序段,说法正确的是()。\n```cpp\n1 char str1[] = \"Hello\";\n2 char str2[] ={'H','e','l','l','o'}; \n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "字符数组 str1 和 str2 完全相同。"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\n1 cout<<str1<<endl;\n2 cout<<str2<<endl;\n```\n这段程序多次执行将输出不同的结果。"
+        },
+        {
+          "label": "C",
+          "text": "字符数组 str1 和 str2 不相等。"
+        },
+        {
+          "label": "D",
+          "text": "这两个赋值方式完全相同。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`str1` 使用字符串字面量初始化，会自动在末尾添加空字符 `\\0`，所以 `str1` 实际包含 \"Hello\\0\"。`str2` 使用字符列表初始化，只包含 'H','e','l','l','o'，没有空字符。因此，`str1` 和 `str2` 的内容和大小不同，它们不相等。"
+    },
+    {
+      "id": "s5Vk6Mbv1BGYh7RMrYkyE",
+      "order": 3,
+      "type": "true_false",
+      "content": "定义 `int arr[] = {1,2,3};`,则 `sizeof(arr)` 的结果为 12(int 占4字节)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`int arr[] = {1,2,3};` 定义了一个包含3个 `int` 元素的数组。如果一个 `int` 占用4字节，那么整个数组 `arr` 占用的字节数是 `3 * 4 = 12` 字节。`sizeof(arr)` 返回整个数组的字节大小，所以结果是12。"
+    },
+    {
+      "id": "Kx93jaFBh0KobhIq0VZcu",
+      "order": 4,
+      "type": "single_choice",
+      "content": "关于以下程序段,说法正确的是()。\n```cpp\n1 int x=10;\n2 cout<<(x++) + (++x)<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "C++11 标准中,这是未定义行为,不同的环境有可能出现不同的结果"
+        },
+        {
+          "label": "B",
+          "text": "22"
+        },
+        {
+          "label": "C",
+          "text": "21"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在C++中，当一个变量在同一个表达式中被多次修改，并且这些修改之间没有序列点时，其行为是未定义的。`x++` 和 `++x` 都修改了 `x`，且它们在同一个 `cout` 语句中，没有明确的求值顺序。因此，不同的编译器或运行环境可能会产生不同的结果。"
+    },
+    {
+      "id": "sH2EPJCeD_XK57AkaFzMd",
+      "order": 4,
+      "type": "true_false",
+      "content": "下面的流程图是用来求1+2+3+...+10的和。\n[Flowchart image]",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "流程图的逻辑是：初始化 `sum=0, i=1`。在循环中，只要 `i <= 10`，就将 `i` 加到 `sum` 中，然后 `i` 自增。当 `i` 变为11时，循环结束，输出 `sum`。这正是计算1到10的和的过程，所以是正确的。"
+    },
+    {
+      "id": "CX2udEt-itPzs7P3PuGCF",
+      "order": 5,
+      "type": "single_choice",
+      "content": "8位二进制下,十进制数-15 的补码是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "11110000"
+        },
+        {
+          "label": "B",
+          "text": "10001111"
+        },
+        {
+          "label": "C",
+          "text": "10010000"
+        },
+        {
+          "label": "D",
+          "text": "11110001"
+        }
+      ],
+      "answer": "D",
+      "explanation": "计算-15的8位补码：首先写出+15的8位二进制表示 `00001111`。然后取反得到反码 `11110000`。最后加1得到补码 `11110001`。"
+    },
+    {
+      "id": "PaX4aQ3PtZNCaK4NZURBR",
+      "order": 5,
+      "type": "true_false",
+      "content": "下面流程图的功能是计算5对2取余数,输出结果为1。\n[Flowchart image]",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "流程图模拟了连续减法求余数的过程。初始 `a=5, b=2`。第一次循环 `a = 5 - 2 = 3`。第二次循环 `a = 3 - 2 = 1`。此时 `a < b` (1 < 2)，循环结束，输出 `a` 的值1。这正是 `5 % 2` 的结果，所以是正确的。"
+    },
+    {
+      "id": "nGYGNjwJyblB0bOuOwqwq",
+      "order": 6,
+      "type": "single_choice",
+      "content": "三进制数2102(3) 转换成十进制是:( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "63"
+        },
+        {
+          "label": "B",
+          "text": "65"
+        },
+        {
+          "label": "C",
+          "text": "67"
+        },
+        {
+          "label": "D",
+          "text": "69"
+        }
+      ],
+      "answer": "B",
+      "explanation": "三进制数2102(3) 转换为十进制的计算方法是：`2 * 3^3 + 1 * 3^2 + 0 * 3^1 + 2 * 3^0 = 2 * 27 + 1 * 9 + 0 * 3 + 2 * 1 = 54 + 9 + 0 + 2 = 65`。"
+    },
+    {
+      "id": "-CNcqpFksGuQatQrIEDcd",
+      "order": 6,
+      "type": "true_false",
+      "content": "已知大写字符 A 的ASCII编码的十六进制表示为 `0x41`,计算字符 m 的ASCII编码的八进制表示为 155 (八进制)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "大写字符 'A' 的ASCII码是65。小写字符 'm' 的ASCII码是 'a' 的ASCII码加上 'm' 相对于 'a' 的偏移量。'a' 的ASCII码是97。'm' 是字母表中第13个字母，所以 'm' 的ASCII码是 `97 + (13-1) = 109`。将十进制109转换为八进制是155。所以该说法正确。"
+    },
+    {
+      "id": "W2rEtDyx93gOa2A7NNxmi",
+      "order": 7,
+      "type": "single_choice",
+      "content": "二进制数10110101是某数的8位补码,该数的十进制是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-73"
+        },
+        {
+          "label": "B",
+          "text": "-75"
+        },
+        {
+          "label": "C",
+          "text": "-77"
+        },
+        {
+          "label": "D",
+          "text": "75"
+        }
+      ],
+      "answer": "B",
+      "explanation": "8位补码 `10110101`。最高位是1表示负数。要找到其原码，先将补码减1得到 `10110100`，然后取反得到 `01001011`。将 `01001011` 转换为十进制是 `64 + 8 + 2 + 1 = 75`。因此，该数是-75。"
+    },
+    {
+      "id": "3nLLnp0P2MToM3ms02yEu",
+      "order": 7,
+      "type": "true_false",
+      "content": "在C++位运算中,各种不同的运算符有优先级的区分,使用括号能够解决优先级的问题。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中的所有运算符都有固定的优先级和结合性。当表达式中包含多个运算符时，优先级决定了它们的求值顺序。使用括号 `()` 可以强制改变默认的求值顺序，确保括号内的表达式优先计算。"
+    },
+    {
+      "id": "Z_7Pz_C_6W2-VAEaPv1ZZ",
+      "order": 8,
+      "type": "single_choice",
+      "content": "已知 `unsigned char c = 0x0F;` (十六进制 `0F` = 二进制 `00001111`),执行 `c = c << 3;` 后,c的十进制值是:()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "64"
+        },
+        {
+          "label": "B",
+          "text": "72"
+        },
+        {
+          "label": "C",
+          "text": "80"
+        },
+        {
+          "label": "D",
+          "text": "120"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`c` 的初始值是 `0x0F`，即二进制 `00001111`。执行 `c = c << 3;` 后，二进制变为 `01111000`。将其转换为十进制：`0*128 + 1*64 + 1*32 + 1*16 + 1*8 + 0*4 + 0*2 + 0*1 = 64 + 32 + 16 + 8 = 120`。"
+    },
+    {
+      "id": "EjZKFV5A_Q1IFS1j9qimi",
+      "order": 8,
+      "type": "true_false",
+      "content": "由于在0~255范围内, `char` 类型和 `int` 类型可以互换,因此在这里 `x` 和 `y` 相等。\n```cpp\n1 char x='1';\n2 int y=1;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`char x = '1';` 将字符 '1' 的ASCII值（49）赋给 `x`。`int y = 1;` 将整数值1赋给 `y`。因此，`x` 的值是49，`y` 的值是1，它们不相等。虽然类型可以互换，但存储的值不同。"
+    },
+    {
+      "id": "YrlPPj5i6yV6DvDB5j0t7",
+      "order": 9,
+      "type": "single_choice",
+      "content": "补码的情况下,关于按位取反运算,用笔计算的情况下,以下说法错误的是:( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "~5 的结果是-6(int 类型,32位)"
+        },
+        {
+          "label": "B",
+          "text": "~0 的结果是0(int 类型,32位)"
+        },
+        {
+          "label": "C",
+          "text": "~(-3)的结果是2(int类型,32位)"
+        },
+        {
+          "label": "D",
+          "text": "~8 的结果是-9(int 类型,32位)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在补码表示中，按位取反 `~x` 的结果是 `-(x + 1)`。因此，`~0 = -(0 + 1) = -1`。选项B说 `~0` 的结果是0，这是错误的。"
+    },
+    {
+      "id": "FLv1YmLdUmaXciJ0R8epy",
+      "order": 9,
+      "type": "true_false",
+      "content": "在C++语言中,表达式 `((0xf0 + 0x15) == 255)` 的值为 `true`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`0xf0` 转换为十进制是240。`0x15` 转换为十进制是21。所以 `0xf0 + 0x15 = 240 + 21 = 261`。表达式变为 `(261 == 255)`，其结果是 `false`。因此，该表达式的值为 `true` 的说法是错误的。"
+    },
+    {
+      "id": "bTj8Hy7IiPgohAljCGbUx",
+      "order": 10,
+      "type": "single_choice",
+      "content": "执行以下C++代码后, `sub` 的值是()。\n```cpp\n1 string str = \"GESP2026\";\n2 string sub = str.substr(4, 2);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "20"
+        },
+        {
+          "label": "B",
+          "text": "02"
+        },
+        {
+          "label": "C",
+          "text": "2026"
+        },
+        {
+          "label": "D",
+          "text": "026"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`str.substr(pos, len)` 方法从字符串 `str` 的 `pos` 位置开始，提取 `len` 个字符。字符串 \"GESP2026\" 中，索引4的字符是 '2'，索引5的字符是 '0'。所以 `str.substr(4, 2)` 提取的子字符串是 \"20\"。"
+    },
+    {
+      "id": "C0wwBCAma3KYpvb7gkb4f",
+      "order": 10,
+      "type": "true_false",
+      "content": "如果 `a` 为 `int` 类型的变量,且 `a` 的二进制最低位为 `0`,则表达式 `((a & 3 & 1) == 0)` 的值为 `true`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`a` 的二进制最低位为 `0` 意味着 `a` 是偶数，所以 `a & 1` 的结果是0。表达式 `(a & 3 & 1)` 可以简化为 `(a & (3 & 1))`。`3 & 1` 的结果是1。所以表达式最终简化为 `(a & 1)`。由于 `a` 的最低位是0，`a & 1` 的结果是0。因此，`((a & 3 & 1) == 0)` 的值为 `true`。"
+    },
+    {
+      "id": "Ir9n3JWDVef5U4OtfLd7B",
+      "order": 11,
+      "type": "single_choice",
+      "content": "执行以下代码后,输出结果是:()。\n```cpp\n1 int arr[] = {5, 10, 15, 20, 25, 30};\n2 int count = sizeof(arr) / sizeof(arr[0]);\n3 cout << count;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "24"
+        },
+        {
+          "label": "D",
+          "text": "30"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`arr` 数组包含6个 `int` 类型的元素。`sizeof(arr)` 返回整个数组占用的字节数，`sizeof(arr[0])` 返回一个元素占用的字节数。`count = sizeof(arr) / sizeof(arr[0])` 计算的是数组中元素的个数，即 `6 * sizeof(int) / sizeof(int) = 6`。"
+    },
+    {
+      "id": "LLm233SFblItc_vLiAWUC",
+      "order": 12,
+      "type": "single_choice",
+      "content": "执行以下代码后,输出结果是:()。\n```cpp\n1 char s[10] = \"abcde\";\n2 int a = sizeof(s) / sizeof(s[0]);\n3 int b = strlen(s);\n4 cout << a - b;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`char s[10] = \"abcde\";` 定义了一个大小为10的字符数组。`a = sizeof(s) / sizeof(s[0])` 计算数组的容量，即 `10 / 1 = 10`。`b = strlen(s)` 计算字符串的实际长度（不包括空字符），即 \"abcde\" 的长度为5。所以 `a - b = 10 - 5 = 5`。"
+    },
+    {
+      "id": "FCTVxD5NqST14OQDpiAnr",
+      "order": 13,
+      "type": "single_choice",
+      "content": "以下问题中,最不适合用枚举法解决的是:()",
+      "options": [
+        {
+          "label": "A",
+          "text": "找出1~100之间所有能被7整除的数"
+        },
+        {
+          "label": "B",
+          "text": "找出100~200之间的所有质数"
+        },
+        {
+          "label": "C",
+          "text": "计算1+2+3+...+1000的和"
+        },
+        {
+          "label": "D",
+          "text": "找出三位数中个位、十位、百位数字之和等于10的数"
+        }
+      ],
+      "answer": "C",
+      "explanation": "枚举法适用于在有限且可遍历的范围内逐一检查所有可能性。计算1+2+3+...+1000的和有更高效的数学公式 `n*(n+1)/2`，虽然枚举可行但效率低，且不是最佳方法。其他选项的问题范围有限，适合枚举。"
+    },
+    {
+      "id": "Ds4bclKKTv0uCstZQcSh9",
+      "order": 14,
+      "type": "single_choice",
+      "content": "用枚举法解决“鸡兔同笼问题:头共35个,脚共94只,求鸡和兔的数量”,以下枚举逻辑最合理的是:()",
+      "options": [
+        {
+          "label": "A",
+          "text": "枚举鸡的数量 x (0~35),兔的数量 y=35-x,判断 2*x + 4*y == 94"
+        },
+        {
+          "label": "B",
+          "text": "枚举兔的数量 y(0~94),鸡的数量 x=35-y,判断 2*x + 4*y == 94"
+        },
+        {
+          "label": "C",
+          "text": "枚举所有整数 × (0-100)和y(0-100),判断 x+y==35 && 2*x+4*y==94"
+        },
+        {
+          "label": "D",
+          "text": "枚举脚的总数 sum (0~94),判断 sum == 94"
+        }
+      ],
+      "answer": "A",
+      "explanation": "最合理的枚举逻辑是利用已知条件缩小枚举范围。鸡和兔的总头数是35，所以鸡的数量 `x` 可以在0到35之间枚举。一旦确定了 `x`，兔的数量 `y` 就确定为 `35-x`。然后只需判断总脚数是否符合条件即可。选项A的枚举范围最小且逻辑最直接。"
+    },
+    {
+      "id": "rSL9ZLY1zrWB4Vj38ZTNr",
+      "order": 15,
+      "type": "single_choice",
+      "content": "模拟“字符串加密”:规则为“每个字符ASCII码+3,若超过z(122)则从 a 重新开始”,以下代码中正确的条件判断是:()\n```cpp\n1 for (int i = 0; i < str.length(); i++) {\n2 // 需补充条件:\n3 \n4 else {\n5 str[i] += 3;\n6 }\n7 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "if (str[i]> 122) str[i] = str[i] + 3 - 26;"
+        },
+        {
+          "label": "B",
+          "text": "if (str[i] > 122) str[i] = str[i] - 26;"
+        },
+        {
+          "label": "C",
+          "text": "if (str[i] + 3 > 122) str[i] = str[i] - 26;"
+        },
+        {
+          "label": "D",
+          "text": "if (str[i] + 3 > 'z') str[i] = 'a' + (str[i] + 3 - 'z') - 1;"
+        }
+      ],
+      "answer": "D",
+      "explanation": "加密规则是每个字符ASCII码+3，如果结果超过 'z'，则从 'a' 重新开始。选项D的条件 `str[i] + 3 > 'z'` 正确判断了是否需要环绕。其处理方式 `str[i] = 'a' + (str[i] + 3 - 'z') - 1;` 实现了环绕逻辑，例如 'x' 加3后是 'a'，'y' 加3后是 'b'。"
+    }
+  ]
+}

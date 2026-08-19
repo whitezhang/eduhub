@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-2ji-202309",
+  "url": "https://adacpp.com/practice/gesp-cpp-2ji-202309",
+  "title": "GESP C++二级 202309",
+  "description": "CCF编程能力等级认证 GESP C++ 二级 2023年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 2,
+    "ym": "202309"
+  },
+  "questions": [
+    {
+      "id": "GjaIQzp4BzyTkxVmnS4fP",
+      "order": 1,
+      "type": "single_choice",
+      "content": "我国第一台大型通用电子计算机使用的逻辑部件是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "集成电路"
+        },
+        {
+          "label": "B",
+          "text": "大规模集成电路"
+        },
+        {
+          "label": "C",
+          "text": "晶体管"
+        },
+        {
+          "label": "D",
+          "text": "电子管"
+        }
+      ],
+      "answer": "D",
+      "explanation": "我国第一台大型通用电子计算机（103计算机）研制于20世纪50年代，当时计算机主要使用电子管作为逻辑部件，因此D是正确答案。晶体管是第二代计算机的标志，而集成电路和大规模集成电路则是更晚期的技术，分别代表了第三代和第四代计算机，均晚于我国第一台计算机的诞生。"
+    },
+    {
+      "id": "u9qBxqa7zhv1JJZsv2CQ8",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下列流程图的输出结果是（ ）？\n\n流程图描述：开始 -> x=5, y=12 -> 判断x>y -> 是：a=x, b=y；否：a=y, b=x -> 输出a, b -> 结束",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 12"
+        },
+        {
+          "label": "B",
+          "text": "12 5"
+        },
+        {
+          "label": "C",
+          "text": "5 5"
+        },
+        {
+          "label": "D",
+          "text": "12 12"
+        }
+      ],
+      "answer": "B",
+      "explanation": "初始时 `x=5`，`y=12`。判断条件 `x > y` (即 `5 > 12`) 为假。根据流程图，当条件为假时，执行 `a=y`，`b=x`。所以 `a` 的值为 `12`，`b` 的值为 `5`。最终输出 `a, b`，结果是 `12 5`，因此选项 B 正确。其他选项不符合流程图的执行逻辑。"
+    },
+    {
+      "id": "Iq3V1kXvaBOKzy-Ce0iQ9",
+      "order": 3,
+      "type": "single_choice",
+      "content": "如果要找出整数a、b中较大一个，通常要用下面哪种程序结构？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "顺序结构"
+        },
+        {
+          "label": "B",
+          "text": "循环结构"
+        },
+        {
+          "label": "C",
+          "text": "分支结构"
+        },
+        {
+          "label": "D",
+          "text": "跳转结构"
+        }
+      ],
+      "answer": "C",
+      "explanation": "要找出整数 `a`、`b` 中较大的一个，需要根据条件（例如 `a > b`）来判断并选择执行不同的代码路径，这正是分支结构（如 `if-else` 语句）的功能。分支结构允许程序根据条件判断选择不同的执行流程。顺序结构只是按顺序执行指令，循环结构用于重复执行代码，而跳转结构虽然能改变流程但不是处理条件判断的常用和推荐方式，因此它们都不适合此场景。"
+    },
+    {
+      "id": "MXs56onmCTzN5ZwIh_RDi",
+      "order": 4,
+      "type": "single_choice",
+      "content": "以下不是C++关键字的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "continue"
+        },
+        {
+          "label": "B",
+          "text": "cout"
+        },
+        {
+          "label": "C",
+          "text": "break"
+        },
+        {
+          "label": "D",
+          "text": "goto"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`cout` 是 C++ 标准库 `iostream` 中用于标准输出流的对象，并非 C++ 语言的关键字。而 `continue`、`break` 和 `goto` 都是 C++ 语言预定义的关键字，它们分别用于控制循环流程（`continue` 跳过当前迭代，`break` 跳出循环）和无条件跳转。关键字是语言的保留字，具有特殊含义，不能用作自定义标识符。"
+    },
+    {
+      "id": "Nf00Z2gEaoMAEAC8MT2KP",
+      "order": 5,
+      "type": "single_choice",
+      "content": "C++表达式 `int(-123.123 / 10)` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-124"
+        },
+        {
+          "label": "B",
+          "text": "-123"
+        },
+        {
+          "label": "C",
+          "text": "-13"
+        },
+        {
+          "label": "D",
+          "text": "-12"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++ 中，首先计算 `-123.123 / 10`，结果是浮点数 `-12.3123`。然后，`int()` 强制类型转换会将浮点数的小数部分直接截断（向零取整）。因此，`-12.3123` 截断后变为 `-12`。选项 A、B、C 不符合 C++ 浮点数向整数转换的截断规则。"
+    },
+    {
+      "id": "EVKQVRZFHwK5QUzgLKYke",
+      "order": 6,
+      "type": "single_choice",
+      "content": "以下C++代码实现从大到小的顺序输出N的所有因子。例如，输入N = 18时输出18 9 6 3 2 1，横线处应填入（ ）。\n\n```cpp\nint N = 0;\ncin >> N;\nfor (___________) // 此处填写代码\n    if (!(N % i))\n        cout << i << ' ';\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "; ;"
+        },
+        {
+          "label": "B",
+          "text": "int i = 1; i < N; i++"
+        },
+        {
+          "label": "C",
+          "text": "int i = N; i > 0; i--"
+        },
+        {
+          "label": "D",
+          "text": "int i = N; i > 1; i--"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C `int i = N; i > 0; i--` 正确。它将循环变量 `i` 初始化为 `N`，然后递减直到 `i` 大于 0（即包含 `1`），确保从大到小遍历所有可能的因子，并包含 `N` 和 `1`。选项 A 语法不完整。选项 B `int i = 1; i < N; i++` 会从小到大输出因子，且会漏掉 `N`。选项 D `int i = N; i > 1; i--` 会漏掉因子 `1`。"
+    },
+    {
+      "id": "TfpRRWPUkFtyXfThQkXKg",
+      "order": 7,
+      "type": "single_choice",
+      "content": "如下图所示，输出N行N列的矩阵，对角线为1，横线处应填入（ ）。\n\n示例输出（N=9）：\n```\n1 0 0 0 0 0 0 0 0\n0 1 0 0 0 0 0 0 0\n0 0 1 0 0 0 0 0 0\n0 0 0 1 0 0 0 0 0\n0 0 0 0 1 0 0 0 0\n0 0 0 0 0 1 0 0 0\n0 0 0 0 0 0 1 0 0\n0 0 0 0 0 0 0 1 0\n0 0 0 0 0 0 0 0 1\n```\n\n```cpp\nint N = 0;\ncout << \"请输入行列数量:\";\ncin >> N;\nfor (int i = 1; i < N + 1; i++) {\n    for (int j = 1; j < N + 1; j++)\n        if (___________) // 此处填写代码\n            cout << 1 << \" \";\n        else\n            cout << 0 << \" \";\n    cout << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "i = j"
+        },
+        {
+          "label": "B",
+          "text": "j != j"
+        },
+        {
+          "label": "C",
+          "text": "i >= j"
+        },
+        {
+          "label": "D",
+          "text": "i == j"
+        }
+      ],
+      "answer": "D",
+      "explanation": "对角线上的元素特点是行索引 `i` 和列索引 `j` 相等，因此选项 D `i == j` 正确地判断了对角线位置，当条件满足时输出 1。选项 A `i = j` 是赋值语句，不是比较，它会将 `j` 的值赋给 `i` 并以 `i` 的值作为判断条件，不符合逻辑。选项 B `j != j` 永远为假，会导致所有元素都输出 0。选项 C `i >= j` 会使对角线及对角线以下的所有元素都输出 1，不符合题目要求。"
+    },
+    {
+      "id": "ULCW7i-VlAxT5rGeYoucA",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码用于判断N是否为质数（素数），约定输入N为大于等于2的正整数，请在横线处填入合适的代码（ ）。\n\n```cpp\nint N = 0, i = 0;\ncout << \"请输入一个大于等于2的正整数: \";\ncin >> N;\n\nfor (i = 2; i < N; i++)\n    if (N % i == 0) {\n        cout << \"非质数\";\n        ___________; // 此处填写代码\n    }\nif (i == N)\n    cout << \"是质数\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "break"
+        },
+        {
+          "label": "B",
+          "text": "continue"
+        },
+        {
+          "label": "C",
+          "text": "exit"
+        },
+        {
+          "label": "D",
+          "text": "return"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`break` 语句会立即终止当前的 `for` 循环。当找到一个因子 `i` 使 `N % i == 0` 时，`N` 已经确定为非"
+    },
+    {
+      "id": "CuSEBTMdJkuFU9n0AfzvK",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint N = 9;\nfor (int i = 2; i < N; i++)\n    if (N % i)\n        cout << \"1#\";\ncout << \"0\" << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1#0"
+        },
+        {
+          "label": "B",
+          "text": "1#"
+        },
+        {
+          "label": "C",
+          "text": "1#1#1#1#1#1"
+        },
+        {
+          "label": "D",
+          "text": "1#1#1#1#1#1#0"
+        }
+      ],
+      "answer": "D",
+      "explanation": "代码中的 `for` 循环从 `i=2` 遍历到 `i=8`。当 `N % i` (即 `9 % i`) 的结果不为 `0"
+    },
+    {
+      "id": "LTK67qBH9ExOS8QYAB9u-",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint cnt = 0;\nfor (int i = 1; i < 9; i++)\n    for (int j = 1; j < i; j += 2)\n        cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "16"
+        },
+        {
+          "label": "B",
+          "text": "28"
+        },
+        {
+          "label": "C",
+          "text": "35"
+        },
+        {
+          "label": "D",
+          "text": "36"
+        }
+      ],
+      "answer": "A",
+      "explanation": "外层循环 `for (int i = 1; i < 9; i++)` 使 `i` 从 1 遍历到 8。内层循环 `for (int"
+    },
+    {
+      "id": "kCZhKB8AY7oYS3p7ciI72",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint cnt = 0;\nfor (int i = 1; i < 13; i += 3)\n    for (int j = 1; j < i; j += 2)\n        if (i * j % 2 == 0)\n            break;\n        else\n            cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "15"
+        },
+        {
+          "label": "D",
+          "text": "没有输出"
+        }
+      ],
+      "answer": "B",
+      "explanation": "外层循环中，`i` 的取值依次为 1, 4, 7, 10。\n1.  当 `i=1` 时，内"
+    },
+    {
+      "id": "6J4VSWEACeJqtPbrd6921",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint x = 1;\nwhile (x < 100) {\n    if (!(x % 3))\n        cout << x << \",\";\n    else if (x / 10)\n        break;\n    x += 2;\n}\ncout << x;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "3,9,11"
+        },
+        {
+          "label": "C",
+          "text": "3,6,9,10"
+        },
+        {
+          "label": "D",
+          "text": "1,5,7,11,13,15"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码从 `x = 1` 开始循环。\n1.  当 `x = 1` 时，不满足 `x % 3 == 0` 也不满足 `x /"
+    },
+    {
+      "id": "b_AhYyXgN4QYeA99oWsiN",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面图形每一行从字母A开始，以ABC方式重复。行数为输入的整数。请在C++代码段横线处填入合适代码（ ）。\n\n示例输出（行数为7）：\n```\nA\nAB\nABC\nABCA\nABCAB\nABCABC\nABCABCA\n```\n\n```cpp\nint N = 0;\ncout << \"请输入行列数量:\";\ncin >> N;\nfor (int i = 1; i < N + 1; i++) {\n    for (int j = 0; j < i; j++)\n        cout << ___________; // 此处填写代码\n    cout << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "'A' + j / 3"
+        },
+        {
+          "label": "B",
+          "text": "(char)('A' + j / 3)"
+        },
+        {
+          "label": "C",
+          "text": "'A' + j % 3"
+        },
+        {
+          "label": "D",
+          "text": "(char)('A' + j % 3)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是D。`j % 3` 利用取模运算实现 `0, 1, 2, 0, 1, 2...` 的循环序列，将其加到 `'A'` 上可以得到 `'A', 'B', 'C', 'A', 'B', 'C'...`。` (char)` 强制类型转换确保 `cout` 输出的是字符而不是其ASCII码。选项C虽然计算出了正确的ASCII值，但缺少 `(char)` 转换，会输出数字。选项A和B中的 `j / 3` 会导致每三个字符重复一次，例如 `AAA` 或 `BBB`，不符合 `ABC` 的重复模式。"
+    },
+    {
+      "id": "xM6AEtsp1JFEZqZnRxc9W",
+      "order": 14,
+      "type": "single_choice",
+      "content": "输入行数，约定1 <= lineCount <= 9，输出以下图形。应在C++代码横线处填入（ ）。\n\n示例输出（行数为9）：\n```\n                1\n            1 2 1\n        1 2 3 2 1\n      1 2 3 4 3 2 1\n    1 2 3 4 5 4 3 2 1\n  1 2 3 4 5 6 5 4 3 2 1\n1 2 3 4 5 6 7 6 5 4 3 2 1\n1 2 3 4 5 6 7 8 7 6 5 4 3 2 1\n1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2 1\n```\n\n```cpp\nint lineCount = 0;\ncout << \"请输入行数量:\";\ncin >> lineCount;\nfor (int i = 0; i < lineCount; i++) {\n    for (int j = 0; j < ___________; j++) // 此处填写代码\n        cout << ' ';\n    for (int j = 1; j < i + 1; j++)\n        cout << j << \" \";\n    for (int j = i + 1; j > 0; j--)\n        cout << j << \" \";\n    cout << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "(lineCount - i - 1) * 2"
+        },
+        {
+          "label": "B",
+          "text": "(lineCount - i) * 2"
+        },
+        {
+          "label": "C",
+          "text": "lineCount - i - 1"
+        },
+        {
+          "label": "D",
+          "text": "lineCount - i"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\n1.  **为什么 A 是正确的：** 观察图形，每行开头的空格数量随着行数增加而减少。对于第 `i` 行（从"
+    },
+    {
+      "id": "bAXncCYu9--NFano5RH32",
+      "order": 15,
+      "type": "single_choice",
+      "content": "某班级人数不知，连续输入成绩直到输入负数停止，输入结束后求出平均成绩。在以下C++代码横线处应填入是（ ）。\n\n```cpp\ndouble totalScore = 0; // 总分\nint studCount = 0;  // 总人数\nwhile (___________) { // 此处填写代码\n    cin >> score;\n    if (score < 0)\n        break;\n    totalScore += score;\n    studCount += 1;\n}\ncout << \"平均分=\" << totalScore / studCount;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "true"
+        },
+        {
+          "label": "B",
+          "text": "false"
+        },
+        {
+          "label": "C",
+          "text": "True"
+        },
+        {
+          "label": "D",
+          "text": "False"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`while(true)` 会创建一个无限循环，结合循环体内部的 `if (score < 0) break;` 语句，可以在输入负数时正确地终止循环，符合题目要求。`while(false)` 会导致循环体一次都不执行。C++ 中的布尔常量是 `true` 和 `false`（小写），`True` 和 `False`（大写）不是合法的布尔常量。"
+    },
+    {
+      "id": "Pgxuq6VljVUXbLPT58hMt",
+      "order": 16,
+      "type": "true_false",
+      "content": "我们常说的互联网（Internet）是一个覆盖全球的广域网络，它不属于任何一个国家。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "互联网是一个连接全球的计算机网络，其核心设计理念是开放和去中心化。它由无数个独立的网络互联而成，没有一个单一的机构或国家拥有或控制整个互联网。因此，题目描述完全符合互联网的本质特征，是正确的。"
+    },
+    {
+      "id": "zDyqnJw2c2ZA7WZY-5Sdx",
+      "order": 17,
+      "type": "true_false",
+      "content": "神威·太湖之光超级计算机是中国自主研制的超级计算机，在全球超级计算机TOP500排行榜中多次荣膺榜首。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "神威·太湖之光超级计算机确实是中国自主研制并拥有完全自主知识产权的，它曾多次在全球超级计算机TOP500榜单中排名第一。因此，题目描述完全符合事实，正确答案为T。选择F则与客观事实不符。"
+    },
+    {
+      "id": "-jZfm12O_lgltpv9iakvT",
+      "order": 18,
+      "type": "true_false",
+      "content": "C++表达式 `7.8 / 2` 的值为3.9，类型为 `float`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中浮点数字面量 `7.8` 默认为 `double` 类型。当 `double` 类型与 `int` 类型进行除法运算时，`int` 会被提升为 `double`，因此表达式 `7.8 / 2` 的结果类型是 `double`。虽然计算结果 `3.9` 是正确的，但其类型是 `double` 而非 `float`，所以原说法错误。"
+    },
+    {
+      "id": "Deq7QPus3_2Y8OQkQXDx7",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++表达式 `(2 * 3) || (2 + 5)` 的值为67。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中的 `||` (逻辑或) 运算符用于布尔逻辑判断，其结果是 `true` 或 `false`。表达式 `(2 * 3)` 结果为 `6`，非零即为 `true`；表达式 `(2 + 5)` 结果为 `7`，非零也为 `true`。因此，`true || true` 的结果是 `true`。在 C++ 中，`true` 被转换为整数时其值为 `1`，而不是 `67`，所以原题的说法是错误的。"
+    },
+    {
+      "id": "DapZk7KHj3UaAYduX5nai",
+      "order": 20,
+      "type": "true_false",
+      "content": "如果 `m` 和 `n` 为 `int` 类型变量，则执行 `for (m = 0, n = 1; n < 9; ) n = ((m = 3 * n, m + 1), m - 1);` 之后 `n` 的值为偶数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "循环体 `n = ((m = 3 * n, m + 1), m - 1);` 中，逗号运算符会依次执行表达式并返回最右侧表达式的值。因此，`m` 首先更新为 `3 * n`，然后 `n` 的新值被赋为 `m - 1`。\n初始 `n = 1`。\n第一次迭代：`m = 3 * 1 = 3`，"
+    },
+    {
+      "id": "W-eJBNWe1tTgAg3mLoMRW",
+      "order": 21,
+      "type": "true_false",
+      "content": "如果 `a` 为 `int` 类型的变量，则表达式 `(a >= 5 && a <= 10)` 与 `(5 <= a <= 10)` 的值总是相同的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，表达式 `(5 <= a <= 10)` 不会像数学中那样进行链式比较。它会先计算 `(5 <= a)`，结果是一个布尔值（`true` 或 `false`）。这个布尔值随后会被隐式转换为整数 `1` 或 `0`，再与 `10` 进行比较，即 `(0 <= 10)` 或 `(1 <= 10)`，这两个表达式的值总是 `true`。因此，` (5 <= a <= 10)` 的值总是 `true`。而表达式 `(a >= 5 && a <= 10)` 只有当 `a` 在 5 到 10 之间（包含）时才为 `true`。例如，当 `a = 3` 时，前者为 `true`，后者为 `false`，所以它们的值并非总是相同的。"
+    },
+    {
+      "id": "Yluf3KpR-4sjSscsbx9vn",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面C++代码执行后的输出为10。\n\n```cpp\nint cnt = 0;\nfor (int i = 1; i < 10; i++) {\n    cnt += 1;\n    i += 1;\n}\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "代码中，循环变量 `i` 在每次循环体内通过 `i += 1;` 额外增加一次，导致 `i` 每次循环实际增加 2。循环从 `i=1` 开始，依次为 1, 3, 5, 7, 9，共执行 5 次，此时 `i` 变为 11 结束循环。因此 `cnt` 最终值为 5，而不是 10，所以原题目描述是错误的，正确答案为 F。"
+    },
+    {
+      "id": "M5S2pxD2SfpyE-gBDxMvB",
+      "order": 23,
+      "type": "true_false",
+      "content": "执行以下C++代码后的输出为0。\n\n```cpp\nint rst = 0;\nfor (int i = -100; i < 100; i += 2)\n    rst += i;\ncout << rst;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "代码中的循环计算了从 -100 到 98 的所有偶数的和。由于 `i` 从 -100 开始，以 2 递增，序列为 -100, -98, ..., -2, 0, 2, ..., 98。除了 -100 之外，所有正负对称的偶数（如 -98 和 98）都会相互抵消，0 不影响总和。因此，`rst` 的最终值为 -100。题目声称输出为 0，与实际输出 -100 不符，所以选项 F（错误）是正确的。选项 T（正确）不符合实际计算结果。"
+    },
+    {
+      "id": "qggYVOObLjMs_kwkCSVLB",
+      "order": 24,
+      "type": "true_false",
+      "content": "执行以下C++代码后的输出为30。\n\n```cpp\nint rst = 0;\nfor (int i = 0; i < 10; i += 2)\n    rst += i;\ncout << rst;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码中的 `for` 循环会使变量 `i` 依次取值为 0, 2, 4, 6, 8。每次循环将 `i` 的值累加到 `rst` 中，最终 `rst` 的值为 0 + 2 + 4 + 6 + 8 = 20。因此，代码的实际输出是 20，而非题目所说的 30，所以原说法是错误的。"
+    },
+    {
+      "id": "-TG05mNqEJ64VuHHxkbfI",
+      "order": 25,
+      "type": "true_false",
+      "content": "C++是一种高级程序设计语言。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 是一种高级程序设计语言，因为它允许程序员使用更接近人类自然语言的语法和概念来编写程序，而无需直接处理计算机底层的硬件细节。它提供了强大的抽象能力，使得开发复杂应用变得更容易。因此，题目描述是正确的。"
+    }
+  ]
+}

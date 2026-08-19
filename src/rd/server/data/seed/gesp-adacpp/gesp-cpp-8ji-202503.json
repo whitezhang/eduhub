@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202503",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202503",
+  "title": "GESP C++八级 202503",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2025年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202503"
+  },
+  "questions": [
+    {
+      "id": "0ninNsQTdy_QRMzsKqTVp",
+      "order": 1,
+      "type": "single_choice",
+      "content": "国家\"以旧换新\"政策仍在继续，小杨家决定在家里旧的冰箱、电视、洗衣机、微波炉中选两种换新。其中，冰箱有4种型号可选，电视有6种型号可选，洗衣机有3种型号可选，微波炉有5种型号可选。请问小杨家共有多少种换新的方案？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "18"
+        },
+        {
+          "label": "B",
+          "text": "119"
+        },
+        {
+          "label": "C",
+          "text": "238"
+        },
+        {
+          "label": "D",
+          "text": "360"
+        }
+      ],
+      "answer": "B",
+      "explanation": "首先，需要确定选择哪两种家电进行更换，这是一个组合问题。从冰箱、电视、洗衣机、微波炉这4种家电中选择2种，共有 C("
+    },
+    {
+      "id": "9YNhLzG_6T5h9wz3lKAHF",
+      "order": 2,
+      "type": "single_choice",
+      "content": "小杨和3位朋友约好一起去看电影\"哪吒2\"。打开购票软件，他们发现，已经没有同一排连续的四个座位了（图中每个方框代表一个座位，红色方框代表已经售出）。朋友们商量了一下，决定分为两组，每组两人在同一排的相邻两个座位，且两组之间至少有一对座位是前后相邻的。请问共有多少种购票方案？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "495"
+        },
+        {
+          "label": "B",
+          "text": "96"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n1.  **理解核心条件：** 购票方案必须是两组各两个相邻座位，且这两组之间至少有一对座位是前后相邻的"
+    },
+    {
+      "id": "XhQS4btuCbUTcB_9h_I9W",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面关于C++类构造和析构函数的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "构造函数不能声明为虚函数。"
+        },
+        {
+          "label": "B",
+          "text": "析构函数必须声明为虚函数。"
+        },
+        {
+          "label": "C",
+          "text": "类的默认构造函数可以被声明为private。"
+        },
+        {
+          "label": "D",
+          "text": "类的析构函数可以被声明为private。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "析构函数并非必须声明为虚函数。只有当基类指针可能指向派生类对象时，为了确保通过基类指针删除对象时能正确调用派生类的析构函数"
+    },
+    {
+      "id": "QhFAzeDQjyvOJpw_L8k6-",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下列关于树和图的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "树是一种有向无环图，有向无环图都是一棵树。"
+        },
+        {
+          "label": "B",
+          "text": "如果把树看做有向图，每个节点指向其子节点，则该图是弱连通图。"
+        },
+        {
+          "label": "C",
+          "text": "N个顶点且连通的无向图，其最小生成树一定包含N-1个条边。"
+        },
+        {
+          "label": "D",
+          "text": "N+1个顶点、N条边的有向图，一定不是强连通的。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A选项错误。\"树是一种有向无环图\"不完全准确，树通常指无向无环图，若为有向，则通常指有根树。更重要的是，\""
+    },
+    {
+      "id": "1JPu5exbhI2YWA3sGdABm",
+      "order": 5,
+      "type": "single_choice",
+      "content": "从1到2025这2025个数中，包含数字5的个数（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "600"
+        },
+        {
+          "label": "B",
+          "text": "601"
+        },
+        {
+          "label": "C",
+          "text": "602"
+        },
+        {
+          "label": "D",
+          "text": "603"
+        }
+      ],
+      "answer": "D",
+      "explanation": "此题考察对数字规律的理解和计数能力。我们可以分段统计包含数字5的个数：\n\n1.  **1到999之间：**\n    *   个"
+    },
+    {
+      "id": "r3OY2akcdZc0Rd2VZ-wl6",
+      "order": 6,
+      "type": "single_choice",
+      "content": "已定义 `double` 类型的变量 `r` 和 `theta`，分别表示图中圆半径和圆心角。下列表达式中可以求出弦长 `s` 的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`r * cos(theta)`"
+        },
+        {
+          "label": "B",
+          "text": "`r * cos(theta / 2) * 2`"
+        },
+        {
+          "label": "C",
+          "text": "`r * sin(theta)`"
+        },
+        {
+          "label": "D",
+          "text": "`r * sin(theta / 2) * 2`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。弦长 `s` 可以通过将圆心角 `theta` 平分，形成两个直角三角形来计算。在每个直角三角形中，半径 `r` 是斜边，半弦长是 `r * sin(theta / 2)`。因此，完整的弦长 `s` 等于 `2 * r * sin(theta / 2)`，对应选项 D。选项 A、B、C 的表达式不符合弦长的几何计算公式。"
+    },
+    {
+      "id": "wfvs6HJuCjUR2qVdgwtFg",
+      "order": 7,
+      "type": "single_choice",
+      "content": "N个节点的平衡二叉树的高为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "floor(log2(N))"
+        },
+        {
+          "label": "B",
+          "text": "ceil(log2(N))"
+        },
+        {
+          "label": "C",
+          "text": "floor(log2(N)) + 1"
+        },
+        {
+          "label": "D",
+          "text": "无法确定。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "“平衡二叉树”是一个通用概念，包含多种具体实现（如AVL树、红黑树等）。不同类型的平衡二叉树，在节点数量N相同时，其高度可能不同。例如，一个完全二叉树是平衡二叉树的一种，其高度接近 `log2(N)`，但其他平衡二叉树（如某些AVL树）在相同节点数下可能更高。因此，仅凭“N个节点”和“平衡二叉树”无法确定唯一高度，选项A、B、C给出的具体对数公式不能涵盖所有情况。"
+    },
+    {
+      "id": "QZyRpSrWxHZTMrdpM-kpH",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下列关于算法的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果有足够的时间和空间，枚举法能解决一切有限的问题。"
+        },
+        {
+          "label": "B",
+          "text": "分治算法将原问题分为多个子问题进行求解，且分解出的子问题必须相互独立。"
+        },
+        {
+          "label": "C",
+          "text": "如果能找到合理的贪心原则，贪心算法往往能够比其他方法更快求解。"
+        },
+        {
+          "label": "D",
+          "text": "倍增法在搜索未知长度的有序数组时，通过动态倍增或减半步长，快速定位目标范围。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项B错误，因为分治算法的子问题不一定相互独立，它们可以重叠，此时常结合动态规划来避免重复计算。选项A正确，枚举法在理论上，只要问题规模有限且有足够资源，总能找到解。选项C正确，贪心算法如果能找到正确的贪心策略，通常"
+    },
+    {
+      "id": "wUD_v97Lg5PwyX7ArK94N",
+      "order": 9,
+      "type": "single_choice",
+      "content": "2025是个神奇的数字，因为它是由两个数20和25拼接而成，而且2025 = (20 + 25)^2。小杨决定写个程序找找小于N的正整数中共有多少这样神奇的数字。下面程序横线处应填入的是（ ）。\n\n```cpp\n#include <string>\nint count_miracle(int N) {\n    int cnt = 0;\n    for (int n = 1; n * n < N; n++) {\n        int n2 = n * n;\n        std::string s = std::to_string(n2);\n        for (int i = 1; i < s.length(); i++)\n            if (s[i] != '0') {\n                std::string sl = s.substr(0, i);\n                std::string sr = s.substr(i);\n                int nl = std::stoi(sl);\n                int nr = std::stoi(sr);\n                if (_________) // 在此处填入选项\n                    cnt++;\n            }\n    }\n    return cnt;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`nl + nr == n`"
+        },
+        {
+          "label": "B",
+          "text": "`nl + nr == n2`"
+        },
+        {
+          "label": "C",
+          "text": "`(nl + nr) * (nl + nr) == n`"
+        },
+        {
+          "label": "D",
+          "text": "`(nl + nr) ^ 2 == n2`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "题目要求判断一个数 `n2` 是否满足 `n2 = (nl + nr)^2`。\n*   在代码中，`n2` 已经被赋值为 `n *"
+    },
+    {
+      "id": "13CDxjsR_jW3sMHhF0uKb",
+      "order": 10,
+      "type": "single_choice",
+      "content": "2025是个神奇的数字，因为它是由两个数20和25拼接而成，而且2025 = (20 + 25)^2。小杨决定写个程序找找小于N的正整数中共有多少这样神奇的数字。该函数的时间复杂度为（ ）。\n\n```cpp\n#include <string>\nint count_miracle(int N) {\n    int cnt = 0;\n    for (int n = 1; n * n < N; n++) {\n        int n2 = n * n;\n        std::string s = std::to_string(n2);\n        for (int i = 1; i < s.length(); i++)\n            if (s[i] != '0') {\n                std::string sl = s.substr(0, i);\n                std::string sr = s.substr(i);\n                int nl = std::stoi(sl);\n                int nr = std::stoi(sr);\n                if (_________) // 在此处填入选项\n                    cnt++;\n            }\n    }\n    return cnt;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(N log N)"
+        },
+        {
+          "label": "B",
+          "text": "O(N^(1/2))"
+        },
+        {
+          "label": "C",
+          "text": "O(N^(1/2) log N)"
+        },
+        {
+          "label": "D",
+          "text": "O(N^(1/2) (log N)^2)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "外层循环 `for (int n = 1; n * n < N; n++)` 运行大约 `sqrt(N)` 次。在循环内部，`std::"
+    },
+    {
+      "id": "ICvhXQAKZAEz1YMl-7Dhx",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面的欧氏筛法程序中，两个横线处应填入的分别是（ ）。\n\n```cpp\nint primes[MAXP], num = 0;\nbool isPrime[MAXN + 1] = {false};\nvoid sieve() {\n    for (int n = 2; n <= MAXN; n++) {\n        if (!isPrime[n])\n            primes[num++] = n;\n        for (int i = 0; i < num && ________; i++) { // 在此处填入选项\n            isPrime[n * primes[i]] = true;\n            if (________) // 在此处填入选项\n                break;\n        }\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "第一处：`n * primes[i] < MAXN`\n第二处：`n % primes[i] == 0`"
+        },
+        {
+          "label": "B",
+          "text": "第一处：`n * primes[i] < MAXN`\n第二处：`primes[i] > n`"
+        },
+        {
+          "label": "C",
+          "text": "第一处：`n * primes[i] <= MAXN`\n第二处：`n % primes[i] == 0`"
+        },
+        {
+          "label": "D",
+          "text": "第一处：`n * primes[i] <= MAXN`\n第二处：`primes[i] > n`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "第一处应填入 `n * primes[i] <= MAXN`，确保只标记在 `isPrime` 数组有效范围内的合数，因为数组索引最大为 `MAX"
+    },
+    {
+      "id": "e85whRzDuwPN8kNHP4qdn",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面Floyd算法中，横线处应该填入的是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\n#define N 21\n#define INF 99999999\nint map[N][N];\nint main() {\n    int n, m, t1, t2, t3;\n    cin >> n >> m;\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            if (i == j)\n                map[i][j] = 0;\n            else\n                map[i][j] = INF;\n        }\n    }\n    for (int i = 1; i <= m; i++) {\n        cin >> t1 >> t2 >> t3;\n        map[t1][t2] = t3;\n    }\n    for (int k = 1; k <= n; k++)\n        for (int i = 1; i <= n; i++)\n            for (int j = 1; j <= n; j++)\n                if (map[i][j] > map[i][k] + map[k][j])\n                    ________; // 在此处填入选项\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            cout.width(4);\n            cout << map[i][j];\n        }\n        cout << endl;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`map[i][j] = map[i][k] + map[k][j]`"
+        },
+        {
+          "label": "B",
+          "text": "`map[i][k] = map[i][j] - map[k][j]`"
+        },
+        {
+          "label": "C",
+          "text": "`map[i][j] = map[i][k] - map[k][j]`"
+        },
+        {
+          "label": "D",
+          "text": "`map[k][j] = map[i][j] - map[i][k]`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Floyd算法的核心思想是尝试通过每个节点 `k` 作为中间点来更新任意两点 `i` 和 `j` 之间的最短路径。当 `if (map[i][j] > map[i][k] + map[k][j])` 条件成立时，表示通过 `k` 节点从 `i` 到 `j` 的路径 (`map[i][k] + map[k][j]`) 比当前已知的路径 (`map[i][j]`) 更短。此时，我们需要将 `map[i][j]` 更新为这个更短的值，即 `map[i][j] = map[i][k] + map[k][j]`。因此，选项 A 是正确的。其他选项涉及减法操作，不符合最短路径的计算和更新逻辑。"
+    },
+    {
+      "id": "cM6SqGEoQ57je_pWf7q2A",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面Floyd算法程序的时间复杂度为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\n#define N 21\n#define INF 99999999\nint map[N][N];\nint main() {\n    int n, m, t1, t2, t3;\n    cin >> n >> m;\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            if (i == j)\n                map[i][j] = 0;\n            else\n                map[i][j] = INF;\n        }\n    }\n    for (int i = 1; i <= m; i++) {\n        cin >> t1 >> t2 >> t3;\n        map[t1][t2] = t3;\n    }\n    for (int k = 1; k <= n; k++)\n        for (int i = 1; i <= n; i++)\n            for (int j = 1; j <= n; j++)\n                if (map[i][j] > map[i][k] + map[k][j])\n                    ________; // 在此处填入选项\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            cout.width(4);\n            cout << map[i][j];\n        }\n        cout << endl;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(N)"
+        },
+        {
+          "label": "B",
+          "text": "O(N^2)"
+        },
+        {
+          "label": "C",
+          "text": "O(N^3)"
+        },
+        {
+          "label": "D",
+          "text": "O(N^2 log N)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Floyd算法的核心在于其三层嵌套循环：`for (int k = 1; k <= n; k++)`、`for (int i = 1; i <= n; i++)` 和 `for (int j = 1; j <= n; j++)`。每层循环都执行 `n` 次，因此总的运算次数是 `n * n * n = n^3`。所以，该算法的时间复杂度为 O(N^3)，选项 C 正确。其他选项 O(N)、O(N^2) 和 O(N^2 log N) 均不符合这种三层循环的计算模式。"
+    },
+    {
+      "id": "auBcBcsi59y1a9EBxD6pP",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下列程序实现了输出杨辉三角形，代码中横线部分应该填入的是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n#define N 35\nint a[N];\nint main() {\n    int n;\n    cin >> n;\n    for (int i = 0; i < n; i++) {\n        a[i] = 1;\n        for (int j = i - 1; j > 0; j--)\n            ________; // 在此处填入选项\n        for (int j = 0; j <= i; j++)\n            cout << a[j] << \" \";\n        cout << endl;\n    }\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`a[j] += a[j + 1]`"
+        },
+        {
+          "label": "B",
+          "text": "`a[j] += a[j - 1]`"
+        },
+        {
+          "label": "C",
+          "text": "`a[j - 1] += a[j]`"
+        },
+        {
+          "label": "D",
+          "text": "`a[j + 1] += a[j]`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "杨辉三角形的每个数等于它正上方和左上方两个数之和。代码中的内层循环 `for (int j = i - 1; j > 0; j"
+    },
+    {
+      "id": "q7Jztn_HA-JB8Ya2VvjmT",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列程序实现了输出杨辉三角形，其时间复杂度为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n#define N 35\nint a[N];\nint main() {\n    int n;\n    cin >> n;\n    for (int i = 0; i < n; i++) {\n        a[i] = 1;\n        for (int j = i - 1; j > 0; j--)\n            ________; // 在此处填入选项\n        for (int j = 0; j <= i; j++)\n            cout << a[j] << \" \";\n        cout << endl;\n    }\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n^2)"
+        },
+        {
+          "label": "D",
+          "text": "O(n^3)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该程序包含一个外层循环 `for (int i = 0; i < n; i++)`，它执行 `n` 次。在外层循环内部，有两个内层循环"
+    },
+    {
+      "id": "fUHxzazCH4Ym-9D1giaDh",
+      "order": 16,
+      "type": "true_false",
+      "content": "表达式 `'5' - 3.0` 的结果为 `2.0`，类型为 `double`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "字符 `'5'` 的 ASCII 值为 53。在表达式 `'5' - 3.0` 中，`char` 类型的 `'5'` 会被提升为 `double` 类型的 `53.0`。因此，实际计算结果为 `53.0 - 3.0 = 50.0`，类型为 `double`。题目中给出的结果 `2.0` 是错误的，所以该陈述是错误的，正确答案为 F。"
+    },
+    {
+      "id": "mhdAXq7aWb2X_6zKoIBWU",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++语言中，如果想要在一个函数内调用一个类的私有方法，可以在该类中将该函数声明为友元函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，类的 `private` 成员（包括方法）默认只能由该类的成员函数访问。将一个函数声明为类的 `friend` 函数，就赋予了该函数访问该类所有 `private` 和 `protected` 成员的特殊权限。因此，通过友元函数确实可以在类外部调用其私有方法，题目描述是正确的。选项 F 错误，因为它与友元函数的设计目的和功能相悖。"
+    },
+    {
+      "id": "9i9qxW8db1MdJzxTFc36T",
+      "order": 18,
+      "type": "true_false",
+      "content": "插入排序一般是稳定的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "插入排序在将元素插入到已排序部分时，如果遇到与待插入元素相等的元素，会选择停在该相等元素的后面。这样，相同元素的相对顺序就不会改变，从而保持了稳定性。因此，选项T是正确的。选项F错误，因为它否定了插入排序通常是稳定的这一特性。"
+    },
+    {
+      "id": "hzr_T5TrkSL8t8AdGUpPW",
+      "order": 19,
+      "type": "true_false",
+      "content": "5个相同的红球和4个相同的蓝球排成一排，要求蓝球不能相邻，则一共有15种排列方案。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "首先放置5个红球，它们之间和两端会形成6个空位。为了确保4个蓝球不相邻，每个蓝球必须放置在不同的空位中。因此，问题转化为从这6个空位中选择4个来放置蓝球。这可以通过组合数 `C(6, 4)` 计算，即 `6! / (4! * 2!) = 15`。所以，题目中15种排列方案的说法是正确的。"
+    },
+    {
+      "id": "D6YOK0qK-cCcp-_3Bl1Jd",
+      "order": 20,
+      "type": "true_false",
+      "content": "使用 `math.h` 或 `cmath` 头文件中的函数，表达式 `pow(2, 5)` 的结果类型为 `int`、值为 `32`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`pow` 函数（无论在 `math.h` 还是 `cmath` 中）总是返回浮点类型，通常是 `double`。因此，`pow(2, 5)`"
+    },
+    {
+      "id": "Y6aFc74h1yM8AxrY64jCs",
+      "order": 21,
+      "type": "true_false",
+      "content": "C++是一种面向对象编程语言，C则不是。多态是面向对象三大特性之一，虚函数是动态多态的代表特性。因此，使用C语言无法实现虚函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "尽管C语言没有C++中`virtual`关键字和面向对象的直接支持，但虚函数所实现的动态多态机制可以在C语言中模拟。开发者可以通过`struct`（结构体）和`函数指针`数组（模拟虚函数表）来手动实现类似虚函数的功能。因此，题目中“使用C语言无法实现虚函数”的结论是错误的，选项F正确。"
+    },
+    {
+      "id": "jDWtjKKxTEhIlUPieM3Tw",
+      "order": 22,
+      "type": "true_false",
+      "content": "在N个节点的平衡二叉树中查找指定元素的最差时间复杂度为O(N)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "平衡二叉树（如AVL树、红黑树）通过保持树的高度平衡，确保其高度始终为 O(log N)。查找元素需要从根节点向下遍历，最差情况下遍历的路径长度就是树的高度。因此，在N个节点的平衡二叉树中查找指定元素的最差时间复杂度是 O(log N)，而非 O(N)。所以原题目描述是错误的。"
+    },
+    {
+      "id": "YbUW42V2Smi0SR-QnaNMx",
+      "order": 23,
+      "type": "true_false",
+      "content": "定义 `int` 类型的变量 `a` 和 `b`，求二次函数 y = x^2 + ax + b 取最小值时x的值，可以通过表达式 `-a / 2.0` 求得。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "二次函数 `y = Ax^2 + Bx + C` 的对称轴（也是取最小值时x的值）公式为 `x = -B / (2A)`。对于题目中的函数 `y = x^2 + ax + b`，`A=1`，`B=a`，因此 `x = -a / (2 * 1) = -a / 2`。表达式 `-a / 2.0` 正确地计算了这个值，其中 `2.0` 确保进行浮点数除法，得到精确的浮点数结果。因此，该说法是正确的。"
+    },
+    {
+      "id": "snPjGeTJw3k7YitI55g7m",
+      "order": 24,
+      "type": "true_false",
+      "content": "判断无向图中是否有环，可以通过广度优先搜索实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "广度优先搜索（BFS）确实可以用于判断无向图中是否存在环。在BFS遍历过程中，如果从当前节点访问到一个已经被访问过的邻居节点，并且这个邻居节点不是当前节点的直接父节点，就说明图中存在一个环。这是因为BFS会按层探索，如果发现一个非父节点的“回头路”，就意味着形成了闭合路径。因此，选项T是正确的。"
+    },
+    {
+      "id": "Ufvaqi9gfWk8WIvzmCuce",
+      "order": 25,
+      "type": "true_false",
+      "content": "从32名学生中选出4人分别担任班长、副班长、学习委员和组织委员，共有C(32,4)种不同的选法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "题目中不仅要选出4人，还要为他们分配不同的职务（班长、副班长等），这意味着选取的顺序是重要的。当顺序重要时，应使用排列数 `P(n, k)`，而不是组合数 `C(n, k)`。因此，正确的选法数量应为 `P(32, 4)` 种，而非 `C(32, 4)` 种，所以原说法错误。"
+    }
+  ]
+}

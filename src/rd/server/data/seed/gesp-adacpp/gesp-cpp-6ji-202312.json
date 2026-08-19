@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-6ji-202312",
+  "url": "https://adacpp.com/practice/gesp-cpp-6ji-202312",
+  "title": "GESP C++六级 202312",
+  "description": "CCF编程能力等级认证 GESP C++ 六级 2023年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 6,
+    "ym": "202312"
+  },
+  "questions": [
+    {
+      "id": "PiO_Djs86ZMx4r0sbBrZT",
+      "order": 1,
+      "type": "single_choice",
+      "content": "关于C++类和对象的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在C++中，一切皆对象，即便是字面量如整数5等也是对象"
+        },
+        {
+          "label": "B",
+          "text": "在C++中，可以自定义新的类，并实例化为新的对象"
+        },
+        {
+          "label": "C",
+          "text": "在C++中，内置函数和自定义函数，都是类或者对象"
+        },
+        {
+          "label": "D",
+          "text": "在C++中，可以在自定义函数中嵌套定义新的函数"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++标准不允许在函数内部嵌套定义新的函数，这是D选项错误的原因。虽然某些编译器可能作为扩展支持，但这不是标准C++的特性。\n\nA选项的说法在"
+    },
+    {
+      "id": "pNjh9U7Kga6EqxTSBe4Ly",
+      "order": 2,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法，错误的是（ ）。\n\n```cpp\nclass Rectangle\n{\nprivate:\n    class Point\n    {\n    public:\n        double x;\n        double y;\n    };\n    Point a, b, c, d;\n    double length;\n    double width;\npublic:\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "C++中类内部可以嵌套定义类"
+        },
+        {
+          "label": "B",
+          "text": "在类中定义的类被称为内部类，定义类的类被称为外部类"
+        },
+        {
+          "label": "C",
+          "text": "内部类可以随便访问，不需要通过外部类来访问"
+        },
+        {
+          "label": "D",
+          "text": "代码中 Point 被称为内部类，可以通过外部类 Rectangle 来访问， Rectangle::Point"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C 错误，因为内部类 `Point` 的访问受限于其外部类 `Rectangle`，通常需要通过 `Rectangle::Point` 这样的方式来访问，不能“随便访问”。选项 A、B、D 都是正确的描述：A 描述了 C++ 嵌套类的语法特性；B 描述了嵌套类的标准术语；D 描述了内部类的正确访问方式，与 C 的错误说法形成对比。"
+    },
+    {
+      "id": "J8K3UisLFysNpBrWex35L",
+      "order": 3,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法，正确的是（ ）。\n\n```cpp\nusing namespace std;\nclass newClass\n{\n    public:\n        static  int objCounter;\n\n};\nint newClass::objCounter=2;\nint main()\n{\n    newClass classA;\n    newClass classB;\n    cout<<newClass::objCounter<<endl;\n    cout<<classB.objCounter<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "第14行代码错误，第15行正确"
+        },
+        {
+          "label": "B",
+          "text": "第15行代码错误，第14行代码正确"
+        },
+        {
+          "label": "C",
+          "text": "第14、15两行代码都正确"
+        },
+        {
+          "label": "D",
+          "text": "第6行代码可修改为 objCounter += 1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "静态成员变量 `objCounter` 属于类本身，不属于任何特定对象。在C++中，可以通过 `类名::成员名` (如 `newClass::objCounter`) 或 `对象名.成员名` (如 `classB.objCounter`) 两种方式访问静态成员，这两种方式都是合法的。因此，第14和15行代码都"
+    },
+    {
+      "id": "C5DyYUEIHlRE-3CD90avr",
+      "order": 4,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法，错误的是（ ）。\n\n```cpp\nstruct BiNode {\n    char data;\n    BiNode* lchid,*rchid;\n};\nclass BiTree {\nprivate:\n    BiNode* Creat();\n    void Release(BiNode* bt);\n    BiNode* root;\npublic:\n    BiTree() {\n        root = Creat();\n    }\n    ~BiTree() {\n        Release(root);\n    }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "上列C++代码适用于构造各种二叉树"
+        },
+        {
+          "label": "B",
+          "text": "代码 struct BiNode 用于构造二叉树的节点"
+        },
+        {
+          "label": "C",
+          "text": "代码 BiTree(){root=Creat();} 用于构造二叉树"
+        },
+        {
+          "label": "D",
+          "text": "析构函数不可以省略"
+        }
+      ],
+      "answer": "D",
+      "explanation": "析构函数 `~BiTree()` 负责调用 `Release(root)` 来释放二叉树节点占用的动态内存。如果省略析构函数，C++编译器会自动生成一个默认析"
+    },
+    {
+      "id": "CZThzHwQZSzXINokv3BmY",
+      "order": 5,
+      "type": "single_choice",
+      "content": "基于第4题的定义，有关下面C++代码的说法正确的是（ ）。\n\n```cpp\nvoid Order(BiNode* bt) {\n    if (bt == nullptr)\n        return;\n    else {\n        cout << bt->data;\n        Order(bt->lchid);\n        Order(bt->rchid);\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "代码中 Order() 函数是中序遍历二叉树的方法"
+        },
+        {
+          "label": "B",
+          "text": "代码中 Order() 先访问根节点，然后对左子树进行前序遍历，再对右子树前序遍历"
+        },
+        {
+          "label": "C",
+          "text": "代码中 Order() 先访问中序遍历左子树，然后访问根节点，最后则是中序遍历右子树"
+        },
+        {
+          "label": "D",
+          "text": "代码中 Order() 先后序遍历左子树，然后后序遍历右子树，最后访问根节点"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码中，`cout << bt->data;` 首先访问根节点，然后 `Order(bt->lchid);` 递归地对左子树进行前序遍历，最后 `Order(bt->rchid);` 对右子树进行前序遍历。这种“根-左-右”的访问顺序正是前序遍历的定义，因此选项B正确。选项A和C描述的是中序遍历（左-根-右），选项D描述的是后序遍历（左-右-根），均与代码的执行顺序不符。"
+    },
+    {
+      "id": "lCOGdWeM9rJMTft2RuTtX",
+      "order": 6,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法正确的是（ ）。\n\n```cpp\ntypedef struct LinkList {\n\n    int data;\n\n    LinkList* next;\n\n    LinkList* prev;\n\n}LinkList,LinkNode;\nbool ListInit(LinkList* &L) {\n\n    L = new LinkNode;\n    if (!L)return false;\n\n    L->next = NULL;\n    L->prev = NULL;\n    L->data = -1;\n\n    return true;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "上述代码构成单向链表"
+        },
+        {
+          "label": "B",
+          "text": "上述代码构成双向链表"
+        },
+        {
+          "label": "C",
+          "text": "上述代码构成循环链表"
+        },
+        {
+          "label": "D",
+          "text": "上述代码构成指针链表"
+        }
+      ],
+      "answer": "B",
+      "explanation": "结构体 `LinkList` 中包含 `LinkList* next;` 和 `LinkList* prev;` 两个指针，分别用于指向下一个和上一个节点，这是双向链表的定义特征，因此B选项正确。单向链表只包含 `next` 指针（A错误）。循环链表的尾节点会指向头节点，而代码中将 `next` 和 `prev` 都初始化为 `NULL`，不构成循环（C错误）。“指针链表”不是标准的链表类型，所有链表都通过指针连接（D错误）。"
+    },
+    {
+      "id": "UPLxKGJa_Pc_sbAXouvMI",
+      "order": 7,
+      "type": "single_choice",
+      "content": "对 hello world 使用霍夫曼编码（Huffman Coding），最少bit（比特）为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "32"
+        },
+        {
+          "label": "C",
+          "text": "64"
+        },
+        {
+          "label": "D",
+          "text": "88"
+        }
+      ],
+      "answer": "B",
+      "explanation": "对 \"hello world\" 进行霍夫曼编码。首先统计字符频率：`h:1, e:1, l:3, o:2, ' ':1, w:1"
+    },
+    {
+      "id": "mxreuvW2hKkPGmsYehAZg",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面的 fiboA() 和 fiboB() 两个函数分别实现斐波那契数列，该数列第1、第2项值为1，其余各项分别为前两项之和。下面有关说法错误的是（ ）。\n\n```cpp\nint fiboA(int n)\n{\n    if(n==0)\n        return 1;\n    if(n==1)\n        return 1;\n    else\n    {\n        return fiboA(n-1)+fiboA(n-2);\n    }\n}\nint fiboB(int n)\n{\n    if( (n==0) || (n==1) ){\n        fiboB[n]=n;\n        return n;\n    }\n    else{\n        if(fiboB[n] == 0){\n            fiboB[n]=FiboB(n-1)+FiboB(n-2);\n        }\n        return fiboB[n];\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "fiboA() 采用递归方式实现斐波那契数列"
+        },
+        {
+          "label": "B",
+          "text": "fiboB() 采用动态规划算法实现斐波那契数列"
+        },
+        {
+          "label": "C",
+          "text": "当N值较大时，fiboA() 存在大量重复计算"
+        },
+        {
+          "label": "D",
+          "text": "由于 fiboA() 代码较短，其执行效率较高"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`fiboA()` 采用朴素递归，虽然代码简洁，但当N值较大时会进行大量的重复计算，导致时间复杂度呈指数级增长，执行效率非常低。因此"
+    },
+    {
+      "id": "K3tjxaeC4Es_vq8Tn-Vvw",
+      "order": 9,
+      "type": "single_choice",
+      "content": "有关下面C++代码不正确的说法是（ ）。\n\n```cpp\nint Depth(BiTree T)\n{\n    if (T == NULL)\n    {\n        return 0;\n    }\n    else\n    {\n        int m = Depth(T->lchild);\n        int n = Depth(T->rchild);\n        if (m > n)\n        {\n            return m + 1;\n        }\n        else\n        {\n            return n + 1;\n        }\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "该代码可用于求解二叉树的深度"
+        },
+        {
+          "label": "B",
+          "text": "代码中函数 Depth() 的参数 T 表示根节点，非根节点不可以作为参数"
+        },
+        {
+          "label": "C",
+          "text": "代码中函数 Depth() 采用了递归方法"
+        },
+        {
+          "label": "D",
+          "text": "代码中函数 Depth() 可用于求解各种形式的二叉树深度，要求该二叉树节点至少有 left 和 right 属性"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`Depth()` 函数的参数 `T` 在递归调用中可以表示树中的任何节点，包括原始树的根节点和其子节点，因此非根节点也可以作为参数传入。选项A、C、D的说法都是正确的：该代码是求解二叉树深度的标准递归算法，通过调用自身实现递归，并且适用于任何具有 `lchild` 和 `rchild` 属性"
+    },
+    {
+      "id": "2-JK7OrUgbWif5LfOWI70",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面有关树的存储，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "完全二叉树可以用 list 存储"
+        },
+        {
+          "label": "B",
+          "text": "一般二叉树都可以用 list 存储，空子树位置可以用 None 表示"
+        },
+        {
+          "label": "C",
+          "text": "满二叉树可以用 list 存储"
+        },
+        {
+          "label": "D",
+          "text": "树数据结构，都可以用 list 存储"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n\n1.  **D 错误的原因：** 树数据结构种类繁多，包括普通树（每个节点可以有任意数量的子节点）。这类树"
+    },
+    {
+      "id": "PzE14k6q57edgsKzkE27C",
+      "order": 11,
+      "type": "single_choice",
+      "content": "构造二叉树 [1,2,3,null,4] （ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1(2()(4))(3)"
+        },
+        {
+          "label": "B",
+          "text": "1(2(3)())(4)"
+        },
+        {
+          "label": "C",
+          "text": "(1,2(3),(4))"
+        },
+        {
+          "label": "D",
+          "text": "(1,(2)(3),(4))"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\n1.  **解释 A 为何正确：**\n    题目中的 `[1,2,3,null,4]` 表示一个二叉树的"
+    },
+    {
+      "id": "GVwgrQzlNSfEel6KuLXYa",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面有关布尔类型的函数的说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "bool 类型函数只能返回0或者1两种值"
+        },
+        {
+          "label": "B",
+          "text": "bool 类型函数可以返回任何整数值"
+        },
+        {
+          "label": "C",
+          "text": "bool 类型函数必须有参数传递"
+        },
+        {
+          "label": "D",
+          "text": "bool 类型函数没有返回值"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\nA. `bool` 类型函数返回 `true` 或 `false`。在 C++ 中，`true` 会被隐式转换为整数 `1`，"
+    },
+    {
+      "id": "y6K2TnCcNsyM5Lfyl7vjQ",
+      "order": 13,
+      "type": "single_choice",
+      "content": "通讯卫星在通信网络系统中主要起到（ ）的作用。",
+      "options": [
+        {
+          "label": "A",
+          "text": "信息过滤"
+        },
+        {
+          "label": "B",
+          "text": "信号中继"
+        },
+        {
+          "label": "C",
+          "text": "避免攻击"
+        },
+        {
+          "label": "D",
+          "text": "数据加密"
+        }
+      ],
+      "answer": "B",
+      "explanation": "通讯卫星的主要作用是接收地面站发出的信号，然后将其放大并转发到另一个地面站，实现远距离通信，这就是信号中继。因此，B选项正确。信息过滤、避免攻击和数据加密通常由网络终端设备或专门的安全系统完成，并非通讯卫星的核心功能。"
+    },
+    {
+      "id": "VNeIofgULEI-GCUratU1U",
+      "order": 14,
+      "type": "single_choice",
+      "content": "小杨想编写一个判断任意输入的整数N是否为素数的程序，下面哪个方法不合适？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "埃氏筛法"
+        },
+        {
+          "label": "B",
+          "text": "线性筛法"
+        },
+        {
+          "label": "C",
+          "text": "二分答案"
+        },
+        {
+          "label": "D",
+          "text": "枚举法"
+        }
+      ],
+      "answer": "C",
+      "explanation": "二分答案（Binary Search）适用于在有序数据中查找特定值或解决具有单调性的问题，而判断一个数是否为素数是直接的性质判断，不符合二分查找的应用场景，因此不合适。埃氏筛法和线性筛法可以高效地找出一定范围内的所有素数，从而判断N是否为素数。枚举法（即试除法）则是判断单个整数N是否为素数最直接、最基本的方法。"
+    },
+    {
+      "id": "jcTtrGuMZnynA8WGbFi1J",
+      "order": 15,
+      "type": "single_choice",
+      "content": "内排序有不同的类别，下面哪种排序算法和冒泡排序是同一类？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "希尔排序"
+        },
+        {
+          "label": "B",
+          "text": "快速排序"
+        },
+        {
+          "label": "C",
+          "text": "堆排序"
+        },
+        {
+          "label": "D",
+          "text": "插入排序"
+        }
+      ],
+      "answer": "B",
+      "explanation": "冒泡排序和快速排序都属于交换排序（Exchange Sort）类别，它们通过比较并交换元素的位置来完成排序。希尔排序属于插入排序的改进，堆排序属于选择排序，而插入排序本身就是插入排序类别。因此，快速排序与冒泡排序是同一类。"
+    },
+    {
+      "id": "6h1Wk9z23VT2RqAKu0XZi",
+      "order": 16,
+      "type": "true_false",
+      "content": "在面向对象中，方法在C++的class中表现为class内定义的函数。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，面向对象概念中的“方法”（method）正是通过在类（class）内部定义函数来实现的，这些函数被称为“成员函数”。成员函数定义了对象可以执行的行为或操作，完全符合题目的描述，因此选项T是正确的。选项F错误，因为这是C++实现面向对象方法的基本方式。"
+    },
+    {
+      "id": "z7vjZpSHF5jO1XJ5dPmHD",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++类的定义中，可以没有构造函数，会给出默认的构造函数（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "当C++类中没有显式定义任何构造函数时，编译器会自动生成一个默认的（无参数的）构造函数。这个默认构造函数允许我们创建类的对象，并对成员变量进行默认初始化。因此，题目描述是正确的，选项T为正确答案。"
+    },
+    {
+      "id": "7xZcmdAjDl2qjl91GnGS_",
+      "order": 18,
+      "type": "true_false",
+      "content": "如果某个C++对象（object）支持下标运算符（方括号运算符），则该对象在所对应class中以成员函数的形式进行了重载。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++规定下标运算符 `[]` 只能通过类的非静态成员函数进行重载，不能作为全局函数或友元函数。这意味着，如果一个对象支持下标操作（例如 `obj[index]`），那么它所属的类中必然定义了 `operator[]` 成员函数。因此，题目的描述是正确的。"
+    },
+    {
+      "id": "8B-D5z4Trag8BKWmfDx3Q",
+      "order": 19,
+      "type": "true_false",
+      "content": "深度优先搜索（DFS，Depth First Search的简写）属于图算法，其过程是对每一个可能的分支路径深入到不能再深入为止，而且每个节点只能访问一次。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "深度优先搜索（DFS）确实是一种重要的图遍历算法，它的特点是沿着一条路径尽可能地深入探索，直到无路可走才回溯。为了确保遍历的有效性和避免重复处理，DFS在标准实现中会标记已访问节点，确保每个节点只被访问一次。因此，题目描述完全符合DFS的定义和工作原理。"
+    },
+    {
+      "id": "x6N7-vtuGcPJkUSLs8PmU",
+      "order": 20,
+      "type": "true_false",
+      "content": "哈夫曼编码（Huffman Coding）具有唯一性，因此有确定的压缩率。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哈夫曼编码在构建哈夫曼树时，当遇到频率相同的节点时，它们的合并顺序可以不同，这会导致生成不同的哈夫曼树结构，进而产生不同的字符编码（"
+    },
+    {
+      "id": "C0oHE6NWyf3dVibGZqgdW",
+      "order": 21,
+      "type": "true_false",
+      "content": "在下面C++代码中，由于删除了变量 ptr ，因此 ptr 所对应的数据也随之删除，故第8行代码被执行时，将报错。（ ）\n\n```cpp\nint * ptr=new int(10);\ncout<<*ptr<<endl;\ndelete ptr;\ncout<<*ptr<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`delete ptr` 语句释放了 `ptr` 所指向的内存，但 `ptr` 本身仍然存储着该内存的地址，成为一个悬空指针。再次访问 `*ptr` 会导致未定义行为。未定义行为意味着程序可能崩溃、可能输出旧值、也可能输出垃圾数据，但并非一定会“报错”或立即崩溃。因此，原题目中“将报错”的说法不准确，故答案为F。"
+    },
+    {
+      "id": "WQcIEIZIjES3FV1IShp8N",
+      "order": 22,
+      "type": "true_false",
+      "content": "二叉搜索树查找的平均时间复杂度为O(log N)。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "二叉搜索树的查找过程类似于二分查找，每次比较都会将搜索范围缩小一半。在平均情况下，二叉搜索树被认为是相对平衡的，因此查找路径的长度大致等于树的高度，即 O(log N)。选项 F 错误，因为它否定了这个在平均情况下的高效性。"
+    },
+    {
+      "id": "4RI2_gD-vMkA3L6pPROdy",
+      "order": 23,
+      "type": "true_false",
+      "content": "二叉搜索树可以是空树（没有任何节点）或者单节点树（只有一个节点），或者多节点。如果是多节点，则左节点的值小于父节点的值，右节点的值大于父节点的值，由此推理，右节点树的值都大于根节点的值，左节点树的值都小于根节点的值。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "二叉搜索树（BST）的定义允许它是空树或只有一个节点的树。当有多个节点时，其核心性质是左子节点的值小于父节点，右子节点的值大于父节点。基于此规则，左子树中的所有节点值都会小于其根节点，而右子树中的所有节点值都会大于其根节点。题目描述完全符合二叉搜索树的这些基本定义和性质，因此是正确的。"
+    },
+    {
+      "id": "ltlGXgy0gHXhFbddOeVhI",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨想写一个程序来算出正整数N有多少个因数，经过思考他写出了一个重复没有超过N/2次的循环就能够算出来了。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "一个正整数N的因数，除了N本身，最大不会超过N/2。例如，10的因数有1, 2, 5, 10"
+    },
+    {
+      "id": "9UVEQJ0zFh2mRWelQRAg1",
+      "order": 25,
+      "type": "true_false",
+      "content": "同样的整数序列分别保存在单链表和双向链中，这两种链表上的简单冒泡排序的复杂度相同。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "冒泡排序的核心是比较和交换相邻元素。在单链表和双向链表中，访问下一个元素的时间复杂度都是 `O(1)`。交换相邻的两个节点（通过修改指针）的操作，在两种链表中也都是 `O(1)`。由于冒泡排序总共需要 `O(N^2)` 次比较和交换操作，且每次操作的开销在两种链表中都相同，因此它们的整体时间复杂度都是 `O(N^2)`，是相同的。所以，原说法正确。"
+    }
+  ]
+}

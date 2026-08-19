@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-7ji-202403",
+  "url": "https://adacpp.com/practice/gesp-cpp-7ji-202403",
+  "title": "GESP C++七级 202403",
+  "description": "CCF编程能力等级认证 GESP C++ 七级 2024年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 7,
+    "ym": "202403"
+  },
+  "questions": [
+    {
+      "id": "cMyyTxGGvyXue9ra0wM90",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下列关于排序的说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "冒泡排序是最快的排序算法之一。"
+        },
+        {
+          "label": "B",
+          "text": "快速排序通常是不稳定的。"
+        },
+        {
+          "label": "C",
+          "text": "最差情况，N个元素做归并排序的时间复杂度为O(N)。"
+        },
+        {
+          "label": "D",
+          "text": "以上均不正确。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "快速排序在标准实现中，由于分区操作可能改变相等元素的相对顺序，因此通常是不稳定的，选项B正确。冒泡排序的时间复杂度为O(N^2)，远慢于快速排序、归并排序等O(N log N)的算法，并非最快，所以A错误。归并排序在最差情况下的时间复杂度也是O(N log N)，而不是O(N)，所以C错误。由于选项B是正确的，因此D不正确。"
+    },
+    {
+      "id": "aiQ6_GEBUJ1jwpF_87xbA",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面的程序属于哪种算法（ ）。\n\n```cpp\nint pos[8];\nvoid queen(int n) {\n    for (int i = 0; i < 8; i++) {\n        pos[n] = i;\n        bool attacked = false;\n        for (int j = 0; j < n; j++)\n            if (pos[n] == pos[j] || pos[n] + n == pos[j] + j || pos[n] - n == pos[j] - j) {\n                attacked = true;\n                break;\n            }\n        if (attacked)\n            continue;\n        if (n == 7) {\n            return;\n        } else {\n            queen(n + 1);\n        }\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "贪心算法"
+        },
+        {
+          "label": "B",
+          "text": "动态规划"
+        },
+        {
+          "label": "C",
+          "text": "深度优先搜索"
+        },
+        {
+          "label": "D",
+          "text": "广度优先搜索"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该程序使用递归函数 `queen` 逐行放置皇后。在放置第 `n` 个皇后时，它会尝试所有可能的列，如果当前放置合法，就立即递归调用 `"
+    },
+    {
+      "id": "eQJKkGvEFqCMil89GJ5lA",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面有关C++类的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "C++类对象销毁时，会执行析构函数。"
+        },
+        {
+          "label": "B",
+          "text": "C++类可以通过定义构造函数实现自动类型转换。"
+        },
+        {
+          "label": "C",
+          "text": "C++类可以通过重载 [] 运算符实现通过给定下标访问数组成员的元素。"
+        },
+        {
+          "label": "D",
+          "text": "C++类可以包含任意类型的成员变量。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D选项错误，因为C++类不能直接包含自身类型的对象作为成员变量，否则会导致无法确定类的大小。但可以包含自身类型的指针或引用。A、B、C"
+    },
+    {
+      "id": "Mgb9hmvmXnM8wy1JyxEI0",
+      "order": 4,
+      "type": "single_choice",
+      "content": "一个连通的简单无向图，共有28条边，则该图至少有（ ）个顶点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "C",
+      "explanation": "对于一个有 `n` 个顶点的简单无向图，最多可以有 `n * (n - 1) / 2` 条边。题目给出图有28条边，要找最少的顶点数，所以需要满足 `n * (n - 1) / 2 >= 28`。\n\n*   当 `n = 6` 时，最多有 `6 * 5 / 2 = 15` 条边，不足28条。\n*   当 `n = 7` 时，最多有 `7 * 6 / 2 = 21` 条边，不足28条。\n*   当 `n = 8` 时，最多有 `8 * 7 / 2 = 28` 条边。这意味着一个包含8个顶点的完全图恰好有28条边，且是连通的。\n*   当 `n = 9` 时，最多有 `9 * 8 / 2 ="
+    },
+    {
+      "id": "3GN7K3KPkgMoPz7n0F3F-",
+      "order": 5,
+      "type": "single_choice",
+      "content": "以下哪个方案不能合理解决或缓解哈希表冲突（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在每个哈希表项处，使用单链表管理该表项的冲突元素。"
+        },
+        {
+          "label": "B",
+          "text": "建立额外的单链表，用来管理所有发生冲突的元素。"
+        },
+        {
+          "label": "C",
+          "text": "使用不同的哈希函数再建立一个哈希表，用来管理所有发生冲突的元素。"
+        },
+        {
+          "label": "D",
+          "text": "用新元素覆盖发生冲突的哈希表项。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D选项会直接用新元素覆盖旧元素，导致原有数据丢失，这并非解决冲突，而是破坏数据，因此不合理。A选项是链地址法，通过在每个哈希表项处使用链表来存储冲突元素；B选项是建立额外结构来管理所有冲突元素；C选项是使用不同的哈希函数或辅助哈希表"
+    },
+    {
+      "id": "ykIlF57xShd-MuFXB1Yor",
+      "order": 6,
+      "type": "single_choice",
+      "content": "已知一颗二叉树的中序遍历序列为：{C F B A E D G}，后序遍历序列为：{F C B E G D A}，则下列说法中正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "该树是平衡二叉树。"
+        },
+        {
+          "label": "B",
+          "text": "该树的高为4。"
+        },
+        {
+          "label": "C",
+          "text": "该树有4个叶节点。"
+        },
+        {
+          "label": "D",
+          "text": "以上说法都不对。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据中序遍历和后序遍历序列，我们可以唯一地重建这颗二叉树。后序遍历的最后一个元素 `A` 是根节点，中序遍历中 `A"
+    },
+    {
+      "id": "13OXnzId5pLpxRXKCFLK5",
+      "order": 7,
+      "type": "single_choice",
+      "content": "以下关于二叉排序树的说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "二叉排序树的中序遍历序列一定是有序的。"
+        },
+        {
+          "label": "B",
+          "text": "在含 n 个节点的二叉排序树中查找元素，最差情况的时间复杂度为O(log(n))。"
+        },
+        {
+          "label": "C",
+          "text": "二叉排序树一定是二叉平衡树。"
+        },
+        {
+          "label": "D",
+          "text": "以上说法都不对。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A选项正确，因为二叉排序树（BST）的定义是左子树节点小于根节点，右子树节点大于根节点，中序遍历（左-根-右）正好按照这个顺序访问，所以会得到一个升序序列。B选项错误，最差情况下，如果二叉排序树退化成链表，查找时间复杂度是O(n)，而不是O(log n)。C选项错误，二叉排序树不一定是平衡树，例如插入有序序列会形成一个高度不平衡的树。"
+    },
+    {
+      "id": "0BB-VHVc3eYSMdS3TvxYp",
+      "order": 8,
+      "type": "single_choice",
+      "content": "已知 x 为 double 类型的变量，且值大于0，则下列表达式的值一定大于0的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "sin(x) / x"
+        },
+        {
+          "label": "B",
+          "text": "exp(x) - x"
+        },
+        {
+          "label": "C",
+          "text": "log(x) - x"
+        },
+        {
+          "label": "D",
+          "text": "x * x - x"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n`exp(x) - x`：根据数学知识，对于所有实数 `x`，`e^x >= x + 1`。"
+    },
+    {
+      "id": "JcWuRzQZRQVmplytEB0RQ",
+      "order": 9,
+      "type": "single_choice",
+      "content": "一个简单有向图有10个结点、30条边。再增加多少条边可以成为完全图。（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "60"
+        },
+        {
+          "label": "B",
+          "text": "70"
+        },
+        {
+          "label": "C",
+          "text": "15"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "answer": "A",
+      "explanation": "一个有 `n` 个结点的完全有向图，其边数公式为 `n * (n-1)`。对于10个结点，完全有向图应有 `10 * (10 - 1) = 90` 条边。由于图中已有30条边，还需要增加 `90 - 30 = 60` 条边才能成为完全图，因此A是正确答案。其他选项不符合此计算结果。"
+    },
+    {
+      "id": "fdFr3NA4MhAcNLj_QUxGH",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下列选项中，哪个可能是下图（无向图：7-8, 8-6, 6-1, 6-2, 8-10, 9-10, 10-11, 10-12, 2-4, 2-3, 4-5, 3-5）的深度优先遍历序列（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "8, 6, 1, 5, 3, 4, 2, 10, 7, 12, 11, 9"
+        },
+        {
+          "label": "B",
+          "text": "7, 8, 6, 4, 2, 1, 5, 3, 12, 9, 11, 10"
+        },
+        {
+          "label": "C",
+          "text": "8, 10, 12, 9, 11, 4, 5, 3, 2, 1, 6, 7"
+        },
+        {
+          "label": "D",
+          "text": "7, 8, 10, 9, 11, 12, 4, 5, 1, 2, 3, 6"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案C符合深度优先遍历的特性。从节点8开始，可以依次访问10，然后是12。12没有未访问邻居，回溯到10，再"
+    },
+    {
+      "id": "ing8laniCzueIUvVQ7KQI",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面 schedule 函数的时间复杂度为（ ）。\n\n```cpp\n#include <algorithm>\nusing namespace std;\nstruct activity {\n    int id, start, end;\n};\nbool compare(activity a, activity b) {\n    return a.end < b.end;\n}\nint schedule(int n, activity * p) {\n    sort(p, p + n, compare);\n    int cnt = 0, end = 0;\n    for (int i = 0; i < n; i++) {\n        if (p[i].start >= end) {\n            end = p[i].end;\n            cnt++;\n        }\n    }\n    return cnt;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(log(n))"
+        },
+        {
+          "label": "C",
+          "text": "O(n log(n))"
+        },
+        {
+          "label": "D",
+          "text": "O(n^2)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`schedule` 函数主要包含两部分：`sort` 排序和 `for` 循环。其中 `sort(p, p + n, compare)` 对 `n` 个元素进行排序，其时间复杂度为 O(n log n)。随后的 `for` 循环遍历 `n` 个元素，时间复杂度为 O(n)。由于 O(n log n) 是主导部分，因此整个函数的时间复杂度为 O(n log n)。选项 A、B、D 分别表示 O(n)、O(log(n)) 和 O(n^2)，它们都不能准确描述 `std::sort` 带来的主要开销。"
+    },
+    {
+      "id": "nh76uNqh3n3P5YUaAQAwj",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面 search 函数的平均时间复杂度为（ ）。\n\n```cpp\nint search(int n, int * p, int target) {\n    int low = 0, high = n;\n    while (low <= high) {\n        int middle = (low + high) / 2;\n        if (target == p[middle]) {\n            return middle;\n        } else if (target > p[middle]) {\n            low = middle + 1;\n        } else {\n            high = middle - 1;\n        }\n    }\n    return -1;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(log(n))"
+        },
+        {
+          "label": "C",
+          "text": "O(1)"
+        },
+        {
+          "label": "D",
+          "text": "可能无法返回"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该 `search` 函数实现了二分查找算法。在每次循环中，它都将搜索范围缩小一半。因此，对于大小为 `n` 的数组，平均和最坏情况下查找所需的时间复杂度都是 `O(log(n))`。选项 A (O(n)) 是线性查找的复杂度，选项 C (O(1)) 是常数时间复杂度，都不符合；选项 D (可能无法返回) 错误，因为函数总会返回一个结果。"
+    },
+    {
+      "id": "FCg-UoVIWrYprb5rLiW7j",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面 count_triple 函数的时间复杂度为（ ）。\n\n```cpp\nint count_triple(int n) {\n    int cnt = 0;\n    for (int a = 1; a <= n; a++)\n        for (int b = a; a + b <= n; b++)\n            for (int c = b; a + b + c <= n; c++)\n                if (a * a + b * b == c * c)\n                    cnt++;\n    return cnt;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(N)"
+        },
+        {
+          "label": "B",
+          "text": "O(N^2)"
+        },
+        {
+          "label": "C",
+          "text": "O(N^3)"
+        },
+        {
+          "label": "D",
+          "text": "O(N^4)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该函数包含三个嵌套的 `for` 循环。最外层循环 `a` 迭代 `N` 次，中间循环 `b` 在最坏情况下也迭代约 `N` 次，最内层循环 `c` 同样迭代约 `N` 次。因此，总的时间复杂度是 `O(N * N * N)`，即 `O(N^3)`。其他选项 `O(N)`、`O(N^2)` 和 `O(N^4)` 都不符合三个嵌套循环的特性。"
+    },
+    {
+      "id": "z0ioORxb3joAU0YwMAImL",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint down(int n) {\n    if (n <= 1)\n        return n;\n    return down(n - 1) + down(n - 2) + down(n - 3);\n}\nint main() {\n    cout << down(6) << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "13"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "无法正常结束。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。函数 `down(n)` 的基准情况是当 `n <= 1` 时返回 `n`。根据递归定义，我们可以逐步计算：`"
+    },
+    {
+      "id": "YiCMfWVlfqg1Tg3AZ7x_5",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面的程序使用邻接矩阵表达的带权无向图，则从顶点0到顶点3的最短距离为（ ）。\n\n```cpp\nint weight[4][4] = {\n    {0, 2, 5, 8},\n    {2, 0, 1, 7},\n    {5, 1, 0, 4},\n    {8, 7, 4, 0}};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该程序使用邻接矩阵表示带权无向图。从顶点0到顶点3的路径及距离如下：直接路径 0->3 的距离为 `weight[0][3]` = 8。路径 0->1->3 的距离为 `weight[0][1]` + `weight[1][3]` = 2 + 7 = 9。路径 0->2->3 的距离为 `weight[0][2]` + `weight[2][3]` = 5 + 4 = 9。路径 0->1->2->3 的距离为 `weight[0][1]` + `weight[1][2]` + `weight[2][3]` = 2 + 1 + 4 = 7。因此，最短距离为7，选项B正确。其他选项代表了更长或不正确的路径距离。"
+    },
+    {
+      "id": "Vsys56XAXdSkkQyKE-5B5",
+      "order": 16,
+      "type": "true_false",
+      "content": "祖冲之是南北朝时期杰出的数学家、天文学家，其主要贡献在数学、天文历法和机械制造三方面。他首次将“圆周率”精算到小数第七位，即在3.1415926和3.1415927之间。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "祖冲之在南北朝时期将圆周率精算到小数第七位，给出了3.1415926和3.1415927之间的精确值，这是历史公认的数学成就。因此，题目描述是正确的，选择T符合史实。选择F则与历史事实不符。"
+    },
+    {
+      "id": "ipJ-Pk5bn-devDbJUgWwZ",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++语言中，表达式 2 ^ 3 的结果类型为 int、值为 8。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中 `^` 是位异或运算符，不是乘方运算符。表达式 `2 ^ 3` 的计算结果是 `2` (二进制 `010`) 与 `3` (二进制 `011`) 进行位异或操作，得到 `001`，即十进制的 `1`。因此，其值为 `1` 而非 `8`，原表述错误。"
+    },
+    {
+      "id": "QP9Wj6KEWknDFO2dwwnMA",
+      "order": 18,
+      "type": "true_false",
+      "content": "一棵有N个节点的完全二叉树，则树的深度为 floor(log2(N)) + 1。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "对于一个有 N 个节点的完全二叉树，其深度 D 满足 `2^(D-1) <= N < 2^D`。对不等式取 `log2`，得到 `D-1 <= log2(N) < D`。这意味着 `floor(log2(N))` 的值是 `D-1`，因此树的深度 `D = floor(log2(N)) + 1`。所以题目描述是正确的，选项 T 正确。选项 F 错误，因为它与完全二叉树深度的正确计算公式不符。"
+    },
+    {
+      "id": "NoLDg23AylyX0ef_LseYY",
+      "order": 19,
+      "type": "true_false",
+      "content": "能用动态规划解决的问题，一般也可以用贪心法解决，但动态规划的效率更高。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法错误。动态规划和贪心法是两种不同的算法思想。贪心法每次选择局部最优解，不一定能得到全局最优解；而动态规划通过考虑所有子问题来确保全局最优。因此，能用动态规划解决的问题，不一定能用贪心法解决（例如0/1背包问题）。当贪心法适用时，它通常比动态规划更简单、效率更高。"
+    },
+    {
+      "id": "vVgb9Gvy3RPz_NlvSGdkx",
+      "order": 20,
+      "type": "true_false",
+      "content": "使用 math.h 或 cmath 头文件中的正弦函数，表达式 sin(30) 的结果类型为 double、值约为 0.5。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `sin(30)` 中的 `sin` 函数（来自 `math.h` 或 `cmath`）期望的参数是弧度，而非角度。因此，`sin(30)` 计算的是 30 弧度的正弦值，其结果远不等于 0.5。只有当参数是 30 度时，正弦值才约为 0.5。虽然 `sin` 函数的返回类型确实是 `double`，但由于参数单位错误导致计算结果不符，所以原说法是错误的。"
+    },
+    {
+      "id": "EH5-MLrJ8Ms8X9uS2r1Wk",
+      "order": 21,
+      "type": "true_false",
+      "content": "要求出简单有向图中从顶点 A 到顶点 B 的最短路径，在深度优先搜索和广度优先搜索中选择，广度优先更适合。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "广度优先搜索（BFS）在遍历图时是按层进行的，它会首先探索所有距离起始点最近的节点，然后是次近的，依此类推。因此，当BFS第一次到达目标顶点B时，它所经过的路径必然是边数最少的路径，即最短路径。而深度优先搜索（DFS）会沿着一条路径尽可能深地探索，可能先找到一条很长的路径到达B，而错过更短的路径。所以，对于无权图中的最短路径问题（按边数计算），BFS比DFS更适合。"
+    },
+    {
+      "id": "lACRuky73NOgqW4QKJ_yY",
+      "order": 22,
+      "type": "true_false",
+      "content": "某 N 个表项的哈希表，在发生哈希函数冲突时采用向后寻找空位的方法解决冲突。其查找操作的平均时间复杂度为O(1)，即使当该哈希表的每个表项都有元素时，查找操作的平均时间复杂度仍为O(1)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哈希表采用向后寻找空位（线性探测）解决冲突时，其平均查找时间复杂度在**负载因子较低**时通常为O(1)。但当哈希表接近或完全填满时，会发生严重的“聚集”现象，导致查找、插入和删除操作的平均时间复杂度会显著下降，甚至可能接近O(N)。因此，题目中“即使当该哈希表的每个表项都有元素时，查找操作的平均时间复杂度仍为O(1)”的说法是错误的。"
+    },
+    {
+      "id": "HEbpFsgD1Le34U9WwM6FO",
+      "order": 23,
+      "type": "true_false",
+      "content": "动态规划有递推实现和递归实现，有时两种实现的时间复杂度不同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "动态规划的递推实现（迭代法）和递归实现（通常带记忆化）虽然都能解决问题，但它们在实际运行时可能存在时间复杂度差异。递归实现会产生函数调用开销，且可能因递归深度过大导致栈溢出，而递推实现通常能避免这些问题。因此，递推实现往往具有更小的常数因子，运行速度更快，所以选项T正确。选项F错误，因为它认为两者时间复杂度总是相同的。"
+    },
+    {
+      "id": "87AtsycQ2v8jHsrTf7udP",
+      "order": 24,
+      "type": "true_false",
+      "content": "围棋游戏中，判断落下一枚棋子后是否会提掉对方的子，可以使用泛洪算法来实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。泛洪算法（Flood Fill）非常适合在网格状数据结构中查找连通区域。在围棋中，判断是否提子，需要检查对方棋子组成的连通块是否被完全包围（即没有“气”）。我们可以从新落子点周围的对方棋子开始，使用泛洪算法遍历其所有相连的同色棋子，并同时统计这个连通块周围的空点（气）。如果统计到的气数为零，则该连通块被提掉，因此泛洪算法是实现这一功能的有效方法。"
+    },
+    {
+      "id": "O8ohUDa0wSFCDxlINhk8H",
+      "order": 25,
+      "type": "true_false",
+      "content": "类 B 继承了抽象类 A，但未实现类 A 中的纯虚函数 f，则类 B 不能直接实例化。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "抽象类 `A` 包含纯虚函数 `f`。当类 `B` 继承 `A` 但未实现 `f` 时，`B` 自身也成为了一个抽象类。抽象类不能直接创建对象（即不能直接实例化），所以题目描述正确，T 为正解。F 错误，因为只有实现了所有纯虚函数的子类才能被实例化。"
+    }
+  ]
+}

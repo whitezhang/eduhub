@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-6ji-202503",
+  "url": "https://adacpp.com/practice/gesp-cpp-6ji-202503",
+  "title": "GESP C++六级 202503",
+  "description": "CCF编程能力等级认证 GESP C++ 六级 2025年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 6,
+    "ym": "202503"
+  },
+  "questions": [
+    {
+      "id": "4vSDv3MmXeSg4NzH_MLl-",
+      "order": 1,
+      "type": "single_choice",
+      "content": "在面向对象编程中，类是一种重要的概念。下面关于类的描述中，不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "类是一个抽象的概念，用于描述具有相同属性和行为的对象集合。"
+        },
+        {
+          "label": "B",
+          "text": "类可以包含属性和方法，属性用于描述对象的状态，方法用于描述对象的行为。"
+        },
+        {
+          "label": "C",
+          "text": "类可以被实例化，生成具体的对象。"
+        },
+        {
+          "label": "D",
+          "text": "类一旦定义后，其属性和方法不能被修改或扩展。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D不正确，因为类定义后其属性和方法**可以**被修改或扩展。例如，通过继承（`inheritance`）可以派生出新类来增加功能，或者通过访问控制（如`public`、`private`）来调整成员的可见性。选项A、B、C都正确描述了类的基本概念：类是抽象的模板，包含属性和方法，并且可以被实例化生成具体对象。"
+    },
+    {
+      "id": "7Dg6ShLwc6Y_qqsgDHlfv",
+      "order": 2,
+      "type": "single_choice",
+      "content": "哈夫曼编码是一种数据压缩算法。以下关于哈夫曼编码的描述中，不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "哈夫曼编码是一种变长编码，频率高的字符使用较短的编码，频率低的字符使用较长的编码。"
+        },
+        {
+          "label": "B",
+          "text": "在构造哈夫曼树时，频率越低的字符离根节点越近，频率越高的字符离根节点越远。"
+        },
+        {
+          "label": "C",
+          "text": "哈夫曼编码的生成过程基于贪心算法，每次选择频率最低的两个节点进行合并。"
+        },
+        {
+          "label": "D",
+          "text": "哈夫曼编码是一种前缀编码，任何一个字符的编码都不会是另一个字符编码的前缀，因此可以实现唯一解码。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项B的描述是错误的。在哈夫曼树中，频率越低的字符会位于树的深层（离根节点越远），因此编码长度越长；而频率越高的字符会位于树的浅层（离根节点越近），编码长度越短。选项A、C、D的描述都是正确的，哈夫曼编码确实是一种变长前缀编码，通过贪心算法合并频率最低的节点来构造，以实现高效压缩和唯一解码。"
+    },
+    {
+      "id": "HmS4KYoYJSESxRW-fJY9_",
+      "order": 3,
+      "type": "single_choice",
+      "content": "以下代码实现了树的哪种遍历方式？\n```cpp\nvoid traverse(TreeNode* root) {\n    if (root == nullptr) return;\n    cout << root->val << \" \";\n    traverse(root->left);\n    traverse(root->right);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "前序遍历"
+        },
+        {
+          "label": "B",
+          "text": "中序遍历"
+        },
+        {
+          "label": "C",
+          "text": "后序遍历"
+        },
+        {
+          "label": "D",
+          "text": "层次遍历"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该代码首先输出当前节点的值 (`cout << root->val`)，然后递归遍历左子树，最后递归遍历右子树。这种“根-左-右”的访问顺序正是前序遍历的定义，因此A是正确答案。中序遍历是“左-根-右”，后序遍历是“左-右-根”，而层次遍历通常需要使用队列实现，与此递归方式不同。"
+    },
+    {
+      "id": "ZIgBVxSqNGYtRBaG6v5Sd",
+      "order": 4,
+      "type": "single_choice",
+      "content": "以下关于完全二叉树的代码描述，正确的是（ ）。\n```cpp\nbool isCompleteTree(TreeNode* root) {\n    if (root == nullptr) return true;\n    queue<TreeNode*> q;\n    q.push(root);\n    bool hasNull = false;\n    while (!q.empty()) {\n        TreeNode* node = q.front();\n        q.pop();\n        if (node == nullptr) {\n            hasNull = true;\n        } else {\n            if (hasNull) return false;\n            q.push(node->left);\n            q.push(node->right);\n        }\n    }\n    return true;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "该代码用于判断一棵树是否为满二叉树"
+        },
+        {
+          "label": "B",
+          "text": "该代码用于判断一棵树是否为完全二叉树"
+        },
+        {
+          "label": "C",
+          "text": "该代码用于判断一棵树是否为二叉搜索树"
+        },
+        {
+          "label": "D",
+          "text": "该代码用于计算树的高度"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该代码通过广度优先搜索（BFS）遍历树。`hasNull` 标志在层序遍历中，用于检测是否在遇到 `nullptr` 后又出现了非 `"
+    },
+    {
+      "id": "MWvjuin8I0N_5AadgUAc8",
+      "order": 5,
+      "type": "single_choice",
+      "content": "以下代码实现了二叉排序树的哪种操作？\n```cpp\nTreeNode* op(TreeNode* root, int val) {\n    if (root == nullptr) return new TreeNode(val);\n    if (val < root->val) {\n        root->left = op(root->left, val);\n    } else {\n        root->right = op(root->right, val);\n    }\n    return root;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "查找"
+        },
+        {
+          "label": "B",
+          "text": "插入"
+        },
+        {
+          "label": "C",
+          "text": "删除"
+        },
+        {
+          "label": "D",
+          "text": "遍历"
+        }
+      ],
+      "answer": "B",
+      "explanation": "这段代码实现了二叉排序树的插入操作。当 `root == nullptr` 时，`return new TreeNode(val)` 会创建一个新节点并将其插入到树中。`root->left = op(root->left, val)` 和 `root->right = op(root->right, val)` 则递归地在左右子树中寻找合适的插入位置，并更新父节点的指针。查找操作不会创建新节点，删除操作逻辑更复杂，而遍历操作仅访问节点而不修改树结构。"
+    },
+    {
+      "id": "DfjRJoAbvsZzZurb4Ppk0",
+      "order": 6,
+      "type": "single_choice",
+      "content": "给定字符集 {A, B, C, D} 的出现频率分别为 {5, 1, 6, 2} ，则正确的哈夫曼编码是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "A: 0, B: 100, C: 11, D: 101"
+        },
+        {
+          "label": "B",
+          "text": "A: 11, B: 100, C: 0, D: 101"
+        },
+        {
+          "label": "C",
+          "text": "A: 0, B: 101, C: 11, D: 100"
+        },
+        {
+          "label": "D",
+          "text": "A: 10, B: 101, C: 0, D: 100"
+        }
+      ],
+      "answer": "B",
+      "explanation": "哈夫曼编码的核心原则是：频率越高的字符，编码越短；频率越低的字符，编码越长。通过构建哈夫曼树，将频率最小的节点"
+    },
+    {
+      "id": "TjMDIoaH93Jd_M8etwsN5",
+      "order": 7,
+      "type": "single_choice",
+      "content": "关于动态规划的描述，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "动态规划算法的时间复杂度总是低于贪心算法。"
+        },
+        {
+          "label": "B",
+          "text": "动态规划要求问题必须具有最优子结构和重叠子问题两个性质。"
+        },
+        {
+          "label": "C",
+          "text": "动态规划通过递归实现时不需要存储中间结果。"
+        },
+        {
+          "label": "D",
+          "text": "动态规划的核心思想是将问题分解为互不重叠的子问题。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案B。动态规划要求问题必须具有“最优子结构”和“重叠子问题”这两个关键性质，才能通过存储子问题解来避免重复计算。A错误，动态规划和贪心算法的时间复杂度没有绝对的高低关系。C错误，动态规划通过递归实现时通常需要存储中间结果（记忆化搜索）以避免重复计算。D错误，动态规划处理的是“重叠子问题”，而不是“互不重叠的子问题”，后者是分治算法的特点。"
+    },
+    {
+      "id": "Xp-Y_83RQrdaPvPqhNxLX",
+      "order": 8,
+      "type": "single_choice",
+      "content": "以下代码中，类的构造函数被调用了（ ）次。\n```cpp\nclass MyClass {\npublic:\n    MyClass() {\n        cout << \"Constructor called!\" << endl;\n    }\n};\nint main() {\n    MyClass obj1;\n    MyClass obj2 = obj1;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`MyClass obj1;` 创建 `obj1` 时调用了 `MyClass()` 构造函数，输出一次 \"Constructor called!\"。而 `MyClass obj2 = obj1;` 是拷贝初始化，它会调用拷贝构造函数。由于代码中没有显式定义拷贝构造函数，编译器会生成一个默认的拷贝构造函数，它只进行成员复制，不会再次调用 `MyClass()` 构造函数来打印信息。因此，题目中定义的构造函数只被调用了 1 次。选项 B、C、D 错误，因为 `obj2` 的创建调用的是默认拷贝构造函数，而不是题目中定义的无参构造函数。"
+    },
+    {
+      "id": "6ONSmqIokETx6D46Ep7dh",
+      "order": 9,
+      "type": "single_choice",
+      "content": "以下代码实现了循环队列的哪种操作？\n```cpp\nclass CircularQueue {\n    int* arr;\n    int front, rear, size;\npublic:\n    CircularQueue(int k) {\n        size = k;\n        arr = new int[k];\n        front = rear = -1;\n    }\n    bool enQueue(int value) {\n        if (isFull()) return false;\n        if (isEmpty()) front = 0;\n        rear = (rear + 1) % size;\n        arr[rear] = value;\n        return true;\n    }\n};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "入队"
+        },
+        {
+          "label": "B",
+          "text": "出队"
+        },
+        {
+          "label": "C",
+          "text": "查看队首元素"
+        },
+        {
+          "label": "D",
+          "text": "判断队列是否为空"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`enQueue` 函数接收一个 `value` 参数，通过更新 `rear` 指针并将其存入 `arr[rear]` 来实现向循环队列中添加元素，这正是入队操作。代码中没有实现移除队首元素（出队）、返回队首元素（查看队首）或仅判断队列是否为空的逻辑，尽管它会调用 `isFull()` 和 `isEmpty()` 进行辅助判断。"
+    },
+    {
+      "id": "7zln_f-X7rKwxwPYt13Ug",
+      "order": 10,
+      "type": "single_choice",
+      "content": "以下代码实现了二叉树的深度优先搜索（DFS），并统计叶子结点的数量，则横线上应填写（ ）。\n```cpp\nint countLeafNodes(TreeNode* root) {\n    if (root == nullptr) return 0;\n\n    stack<TreeNode*> s;\n    s.push(root);\n    int count = 0;\n    while (!s.empty()) {\n        TreeNode* node = s.top();\n        s.pop();\n\n        if (node->left == nullptr && node->right == nullptr) {\n            count++;\n        }\n\n        if (node->right) s.push(node->right);\n        ________________________________ // 在此处填入代码\n    }\n    return count;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "if (node->left) s.push(node->left);"
+        },
+        {
+          "label": "B",
+          "text": "if (node->left) s.pop(node->left);"
+        },
+        {
+          "label": "C",
+          "text": "if (node->left) s.front(node->left);"
+        },
+        {
+          "label": "D",
+          "text": "if (node->left) s.push(node->right);"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项A `if (node->left) s.push(node->left);` 是正确的。在迭代式深度优先搜索（DFS）中，为了确保左子节点在右子节点之前被访问（符合DFS的常见顺序），当右子节点被压入栈后，左子节点也应被压入栈。这样，左子节点会位于栈顶，在下一次循环时优先被处理。选项B和C中的 `s.pop(node->left)` 和 `s.front(node->left)` 都是栈操作的语法错误。选项D `if (node->left) s.push(node->right);` 会导致左子节点永远不会被访问，且右子节点可能被重复压入栈，造成逻辑错误。"
+    },
+    {
+      "id": "vtY9sN3J6jP3gb3FK-NUO",
+      "order": 11,
+      "type": "single_choice",
+      "content": "以下代码实现了二叉树的广度优先搜索（BFS），并查找特定值的节点，则横线上应填写（ ）。\n```cpp\nTreeNode* findNode(TreeNode* root, int target) {\n    if (root == nullptr) return nullptr;\n\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        TreeNode* current = q.front();\n        q.pop();\n\n        if (current->val == target) {\n            return current; // 找到目标节点\n        }\n\n        ________________________________ // 在此处填入代码\n    }\n    return nullptr; // 未找到目标节点\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nif (current->left) q.push(current->left);\nif (current->right) q.push(current->right);\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nif (current->left) q.pop(current->left);\nif (current->right) q.pop(current->right);\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nif (current->left) q.front(current->left);\nif (current->right) q.front(current->right);\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nif (current->left) q.push(current->right);\nif (current->right) q.push(current->left);\n```"
+        }
+      ],
+      "answer": "A",
+      "explanation": "广度优先搜索（BFS）的核心是使用队列按层遍历。当处理完当前节点 `current` 后，需要将其所有未访问的子节点（如果存在）加入队列，以便后续访问。选项 A 正确地检查了 `current->left` 和 `current->right` 是否存在，并使用 `q.push()` 将它们加入队列。选项 B 和 C 中的 `q.pop()` 和 `q.front()` 不接受参数，且功能是移除或查看队首元素，而非添加。选项 D 错误地交换了左右子节点的添加逻辑。"
+    },
+    {
+      "id": "VKneMcXG9iz-ZIVpeZfH-",
+      "order": 12,
+      "type": "single_choice",
+      "content": "以下代码用于生成 n 位格雷编码。横线上应填写（ ）。\n```cpp\nvector<string> generateGrayCode(int n) {\n    if (n == 0) return {\"0\"};\n    if (n == 1) return {\"0\", \"1\"};\n\n    vector<string> prev = generateGrayCode(n - 1);\n    vector<string> result;\n\n    for (string s : prev) {\n        result.push_back(\"0\" + s); // 在前缀添加 0\n    }\n    for (int i = prev.size() - 1; i >= 0; i--) {\n        ________________________________ // 在此处填入代码\n    }\n    return result;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "result.push_back(\"1\" + prev[i]);"
+        },
+        {
+          "label": "B",
+          "text": "result.push_back(\"0\" + prev[i]);"
+        },
+        {
+          "label": "C",
+          "text": "result.push_back(prev[i] + \"1\");"
+        },
+        {
+          "label": "D",
+          "text": "result.push_back(prev[i] + \"0\");"
+        }
+      ],
+      "answer": "A",
+      "explanation": "生成 n 位格雷码的规则是：先将 (n-1) 位格雷码列表中的每个码前缀添加 '0'；然后将 (n-1) 位格雷码列表逆序，再将逆序后的每个码前缀添加 '1'。代码前半部分已完成添加 '0' 的操作，后半部分循环 `prev` 列表的逆序，因此应在其前缀添加 '1'，即 `result.push_back(\"1\" + prev[i]);`。选项 B 错误地再次添加 '0'，而选项 C 和 D 错误地"
+    },
+    {
+      "id": "e_EQHi2qOLu6CjNIjEBGT",
+      "order": 13,
+      "type": "single_choice",
+      "content": "以下代码实现了0/1背包问题的动态规划解法。假设物品重量为 weights[] ，价值为 values[] ，背包容量为 W ，横线上应填写（ ）。\n```cpp\nint knapsack(int W, vector<int>& weights, vector<int>& values) {\n    int n = weights.size();\n    vector<vector<int>> dp(n + 1, vector<int>(W + 1, 0));\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= W; j++) {\n            if (weights[i-1] > j) {\n                dp[i][j] = dp[i-1][j]; // 当前物品装不下\n            } else {\n                dp[i][j] = max(________________________________); // 在此处填入代码\n            }\n        }\n    }\n    return dp[n][W];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "dp[i-1][j], values[i-1]"
+        },
+        {
+          "label": "B",
+          "text": "dp[i-1][j], dp[i-1][j - weights[i-1]] + values[i-1]"
+        },
+        {
+          "label": "C",
+          "text": "dp[i][j-1], values[i-1]"
+        },
+        {
+          "label": "D",
+          "text": "dp[i-1][j - weights[i-1]] + values[i-1], dp[i][j-1]"
+        }
+      ],
+      "answer": "B",
+      "explanation": "当当前物品 `i` 可以装入背包时（即 `weights[i-1] <= j`），我们有两种选择：\n1.  **不装入物品 `i`"
+    },
+    {
+      "id": "etkneffVtSadM_r0anYPP",
+      "order": 14,
+      "type": "single_choice",
+      "content": "以下代码用于检查字符串中的括号是否匹配，横线上应填写（ ）。\n```cpp\nbool isBalanced(string s) {\n    stack<char> st;\n    for (char c : s) {\n        if (c == '(' || c == '[' || c == '{') {\n            st.push(c);\n        } else {\n            if (st.empty()) return false; // 无左括号匹配\n            char top = st.top();\n            st.pop();\n            if ((c == ')' && top != '(') ||\n                (c == ']' && top != '[') ||\n                (c == '}' && top != '{')) {\n                return false;\n            }\n        }\n    }\n    return ________________; //在此处填入代码\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "true"
+        },
+        {
+          "label": "B",
+          "text": "false"
+        },
+        {
+          "label": "C",
+          "text": "st.empty()"
+        },
+        {
+          "label": "D",
+          "text": "!st.empty()"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在遍历完字符串后，如果栈 `st` 为空，说明所有左括号都已找到对应的右括号并被弹出，字符串是平衡的。反之，如果栈不为空，则表示存在未匹配的左括号，字符串不平衡。因此，`st.empty()` 能准确判断字符串是否平衡，返回 `true` 表示平衡，`false` 表示不平衡。选项 A 和 B 无法根据栈的最终状态动态判断，而选项 D `!st.empty()` 的逻辑与正确判断相反。"
+    },
+    {
+      "id": "8JOEqoD2756b4KCbOUCA-",
+      "order": 15,
+      "type": "single_choice",
+      "content": "关于下面代码，说法错误的是（ ）。\n```cpp\nclass Shape {\nprotected:\n    string name;\n\npublic:\n    Shape(const string& n) : name(n) {}\n\n    virtual double area() const {\n        return 0.0;\n    }\n};\n\nclass Circle : public Shape {\nprivate:\n    double radius; // 半径\n\npublic:\n    Circle(const string& n, double r) : Shape(n), radius(r) {}\n\n    double area() const override {\n        return 3.14159 * radius * radius;\n    }\n};\n\nclass Rectangle : public Shape {\nprivate:\n    double width;    // 宽度\n    double height;   // 高度\n\npublic:\n    Rectangle(const string& n, double w, double h) : Shape(n), width(w), height(h) {}\n\n    double area() const override {\n        return width * height;\n    }\n};\n\nint main() {\n    Circle circle(\"MyCircle\", 5.0);\n    Rectangle rectangle(\"MyRectangle\", 4.0, 6.0);\n\n    Shape* shapePtr = &circle;\n    cout << \"Area: \" << shapePtr->area() << endl;\n\n    shapePtr = &rectangle;\n    cout << \"Area: \" << shapePtr->area() << endl;\n\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "语句 Shape* shapePtr = &circle; 和 shapePtr = &rectangle; 出现编译错误"
+        },
+        {
+          "label": "B",
+          "text": "Shape 为基类， Circle 和 Rectangle 是派生类"
+        },
+        {
+          "label": "C",
+          "text": "通过继承， Circle 和 Rectangle 复用了 Shape 的属性和方法，并扩展了新的功能"
+        },
+        {
+          "label": "D",
+          "text": "Circle 和 Rectangle 通过重写（override）基类的虚函数 area 和基类指针，实现了运行时多态"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项 A 错误。`Shape* shapePtr = &circle;` 和 `shapePtr = &rectangle;` 是合法的向上转型（upcasting），基类指针可以指向派生类对象，这是C++多态的基础，不会导致编译错误。\n\n选项 B、C、D 的说法都是正确的。\nB. `Circle` 和 `Rectangle` 明确继承自 `Shape`，因此 `Shape`"
+    },
+    {
+      "id": "A5D4HOLXvzvIr4FzEW0Z5",
+      "order": 16,
+      "type": "true_false",
+      "content": "哈夫曼树在构造过程中，每次合并权值最小的两个节点，最终生成的树带权路径长度最小。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "哈夫曼树的构造过程确实遵循贪心策略，即每次都选择当前森林中权值最小的两个节点进行合并。这种策略能够确保权值较小的节点在树中拥有较长的路径，而权值较大的节点拥有较短的路径，从而使得最终生成的树的带权路径长度达到最小。因此，题目描述完全符合哈夫曼树的原理，是正确的。选择F则表示该描述不符合哈夫曼树的构造原则和性质。"
+    },
+    {
+      "id": "f7vWpM75V-7qgvz20ctK7",
+      "order": 17,
+      "type": "true_false",
+      "content": "格雷编码的相邻两个编码之间必须有多位不同，以避免数据传输错误。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "格雷编码（Gray Code）的核心特性是任意两个相邻的编码之间**只有一位不同**。这种“一位不同”的特性正是为了在数据传输或传感器读取时，避免因多位同时变化而产生的错误或不确定性。因此，题目中“必须有多位不同”的说法与格雷编码的定义完全相反，是错误的。"
+    },
+    {
+      "id": "-UmIKBewm0JHhr7qFjTCR",
+      "order": 18,
+      "type": "true_false",
+      "content": "在树的深度优先搜索（DFS）中，使用队列作为辅助数据结构以实现\"先进后出\"的访问顺序。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "深度优先搜索（DFS）的访问顺序是“后进先出”（LIFO），通常通过递归调用栈或显式使用栈来实现。队列提供的是“先进先出”（FIFO）的访问顺序，这是广度优先搜索（BFS）的特点。因此，题目中将DFS与队列关联，并声称队列实现“先进后出”是错误的。"
+    },
+    {
+      "id": "9mpQkHILh_rJK4lLY8WD7",
+      "order": 19,
+      "type": "true_false",
+      "content": "以下代码实现的是二叉树的中序遍历：\n```cpp\nvoid traverse(TreeNode* root) {\n    if (root == nullptr) return;\n    traverse(root->left);\n    cout << root->val << \" \";\n    traverse(root->right);\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码完全符合二叉树中序遍历的定义。它首先递归遍历左子树 (`traverse(root->left)`)，然后访问当前节点 (`cout << root->val`)，最后递归遍历右子树 (`traverse(root->right)`)。这种“左-根-右”的访问顺序正是中序遍历的特点。因此，选项T（正确）是正确的，选项F（错误）是不正确的。"
+    },
+    {
+      "id": "I5qPYNqc3RAg4dlf31EIg",
+      "order": 20,
+      "type": "true_false",
+      "content": "C++ 支持构造函数重载，但默认无参数的构造函数只能有一个。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 确实支持构造函数重载，即可以定义多个参数列表不同的构造函数。但一个类只能有一个默认构造函数（无参数，或者所有参数都有默认值的构造函数），因为编译器在创建对象时需要明确知道调用哪个构造函数，多个默认构造函数会导致调用歧义。因此，题目描述是正确的，选项 T 正确。"
+    },
+    {
+      "id": "ICo__9hL-M8lbklUEd_k0",
+      "order": 21,
+      "type": "true_false",
+      "content": "二叉排序树（BST）中，若某节点的左子树为空，则该节点一定是树中的最小值节点。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法错误。一个节点的左子树为空，只表示在该节点的直接左侧没有更小的值，但它本身可能不是整棵树的最小值。例如，如果根节点是10，它的右子节点是20，节点20的左子树为空，但整棵树的最小值是10，而不是20。树的最小值节点总是位于从根节点一直向左遍历到底的那个节点。"
+    },
+    {
+      "id": "7nLFkDCtWPasQsMEmgIfj",
+      "order": 22,
+      "type": "true_false",
+      "content": "在动态规划解决一维硬币找零问题时，若硬币面额为 [1, 3, 4] ，目标金额为 6 ，则最少需要 2 枚硬币（3+3）。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "对于目标金额 6，使用面额 `[1, 3, 4]` 的硬币，最少需要 2 枚。组合 `3 + 3` 恰好等于 6，并且只使用了 2 枚硬币。其他能凑成 6 的组合，如 `4 + 1 + 1` 需要 3 枚，`1 + 1 + 1 + 1 + 1 + 1` 需要 6 枚，都比 2 枚多。因此，题目中的陈述是正确的。选择 F 则表示该结论错误，与实际计算不符。"
+    },
+    {
+      "id": "-Wt5TBqVvozrUQt__zY2d",
+      "order": 23,
+      "type": "true_false",
+      "content": "面向对象编程中，封装是指将数据和行为绑定在一起，并对外隐藏实现细节。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "封装是面向对象编程（OOP）的核心概念之一，它确实指的是将数据（成员变量）和操作这些数据的行为（成员函数）捆绑在一起形成一个独立的单元（类）。同时，封装通过访问修饰符（如 `private`）隐藏了类的内部实现细节，只对外提供公共接口进行交互，这与题目描述完全一致，因此是正确的。选择错误则与封装的定义相悖。"
+    },
+    {
+      "id": "5JDKXEbj2VGSIbjlVYxHO",
+      "order": 24,
+      "type": "true_false",
+      "content": "以下代码创建的树是一棵完全二叉树：\n```cpp\nTreeNode* root = new TreeNode{1};\nroot->left = new TreeNode{2};\nroot->right = new TreeNode{3};\nroot->left->left = new TreeNode{4};\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码创建的树是一棵完全二叉树。根据定义，完全二叉树除了最后一层外，其他层都是满的，且最后一层的节点都尽可能靠左排列。代码中，`root`、`root->left` 和 `root->right` 构成了前"
+    },
+    {
+      "id": "WsNFC-mnVO8OIqYYHkxwk",
+      "order": 25,
+      "type": "true_false",
+      "content": "栈和队列均可以用双向链表实现，插入和删除操作的时间复杂度为 O(1) 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。双向链表可以方便地在头部和尾部进行插入和删除操作。对于栈，可以在一端（如头部）进行 `push` 和 `pop`，时间复杂度为 O(1)。对于队列，可以在一端（如头部）进行 `dequeue`，在另一端（如尾部）进行 `enqueue`，时间复杂度也为 O(1)。因此，题目描述是正确的。"
+    }
+  ]
+}

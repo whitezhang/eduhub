@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-4ji-202312",
+  "url": "https://adacpp.com/practice/gesp-cpp-4ji-202312",
+  "title": "GESP C++四级 202312",
+  "description": "CCF编程能力等级认证 GESP C++ 四级 2023年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 4,
+    "ym": "202312"
+  },
+  "questions": [
+    {
+      "id": "F2pM7jv8ViOvc_MlxGIEo",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下面有关函数参数的说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "函数参数传递时，主函数当中采用值传递方式将参数传递给子函数时，若子函数将参数值改变，主函数当中的参数值不变。"
+        },
+        {
+          "label": "B",
+          "text": "函数参数传递时，主函数当中采用值传递方式将参数传递给子函数时，若子函数将参数值改变，主函数当中的参数值将随子函数一样改变而改变。"
+        },
+        {
+          "label": "C",
+          "text": "函数参数传递时，主函数如果将参数的地址传递给子函数，若子函数将参数值改变，主函数当中的参数值将不改变。"
+        },
+        {
+          "label": "D",
+          "text": "函数参数传递可以不满足子函数的参数个数要求。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是A。值传递时，子函数接收的是参数的副本。子函数对这个副本的任何修改都不会影响主函数中原始参数的值，因此A正确。选项B描述的是值传递时参数会改变，这与值传递的机制不符。选项C中，将参数地址传递给子函数（如通过指针或引用），子函数可以通过地址修改主函数中原始参数的值，所以主函数中的参数值会改变。选项D错误，函数调用时传递的参数个数和类型必须与函数定义时声明的参数列表"
+    },
+    {
+      "id": "56M4SNDGJSrORkmlJ2Sh_",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面C++代码执行后，输出的是（ ）。\n\n```cpp\nint arr[10]={1};\nstring strArr=\"chen a dai\";\ncout<<strArr[arr[1]]<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "chen"
+        },
+        {
+          "label": "B",
+          "text": "c"
+        },
+        {
+          "label": "C",
+          "text": "chen a dai"
+        },
+        {
+          "label": "D",
+          "text": "dai"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码中 `int arr[10]={1};` 将 `arr[0]` 初始化为 1，而 `arr[1]` 及其他未显式初始化的元素则默认为 0。因此，`arr[1]` 的值为 0。`strArr[arr[1]]` 等价于 `strArr[0]`，表示访问字符串 `strArr` 的第一个字符。字符串 \"chen a dai\" 的第一个字符是 'c'，所以输出 'c'。选项 A、C、D 均不符合通过索引访问单个字符的结果。"
+    },
+    {
+      "id": "-mWl2c33vNppl-292ygzY",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面C++代码最后执行后输出是（ ）。\n\n```cpp\nint fun1(int *n)\n{\n    return *n**n;\n}\nint main()\n{\n    int arr[10]={2};\n    arr[1]=fun1(arr);\n    cout<<arr[1]<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`int arr[10]={2};` 将数组的第一个元素 `arr[0]` 初始化为 2，其他元素默认为 0。`fun1(arr)` 调用时，`arr` 会作为指向 `arr[0]` 的指针传入 `fun1` 函数。在 `fun1` 中，`*n` 的值是 `arr[0]`，即 2。函数返回 `*n * *n`，也就是 `2 * 2 = 4`。因此，`arr[1]` 被赋值为 4，最后 `cout<<arr[1]<<endl;` 输出 4。A、B、C 选项的数值与计算结果不符，故不正确。"
+    },
+    {
+      "id": "1HCNTrSjyxd9Jg5DQzN0g",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的结果是（ ）。\n\n```cpp\nint arr[3][3]={{1,2,3},{4,5,6},{7,8,9}};\nfor(int i=0;i<3;i++)\n{\n    for(int j=2;j>=0;j--)\n    {\n        cout<<arr[i][j]<<\" \";\n    }\n    cout<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 2 3\n4 5 6\n7 8 9"
+        },
+        {
+          "label": "B",
+          "text": "1 2 3 4 5 6 7 8 9"
+        },
+        {
+          "label": "C",
+          "text": "3 2 1\n6 5 4\n9 8 7"
+        },
+        {
+          "label": "D",
+          "text": "9 8 7 6 5 4 3 2 1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是C。外层循环 `for(int i=0;i<3;i++)` 遍历数组的每一行。内层循环 `for(int j"
+    },
+    {
+      "id": "c5GUTiCXJret8K0jrROX4",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint arr[3]={1,2,3};\nint *p=NULL;\np=arr;\np++;\ncout<<*p<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1,2,3"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`p=arr;` 使指针 `p` 指向数组的第一个元素，即 `arr[0]` (值为 1)。`p++;` 执行指针算术运算，使 `p` 向后移动一个 `int` 的大小，现在 `p` 指向数组的第二个元素 `arr[1]` (值为 2)。因此，`cout<<*p<<endl;` 会输出 `p` 当前指向的值，即 2。选项 A、B、D 均不符合指针移动后的结果。"
+    },
+    {
+      "id": "gBc_J8ZjxFhyqGJN_KqXT",
+      "order": 6,
+      "type": "single_choice",
+      "content": "如果变量x的地址是0x6ffe14，下面C++代码执行以后输出的是（ ）。\n\n```cpp\nint *p=NULL;\nint x=2;\np=&x;\np++;\ncout<<p<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0x6ffe11"
+        },
+        {
+          "label": "B",
+          "text": "0x6ffe14"
+        },
+        {
+          "label": "C",
+          "text": "0x6ffe18"
+        },
+        {
+          "label": "D",
+          "text": "0x6ffe15"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`p` 是一个 `int` 类型的指针，初始指向 `x` 的地址 `0x6ffe14`。执行 `p++` 时，指针会根据其指向的数据类型大小进行递增。由于 `p` 是 `int` 指针，它会向前移动 `sizeof(int)` 字节，通常 `int` 占用 4 字节。因此，`p` 的新地址是 `0x6ffe14 + 4 = 0x6ffe18`。选项 A、B、D 均不符合指针算术的规则，它们分别表示地址减小、未递增或只递增 1 字节。"
+    },
+    {
+      "id": "TemTDLqkSthZJ5L1x4y8Q",
+      "order": 7,
+      "type": "single_choice",
+      "content": "在C++中，执行下面代码后，输出的是（ ）。\n\n```cpp\nint point(int *p)\n{\n    return *p**p;\n}\nint main()\n{\n    int a=20;\n    int *p=&a;\n    *p=point(p);\n    cout<<*p<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "400"
+        },
+        {
+          "label": "B",
+          "text": "200"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "100"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`point` 函数接收指针 `p`，并返回 `*p` 的平方。初始时 `a` 为 20，`p` 指向 `a`。执行 `*p=point(p);` 时，`point(p)` 会计算 `20 * 20 = 400`，并将结果 `400` 赋值给 `*p`（即变量 `a`）。因此，最终 `cout<<*p<<endl;` 输出的是 400。其他选项不符合代码的计算逻辑。"
+    },
+    {
+      "id": "dgp--RnO6EI4NmsnPgn75",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下列C++语句执行以后结果是true的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`3&&false`"
+        },
+        {
+          "label": "B",
+          "text": "`5&&2`"
+        },
+        {
+          "label": "C",
+          "text": "`101&&000`"
+        },
+        {
+          "label": "D",
+          "text": "`4&true`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B 中，`5` 和 `2` 都是非零整数，在 C++ 中非零值被视为 `true`，所以 `true && true` 的结果是 `true`。选项 A 中 `false` 导致 `3&&false` 的结果为 `false`。选项 C 中 `000` 表示八进制的 `0`，即十进制的 `0`，被视为 `false`，所以 `101&&000` 的结果为 `false`。选项 D 使用的是位与运算符 `&`，`true` 会被转换为 `1`，`4 & 1` 的结果是 `0`，即 `false`。"
+    },
+    {
+      "id": "YD5zOQME8IeUpOZrh7VBH",
+      "order": 9,
+      "type": "single_choice",
+      "content": "在如下的C++代码中实现了对字符串中出现的26个字母的个数统计，横线处应填入是（ ）。\n\n```cpp\nstring str=\"HELLO CHEN A DAI\";\nint strlen=str.length();\nchar alpha[26]={65};\nint cnt[26]={0};\nfor(int i=1;i<26;i++)\n{\n    ______________;\n}\nfor(int i=0;i<26;i++)\n{\n    cout<<alpha[i]<<\" \";\n}\ncout<<endl;\nfor(int i=0;i<26;i++)\n{\n    for(int j=0;j<strlen;j++)\n    {\n        if(alpha[i]==str[j])\n        {\n            cnt[i]++;\n        }\n    }\n}\nfor(int i=0;i<26;i++)\n{\n    cout<<cnt[i]<<\" \";\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`alpha[i]=alpha[i-1]+1;`"
+        },
+        {
+          "label": "B",
+          "text": "`alpha[i]=alpha[i]+1;`"
+        },
+        {
+          "label": "C",
+          "text": "`alpha[i+1]=alpha[i]+1;`"
+        },
+        {
+          "label": "D",
+          "text": "`alpha[i-1]=alpha[i]+1;`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。`alpha[0]` 被初始化为 'A' (ASCII 65)。为了在 `alpha` 数组中依次生成 'A' 到 'Z' 的"
+    },
+    {
+      "id": "14Z0bElNxAmfTIQ8BU7iJ",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码执行后生成的文件其字节数为（ ）。\n\n```cpp\nofstream fout;\nfout.open(\"1.txt\");\nfor(int i=1;i<=10;i++)\n{\n    if(i%5==0)\n    {\n        int x=6;\n        fout<<x;\n    }\n    else\n    {\n        char ch='A';\n        fout<<ch;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "40"
+        },
+        {
+          "label": "D",
+          "text": "24"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该代码循环10次。每次循环，`fout << x` 或 `fout << ch` 都会向文件写入一个字符。当 `int` 类型的 `x` (值为6) 被写入文件时，它会被转换为字符 '6'，占用1字节。`char` 类型的 `ch` ('A') 也占用1字节。因此，总共写入了 10 * 1 = 10 字节。选项 B、C、D 错误，因为它们没有正确计算每次写入的字节数，特别是误解了 `int` 类型写入文件时的行为。"
+    },
+    {
+      "id": "EsGXupSRqkyp8ziSgA3Uu",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下列C++代码输入 `1,2,3,4` ，执行后，将输出的是（ ）。\n\n```cpp\nstring str=\"\";\ncin>>str;\nint strlen=str.length();\nfor(int i=0;i<strlen;i++)\n{\n    if(str[i]<='9'&&str[i]>='0')\n    {\n        cout<<str[i];\n    }\n    else\n    {\n        cout<<\"#\";\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1#4#"
+        },
+        {
+          "label": "B",
+          "text": "1#3#"
+        },
+        {
+          "label": "C",
+          "text": "1#2#3#4#"
+        },
+        {
+          "label": "D",
+          "text": "1#2#3#4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`cin >> str` 会将 `1,2,3,4` 作为一个完整的字符串读取到 `str` 中。循环遍历字符串的每个字符，如果字符是数字（`'0'`到`'9'`），则直接输出；否则（例如逗号 `,`），输出 `#`。因此，程序会依次输出 `1`、`#`、`2`、`#`、`3`、`#`、`4`，最终结果为 `1#2#3#4`。选项A、B、C的输出与代码逻辑不符。"
+    },
+    {
+      "id": "-vSKaXjsbN9R6YpegZ7d0",
+      "order": 12,
+      "type": "single_choice",
+      "content": "以下C++代码用于实现每个整数对应的因数，如输入 `12` ，则输出 `1 2 3 4 6 12` ；如输入 `18` ，则输出 `1 2 3 6 9 18` 。横线处应填入代码是（ ）。\n\n```cpp\nint n;\ncin>>n;\nfor(int i=1;i<=n;i++)\n{\n    ________\n    {\n        cout<<i<<\" \";\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`if(n%i==0)`"
+        },
+        {
+          "label": "B",
+          "text": "`if(n/i==0)`"
+        },
+        {
+          "label": "C",
+          "text": "`if(n%i!=0)`"
+        },
+        {
+          "label": "D",
+          "text": "`if(n/i!=0)`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "要找出 `n` 的因数，我们需要判断 `n` 是否能被 `i` 整除，即 `n` 除以 `i` 的余数是否为0。C"
+    },
+    {
+      "id": "b9T0TRaHjjcYhrE3qs16R",
+      "order": 13,
+      "type": "single_choice",
+      "content": "某公司新出了一款无人驾驶的小汽车，通过声控智能驾驶系统，乘客只要告诉汽车目的地，车子就能自动选择一条优化路线，告诉乘客后驶达那里。请问下面哪项不是驾驶系统完成选路所必须的。（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "麦克风"
+        },
+        {
+          "label": "B",
+          "text": "扬声器"
+        },
+        {
+          "label": "C",
+          "text": "油量表"
+        },
+        {
+          "label": "D",
+          "text": "传感器"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该驾驶系统需要接收目的地指令、选择优化路线并告知乘客。\n\n1.  **C. 油量表** 是正确的，因为它主要用于显示燃油量，虽然燃油量"
+    },
+    {
+      "id": "WATNHbiJlFou4AbMtaACm",
+      "order": 14,
+      "type": "single_choice",
+      "content": "现代计算机是指电子计算机，它所基于的是（ ）体系结构。",
+      "options": [
+        {
+          "label": "A",
+          "text": "艾伦·图灵"
+        },
+        {
+          "label": "B",
+          "text": "冯·诺依曼"
+        },
+        {
+          "label": "C",
+          "text": "阿塔纳索夫"
+        },
+        {
+          "label": "D",
+          "text": "埃克特-莫克利"
+        }
+      ],
+      "answer": "B",
+      "explanation": "现代电子计算机普遍基于冯·诺依曼体系结构，其核心思想是“存储程序”和“程序控制”，即程序和数据都存储在内存中，并由CPU按指令顺序执行。艾伦·图灵提出了计算的理论模型（图灵机），阿塔纳索夫和埃克特-莫克利是早期电子计算机的先驱，但并非现代计算机体系结构的设计者。"
+    },
+    {
+      "id": "Ngc1g0v_hjPczucyi0M7q",
+      "order": 15,
+      "type": "single_choice",
+      "content": "输入一个正整数N（N>=7），想找出它所有相邻的因数对，如，输入 `12` ，因数对有(1,2)、(2,3)、(3,4)。下面哪段代码找不到所有的因数对？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`for(i=1;i<N;i++) if(!(N%i) && !(N%(i+1))) printf(\"(%d,%d)\\n\", i, i+1);`"
+        },
+        {
+          "label": "B",
+          "text": "`for(i=2;i<N;i++) if(!(N%i) && !(N%(i+1))) printf(\"(%d,%d)\\n\", i, i+1);`"
+        },
+        {
+          "label": "C",
+          "text": "`for(i=2;i<N/2;i++) if(!(N%(i-1)) && !(N%i)) printf(\"(%d,%d)\\n\", i-1, i);`"
+        },
+        {
+          "label": "D",
+          "text": "`for(i=1;i<N/2;i++) if(!(N%i) && !(N%(i+1))) printf(\"(%d,%d)\\n\", i, i+1);`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n选项 B 的循环从 `i=2` 开始，这意味着它会跳过 `i=1` 的情况。对于 `N=12`，"
+    },
+    {
+      "id": "2o9UvPX2vdgKSfvYW-FOg",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++的内置函数 `sort()` 支持数组的局部排序。例如 `int a={10,9,8,7,6,5,4,3,2,1}` ，可以用 `sort(a,a+5)` ，排序成 `{6,7,8,9,10,5,4,3,2,1}` 。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`std::sort()` 函数接受两个迭代器作为参数，定义一个半开区间 `[first, last)`。`sort(a, a+5)` 表示对数组 `a` 中从 `a[0]` 到 `a[4]` 的元素进行排序。原始数组的前5个元素 `{10,9,8,7,6}` 排序后变为 `{6,7,8,9,10}`，而 `a[5]` 到 `a[9]` 的元素 `{5,4,3,2,1}` 保持不变。因此，最终结果 `{6,7,8,9,10,5,4,3,2,1}` 与题目描述一致，该说法是正确的。"
+    },
+    {
+      "id": "dO8fFsRBivg8yhruZYl6Z",
+      "order": 17,
+      "type": "true_false",
+      "content": "用递归法求n的阶乘，时间复杂度是O(n)。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "递归计算 `n` 的阶乘时，函数会从 `n` 逐级调用到 `1`（例如 `factorial(n)` 调用 `factorial(n-1)`），总共会进行 `n` 次函数调用。每次函数调用都只执行常数次的简单操作（如判断、乘法）。因此，总的执行时间与 `n` 成正比，时间复杂度为 O(n)。选项 F 错误，因为它否定了这种线性关系。"
+    },
+    {
+      "id": "Cax_tG1yKW4UHpxJXPH8B",
+      "order": 18,
+      "type": "true_false",
+      "content": "`[(1,2)*2]*3` 在C++中是合法的表达式。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `[(1,2)*2]*3` 在 C++ 中是非法的。首先，`(1,2)` 是逗号表达式，其结果是 `2`，所以 `(1,2)*2` 的结果是 `4`。然而，方括号 `[]` 在 C++ 中用于数组下标访问，必须作用于一个数组或指针变量，不能像 `[4]` 这样单独使用。因此，整个表达式不符合 C++ 语法规则，选项 T（正确）是错误的。"
+    },
+    {
+      "id": "egKJzXdLYAAcovFi3dxdt",
+      "order": 19,
+      "type": "true_false",
+      "content": "在下面的C++代码中，将对1.txt文件写入 `hello` 。（ ）\n\n```cpp\nifstream filein;\nofstream fileout;\nfilein.open(\"1.txt\");\nfileout<<\"hello\";\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`ofstream` 对象 `fileout` 声明后没有通过 `open()` 方法关联到任何文件，因此 `fileout << \"hello\";` 语句不会将内容写入到 \"1.txt\" 文件中。代码中的 `filein.open(\"1.txt\");` 是为输入流 `filein` 打开文件，与写入操作无关。所以，题目描述是错误的。"
+    },
+    {
+      "id": "72xDu_OQzCf-lP-tt9dmT",
+      "order": 20,
+      "type": "true_false",
+      "content": "文本文件 `1.txt` 第1行由 `01234` 共5个字符组成其间没有空格，当用C++代码正常打开文件成功并执行如下代码以后，第1行长度为5。（ ）\n\n```cpp\nifstream filein;\nint buff;\nfilein.open(\"1.txt\");\nfilein>>buff;\ncout<<buff<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码使用 `filein >> buff;` 将文件中的内容读取到一个 `int` 类型的变量 `buff` 中。`>>` 运算符在读取整数时，会从流"
+    },
+    {
+      "id": "nutpn9IfeLFdoayM_H4SM",
+      "order": 21,
+      "type": "true_false",
+      "content": "执行C++代码 `cout<<(5||2);` 后将输出 `1` 。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中，`||` 是逻辑或运算符。任何非零值都被视为 `true`，而 `0` 被视为 `false`。因此，`5` 和 `2` 都被视为 `true`，`true || true` 的结果是 `true`。当 `bool` 类型的 `true` 值通过 `cout` 输出时，它会被转换为整数 `1`。所以，输出 `1` 是正确的。"
+    },
+    {
+      "id": "_OEfdA0fpEdmbhpEtdeLY",
+      "order": 22,
+      "type": "true_false",
+      "content": "在C++中，两个字符串相加的运算符为+相当于字符串的合并运算。下面C++代码执行后，将输出 `chenadai` 。（ ）\n\n```cpp\nstring a=\"chen\";\nstring b=\"a\";\nstring c=\"dai\";\nstring name=a+b+c;\ncout<<name<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 中的 `std::string` 类型重载了 `+` 运算符，使其可以用于字符串的连接操作。代码中 `string name=a+b+c;` 会将字符串 `a` (\"chen\")、`b` (\"a\") 和 `c` (\"dai\") 依次合并，最终得到 \"chenadai\"。因此，`cout<<name<<endl;` 将输出 \"chenadai\"，题目描述是正确的。"
+    },
+    {
+      "id": "G8x8Klw-CUuygJy9Fg6Zl",
+      "order": 23,
+      "type": "true_false",
+      "content": "C++内置函数 `sort()` 可以对整数、浮点数、字符数组进行从大到小，从小到大，局部排序。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`std::sort()` 是 C++ 标准库函数，可以对整数、浮点数、字符等多种数据类型进行排序。默认情况下它进行升序（从小到大）排序，通过传入自定义比较器（如 `std::greater<int>()"
+    },
+    {
+      "id": "V-qzGip_BLrsaEbArAvpT",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨最近在准备考GESP，他用的Dev C++来练习和运行程序，所以Dev C++也是一个小型操作系统。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "Dev C++是一个集成开发环境（IDE），它本身是一个应用程序，运行在操作系统（如Windows）之上。它的作用是提供编程工具，帮助我们编写、编译和运行代码，而不是管理计算机硬件和系统资源。因此，Dev C++不是一个操作系统，选项F是正确的。"
+    },
+    {
+      "id": "2Z4mFUHzPHLkcjt6n5u7I",
+      "order": 25,
+      "type": "true_false",
+      "content": "任何一个while循环都可以转化为等价的for循环。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。任何 `while` 循环都可以等价地转化为 `for` 循环。你只需将 `while` 循环前的初始化语句放到 `for` 循环的 `初始化` 部分"
+    }
+  ]
+}

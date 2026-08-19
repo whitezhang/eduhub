@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202403",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202403",
+  "title": "GESP C++一级 202403",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2024年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202403"
+  },
+  "questions": [
+    {
+      "id": "n9kexl8gwECrsdwyS9ZJG",
+      "order": 1,
+      "type": "single_choice",
+      "content": "C++表达式 `(3 - 2) * 3 + 5` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-13"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "B",
+      "explanation": "C++表达式 `(3 - 2) * 3 + 5` 遵循运算符优先级。首先计算括号内的 `3 - 2` 得到 `1`。然后计算乘法 `1 * 3` 得到 `3`。最后计算加法 `3 + 5` 得到 `8`。因此，正确答案是B。其他选项是由于未遵循正确的运算顺序（如先乘除后加减，以及括号优先）而导致的错误结果。"
+    },
+    {
+      "id": "Vy5-WyfVfPvKr2bk4jRjH",
+      "order": 2,
+      "type": "single_choice",
+      "content": "C++语句 `cout << \"5%2=\" << 5 % 2` 执行后的输出是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 2"
+        },
+        {
+          "label": "B",
+          "text": "1 1"
+        },
+        {
+          "label": "C",
+          "text": "5%2=2"
+        },
+        {
+          "label": "D",
+          "text": "5%2=1"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。C++语句 `cout << \"5%2=\" << 5 % 2` 中，`\"5%2=\"` 是一个字符串，会原样输出。`5 % 2` 是取模运算符，表示 5 除以 2 的余数，结果是 1。因此，最终输出是 `5%2=1`。其他选项的输出与字符串或取模运算的结果不符。"
+    },
+    {
+      "id": "_WAMRZhCxUz1z57IBf9Hq",
+      "order": 3,
+      "type": "single_choice",
+      "content": "执行C++语句 `cin >> a` 时如果输入5+2，下述说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "变量a将被赋值为整数7"
+        },
+        {
+          "label": "B",
+          "text": "变量a将被赋值为字符串，字符串内容为5+2"
+        },
+        {
+          "label": "C",
+          "text": "语句执行将报错，不能输入表达式"
+        },
+        {
+          "label": "D",
+          "text": "依赖于变量a的类型。如果没有定义，会有编译错误"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`cin` 的行为完全取决于变量 `a` 的数据类型。如果 `a` 是 `int` 类型，`cin` 会尝试读取整数，只会读取到 `5`；"
+    },
+    {
+      "id": "vSZCjnG_B_Mga-6C5pcLT",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint a = 1;\ncout << \"a+1= \" << a+1 << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "a+1= 2"
+        },
+        {
+          "label": "B",
+          "text": "a+1=2"
+        },
+        {
+          "label": "C",
+          "text": "2=2"
+        },
+        {
+          "label": "D",
+          "text": "2= 2"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`cout << \"a+1= \" << a+1 << endl;` 会先原样输出字符串 `\"a+1= \"`，包括等号后的一个空格。接着，表达式 `a+1` 会被计算，其结果是 `1+1=2`。因此，最终输出是 `a+1= 2`，与选项 A 完全一致。选项 B 缺少了等号后的空格，而选项 C 和 D 错误地输出了 `2=` 而非 `a+1=`。"
+    },
+    {
+      "id": "F_e7ACtt68Z7pCRi1i3Kc",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint a = 1;\nprintf(\"a+1=%d\\n\", a+1);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "a+1= 2"
+        },
+        {
+          "label": "B",
+          "text": "a+1=2"
+        },
+        {
+          "label": "C",
+          "text": "2=2"
+        },
+        {
+          "label": "D",
+          "text": "2= 2"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。`printf`函数会原样输出格式字符串中的文本部分，即 `a+1=`。`%d` 是一个占位符，它会被后续参数 `a+1` 的计算结果（即 `1+1=2`）替换。因此，输出是 `a+1=2`。选项A在数字前多了一个空格，选项C和D错误地改变了 `a+1=` 这个文本部分。"
+    },
+    {
+      "id": "TG2J2VgZ44JrEHjxO_Isd",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面C++代码执行时输入21后，有关描述正确的是（ ）。\n\n```cpp\nint N;\ncin >> N;\nif(N% 3 == 0)\n    cout << \"能被3整除\";\nelse if (N % 7 == 0)\n    cout << \"能被7整除\";\nelse\n    cout << \"不能被3和7整除\";\ncout << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "代码第4行被执行"
+        },
+        {
+          "label": "B",
+          "text": "第4和第7行代码都被执行"
+        },
+        {
+          "label": "C",
+          "text": "仅有代码第7行被执行"
+        },
+        {
+          "label": "D",
+          "text": "第8行代码将被执行，因为input()输入为字符串"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当输入 `21` 时，`N` 的值为 `21`。首先判断 `N % 3 == 0`，即 `21 % 3 == 0`，结果为 `true`，因此代码第4行 `cout << \"能被3整除\";` 被执行。由于 `if` 条件已满足，后续的 `else if` 和 `else` 分支都不会再执行。因此，选项A正确。选项B、C错误，因为 `if-else if-else` 结构中，只有一个分支会被执行。选项D错误，`cin >> N;` 会将 `21` 作为整数读入，而非字符串。"
+    },
+    {
+      "id": "cXFC2QSSmzaUXkikgxzi0",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面C++代码第2行，总共被执行次数是（ ）。\n\n```cpp\nfor(int i=-10; i<10; i++)\n    cout << i << \" \";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "19"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "21"
+        }
+      ],
+      "answer": "C",
+      "explanation": "循环变量 `i` 从 `-10` 开始，每次递增 `1`，直到 `i` 不再小于 `10`。这意味着 `i` 的取值范围是 `[-10, 9]`。从 `-10` 到 `9` 共有 `9 - (-10) + 1 = 20` 个整数，因此 `cout << i << \" \";` 会被执行 20 次，所以 C 是"
+    },
+    {
+      "id": "U-7gQGXdfAinn_CX3yE1j",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint tnt = 0;\n\nfor(int i=0; i<10; i++)\n    if(i%3 && i%7)\n        tnt +=i;\ncout << tnt << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "18"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "answer": "D",
+      "explanation": "循环遍历 `i` 从0到9。`if(i%3 && i%7)` 条件判断 `i` 是否既不能被3整除，也不能被7整"
+    },
+    {
+      "id": "tGAThLq17MeRfic3bf_W1",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint N = 10;\nwhile(N){\n    N -= 1;\n    if(N%3 == 0)\n        cout << N << \"#\";\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "9#6#3#"
+        },
+        {
+          "label": "B",
+          "text": "9#6#3#0#"
+        },
+        {
+          "label": "C",
+          "text": "8#7#5#4#2#1#"
+        },
+        {
+          "label": "D",
+          "text": "10#8#7#5#4#2#1#"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码从 `N=10` 开始循环。每次循环先执行 `N -= 1`，然后判断新的 `N` 是否能被3整除。当 `N` 依次"
+    },
+    {
+      "id": "r0PpNoRaVsrtDgNDc3nvA",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码用于判断键盘输入的整数是否为质数。质数是只能被1和它本身整除的数。在横线处应填入代码是（ ）。\n\n```cpp\nint N;\ncin >> N;\nint cnt = 0; // 记录N被整除的次数\nfor(int i=1; i<N+1; i++)\n    if(________________)\n        cnt +=1;\nif(cnt == 2)\n    cout << N << \"是质数\";\nelse\n    cout << N << \"不是质数\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N % i"
+        },
+        {
+          "label": "B",
+          "text": "N % i == 0"
+        },
+        {
+          "label": "C",
+          "text": "N / i == 0"
+        },
+        {
+          "label": "D",
+          "text": "N / i"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。判断一个数 `N` 是否能被 `i` 整除，需要检查 `N` 除以 `i` 的余数是否为 0，这正是 `N % i == 0` 的作用。选项 A (`N % i`) 和 D (`N / i`) 只是计算余数或商，它们是整数值，不能直接作为判断是否整除的布尔条件。选项 C (`N / i == 0`) 表示 `N` 除以 `i` 的商为 0，这通常意味着 `N` 小于 `i`（且 `N` 非负），与判断整除的逻辑不符。"
+    },
+    {
+      "id": "JoVRW767Zz3sXq752dJNM",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面关于整型变量int x的赋值语句不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "x=(3.16);"
+        },
+        {
+          "label": "B",
+          "text": "x=3.16;"
+        },
+        {
+          "label": "C",
+          "text": "x=int(3.16);"
+        },
+        {
+          "label": "D",
+          "text": "x=3.16 int;"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D `x=3.16 int;` 是不正确的，因为 `int` 关键字不能这样直接放在数字字面量后面进行赋值操作，这是一个语法错误。选项 A `x=(3.16);`、选项 B `x=3.16;` 和选项 C `x=int(3.16);` 都是合法的赋值语句，它们会将浮点数 `3.16` 转换为整数 `3` 赋给 `x`，其中 A 和 B 是隐式类型转换，C 是显式类型转换。"
+    },
+    {
+      "id": "k0L983OvbsLJuvLRRelEC",
+      "order": 12,
+      "type": "single_choice",
+      "content": "C++语言中下面可以完成数据输入的语句是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "printf语句"
+        },
+        {
+          "label": "B",
+          "text": "scanf语句"
+        },
+        {
+          "label": "C",
+          "text": "default语句"
+        },
+        {
+          "label": "D",
+          "text": "cout语句"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`scanf` 语句是 C 语言风格的输入函数，在 C++ 中也可以使用，用于从标准输入读取数据。`printf` 语句是输出函数，`cout` 语句是 C++ 的输出流对象，两者都用于显示数据而非输入。`default` 语句是 `switch` 结构中的一个关键字，与数据输入无关。"
+    },
+    {
+      "id": "BSHG9zIlZGlHWnU01t6P0",
+      "order": 13,
+      "type": "single_choice",
+      "content": "在Dev C++中对一个写好的C++源文件要生成一个可执行程序需要执行下面哪个处理步骤？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "创建"
+        },
+        {
+          "label": "B",
+          "text": "编辑"
+        },
+        {
+          "label": "C",
+          "text": "编译"
+        },
+        {
+          "label": "D",
+          "text": "调试"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是C。`编译`是将C++源代码（`.cpp`文件）翻译成计算机可以理解并执行的机器代码，最终生成可执行程序（`.exe`文件）的关键步骤。`创建`是新建文件或项目，`编辑`是编写或修改代码，这些都发生在编译之前。`调试`是在程序编译成功并运行后，用于查找和修复错误的过程。"
+    },
+    {
+      "id": "QzfslHYULElkoKufqZQNz",
+      "order": 14,
+      "type": "single_choice",
+      "content": "小杨的父母最近刚刚给他买了一块华为手表，他说手表上跑的是鸿蒙，这个鸿蒙是？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "小程序"
+        },
+        {
+          "label": "B",
+          "text": "计时器"
+        },
+        {
+          "label": "C",
+          "text": "操作系统"
+        },
+        {
+          "label": "D",
+          "text": "神话人物"
+        }
+      ],
+      "answer": "C",
+      "explanation": "华为手表上跑的鸿蒙是 `操作系统`。操作系统是管理设备硬件和软件资源、提供基本功能的系统软件，就像手机上的Android或iOS一样。小程序和计时器都是运行在操作系统之上的应用程序，而神话人物则与手表运行的软件无关。"
+    },
+    {
+      "id": "Ufbqm2YbqUnfJAq9RlABQ",
+      "order": 15,
+      "type": "single_choice",
+      "content": "中国计算机学会（CCF）在2024年1月27日的颁奖典礼上颁布了王选奖，王选先生的重大贡献是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "制造自动驾驶汽车"
+        },
+        {
+          "label": "B",
+          "text": "创立培训学校"
+        },
+        {
+          "label": "C",
+          "text": "发明汉字激光照排系统"
+        },
+        {
+          "label": "D",
+          "text": "成立方正公司"
+        }
+      ],
+      "answer": "C",
+      "explanation": "王选先生的重大贡献是发明了汉字激光照排系统，这项技术彻底改变了中文出版印刷业，因此C是正确答案。选项A（制造自动驾驶汽车）与王选先生的研究领域无关。选项B（创立培训学校）并非其最主要的贡献。选项D（成立方正公司）是其技术成果的商业化，但核心贡献是技术发明本身。"
+    },
+    {
+      "id": "2FdcWzXOLcA2D5N9GavGF",
+      "order": 16,
+      "type": "true_false",
+      "content": "在C++代码中变量n被赋值为27，则 `cout << n%10` 执行后输出的是7。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 中的 `%` 运算符是取模运算符，它计算除法的余数。当 `n` 被赋值为 27 时，`n % 10` 表示 27 除以 10 的余数。27 除以 10 等于 2 余 7，所以 `n % 10` 的结果是 7。因此，`cout << n%10` 会输出 7，原题目描述是正确的。选项 F 错误是因为计算结果确实是 7。"
+    },
+    {
+      "id": "htkXvLt_ltNlGmuZ7K2DS",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++语句 `printf(\"%d#%d&\",2,3)` 执行后输出的是2#3&。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`printf` 函数会按照格式字符串 `\"%d#%d&\"` 进行输出。其中，第一个 `%d` 会被整数 `2` 替换，第二个 `%d` 会被整数 `3` 替换。格式字符串中的 `#` 和 `&` 字符会原样输出。因此，最终输出结果是 `2#3&`，题目描述正确。选择 F 则意味着输出不符合描述，与实际情况不符。"
+    },
+    {
+      "id": "Nmifrk8iDEfvO4hQMtflF",
+      "order": 18,
+      "type": "true_false",
+      "content": "C++函数scanf()必须含有参数，且其参数为字符串型字面量，其功能是提示输入。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`scanf()` 函数的主要功能是从标准输入读取数据并按指定格式解析，而不是提示用户输入。提示输入通常由 `printf()` 函数完成。此外，`scanf()` 除了格式字符串（通常是字符串字面量）外，还需要提供变量的地址作为参数来存储读取到的数据，例如 `scanf(\"%d\", &num);`。因此，原描述中关于其功能和参数的说法是错误的。"
+    },
+    {
+      "id": "RBIkQ-Tj6Pgph7v6sLj13",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++表达式 `\"10\"*2` 执行时将报错，因为 `\"10\"` 是字符串类型而2是整数类型，它们数据类型不同，不能在一起运算。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中，`\"10\"` 是一个C风格字符串字面量，其类型为 `const char[4]`，在表达式中会衰变为 `const char*"
+    },
+    {
+      "id": "MhtjbP1V7UJeebuoe78VB",
+      "order": 20,
+      "type": "true_false",
+      "content": "在C++中，while可能是死循环，而for循环不可能是死循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这个说法是错误的。`while` 循环确实可能成为死循环（例如 `while(true)`），但 `for` 循环也完全可能成为死循环。例如，`for(;;)` 就是一个典型的无限循环，因为它没有设置任何终止条件。因此，认为 `for` 循环不可能是死循环的观点是错误的。"
+    },
+    {
+      "id": "yyMPEzOce3Etfv_nZeBHb",
+      "order": 21,
+      "type": "true_false",
+      "content": "在C++，break语句用于提前终止当前层次循环，适用于while循环，但不适用于for循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`break` 语句在 C++ 中可以用于提前终止当前层次的循环，它不仅适用于 `while` 循环，也同样适用于 `for` 循环和 `do-while` 循环。例如，在 `for (int i = 0; i < 10; ++i) { if (i == 5) break; }` 中，当 `i` 等于 5 时循环会立即终止。因此，题目中“但不适用于for循环”的说法是错误的，所以选择 F。"
+    },
+    {
+      "id": "Oab0zVi-bJ8OyTSW4j_5u",
+      "order": 22,
+      "type": "true_false",
+      "content": "C++语言中3.0和3的值相等，所以它们占用的存储空间也相同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "虽然在C++中，`3.0` 和 `3` 在数值上可以被认为是相等的（例如 `3.0 == 3` 为真），但它们的类型不同。`3.0` 是浮点型字面量（默认为 `double`），通常占用8字节。而 `3` 是整型字面量（`int`），通常占用4字节。因此，它们占用的存储空间是不同的，原说法错误。"
+    },
+    {
+      "id": "i8yUYUEZgxlvETi6Dga1t",
+      "order": 23,
+      "type": "true_false",
+      "content": "在C++的程序中，cin是一个合法的变量名。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`cin` 并不是C++语言的保留关键字（reserved keyword）。C++规定，只要不是关键字，并且符合命名规则（字母、数字、下划线组成，不以数字开头），就可以作为变量名。因此，`cin` 满足这些条件，可以被声明为变量，例如 `int cin = 10;`。尽管语法上允许，但在实际编程中，这样做会覆盖标准输入流对象 `cin`，导致程序混乱，强烈不推荐。"
+    },
+    {
+      "id": "ZQcbG5tBc79_67zAz87-V",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨今年春节回奶奶家了，奶奶家的数字电视可以通过遥控器输入电视剧名称来找到想播放的电视剧，所以可以推知里面有交互式程序在运行。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "用户通过遥控器输入电视剧名称，电视系统根据输入进行查找和响应，这正是人机交互的表现。交互式程序的核心就是接收用户输入并给出反馈。因此，可以推断有交互式程序在运行，选项T正确。选项F错误，因为存在明确的用户输入和系统响应过程。"
+    },
+    {
+      "id": "587H-vwsOoQQoLH7q-XHv",
+      "order": 25,
+      "type": "true_false",
+      "content": "任何一个for循环都可以转化为等价的while循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "任何 `for` 循环都包含 `初始化`、`条件判断` 和 `增量/减量` 三个部分。这些部分可以完全映射到 `while` 循环的结构"
+    }
+  ]
+}

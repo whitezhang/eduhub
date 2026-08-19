@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202506",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202506",
+  "title": "GESP C++三级 202506",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2025年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202506"
+  },
+  "questions": [
+    {
+      "id": "uvGz8l_TtEQf0-DSUTu_g",
+      "order": 1,
+      "type": "single_choice",
+      "content": "8位二进制原码能表示的最小整数是：（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "-127"
+        },
+        {
+          "label": "B",
+          "text": "-128"
+        },
+        {
+          "label": "C",
+          "text": "-255"
+        },
+        {
+          "label": "D",
+          "text": "-256"
+        }
+      ],
+      "answer": "A",
+      "explanation": "8位二进制原码中，最高位是符号位（1表示负数），其余7位表示数值的绝对值。要表示最小整数，符号位必须是1，且7位数值位表示的绝对值最大。7位能表示的最大数值是 `1111111`，即十进制的127。因此，8位原码能表示的最小整数是 -127。选项B (-128) 是8位补码的最小值，而非原码；选项C和D的绝对值超出了7位能表示的最大范围127。"
+    },
+    {
+      "id": "eq7cBaQTYYf8B6nc2G7Gs",
+      "order": 2,
+      "type": "single_choice",
+      "content": "反码表示中，零的表示形式有：",
+      "options": [
+        {
+          "label": "A",
+          "text": "1种"
+        },
+        {
+          "label": "B",
+          "text": "2种"
+        },
+        {
+          "label": "C",
+          "text": "8种"
+        },
+        {
+          "label": "D",
+          "text": "16种"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在反码表示中，零有两种形式：正零（所有位都是 `0`，例如 `0000`）和负零（所有位都是 `1`，例如 `1111`）。负零是通过将正零的所有位取反得到的。因此，零的表示形式有2种，选项B是正确的。其他选项错误是因为反码的定义决定了零只有这两种独特的表示形式，而不是一种或更多。"
+    },
+    {
+      "id": "5QWNjs5tvz-BEFlaEzDbm",
+      "order": 3,
+      "type": "single_choice",
+      "content": "补码 1011 1011 对应的真值是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "-69"
+        },
+        {
+          "label": "B",
+          "text": "-59"
+        },
+        {
+          "label": "C",
+          "text": "-68"
+        },
+        {
+          "label": "D",
+          "text": "-58"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该8位补码的最高位是1，表示它是一个负数。要计算其真值，需将其按位取反得到 `0100 0100`，然后加1，得到 `0100 0101`。这个二进制数对应的十进制是 `64 + 4 + 1 = 69`，所以原补码的真值是 `-69`。其他选项是转换计算错误。"
+    },
+    {
+      "id": "orMcJ2I6vOc6rEJh_LfzI",
+      "order": 4,
+      "type": "single_choice",
+      "content": "若X的8位补码为 0000 1010，则 X/2 的补码是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0000 0101"
+        },
+        {
+          "label": "B",
+          "text": "1000 0101"
+        },
+        {
+          "label": "C",
+          "text": "0000 0101 或 1000 0101"
+        },
+        {
+          "label": "D",
+          "text": "算术右移后结果取决于符号位"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`0000 1010` 是正数，其十进制值为 10。X/2 即 10/2 = 5。正数 5 的 8 位补码为 `0000 0101`，因此 A 是正确答案。选项 B 是负数的补码，不符合 5 的值。选项 C 包含错误选项。选项 D 描述不准确，对于正数，算术右移就是除以 2，结果是确定的。"
+    },
+    {
+      "id": "6MNrO70UeWxGCgaoI5Xc4",
+      "order": 5,
+      "type": "single_choice",
+      "content": "二进制数 1101.101 对应的十进制数是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "13.625"
+        },
+        {
+          "label": "B",
+          "text": "12.75"
+        },
+        {
+          "label": "C",
+          "text": "11.875"
+        },
+        {
+          "label": "D",
+          "text": "14.5"
+        }
+      ],
+      "answer": "A",
+      "explanation": "二进制数 `1101.101` 转换为十进制时，整数部分 `1101` 对应 `1*2^3 + 1*2^2 + 0*2^1 + 1*2^0 = 8+4+0+1 = 13`。小数部分 `.101` 对应 `1*2^-1 + 0*2^-2 + 1*2^-3 = 0.5 + 0 + 0.125 = 0.625`。因此，总和为 `13 + 0.625 = 13.625`，选项 A 正确。其他选项的数值与此计算结果不符，是由于对位权计算有误。"
+    },
+    {
+      "id": "v2z0sDYol3PpC6crleJf4",
+      "order": 6,
+      "type": "single_choice",
+      "content": "补码加法中，若符号位无进位而次高位有进位，则说明（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "结果正确"
+        },
+        {
+          "label": "B",
+          "text": "发生上溢"
+        },
+        {
+          "label": "C",
+          "text": "发生下溢"
+        },
+        {
+          "label": "D",
+          "text": "结果符号位错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在补码加法中，判断溢出的一个常用方法是比较符号位的进位（`C_in`）和符号位的出位（`C_out`）。如果 `"
+    },
+    {
+      "id": "ZAQ7kkiPuosLFOywMux7a",
+      "order": 7,
+      "type": "single_choice",
+      "content": "八进制数 35.6 对应的十进制数是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "29.75"
+        },
+        {
+          "label": "B",
+          "text": "28.5"
+        },
+        {
+          "label": "C",
+          "text": "27.625"
+        },
+        {
+          "label": "D",
+          "text": "30.25"
+        }
+      ],
+      "answer": "A",
+      "explanation": "八进制数 `35.6` 转换为十进制时，整数部分 `35` 对应 `3*8^1 + 5*8^0 = 24 + 5 = 29`。小数部分 `.6` 对应 `6*8^-1 = 6/8 = 0.75`。因此，`35.6` (八进制) 对应的十进制数是 `29 + 0.75 = 29.75`，所以 A 选项正确。其他选项的计算结果不符合八进制转十进制的规则。"
+    },
+    {
+      "id": "sT48Ldjw2oXRBzewrUuif",
+      "order": 8,
+      "type": "single_choice",
+      "content": "二进制数 1010 | 1100 的结果是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "1000"
+        },
+        {
+          "label": "B",
+          "text": "1110"
+        },
+        {
+          "label": "C",
+          "text": "1010"
+        },
+        {
+          "label": "D",
+          "text": "1100"
+        }
+      ],
+      "answer": "B",
+      "explanation": "二进制数 `1010 | 1100` 涉及位或（`|`）运算。位或运算的规则是：只要对应位上有一个是 1，结果位就是 1。将 `1010` 和 `1100` 逐位相或，得到 `1110`。因此，选项 B 是正确的。其他选项的结果不符合位或运算的规则，例如 `1000` 漏掉了多个为 1 的位。"
+    },
+    {
+      "id": "yUAGAX5nfOqxVvGFJT9lD",
+      "order": 9,
+      "type": "single_choice",
+      "content": "以下哪个位运算可以交换两个变量的值（无需临时变量）( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "`a = a ^ b; b = a ^ b; a = a ^ b;`"
+        },
+        {
+          "label": "B",
+          "text": "`a = a & b; b = a | b; a = a & b;`"
+        },
+        {
+          "label": "C",
+          "text": "`a = a | b; b = a ^ b; a = a ^ b;`"
+        },
+        {
+          "label": "D",
+          "text": "`a = ~a; b = ~b; a = ~a;`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\n1.  **选项 A 正确的原因：**\n    这是经典的 XOR（异或）位运算交换算法。\n    *   `a = a"
+    },
+    {
+      "id": "6hgKLREQKK4Q2mKLqylAw",
+      "order": 10,
+      "type": "single_choice",
+      "content": "如何正确定义一个长度为5的整型数组( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int array = new int[5];`"
+        },
+        {
+          "label": "B",
+          "text": "`array int[5];`"
+        },
+        {
+          "label": "C",
+          "text": "`int[] array = {1,2,3,4,5};`"
+        },
+        {
+          "label": "D",
+          "text": "`int array[5];`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`int array[5];` 是 C++ 中定义一个包含 5 个整型元素的数组的标准且最直接的语法，因此 D 选项正确。A 选项 `int array = new int[5];` 试图将动态分配的数组（返回指针）赋值给一个整型变量，类型不匹配。B 选项 `array int[5];` 语法不正确，类型名应在数组名之前。C 选项 `int[] array = {1,2,3,4,5};` 这种语法在 C++ 中不常用，更接近 Java 语言的数组声明方式。"
+    },
+    {
+      "id": "6vC18N3mvYxxqA06NmSGm",
+      "order": 11,
+      "type": "single_choice",
+      "content": "以下程序使用枚举法（穷举法）求解满足条件的三位数，横线处应该填入的是（）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int count = 0;\n    for (int i = 100; i <= 999; i++) {\n        int a = i / 100;\n        ____________________\n        int c = i % 10;\n        if (a * a + b * b == c * c) {\n            count++;\n        }\n    }\n    cout << count << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int b = (i / 10) / 10;`"
+        },
+        {
+          "label": "B",
+          "text": "`int b = (i / 10) % 10;`"
+        },
+        {
+          "label": "C",
+          "text": "`int b = (i % 10) / 10;`"
+        },
+        {
+          "label": "D",
+          "text": "`int b = (i % 10) % 10;`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "要获取三位数 `i` 的十位数字 `b`，首先需要通过 `i / 10` 去除个位，得到一个两位数（例如 123 变为 12）。然后，对这个两位数 `(i / 10)` 进行 ` % 10` 运算，即可提取出其个位，也就是原三位数的十位。因此，`int b = (i / 10) % 10;` 是正确的。其他选项 A、C、D 分别会得到百"
+    },
+    {
+      "id": "jLiRea_rBGI4RPHPwRo5s",
+      "order": 12,
+      "type": "single_choice",
+      "content": "以下程序模拟了一个简单的小球反弹过程，横线处应该填入的是（）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int height = 10;\n    int distance = 0;\n    for (int i = 1; i <= 5; i++) { // 模拟5次落地\n        ______________________\n        height /= 2;\n        distance += height;\n    }\n    cout << distance << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`distance += height/2;`"
+        },
+        {
+          "label": "B",
+          "text": "`distance += height;`"
+        },
+        {
+          "label": "C",
+          "text": "`distance += height*2;`"
+        },
+        {
+          "label": "D",
+          "text": "`distance += height+1;`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "为了模拟小球每次落地（下落）的距离，横线处应将当前 `height` 值加到 `distance` 中。`height` 变量在每次循环开始时代表"
+    },
+    {
+      "id": "GhSaL0OACDmsII9riB6CQ",
+      "order": 13,
+      "type": "single_choice",
+      "content": "C++代码 `string s = \"GESP考试\";` ，s占据的字节数是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "8或10"
+        },
+        {
+          "label": "D",
+          "text": "取决于计算机采用什么编码"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`std::string` 存储字符串的实际字符数据。字符串 \"GESP考试\" 包含英文字符和中文字符，其中中文字符在内存中占用的字节数取决于程序编译和运行时"
+    },
+    {
+      "id": "VSIvaGckudy_7j0AFYb99",
+      "order": 14,
+      "type": "single_choice",
+      "content": "C++语句 `string s=\"Gesp Test\";` 执行 `s.rfind(\"e\")` 以后，输出的是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`s.rfind(\"e\")` 用于查找字符串 `s` 中子字符串 \"e\" *最后一次*出现的位置。C++ 字符串索引从 0 开始计数，`\"Gesp Test\"` 中第一个 'e' 在索引 1，第二个 'e'（也是最后一个）在索引 6。因此，输出 6 是正确的。选项 A (1) 是第一个 'e' 的位置，B (2) 和 D (3) 均不是 'e' 的位置。"
+    },
+    {
+      "id": "VEDH2uF1zAp7ORVsDophD",
+      "order": 15,
+      "type": "single_choice",
+      "content": "字符串\"Gesp考试\"，字符数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "字符数多少取决于编码"
+        }
+      ],
+      "answer": "C",
+      "explanation": "字符串\"Gesp考试\"包含4个英文字符（G, e, s, p）和2个汉字（考, 试）。在计算字符数时，每个英文字符和每个汉字都算作一个独立的字符，因此总共有 4 + 2 = 6 个字符，选项C正确。选项A和B错误，它们可能混淆了字符数和字节数的概念。选项D错误，字符数是逻辑上的概念，表示字符串中可见的独立符号数量，它不取决于底层存储的编码方式；编码方式只会影响每个字符占用的字节数。"
+    },
+    {
+      "id": "wBVpg9Y6L_E9mUa4k369q",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++中 string 的 `==` 运算符比较的是字符串的内存地址，而非内容。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中 `std::string` 类型的 `==` 运算符被重载，其功能是比较两个字符串对象的内容（即字符序列）是否相同，而不是它们的内存地址。因此，题目描述是错误的，选项 F 正确。如果直接比较两个 `char*` 指针，`==` 运算符才会比较内存地址，但 `std::string` 的行为不同。"
+    },
+    {
+      "id": "c-rFwuaJV6irCU-QDFP0v",
+      "order": 17,
+      "type": "true_false",
+      "content": "string 的 `substr(1, 3)` 返回从下标1开始的3个字符的子串。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`string::substr(pos, len)` 函数用于从字符串中提取子串。其中，`pos` 参数指定了子串的起始下标（从0开始计数），`len` 参数指定了子串的长度（即要提取的字符数量）。因此，`substr(1, 3)` 确实表示从下标1开始，提取3个字符的子串，该描述完全正确。"
+    },
+    {
+      "id": "4SMpXzIdC1D5uyLfFYusj",
+      "order": 18,
+      "type": "true_false",
+      "content": "x 是浮点数，`(x >> 1)` 等价于 `x / 2`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`>>` (右移) 运算符只能用于整数类型。当对浮点数 `x` 使用 `>> 1` 时，`x` 会首先被隐式转换为整数（小数部分会被截断），然后进行位移操作。这与浮点数 `x / 2` 的结果（保留小数部分）是不同的。因此，两者不等价，该说法是错误的。"
+    },
+    {
+      "id": "vLSrZ_NLYgSFJA1XYstoL",
+      "order": 19,
+      "type": "true_false",
+      "content": "`string(\"hello\") == \"hello\"` 的比较结果为true。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`string(\"hello\")` 创建了一个 `std::string` 对象，其内容是 \"hello\"。C++ 的 `std::string` 类重载了 `operator==` 运算符，使其能够直接与 C 风格字符串字面量（如 `\"hello\"`）进行内容比较。由于 `std::string` 对象和 C 风格字符串的内容都是 \"hello\"，它们是相等的，因此比较结果为 `true`。所以选项 T 是正确的，选项 F 是错误的。"
+    },
+    {
+      "id": "vByWj26sUaqwF_SuOBRkU",
+      "order": 20,
+      "type": "true_false",
+      "content": "`sort` 可以直接用于排序 `set` 中的元素。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`std::set` 容器的特点是其内部元素总是自动保持有序，无需额外排序。`std::sort` 函数需要随机访问迭代器才能工作，而 `std::set` 提供的迭代器是双向迭代器，不支持随机访问。因此，`std::sort` 不能直接用于 `std::set`。选项 T 错误，因为 `std::set` 本身就是有序的，且 `std::sort` 的要求与 `std::set` 的迭代器不兼容。"
+    },
+    {
+      "id": "A69N7GJCxNrnuhUr30Tge",
+      "order": 21,
+      "type": "true_false",
+      "content": "`(x & 1) == 0` 可以判断整数 x 是否为偶数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "整数的奇偶性由其二进制表示的最低位决定。偶数的最低位是 `0`，而奇数的最低位是 `1`。表达式 `x & 1` 的作用是提取整数 `x` 的最低位。因此，当 `(x & 1) == 0` 成立时，表示 `x` 的最低位是 `0`，即 `x` 是偶数，所以题目描述正确。选项 F 错误，因为它否定了一个正确的判断方法。"
+    },
+    {
+      "id": "iuBXSoiHI4crbRRqHVPhW",
+      "order": 22,
+      "type": "true_false",
+      "content": "string 的 `substr(2, 10)` 在字符串长度不足时会抛出异常。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "错误。`string::substr(pos, len)` 方法在请求的长度 `len` 超出字符串实际可提取的字符数时，并不会抛出异常。例如，`substr(2, 10)` 如果字符串只有5个字符，它会从索引2开始提取到字符串末尾，返回一个较短的子字符串。只有当起始位置 `pos` 超出字符串长度时，才会抛出 `std::out_of_range` 异常。因此，题目描述不符合 `substr` 的行为。"
+    },
+    {
+      "id": "IPvRpAusN7OUyYBXf8Opf",
+      "order": 23,
+      "type": "true_false",
+      "content": "在数学纸面计算中，`pow(2, 3)` 的计算结果一定是8，但是在C++中，如果遇到数据类型是浮点数，那就不一定正确。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确答案是T。在C++中，`pow` 函数通常处理浮点数（如 `double` 类型）。由于浮点数在计算机内部的存储方式和精度限制，像 `pow(2.0, 3.0)` 这样的计算结果虽然理论上是8，但实际可能得到一个非常接近8的数值，例如 `7.999999999999999` 或 `8.000000000000001`。因此，不能保证结果**一定**是精确的8。选择F则意味着浮点数计算结果总是精确的，这与浮点数的特性不符。"
+    },
+    {
+      "id": "BZMjP_qLRhpVQLjEk_nH-",
+      "order": 24,
+      "type": "true_false",
+      "content": "在 C++ 中，枚举的底层类型可以是非整型（如 `float` 或 `double` ）。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中枚举的底层类型**必须是整型**（integral type）。这意味着它们只能是 `int`、`char`、`short`、`long` 等及其无符号版本。不允许使用 `float` 或 `double` 等浮点类型作为枚举的底层类型。因此，题目中“可以是非整型”的说法是错误的，正确答案为 F。"
+    },
+    {
+      "id": "n6xYnEASzy5SysHBVAnrd",
+      "order": 25,
+      "type": "true_false",
+      "content": "函数声明 `double f();` 返回 `int` 时，会自动转换为 `double`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 允许函数返回类型进行隐式转换。当函数声明为 `double f();` 但实际返回一个 `int` 类型的值时，这个 `int` 值会在返回前自动转换为 `double` 类型。因此，题目描述是正确的。"
+    }
+  ]
+}

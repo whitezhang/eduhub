@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-6ji-202403",
+  "url": "https://adacpp.com/practice/gesp-cpp-6ji-202403",
+  "title": "GESP C++六级 202403",
+  "description": "CCF编程能力等级认证 GESP C++ 六级 2024年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 6,
+    "ym": "202403"
+  },
+  "questions": [
+    {
+      "id": "1Yc9FLOyvqKKQwyTJSkJf",
+      "order": 1,
+      "type": "single_choice",
+      "content": "在构建哈夫曼树时，每次应该选择（ ）合并。",
+      "options": [
+        {
+          "label": "A",
+          "text": "最小权值的节点"
+        },
+        {
+          "label": "B",
+          "text": "最大权值的节点"
+        },
+        {
+          "label": "C",
+          "text": "随机节点"
+        },
+        {
+          "label": "D",
+          "text": "深度最深的节点"
+        }
+      ],
+      "answer": "A",
+      "explanation": "构建哈夫曼树的目标是最小化所有叶子节点的带权路径长度，以实现最优编码。每次选择**最小权值的两个节点**进行合并，能确保权值大的节点离根更近，从而达到最优效果。选择最大权值的节点会增加总带权路径长度；随机选择无法保证最优性；深度最深的节点不是构建时的选择依据。"
+    },
+    {
+      "id": "561gnITcW_qbJ-3ipCyKA",
+      "order": 2,
+      "type": "single_choice",
+      "content": "面向对象的编程思想主要包括以下哪些原则（ ）？",
+      "options": [
+        {
+          "label": "A",
+          "text": "贪心、动态规划、回溯"
+        },
+        {
+          "label": "B",
+          "text": "并发、并行、异步"
+        },
+        {
+          "label": "C",
+          "text": "递归、循环、分治"
+        },
+        {
+          "label": "D",
+          "text": "封装、继承、多态"
+        }
+      ],
+      "answer": "D",
+      "explanation": "面向对象的编程思想主要包括封装、继承和多态，它们是构建和组织代码的三大核心原则。选项A、C描述的是算法设计方法或程序控制结构，选项B描述的是程序的执行模式，这些都与面向对象的核心思想不同。因此，D是正确答案。"
+    },
+    {
+      "id": "Sif-zSlJi1aTtn8CfxutN",
+      "order": 3,
+      "type": "single_choice",
+      "content": "在队列中，元素的添加和删除是按照（ ）原则进行的。",
+      "options": [
+        {
+          "label": "A",
+          "text": "先进先出"
+        },
+        {
+          "label": "B",
+          "text": "先进后出"
+        },
+        {
+          "label": "C",
+          "text": "最小值先出"
+        },
+        {
+          "label": "D",
+          "text": "随机进出"
+        }
+      ],
+      "answer": "A",
+      "explanation": "队列是一种先进先出（FIFO）的数据结构，就像排队买票一样，最先进入队列的元素会最先被处理和移除。因此，A是正确的。选项 B 描述的是栈（`stack`）的特性，而选项 C 和 D 不符合标准队列的运作原则。"
+    },
+    {
+      "id": "gsoZOB9ETQzaMqUCQ7EMO",
+      "order": 4,
+      "type": "single_choice",
+      "content": "给定一个简单的类定义如下，（ ）语句在类的外部正确地创建了一个 `Circle` 对象并调用了 `getArea` 函数？\n\n```cpp\nclass Circle {\nprivate:\n    double radius;\npublic:\n    Circle(double r) : radius(r) {}\n    double getArea() {\n        return 3.14 * radius * radius;\n    }\n};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`Circle c = Circle(5.0); c.getArea(c);`"
+        },
+        {
+          "label": "B",
+          "text": "`Circle c(5.0); getArea(c);`"
+        },
+        {
+          "label": "C",
+          "text": "`Circle c = new Circle(5.0); c.getArea();`"
+        },
+        {
+          "label": "D",
+          "text": "`Circle c(5.0); c.getArea();`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D `Circle c(5.0); c.getArea();` 是正确的。它首先使用构造函数 `Circle(double r)` 创建了一个名为 `c` 的 `Circle"
+    },
+    {
+      "id": "lV2sCE4y17Cax3V5VfV4s",
+      "order": 5,
+      "type": "single_choice",
+      "content": "以下代码希望能在一棵二叉排序树中搜索特定的值，请在横线处填入（ ），使其能正确实现相应功能。\n\n```cpp\nTreeNode* search(TreeNode* root, int target) {\n    if (root == NULL || root->val == target) {\n        return root;\n    }\n    if (_______________) {\n        return search(root->left, target);\n    } else {\n        return search(root->right, target);\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`target < root->left`"
+        },
+        {
+          "label": "B",
+          "text": "`target < root->val`"
+        },
+        {
+          "label": "C",
+          "text": "`target > root->val`"
+        },
+        {
+          "label": "D",
+          "text": "`target > root->left`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。二叉排序树（BST）的特性是左子树所有节点的值都小于根节点的值。因此，当 `target < root->val` 时，目标值只可能存在于左子树中，代码应递归搜索 `root->left`。选项 A 和 D 错误，因为 `root->left` 是一个指针，不能与整数 `target` 进行数值比较。选项 C 错误，如果 `target > root->val`，应该搜索右子树，而不是左子树。"
+    },
+    {
+      "id": "DfNEIw1sN_dFjXIQv1CjX",
+      "order": 6,
+      "type": "single_choice",
+      "content": "3位格雷编码的正确顺序是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "000, 001, 010, 011, 100, 101, 110, 111"
+        },
+        {
+          "label": "B",
+          "text": "000, 001, 011, 010, 110, 111, 101, 100"
+        },
+        {
+          "label": "C",
+          "text": "000, 010, 001, 011, 100, 110, 101, 111"
+        },
+        {
+          "label": "D",
+          "text": "000, 010, 110, 100, 111, 101, 011, 001"
+        }
+      ],
+      "answer": "B",
+      "explanation": "格雷编码（Gray Code）的特点是任意两个相邻的码字之间只有一位二进制数不同。选项 B 中的序列 `000, 001, 011, 010, 110, 111, 101, 100` 严格遵循了这一规则，每个相邻数字都仅有一位不同。选项 A 是普通的二进制计数，其相邻数字有多位不同；选项 C 和 D 也存在相邻数字有多位不同的情况，不符合格雷编码的定义。"
+    },
+    {
+      "id": "zbCAozsNKwPTbGFokTkbY",
+      "order": 7,
+      "type": "single_choice",
+      "content": "以下动态规划算法的含义与目的是（ ）。\n\n```cpp\nint function(vector<int>& nums) {\n    int n = nums.size();\n    if (n == 0)\n        return 0;\n    if (n == 1)\n        return nums[0];\n    vector<int> dp(n, 0);\n    dp[0] = nums[0];\n    dp[1] = max(nums[0], nums[1]);\n    for (int i = 2; i < n; ++i) {\n        dp[i] = max(dp[i - 1], nums[i] + dp[i - 2]);\n    }\n    return dp[n - 1];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "计算数组 `nums` 中的所有元素的和"
+        },
+        {
+          "label": "B",
+          "text": "计算数组 `nums` 中相邻元素的最大和"
+        },
+        {
+          "label": "C",
+          "text": "计算数组 `nums` 中不相邻元素的最大和"
+        },
+        {
+          "label": "D",
+          "text": "计算数组 `nums` 中的最小元素"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该动态规划算法的核心是递推关系 `dp[i] = max(dp[i - 1], nums[i] + dp[i - 2])`。"
+    },
+    {
+      "id": "YdjH6K7_zVvaCUNtOl_Es",
+      "order": 8,
+      "type": "single_choice",
+      "content": "阅读以下广度优先搜索的代码：\n\n```cpp\nvoid bfs(TreeNode* root) {\n    if (root == NULL) {\n        return;\n    }\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        TreeNode* current = q.front();\n        q.pop();\n        cout << current->val << \" \";\n        if (current->left) {\n            q.push(current->left);\n        }\n        if (current->right) {\n            q.push(current->right);\n        }\n    }\n}\n```\n\n使用以上算法遍历以下这棵树，可能的输出是（ ）。\n\n```\n        1\n       / \\\n      2    3\n     / \\    \\\n    8   9    6\n       / \\    \\\n      4   5    7\n              / \\\n             10  11\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 2 8 9 4 5 3 6 7 10 11"
+        },
+        {
+          "label": "B",
+          "text": "1 2 3 4 5 6 7 8 9 10 11"
+        },
+        {
+          "label": "C",
+          "text": "1 2 3 8 9 6 4 5 7 10 11"
+        },
+        {
+          "label": "D",
+          "text": "1 2 3 8 9 4 5 6 7 10 11"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该广度优先搜索（BFS）算法使用队列按层级从左到右遍历树。\n\n正确答案 C 是对的，因为算法会先访问根节点 `1`"
+    },
+    {
+      "id": "ieS4jTSnV2XH9-Crm0h-q",
+      "order": 9,
+      "type": "single_choice",
+      "content": "给定一个空栈，执行以下操作序列：\n\n操作序列：`push(1), push(2), push(3), pop(), pop(), push(4), push(5), pop()`\n\n最终栈中的元素是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1, 2"
+        },
+        {
+          "label": "B",
+          "text": "1, 4, 5"
+        },
+        {
+          "label": "C",
+          "text": "1, 2, 5"
+        },
+        {
+          "label": "D",
+          "text": "1, 4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "栈是一种“后进先出”（LIFO）的数据结构。按顺序执行操作：`push(1)` 栈为 `[1]`；`push(2)` 栈为 `[1, 2]`；`push(3)` 栈为 `[1, 2, 3]`。接着 `pop()` 移除 3，栈为 `[1, 2]`；再 `pop()` 移除 2，栈为 `[1]`。然后 `push(4)` 栈为 `[1, 4]`；`push(5)` 栈为 `[1, 4, 5]`。最后 `pop()` 移除 5，最终栈中元素为 `[1, 4]`。因此，选项 D 是正确的。其他选项不符合栈的实际操作结果。"
+    },
+    {
+      "id": "rVjvgV7F6EBPojjINg3WA",
+      "order": 10,
+      "type": "single_choice",
+      "content": "一个有124个叶子节点的完全二叉树，最多有（ ）个结点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "247"
+        },
+        {
+          "label": "B",
+          "text": "248"
+        },
+        {
+          "label": "C",
+          "text": "249"
+        },
+        {
+          "label": "D",
+          "text": "250"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在一个完全二叉树中，叶子节点数 `n0` 与度为2的节点数 `n2` 之间存在关系：`n0 = n2 + 1"
+    },
+    {
+      "id": "RuIjr9p_99g6Y9KdubMCM",
+      "order": 11,
+      "type": "single_choice",
+      "content": "在求解最优化问题时，动态规划常常涉及到两个重要性质，即最优子结构和（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "重叠子问题"
+        },
+        {
+          "label": "B",
+          "text": "分治法"
+        },
+        {
+          "label": "C",
+          "text": "贪心策略"
+        },
+        {
+          "label": "D",
+          "text": "回溯算法"
+        }
+      ],
+      "answer": "A",
+      "explanation": "动态规划解决最优化问题时，主要依赖两个关键性质：最优子结构和重叠子问题。最优子结构意味着问题的最优解包含其子问题的最优解，而重叠子问题则指在求解过程中，相同的子问题会被反复计算，动态规划通过存储这些子问题的解来避免重复计算。因此，A选项是正确的。B分治法是一种算法思想，但动态规划特指处理有重叠子问题的情况；C贪心策略和D回溯算法是其他不同的算法设计范式，并非动态规划的必要性质。"
+    },
+    {
+      "id": "_PfVsYhZ-gN-WNsX--z2K",
+      "order": 12,
+      "type": "single_choice",
+      "content": "若一棵二叉树的先序遍历为：A, B, D, E, C, F、中序遍历为：D, B, E, A, F, C，它的后序遍历为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "D, E, B, F, C, A"
+        },
+        {
+          "label": "B",
+          "text": "E, D, B, F, C, A"
+        },
+        {
+          "label": "C",
+          "text": "D, E, B, C, F, A"
+        },
+        {
+          "label": "D",
+          "text": "E, D, B, C, F, A"
+        }
+      ],
+      "answer": "A",
+      "explanation": "根据先序遍历 `A, B, D, E, C, F` 可知根节点是 `A`。结合中序遍历 `D, B, E, A, F, C`，根节点 `A` 左侧的 `D, B, E` 构成左子树，右侧的 `F, C` 构成右子树。对左子树 `(B, D, E)` 进行后序遍历得到 `D, E, B`；对右子树 `(C, F)` 进行后序遍历得到 `F, C`。因此，整棵树的后序遍历为左子树后序、右子树后序、根节点，即 `D, E, B, F, C, A`。其他选项的元素顺序或子树顺序不"
+    },
+    {
+      "id": "I0KQUfHEDOl5tpO9sVZwB",
+      "order": 13,
+      "type": "single_choice",
+      "content": "线性筛法与埃氏筛法相比的优势是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "更容易实现"
+        },
+        {
+          "label": "B",
+          "text": "更节省内存"
+        },
+        {
+          "label": "C",
+          "text": "更快速"
+        },
+        {
+          "label": "D",
+          "text": "更准确"
+        }
+      ],
+      "answer": "C",
+      "explanation": "线性筛法的主要优势是更快速（C）。它通过确保每个合数只被其最小质因子筛除一次，避免了重复标记，将时间复杂度优化到 O(N)，比埃氏筛法的 O(N log log N) 更高效。埃氏筛法通常逻辑更简单，更容易实现（A）。在内存占用方面（B），线性筛法可能需要额外数组存储最小质因子，不一定更节省。两种筛法都能准确找出所有质数，因此准确性（D）不是区分优势。"
+    },
+    {
+      "id": "ufdkxpeXkaaXm7u88sgJR",
+      "order": 14,
+      "type": "single_choice",
+      "content": "以下代码使用了辗转相除法求解最大公因数，请在横线处填入（ ），使其能正确实现相应功能。\n\n```cpp\nint gcd(int a, int b) {\n    while (b != 0) {\n        ______________________\n    }\n    return a;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int temp = b; b = a / b; a = temp;`"
+        },
+        {
+          "label": "B",
+          "text": "`int temp = a; a = b / a; b = temp;`"
+        },
+        {
+          "label": "C",
+          "text": "`int temp = b; b = a % b; a = temp;`"
+        },
+        {
+          "label": "D",
+          "text": "`b = a % b; a = b;`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C正确。辗转相除法的核心步骤是将 `a` 更新为 `b`，将 `b` 更新为 `a % b`。选项 C 使用 `int temp = b;` 临时存储 `b` 的值，然后将 `b` 更新为 `a % b`，最后将 `a` 更新为旧的 `b`（即 `temp`），完美实现了这一逻辑。\n\nA和B错误地使用了 `a / b` 或 `b / a` 进行除法，而不是取余数 `a % b`。D的赋值顺序错误，`b = a % b;` 后，原始 `b` 的值已丢失，`a = b;` 会将 `a % b` 赋给 `a`，而非原始的 `b` 值。"
+    },
+    {
+      "id": "LoWbHjlqLk6R9853GUxt6",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面的代码片段用于反转单链表，请进行（ ）修改，使其能正确实现相应功能。\n\n```cpp\nListNode* reverseLinkedList(ListNode* head) {\n    ListNode* prev = nullptr;\n    ListNode* current = head;\n    while (current != nullptr) {\n        ListNode* next = current->next;\n        current->next = next;\n        prev = current;\n        current = next;\n    }\n    return prev;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`current->next = next;` 应该改为 `current->next = prev;`"
+        },
+        {
+          "label": "B",
+          "text": "`ListNode* next = current->next;` 应该改为 `ListNode* next = prev->next;`"
+        },
+        {
+          "label": "C",
+          "text": "`current != nullptr` 应该改为 `current->next != nullptr`"
+        },
+        {
+          "label": "D",
+          "text": "`ListNode* prev = nullptr;` 应该改为 `ListNode* prev = head;`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。在反转链表时，`current` 节点的 `next` 指针需要指向它在原链表中的前一个节点，而这个前一个节点正是"
+    },
+    {
+      "id": "WzyEOzN_dnUti_6Yfn5Ng",
+      "order": 16,
+      "type": "true_false",
+      "content": "哈夫曼树是一种二叉树。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "哈夫曼树在构建过程中，每次都将两个权值最小的节点合并成一个新节点，新节点作为它们的父节点。这种合并方式保证了每个父节点最多只有两个子节点，这正是二叉树的定义。因此，哈夫曼树必然是一种二叉树，选项T正确。选项F错误，因为它与哈夫曼树的结构定义不符。"
+    },
+    {
+      "id": "t31GX_KGrA3yPrApN5kOG",
+      "order": 17,
+      "type": "true_false",
+      "content": "在动态规划中，状态转移方程的作用是定义状态之间的关系。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "T是正确的。在动态规划中，状态转移方程（或递推关系）是核心，它精确地定义了如何从一个或多个已计算的子问题的状态值，推导出当前状态的值。这本质上就是描述了不同状态之间的计算依赖和数值关系，从而逐步解决整个问题。因此，F是错误的。"
+    },
+    {
+      "id": "CVx_cBep-2vXxEmXYTfH8",
+      "order": 18,
+      "type": "true_false",
+      "content": "继承是将已有类的属性和方法引入新类的过程。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "继承的核心目的就是实现代码复用。它允许新类（派生类）自动拥有并可以使用已有类（基类）的数据成员（属性）和成员函数（方法），从而避免重复编写代码，并支持多态性。因此，题目对继承的描述是完全正确的。选项 F 错误，因为它否定了继承的这一基本定义。"
+    },
+    {
+      "id": "nVO4dL6QPTPhPkJw00P_e",
+      "order": 19,
+      "type": "true_false",
+      "content": "完全二叉树的任意一层都可以不满。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "完全二叉树的定义要求，除了最后一层外，所有层都必须是满的。如果最后一层不满，节点也必须从左到右紧密排列，不能有空缺。因此，题目中“任意一层都可以不满”的说法是错误的，F选项正确，T选项不符合完全二叉树的结构特性。"
+    },
+    {
+      "id": "x8fcWOE0fWCzr3kE7W7WH",
+      "order": 20,
+      "type": "true_false",
+      "content": "删除单向链表中的节点，只需知道待删除节点的地址即可，无需访问前一个节点。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在单向链表中，要删除一个节点，必须更新其**前一个节点**的 `next` 指针，使其跳过待删除节点。由于单向链表只能从"
+    },
+    {
+      "id": "o9VmH_ly0k8I708-DbaO0",
+      "order": 21,
+      "type": "true_false",
+      "content": "在宽度优先搜索中，通常使用队列来辅助实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "宽度优先搜索（BFS）的特点是逐层探索，即先访问完当前层的所有节点，再访问下一层。队列（`std::queue`）的“先进先出”（FIFO）特性完美符合这一需求，新发现的节点被添加到队尾，而最先进入队列的节点则最先被处理。因此，使用队列是实现BFS的标准且最有效的方法。选择F则意味着BFS不使用队列，这与BFS的基本原理和实现方式相悖。"
+    },
+    {
+      "id": "v9KiP4pp8YczGZFSF7tj-",
+      "order": 22,
+      "type": "true_false",
+      "content": "哈夫曼编码的主要应用领域是有损数据压缩。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哈夫曼编码是一种**无损**数据压缩算法，它通过为出现频率高的字符分配短编码，为出现频率低的字符分配长编码来压缩数据，但不会丢失任何原始信息。这意味着经过哈夫曼编码的数据可以完全恢复到原始状态。因此，题目中“有损数据压缩”的说法是错误的，选项F正确。有损压缩（如JPEG、MP3）会丢弃部分信息以达到更高的压缩率。"
+    },
+    {
+      "id": "Ye9cVgkRTNsM8YxYAuyjO",
+      "order": 23,
+      "type": "true_false",
+      "content": "二叉搜索树的查找操作的时间复杂度是 O(N)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "二叉搜索树的查找操作时间复杂度在**最坏情况**下是 O(N)（当树退化成链表时），但在**平均情况**下是 O"
+    },
+    {
+      "id": "ZP6kGN3tkevPgbPMkUXcB",
+      "order": 24,
+      "type": "true_false",
+      "content": "栈的基本操作包括入栈（push）和出栈（pop）。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "栈是一种“后进先出”（LIFO）的数据结构，其核心操作就是向栈顶添加元素（`push`）和从栈顶移除元素（`pop`）。这两个操作定义了栈的基本行为，是所有栈实现都必须提供的功能，因此题目描述是正确的。选择F则意味着这些不是基本操作，与栈的定义不符。"
+    },
+    {
+      "id": "spxjzSoVv5aYLl12ep0b5",
+      "order": 25,
+      "type": "true_false",
+      "content": "使用哈夫曼编码对一些字符进行编码，如果两个字符的频率差异最大，则它们的编码可能出现相同的前缀。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "错误。哈夫曼编码的核心是构建一棵二叉树，每个字符对应一个叶子节点，其编码是根到该叶子节点的路径。由于每个字符对应唯一的叶"
+    }
+  ]
+}

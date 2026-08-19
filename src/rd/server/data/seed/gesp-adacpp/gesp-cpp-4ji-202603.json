@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-4ji-202603",
+  "url": "https://adacpp.com/practice/gesp-cpp-4ji-202603",
+  "title": "GESP C++四级 202603",
+  "description": "CCF编程能力等级认证 GESP C++ 四级 2026年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 4,
+    "ym": "202603"
+  },
+  "questions": [
+    {
+      "id": "LFJ-sgtFpl1CfMtNvu2Im",
+      "order": 1,
+      "type": "single_choice",
+      "content": "执行下面程序后,输出为()。\n```cpp\nint f(int x = 2){\n    return x * 3;\n}\n\nint main(){\n    cout << f() << \" \" << f(4);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 12"
+        },
+        {
+          "label": "B",
+          "text": "6 12"
+        },
+        {
+          "label": "C",
+          "text": "6 4"
+        },
+        {
+          "label": "D",
+          "text": "12 6"
+        }
+      ],
+      "answer": "B",
+      "explanation": "函数 `f()` 第一次调用时没有传入参数，会使用默认参数 `x = 2`，返回 `2 * 3 = 6`。第二次调用 `f(4)` 传入参数 `x = 4`，返回 `4 * 3 = 12`。因此，程序输出 `6 12`。"
+    },
+    {
+      "id": "zIK09cJn5K-BMmyO6MnEw",
+      "order": 2,
+      "type": "single_choice",
+      "content": "执行下面代码后,输出为()。\n```cpp\nint main() {\n    int a = 5;\n    int* p = &a;\n    int** q = &p;\n    **q += 7;\n    cout << a << \" \" << *p;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 5"
+        },
+        {
+          "label": "B",
+          "text": "12 12"
+        },
+        {
+          "label": "C",
+          "text": "12 5"
+        },
+        {
+          "label": "D",
+          "text": "5 12"
+        }
+      ],
+      "answer": "B",
+      "explanation": "变量 `a` 初始化为5。指针 `p` 指向 `a` 的地址。指针 `q` 指向 `p` 的地址。表达式 `**q` 两次解引用，最终访问到 `a` 的值。所以 `**q += 7` 等价于 `a += 7`，使 `a` 的值变为 `5 + 7 = 12`。`*p` 解引用 `p`，也访问到 `a` 的值，所以 `*p` 也是12。最终输出 `12 12`。"
+    },
+    {
+      "id": "UKlBTc_JQ0jCopEAkn0yq",
+      "order": 3,
+      "type": "single_choice",
+      "content": "已知:\n```cpp\nint a[3][4] = {\n    {1,2,3,4},\n    {5,6,7,8},\n    {9,10,11,12}\n};\nint (*p)[4] = a;\n```\n则表达式 `*(*(p + 2) + 1)` 的值为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "11"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`p` 是一个指向包含4个整数的数组的指针，它指向二维数组 `a` 的第一行。`p + 2` 使指针向前移动两行，指向 `a` 的第三行（即 `{9,10,11,12}`）。`*(p + 2)` 解引用这个指针，得到第三行数组本身。`*(p + 2) + 1` 相当于 `a[2] + 1`，指向第三行数组的第二个元素（值为10）。最后 `*(*(p + 2) + 1)` 解引用这个地址，得到值 `10`。"
+    },
+    {
+      "id": "LqMLgbp0jUa_E9jqJctFV",
+      "order": 4,
+      "type": "single_choice",
+      "content": "执行下面程序后,输出为()。\n```cpp\nvoid fun(int a, int &b, int *c){\n    a += 1;\n    b += 2;\n    *c += 3;\n}\n\nint main(){\n    int x = 1, y = 1, z = 1;\n    fun(x, y, &z);\n    cout << x << \" \" << y << \" \" << z;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 3 4"
+        },
+        {
+          "label": "B",
+          "text": "1 3 4"
+        },
+        {
+          "label": "C",
+          "text": "2 1 4"
+        },
+        {
+          "label": "D",
+          "text": "1 1 1"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`x` 通过值传递给 `a`，`a` 的改变不影响 `x`，所以 `x` 仍为1。`y` 通过引用传递给 `b`，`b += 2` 使 `y` 变为 `1 + 2 = 3`。`z` 的地址 `&z` 通过指针传递给 `c`，`*c += 3` 使 `z` 变为 `1 + 3 = 4`。因此，最终输出 `1 3 4`。"
+    },
+    {
+      "id": "b_zK1WssRFEABJrTYNZqR",
+      "order": 5,
+      "type": "single_choice",
+      "content": "执行下面程序后输出为()。\n```cpp\nint x = 3;\nvoid f(int& x) {\n    x += 2;\n}\n\nint main(){\n    int x = 10;\n    f(x);\n    cout << x << \" \" << ::x;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "12 3"
+        },
+        {
+          "label": "B",
+          "text": "10 5"
+        },
+        {
+          "label": "C",
+          "text": "12 5"
+        },
+        {
+          "label": "D",
+          "text": "10 3"
+        }
+      ],
+      "answer": "A",
+      "explanation": "全局变量 `x` 初始化为3。在 `main` 函数中，局部变量 `x` 初始化为10。函数 `f(x)` 接收的是 `main` 函数中局部变量 `x` 的引用，所以 `f` 中对 `x` 的修改会影响 `main` 中的局部 `x`，使其变为 `10 + 2 = 12`。`cout << x` 输出 `main` 中的局部 `x`，即12。`cout << ::x` 输出全局变量 `x`，其值仍为3。所以输出 `12 3`。"
+    },
+    {
+      "id": "a1AT5xkQ7jnNu2U4Abix_",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下列关于结构体初始化的写法,正确的是()。\nA.\n```cpp\nstruct Point { int x, y; };\nPoint p = (1,2);\n```\nB.\n```cpp\nstruct Point { int x, y; };\nPoint p = {1,2};\n```\nC.\n```cpp\nstruct Point { int x, y; };\nPoint p = new Point(1,2);\n```\nD.\n```cpp\nstruct Point { int x, y; };\nPoint p = <1,2>;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "A."
+        },
+        {
+          "label": "B",
+          "text": "B."
+        },
+        {
+          "label": "C",
+          "text": "C."
+        },
+        {
+          "label": "D",
+          "text": "D."
+        }
+      ],
+      "answer": "B",
+      "explanation": "在 C++ 中，结构体的聚合初始化使用花括号 `{}`。选项 B `Point p = {1,2};` 正确地将 `x` 初始化为1，`y` 初始化为2。选项 A 使用圆括号 `()`，这不是聚合初始化的标准语法。选项 C 使用 `new` 关键字，它在堆上分配内存并返回一个指针，所以 `p` 应该是一个指针类型。选项 D 使用尖括号 `<>`，这不是 C++ 中有效的初始化语法。"
+    },
+    {
+      "id": "2p7UkrM-bHUBamMtN0WNv",
+      "order": 7,
+      "type": "single_choice",
+      "content": "执行下面代码后输出为()。\n```cpp\nstruct S { int a; int b; };\n\nvoid g(S s){ s.a += 10; }\nvoid h(S& s) { s.b += 10; }\n\nint main(){\n    S s{1,2};\n    g(s);\n    h(s);\n    cout << s.a << \" \" << s.b;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "11 12"
+        },
+        {
+          "label": "B",
+          "text": "1 12"
+        },
+        {
+          "label": "C",
+          "text": "11 2"
+        },
+        {
+          "label": "D",
+          "text": "1 2"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在 `main` 函数中，结构体 `s` 初始化为 `{1,2}`。函数 `g(S s)` 接收 `s` 的值副本，所以 `g` 中对 `s.a` 的修改不会影响 `main` 中的 `s.a`，其值仍为1。函数 `h(S& s)` 接收 `s` 的引用，所以 `h` 中对 `s.b` 的修改会影响 `main` 中的 `s.b`，使其变为 `2 + 10 = 12`。最终输出 `1 12`。"
+    },
+    {
+      "id": "hcvFVke8A2mCET98k0Qxx",
+      "order": 8,
+      "type": "single_choice",
+      "content": "关于递推算法的描述,正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "递推表现为函数自己调用自己"
+        },
+        {
+          "label": "B",
+          "text": "递推从已知初值出发,利用递推关系逐步推出后续结果"
+        },
+        {
+          "label": "C",
+          "text": "递推只能用于指数复杂度问题"
+        },
+        {
+          "label": "D",
+          "text": "递推一定需要回溯"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 A 描述的是递归，而不是递推。选项 B 准确地描述了递推算法的核心思想，即从已知的基础值开始，通过重复应用一个递推关系来计算后续的结果。选项 C 是不正确的，递推算法可以解决各种复杂度的算法问题，不限于指数复杂度。选项 D 也是不正确的，递推通常是迭代计算，不一定需要回溯。"
+    },
+    {
+      "id": "YOc5BSDVqp0lME2Nf_P3s",
+      "order": 9,
+      "type": "single_choice",
+      "content": "执行 `climb(6)` 的返回值为()。\n```cpp\nint climb (int n){\n    if(n <= 2) return n;\n    int a = 1, b = 2, c = 0;\n    for(int i = 3; i <= n; i++){\n        c = a + b;\n        a = b;\n        b = c;\n    }\n    return c;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "8"
+        },
+        {
+          "label": "B",
+          "text": "13"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "B",
+      "explanation": "这是一个计算斐波那契数列变种的函数。当 `n=6` 时：\n- `n=1` 返回1，`n=2` 返回2。\n- `i=3`: `c = 1 + 2 = 3`, `a = 2`, `b = 3`\n- `i=4`: `c = 2 + 3 = 5`, `a = 3`, `b = 5`\n- `i=5`: `c = 3 + 5 = 8`, `a = 5`, `b = 8`\n- `i=6`: `c = 5 + 8 = 13`, `a = 8`, `b = 13`\n循环结束后，返回 `c` 的值，即 `13`。"
+    },
+    {
+      "id": "0NWtX2znubArvqL8mU8B-",
+      "order": 10,
+      "type": "single_choice",
+      "content": "某排序算法对如下数据排序(按 score 升序),则下面关于该排序算法稳定性的描述中,说法正确的是()。\n初始: `(90,'A'), (90,'B'), (80,'C'), (90,'D')`\n排序后: `(80,'C'), (90,'A'), (90,'B'), (90,'D')`",
+      "options": [
+        {
+          "label": "A",
+          "text": "不稳定,因为出现了相同分数"
+        },
+        {
+          "label": "B",
+          "text": "稳定,因为相同 score 的相对顺序保持为A在B前、B在D前"
+        },
+        {
+          "label": "C",
+          "text": "不稳定,因为C跑到前面了"
+        },
+        {
+          "label": "D",
+          "text": "无法判断"
+        }
+      ],
+      "answer": "B",
+      "explanation": "排序算法的稳定性是指，如果待排序的序列中存在值相等的元素，经过排序后，这些相等元素之间的相对顺序保持不变。在初始序列中，分数为90的元素 'A' 在 'B' 之前，'B' 在 'D' 之前。排序后，'A' 仍然在 'B' 之前，'B' 仍然在 'D' 之前，相对顺序没有改变。因此，该排序算法是稳定的。"
+    },
+    {
+      "id": "ABfV4KKZjnpKrWnNXuYsr",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面代码试图把数组按升序进行“插入排序”,横线处应填写()。\n```cpp\nvoid ins(int a[], int n){\n    for(int i = 1; i < n; i++){\n        int key = a[i];\n        int j = i-1;\n        while(j >= 0 && __) {\n            a[j+1] = a[j];\n            j--;\n        }\n        a[j+1] = key;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "a[j] < key"
+        },
+        {
+          "label": "B",
+          "text": "a[j] > key"
+        },
+        {
+          "label": "C",
+          "text": "a[j+1] > key"
+        },
+        {
+          "label": "D",
+          "text": "a[j] == key"
+        }
+      ],
+      "answer": "B",
+      "explanation": "这段代码是插入排序的一部分，目的是将 `key` 插入到已排序部分的正确位置。为了实现升序排序，当 `key` 小于 `a[j]` 时，需要将 `a[j]` 向右移动一位 (`a[j+1] = a[j]`)，然后继续向前比较。因此，`while` 循环的条件应该是 `a[j] > key`。"
+    },
+    {
+      "id": "BvUOmIXR9bNyowKHWaEdf",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下列代码段的时间复杂度为()。\n```cpp\nint cnt=0;\nfor(int i=0; i<n; i++){\n    for(int j=0; j<n; j++){\n        if( (i+j) % 3 == 0) cnt++;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(nlogn)"
+        },
+        {
+          "label": "C",
+          "text": "O(n²)"
+        },
+        {
+          "label": "D",
+          "text": "O(2n)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "这段代码包含两个嵌套的 `for` 循环。外层循环从 `i=0` 到 `n-1` 执行 `n` 次。内层循环从 `j=0` 到 `n-1`，对于外层循环的每一次迭代，内层循环也执行 `n` 次。循环体内的操作（如 `if` 判断和 `cnt++`）是常数时间操作。因此，总的操作次数大约是 `n * n`，时间复杂度为 O(n²)。"
+    },
+    {
+      "id": "4uS9HOP_EdV2utof_6zCY",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面哪种方式不能实现将字符串 `Welcome to 2026!` 输出重定向到文件 `log.txt` ()。\nA.\n```cpp\nfreopen (\"log.txt\", \"w\", stdout);\ncout << \"Welcome to 2026!\" << endl;\nfclose(stdout);\n```\nB.\n```cpp\nstd::ofstream outFile(\"log.txt\");\ncout << \"Welcome to 2026!\" << endl;\noutFile.close();\n```\nC.\n```cpp\nofstream log_file(\"log.txt\");\nstreambuf* org_cout = cout.rdbuf();\ncout.rdbuf(log_file.rdbuf());\ncout << \"Welcome to 2026!\" << endl;\ncout.rdbuf(org_cout);\n```\nD.\n```cpp\nstd::ofstream outFile(\"log.txt\");\noutFile << \"Welcome to 2026!\" << endl;\noutFile.close();\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "A."
+        },
+        {
+          "label": "B",
+          "text": "B."
+        },
+        {
+          "label": "C",
+          "text": "C."
+        },
+        {
+          "label": "D",
+          "text": "D."
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 A 使用 `freopen` 将标准输出 `stdout` 重定向到文件，`cout` 写入 `stdout`，所以能实现重定向。选项 C 通过 `cout.rdbuf()` 改变 `cout` 的底层缓冲区，使其写入文件，也能实现重定向。选项 D 直接使用 `ofstream` 对象 `outFile` 写入文件，这是标准的 C++ 文件写入方式。选项 B 中，虽然创建了 `outFile` 对象，但 `cout << \"Welcome to 2026!\" << endl;` 仍然将内容输出到标准输出（通常是控制台），而不是 `outFile` 指向的文件。因此，选项 B 不能实现重定向。"
+    },
+    {
+      "id": "0Mp9pfX7IJ9NpopXuSuke",
+      "order": 14,
+      "type": "single_choice",
+      "content": "执行下面程序,输出结果是()。\n```cpp\nint divi(int a, int b) {\n    if(b==0) throw 0;\n    return a/b;\n}\n\nint main(){\n    try{\n        cout << divi(10,0);\n    }catch(const char* msg) {\n        cout << \"A\";\n    }catch(int){\n        cout << \"B\";\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "A"
+        },
+        {
+          "label": "B",
+          "text": "B"
+        },
+        {
+          "label": "C",
+          "text": "程序崩溃"
+        },
+        {
+          "label": "D",
+          "text": "无输出"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在 `main` 函数中，调用 `divi(10,0)`。由于 `b` 为0，函数 `divi` 会执行 `throw 0;`，抛出一个整数类型的异常。`try` 块捕获到这个异常。第一个 `catch(const char* msg)` 块期望捕获 `const char*` 类型的异常，不匹配。第二个 `catch(int)` 块期望捕获 `int` 类型的异常，匹配成功。因此，程序会执行 `cout << \"B\";`，输出 `B`。"
+    },
+    {
+      "id": "qytQmlwnmlk2boYx5Spew",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列函数实现排行榜中单个元素的位置调整(类似插入排序的相邻搬移)。当某玩家分数增加,需将其向前移动时, `while` 循环的条件应为()。\n```cpp\nstruct Player{ int score; };\nvoid up (Player players[], int n, int idx){\n    Player cur = players [idx];\n    int i= idx;\n    while(\n    ){\n        players[i] = players [i-1];\n        i--;\n    }\n    players[i] = cur;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "i > 0 && cur.score > players[i-1].score"
+        },
+        {
+          "label": "B",
+          "text": "i > 0 && cur.score < players [i-1].score"
+        },
+        {
+          "label": "C",
+          "text": "i < n-1 && cur.score > players[i+1].score"
+        },
+        {
+          "label": "D",
+          "text": "i < n-1 && cur.score < players[i+1].score"
+        }
+      ],
+      "answer": "A",
+      "explanation": "这个函数 `up` 旨在将 `idx` 位置的玩家向前移动，如果其分数高于前一个玩家。`while` 循环的条件需要满足两个方面：一是确保 `i` 没有越界到数组开头之前 (`i > 0`)，二是确保当前玩家的分数 `cur.score` 确实大于其前一个玩家的分数 `players[i-1].score`，这样才需要继续向前移动。因此，正确的条件是 `i > 0 && cur.score > players[i-1].score`。"
+    },
+    {
+      "id": "UNTkhtNzes1394ToWH65Y",
+      "order": 16,
+      "type": "true_false",
+      "content": "下面代码执行结束时,变量 `a` 的值变成15。\n```cpp\nvoid add10(int x) { x += 10; }\n\nint main() {\n    int a = 5;\n    add10(a);\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "函数 `add10` 的参数 `x` 是按值传递的。这意味着在调用 `add10(a)` 时，`a` 的值被复制给 `x`。函数内部对 `x` 的修改 (`x += 10`) 只会影响这个副本，而不会影响 `main` 函数中的原始变量 `a`。因此，`a` 的值仍然是5，而不是15。"
+    },
+    {
+      "id": "EVBkDXIz0C3oesv1ry0yl",
+      "order": 17,
+      "type": "true_false",
+      "content": "引用一旦绑定某个变量,就不能再绑定其他变量。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这是 C++ 引用的一项基本特性。引用在声明时必须初始化，并且一旦绑定到一个变量，它就不能被重新绑定到另一个变量。引用始终是其初始化对象的别名。"
+    },
+    {
+      "id": "OopIT6Ts1lfPHFLi-oDVJ",
+      "order": 18,
+      "type": "true_false",
+      "content": "执行下面代码,输出结果是5。\n```cpp\nint main() {\n    int a[2][3];\n    cout << &a [1] [2] - &a[0] [1] << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`a` 是一个2行3列的整数数组。`&a[1][2]` 是 `a` 数组中第1行第2列元素的地址，`&a[0][1]` 是第0行第1列元素的地址。两个指向同一数组元素的指针相减，结果是它们之间相隔的元素数量。从 `a[0][1]` 到 `a[1][2]` 依次经过 `a[0][2]`、`a[1][0]`、`a[1][1]`、`a[1][2]`，共4个元素。因此，输出结果是4，而不是5。"
+    },
+    {
+      "id": "NbkQ05dgMjWhP7ayKqUJX",
+      "order": 19,
+      "type": "true_false",
+      "content": "下面程序可以正常编译并输出10。\n```cpp\nint calc(int x, int y = 10);\nint calc(int x) { return x * 2; }\nint calc(int x, int y) { return x * y; }\n\nint main() {\n    cout << calc(5);\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "程序中存在函数重载的歧义。`int calc(int x, int y = 10);` 声明了一个带有默认参数的函数，这意味着它可以被 `calc(int)` 形式调用。同时，`int calc(int x) { return x * 2; }` 也定义了一个接受一个 `int` 参数的函数。当 `main` 函数调用 `calc(5)` 时，编译器无法确定应该调用哪个 `calc` 函数，因为两个重载都匹配。这将导致编译错误，而不是正常编译并输出10。"
+    },
+    {
+      "id": "z1wZev2lJB8VIERDLH548",
+      "order": 20,
+      "type": "true_false",
+      "content": "下面程序执行后输出 `2010`。\n```cpp\nint x = 10;\nvoid f() { int x = 20; cout << x; }\n\nint main() {\n    f();\n    cout << x;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "全局变量 `x` 初始化为10。在 `f()` 函数内部，`int x = 20;` 声明了一个新的局部变量 `x`，它遮蔽了全局变量 `x`。所以 `f()` 中的 `cout << x;` 输出的是局部变量 `x` 的值，即20。`f()` 函数结束后，控制权返回 `main` 函数，`cout << x;` 此时访问的是全局变量 `x`，其值仍为10。因此，程序会依次输出 `20` 和 `10`，最终结果是 `2010`。"
+    },
+    {
+      "id": "vIdqaEPzsAhK4Pm8K2bkx",
+      "order": 21,
+      "type": "true_false",
+      "content": "在C++中,如果声明了一个指针变量但没有显式初始化,该指针会自动被初始化为 `nullptr`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这个说法是错误的。如果一个局部（自动存储期）指针变量在声明时没有显式初始化，它将包含一个不确定的（垃圾）值，而不是自动初始化为 `nullptr`。只有具有静态或线程存储期的指针（如全局指针或静态局部指针）才会被零初始化，对于指针而言，这意味着初始化为 `nullptr`。"
+    },
+    {
+      "id": "dKYBJlaorS8sz4FA_-Fjh",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面代码没有语法错误。\n```cpp\nstruct GameCharacter {\n    string name;\n    int level;\n    float position_x;\n    float position_y;\n\n    struct Equipment {\n        string weapon;\n        int attack_bonus;\n        int defense_bonus;\n    } equipment;\n\n    struct Skill {\n        string name;\n        int damage;\n    } skills [8];\n    int skill_count;\n};\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这段代码定义了一个 `GameCharacter` 结构体，其中包含了嵌套的结构体定义 `Equipment` 和 `Skill`，并声明了这些类型（或匿名类型）的成员 `equipment` 和 `skills`（一个数组）。所有成员声明、嵌套结构体定义以及最终的结构体结束符 `};` 都符合 C++ 语法规则。因此，这段代码没有语法错误。"
+    },
+    {
+      "id": "CNf557DED6Mv41_nzOGw9",
+      "order": 23,
+      "type": "true_false",
+      "content": "下面程序能够把 `Hello` 写入 `data.txt` 文件中。\n```cpp\nofstream fout(\"data.txt\");\ncout << \"Hello\";\nfout.close();\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "程序创建了一个 `ofstream` 对象 `fout` 来打开 `data.txt` 文件。但是，`cout << \"Hello\";` 语句是将 \"Hello\" 输出到标准输出流（通常是控制台），而不是 `fout` 所关联的文件流。要将 \"Hello\" 写入 `data.txt`，应该使用 `fout << \"Hello\";`。因此，`Hello` 不会被写入 `data.txt`。"
+    },
+    {
+      "id": "QRab5iI0cJvHabmftDIOJ",
+      "order": 24,
+      "type": "true_false",
+      "content": "由于选择排序和插入排序的时间复杂度均为O(n²),在任何实际场景下两者的性能表现几乎相同,可以互相替代。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "虽然选择排序和插入排序在最坏情况和平均情况下的时间复杂度都是 O(n²)，但在实际场景中它们的性能表现可能大相径庭。插入排序在数据接近有序时，其时间复杂度可以达到 O(n)，而选择排序始终保持 O(n²)。因此，在某些特定输入或数据规模下，它们的性能差异显著，不能简单地互相替代。"
+    },
+    {
+      "id": "__vf6w5Yq3PSsaT77sA_0",
+      "order": 25,
+      "type": "true_false",
+      "content": "下面用递推方式计算斐波那契数列第 `n` 项的程序,时间复杂度是 `O(2^n)`。\n```cpp\nint fib(int n) {\n    if (n <= 1) return n;\n    int f0 = 0, f1 = 1, cur = 0;\n    for (int i = 2; i <= n; i++) {\n        cur = f0 + f1;\n        f0 = f1;\n        f1 = cur;\n    }\n    return cur;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这段代码使用迭代（递推）的方式计算斐波那契数列。它通过一个 `for` 循环从 `i=2` 遍历到 `n`，循环体内的操作是常数时间。因此，循环执行了 `n-1` 次，总的时间复杂度是 O(n)，而不是 O(2^n)。O(2^n) 通常是未经优化的递归斐波那那契算法的复杂度。"
+    }
+  ]
+}

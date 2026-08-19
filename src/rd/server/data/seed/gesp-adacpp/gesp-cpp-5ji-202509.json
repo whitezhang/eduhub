@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-5ji-202509",
+  "url": "https://adacpp.com/practice/gesp-cpp-5ji-202509",
+  "title": "GESP C++五级 202509",
+  "description": "CCF编程能力等级认证 GESP C++ 五级 2025年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 5,
+    "ym": "202509"
+  },
+  "questions": [
+    {
+      "id": "-p9XB2fNvcM4sdmeOmmTd",
+      "order": 1,
+      "type": "single_choice",
+      "content": "以下哪种情况使用链表比数组更合适？",
+      "options": [
+        {
+          "label": "A",
+          "text": "数据量固定且读多写少"
+        },
+        {
+          "label": "B",
+          "text": "需要频繁在中间或开头插入、删除元素"
+        },
+        {
+          "label": "C",
+          "text": "需要高效随机访问元素"
+        },
+        {
+          "label": "D",
+          "text": "存储空间必须连续"
+        }
+      ],
+      "answer": "B",
+      "explanation": "链表在需要频繁在中间或开头插入、删除元素时更合适，因为它只需修改少数指针（`O(1)`），而数组需要移动大量元素（`O(n)`）。选项A、C、D描述的场景（数据量固定、读多写少、高效随机访问、存储空间连续）都是数组的优势，数组能提供`O(1)`的随机访问效率，而链表则需要`O(n)`。"
+    },
+    {
+      "id": "cYsF_UMGnT2aeh0luGBU2",
+      "order": 2,
+      "type": "single_choice",
+      "content": "函数 `removeElements` 删除单链表中所有结点值等于 `val` 的结点，并返回新的头结点，其中链表头结点为 `head`，则横线处填写（ ）。\n\n```cpp\n// 结点结构体\nstruct Node {\n    int val;\n    Node* next;\n\n    Node() : val(0), next(nullptr) {}\n    Node(int x) : val(x), next(nullptr) {}\n    Node(int x, Node *next) : val(x), next(next) {}\n};\n\nNode* removeElements(Node* head, int val) {\n    Node dummy(0, head); // 哑结点，统一处理头结点\n    Node* cur = &dummy;\n    while (cur->next) {\n        if (cur->next->val == val) {\n            _______________________ // 在此填入代码\n        }\n        else {\n            cur = cur->next;\n        }\n    }\n    return dummy.next;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nNode* del = cur;\ncur = del->next;\ndelete del;\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nNode* del = cur->next;\ncur->next = del;\ndelete del;\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nNode* del = cur->next;\ncur->next = del->next;\ndelete del;\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nNode* del = cur->next;\ndelete del;\ncur->next = del->next;\n```"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C 正确。`Node* del = cur->next;` 记录待删除结点，`cur->next = del->next;` 将 `cur` 的 `next"
+    },
+    {
+      "id": "UVZXthYbkGcHggOtyVp9W",
+      "order": 3,
+      "type": "single_choice",
+      "content": "函数 `hasCycle` 采用Floyd快慢指针法判断一个单链表中是否存在环，链表的头节点为 `head`，即用两个指针在链表上前进：`slow` 每次走 1 步，`fast` 每次走 2 步，若存在环，`fast` 终会追上 `slow`（相遇）；若无环，`fast` 会先到达 `nullptr`，则横线上应填写（ ）。\n\n```cpp\nstruct Node {\n    int val;\n    Node *next;\n    Node(int x) : val(x), next(nullptr) {}\n};\n\nbool hasCycle(Node *head) {\n    if (!head || !head->next)\n        return false;\n    Node* slow = head;\n    Node* fast = head->next;\n    while (fast && fast->next) {\n        if (slow == fast) return true;\n        _______________________ // 在此填入代码\n    }\n    return false;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nslow = slow->next;\nfast = fast->next->next;\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nslow = fast->next;\nfast = slow->next->next;\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nslow = slow->next;\nfast = slow->next->next;\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nslow = fast->next;\nfast = fast->next->next;\n```"
+        }
+      ],
+      "answer": "A",
+      "explanation": "根据Floyd快慢指针法的原理，`slow` 指针每次前进 1 步，`fast` 指针每次前进 2 步。选项 A `slow = slow->next; fast = fast->next->next;` 正确地实现了这一逻辑，使 `slow` 从自身当前位置走一步，`fast` 从自身当前位置走两步。其他选项则错误地改变了 `slow` 或 `fast` 的移动规则，例如让 `slow` 依赖 `fast` 的位置，或者让 `fast` 依赖 `slow` 的新位置，这不符合快慢指针独立前进的原则，会导致算法失效或行为异常。"
+    },
+    {
+      "id": "UkyI_ScC5z1v5bHxn50mT",
+      "order": 4,
+      "type": "single_choice",
+      "content": "函数 `isPerfectNumber` 判断一个正整数是否为完全数（该数是否即等于它的真因子之和），则横线上应填写（ ）。一个正整数 n 的真因子包括所有小于 n 的正因子，如28的真因子为1, 2, 4, 7, 14。\n\n```cpp\nbool isPerfectNumber(int n) {\n    if(n <= 1) return false;\n    int sum = 1;\n    for(int i = 2; ______; i++) {\n        if(n % i == 0) {\n            sum += i;\n            if(i != n/i) sum += n/i;\n        }\n    }\n    return sum == n;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i <= n`"
+        },
+        {
+          "label": "B",
+          "text": "`i*i <= n`"
+        },
+        {
+          "label": "C",
+          "text": "`i <= n/2`"
+        },
+        {
+          "label": "D",
+          "text": "`i < n`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B `i*i <= n` 是最优化且正确的循环条件。当 `i` 是 `n` 的因子时，`n/i` 也是因子，我们只需遍历到 `sqrt(n)`（即 `i*i <= n`）即可找到所有因子对，`if(i != n/i)` 避免了当 `i` 是 `n` 的平方根时重复添加。选项 A 和 D `i <= n` 或 `i < n` 效率低下，且 `n` 本身不是真因子。选项 C `i <= n/2` 虽然能找到所有真因子，但效率不如"
+    },
+    {
+      "id": "ZMUom9S2cGLC2N5oP1Npl",
+      "order": 5,
+      "type": "single_choice",
+      "content": "以下代码计算两个正整数的最大公约数(GCD)，横线上应填写（ ）。\n\n```cpp\nint gcd0(int a, int b) {\n    if (a < b) {\n        swap(a, b);\n    }\n    while(b != 0) {\n        int temp = a % b;\n        a = b;\n        b = temp;\n    }\n    return ______;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`b`"
+        },
+        {
+          "label": "B",
+          "text": "`a`"
+        },
+        {
+          "label": "C",
+          "text": "`temp`"
+        },
+        {
+          "label": "D",
+          "text": "`a * b`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该代码实现了欧几里得算法（辗转相除法）来计算最大公约数。算法的核心是 `gcd(a, b) = gcd(b, a % b)`，当 `b` 最终变为 `0` 时，此时 `a` 的值就是最大公约数，因此应返回 `a`。选项 A 错误，因为循环结束时 `b` 为 `0`。选项 C 错误，`temp` 存储的是余数，并非最终结果。选项 D 错误，`a * b"
+    },
+    {
+      "id": "8_marnhpFIe567HWRu8g3",
+      "order": 6,
+      "type": "single_choice",
+      "content": "函数 `sieve` 实现埃拉托斯特尼筛法（埃氏筛），横线处应填入（ ）。\n\n```cpp\nvector<bool> sieve(int n) {\n    vector<bool> is_prime(n+1, true);\n    is_prime[0] = is_prime[1] = false;\n    for(int i = 2; i <= n; i++) {\n        if(is_prime[i]) {\n            for(int j = ______; j <= n; j += i) {\n                is_prime[j] = false;\n            }\n        }\n    }\n    return is_prime;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i`"
+        },
+        {
+          "label": "B",
+          "text": "`i+1`"
+        },
+        {
+          "label": "C",
+          "text": "`i*2`"
+        },
+        {
+          "label": "D",
+          "text": "`i*i`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 `D. i*i`。\n\n当 `i` 是素数时，所有小于 `i*i` 的 `i` 的倍数（如 `2*"
+    },
+    {
+      "id": "n7qi3pyQK7p4agLkjbzCs",
+      "order": 7,
+      "type": "single_choice",
+      "content": "函数 `linearSieve` 实现线性筛法（欧拉筛），横线处应填入（ ）。\n\n```cpp\nvector<int> linearSieve(int n) {\n    vector<bool> is_prime(n+1, true);\n    vector<int> primes;\n    for(int i = 2; i <= n; i++) {\n        if(is_prime[i]) primes.push_back(i);\n        for(int p : primes) {\n            if(p * i > n) break;\n            is_prime[p * i] = false;\n            if(________) break;\n        }\n    }\n    return primes;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i % p == 0`"
+        },
+        {
+          "label": "B",
+          "text": "`p % i == 0`"
+        },
+        {
+          "label": "C",
+          "text": "`i == p`"
+        },
+        {
+          "label": "D",
+          "text": "`i * p == n`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当 `i % p == 0` 时，表示 `p` 是 `i` 的一个因子。此时 `p` 已经是 `i` 的最小质因子，或者 `p`"
+    },
+    {
+      "id": "u11TpC36JRVwvWFD2HgjP",
+      "order": 8,
+      "type": "single_choice",
+      "content": "关于埃氏筛和线性筛的比较，下列说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "埃氏筛可能会对同一个合数进行多次标记"
+        },
+        {
+          "label": "B",
+          "text": "线性筛的理论时间复杂度更优，所以线性筛的速度往往优于埃氏筛"
+        },
+        {
+          "label": "C",
+          "text": "线性筛保证每个合数只被其最小质因子筛到一次"
+        },
+        {
+          "label": "D",
+          "text": "对于常见范围（n <= 10^7），埃氏筛因实现简单，常数较小，其速度往往优于线性筛"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B 错误。线性筛的理论时间复杂度确实是 O(n)，优于埃氏筛的 O(n log log n)。但由于线性筛的实现逻辑更复杂，涉及"
+    },
+    {
+      "id": "yJrtjR6V2Q8wPhEjNidc1",
+      "order": 9,
+      "type": "single_choice",
+      "content": "唯一分解定理描述的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "每个整数都能表示为任意素数的乘积"
+        },
+        {
+          "label": "B",
+          "text": "每个大于 1 的整数能唯一分解为素数幂乘积（忽略顺序）"
+        },
+        {
+          "label": "C",
+          "text": "合数不能分解为素数乘积"
+        },
+        {
+          "label": "D",
+          "text": "素数只有两个因子：1 和自身"
+        }
+      ],
+      "answer": "B",
+      "explanation": "唯一分解定理（算术基本定理）指出，任何大于1的整数都能唯一地表示为素数幂的乘积，不考虑因子的顺序，因此B是正确的。选项A表述不准确，并非所有整数都能表示为“任意”素数的乘积。选项C错误，合数正是可以分解为素数乘积的数。选项D是素数的定义，而非唯一分解定理本身。"
+    },
+    {
+      "id": "IdrYYmz3mMX2S_505-UK8",
+      "order": 10,
+      "type": "single_choice",
+      "content": "给定一个 n x n 的矩阵 `matrix`，矩阵的每一行和每一列都按升序排列。函数 `countLE` 返回矩阵中第 k 小的元素，则两处横线上应分别填写（ ）。\n\n```cpp\n// 统计矩阵中 <= x 的元素个数：从左下角开始\nint countLE(const vector<vector<int>>& matrix, int x) {\n    int n = (int)matrix.size();\n    int i = n - 1, j = 0, cnt = 0;\n    while (i >= 0 && j < n) {\n        if (matrix[i][j] <= x) {\n            cnt += i + 1;\n            ++j;\n        }\n        else {\n            --i;\n        }\n    }\n    return cnt;\n}\n\nint kthSmallest(vector<vector<int>>& matrix, int k) {\n    int n = (int)matrix.size();\n    int lo = matrix[0][0];\n    int hi = matrix[n - 1][n - 1];\n\n    while (lo < hi) {\n        int mid = lo + (hi - lo) / 2;\n        if (countLE(matrix, mid) >= k) {\n            ________________ // 在此处填入代码\n        } else {\n            ________________ // 在此处填入代码\n        }\n    }\n    return lo;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nhi = mid - 1;\nlo = mid + 1;\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nhi = mid;\nlo = mid;\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nhi = mid;\nlo = mid + 1;\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nhi = mid + 1;\nlo = mid;\n```"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`kthSmallest` 函数使用二分查找在值域 `[lo, hi]` 中寻找第 k 小的元素。当 `countLE(matrix, mid) >= k` 时"
+    },
+    {
+      "id": "5qnVk4vy6sB558GmzGVrE",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下述C++代码实现了快速排序算法，下面说法错误的是（ ）。\n\n```cpp\nint partition(vector<int>& arr, int low, int high) {\n    int i = low, j = high;\n    int pivot = arr[low];           // 以首元素为基准\n    while (i < j) {\n        while (i < j && arr[j] >= pivot) j--;  //从右往左查找\n        while (i < j && arr[i] <= pivot) i++;  //从左往右查找\n        if (i < j) swap(arr[i], arr[j]);\n    }\n    swap(arr[i], arr[low]);\n    return i;\n}\n\nvoid quickSort(vector<int>& arr, int low, int high) {\n    if (low >= high) return;\n    int p = partition(arr, low, high);\n    quickSort(arr, low, p - 1);\n    quickSort(arr, p + 1, high);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "快速排序之所以叫\"快速\"，是因为它在平均情况下运行速度较快，常数小、就地排序，实践中通常比归并排序更高效。"
+        },
+        {
+          "label": "B",
+          "text": "在平均情况下，划分的递归层数为 log n，每层中的总循环数为 n，总时间为 O(n log n)。"
+        },
+        {
+          "label": "C",
+          "text": "在最差情况下，每轮划分操作都将长度为 n 的数组划分为长度为 0 和 n-1 的两个子数组，此时递归层数达到 n，每层中的循环数为 n，总时间为 O(n^2)。"
+        },
+        {
+          "label": "D",
+          "text": "划分函数 partition 中\"从右往左查找\"与\"从左往右查找\"的顺序可以交换。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D. 划分函数 `partition` 中，如果以 `arr[low]` 为基准值，则必须先从右向左查找 `arr[j] < pivot`"
+    },
+    {
+      "id": "2Cre9cYKZnmwps6BJuAaN",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下述C++代码实现了归并排序算法，则横线上应填写（ ）。\n\n```cpp\nvoid merge(vector<int> &nums, int left, int mid, int right) {\n    // 左子数组区间为 [left, mid], 右子数组区间为 [mid+1, right]\n    vector<int> tmp(right - left + 1);\n    int i = left, j = mid + 1, k = 0;\n    while (i <= mid && j <= right) {\n        if (nums[i] <= nums[j])\n            tmp[k++] = nums[i++];\n        else\n            tmp[k++] = nums[j++];\n    }\n    while (i <= mid) {\n        tmp[k++] = nums[i++];\n    }\n    while (________) { // 在此处填入代码\n        tmp[k++] = nums[j++];\n    }\n    for (k = 0; k < tmp.size(); k++) {\n        nums[left + k] = tmp[k];\n    }\n}\n\nvoid mergeSort(vector<int> &nums, int left, int right) {\n    if (left >= right)\n        return;\n    int mid = (left + right) / 2;\n    mergeSort(nums, left, mid);\n    mergeSort(nums, mid + 1, right);\n    merge(nums, left, mid, right);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i < mid`"
+        },
+        {
+          "label": "B",
+          "text": "`j < right`"
+        },
+        {
+          "label": "C",
+          "text": "`i <= mid`"
+        },
+        {
+          "label": "D",
+          "text": "`j <= right`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该空白 `while` 循环的目的是将右子数组 `[mid+1, right]` 中所有剩余的元素复制到 `tmp` 数组中。当左子数组的元素已全部处理完毕后，如果右子数组还有元素，就需要继续复制，因此条件应为 `j <= right`，确保 `mid+1` 到 `right` 范围内的所有元素都被处理。选项 A 和 C 错误地使用了变量 `i` 和 `mid`，它们是针对左子数组的；选项 B 的条件 `j < right` 会漏掉右子数组的最后一个元素 `nums[right]`。"
+    },
+    {
+      "id": "vN-WH4h4J0AuYk2i9rYQX",
+      "order": 13,
+      "type": "single_choice",
+      "content": "假设你是一家电影院的排片经理，只有一个放映厅。你有一个电影列表 `movies`，其中 `movies[i] = [start_i, end_i]` 表示第 i 部电影的开始和结束时间。请你找出最多能安排多少部不重叠的电影，则横线上应分别填写的代码为（ ）。\n\n```cpp\nint maxMovies(vector<vector<int>>& movies) {\n    if (movies.empty()) return 0;\n\n    sort(movies.begin(), movies.end(), [](const vector<int>& a, const vector<int>& b) {\n        return ______; // 在此处填入代码\n    });\n\n    int count = 1;\n    int lastEnd = movies[0][1];\n\n    for (int i = 1; i < movies.size(); i++) {\n        if (movies[i][0] >= lastEnd) {\n            count++;\n            ______ = movies[i][1]; // 在此处填入代码\n        }\n    }\n\n    return count;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`a[0] < b[0]` 和 `lastEnd`"
+        },
+        {
+          "label": "B",
+          "text": "`a[1] < b[1]` 和 `lastEnd`"
+        },
+        {
+          "label": "C",
+          "text": "`a[0] < b[0]` 和 `movies[i][0]`"
+        },
+        {
+          "label": "D",
+          "text": "`a[1] < b[1]` 和 `movies[i][0]`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "为了最大化不重叠电影数量，我们应采用贪心策略：优先选择结束时间最早的电影。因此，排序时应使用 `a[1] < b[1]`。"
+    },
+    {
+      "id": "GLC5DYnlmrkeNxrTOYPQh",
+      "order": 14,
+      "type": "single_choice",
+      "content": "给定一个整数数组 `nums`，下面代码找到一个具有最大和的连续子数组，并返回该最大和。则下面说法错误的是（ ）。\n\n```cpp\nint crossSum(vector<int>& nums, int left, int mid, int right) {\n    int leftSum = INT_MIN, rightSum = INT_MIN;\n    int sum = 0;\n    for (int i = mid; i >= left; i--) {\n        sum += nums[i];\n        leftSum = max(leftSum, sum);\n    }\n    sum = 0;\n    for (int i = mid + 1; i <= right; i++) {\n        sum += nums[i];\n        rightSum = max(rightSum, sum);\n    }\n    return leftSum + rightSum;\n}\n\nint helper(vector<int>& nums, int left, int right) {\n    if (left == right)\n        return nums[left];\n    int mid = left + (right - left) / 2;\n    int leftMax = helper(nums, left, mid);\n    int rightMax = helper(nums, mid + 1, right);\n    int crossMax = crossSum(nums, left, mid, right);\n    return max({leftMax, rightMax, crossMax});\n}\n\nint maxSubArray(vector<int>& nums) {\n    return helper(nums, 0, nums.size() - 1);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "上述代码采用分治算法实现"
+        },
+        {
+          "label": "B",
+          "text": "上述代码采用贪心算法"
+        },
+        {
+          "label": "C",
+          "text": "上述代码时间复杂度为 O(n log n)"
+        },
+        {
+          "label": "D",
+          "text": "上述代码采用递归方式实现"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该代码通过 `helper` 函数将数组递归地分成两半，分别计算左半部分、右半部分和跨越中点的最大子数组和，然后取三者中的最大值。这是一种典型的分治算法实现，因此选项 A 和 D 是正确的。其时间复杂度满足递推关系 T(n) = 2T(n/2) + O(n)，解为 O(n log n)，所以选项 C 也是正确的。贪心算法通常在每一步做出局部最优选择以期望达到全局最优，而此代码通过比较多种情况（左、右、跨中点）来求解，不属于贪心算法，因此选项 B 的说法是错误的。"
+    },
+    {
+      "id": "2PkD0EarFpRN_VoQpH_0-",
+      "order": 15,
+      "type": "single_choice",
+      "content": "给定一个由非负整数组成的数组 `digits`，表示一个非负整数的各位数字，其中最高位在数组首位，且 `digits` 不含前导0（除非是0本身）。下面代码对该整数执行 +1 操作，并返回结果数组，则横线上应填写（ ）。\n\n```cpp\nvector<int> plusOne(vector<int>& digits) {\n    for (int i = (int)digits.size() - 1; i >= 0; --i) {\n        if (digits[i] < 9) {\n            digits[i] += 1;\n            return digits;\n        }\n        ________________ // 在此处填入代码\n    }\n    digits.insert(digits.begin(), 1);\n    return digits;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`digits[i] = 0;`"
+        },
+        {
+          "label": "B",
+          "text": "`digits[i] = 9;`"
+        },
+        {
+          "label": "C",
+          "text": "`digits[i] = 1;`"
+        },
+        {
+          "label": "D",
+          "text": "`digits[i] = 10;`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当 `digits[i]` 为 9 时，执行加 1 操作会产生进位。当前位应变为 0，并将进位传递给前一位，这正是循环继续向前处理的逻辑。因此，横线上应填写 `digits[i] = 0;` 来正确处理当前位的变化。选项 B (`digits[i] = 9;`) 未执行加 1 操作，选项 C (`digits[i] = 1;`) 错误改变了数值，而选项 D (`digits[i] = 10;`) 则违反了数组元素应为单个数位（0-9）的规则。"
+    },
+    {
+      "id": "mLpRmLvwTUhU6x6g1tDR6",
+      "order": 16,
+      "type": "true_false",
+      "content": "基于下面定义的函数，通过判断 `isDivisibleBy9(n) == isDigitSumDivisibleBy9(n)` 代码可验算如果一个数能被9整除，则它的各位数字之和能被9整除。\n\n```cpp\nbool isDivisibleBy9(int n) {\n    return n % 9 == 0;\n}\n\nbool isDigitSumDivisibleBy9(int n) {\n    int sum = 0;\n    string numStr = to_string(n);\n    for (char c : numStr) {\n        sum += (c - '0');\n    }\n    return sum % 9 == 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "数学上，一个整数能被9整除的充要条件是其各位数字之和能被9整除。这意味着 `isDivisibleBy9(n)` 和 `isDigitSumDivisibleBy9(n)` 这两个函数对于任何整数 `n` 总是会返回相同的结果（同为 `true` 或同为 `false`）。因此，`isDivisibleBy9(n) == isDigitSumDivisibleBy9(n)` 这段代码会判断这两个结果是否一致，从而验证了“如果一个数能被9整除，则它的各位数字之和能被9整除”这一数学性质。选项F错误，因为该验证是有效的。"
+    },
+    {
+      "id": "bGcegK-79WTh93SWDnPDE",
+      "order": 17,
+      "type": "true_false",
+      "content": "假设函数 `gcd()` 能正确求两个正整数的最大公约数，则下面的 `findMusicalPattern(4, 6)` 函数返回2。\n\n```cpp\nvoid findMusicalPattern(int rhythm1, int rhythm2) {\n    int commonDivisor = gcd(rhythm1, rhythm2);\n    int patternLength = (rhythm1 * rhythm2) / commonDivisor;\n    return patternLength;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该函数通过 `(rhythm1 * rhythm2) / commonDivisor` 计算的是两个正整数的最小公倍数（LCM）。对于 `findMusicalPattern(4, 6)`，`gcd(4, 6)` 的结果是 2。因此，`patternLength` 的计算结果是 `(4 * 6) / 2 = 12`。函数实际返回 12，而不是题目中说的 2，所以原说法是错误的。"
+    },
+    {
+      "id": "dqxNciU2zhDG8ECJPjx-b",
+      "order": 18,
+      "type": "true_false",
+      "content": "下面递归实现的斐波那契数列的时间复杂度为 O(2^n)。\n\n```cpp\nlong long fib_memo(int n, long long memo[]) {\n    if (n <= 1) return n;\n    if (memo[n] != -1) return memo[n];\n    memo[n] = fib_memo(n - 1, memo) + fib_memo(n - 2, memo);\n    return memo[n];\n}\n\nint main() {\n    int n = 40;\n    long long memo[100];\n    fill_n(memo, 100, -1);\n    long long result2 = fib_memo(n, memo);\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码使用了记忆化（memoization）技术，通过 `memo[]` 数组存储已经计算过的斐波那契数。这避免了重复计算相同的子问题，使得每个 `fib_memo(k)` 只会被计算一次。因此，其时间复杂度为 O(n)，而非 O(2^n)。所以，题目中“时间复杂度为 O(2^n)”的说法是错误的，F选项正确。"
+    },
+    {
+      "id": "2EaYaYlaAmI0gUwylhzAF",
+      "order": 19,
+      "type": "true_false",
+      "content": "链表通过更改指针实现高效的结点插入与删除，但结点访问效率低、占用内存较多，且对缓存利用不友好。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "链表通过修改指针即可实现O(1)时间复杂度的结点插入和删除，这是其主要优点。然而，由于结点在内存中不连续，访问特定结点需要从头遍历，导致访问效率低（O(n)）。此外，每个结点需要额外存储指针，增加了内存占用，且不连续的内存布局对CPU缓存利用不友好。因此，题目描述完全符合链表的特性，是正确的。"
+    },
+    {
+      "id": "LN5bGBZosC5_Vhi9Jz4wp",
+      "order": 20,
+      "type": "true_false",
+      "content": "二分查找依赖数据的有序性，通过循环逐步缩减一半搜索区间来进行查找，且仅适用于数组或基于数组实现的数据结构。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "二分查找的核心前提是数据必须有序，这样才能通过比较中间元素来判断目标值在左半部分还是右半部分。它通过每次将搜索区间缩减一半来提高效率，并且由于需要高效的随机访问（如 `arr[index]`），因此主要适用于数组或基于数组实现的数据结构。题目描述完全符合二分查找的特性，故正确。"
+    },
+    {
+      "id": "spfS7hZr268glHmhRzcb8",
+      "order": 21,
+      "type": "true_false",
+      "content": "线性筛关键是\"每个合数只会被最小质因子筛到一次\"，因此为 O(n)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "线性筛的核心优化正是通过 `if (i % prime[j] == 0)` 条件，确保每个合数 `k` 只会被其最小质因子 `p` 筛到一次（即当 `i = k / p` 时）。这种机制避免了重复筛除，使得每个数字的筛除操作都是常数时间，从而将总时间复杂度优化到 O(n)。因此，选项 T 正确。选项 F 错误，因为它否定了线性筛法的关键原理和效率来源。"
+    },
+    {
+      "id": "h6lHqpltU16NGY3cd3_C3",
+      "order": 22,
+      "type": "true_false",
+      "content": "快速排序和归并排序都是稳定的排序算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "快速排序通常是不稳定的排序算法，因为在分区过程中，相等元素的相对顺序可能会被改变。而归并排序在实现时可以保持稳定性，通过在合并相等元素时优先选择第一个子数组的元素。因此，题目中“都是稳定的”这一说法是错误的。"
+    },
+    {
+      "id": "HKFpZd3e0hYHk2KFTBFgf",
+      "order": 23,
+      "type": "true_false",
+      "content": "下面代码采用分治算法求解标准 3 柱汉诺塔问题，时间复杂度为 O(n log n)。\n\n```cpp\nvoid move(vector<int> &src, vector<int> &tar) {\n    int pan = src.back();\n    src.pop_back();\n    tar.push_back(pan);\n}\n\nvoid dfs(int n, vector<int> &src, vector<int> &buf, vector<int> &tar) {\n    if (n == 1) {\n        move(src, tar);\n        return;\n    }\n    dfs(n - 1, src, tar, buf);\n    move(src, tar);\n    dfs(n - 1, buf, src, tar);\n}\n\nvoid solveHanota(vector<int> &A, vector<int> &B, vector<int> &C) {\n    int n = A.size();\n    dfs(n, A, B, C);\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "标准 3 柱汉诺塔问题的时间复杂度是 O(2^n)，而不是 O(n log n)。`dfs` 函数在 `n > 1` 时会进行两次对 `dfs(n-1, ...)` 的递归调用，这导致了操作次数呈指数级增长（T(n) = 2T(n-1) + C）。因此，题目中声称的时间复杂度是错误的。"
+    },
+    {
+      "id": "Zw7deZjyduD-zjWM2KUOj",
+      "order": 24,
+      "type": "true_false",
+      "content": "所有递归算法都可以转换为迭代算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "任何递归算法都可以通过显式地管理一个栈来模拟函数调用过程，从而转换为迭代算法。递归本质上是利用了系统调用栈来保存每次函数调用的状态（如参数、局部变量和返回地址）。我们可以手动创建一个栈数据结构，存储这些状态信息，然后用循环（迭代）来模拟递归的执行流程。因此，从理论上讲，所有递归算法都能找到对应的迭代实现。"
+    },
+    {
+      "id": "qkV7Nw2NmtGd00jJBkDYT",
+      "order": 25,
+      "type": "true_false",
+      "content": "贪心算法总能得到全局最优解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "贪心算法在每一步选择中都采取当前看起来最优的策略，希望以此达到全局最优。然而，这种局部最优的选择并不总能保证最终得到全局最优解，例如在某些动态规划问题中，贪心策略就会失败。因此，题目中“总能”的说法是错误的。"
+    }
+  ]
+}

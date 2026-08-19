@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-6ji-202606",
+  "url": "https://adacpp.com/practice/gesp-cpp-6ji-202606",
+  "title": "GESP C++六级 202606",
+  "description": "CCF编程能力等级认证 GESP C++ 六级 2026年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 6,
+    "ym": "202606"
+  },
+  "questions": [
+    {
+      "id": "TfRo1Xk5pkam-2-ZZ9KME",
+      "order": 1,
+      "type": "single_choice",
+      "content": "第1题下列关于C++中继承和多态的描述中,错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "通过基类指针调用虚函数时,会根据对象实际类型决定调用版本。"
+        },
+        {
+          "label": "B",
+          "text": "基类析构函数常声明为虚函数,以便通过基类指针正确释放派生类对象。"
+        },
+        {
+          "label": "C",
+          "text": "派生类可以重写基类中的虚函数。"
+        },
+        {
+          "label": "D",
+          "text": "构造函数可以声明为 virtual,以便在构造对象时实现动态绑定。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++中构造函数不能声明为虚函数，因为在对象构造时，虚函数表尚未完全建立，无法进行动态绑定。虚函数机制依赖于对象的实际类型，而构造函数是在对象类型确定之前执行的。选项A、B、C都是C++多态和继承的正确描述。"
+    },
+    {
+      "id": "8ei7Qee2Rq_RyOdNtqv01",
+      "order": 1,
+      "type": "true_false",
+      "content": "第1题 C++中构造函数可以声明为虚函数,从而实现运行时多态。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中构造函数不能声明为虚函数。虚函数机制依赖于对象的虚函数表，而虚函数表是在对象构造完成后才完全建立的。在构造函数执行期间，对象的类型尚未完全确定，无法进行动态绑定。"
+    },
+    {
+      "id": "spifwor9fWM2AGCmXX48T",
+      "order": 2,
+      "type": "single_choice",
+      "content": "第2题下列代码中, d1->work();和 d2->work();输出不同结果的主要原因是()。\n```cpp\n1 class Device {\n2 public:\n3  virtual void work() {\n4   cout << \"Device is working\" << endl;\n5  }\n6  virtual ~Device() {}\n7 };\n8\n9 class Printer: public Device {\n10 public:\n11  void work() override {\n12   cout << \"Printer is printing\" << endl;\n13  }\n14 };\n15\n16 class Scanner: public Device {\n17 public:\n18  void work() override {\n19   cout << \"Scanner is scanning\" << endl;\n20  }\n21 };\n22\n23 int main() {\n24  Device* d1 = new Printer();\n25  Device* d2 = new Scanner();\n26\n27  d1->work();\n28  d2->work();\n29\n30  delete d1;\n31  delete d2;\n32  return 0;\n33 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "Printer 和 Scanner 使用了相同的构造函数。"
+        },
+        {
+          "label": "B",
+          "text": "work()是虚函数,且d1 和 d2 实际指向不同派生类对象,发生动态绑定。"
+        },
+        {
+          "label": "C",
+          "text": "d1 和d2 是不同的指针变量。"
+        },
+        {
+          "label": "D",
+          "text": "程序中使用了 delete 释放对象。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`work()` 函数在基类 `Device` 中被声明为 `virtual`，这意味着它是一个虚函数。当通过基类指针 `d1` 和 `d2` 调用 `work()` 时，会根据它们实际指向的派生类对象（`Printer` 和 `Scanner`）的类型来决定调用哪个版本的 `work()`，这就是动态绑定。因此，`d1->work()` 调用 `Printer::work()`，`d2->work()` 调用 `Scanner::work()`，输出结果不同。"
+    },
+    {
+      "id": "OmLFcvE3d0Qj8e3F-vf68",
+      "order": 2,
+      "type": "true_false",
+      "content": "第2题通过指向 Base 的指针删除 Derived 对象时,一定会先调用 Derived 的析构函数,再调用 Base 的析构函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "只有当基类的析构函数被声明为 `virtual` 时，通过基类指针删除派生类对象才能确保正确调用派生类的析构函数，然后才是基类的析构函数。如果基类的析构函数不是 `virtual`，则只会调用基类的析构函数，导致派生类部分的资源泄漏。"
+    },
+    {
+      "id": "h41mG7EApcixg9LOW-nMG",
+      "order": 3,
+      "type": "single_choice",
+      "content": "第3题下面代码在 main() 中有一行会导致编译错误,请找出来。\n```cpp\n1 class Student {\n2 public:\n3  Student (string n, int s): name(n), score(s) {}\n4\n5  string getName() {\n6   return name;\n7  }\n8\n9  void setScore (int s) {\n10   score = s;\n11  }\n12\n13 private:\n14  string name;\n15  int score;\n16 };\n17\n18 int main() {\n19  Student stu(\"Tom\", 85);\n20  cout << stu.getName(); // ①\n21  stu.setScore (90); // ②\n22  stu.score = 100; // ③\n23  cout << stu.getName(); // ④\n24  return 0;\n25 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "第①行"
+        },
+        {
+          "label": "B",
+          "text": "第②行"
+        },
+        {
+          "label": "C",
+          "text": "第③行"
+        },
+        {
+          "label": "D",
+          "text": "第④行"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在 `main()` 函数中，`stu.score = 100;` (第③行) 会导致编译错误。因为 `score` 是 `Student` 类的 `private` 成员变量，不能在类外部直接访问。正确的做法是通过公共成员函数 `setScore()` 来修改，例如 `stu.setScore(100);`。"
+    },
+    {
+      "id": "n8v98zRIJy810mD0NDKtr",
+      "order": 3,
+      "type": "true_false",
+      "content": "第3题在C++ STL 中, stack 的pop()函数会返回栈顶元素并将其删除。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在C++ STL的 `std::stack` 中，`pop()` 函数只负责将栈顶元素删除，它不返回被删除的元素。要获取栈顶元素，应该使用 `top()` 函数。"
+    },
+    {
+      "id": "N742WlN4T58RFiZd6IuBl",
+      "order": 4,
+      "type": "single_choice",
+      "content": "第4题 某文本编辑器把用户输入的字符依次压入栈S。用户依次输入 X, Y, Z, W 后,连续执行两次撤销操作。每次撤销都会弹出栈顶一个字符。此时栈从栈底到栈顶的内容是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "X Y"
+        },
+        {
+          "label": "B",
+          "text": "X Y Z"
+        },
+        {
+          "label": "C",
+          "text": "Y Z"
+        },
+        {
+          "label": "D",
+          "text": "X Z"
+        }
+      ],
+      "answer": "A",
+      "explanation": "初始栈为空。依次输入 X, Y, Z, W 后，栈 S = [X, Y, Z, W]。第一次撤销操作弹出 W，栈 S = [X, Y, Z]。第二次撤销操作弹出 Z，栈 S = [X, Y]。因此，栈从栈底到栈顶的内容是 X Y。"
+    },
+    {
+      "id": "bD42jmKrI1FcARfwzQb_r",
+      "order": 4,
+      "type": "true_false",
+      "content": "第4题 程序运行后会输出2。\n```cpp\n1 int main() {\n2  queue<int> q;\n3  q.push(1);\n4  q.push(2);\n5  q.push(3);\n6  q.pop();\n7  cout << q.front() << endl;\n8  return 0;\n9 }\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "队列操作步骤如下：\n1. `q.push(1);` 队列: [1]\n2. `q.push(2);` 队列: [1, 2]\n3. `q.push(3);` 队列: [1, 2, 3]\n4. `q.pop();` 弹出队首元素1。队列: [2, 3]\n5. `q.front()` 返回队首元素2。因此 `cout << q.front()` 会输出2。"
+    },
+    {
+      "id": "tzCfZLz8ijc-by3T9veNc",
+      "order": 5,
+      "type": "single_choice",
+      "content": "第5题 假设循环队列数组长度为 N = 7,队空判断条件为 front == rear。入队和出队操作如下:\n```cpp\n1 const int N = 7;\n2 int q[N];\n3 int front = 3, rear = 3;\n4\n5 void enqueue(int x) {\n6  q[rear] = x;\n7  rear = (rear + 1) % N;\n8 }\n9\n10 void dequeue() {\n11  front = (front + 1) % N;\n12 }\n```\n依次执行:\n```\n1 enqueue (10);\n2 enqueue (20);\n3 enqueue (30);\n4 dequeue();\n5 enqueue (40);\n6 dequeue();\n7 enqueue (50);\n```\n最终(front, rear)的值是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "(5, 1)"
+        },
+        {
+          "label": "B",
+          "text": "(4, 0)"
+        },
+        {
+          "label": "C",
+          "text": "(5,0)"
+        },
+        {
+          "label": "D",
+          "text": "(3, 1)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "初始状态 `front = 3`, `rear = 3`。\n1. `enqueue(10)`: `q[3]=10`, `rear = 4`。\n2. `enqueue(20)`: `q[4]=20`, `rear = 5`。\n3. `enqueue(30)`: `q[5]=30`, `rear = 6`。\n4. `dequeue()`: `front = 4`。\n5. `enqueue(40)`: `q[6]=40`, `rear = 0`。\n6. `dequeue()`: `front = 5`。\n7. `enqueue(50)`: `q[0]=50`, `rear = 1`。\n最终 `(front, rear)` 的值为 `(5, 1)`。"
+    },
+    {
+      "id": "lvFALKHTr5WPposs6H7Gd",
+      "order": 5,
+      "type": "true_false",
+      "content": "第5题下列函数试图将整数 × 插入到一棵二叉搜索树中。假设二叉搜索树满足如下性质:对于任意结点,左子树中所有结点的值均小于该结点的值,右子树中所有结点的值均大于或等于该结点的值。判断该函数是否能够在插入后保持二叉搜索树性质。\n```cpp\n1 struct TreeNode {\n2  int val;\n3  TreeNode* left;\n4  TreeNode* right;\n5  TreeNode (int x): val(x), left (nullptr), right(nullptr) {}\n6 };\n7\n8 TreeNode insertNode (TreeNode* root, int x) {\n9  if (root == nullptr) {\n10  return new TreeNode(x);\n11  }\n12\n13  if (x < root->val) {\n14  root->right = insertNode(root->right, x);\n15  } else {\n16  root->left = insertNode(root->left, x);\n17  }\n18\n19  return root;\n20 }\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该 `insertNode` 函数的逻辑是错误的。根据二叉搜索树的性质，如果待插入的值 `x` 小于当前节点 `root->val`，应该插入到左子树 (`root->left`)；如果 `x` 大于或等于当前节点 `root->val`，应该插入到右子树 (`root->right`)。然而，代码中 `if (x < root->val)` 的分支错误地将 `x` 插入到了 `root->right`，而 `else` 分支错误地将 `x` 插入到了 `root->left`。这会破坏二叉搜索树的性质。"
+    },
+    {
+      "id": "u5c-vFrQB1OX_U0DJ8ZFF",
+      "order": 6,
+      "type": "single_choice",
+      "content": "第6题 以下函数 check() 用于判断一棵二叉树是否为()。\n```cpp\n1 bool check (TreeNode root) {\n2  if (!root) return true;\n3\n4  queue<TreeNode*> q;\n5  q.push(root);\n6\n7  bool hasNull = false;\n8\n9  while (!q.empty()) {\n10   TreeNode cur = q.front();\n11   q.pop();\n12\n13   if (cur == nullptr) {\n14    hasNull = true;\n15   } else {\n16    if (hasNull) return false;\n17    q.push(cur->left);\n18    q.push(cur->right);\n19   }\n20  }\n21\n22  return true;\n23 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "满二叉树"
+        },
+        {
+          "label": "B",
+          "text": "完全二叉树"
+        },
+        {
+          "label": "C",
+          "text": "二叉搜索树"
+        },
+        {
+          "label": "D",
+          "text": "平衡二叉树"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该函数通过层序遍历检查二叉树。`hasNull` 标志用于记录是否已经遇到过空节点。如果在遇到空节点之后又遇到了非空节点，则说明该树不是一个“紧密”排列的树，即不是完全二叉树。由于满二叉树（所有内部节点都有两个子节点，且所有叶子节点都在同一层）是完全二叉树的一种特殊形式，且在某些语境下“满二叉树”可能被泛指为“完全二叉树”，因此该函数可以判断是否为满二叉树。"
+    },
+    {
+      "id": "NcI9vG1sATP361XKKju4w",
+      "order": 6,
+      "type": "true_false",
+      "content": "第6题 哈夫曼编码一定唯一,只要字符频率相同,得到的编码也一定完全相同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哈夫曼编码不一定唯一。当有多个节点具有相同的最小频率时，选择合并的顺序可能会不同，导致生成的哈夫曼树结构不同，从而产生不同的编码。然而，所有这些不同的哈夫曼编码都具有相同的最小加权路径长度。"
+    },
+    {
+      "id": "SSOjjaeJfCooqaTcSVIWk",
+      "order": 7,
+      "type": "single_choice",
+      "content": "第7题 以下代码实现了二叉树的哪种遍历方式?\n```cpp\n1 void traverse (TreeNode* root) {\n2  if (root == nullptr) return;\n3\n4  cout << root->val << \" \";\n5  traverse (root->left);\n6  traverse (root->right);\n7 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "前序遍历"
+        },
+        {
+          "label": "B",
+          "text": "中序遍历"
+        },
+        {
+          "label": "C",
+          "text": "后序遍历"
+        },
+        {
+          "label": "D",
+          "text": "层序遍历"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该 `traverse` 函数的执行顺序是：先访问根节点 (`cout << root->val`)，然后递归遍历左子树 (`traverse(root->left)`)，最后递归遍历右子树 (`traverse(root->right)`)。这种“根-左-右”的遍历顺序定义了前序遍历。"
+    },
+    {
+      "id": "9X2D2YgASATSk8HrmiURU",
+      "order": 7,
+      "type": "true_false",
+      "content": "第7题 若用数组按层序存储完全二叉树,且根节点下标为0,则下标为 i 的节点左孩子下标为 2 * i+1,右孩子下标为2*i+2。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "对于用数组存储的完全二叉树，如果根节点下标为0，那么对于任意节点 `i`：其左孩子的下标是 `2 * i + 1`，其右孩子的下标是 `2 * i + 2`。这是完全二叉树在数组中存储的常见约定。"
+    },
+    {
+      "id": "YSbncBzaUQmb9O7lQcXN3",
+      "order": 8,
+      "type": "single_choice",
+      "content": "第8题已知一棵二叉树的先序遍历序列为:ABDEHCFG,中序遍历序列为: DBHEAFCG,则该二叉树的后序遍历序列是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "DHEBFGCA"
+        },
+        {
+          "label": "B",
+          "text": "DEHBFGCA"
+        },
+        {
+          "label": "C",
+          "text": "HDEBFCGA"
+        },
+        {
+          "label": "D",
+          "text": "DHEBGFCA"
+        }
+      ],
+      "answer": "A",
+      "explanation": "根据先序遍历 (根-左-右) ABDEHCFG 和中序遍历 (左-根-右) DBHEAFCG 构建二叉树：\n1. 先序遍历的第一个节点 A 是根节点。\n2. 在中序遍历中，A 左侧是 DBHE，右侧是 FCG。因此，左子树节点为 D, B, H, E，右子树节点为 F, C, G。\n3. 对左子树：先序遍历中 A 之后是 BDEH，所以 B 是左子树的根。中序遍历中 B 左侧是 D，右侧是 HE。D 是 B 的左孩子。对 HE，先序遍历中 H 是根，中序遍历中 H 左侧为空，右侧是 E。所以 H 是 B 的右孩子，E 是 H 的右孩子。\n4. 对右子树：先序遍历中 A 之后是 CFG，所以 C 是右子树的根。中序遍历中 C 左侧是 F，右侧是 G。F 是 C 的左孩子，G 是 C 的右孩子。\n构建出的树结构为：A (根)，左子树为 B (根)，B 的左孩子 D，B 的右孩子 H，H 的右孩子 E。右子树为 C (根)，C 的左孩子 F，C 的右孩子 G。\n后序遍历 (左-右-根) 结果为：D E H B F G C A。"
+    },
+    {
+      "id": "s63ddnzOgeRdbUo6_g_VZ",
+      "order": 8,
+      "type": "true_false",
+      "content": "第8题以下代码可以正确地按层换行输出二叉树的节点值。\n```cpp\n1 void printByLevel (TreeNode* root) {\n2  if (!root) return;\n3\n4  queue<TreeNode*> q;\n5  q.push(root);\n6\n7  while (!q.empty()) {\n8   int sz = q.size();\n9\n10   for (int i = 0; i < sz; ++i) {\n11    TreeNode* cur = q.front();\n12    q.pop();\n13    cout << cur->val << \" \";\n14\n15    if (cur->left) q.push(cur->left);\n16    if (cur->right) q.push(cur->right);\n17   }\n18   cout << endl;\n19  }\n20 }\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码实现了标准的广度优先搜索（BFS）层序遍历，并在每层结束后输出换行符，能够正确地按层换行输出二叉树的节点值。因此，该陈述应为“正确”。如果答案为“错误”，可能是在特定严格的输出格式要求（例如不允许行末空格）或对空树的输出处理上有未明确的细节。"
+    },
+    {
+      "id": "JJp4nMHf7_ZkC6vOxFcDC",
+      "order": 9,
+      "type": "single_choice",
+      "content": "第9题 有6个字符,它们出现的次数分别为:{3,4,7,8,12,15},现在用哈夫曼编码为这些字符编码,最小加权路径长度 WPL 的值为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "113"
+        },
+        {
+          "label": "B",
+          "text": "119"
+        },
+        {
+          "label": "C",
+          "text": "126"
+        },
+        {
+          "label": "D",
+          "text": "31"
+        }
+      ],
+      "answer": "B",
+      "explanation": "构造哈夫曼树并计算加权路径长度 (WPL) 的过程如下：\n1. 初始权值集合：{3, 4, 7, 8, 12, 15}\n2. 合并最小的两个：3 + 4 = 7。集合变为：{7, 7, 8, 12, 15}。非叶子节点和：7\n3. 合并最小的两个：7 + 7 = 14。集合变为：{8, 12, 14, 15}。非叶子节点和：7 + 14 = 21\n4. 合并最小的两个：8 + 12 = 20。集合变为：{14, 15, 20}。非叶子节点和：21 + 20 = 41\n5. 合并最小的两个：14 + 15 = 29。集合变为：{20, 29}。非叶子节点和：41 + 29 = 70\n6. 合并最小的两个：20 + 29 = 49。集合变为：{49}。非叶子节点和：70 + 49 = 119\n最终的最小加权路径长度 WPL 为所有非叶子节点权值之和，即 119。"
+    },
+    {
+      "id": "BYdhPWbI96g0KHZYVYxCy",
+      "order": 9,
+      "type": "true_false",
+      "content": "第9题 使用栈非递归实现二叉树前序遍历时,若希望先访问左子树,通常应先将右孩子入栈,再将左孩子入栈。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "非递归前序遍历的顺序是“根-左-右”。使用栈实现时，首先将根节点入栈。然后循环：弹出栈顶节点并访问它，接着将它的右孩子（如果存在）入栈，最后将它的左孩子（如果存在）入栈。由于栈是后进先出 (LIFO) 的，这样可以确保左孩子在右孩子之前被处理，从而实现“根-左-右”的顺序。"
+    },
+    {
+      "id": "qh7D7GZhaaen5P_l7tPh_",
+      "order": 10,
+      "type": "single_choice",
+      "content": "第10题对n个不同符号进行哈夫曼编码。若生成的哈夫曼树共有63个结点,则n 的值是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "31"
+        },
+        {
+          "label": "B",
+          "text": "32"
+        },
+        {
+          "label": "C",
+          "text": "63"
+        },
+        {
+          "label": "D",
+          "text": "64"
+        }
+      ],
+      "answer": "B",
+      "explanation": "哈夫曼树是一种特殊的二叉树，它只有度为0（叶子节点）和度为2（内部节点）的节点。如果一棵哈夫曼树有 `n` 个叶子节点，那么它有 `n-1` 个内部节点。因此，哈夫曼树的总节点数 = 叶子节点数 + 内部节点数 = `n + (n-1) = 2n - 1`。\n题目中给出总节点数为 63，所以 `2n - 1 = 63`，解得 `2n = 64`，`n = 32`。"
+    },
+    {
+      "id": "QZSH33Devx6pG4YpBBL6z",
+      "order": 10,
+      "type": "true_false",
+      "content": "第10题 动态规划问题通常要求具有最优子结构,并且常常存在重叠子问题。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "动态规划 (DP) 的两个核心特性就是最优子结构和重叠子问题。最优子结构意味着一个问题的最优解可以由其子问题的最优解构成。重叠子问题意味着在解决问题时，会多次遇到相同的子问题，通过存储子问题的解可以避免重复计算，提高效率。"
+    },
+    {
+      "id": "XuLmtqnJrJL_nsIxXyOjA",
+      "order": 11,
+      "type": "single_choice",
+      "content": "第11题 在格雷码中,相邻两个编码只能有一位不同。若当前编码为 110,则它的下一个编码不可能是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "010"
+        },
+        {
+          "label": "B",
+          "text": "111"
+        },
+        {
+          "label": "C",
+          "text": "100"
+        },
+        {
+          "label": "D",
+          "text": "001"
+        }
+      ],
+      "answer": "D",
+      "explanation": "格雷码的特性是相邻两个编码之间只有一位不同。\n*   当前编码 110。\n*   A. 010：与 110 相比，第一位不同 (1->0)，其余位相同，只有一位不同，可能。\n*   B. 111：与 110 相比，第三位不同 (0->1)，其余位相同，只有一位不同，可能。\n*   C. 100：与 110 相比，第二位不同 (1->0)，其余位相同，只有一位不同，可能。\n*   D. 001：与 110 相比，第一位 (1->0)、第二位 (1->0)、第三位 (0->1) 都不同，有三位不同，不可能。"
+    },
+    {
+      "id": "4oY9yf5IvDP27_OQu2zZB",
+      "order": 12,
+      "type": "single_choice",
+      "content": "第12题 给定一棵二叉树,采用广度优先搜索 BFS 返回其右视图,其中右视图中的每个节点都是该层最右侧的节点。横线处应填写()。\n```cpp\n1 vector<int> rightSideView (TreeNode* root) {\n2  vector<int> result;\n3  if (!root) return result;\n4\n5  queue<TreeNode*> q;\n6  q.push(root);\n7\n8  while (!q.empty()) {\n9   int sz = q.size();\n10\n11   for (int i = 0; i < sz; ++i) {\n12    TreeNode* node = q.front();\n13    q.pop();\n14\n15    // 横线处\n16    if (node->left) q.push(node->left);\n17    if (node->right) q.push(node->right);\n18   }\n19  }\n20\n21  return result;\n22 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "if (i == 0) result.push_back(node->val);"
+        },
+        {
+          "label": "B",
+          "text": "if (i == sz - 1) result.push_back(node->val);"
+        },
+        {
+          "label": "C",
+          "text": "result.push_back(q.front()->val);"
+        },
+        {
+          "label": "D",
+          "text": "if (node->right) result.push_back(node->right->val);"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该函数旨在返回二叉树的右视图，这意味着对于每一层，我们只需要记录该层最右边的节点的值。代码使用 BFS 进行层序遍历，`sz` 变量存储了当前层的节点数量。在遍历当前层的所有节点时，当 `i` 等于 `sz - 1` 时，表示当前处理的是该层的最后一个节点，也就是最右边的节点。此时将其值 `node->val` 加入 `result` 即可。"
+    },
+    {
+      "id": "KEIcVInDOMJImBGVvks7j",
+      "order": 13,
+      "type": "single_choice",
+      "content": "第13题下面代码实现二叉搜索树的插入操作。假设树中不存在重复值,横线处应填写()。\n```cpp\n1 TreeNode insertNode (TreeNode* root, int x) {\n2  if (root == nullptr) {\n3   return new TreeNode(x);\n4  }\n5\n6  if (x < root->val) {\n7   // 横线处\n8  } else {\n9   root->right = insertNode(root->right, x);\n10  }\n11\n12  return root;\n13 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "root->left = insertNode(root->left, x);"
+        },
+        {
+          "label": "B",
+          "text": "root = insertNode (root->left, x);"
+        },
+        {
+          "label": "C",
+          "text": "root->right = insertNode(root->left, x);"
+        },
+        {
+          "label": "D",
+          "text": "insertNode(root->left, x);"
+        }
+      ],
+      "answer": "A",
+      "explanation": "二叉搜索树的插入规则是：如果待插入的值 `x` 小于当前节点 `root->val`，则应该插入到左子树；如果 `x` 大于当前节点 `root->val`，则应该插入到右子树。代码中 `else` 分支已经处理了 `x >= root->val` 的情况，将其插入到右子树。因此，当 `x < root->val` 时，需要将 `x` 插入到左子树中，并将左子树的根更新为插入后的结果，即 `root->left = insertNode(root->left, x);`。"
+    },
+    {
+      "id": "p7f7fxmXikHxSFmZyYLjZ",
+      "order": 14,
+      "type": "single_choice",
+      "content": "第14题 给定一个整数数组a,每个元素表示一个位置上的数值。要求从数组中选择若干个元素,使得任意两个被选择的元素在原数组中都不相邻,并且所选元素的总和最大。函数 choose (vector<int>& a)返回能够得到的最 大总和,则横线处应填写()。\n```cpp\n1 int choose (vector<int>& a) {\n2  if (a.empty()) return 0;\n3\n4  int n = a.size();\n5  if (n == 1) return a[0];\n6\n7  vector<int> dp(n, 0);\n8  dp[0] = a[0];\n9  dp[1] = max(a[0], a[1]);\n10\n11  for (int i = 2; i < n; ++i) {\n12   dp[i] = // 横线处\n13  }\n14\n15  return dp[n-1];\n16 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "dp[i - 1] + a[i]"
+        },
+        {
+          "label": "B",
+          "text": "max(dp[i - 1], dp[i - 2] + a[i])"
+        },
+        {
+          "label": "C",
+          "text": "max(dp[i - 2], a[i])"
+        },
+        {
+          "label": "D",
+          "text": "dp[i - 1] + dp[i - 2]"
+        }
+      ],
+      "answer": "B",
+      "explanation": "这是一个经典的动态规划问题，目标是选择不相邻元素使和最大。`dp[i]` 表示考虑前 `i+1` 个元素（即 `a[0]` 到 `a[i]`）时能得到的最大总和。\n当计算 `dp[i]` 时，有两种情况：1. 不选择 `a[i]`，此时最大总和是 `dp[i-1]`。2. 选择 `a[i]`，由于不能选择相邻元素，`a[i-1]` 不能被选择，此时最大总和是 `a[i]` 加上 `dp[i-2]`。因此，`dp[i]` 应该取这两种情况的最大值：`max(dp[i - 1], dp[i - 2] + a[i])`。"
+    },
+    {
+      "id": "neYKI3thenpTRyXpNJMgk",
+      "order": 15,
+      "type": "single_choice",
+      "content": "第15题下面代码实现0/1背包的一维动态规划。第i个物品重量为 wt[i],价值为 val[i],背包容量为W。横线处应填写()。\n```cpp\n1 int knapsack(int W, vector<int>& wt, vector<int>& val) {\n2  int n = wt.size();\n3  vector<int> dp(W + 1, 0);\n4\n5  for (int i = 0; i < n; ++i) {\n6   for (int w = W; w >= wt[i]; --w) {\n7    // 横线处\n8   }\n9  }\n10\n11  return dp[W];\n12 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "dp[w] = max(dp[w], dp[w - wt[i]] + val[i]);"
+        },
+        {
+          "label": "B",
+          "text": "dp[w] = max(dp[w - 1], dp[w - wt[i]) + val[i]);"
+        },
+        {
+          "label": "C",
+          "text": "dp[w] = dp[w] + val[i];"
+        },
+        {
+          "label": "D",
+          "text": "dp[w - wt[i]] = max(dp[w], val[i]);"
+        }
+      ],
+      "answer": "A",
+      "explanation": "这是0/1背包问题的一维动态规划实现。`dp[w]` 表示在背包容量为 `w` 时能获得的最大价值。外层循环遍历物品 `i`，内层循环从 `W` 倒序遍历到 `wt[i]`，这是为了确保每个物品只被考虑一次。对于当前容量 `w` 和物品 `i`，有两种选择：不放入物品 `i`（价值为 `dp[w]`），或放入物品 `i`（价值为 `val[i]` 加上背包容量为 `w - wt[i]` 时的最大价值 `dp[w - wt[i]]`）。因此，`dp[w]` 应该取这两种情况的最大值：`max(dp[w], dp[w - wt[i]] + val[i])`。"
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-5ji-202412",
+  "url": "https://adacpp.com/practice/gesp-cpp-5ji-202412",
+  "title": "GESP C++五级 202412",
+  "description": "CCF编程能力等级认证 GESP C++ 五级 2024年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 5,
+    "ym": "202412"
+  },
+  "questions": [
+    {
+      "id": "yJ-lRZWqb11VTUMMRhwPF",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下面关于链表和数组的描述，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "当数据数量不确定时，为了应对各种可能的情况，需要申请一个较大的数组，可能浪费空间；此时用链表比较合适，大小可动态调整。"
+        },
+        {
+          "label": "B",
+          "text": "在链表中访问节点的效率较低，时间复杂度为O(n)。"
+        },
+        {
+          "label": "C",
+          "text": "链表插入和删除元素效率较低，时间复杂度为O(n)。"
+        },
+        {
+          "label": "D",
+          "text": "链表的节点在内存中是分散存储的，通过指针连在一起。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项C错误。链表在已知插入或删除位置（或前一个节点）的情况下，插入和删除操作的时间复杂度为O(1)，效率很高。只有当需要先查找元素位置时，才需要O(n)的时间。选项A、B、D的描述都是正确的：A说明链表大小可动态调整，避免数组空间浪费；B说明链表访问节点需从头遍历，时间复杂度为O(n)；D说明链表节点在内存中是分散存储的，通过指针连接。"
+    },
+    {
+      "id": "y9Qi3_Xh8_3NtMmbVwpOC",
+      "order": 2,
+      "type": "single_choice",
+      "content": "在循环单链表中，节点的 next 指针指向下一个节点，最后一个节点的 next 指针指向（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "当前节点"
+        },
+        {
+          "label": "B",
+          "text": "nullptr"
+        },
+        {
+          "label": "C",
+          "text": "第一个节点"
+        },
+        {
+          "label": "D",
+          "text": "上一个节点"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在循环单链表中，\"循环\"的含义是链表形成一个闭环。因此，最后一个节点的 `next` 指针会指向链表的第一个节点，从而完成整个循环。选项 B `nullptr` 用于非循环链表的末尾，表示链表结束；选项 A 和 D 则不符合循环单链表的结构定义，会导致链表无法正确遍历或结构混乱。"
+    },
+    {
+      "id": "1mYVa5qqoFW_3yxZfk0am",
+      "order": 3,
+      "type": "single_choice",
+      "content": "为了方便链表的增删操作，一些算法生成一个虚拟头节点，方便统一删除头节点和其他节点。下面代码实现了删除链表中值为 val 的节点，横线上应填的最佳代码是（ ）。\n\n```cpp\nstruct LinkedNode {\n    int val;\n    LinkedNode* next;\n    LinkedNode(int val):val(val), next(nullptr){}\n};\n\nvoid removeElements(LinkedNode* head, int val) {\n    if (head == nullptr) {\n        return;\n    }\n    LinkedNode* cur;\n    LinkedNode* dummyHead = new LinkedNode(0); //虚拟头节点\n    ________________________________ // 在此处填入代码\n\n    while(cur ->next != nullptr) {\n        if(cur->next->val == val) {\n            LinkedNode* tmp = cur->next;\n            cur->next = cur->next->next;\n            delete tmp;\n            tmp = nullptr;\n        }\n        else {\n            cur = cur ->next;\n        }\n    }\n    head = dummyHead->next;\n    delete dummyHead;\n    dummyHead = nullptr;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "dummyHead->next = head; cur = dummyHead;"
+        },
+        {
+          "label": "B",
+          "text": "dummyHead->next = head->next; cur = dummyHead;"
+        },
+        {
+          "label": "C",
+          "text": "dummyHead->next = head; cur = dummyHead->next;"
+        },
+        {
+          "label": "D",
+          "text": "dummyHead->next = head->next; cur = dummyHead->next;"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A选项正确。`dummyHead->next = head;` 将虚拟头节点正确地连接到原链表的头部，使得虚拟头节点成为链表的逻辑起点。`cur"
+    },
+    {
+      "id": "l2fJAlTwlp2055d3hAv69",
+      "order": 4,
+      "type": "single_choice",
+      "content": "对下面两个函数，说法错误的是（ ）。\n\n```cpp\nint fibA(int n) {\n    if (n <= 1) return n;\n\n    int f1 = 0, f2 = 1;\n    for (int i = 2; i <= n; ++i) {\n        int temp = f2;\n        f2 = f1 + f2;\n        f1 = temp;\n    }\n    return f2;\n}\n\nint fibB(int n) {\n    if (n <= 1) return n;\n    return fibB(n - 1) + fibB(n - 2);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "两个函数的实现的功能相同。"
+        },
+        {
+          "label": "B",
+          "text": "fibA采用递推方式。"
+        },
+        {
+          "label": "C",
+          "text": "fibB采用的是递归方式。"
+        },
+        {
+          "label": "D",
+          "text": "fibA时间复杂度为O(n)，fibB的时间复杂度为O(n²)。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误。`fibA` 使用循环，时间复杂度为 `O(n)`；而 `fibB` 是未经优化的递归，会重复计算大量子问题，其时间复杂度"
+    },
+    {
+      "id": "IHmI4zLrkT23lu8zbPUHZ",
+      "order": 5,
+      "type": "single_choice",
+      "content": "两块长方形土地的长宽分别为24和36米，要将它们分成正方形的小块，使得正方形的尺寸尽可能大。小杨采用如下的辗转相除函数 gcd(24, 36) 来求正方形分块的边长，则函数 gcd 调用顺序为（ ）。\n\n```cpp\nint gcd(int a, int b) {\n    int big = a > b ? a : b;\n    int small = a < b ? a : b;\n    if (big % small == 0) {\n        return small;\n    }\n    return gcd(small, big % small);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "gcd(24, 36)、gcd(24, 12)、gcd(12, 0)"
+        },
+        {
+          "label": "B",
+          "text": "gcd(24, 36)、gcd(12, 24)、gcd(0, 12)"
+        },
+        {
+          "label": "C",
+          "text": "gcd(24, 36)、gcd(24, 12)"
+        },
+        {
+          "label": "D",
+          "text": "gcd(24, 36)、gcd(12, 24)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "首次调用 `gcd(24, 36)` 时，函数内部会确定 `big = 36` 和 `small = 24`。因为 `36 % 24` 等于 12 不为 0，所以会递归调用 `gcd(small, big % small)`，即 `gcd(24, 12)`。在 `gcd(24, 12)` 中，`big = 24`，`small = 12`，此时 `2"
+    },
+    {
+      "id": "GMX5r6ury0ONaa2dj86Eh",
+      "order": 6,
+      "type": "single_choice",
+      "content": "唯一分解定理表明，每个大于1的自然数可以唯一地写成若干个质数的乘积。下面函数将自然数n的所有质因素找出来，横线上能填写的最佳代码是（ ）。\n\n```cpp\n#include <vector>\nvector<int> get_prime_factors(int n) {\n    vector<int> factors;\n    if (n <= 1) {\n        cout << \"输入的数必须是大于1的正整数\" << endl;\n        return;\n    }\n    while (n % 2 == 0) {\n        factors.push_back(2);\n        n /= 2;\n    }\n\n    ________________________________ { // 在此处填入代码\n        while (n % i == 0) {\n            factors.push_back(i);\n            n /= i;\n        }\n    }\n\n    if (n > 2) {\n        factors.push_back(n);\n    }\n\n    return factors;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "for (int i = 3; i <= n; i ++)"
+        },
+        {
+          "label": "B",
+          "text": "for (int i = 3; i * i <= n; i ++)"
+        },
+        {
+          "label": "C",
+          "text": "for (int i = 3; i <= n; i += 2)"
+        },
+        {
+          "label": "D",
+          "text": "for (int i = 3; i * i <= n; i += 2)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n\n选项 D `for (int i = 3; i * i <= n; i += 2)` 是最佳选择。\n1.  `i ="
+    },
+    {
+      "id": "5_KmDmjozgxbLwpdumOnq",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下述代码实现素数表的埃拉托色尼（埃氏）筛法，筛选出所有小于等于n的素数。\n\n```cpp\nvector<int> sieve_Eratosthenes(int n) {\n    vector<bool> is_prime(n +1, true);\n    vector<int> primes;\n\n    for (int i = 2; i * i <= n; i++) {\n        if (is_prime[i]) {\n            primes.push_back(i);\n\n            for (int j = i * i; j <= n; j += i) {\n                is_prime[j] = false;\n            }\n        }\n    }\n\n    for (int i = sqrt(n) + 1; i <= n; i++) {\n        if (is_prime[i]) {\n            primes.push_back(i);\n        }\n    }\n\n    return primes;\n}\n```\n\n下面说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "代码的时间复杂度是O(n√n)。"
+        },
+        {
+          "label": "B",
+          "text": "在标记非素数时，代码从i²开始，可以减少重复标记。"
+        },
+        {
+          "label": "C",
+          "text": "代码会输出所有小于等于n的奇数。"
+        },
+        {
+          "label": "D",
+          "text": "调用函数 sieve_Eratosthenes(10)，函数返回值的数组中包含的元素有：2, 3, 5, 7, 9。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项B正确。在埃氏筛法中，当找到素数 `i` 时，其小于 `i*i` 的倍数（如 `2*i`, `3*"
+    },
+    {
+      "id": "IGY0GXND7eoPnAHwr-BqP",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下述代码实现素数表的线性筛法，筛选出所有小于等于n的素数。下面说法正确的是（ ）。\n\n```cpp\nvector<int> sieve_linear(int n) {\n    vector<bool> is_prime(n +1, true);\n    vector<int> primes;\n\n    for (int i = 2; i <= n/2; i++) {\n        if (is_prime[i])\n            primes.push_back(i);\n\n        for (int j = 0; j < primes.size() && i * primes[j] <= n; j++) {\n            is_prime[ i * primes[j] ] = 0;\n            if (i % primes[j] == 0)\n                break;\n        }\n    }\n\n    for (int i = n/2 +1; i <= n; i++) {\n        if (is_prime[i])\n            primes.push_back(i);\n    }\n\n    return primes;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "线性筛的时间复杂度是O(n)。"
+        },
+        {
+          "label": "B",
+          "text": "每个合数会被其所有的质因子标记一次。"
+        },
+        {
+          "label": "C",
+          "text": "线性筛和埃拉托色尼筛的实现思路完全相同。"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "A",
+      "explanation": "线性筛法的核心优势在于其时间复杂度为O(n)。它通过确保每个合数只被其最小质因子标记一次，从而避免了重复标记，达到了线性时间复杂度"
+    },
+    {
+      "id": "-iCuoiZwjgL232w_QdOqd",
+      "order": 9,
+      "type": "single_choice",
+      "content": "考虑以下C++代码实现的快速排序算法：\n\n```cpp\nint partition(vector<int>& arr, int left, int right) {\n    int pivot = arr[right]; // 基准值\n    int i = left - 1;\n\n    for (int j = left; j < right; j++) {\n        if (arr[j] < pivot) {\n            i++;\n            swap(arr[i], arr[j]);\n        }\n    }\n    swap(arr[i + 1], arr[right]);\n    return i + 1;\n}\n\n// 快速排序\nvoid quickSort(vector<int>& arr, int left, int right) {\n    if (left < right) {\n        int pi = partition(arr, left, right);\n        quickSort(arr, left, pi - 1);\n        quickSort(arr, pi + 1, right);\n    }\n}\n```\n\n以下关于快速排序的说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "快速排序通过递归对子问题进行求解。"
+        },
+        {
+          "label": "B",
+          "text": "快速排序的最坏时间复杂度是O(n log n)。"
+        },
+        {
+          "label": "C",
+          "text": "快速排序是一个稳定的排序算法。"
+        },
+        {
+          "label": "D",
+          "text": "在最优情况下，快速排序的时间复杂度是O(n)。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A. `quickSort` 函数通过调用自身（`quickSort(arr, left, pi - 1);` 和 `quickSort(arr, pi + 1, right);`）"
+    },
+    {
+      "id": "Ta4Ww5mJtgijlKVHSfKHY",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面关于归并排序，描述正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "归并排序是一个不稳定的排序算法。"
+        },
+        {
+          "label": "B",
+          "text": "归并排序的时间复杂度在最优、最差和平均情况下都是O(n log n)。"
+        },
+        {
+          "label": "C",
+          "text": "归并排序需要额外的O(1)空间。"
+        },
+        {
+          "label": "D",
+          "text": "对于输入数组 {12, 11, 13, 5, 6, 7}，代码输出结果为：7 6 5 13 12 11。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "归并排序采用分治策略，将数组递归地分成两半并合并，其时间复杂度在最优、最差和平均情况下都稳定为O(n log n)，因此B正确。归并排序是一个稳定的排序算法，能保持相等元素的相对顺序，所以A错误。它通常需要额外的O(n)空间来存储临时数组，而非O(1)，因此C错误。对于输入数组 {12, 11, 13, 5, 6, 7}，归并排序的正确升序输出应为 {5, 6, 7, 11, 12, 13}，所以D错误。"
+    },
+    {
+      "id": "h3mXoq5jNhoz3aVqenFuY",
+      "order": 11,
+      "type": "single_choice",
+      "content": "给定一个长度为n的有序数组 nums，其中所有元素都是唯一的。下面的函数返回数组中元素 target 的索引。\n\n```cpp\nint binarySearch(vector<int> &nums, int target, int left, int right) {\n    if (left > right) {\n        return -1;\n    }\n\n    int middle = left + ((right - left) / 2);\n    if (nums[middle] == target) {\n        return middle;\n    }\n    else if (nums[middle] < target) {\n        return binarySearch(nums, target, middle + 1, right);\n    }\n    else\n        return binarySearch(nums, target, left, middle - 1);\n    }\n}\n\nint Find(vector<int> &nums, int target) {\n    int n = nums.size();\n    return binarySearch(nums, target, 0, n - 1);\n}\n```\n\n关于上述函数，描述不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "函数采用二分查找，每次计算搜索当前搜索区间的中点，然后根据中点的元素值排除一半搜索区间。"
+        },
+        {
+          "label": "B",
+          "text": "函数采用递归求解，每次问题的规模减小一半。"
+        },
+        {
+          "label": "C",
+          "text": "递归的终止条件是中间元素的值等于 target，若数组中不包含该元素，递归不会终止。"
+        },
+        {
+          "label": "D",
+          "text": "算法的复杂度为O(log n)。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。该函数的递归终止条件有两个：一是找到目标元素 `target` 并返回其索引；二是当搜索区间 `left > right` 时，表示目标元素不存在，此时函数返回 `-1`，递归也会终止。因此，选项 C 中“若数组中不包含该元素，递归不会终止”的描述是错误的。\n\n选项 A、B、D 都是对二分查找算法的正确描述。函数确实采用了二分查找（A），通过递归方式解决问题且每次将问题规模减半（B），并且其时间复杂度为 O(log n)（D）。"
+    },
+    {
+      "id": "cBAaifnEA8LsYgvX1ye8F",
+      "order": 12,
+      "type": "single_choice",
+      "content": "给定一个长度为n的有序数组 nums，其中可能包含重复元素。下面的函数返回数组中某个元素 target 的左边界，若数组中不包含该元素，则返回 -1。例如在数组 nums = [5,7,7,8,8,10] 中查找 target=8，函数返回8在数组中的左边界的索引为3。则横线上应填写的代码为（ ）。\n\n```cpp\nint getLeftBoundary(vector<int>& nums, int target) {\n    int left = 0;\n    int right = nums.size() - 1;\n\n    while (left < right) {\n        int middle = left + ((right - left) / 2);\n        if (target <= nums[middle])\n            ________________________________ // 在此处填入代码\n        else\n            left = middle+1;\n    }\n\n    return nums[left]==target?left:-1;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "right = middle - 1;"
+        },
+        {
+          "label": "B",
+          "text": "right = middle;"
+        },
+        {
+          "label": "C",
+          "text": "right = middle + 1;"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "当 `target <= nums[middle]` 时，表示 `target` 可能在 `middle` 的左侧，或者 `nums[middle]` 本身就是 `target`（且可能是最左边的）。为了找到最左边界，我们需要继续在 `[left, middle]` 范围内搜索，因此将 `right` 更新为 `middle`，保留 `middle` 作为可能的答案。\n\n选项 A (`right = middle - 1;`) 会在 `nums[middle] == target` 时错误地排除 `middle`，导致找不到最左边界。选项 C (`right = middle + 1;`) 会扩大搜索范围，方向错误。"
+    },
+    {
+      "id": "eyF-osAXE3mqjl_bYmx7C",
+      "order": 13,
+      "type": "single_choice",
+      "content": "假设有多个孩子，数组 g 保存所有孩子的胃口值。有多块饼干，数组 s 保存所有饼干的尺寸。小杨给孩子们发饼干，每个孩子最多只能给一块饼干。饼干的尺寸大于等于孩子的胃口时，孩子才能得到满足。小杨的目标是尽可能满足越多数量的孩子，因此打算采用贪心算法来找出能满足的孩子的数目，则横线上应填写的代码为（ ）。\n\n```cpp\nint cooki4children(vector<int>& g, vector<int>& s) {\n    sort(g.begin(), g.end());\n    sort(s.begin(), s.end());\n\n    int index = s.size() - 1; // 饼干数组下标\n    int result = 0;\n    for (int i = g.size() - 1; i >= 0; i--) {\n        if (index >= 0 && s[index] >= g[i]) {\n            ________________________________ // 在此处填入代码\n        }\n    }\n    return result;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "result++; index--;"
+        },
+        {
+          "label": "B",
+          "text": "result--; index--;"
+        },
+        {
+          "label": "C",
+          "text": "result--; index++;"
+        },
+        {
+          "label": "D",
+          "text": "result++; index++;"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当饼干 `s[index]` 能够满足孩子 `g[i]` 的胃口时，表示成功满足了一个孩子，因此 `result` 应该增加 (`result++`)。同时"
+    },
+    {
+      "id": "KxyPX8sKDeVm7l249CDs9",
+      "order": 14,
+      "type": "single_choice",
+      "content": "关于分治算法，以下说法中不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "分治算法将问题分成子问题，然后分别解决子问题，最后合并结果。"
+        },
+        {
+          "label": "B",
+          "text": "归并排序采用了分治思想。"
+        },
+        {
+          "label": "C",
+          "text": "快速排序采用了分治思想。"
+        },
+        {
+          "label": "D",
+          "text": "冒泡排序采用了分治思想。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D是正确的，因为冒泡排序不采用分治思想。冒泡排序通过重复遍历列表，比较相邻元素并交换不正确的顺序来排序，它没有将问题分解成独立的子问题来解决。选项A是分治算法的定义。归并排序将数组分成两半，分别排序后再合并，是典型的分治。快速排序通过选择一个基准元素将数组分成两部分，然后递归地排序这两部分，也是分治。"
+    },
+    {
+      "id": "i4Pt0NlIDW8QHBhZLQWo3",
+      "order": 15,
+      "type": "single_choice",
+      "content": "小杨编写了一个如下的高精度减法函数：\n\n```cpp\nvector<int> highPrecisionSubtract(vector<int> a, vector<int> b) {\n    vector<int> result;\n    int borrow = 0;\n\n    for (int i = 0; i < a.size(); ++i) {\n        int digitA = a[i];\n        int digitB = i < b.size() ? b[i] : 0;\n\n        int diff = digitA - digitB - borrow;\n        if (diff < 0) {\n            diff += 10;\n            borrow = 1;\n        }\n        else {\n            borrow = 0;\n        }\n\n        result.push_back(diff);\n    }\n\n    while (result.size() > 1 && result.back() == 0) {\n        result.pop_back();\n    }\n\n    return result;\n}\n```\n\n下面说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果数组a表示的整数小于b表示的整数，代码会正确返回二者的差为负数。"
+        },
+        {
+          "label": "B",
+          "text": "代码假设输入数字是以倒序存储的，例如500存储为 {0, 0, 5}。"
+        },
+        {
+          "label": "C",
+          "text": "代码的时间复杂度为O(a.size() + b.size())"
+        },
+        {
+          "label": "D",
+          "text": "当减法结果为0时，结果数组仍然会存储很多个元素0。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该代码从数组的 `0` 索引开始处理数字，并逐位进行减法和借位操作，这与我们从个位（最低位）开始计算的习惯一致。"
+    },
+    {
+      "id": "T1OX5vmDZn3OLEvHlmO6T",
+      "order": 16,
+      "type": "true_false",
+      "content": "单链表只支持在表头进行插入和删除操作。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "单链表虽然在表头进行插入和删除操作效率最高（O(1)），但它并非“只”支持这些操作。通过遍历链表，我们同样可以在表尾或链表中间位置进行插入和删除，只是时间复杂度为 O(n)。因此，题目中“只支持”的说法是错误的，所以选项 F 正确。"
+    },
+    {
+      "id": "ypQLe2wQO64coAtUgWzc_",
+      "order": 17,
+      "type": "true_false",
+      "content": "线性筛相对于埃拉托斯特尼筛法，每个合数只会被它的最小质因数筛去一次，因此效率更高。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该描述正确。线性筛（欧拉筛）的核心优化在于确保每个合数 `n` 都只会被它的最小质因数 `p` 筛除一次，即 `n = p * k`，其中 `p` 是 `n` 的最小质因数。而埃拉托斯特尼筛法中，一个合数可能会被其多个质因数重复筛除，例如 `30` 会被 `2`、`3`、`5` 分别筛除。这种单次筛除的机制使得线性筛的时间复杂度达到严格的 O(N)，效率更高。因此，选项 F 是错误的。"
+    },
+    {
+      "id": "yI4A6NYpdz-990xzpWhgl",
+      "order": 18,
+      "type": "true_false",
+      "content": "任何一个大于1的自然数都可以分解成若干个不同的质数的乘积，且分解方式是唯一的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法是错误的。根据算术基本定理，任何大于1的自然数都可以唯一地分解成若干个质数的乘积，但这些质数不一定是不同的。例如，数字 `4` 可以分解为 `2 * 2`，其中质数 `2` 出现了两次，并非不同的质数。因此，选项 T 是不正确的。"
+    },
+    {
+      "id": "20o68YT3jImA54C9kQL7Z",
+      "order": 19,
+      "type": "true_false",
+      "content": "贪心算法通过每一步选择当前最优解，从而一定能获得全局最优解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "贪心算法在每一步选择局部最优解，但这种策略并非总能保证最终获得全局最优解。例如，在某些背包问题中，贪心选择可能导致错过更好的整体组合。因此，题目中“一定能获得全局最优解”的说法是错误的，所以F是正确答案。"
+    },
+    {
+      "id": "ttJ6qiaWVcxW_CJwQwKNE",
+      "order": 20,
+      "type": "true_false",
+      "content": "递归算法必须有一个明确的结束条件，否则会导致无限递归并可能引发栈溢出。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "递归算法通过函数自身调用来解决问题，因此必须设定一个明确的结束条件（也称基线条件）来停止这种调用。如果没有这个条件，函数会无限次地调用自身，永不停止。每次函数调用都会占用计算机的内存栈空间，无限递归最终会导致栈空间耗尽，从而引发程序崩溃的“栈溢出”错误。因此，原叙述是正确的。"
+    },
+    {
+      "id": "EJgkky3x5Bgg7-DAR2X62",
+      "order": 21,
+      "type": "true_false",
+      "content": "快速排序和归并排序的平均时间复杂度均为O(n log n)，且都是稳定排序。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "快速排序和归并排序的平均时间复杂度确实都是O(n log n)。但是，归并排序是稳定排序，而快速排序通常是不稳定排序。因此，题目中“且都是稳定排序”的说法是错误的，导致整个陈述为假。"
+    },
+    {
+      "id": "y5DF-EJR1m_8qt_dehI-0",
+      "order": 22,
+      "type": "true_false",
+      "content": "快速排序的时间复杂度总比插入排序的时间复杂度低。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法是错误的。虽然快速排序的平均时间复杂度是 O(n log n)，通常优于插入排序的 O(n^2)，但快速排序在最坏情况下会退化到 O(n^2)。而插入排序在数据基本有序或数据量很小时，性能非常好，时间复杂度可达 O(n)，此时反而优于快速排序。因此，快速排序的时间复杂度并非总是低于插入排序。"
+    },
+    {
+      "id": "6Fl7tUCp10UGsVsVZK8CG",
+      "order": 23,
+      "type": "true_false",
+      "content": "二分查找仅适用于数组而不适合链表，因为二分查找需要跳跃式访问元素，链表中执行跳跃式访问的效率低。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "二分查找的核心是每次都能快速定位到中间元素进行比较。数组支持随机访问，通过下标 `arr[mid]` 可以在 O(1) 时间内直接跳到任意位置。而链表只能从头开始顺序遍历才能找到第 `mid` 个元素，这需要 O(n) 的时间。因此，在链表上执行二分查找会因为每次“跳跃”的开销过大而效率低下，不如直接进行线性查找。所以原说法正确。"
+    },
+    {
+      "id": "IHEj6sJJcYIhJX9NtrSxx",
+      "order": 24,
+      "type": "true_false",
+      "content": "对有序数组 {5,13,19,21,37,56,64,75,88,92,100} 进行二分查找，成功查找元素 19 的比较次数是2。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "对有序数组进行二分查找时：\n1.  第一次比较：`low=0`, `high=10`, `mid=(0+10)/2=5`。`arr[5]`是`56`。`19 < 56`，所以查找左半部分。\n2.  第二次比较：`low=0`, `high=4`, `mid=(0+4)/2=2`。`arr[2]`是`19`。`19 == 19`，元素找到。\n因此，查找元素19共进行了2次比较，原说法正确。"
+    },
+    {
+      "id": "fe765bOvT1MBKFJhcqeR4",
+      "order": 25,
+      "type": "true_false",
+      "content": "递归函数每次调用自身时，系统都会为新开启的函数分配内存，以存储局部变量、调用地址和其他信息等，导致递归通常比迭代更加耗费内存空间。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "递归函数每次调用自身时，系统都会在调用栈上为新函数分配一个独立的栈帧（stack frame），用于存储其局部变量、参数和返回地址。当递归深度较大时，这些累积的栈帧会占用大量内存，可能导致栈溢出。而迭代通常只使用固定的内存空间（如循环变量），因此通常比递归更节省内存。所以，题目描述是正确的。"
+    }
+  ]
+}

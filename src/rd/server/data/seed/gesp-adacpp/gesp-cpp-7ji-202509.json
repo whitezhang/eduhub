@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-7ji-202509",
+  "url": "https://adacpp.com/practice/gesp-cpp-7ji-202509",
+  "title": "GESP C++七级 202509",
+  "description": "CCF编程能力等级认证 GESP C++ 七级 2025年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 7,
+    "ym": "202509"
+  },
+  "questions": [
+    {
+      "id": "3g7pQBa_YH7VXlvQnQIIE",
+      "order": 1,
+      "type": "single_choice",
+      "content": "已知小写字母 b 的ASCII码为98，下列C++代码的输出结果是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    char a = 'b' + 1;\n    cout << a;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "b"
+        },
+        {
+          "label": "B",
+          "text": "c"
+        },
+        {
+          "label": "C",
+          "text": "98"
+        },
+        {
+          "label": "D",
+          "text": "99"
+        }
+      ],
+      "answer": "B",
+      "explanation": "字符 `'b'` 的 ASCII 码是 98，表达式 `'b' + 1` 会将 98 加上 1，得到整数 99。将 99 赋值给 `char` 类型的变量 `a` 时，`a` 会存储 ASCII 码为 99 的字符，即 `'c'`。`cout << a;` 会输出 `char` 变量 `a` 所代表的字符 `'c'`。因此，选项 A 错误，因为进行了加法运算；选项 C 和 D 错误，因为 `cout` 输出的是字符而不是数字 ASCII 码。"
+    },
+    {
+      "id": "lu2m-m7n_8Ir_qWfZTSbz",
+      "order": 2,
+      "type": "single_choice",
+      "content": "已知 a 为 int 类型变量，p 为 int * 类型变量，下列表达式不符合语法的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a * a"
+        },
+        {
+          "label": "B",
+          "text": "p * p"
+        },
+        {
+          "label": "C",
+          "text": "a && a"
+        },
+        {
+          "label": "D",
+          "text": "p && p"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`p * p` 试图对两个指针变量进行乘法运算，这在 C++ 语法中是不允许的，因此不符合语法。选项 A `a * a` 是合法的整数乘法。选项 C `a && a` 和选项 D `p && p` 都是合法的逻辑与运算，C++ 允许将整数和指针隐式转换为布尔值进行逻辑判断（非零或非空为真，零或空为假）。"
+    },
+    {
+      "id": "pz53xZK9Lu1Hywgugljhk",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下列关于C++类的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果一个类包含纯虚函数，则它不能包含成员变量。"
+        },
+        {
+          "label": "B",
+          "text": "如果一个类包含纯虚函数，则不能用它定义对象。"
+        },
+        {
+          "label": "C",
+          "text": "派生类对象占用的内存总是不小于基类对象。"
+        },
+        {
+          "label": "D",
+          "text": "派生类可以不实现基类的虚函数。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A选项错误，因为一个类即使包含纯虚函数（成为抽象类），也完全可以拥有成员变量，纯虚函数只影响类的实例化，不影响其数据成员的定义。B选项正确，包含纯虚函数的类是抽象类，不能直接创建对象。C选项正确，派生类对象会包含基类的所有成员，因此其内存占用总是不小于基类。D选项正确，派生类可以选择不重写基类的虚函数，此时会继承基类的实现。"
+    },
+    {
+      "id": "OXXWgZ6M54HqtswHnYOom",
+      "order": 4,
+      "type": "single_choice",
+      "content": "已知数组 a 的定义 `int a[10] = {-1};` ，下列说法不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "数组 a 至少占用 10 个 int 大小的内存，一般为 40 个字节。"
+        },
+        {
+          "label": "B",
+          "text": "数组 a 的所有元素均被初始化为 -1 。"
+        },
+        {
+          "label": "C",
+          "text": "语句 a[-1] = 0; 不会产生编译错误，但会导致难以预测的运行结果。"
+        },
+        {
+          "label": "D",
+          "text": "语句 a[13] = 0; 不会产生编译错误，但会导致难以预测的运行结果。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`int a[10] = {-1};` 这种初始化方式，只会将数组的第一个元素 `a[0]` 初始化为 `-1`。数组中剩余的元素（"
+    },
+    {
+      "id": "PS85zqE7PCzH9M9XuyTNH",
+      "order": 5,
+      "type": "single_choice",
+      "content": "一棵完全二叉树有165个结点，则叶结点有多少个？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "38"
+        },
+        {
+          "label": "B",
+          "text": "82"
+        },
+        {
+          "label": "C",
+          "text": "83"
+        },
+        {
+          "label": "D",
+          "text": "84"
+        }
+      ],
+      "answer": "C",
+      "explanation": "对于一个有N个结点的完全二叉树，叶结点数量L的计算公式为 `L = ceil(N / 2.0)`。将N=165代入，得到 `L = ceil(165 / 2.0) = ceil(82.5) = 83`。因此，正确答案是C。其他选项不符合完全二叉树叶结点数量的计算规律。"
+    },
+    {
+      "id": "UnovDzblOIXK_Z1adCZFY",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下列关于二叉树的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "二叉排序树的中序遍历顺序与元素排序的顺序是相同的。"
+        },
+        {
+          "label": "B",
+          "text": "自平衡二叉查找树（AVL树）是一种二叉排序树。"
+        },
+        {
+          "label": "C",
+          "text": "n 个元素的二叉排序树，其高一定为 floor(log2(n))。"
+        },
+        {
+          "label": "D",
+          "text": "任意的森林，都可以映射为一颗二叉树进行表达和存储。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项C错误。n个元素的二叉排序树，其最小高度为 `floor(log2(n))`，但最大高度可达 `n-1`（例如，当所有元素"
+    },
+    {
+      "id": "LFDAoK-YJJJCCw1mes49T",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下列关于树和图的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "保留树的所有节点，并把树的每个节点指向其父节点，则可以将树转换为一个有向弱连通图。"
+        },
+        {
+          "label": "B",
+          "text": "保留树的所有节点，并把树的每个节点指向其子节点，则可以将树转换为一个有向无环图。"
+        },
+        {
+          "label": "C",
+          "text": "每个连通图都存在生成树。"
+        },
+        {
+          "label": "D",
+          "text": "每个存在生成树的有向图，都一定是强连通的。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D是错误的。一个有向图即使存在生成树（即其底层无向图是连通的），也不一定是强连通的。强连通图要求任意两"
+    },
+    {
+      "id": "D7f9VJtF-4gJ2j7kp2_Jo",
+      "order": 8,
+      "type": "single_choice",
+      "content": "对一个包含 V 个顶点、E 条边的图，执行广度优先搜索，其最优时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(V + E)"
+        },
+        {
+          "label": "B",
+          "text": "O(V)"
+        },
+        {
+          "label": "C",
+          "text": "O(E)"
+        },
+        {
+          "label": "D",
+          "text": "O(V^2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "广度优先搜索（BFS）会访问图中的每个顶点一次，并检查每条边一次。当图使用邻接表表示时，遍历所有顶点及其邻居的总时间复杂度为 `O(V + E)`，这是最优情况。选项B和C没有全面考虑图的顶点和边，而选项D `O(V^2)` 通常是使用邻接矩阵时的复杂度，并非最优。"
+    },
+    {
+      "id": "G3S3Lx_a1e6hj9MhhtaMi",
+      "order": 9,
+      "type": "single_choice",
+      "content": "以下哪个方案不能合理解决或缓解哈希表冲突（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "用新元素覆盖发生冲突的哈希表项。"
+        },
+        {
+          "label": "B",
+          "text": "在每个哈希表项处，使用单链表管理该表项的冲突元素。"
+        },
+        {
+          "label": "C",
+          "text": "建立额外的单链表，用来管理所有发生冲突的元素。"
+        },
+        {
+          "label": "D",
+          "text": "使用不同的哈希函数再建立一个哈希表，用来管理所有发生冲突的元素。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A. 用新元素覆盖会直接导致原有数据丢失，无法找回，这完全违背了哈希表存储和检索数据的基本目的，因此不能合理解决冲突。"
+    },
+    {
+      "id": "wgD0-PExB5UzI5l-IT8RF",
+      "order": 10,
+      "type": "single_choice",
+      "content": "以下关于贪心法和动态规划的说法中，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "对特定的问题，贪心法不一定适用。"
+        },
+        {
+          "label": "B",
+          "text": "当特定的问题适用贪心法时，通常比动态规划的时间复杂度更低。"
+        },
+        {
+          "label": "C",
+          "text": "对很多问题，递推实现和递归实现动态规划方法的时间复杂度相当。"
+        },
+        {
+          "label": "D",
+          "text": "采用动态规划的算法一定具有多项式时间复杂度。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D 错误。动态规划算法的时间复杂度取决于状态的数量和每个状态的计算时间。如果状态空间是指数级的（例如，`dp[mask]` 中的 `mask` 表示"
+    },
+    {
+      "id": "c18GXvJ3fLVPl9IVScAjM",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint fib(int n) {\n    if (n == 0)\n        return 1;\n    return fib(n - 1) + fib(n - 2);\n}\nint main() {\n    cout << fib(6) << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "8"
+        },
+        {
+          "label": "B",
+          "text": "13"
+        },
+        {
+          "label": "C",
+          "text": "21"
+        },
+        {
+          "label": "D",
+          "text": "无法正常结束。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "当 `n` 为 1 时，`fib(1)` 会调用 `fib(0)` 和 `fib(-1)`。其中 `fib(-1)` 会继续调用 `fib(-2)`、`fib(-3)` 等，导致无限递归，最终栈溢出，程序无法正常结束。因此，正确答案是 D。选项 A、B、C 是数值结果，但由于程序无法正常终止，这些结果不会被计算出来。"
+    },
+    {
+      "id": "AV3cmeZ-2ns6M1npGiPTy",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面程序的时间复杂度为（ ）。\n\n```cpp\nint rec_fib[MAX_N];\nint fib(int n) {\n    if (n <= 1)\n        return n;\n    if (rec_fib[n] != 0)\n        return rec_fib[n];\n    return fib(n - 1) + fib(n - 2);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(phi^n)，phi = (sqrt(5)+1)/2"
+        },
+        {
+          "label": "B",
+          "text": "O(2^n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n^2)"
+        },
+        {
+          "label": "D",
+          "text": "O(n)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该程序实现了带记忆化（memoization）的斐波那契数列计算。\n1. **正确答案是 A 的原因：** 题目代码中的 `rec_fib["
+    },
+    {
+      "id": "e4FrqWO5Kt4a1C3NS8Aj5",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面 init_sieve 函数的时间复杂度为（ ）。\n\n```cpp\nint sieve[MAX_N];\nvoid init_sieve(int n) {\n    for (int i = 1; i <= n; i++)\n        sieve[i] = i;\n    for (int i = 2; i <= n; i++)\n        for (int j = i; j <= n; j += i)\n            sieve[j]--;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n^2)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "第一个 `for` 循环的时间复杂度为 `O(n)`。第二个嵌套 `for` 循环中，外层循环 `i` 从 2 到 `n`，内层循环 `j` 每次增加 `i`，对每个 `i`，内层循环执行 `n/i` 次。因此，内层循环的总执行次数为 `n/2 + n/3 + ... + n/n`，这近似于 `n` 乘以调和级数 `H_n`，其复杂度为 `O(n log n)`。综合两个循环，总时间复杂度为 `O(n log n)`。选项 A (`O(n)`) 太小，选项 D (`O(n^2)`) 太大，选项 B (`O(n log log n)`) 是标准埃拉托斯特尼筛法的"
+    },
+    {
+      "id": "v6doNZoMMMjgJ30jtsZoD",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面 count_triple 函数的时间复杂度为（ ）。\n\n```cpp\nint gcd(int m, int n) {\n    if (m == 0) return n;\n    return gcd(n % m, m);\n}\nint count_triple(int n) {\n    int cnt = 0;\n    for (int v = 1; v * v * 4 <= n; v++)\n        for (int u = v + 1; u * (u + v) * 2 <= n; u += 2)\n            if (gcd(u, v) == 1) {\n                int a = u * u - v * v;\n                int b = u * v * 2;\n                int c = u * u + v * v;\n                cnt += n / (a + b + c);\n            }\n    return cnt;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n^2)"
+        },
+        {
+          "label": "B",
+          "text": "O(n^2 log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "外层循环 `v * v * 4 <= n` 使得 `v` 的最大值约为 `sqrt(n)`，所以循环次数为 `O(sqrt(n))`。内层循环 `u * (u + v) * 2 <= n` 使得 `u` 的最大值也约为 `sqrt(n)`，循环次数同样为 `O(sqrt(n))`。因此，两层循环的总迭代次数为 `O(sqrt(n) * sqrt(n)) = O(n)`。在每次内层循环中，`gcd(u, v)` 函数的时间复杂度为 `O(log(min(u, v)))`，由于 `u, v` 最大约为 `sqrt(n)`，所以 `gcd` 的时间复杂度为 `O(log n)`。综合起来，总时间复杂度为 `O(n log n)`，故选 C。其他选项的复杂度过高或过低。"
+    },
+    {
+      "id": "MMpMBjq9Hysgdy9P2YFrG",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列选项中，哪个不可能是下图的深度优先遍历序列（ ）。\n\n图为一个有向图，包含节点1到9。边为：1->2, 1->4, 2->3, 2->5, 3->6, 4->5, 5->7, 5->8, 8->9。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2, 3, 5, 7, 8, 9, 6, 4, 1"
+        },
+        {
+          "label": "B",
+          "text": "5, 7, 8, 9, 1, 2, 4, 3, 6"
+        },
+        {
+          "label": "C",
+          "text": "6, 8, 9, 5, 7, 1, 2, 3, 4"
+        },
+        {
+          "label": "D",
+          "text": "8, 5, 7, 9, 1, 2, 3, 6, 4"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n1.  **解释为什么 B 是不可能的：** 在深度优先遍历中，一旦访问了某个节点，它的所有未访问邻居及其子"
+    },
+    {
+      "id": "4RNOQZ9gF8OemgSDDLuwB",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++语言中，表达式 `9 && 12` 的结果类型为 int 、值为 8 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `9 && 12` 是逻辑与运算。在 C++ 中，任何非零值在布尔上下文中都被视为 `true`，因此 `9` 和 `12` 都被视为 `true`。`true && true` 的结果是 `true`，其类型为 `bool`。如果将这个 `bool` 值转换为 `int`，`true` 会变为 `1`，而不是 `8`。因此，原题目中关于结果类型为 `int` 且值为 `8` 的说法是错误的。"
+    },
+    {
+      "id": "oKd8w61WTYhU7LDmbWCsV",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++语言中，在有 `int a[10];` 定义的范围内，通过表达式 `a[-1]` 进行访问将导致编译错误。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中，`a[i]` 表达式是 `*(a + i)` 的语法糖。因此，`a[-1]` 等价于 `*(a - 1)`，这是一个合法的指针算术运算，编译器不会将其视为语法错误而报错。尽管 `a[-1]` 会导致数组越界访问，这属于**未定义行为**，可能在程序运行时导致崩溃或错误结果，但它不会在编译阶段报错。所以，原题目中“将导致编译错误”的说法是错误的。"
+    },
+    {
+      "id": "0KIXQcwqgWIw708BsFKN2",
+      "order": 18,
+      "type": "true_false",
+      "content": "选择排序一般是不稳定的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "选择排序在每一轮都会找到未排序部分的最小（或最大）元素，并将其与当前位置的元素交换。这个交换过程可能导致原本相对顺序相同的元素发生位置"
+    },
+    {
+      "id": "qEmolFKRqGu2lECl1r6Mo",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++语言中，float 和 int 类型一般都是 4 字节，因此 float 类型能够表达不同的浮点数值的数量，与 int 类型能够表达不同的整数值的数量是相同的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "虽然 `float` 和 `int` 都占用 4 字节，这意味着它们都能表示 $2^{32}$ 种不同的位模式，但这些位模式的**解释"
+    },
+    {
+      "id": "29ESl38sBhnMieneGJW9t",
+      "order": 20,
+      "type": "true_false",
+      "content": "使用 math.h 或 cmath 头文件中的对数函数，表达式 `log(256)` 的结果类型为 double 、值约为 8.0 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++标准库中的 `log(x)` 函数计算的是自然对数（以e为底），而不是以2为底的对数。`log(256)` 的实际值约为 5.545，而 `log2(256)` 的值才是 8.0。因此，题目中说 `log(256)` 结果约为 8.0 是错误的，所以选项 F 正确。"
+    },
+    {
+      "id": "lquUG8YHGvYaTDaeZOBPl",
+      "order": 21,
+      "type": "true_false",
+      "content": "一棵有 N 个节点的完全二叉树，则树的深度为 floor(log2(N)) + 1。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "对于一棵有 `N` 个节点的完全二叉树，其深度（从根节点到最远叶子节点的路径上的节点数）的计算公式正是 `floor(log2(N)) + 1`。`log2(N)` 表示将 `N` 个节点完全填充所需的层数（从0开始计数），`floor()` 函数确保我们取到这个值的整数部分，而 `+1` 则将0-indexed的层数转换为1-indexed的树深度。因此，该公式是正确的。"
+    },
+    {
+      "id": "NnSIzSUJSa_wT4QpI1get",
+      "order": 22,
+      "type": "true_false",
+      "content": "邻接表和邻接矩阵都是图的存储形式。通常，使用邻接表比使用邻接矩阵的时间复杂度更低。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法错误。邻接矩阵在判断两点之间是否存在边时，时间复杂度为 `O(1)`，比邻接表在最坏情况下的 `O(V)` 更低。因此，不能笼统地说邻接表的时间复杂度总是更低，这取决于具体的操作。邻接表在图遍历（如 BFS/DFS）时通常更优，但邻接矩阵在某些操作上更高效。"
+    },
+    {
+      "id": "0fcu8uTQ0rzUFVx-bc77l",
+      "order": 23,
+      "type": "true_false",
+      "content": "C++语言中，类的构造函数可以声明为私有（private）。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中类的构造函数可以声明为私有（`private`）。这样做可以阻止在类外部直接创建该类的对象，常用于实现单例模式（确保类只有一个实例）或通过静态成员函数来控制对象的创建。因此，选项T是正确的。"
+    },
+    {
+      "id": "20Dskw8uk3U40kjWY2SJT",
+      "order": 24,
+      "type": "true_false",
+      "content": "泛洪算法的递归实现容易造成溢出，因此大的二维地图算法中，一般使用广度优先搜索实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "递归实现的泛洪算法会使用程序的调用栈。当处理大型二维地图时，递归深度可能非常大，容易超出栈的限制，导致栈溢出错误。广度优先搜索（BFS）使用队列来存储待访问的元素，队列的大小通常只受限于内存，因此更适合处理大规模问题，避免了栈溢出的风险。因此，题目描述是正确的。"
+    },
+    {
+      "id": "XXNKarxL5EBA6S8s5-eBs",
+      "order": 25,
+      "type": "true_false",
+      "content": "很多游戏中为玩家设置多种可供学习的技能，要学习特定技能又往往需要先学习1个或以上的前置技能。尽管这样的技能间依赖关系常被玩家称为“技能树”，但它并不一定是树，更可能是有向无环图。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "技能依赖关系中，一个技能可能需要多个前置技能，这意味着它可能有多个“父节点”，这不符合树结构中每个节点最多一个父节点的定义。同时，技能学习不能形成循环依赖，所以它是无环的；依赖关系是单向的，所以是有向的。因此，这种结构更准确地描述为有向无环图（DAG），而不是严格的树。所以原说法是正确的。"
+    }
+  ]
+}

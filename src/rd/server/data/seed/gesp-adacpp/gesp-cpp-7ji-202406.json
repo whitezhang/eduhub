@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-7ji-202406",
+  "url": "https://adacpp.com/practice/gesp-cpp-7ji-202406",
+  "title": "GESP C++七级 202406",
+  "description": "CCF编程能力等级认证 GESP C++ 七级 2024年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 7,
+    "ym": "202406"
+  },
+  "questions": [
+    {
+      "id": "3D1F-34WrVuIVtXZ1drkK",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下列C++代码的输出结果是（ ）。\n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\nint main() {\n    cout << sin(3.1415926 / 2);\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "0.5"
+        },
+        {
+          "label": "D",
+          "text": "0.7071"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`sin` 函数计算给定角度（弧度制）的正弦值。`3.1415926` 约等于圆周率 π，所以 `3.1415926 / 2` 约等于 π/2 弧度。数学上，sin(π/2) 的值为 1。因此，程序输出 `1`。选项 A、C、D 均不符合 sin(π/2) 的数学结果。"
+    },
+    {
+      "id": "jWE0STyN5PzmRh7UG9jQO",
+      "order": 2,
+      "type": "single_choice",
+      "content": "对于如下图的二叉树（根节点为1，1的右子节点为2，2的左子节点为3），说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "先序遍历是 132"
+        },
+        {
+          "label": "B",
+          "text": "中序遍历是 123"
+        },
+        {
+          "label": "C",
+          "text": "后序遍历是 312"
+        },
+        {
+          "label": "D",
+          "text": "先序遍历和后序遍历正好是相反的"
+        }
+      ],
+      "answer": "D",
+      "explanation": "对于该二叉树，先序遍历（根-左-右）是 123，中序遍历（左-根-右）是 132，后序遍历（左-右-根）是 321。因此，选项 A、B、C 给出的遍历序列与实际不符，是错误的。选项 D 正确，因为先序遍历 (123) 和后序遍历 (321) 序列正好是相反的。"
+    },
+    {
+      "id": "y3DPxjInhxIs-KP0zCW7d",
+      "order": 3,
+      "type": "single_choice",
+      "content": "已知两个序列s1= {1,3,4,5,6,7,7,8,1}、s2= {3,5,7,4,8,2,9,5,1}，则它们的最长公共子序列是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "{3,5,7,8,1}"
+        },
+        {
+          "label": "B",
+          "text": "{3,4,5,7,8}"
+        },
+        {
+          "label": "C",
+          "text": "{5,7,8}"
+        },
+        {
+          "label": "D",
+          "text": "{3,5,7,9,1}"
+        }
+      ],
+      "answer": "A",
+      "explanation": "最长公共子序列（LCS）是指在两个序列中都出现，且相对顺序不变的最长序列。选项 A `{3,5,7,8,1}` 既是"
+    },
+    {
+      "id": "PoEBt_cxFLPBaoMcBvR_O",
+      "order": 4,
+      "type": "single_choice",
+      "content": "关于序列 {2,7,1,5,6,4,3,8,9}，以下说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "{2,5,6,8,9} 是它的最长上升子序列"
+        },
+        {
+          "label": "B",
+          "text": "{1,5,6,8,9} 是它的最长上升子序列"
+        },
+        {
+          "label": "C",
+          "text": "{7,5,4,3} 是它的最长下降子序列"
+        },
+        {
+          "label": "D",
+          "text": "{1,5,6,8,9} 是它的唯一最长上升子序列"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n\nA、B 选项中的 `{2,5,6,8,9}` 和 `{1,5,6,8,9}` 都是序列"
+    },
+    {
+      "id": "t5JjtsG_PP25CTAK0-QDD",
+      "order": 5,
+      "type": "single_choice",
+      "content": "关于图的深度优先搜索和广度优先搜索，下列说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "二叉树是也是一种图。"
+        },
+        {
+          "label": "B",
+          "text": "二叉树的前序遍历和后序遍历都是深度优先搜索的一种。"
+        },
+        {
+          "label": "C",
+          "text": "深度优先搜索可以从任意根节点开始。"
+        },
+        {
+          "label": "D",
+          "text": "二叉树的后序遍历也是广度优先搜索的一种。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误。二叉树的后序遍历（左子树-右子树-根节点）是一种深度优先搜索，它沿着一条路径尽可能深地探索，与广度优先搜索（按层逐级探索）的策略完全不同。选项A正确，二叉树由节点和边组成，符合图的定义。选项B正确，前序遍历和后序遍历都沿着一条路径尽可能深地探索，是深度优先搜索的体现。选项C正确，深度优先搜索可以从图中的任意一个未访问节点开始，探索其所在的连通分量。"
+    },
+    {
+      "id": "HI65mYNh6wjf3Ok2tD5So",
+      "order": 6,
+      "type": "single_choice",
+      "content": "对于如下二叉树（根A，A的左子B右子C，B的左子D右子E，D的左子H，C的左子F右子G，G的左子I），下面访问顺序说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "HDEBFIGCA不是它的后序遍历序列"
+        },
+        {
+          "label": "B",
+          "text": "ABCDEFGHI是它的广度优先遍历序列"
+        },
+        {
+          "label": "C",
+          "text": "ABDHECFGI是它的深度优先遍历序列"
+        },
+        {
+          "label": "D",
+          "text": "ABDHECFGI是它的先序遍历序列"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\n1.  **解释为什么 A 是对的：**\n    该二叉树的后序遍历序列（左-右-根）是 `HDE"
+    },
+    {
+      "id": "qg_JauYoLIAA3YS_p_QW0",
+      "order": 7,
+      "type": "single_choice",
+      "content": "以下哪个方案不能合理解决或缓解哈希表冲突（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "丢弃发生冲突的新元素。"
+        },
+        {
+          "label": "B",
+          "text": "在每个哈希表项处，使用不同的哈希函数再建立一个哈希表，管理该表项的冲突元素。"
+        },
+        {
+          "label": "C",
+          "text": "在每个哈希表项处，建立二叉排序树，管理该表项的冲突元素。"
+        },
+        {
+          "label": "D",
+          "text": "使用不同的哈希函数建立额外的哈希表，用来管理所有发生冲突的元素。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "丢弃发生冲突的新元素会导致数据丢失，这违背了哈希表作为数据存储结构的基本目的，因此不是一个合理的冲突解决或缓解方案。选项 B、C、D"
+    },
+    {
+      "id": "xlt61eIlXWWelBMMMl2_5",
+      "order": 8,
+      "type": "single_choice",
+      "content": "在C++中，关于运算符&，下面说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 & 3 的结果是 true"
+        },
+        {
+          "label": "B",
+          "text": "011 & 111 的结果是 3"
+        },
+        {
+          "label": "C",
+          "text": "3 & 6 的结果是 2"
+        },
+        {
+          "label": "D",
+          "text": "110 & 101 的结果是 4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`\n`&` 是按位与运算符。它将两个数的二进制表示逐位进行“与”操作，只有当对应的两个位都是1时，结果位才为1"
+    },
+    {
+      "id": "gxjyixIv36jaU9i5tIxKj",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面关于图的说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在无向图中，环是指至少包含三个不同顶点，并且第一个顶点和最后一个顶点是相同的路径。"
+        },
+        {
+          "label": "B",
+          "text": "在有向图中，环是指一个顶点经过至少另一个顶点到自身的路径。"
+        },
+        {
+          "label": "C",
+          "text": "在有向图中，如果任意两个顶点之间都存在一条边，则这个图一定是强连通图。"
+        },
+        {
+          "label": "D",
+          "text": "在有向图中，所有顶点的入度和出度的总和就是图的边数的两倍。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D正确。在有向图中，每条边都连接一个起点和一个终点。因此，每条边会使其起点的出度加1，使其终点的入度加1。所以，图的边数就是所有顶点出度之和，也是所有顶点入度之和。将入度和出度总和相加，自然是边数的两倍。\n\nA错误。在无向图中，环可以只包含一个顶点（自环）或两个顶点（通过两条边连接），不一定需要至少三个不同顶点。\nB错误。在有向图中，环可以是一个顶点到自身的路径，即自环，不需要经过“至少另一个顶点”。\nC错误。如果任意两个顶点之间都存在一条边，这只保证了单向可达。强连通图要求任意两个顶点之间都存在双向路径，即从`u`到`v`有路径，且从`v`到`u`也有路径。例如，一个有向无环图（DAG）中，如果每个顶点都指向其“后继”，则任意两点间可能有边，但不是强连通的。"
+    },
+    {
+      "id": "uvsg5v5odYWFdjeWhzthu",
+      "order": 10,
+      "type": "single_choice",
+      "content": "图的存储和遍历算法，下面说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "图的深度优先搜索和广度优先搜索对有向图和无向图都适用。"
+        },
+        {
+          "label": "B",
+          "text": "图的深度优先搜索和二叉树的先序遍历道理是不一样的。"
+        },
+        {
+          "label": "C",
+          "text": "图的深度优先搜索需要借助栈来完成。"
+        },
+        {
+          "label": "D",
+          "text": "邻接表中，顶点v_i对应链表中的边结点数目正好是顶点v_i的度。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "图的深度优先搜索（DFS）和二叉树的先序遍历在核心思想上是高度相似的，都是“访问当前节点，然后递归地访问其子节点或"
+    },
+    {
+      "id": "35PFi670BYCv1c4hbkNXF",
+      "order": 11,
+      "type": "single_choice",
+      "content": "如下图所示的邻接表结构（V1: 3->1->^, V2: 4->2->0->^, V3: 4->3->1->^, V4: 2->0->^, V5: 2->1->^），表示的是下列哪个选项中的图？",
+      "options": [
+        {
+          "label": "A",
+          "text": "V1-V3相连, V1-V2相连, V2-V3相连, V3-V4相连, V3-V5相连, V4-V5相连的无向图"
+        },
+        {
+          "label": "B",
+          "text": "V1-V2相连, V2-V3相连, V3-V4相连, V3-V5相连, V4-V5相连的无向图"
+        },
+        {
+          "label": "C",
+          "text": "V1-V2相连, V1-V3相连, V3-V4相连, V3-V5相连, V4-V5相连的无向图"
+        },
+        {
+          "label": "D",
+          "text": "V1-V2相连, V1-V3相连, V2-V3相连, V3-V4相连, V4-V5相连的无向图"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该邻接表表示一个无向图。我们假设列表中的数字 `0, 1, 2, 3, 4` 对应顶点 `V1, V2, V"
+    },
+    {
+      "id": "JUKCSkTQPfKcqBGq1hWxe",
+      "order": 12,
+      "type": "single_choice",
+      "content": "如下图所示的邻接矩阵（inf表示无穷大），表示的是下列哪个选项中的图？\n\n|   | 0   | 1   | 2   | 3   | 4   |\n|---|-----|-----|-----|-----|-----|\n| 0 | inf | inf | 12  | 30  | inf |\n| 1 | inf | inf | inf | inf | inf |\n| 2 | inf | inf | inf | inf | 32  |\n| 3 | inf | 5   | inf | inf | inf |\n| 4 | 50  | inf | inf | inf | inf |",
+      "options": [
+        {
+          "label": "A",
+          "text": "有向图：0->2(12), 0->3(30), 2->4(32), 3->1(5), 4->0(50)"
+        },
+        {
+          "label": "B",
+          "text": "有向图：0->2(12), 0->3(30), 2->4(32), 3->1(5), 4->1(5)"
+        },
+        {
+          "label": "C",
+          "text": "有向图：0->2(12), 0->3(30), 2->4(32), 3->1(5), 4->0(50), 其中3->1和4->1共用权值5"
+        },
+        {
+          "label": "D",
+          "text": "有向图：0->2(12), 0->3(30), 2->4(32), 4->1(5), 4->0(50)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "邻接矩阵中 `matrix[i][j]` 的值表示从节点 `i` 到节点 `j` 的边的权值，`inf` 表示无边。根据矩阵，"
+    },
+    {
+      "id": "TT9UnaTfc8pdoSGAFb0cS",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint fib(int n) {\n    if (n <= 1)\n        return n;\n    return fib(n - 1) + fib(n - 2);\n}\nint main() {\n    cout << fib(6) << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "13"
+        },
+        {
+          "label": "D",
+          "text": "无法正常结束。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该程序定义了一个递归函数 `fib(n)` 来计算第 n 个斐波那契数。当 `n <= 1` 时，返回 `n` 作为基准情况；否则返回 `fib(n - 1) + fib(n - 2)`。根据斐波那契数列的定义：`fib(0)=0, fib(1)=1, fib(2)=1, fib(3)=2, fib(4)=3, fib(5)=5, fib(6)=8`。因此，`fib(6)` 的结果是 8。选项 A、C 的值不符合计算结果，选项 D 错误，因为函数有明确的终止条件 `n <= 1`，不会无限递归。"
+    },
+    {
+      "id": "g7RWnXo2dvibmXXh-8iMo",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面 count_triple 函数的时间复杂度为（ ）。\n\n```cpp\nint count_triple(int n) {\n    int cnt = 0;\n    for (int a = 1; a <= n; a++)\n        for (int b = a; a + b <= n; b++) {\n            int c = sqrt(a * a + b * b);\n            if (a + b + c > n)\n                break;\n            if (a * a + b * b == c * c)\n                cnt++;\n        }\n    return cnt;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n^2)"
+        },
+        {
+          "label": "C",
+          "text": "O(n^3)"
+        },
+        {
+          "label": "D",
+          "text": "O(n^4)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该函数包含两个嵌套的 `for` 循环。外层循环 `a` 从 1 运行到 `n`，是 O(n) 次。内层循环"
+    },
+    {
+      "id": "ako54Wg_P7VCBmgPUpLxi",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列选项中，哪个可能是下图（有向图：1->2, 1->3, 1->5, 2->3, 2->4, 3->7, 4->3, 4->9, 5->3, 5->7, 6->8, 6->9, 7->3, 7->6, 8->9）的深度优先遍历序列（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1, 3, 7, 5, 4, 2, 6, 8, 9"
+        },
+        {
+          "label": "B",
+          "text": "9, 4, 2, 1, 3, 5, 7, 6, 8"
+        },
+        {
+          "label": "C",
+          "text": "1, 3, 4, 2, 7, 6, 8, 9, 5"
+        },
+        {
+          "label": "D",
+          "text": "9, 7, 6, 8, 4, 2, 1, 5, 3"
+        }
+      ],
+      "answer": "C",
+      "explanation": "深度优先遍历（DFS）会尽可能深地探索每个分支。对于选项 C：\n1.  从 1 开始，访问 1。\n2.  从 1 访问"
+    },
+    {
+      "id": "Xi-RVfUBaI_fTFv0lbUFL",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++语言中，表达式 6 & 5 的结果类型为 int、值为 1。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `6 & 5` 的结果类型确实是 `int`，但其值为 `4`。这是因为 `6` 的二进制表示是 `0110`，`5` 的二进制表示是 `0101`。进行按位与（`&`）运算后，`0110 & 0101` 的结果是 `0100`，即十进制的 `4`。因此，题目中“值为 1”的描述是错误的，所以选择 F。"
+    },
+    {
+      "id": "7GqeIci_SBzNRR8hMJ_JA",
+      "order": 17,
+      "type": "true_false",
+      "content": "冒泡排序是稳定的排序算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "冒泡排序在比较相邻元素时，如果遇到值相等的元素，它不会交换它们的位置，从而保持了它们原有的相对顺序。这种特性正是稳定排序算法的定义。因此，题目描述“冒泡排序是稳定的排序算法”是正确的。选择F是错误的，因为它与冒泡排序的稳定性特性不符。"
+    },
+    {
+      "id": "_dhjwaUNGolZ9gX9r40RT",
+      "order": 18,
+      "type": "true_false",
+      "content": "唯一分解定理（算术基本定理）指出，每个大于1的自然数都可以唯一地分解成若干个素数的乘积。因此，我们可以很容易的对给定的自然数 n 进行质因数分解，时间复杂度仅为O(log(n))。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "唯一分解定理本身是正确的，但题目中关于质因数分解的时间复杂度描述是错误的。对一个自然数 n 进行质因数分解，最常见的试除法时间复杂度是 O(sqrt(n))，因为我们需要尝试从 2 到 `sqrt(n)` 的所有因子。O(log n) 远快于 O(sqrt(n))，通常出现在二分查找等算法中，不适用于质因数分解。因此，选项 F（错误）是正确答案，因为题目中的时间复杂度估算不准确。"
+    },
+    {
+      "id": "PXphKtAtpeQxe089UCMl8",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++语言中，可以为同一个类定义多个构造函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++语言支持为同一个类定义多个构造函数，这被称为构造函数重载（`constructor overloading`）。每个重载的构造函数必须有不同的参数列表（参数的个数、类型或顺序至少有一项不同），以便在创建对象时根据传入的参数选择合适的构造函数。因此，选项T是正确的，而F是错误的。"
+    },
+    {
+      "id": "kSz8fFKHeLEaazHxAd3av",
+      "order": 20,
+      "type": "true_false",
+      "content": "使用 math.h 或 cmath 头文件中的对数函数，表达式 log(128) 的结果类型为 double、值约为 7.0。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ `cmath` 库中的 `log(x)` 函数计算的是自然对数（以 e 为底），而不是以 2 为底。`log(128)` 的值约等于 4.85，而不是 7.0。只有 `log2(128)` （以 2 为底的对数）才等于 7.0。因此，题目中关于值的部分是错误的，尽管结果类型 `double` 是正确的。"
+    },
+    {
+      "id": "m8bv2-YmHCJ2Ve6j-WaPL",
+      "order": 21,
+      "type": "true_false",
+      "content": "一颗 N 层的二叉树，至少有 2^(N-1) 个节点。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "N 层的二叉树，其最少节点数是 N（例如，一个只有左孩子或右孩子的“斜树”）。题目中给出的 `2^(N-1)`"
+    },
+    {
+      "id": "diQGx3AdxGJa_s3PZtMoP",
+      "order": 22,
+      "type": "true_false",
+      "content": "非连通图不能使用广度优先搜索算法进行遍历。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "广度优先搜索（BFS）算法本身只能遍历从起始节点可达的所有节点，即一个连通分量。对于非连通图，我们可以通过循环遍历所有节点，每次遇到一个尚未访问的节点时就启动一次 BFS，这样就能遍历图中所有的连通分量，从而覆盖整个图。因此，非连通图完全可以使用 BFS 进行遍历，题目中的说法是错误的。"
+    },
+    {
+      "id": "weD_288K6yCxdv1YMLi0z",
+      "order": 23,
+      "type": "true_false",
+      "content": "现使用有 N 个表项的哈希表，从 M 个元素中进行查找。该哈希表为解决哈希函数冲突，为每个表项处建立单链表存储冲突元素。其查找操作的最坏情况时间复杂度为O(M)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。在最坏情况下，哈希函数可能将所有 M 个元素都映射到哈希表的同一个表项。此时，该表项处的单链表将包含所有 M 个元素。查找一个特定元素时，需要遍历这条长度为 M 的链表，因此时间复杂度为 O(M)。"
+    },
+    {
+      "id": "FLfonymN_cG35D9CiaINY",
+      "order": 24,
+      "type": "true_false",
+      "content": "动态规划有递推实现和递归实现，对于很多问题，通过记录子问题的解，两种实现的时间复杂度是相同的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "动态规划的递归实现（记忆化搜索）通过记录子问题的解，避免了重复计算，确保每个子问题只被计算一次。递推实现（表格法）也是从最小子问题开始，逐步计算并存储所有子问题的解。因此，对于许多问题，当子问题的解被有效记录时，两种实现方式都只计算每个子问题一次，从而达到相同的时间复杂度。选项F错误，因为它否定了这一事实。"
+    },
+    {
+      "id": "izl1LI4Rfxku7yP723dWq",
+      "order": 25,
+      "type": "true_false",
+      "content": "泛洪算法的递归方法容易造成溢出，因此大的二维地图算法中，一般不用递归方法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "泛洪算法的递归实现会利用程序的调用栈来存储每次函数调用的状态。当处理大型二维地图时，递归深度可能非常大，容易耗尽栈空间，从而导致栈溢出错误。因此，在实际应用中，为了避免这种溢出，通常会采用非递归的迭代方法（如使用队列或BFS）来实现泛洪算法。选项 F 错误，因为它忽视了递归深度过大可能导致的栈溢出问题，这在处理大规模数据时是一个实际的限制。"
+    }
+  ]
+}

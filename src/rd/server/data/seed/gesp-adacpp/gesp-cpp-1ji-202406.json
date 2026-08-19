@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202406",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202406",
+  "title": "GESP C++一级 202406",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2024年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202406"
+  },
+  "questions": [
+    {
+      "id": "D2SJL07OgxDZf8nocOYgj",
+      "order": 1,
+      "type": "single_choice",
+      "content": "在C++中，下列不可做变量的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`five-Star`"
+        },
+        {
+          "label": "B",
+          "text": "`five_star`"
+        },
+        {
+          "label": "C",
+          "text": "`fiveStar`"
+        },
+        {
+          "label": "D",
+          "text": "`_fiveStar`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "C++ 变量名只能由字母（a-z, A-Z）、数字（0-9）和下划线（`_`）组成，并且不能以数字开头。`five-Star` 包含了连字符 `-`，这不是C++变量名允许的字符，因此是不可做变量的。选项 B (`five_star`)、C (`fiveStar`) 和 D (`_fiveStar`) 都符合C++的命名规则，是合法的变量名。"
+    },
+    {
+      "id": "ARhGaoNvBF7quCLLiCjz7",
+      "order": 2,
+      "type": "single_choice",
+      "content": "C++表达式 `3 - 3 * 3 / 5` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1.2"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "0"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++表达式 `3 - 3 * 3 / 5` 遵循运算符优先级：乘法和除法优先于减法，同级运算符从左到右计算。首先计算 `3 * 3` 得到 `9`。接着计算 `9 / 5`，由于 `9` 和 `5` 都是整数，执行整数除法，结果为 `1`（小数部分被截断）。最后计算 `3 - 1`，结果是 `2`。因此，选项 D 是正确的。其他选项是由于错误的计算顺序或将整数除法误认为是浮点数除法导致的。"
+    },
+    {
+      "id": "0wMnMMW2CmUe9IoXbcRVj",
+      "order": 3,
+      "type": "single_choice",
+      "content": "在C++中，假设N为正整数，则表达式 `cout << (N % 3 + N % 7)` 可能输出的最大值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`N % 3` 的最大值是 2，`N % 7` 的最大值是 6。因此，表达式 `N % 3 + N % 7` 的理论最大值是 `2 + 6 = 8`。我们可以找到一个正整数 N（例如 N=20），使得 `20 % 3 = 2` 且 `20 % 7 = 6`，此时表达式输出 `2 + 6 = 8`。选项 A 6 是可能的值但不是最大值，而选项 C 9 和 D 10 超过了 `2 + 6` 的理论上限，因此不可能输出。"
+    },
+    {
+      "id": "MEJIJ94MQ0V8x-fhgDwN1",
+      "order": 4,
+      "type": "single_choice",
+      "content": "C++语句 `printf(\"5%%2={%d}\\n\",5 % 2)` 执行后的输出是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`1={1}`"
+        },
+        {
+          "label": "B",
+          "text": "`5%2={5%2}`"
+        },
+        {
+          "label": "C",
+          "text": "`5%2={1}`"
+        },
+        {
+          "label": "D",
+          "text": "`5 ={1}`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`printf` 语句中，`%%` 是一个转义序列，用于输出字面量 `%` 字符，而 `%d` 是一个格式化占位符，会输出后面表达式 `5 % 2` 的计算结果。`5 % 2` 表示 5 除以 2 的余数，其值为 `1`。因此，语句执行后的输出是 `5%2={1}`，选项 C 正确。选项 A、B、D 均未能正确处理 `%%` 的转义或 `%d` 的求值。"
+    },
+    {
+      "id": "dV7rXHpkRLLjvxsLuB4DM",
+      "order": 5,
+      "type": "single_choice",
+      "content": "对整型变量i，执行C++语句 `cin >> i, cout << i` 时如果输入 `5+2` ，下述说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "将输出整数7"
+        },
+        {
+          "label": "B",
+          "text": "将输出 5"
+        },
+        {
+          "label": "C",
+          "text": "语句执行将报错，输入表达式不能作为输出的参数"
+        },
+        {
+          "label": "D",
+          "text": "语句能执行，但输出内容不确定"
+        }
+      ],
+      "answer": "B",
+      "explanation": "C++ 的 `cin` 在读取整型变量时，会从输入流中逐个字符读取，直到遇到第一个非数字字符（如 `+`）为止。对于输入 `5+2`，`cin` 会读取 `5` 并将其"
+    },
+    {
+      "id": "jXZDWTIqAwjl_UHbQIG2P",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nfloat a;\na = 101.101;\na = 101;\nprintf(\"a+1={%.0f}\",a+1);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`102={102}`"
+        },
+        {
+          "label": "B",
+          "text": "`a+1={a+1}`"
+        },
+        {
+          "label": "C",
+          "text": "`a+1={102}`"
+        },
+        {
+          "label": "D",
+          "text": "a先被赋值为浮点数，后被赋值为整数，执行将报错"
+        }
+      ],
+      "answer": "C",
+      "explanation": "变量 `a` 最终被赋值为 `101`（存储为浮点数 `101.0`）。表达式 `a+1` 的结果是 `101.0 + 1.0 = 102.0`。`printf` 中的 `%.0f` 格式说明符表示输出浮点数，但小数点后不显示任何数字，因此 `102.0` 被格式化"
+    },
+    {
+      "id": "9iGF6YTMYB2_YJj2Tp8Qv",
+      "order": 7,
+      "type": "single_choice",
+      "content": "表达式 `9/4 - 6 % (6 - 2) * 10` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-17.75"
+        },
+        {
+          "label": "B",
+          "text": "-18"
+        },
+        {
+          "label": "C",
+          "text": "-14"
+        },
+        {
+          "label": "D",
+          "text": "-12.75"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据 C++ 运算符优先级，首先计算括号内的 `(6 - 2)` 得到 `4`。表达式变为 `9/4 - 6 % 4 * 1"
+    },
+    {
+      "id": "29BHpne4Wu1w22gC3leOU",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码执行时输入10后，正确的输出是（ ）。\n\n```cpp\nint N;\ncout << \"请输入正整数：\";\ncin >> N;\nif (N % 3)\n    printf(\"第5行代码%2d\", N % 3);\nelse\n    printf(\"第6行代码%2d\", N % 3);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "第5行代码1"
+        },
+        {
+          "label": "B",
+          "text": "第6行代码1"
+        },
+        {
+          "label": "C",
+          "text": "第5行代码 1"
+        },
+        {
+          "label": "D",
+          "text": "第6行代码 1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "输入 `10` 后，`N % 3` 的结果是 `1`。因为 `1` 是非零值，`if (N % 3)` 条件为真，所以执行 `if` 语句块中的 `printf`。`printf` 中的 `%2d` 格式符表示输出一个至少占两位宽度的整数，不足两位时前面补空格，因此 `1` 会被格式化为 ` 1`。所以正确输出是 `第5行代码 1`，选项 C 符合。其他选项的行号或输出格式不正确。"
+    },
+    {
+      "id": "xUs6CKk8JO46h0G8X81cb",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint Sum = 0, i = 0;\nfor ( ; i < 10; )\n    Sum += i++;\ncout << i << \" \" << Sum;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "9 45"
+        },
+        {
+          "label": "B",
+          "text": "10 55"
+        },
+        {
+          "label": "C",
+          "text": "10 45"
+        },
+        {
+          "label": "D",
+          "text": "11 55"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该循环 `for ( ; i < 10; )` 会在 `i` 从 0 递增到 9 的过程中执行。语句 `Sum += i++;` 表示"
+    },
+    {
+      "id": "2jmR8tHVb1TXcpsqWyOxy",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码用于判断N是否为质数（只能被1和它本身整除的正整数）。程序执行后，下面有关描述正确的是（ ）。\n\n```cpp\nint N;\ncout << \"请输入整数：\";\ncin >> N;\n\nbool Flag = false;\n\nif (N >= 2){\n    Flag = true;\n    for (int i=2; i < N; i++)\n        if (N % i == 0){\n            Flag = false;\n            break;\n        }\n}\n\nif(Flag)\n    cout << \"是质数\";\nelse\n    cout << \"不是质数\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果输入负整数，可能输出\"是质数\""
+        },
+        {
+          "label": "B",
+          "text": "如果输入2，将输出\"不是质数\"，因为此时循环不起作用"
+        },
+        {
+          "label": "C",
+          "text": "如果输入2，将输出\"是质数\"，即便此时循环体没有被执行"
+        },
+        {
+          "label": "D",
+          "text": "如果将 `if (N >= 2)` 改为 `if (N > 2)` 将能正确判断N是否质数"
+        }
+      ],
+      "answer": "C",
+      "explanation": "当N为2时，`if (N >= 2)` 条件成立，`Flag` 被设为 `true`。随后的 `for` 循环 `for (int i"
+    },
+    {
+      "id": "j6xVCmOyJ270xlqxtNa-u",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面的C++代码用于求1~N之间所有奇数之和，其中N为正整数，如果N为奇数，则求和时包括N。有关描述错误的是（ ）。\n\n```cpp\nint N;\ncout << \"请输入正整数：\";\ncin >> N;\n\nint i = 1, Sum = 0;\n\nwhile (i <= N){\n    if (i % 2 == 1)\n        Sum += i;\n    i += 1;\n}\n\ncout << i << \" \" << Sum;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "执行代码时如果输入10，则最后一行输出将是 11 25"
+        },
+        {
+          "label": "B",
+          "text": "执行代码时如果输入5，则最后一行输出将是 6 9"
+        },
+        {
+          "label": "C",
+          "text": "将 `i += 1` 移到 `if (i % 2 == 1)` 前一行，同样能实现题目要求"
+        },
+        {
+          "label": "D",
+          "text": "删除 `if (i % 2 == 1)` ，并将 `i += 1` 改为 `i += 2` ，同样可以实现题目要求"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\nC. 将 `i += 1` 移到 `if (i % 2 == 1)` 前一行，会导致 `i` 在判断和"
+    },
+    {
+      "id": "yAH-yZ9la-6I3PfsZZfZ9",
+      "order": 12,
+      "type": "single_choice",
+      "content": "如果一个整数N能够表示为 X*X 的形式，那么它就是一个完全平方数，下面C++代码用于完成判断N是否为一个完全平方数，在横线处应填入的代码是（ ）。\n\n```cpp\nint N;\n\ncin >> N;\nfor(int i = 0; i <= N; i++)\n    if(___________________)\n        cout << N << \"是一个完全平方数\\n\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i == N*N`"
+        },
+        {
+          "label": "B",
+          "text": "`i*10 == N`"
+        },
+        {
+          "label": "C",
+          "text": "`i+i == N`"
+        },
+        {
+          "label": "D",
+          "text": "`i*i == N`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n根据完全平方数的定义，如果一个整数 `N` 能够表示为 `X*X` 的形式，那么它就是完全平方数。在循环中，变量 `i` 从 0 递增，我们正是要寻找是否存在一个 `i` 使得 `i*i` 等于 `N`，因此 `i*i == N` 是正确的判断条件。选项 A (`i == N*N`) 是检查 `i` 是否等于 `N` 的平方，与题目要求相反。选项 B (`i*10 == N`) 和 C (`i+i == N`) 的判断条件与完全平方数的定义无关。"
+    },
+    {
+      "id": "TngYkTgCfcrx-hqXt8pY4",
+      "order": 13,
+      "type": "single_choice",
+      "content": "执行下面C++代码后输出的cnt的值是（ ）。\n\n```cpp\nint cnt=0;\n\nfor(int i = 0; i*i < 64; i+=2)\n    cnt++;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "8"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "循环条件 `i*i < 64` 意味着 `i` 必须小于8（因为 `i` 是非负数）。变量 `i` 从0开始，每次递增2，所以 `i` 的取值依次为 0, 2, 4, 6。当 `i` 变为8时，`8*8 < 64` 不成立，循环终止。循环体 `cnt++` 执行了4次，因此最终 `cnt` 的值为4。选项 A、B、D 不符合实际的循环执行次数。"
+    },
+    {
+      "id": "EwFcm3cwxTuqcUjmiEBWt",
+      "order": 14,
+      "type": "single_choice",
+      "content": "小杨父母带他到某培训机构给他报名参加CCF组织的GESP认证考试的第1级，那他可以选择的认证语言有几种？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "GESP认证考试目前支持C++、Python和Java三种编程语言。因此，小杨可以选择的认证语言有3种，选项C正确。选项A、B、D的数字与GESP实际支持的语言数量不符。"
+    },
+    {
+      "id": "rGr4FUOFXxzT2871mh1y4",
+      "order": 15,
+      "type": "single_choice",
+      "content": "ENIAC于1946年投入运行，是世界上第一台真正意义上的计算机，它的主要部件都是（ ）组成的。",
+      "options": [
+        {
+          "label": "A",
+          "text": "感应线圈"
+        },
+        {
+          "label": "B",
+          "text": "电子管"
+        },
+        {
+          "label": "C",
+          "text": "晶体管"
+        },
+        {
+          "label": "D",
+          "text": "集成电路"
+        }
+      ],
+      "answer": "B",
+      "explanation": "ENIAC作为第一代电子计算机，其核心逻辑和运算单元主要由大量的电子管组成，利用电子管进行开关和放大信号。晶体管和集成电路分别代表了第二代和第三代计算机的核心技术，出现时间晚于ENIAC。感应线圈并非计算机的主要计算部件。"
+    },
+    {
+      "id": "ND1a-CG-vDn24rZ2oO6RK",
+      "order": 16,
+      "type": "true_false",
+      "content": "在C++代码中变量 `X` 被赋值为16.44，则 `cout << X / 10` 执行后输出的一定是 1 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "变量 `X` 被赋值为 `16.44`，这表明 `X` 是一个浮点数类型。当浮点数 `X` 除以 `10` 时，执行的是浮点数除法，结果是 `1.644`。`cout << X / 10` 会输出 `1.644`，而不是仅取整数部分的 `1`。因此，题目描述是错误的。"
+    },
+    {
+      "id": "Y7-yZ9PmhXN5jpBni1CA8",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++的整型变量 `N` 被赋值为10，则语句 `cout << N / 4 << \"->\" << N % 4 << \"->\" << N / 4.0` 执行后输出是 `2->2->2.0` 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该语句的输出是错误的。当 `N` 为10时，`N / 4` 是整型除法，结果为 `2`；`N % 4` 是取模运算，结果为 `2`。但 `N / 4.0` 是浮点数除法，结果是 `2.5`，而不是 `2.0`。因此，实际输出应为 `2->2->2.5`，与题目描述不符，所以原说法是错误的。"
+    },
+    {
+      "id": "2VxqjTUoq95FB0RGBOE0P",
+      "order": 18,
+      "type": "true_false",
+      "content": "定义C++的 `float` 型变量 `N` ，则语句 `cin >> N; cout << int(float(N))` 可以输入正负整数和浮点数，并将其转换为整数后输出。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该语句是正确的。`float` 类型变量 `N` 可以存储正负整数和浮点数。`cin >> N;` 能够正确读取这些数值到 `N` 中。`int(float(N))` 表达式中，`float(N)` 是冗余的，但 `int(...)` 会将浮点数 `N` 的小数部分截断，只保留整数部分进行输出（例如，3.14 变为 3，-2.71 变为 -2）。因此，整个过程符合题目描述。"
+    },
+    {
+      "id": "DbJXxQ5m23hsTyRfUZ6nz",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++的整型 `N` 被赋值为5，语句 `printf(\"%d*2\",N)` 执行后将输出 10 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`printf` 函数会根据格式字符串输出内容，其中 `%d` 会被变量 `N` 的值替换。语句 `printf(\"%d*2\",N)` 会将 `N` 的值 5 替换 `%d`，然后原样输出字符串 `*2`。因此，实际输出是 \"5*2\"，而不是进行数学运算得到 10。所以，题目描述的输出结果是错误的。"
+    },
+    {
+      "id": "3pBW_6UDB3yOPD-001yWx",
+      "order": 20,
+      "type": "true_false",
+      "content": "在C++中，`break` 语句用于终止当前层次的循环，循环可以是 `for` 循环，也可以是 `while` 循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中的 `break` 语句确实用于立即终止它所在的当前循环体。无论是 `for` 循环还是 `while` 循环，`break` 都能使其提前结束，跳"
+    },
+    {
+      "id": "Vva4koxoSmj8S3fJEkJts",
+      "order": 21,
+      "type": "true_false",
+      "content": "在C++中，`continue` 语句通常与 `if` 语句配合使用。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`continue` 语句的作用是跳过当前循环中剩余的代码，直接进入下一次循环。为了决定何时执行跳过操作，我们通常需要一个条件判断，而 `if` 语句正是用来实现这种条件判断的。例如，当某个条件满足时才跳过，就会写成 `if (condition) { continue; }`。因此，`continue` 语句与 `if` 语句配合使用是其最常见和有意义的用法，选项 T 正确。"
+    },
+    {
+      "id": "CeE7oQbyJMcMYPatFLSNE",
+      "order": 22,
+      "type": "true_false",
+      "content": "在C++代码中，不可以将变量命名为 `printf` ，因为 `printf` 是C++语言的关键字。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`printf` 并不是C++语言的关键字，它是一个标准库函数（用于格式化输出）。C++关键字是语言本身保留的词汇，如 `int`、`class`、`for` 等。虽然将变量命名为 `printf` 会覆盖标准库函数，导致使用不便，但语法上是允许的，因为编译器不会将其识别为关键字。因此，题目中“`printf` 是C++语言的关键字”的说法是错误的。"
+    },
+    {
+      "id": "BeRr_RxA-JrSz9qNI78ta",
+      "order": 23,
+      "type": "true_false",
+      "content": "在C++中有整型变量N，则表达式 `N += 8/4//2` 相当于 `N += 8/(4/2)` 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在C++中，`//` 是单行注释的起始符号，而不是一个运算符。因此，表达式 `N += 8/4//2` 实际上等价于 `N += (8/4)`，即 `N += 2`。而表达式 `N += 8/(4/2)` 等价于 `N += 8/2`，即 `N += 4`。由于 `2` 不等于 `4`，所以这两个表达式不等价，原说法是错误的。"
+    },
+    {
+      "id": "jF8yuBzJBdGb_E8tXmrQa",
+      "order": 24,
+      "type": "true_false",
+      "content": "C++中定义变量 `int N` ，则表达式 `(!!N)` 的值也是 `N` 的值。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`!` 是逻辑非运算符。当 `N` 为非零值时，`!N` 的结果是 `false` (0)；当 `N` 为 `0` 时，`!N` 的结果是 `true` (1)。因此，`!!N` 会将任何非零的 `N` 转换为 `1`，而将 `0` 保持为 `0`。例如，当 `N` 为 `5` 时，`!!N` 的值是 `1`，不等于 `N` 的值 `5`。所以，表达式 `(!!N)` 的值不总是 `N` 的值，选项 T 错误。"
+    },
+    {
+      "id": "K8ApR_gBOmpVMpLs4m3pZ",
+      "order": 25,
+      "type": "true_false",
+      "content": "GESP测试是对认证者的编程能力进行等级认证，同一级别的能力基本上与编程语言无关。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "GESP考试的核心是评估学生的通用编程思维、算法设计和问题解决能力。这些能力是跨语言的，例如理解循环、条件判断、函数等基本概念，以及如何将问题分解并用代码实现。虽然考试会使用C++语言，但它主要考察的是这些与语言无关的编程基础和逻辑思维，因此T是正确的。F错误，因为编程能力并非完全绑定于某一特定语言。"
+    }
+  ]
+}

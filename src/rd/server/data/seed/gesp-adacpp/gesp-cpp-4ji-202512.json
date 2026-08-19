@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-4ji-202512",
+  "url": "https://adacpp.com/practice/gesp-cpp-4ji-202512",
+  "title": "GESP C++四级 202512",
+  "description": "CCF编程能力等级认证 GESP C++ 四级 2025年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 4,
+    "ym": "202512"
+  },
+  "questions": [
+    {
+      "id": "iQEvLBPTKHmGYORVmJKqS",
+      "order": 1,
+      "type": "single_choice",
+      "content": "小杨想让指针 p 指向整数变量 x ，正确写法是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int p = &x;`"
+        },
+        {
+          "label": "B",
+          "text": "`int *p = x;`"
+        },
+        {
+          "label": "C",
+          "text": "`int *p = &x;`"
+        },
+        {
+          "label": "D",
+          "text": "`p = *x;`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C `int *p = &x;` 是正确的。`int *p` 声明 `p` 是一个指向 `int` 类型的指针，而 `&x` 获取变量 `x` 的内存地址，将其赋值给 `p`，从而使 `p` 指向 `x`。选项 A 错误地将 `p` 声明为普通整数，无法存储内存地址。选项 B 错误地将 `x` 的值赋给指针，类型不匹配。选项 D 错误地对非指针变量 `x` 使用了解引用操作符 `*`。"
+    },
+    {
+      "id": "ql1-_XxSyVVp78_Keh7Zt",
+      "order": 2,
+      "type": "single_choice",
+      "content": "小杨写了如下的指针接力程序，程序执行完后变量 a 、 *p1 和 *p2 的值分别是（ ）。\n\n```cpp\nint a = 5;\nint* p1 = &a;\nint* p2 = p1;\n*p2 = 10;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 10 10"
+        },
+        {
+          "label": "B",
+          "text": "5 10 15"
+        },
+        {
+          "label": "C",
+          "text": "10 10 10"
+        },
+        {
+          "label": "D",
+          "text": "5 5 10"
+        }
+      ],
+      "answer": "C",
+      "explanation": "初始 `a` 为 `5`。`p1` 和 `p2` 都被初始化为指向变量 `a` 的内存地址。当执行 `*p2 ="
+    },
+    {
+      "id": "or3b_trD8B35KlinVFGeI",
+      "order": 3,
+      "type": "single_choice",
+      "content": "小杨用一个二维数组表示棋盘，其中 1 表示有棋子，0 表示没有棋子。他想知道第 2 行第 3 列有没有棋子，可采用的代码是：（ ）。\n\n```cpp\nint a[3][4] = {\n    {1, 0, 1, 0},\n    {0, 1, 0, 1},\n    {1, 1, 0, 0}\n};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`cout << a[1, 2] << endl;`"
+        },
+        {
+          "label": "B",
+          "text": "`cout << a[1][2] << endl;`"
+        },
+        {
+          "label": "C",
+          "text": "`cout << a(1, 2) << endl;`"
+        },
+        {
+          "label": "D",
+          "text": "`cout << a{1}{2} << endl;`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "C++ 数组的索引从 0 开始，所以题目中“第 2 行”对应索引 `1`，“第 3 列”对应索引 `2`。因此，使用 `a[1][2]` 是访问二维数组元素的正确语法。选项 A `a[1, 2]` 使用了逗号运算符，会错误地将 `2` 作为一维索引。选项 C `a(1, 2)` 和选项 D `a{1}{2}` 语法错误，不能用于访问数组元素。"
+    },
+    {
+      "id": "IgMHjWK2YYLV358NeHJgl",
+      "order": 4,
+      "type": "single_choice",
+      "content": "执行完下面的代码后， *(p + 5) 和 arr[1][1] 的值分别是（ ）。\n\n```cpp\nint arr[3][4] = {{1,2,3,4}, {5,6,7,8}, {9,10,11,12}};\nint* p = &arr[0][0];\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 6"
+        },
+        {
+          "label": "B",
+          "text": "6 5"
+        },
+        {
+          "label": "C",
+          "text": "5 5"
+        },
+        {
+          "label": "D",
+          "text": "6 6"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`p` 指向数组的第一个元素 `arr[0][0]` (值为1)。由于二维数组在内存中是连续存储的，`*(p + 5)` 会访问到从 `arr[0][0]` 开始的第 6 个元素，即 `arr[1][1]`，其值为 6。`arr[1][1]` 直接表示第二行第二列的元素，其值也是 6。因此，两者都为 6，选项 D 正确。其他选项的值与计算结果不符。"
+    },
+    {
+      "id": "7T2c-WavbChz5xxUkbLjy",
+      "order": 5,
+      "type": "single_choice",
+      "content": "执行完下面的代码后， sum 的值是（ ）。\n\n```cpp\nint arr[2][3][2] = {\n    {{1,2}, {3,4}, {5,6}},\n    {{7,8}, {9,10}, {11,12}}\n};\nint sum = 0;\nfor(int i = 0; i < 2; i++)\n    for(int j = 0; j < 3; j++)\n        for(int k = 0; k < 2; k++)\n            if((i+j+k) % 2 == 0)\n                sum += arr[i][j][k];\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "36"
+        },
+        {
+          "label": "B",
+          "text": "39"
+        },
+        {
+          "label": "C",
+          "text": "78"
+        },
+        {
+          "label": "D",
+          "text": "30"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码遍历三维数组 `arr` 的所有元素。只有当当前元素的三个下标 `i`、`j`、`k` 之和 `(i+j+k"
+    },
+    {
+      "id": "3pLfURRtZEBQOlVTuSyAF",
+      "order": 6,
+      "type": "single_choice",
+      "content": "执行完下面的代码后，输出是（ ）。\n\n```cpp\nint a = 1;\n\nvoid test() {\n    int a = 2;\n    {\n        int a = 3;\n        a++;\n    }\n    a++;\n    cout << a << \" \";\n}\n\nint main() {\n    test();\n    cout << a;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "3 1"
+        },
+        {
+          "label": "B",
+          "text": "4 1"
+        },
+        {
+          "label": "C",
+          "text": "3 2"
+        },
+        {
+          "label": "D",
+          "text": "4 2"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在 `test()` 函数中，`int a = 2;` 定义了一个局部变量。虽然内部块 `int a = 3;` 声明了另一个 `a` 并将其递增到 4，但该变量在块结束后即销毁。因此，`test()` 中"
+    },
+    {
+      "id": "0YIgcr2JUVcR6kqLBJ-iU",
+      "order": 7,
+      "type": "single_choice",
+      "content": "执行完下面的代码后， a 、 b 和 c 的值分别是（ ）。\n\n```cpp\nvoid byValue(int x) { x = 100; }\nvoid byRef(int& x) { x = 200; }\nvoid byPointer(int* x) { *x = 300; }\n\nint main() {\n    int a = 1, b = 2, c = 3;\n    byValue(a);\n    byRef(b);\n    byPointer(&c);\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "100 200 300"
+        },
+        {
+          "label": "B",
+          "text": "1 2 3"
+        },
+        {
+          "label": "C",
+          "text": "1 200 300"
+        },
+        {
+          "label": "D",
+          "text": "1 2 300"
+        }
+      ],
+      "answer": "C",
+      "explanation": "调用 `byValue(a)` 时，`a` 是值传递，函数内修改的是 `a` 的副本，不影响原变量，所以 `a` 仍为 1。调用 `byRef(b)` 时，`b` 是引用传递，函数内修改的是 `b` 本身，所以 `b` 变为 200。调用 `byPointer(&c)` 时，`c` 是指针传递，通过解引用指针 `*x` 修改的是 `c` 本身，所以 `c` 变为 300。因此，最终 `a`、`b`、`c` 的值分别为 1、200、300。其他选项错误在于未能正确区分值传递、引用传递和指针传递对原始变量的影响。"
+    },
+    {
+      "id": "lvpnUaRhk_Rku7umPhkAR",
+      "order": 8,
+      "type": "single_choice",
+      "content": "运行如下代码会输出（ ）。\n\n```cpp\nstruct Point {\n    int x, y;\n};\n\nstruct Rectangle {\n    Point topLeft;\n    Point bottomRight;\n};\n\nint main() {\n    Rectangle rect = {{10, 10}, {20, 20}};\n    rect.topLeft.x = 5;\n    Point* p = &rect.bottomRight;\n    p->y = 5;\n    cout << rect.topLeft.x + rect.bottomRight.y;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "30"
+        },
+        {
+          "label": "C",
+          "text": "15"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "answer": "A",
+      "explanation": "初始化时 `rect.topLeft.x` 为 10，`rect.bottomRight.y` 为 20。接着 `rect.topLeft.x = 5;` 将 `rect.topLeft.x` 修改为 5。`Point* p = &rect.bottomRight;` 使指针 `p` 指向 `rect.bottomRight`，然后 `p->y = 5;` 将 `rect.bottomRight.y` 修改为 5。因此，最终输出 `rect.topLeft.x + rect.bottomRight.y` 的结果是 `5 + 5 = 10`。其他选项不符合变量修改后的最终值。"
+    },
+    {
+      "id": "_wISw2I96TKuxa5UL_F11",
+      "order": 9,
+      "type": "single_choice",
+      "content": "给定函数 climbStairs(int n) 的定义如下，则 climbStairs(5) 的返回的值是（ ）。\n\n```cpp\nint climbStairs(int n) {\n    if(n <= 2) return n;\n    int a = 1, b = 2;\n    for(int i = 3; i <= n; i++) {\n        int temp = a + b;\n        a = b;\n        b = temp;\n    }\n    return b;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "13"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该函数实现了一个斐波那契数列的变种计算。当 `n=1` 时返回 1，`n=2` 时返回 2。对于 `n=3"
+    },
+    {
+      "id": "HrXdQScGrsvGyUIejhsOS",
+      "order": 10,
+      "type": "single_choice",
+      "content": "对如下4个扑克牌进行排序，\n\n```cpp\nstruct Card {\n    int value;\n    char suit; // 花色\n};\n\nCard cards[4] = {{5,'A'}, {3,'B'}, {5,'C'}, {3,'D'}};\n```\n\n使用某排序算法按value排序后，结果为: {3,'D'}, {3,'B'}, {5,'A'}, {5,'C'} ，则这个排序算法是稳定的吗？",
+      "options": [
+        {
+          "label": "A",
+          "text": "稳定，因为相同 value 的元素相对顺序保持不变"
+        },
+        {
+          "label": "B",
+          "text": "不稳定，因为 {3,'D'} 出现在 {3,'B'} 之前"
+        },
+        {
+          "label": "C",
+          "text": "无法判断"
+        },
+        {
+          "label": "D",
+          "text": "稳定，因为结果是有序的"
+        }
+      ],
+      "answer": "B",
+      "explanation": "排序算法的稳定性是指，如果两个元素的键值（这里是 `value`）相等，它们在排序后的相对顺序与排序前保持一致。\n\n原始数据中，`{3,'B'}` 出现在 `{3,'D'}` 之前。但排序结果却是 `{3,'D'}, {3,'B'}, {5,'A'}, {5,'C'}`，其中 `{3,'D'}` 出现在"
+    },
+    {
+      "id": "eNOkLUkMpauZGOuUrOLtm",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面的函数 selectTopK() 实现从 n 个学生中选出前 k 名成绩最好的学生颁发奖学金（不需要对所有学生完全排序，只需要找出前 k 名），则横线上应填写（ ）。\n\n```cpp\nstruct Student {\n    string name;\n    int score;\n};\n\nvoid selectTopK(Student students[], int n, int k) {\n    for (int i = 0; i < k; i++) {\n        int maxIdx = i;\n        for (____________________) { // 在此处填入代码\n            if (students[j].score > students[maxIdx].score) {\n                maxIdx = j;\n            }\n        }\n        if (maxIdx != i) {\n            Student temp = students[i];\n            students[i] = students[maxIdx];\n            students[maxIdx] = temp;\n        }\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int j = 0; j < n; j++`"
+        },
+        {
+          "label": "B",
+          "text": "`int j = i + 1; j < n; j++`"
+        },
+        {
+          "label": "C",
+          "text": "`int j = i; j < n; j++`"
+        },
+        {
+          "label": "D",
+          "text": "`int j = 1; j <= n; j++`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n1.  **选项 B 正确：** 外层循环 `for (int i = 0; i < k; i++)` 每次迭代旨在"
+    },
+    {
+      "id": "vQOR03GkrykmnsbOlkfXn",
+      "order": 12,
+      "type": "single_choice",
+      "content": "某游戏的排行榜系统需要实时更新玩家分数。每次只有一个玩家的分数发生变化，排行榜已经是按分数降序排列的。现在需要将更新后的玩家调整到正确位置。下面的函数 updateRanking() 要实现上述功能，则两处横线上应分别填写（ ）。\n\n```cpp\nstruct Player {\n    string name;\n    int score;\n};\n\n// 玩家索引playerIdx的分数刚刚更新，需要调整位置\nvoid updateRanking(Player players[], int size, int playerIdx) {\n    Player updatedPlayer = players[playerIdx];\n\n    if (playerIdx > 0 && updatedPlayer.score > players[playerIdx - 1].score) {\n        int i = playerIdx;\n        while (____________________) { // 在此处填入代码\n            players[i] = players[i - 1];\n            i--;\n        }\n        players[i] = updatedPlayer;\n    }\n    else if (playerIdx < size - 1 && updatedPlayer.score < players[playerIdx + 1].score) {\n        int i = playerIdx;\n        while (____________________) { // 在此处填入代码\n            players[i] = players[i + 1];\n            i++;\n        }\n        players[i] = updatedPlayer;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "第一处：`i > 0 && updatedPlayer.score > players[i - 1].score`\n第二处：`i < size - 1 && updatedPlayer.score < players[i + 1].score`"
+        },
+        {
+          "label": "B",
+          "text": "第一处：`i < size - 1 && updatedPlayer.score < players[i + 1].score`\n第二处：`i > 0 && updatedPlayer.score > players[i - 1].score`"
+        },
+        {
+          "label": "C",
+          "text": "第一处：`i > 0 && updatedPlayer.score < players[i - 1].score`\n第二处：`i < size - 1 && updatedPlayer.score < players[i + 1].score`"
+        },
+        {
+          "label": "D",
+          "text": "第一处：`i > 0 && updatedPlayer.score < players[i - 1].score`\n第二处：`i < size - 1 && updatedPlayer.score > players[i + 1].score`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\n1.  **为什么 A 是正确的：**\n    *   第一个 `while` 循环处理玩家分数增加，需要向上移动的情况。条件 `i >"
+    },
+    {
+      "id": "GFYLn4JRxR77F1wpA8-Tr",
+      "order": 13,
+      "type": "single_choice",
+      "content": "给定如下算法，其时间复杂度为（ ）。\n\n```cpp\nbool f(int arr[], int n, int target) {\n    for (int i = 0; i < n; i++) {\n        int sum = 0;\n        for (int j = 0; j < n; j++) {\n            if (i & (1 << j)) {\n                sum += arr[j];\n            }\n        }\n        if (sum == target) return true;\n    }\n    return false;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n²)"
+        },
+        {
+          "label": "C",
+          "text": "O(n³)"
+        },
+        {
+          "label": "D",
+          "text": "O(2ⁿ)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该算法包含两个嵌套的 `for` 循环。外层循环 `for (int i = 0; i < n; i++)` 执行 `n` 次，内层循环 `for (int j = 0; j < n; j++)` 也执行 `n` 次。因此，总的操作次数与 `n * n` 成正比，时间复杂度为 `O(n²)`. 选项 A、C、D 不正确，因为它们分别对应单层循环、三层循环或指数级操作，与代码结构不符。"
+    },
+    {
+      "id": "XxEZUjlL4ZDxgRmq1FiHY",
+      "order": 14,
+      "type": "single_choice",
+      "content": "执行下面 C++ 程序，会输出（ ）。\n\n```cpp\nint main() {\n    ofstream fout(\"test.txt\");\n    fout << \"Happy\" << endl;\n    fout << \"New Year\";\n    fout.close();\n\n    ifstream fin(\"test.txt\");\n    string s1, s2;\n    fin >> s1;\n    getline(fin, s2);\n    fin.close();\n\n    cout << s1 << \"|\" << s2;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "Happy|New Year"
+        },
+        {
+          "label": "B",
+          "text": "Happy| New Year"
+        },
+        {
+          "label": "C",
+          "text": "HappyNew Year|"
+        },
+        {
+          "label": "D",
+          "text": "Happy|"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`fout << \"Happy\" << endl;` 写入 \"Happy\" 后会有一个换行符。`fin >> s1;` 会读取 \"Happy\" 到 `s1`，并将文件指针停在换行符之前。接着 `getline(fin, s2);` 会从当前位置开始读取，它会立即遇到并读取掉那个换行符，导致 `s2` 成为一个空字符串。因此，最终输出 `s1`"
+    },
+    {
+      "id": "qMiNfQ4pUkTL3tqTwG_V6",
+      "order": 15,
+      "type": "single_choice",
+      "content": "执行下面C++代码，会输出（ ）。\n\n```cpp\nint divide(int a, int b) {\n    if(b == 0) throw \"Division by zero\";\n    return a / b;\n}\n\nint main() {\n    int result = 0;\n    try {\n        result = divide(10, 0);\n        cout << \"A\";\n    }\n    catch(const char* msg) {\n        cout << \"B\";\n        result = -1;\n    }\n    cout << result;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "A0"
+        },
+        {
+          "label": "B",
+          "text": "B-1"
+        },
+        {
+          "label": "C",
+          "text": "A10"
+        },
+        {
+          "label": "D",
+          "text": "程序崩溃"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`divide(10, 0)` 函数会因为除数为0而抛出异常。`try` 块中的 `cout << \"A\";` 不会被执行，程序直接跳转到 `catch` 块。`catch` 块会输出 \"B\"，并将 `result` 设置为 -1。最后输出 `result` 的值，即 -1。因此，最终输出为 \"B-1\"。其他选项错误是因为 `try` 块中的 `cout << \"A\";` 未执行，且异常被成功捕获，程序不会崩溃。"
+    },
+    {
+      "id": "wPs7HA_R2lRqYMRMXRiEz",
+      "order": 16,
+      "type": "true_false",
+      "content": "小杨正在调试他的温度传感器程序，其中变量 x 保存当前温度。下面这段代码运行后，变量 x 的值变成了 8 。\n\n```cpp\nint x = 5;\nint *p = &x;\n*p = *p + 3;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "变量 `x` 最初被赋值为 5。`int *p = &x;` 使指针 `p` 指向 `x` 的内存地址。`*p = *p + 3;` 这行代码通过解引用 `p`，获取 `x` 当前的值（即 5），然后加上 3 得到 8，再将 8 赋值回 `x` 所在的内存位置。因此，变量 `x` 的最终值确实变成了 8，所以选项 T 是正确的。选项 F 错误，因为它与代码的实际执行结果不符。"
+    },
+    {
+      "id": "1lK-TaYMYsCrHhssAtsZ-",
+      "order": 17,
+      "type": "true_false",
+      "content": "一个结构体不能包含另一个结构体。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 结构体完全可以包含另一个结构体，这在编程中被称为结构体嵌套或组合。例如，一个 `Student` 结构体可以包含一个 `Date` 结构体来表示学生的生日。题目中“不能包含”的说法是错误的，因此选择 F。这种设计模式使得数据组织更加清晰和模块化，T 选项的说法是错误的。"
+    },
+    {
+      "id": "olwyXK7J_REgvoXzkFIiF",
+      "order": 18,
+      "type": "true_false",
+      "content": "在 C++ 中，定义如下二维数组： `int a[3][4];` ，数组 a 在内存中是按行优先连续存放的，即 a[0][0] 、 a[0][1] 、 a[0][2] 、 a[0][3] 在内存中是连续的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，多维数组在内存中是按行优先（row-major）方式存储的。这意味着数组的第一个下标（行）变化最慢，而最后一个下标（列）变化最快，相邻的元素在内存中也是连续存放的。因此，对于 `int a[3][4];`，`a[0][0]`、`a[0][1]`、`a[0][2]`、`a[0][3]` 确实是连续存放的。选项 F 错误，因为它与 C++ 的内存布局规则不符。"
+    },
+    {
+      "id": "2Ne1fzGW2IFh3mJ5EsRe4",
+      "order": 19,
+      "type": "true_false",
+      "content": "执行下面程序后，变量 a 的值会变成 15 。\n\n```cpp\nvoid add(int &x){\n    x += 10;\n}\n\nint a = 5;\nadd(a);\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "变量 `a` 的初始值为 `5`。函数 `add` 的参数 `int &x` 是一个引用，这意味着 `x` 是变量 `a` 的别名。当 `add(a)` 被调用时，`x += 10` 实际上是对 `a` 进行操作，将 `a` 的值增加 `10`。因此，`a` 的最终值变为 `5 + 10 = 15`。所以题目描述是正确的。"
+    },
+    {
+      "id": "pnlm3gQr9W2y4pk-zrbqZ",
+      "order": 20,
+      "type": "true_false",
+      "content": "执行下面的C++代码，会输出 8 ，因为两个指针地址相差 8 个字节（假设 int 占 4 字节）。\n\n```cpp\nint arr[5] = {1, 2, 3, 4, 5};\nint* p1 = arr;\nint* p2 = arr + 2;\n\ncout << p2 - p1; // 输出结果\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中指针相减的结果是两个指针之间相隔的元素个数，而不是字节数。`p1` 指向 `arr` 的第一个元素，`p2` 指向 `arr` 的第三个元素（`arr + 2`）。因此，`cout << p2 - p1;` 的实际输出是 `2`。题目中声称输出 `8` 是错误的，因为它混淆了元素个数和字节数。"
+    },
+    {
+      "id": "NZfUsg-zBUFowz4mctDJB",
+      "order": 21,
+      "type": "true_false",
+      "content": "考虑用如下递推方式计算斐波那契数列，时间复杂度是 O(n)。\n\n```cpp\nint n = 10;\nint f[20];\nf[0] = 0;\nf[1] = 1;\nfor (int i = 2; i <= n; i++)\n    f[i] = f[i - 1] + f[i - 2];\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码通过一个 `for` 循环从 `i=2` 遍历到 `n`，共执行 `n-1` 次。循环内部的 `f[i] = f[i - 1] + f[i - 2]` 是一次简单的加法和赋值操作，耗时为常数。因此，整个算法的执行时间与 `n` 的大小呈线性关系，时间复杂度为 O(n)。所以题目描述是正确的。"
+    },
+    {
+      "id": "j74YeWeR3gA3_dEWP4V4i",
+      "order": 22,
+      "type": "true_false",
+      "content": "冒泡排序和插入排序都是稳定排序算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "冒泡排序和插入排序都属于稳定排序算法。稳定排序算法的特点是，当存在多个相同值的元素时，它们在排序前后的相对顺序保持不变。冒泡排序和插入排序在处理相等元素时，都不会改变它们的相对位置，因此它们都是稳定的。所以，该说法是正确的。"
+    },
+    {
+      "id": "0r6v_M9pEleSaSdY1cXLJ",
+      "order": 23,
+      "type": "true_false",
+      "content": "下面这段代码实现了选择排序算法。\n\n```cpp\nvoid sort(int a[], int n) {\n    for (int i = 1; i < n; i++) {\n        int x = a[i];\n        int j = i - 1;\n        while (j >= 0 && a[j] > x) {\n            a[j + 1] = a[j];\n            j--;\n        }\n        a[j + 1] = x;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这段代码实现的是**插入排序**，而非选择排序。选择排序的核心逻辑是遍历未排序部分，找到最小（或最大）元素，然后将其与当前位置的元素进行交换。而代码中的 `while (j >= 0 && a[j] > x)` 循环以及随后的元素右移 (`a[j + 1] = a[j]`) 操作，明确体现了将当前元素 `x` 插入到已排序部分的正确位置的逻辑。因此，选项 F（错误）是正确的，因为它不是选择排序。"
+    },
+    {
+      "id": "ukDbV2_Pg9eM-wC6LCFbH",
+      "order": 24,
+      "type": "true_false",
+      "content": "下面代码可以正常编译并输出 10 。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint calculate(int x, int y = 10);\n\nint main() {\n    cout << calculate(5); // 调用1\n    return 0;\n}\n\nint calculate(int x, int y) {\n    return x * y;\n}\n\nint calculate(int x) { // 重载函数\n    return x * 2;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码无法正常编译。当 `main` 函数中调用 `calculate(5)` 时，编译器发现有两个函数都可以匹配：`int calculate(int x, int y = 10)` 可以通过默认参数匹配，而重载函数 `int calculate(int x)` 也能直接匹配。由于存在这种函数调用歧义，编译器无法确定应该调用哪个函数，从而导致编译错误。因此，原题目中“可以正常编译”的说法是错误的。"
+    },
+    {
+      "id": "t4KunwciTOEm10Nmz5TG8",
+      "order": 25,
+      "type": "true_false",
+      "content": "执行下面代码会输出 100 。\n\n```cpp\nint main() {\n    ofstream fout(\"data.txt\");\n    fout << 10 << \" \" << 20 << endl;\n    fout << 30 << \" \" << 40;\n    fout.close();\n\n    ifstream fin(\"data.txt\");\n    int a, b, c, d;\n    fin >> a >> b >> c >> d;\n    fin.close();\n\n    cout << a + b + c + d;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码首先将 `10 20` 和 `30 40` 写入 `data.txt` 文件。接着，它从该文件中读取数据，C++ 的输入流操作符 `>>` 会自动跳过空格和换行符，因此 `10`、`20`、`30`、`40` 会依次被正确读取到变量 `a`、`b`、`c`、`d` 中。最后，程序计算并输出 `a + b + c + d`，即 `10 + 20 + 30 + 40 = 100`。因此，输出 `100` 是正确的。"
+    }
+  ]
+}

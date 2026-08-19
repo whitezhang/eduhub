@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202309",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202309",
+  "title": "GESP C++一级 202309",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2023年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202309"
+  },
+  "questions": [
+    {
+      "id": "AUewHjLueWS4G5nJAJmy3",
+      "order": 1,
+      "type": "single_choice",
+      "content": "我们通常说的\"内存\"属于计算机中的（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "输出设备"
+        },
+        {
+          "label": "B",
+          "text": "输入设备"
+        },
+        {
+          "label": "C",
+          "text": "存储设备"
+        },
+        {
+          "label": "D",
+          "text": "打印设备"
+        }
+      ],
+      "answer": "C",
+      "explanation": "“内存”是计算机用于临时存放数据和程序的地方，它的主要功能就是存储信息，因此属于存储设备。输出设备（如显示器）、输入设备（如键盘）和打印设备（一种特殊的输出设备）的功能都与存储数据不同。"
+    },
+    {
+      "id": "kgs25cL2qpY7L2KQnCO3D",
+      "order": 2,
+      "type": "single_choice",
+      "content": "以下C++不可以作为变量的名称的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`redStar`"
+        },
+        {
+          "label": "B",
+          "text": "`RedStar`"
+        },
+        {
+          "label": "C",
+          "text": "`red_star`"
+        },
+        {
+          "label": "D",
+          "text": "`red star`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D，因为 C++ 变量名不能包含空格。选项 A (`redStar`)、B (`RedStar`) 和 C (`red_star`) 都符合 C++ 标识符的命名规则，它们由字母、数字和下划线组成，且不以数字开头，因此是合法的变量名。"
+    },
+    {
+      "id": "MaJdFIIh0aMO8Wv4bgX5x",
+      "order": 3,
+      "type": "single_choice",
+      "content": "C++表达式 `2 - 1 && 2 % 10` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "B",
+      "explanation": "表达式 `2 - 1` 的结果是 `1`，`2 % 10`（2除以10的余数）的结果是 `2`。因此，原表达式变为 `1 && 2`。在 C++ 中，任何非零值都被视为 `true`。所以 `1` 和 `2` 都被视为 `true`，`true && true` 的结果是 `true`。当 `true` 转换为整数时，其值为 `1`。因此，正确答案是 `B`。"
+    },
+    {
+      "id": "QwQx-RCE7_6Qu4c734J6_",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面C++代码段执行后的输出是（ ）。\n\n```cpp\nint a = 3, b = 4;\ncout << \"a+b=\" << a+b;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`3+4= 7`"
+        },
+        {
+          "label": "B",
+          "text": "`3+4=7`"
+        },
+        {
+          "label": "C",
+          "text": "`a+b=7`"
+        },
+        {
+          "label": "D",
+          "text": "`a+b=a+b`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`cout << \"a+b=\"` 会原样输出字符串 `a+b=`。而 `<< a+b` 会先计算表达式 `a+b` 的值（即 `3+4=7`），然后输出这个计算结果。因此，最终输出是 `a+b=7`，选项 C 正确。选项 A 和 B 错误是因为 `cout` 输出的是字符串 `\"a+b=\"`，而不是变量的值 `\"3+4=\"`。选项 D 错误是因为第二个 `a+b` 是一个表达式，其计算结果 `7` 会被输出，而不是字符串 `\"a+b\"`。"
+    },
+    {
+      "id": "M6pmwYDJ5hBJOIbEWGsNq",
+      "order": 5,
+      "type": "single_choice",
+      "content": "在C++语言中，`int` 类型的变量 `x`、`y`、`z` 的值分别为 2、4、6，以下表达式的值为真的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`x > y || x > z`"
+        },
+        {
+          "label": "B",
+          "text": "`x != z - y`"
+        },
+        {
+          "label": "C",
+          "text": "`z > y + x`"
+        },
+        {
+          "label": "D",
+          "text": "`x < y || !x < z`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D: `x < y || !x < z`。首先 `x < y` (即 `2 < 4`) 结果为 `true`。对于 `!x"
+    },
+    {
+      "id": "7YscWNEuLKcxQONBuD-zt",
+      "order": 6,
+      "type": "single_choice",
+      "content": "对 `int` 类型的变量 `a`、`b`、`c`，下列语句不符合C++语法的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`c += 5;`"
+        },
+        {
+          "label": "B",
+          "text": "`b = c % 2.5;`"
+        },
+        {
+          "label": "C",
+          "text": "`a = (b = 3, c = 4, b + c);`"
+        },
+        {
+          "label": "D",
+          "text": "`a -= a = (b = 6) / (c = 2);`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。\n\n1.  **B选项错误**：C++中的取模运算符 `%` 只能用于整数类型（`int`, `long` 等）。`2.5"
+    },
+    {
+      "id": "QcyAdk7Wu1OBBr8kMQkpl",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint m = 14;\nint n = 12;\nif (m % 2 == 0 && n % 2 == 0)\n    cout << \"都是偶数\";\nelse if (m % 2 == 1 && n % 2 == 1)\n    cout << \"都是奇数\";\nelse\n    cout << \"不都是偶数或奇数\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "都是偶数"
+        },
+        {
+          "label": "B",
+          "text": "都是奇数"
+        },
+        {
+          "label": "C",
+          "text": "不都是偶数或奇数"
+        },
+        {
+          "label": "D",
+          "text": "以上说法都不正确"
+        }
+      ],
+      "answer": "A",
+      "explanation": "变量 `m` 的值为 14，`n` 的值为 12。第一个 `if` 语句 `(m % 2 == 0 && n % 2 == 0)` 判断 `m` 和 `n` 是否都是偶数。由于 `14 % 2` 等于 0 且 `12 % 2` 等于 0，所以该条件为真，程序输出 \"都是偶数\"。因此，选项 A 是正确的。`else if` 和 `else` 分支不会被执行，所以选项 B、C 错误，D 也错误。"
+    },
+    {
+      "id": "QLkeeNcPkoKUhYs-cVYeC",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint m = 14;\nint n = 12;\nif (m % 2 && n % 2)\n    cout << \"都是偶数\";\nelse if (m % 2 == 1 && n % 2 == 1)\n    cout << \"都是奇数\";\nelse\n    cout << \"不都是偶数或奇数\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "都是偶数"
+        },
+        {
+          "label": "B",
+          "text": "都是奇数"
+        },
+        {
+          "label": "C",
+          "text": "不都是偶数或奇数"
+        },
+        {
+          "label": "D",
+          "text": "以上说法都不正确"
+        }
+      ],
+      "answer": "C",
+      "explanation": "变量 `m` 和 `n` 的值分别为 `14` 和 `12`，它们都是偶数。第一个 `if` 条件 `(m % 2 && n % 2)` 等价于 `(0 && 0)`，结果为 `false`。第二个 `else if` 条件 `(m % 2 == 1 && n % 2 == 1)` 等价于 `(0 == 1 && 0 == 1)`，结果也为 `false`。因此，程序会执行最后的 `else` 语句，输出 `\"不都是偶数或奇数\"`，所以 C 是正确答案。选项 A 和 B 对应的条件都不满足，因此是错误的。"
+    },
+    {
+      "id": "_-Qex_LUafAAswZPJdn0O",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint m = 7;\nif (m / 5 || m / 3)\n    cout << 0;\nelse if (m / 3)\n    cout << 1;\nelse if (m / 5)\n    cout << 2;\nelse\n    cout << 3;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "A",
+      "explanation": "变量 `m` 的值为 `7`。首先判断 `if (m / 5 || m / 3)`。`m / 5` (即 `7 / 5`) 结果为 `1`，`m / 3` (即 `7 / 3`) 结果为 `2`。在 C++ 中，非零值在条件判断中被视为真，所以 `(true || true)` 为真。因此，`cout << 0;` 被执行，输出 `0`。后续的 `else if` 语句将不再判断，所以其他选项都不正确。"
+    },
+    {
+      "id": "sVzm67vhhi8Xc2MdI1abW",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码段执行后的输出是（ ）。\n\n```cpp\nint cnt = 0;\nfor (int i = 1; i <= 5; i++)\n    cnt = cnt + 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "C",
+      "explanation": "变量 `cnt` 初始化为 0。`for` 循环从 `i=1` 执行到 `i=5`，共执行 5 次。每次循环，`cnt` 的值会增加 1。因此，循环结束后 `cnt` 的值为 5，`cout << cnt;` 会输出 5。选项 A、B、D 不正确，因为 `cnt` 每次循环只增加 1，且循环次数是固定的 5 次。"
+    },
+    {
+      "id": "1mgWGBbj2RJnDqrbdEWZW",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint tnt = 0;\nfor (int i = 1; i < 5; i += 2)\n    tnt = tnt + i;\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "B",
+      "explanation": "初始 `tnt` 为 0。循环第一次，`i` 为 1，`tnt` 变为 `0 + 1 = 1`。循环第二次，`i` 为 3，`tnt` 变为 `1 + 3 = 4`。此时 `i` 变为 5，不满足 `i < 5`，循环结束。因此，最终输出 `tnt` 的值 4，选项 B 正确。其他选项不符合循环的计算过程。"
+    },
+    {
+      "id": "BooWE18bZsiUb-LOxtnrt",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint n = 5;\nint cnt = 1;\nwhile (n >= 0) {\n    cnt += 1;\n    n -= 2;\n}\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码通过 `while` 循环来改变 `n` 和 `cnt` 的值。初始 `n` 为 5，`cnt` 为 1。循环执行过程如下：当 `n` 为 5, 3, 1 时，`cnt` 依次变为 2, 3, 4，同时 `n` 变为 3, 1, -1。当 `n` 变为 -1 时，`n >= 0` 条件不再满足，循环终止。最终输出 `cnt` 的值为 4，因此选项 B 正确。其他选项不符合代码的实际执行结果。"
+    },
+    {
+      "id": "96xpdA947wHfyHQRKp6pL",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面C++代码用于求正整数的所有因数，即输出所有能整除一个正整数的数。如，输入10，则输出为1、2、5、10；输入12，则输出为1、2、3、4、6、12；输入17，则输出为1、17。在横线处应填入代码是（ ）。\n\n```cpp\nint n = 0;\ncout << \"请输入一个正整数：\";\ncin >> n;\n\nfor (________________) // 此处填写代码\n    if (n % i == 0)\n        cout << i << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int i = 1; i < n; i + 1`"
+        },
+        {
+          "label": "B",
+          "text": "`int i = 1; i < n + 1; i + 1`"
+        },
+        {
+          "label": "C",
+          "text": "`int i = 1; i < n; i++`"
+        },
+        {
+          "label": "D",
+          "text": "`int i = 1; i < n + 1; i++`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案 D (`int i = 1; i < n + 1; i++`) 确保 `i` 从 1 开始，每次递增 1，并遍历到 `n"
+    },
+    {
+      "id": "DThxb205fDacpAeeCqwXH",
+      "order": 14,
+      "type": "single_choice",
+      "content": "在下列代码的横线处填写（ ），可以使得输出是正整数 1234 各位数字的平方和。\n\n```cpp\nint n = 1234, s = 0;\nfor (; n; n /= 10)\n    s += _________; // 此处填写代码\ncout << s << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`n / 10`"
+        },
+        {
+          "label": "B",
+          "text": "`(n / 10) * (n / 10)`"
+        },
+        {
+          "label": "C",
+          "text": "`n % 10`"
+        },
+        {
+          "label": "D",
+          "text": "`(n % 10) * (n % 10)`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D `(n % 10) * (n % 10)` 是正确的。`n % 10` 用于获取当前数字 `n` 的个位，然后"
+    },
+    {
+      "id": "-YOGq8rgELmchp5LSFtRm",
+      "order": 15,
+      "type": "single_choice",
+      "content": "执行以下C++语言程序后，输出结果是（ ）。\n\n```cpp\nint n = 5, s = 1;\nfor (; n = 0; n--)\n    s *= n;\ncout << s << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "0"
+        },
+        {
+          "label": "C",
+          "text": "120"
+        },
+        {
+          "label": "D",
+          "text": "无法确定"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`for` 循环的条件是 `n = 0`。这是一个赋值表达式，它将 `n` 赋值为 `0`，并且表达式的值为 `0`。在 C++ 中，`0` 被视为 `false`，因此循环条件从一开始就不满足，循环体 `s *= n;` 根本不会执行"
+    },
+    {
+      "id": "ocDnS6ytVb-djyj40rK8b",
+      "order": 16,
+      "type": "true_false",
+      "content": "早期计算机内存不够大，可以将字库固化在一个包含只读存储器的扩展卡中插入计算机主板帮助处理汉字。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "早期计算机内存资源非常有限，而汉字字库数据量庞大。将字库固化在只读存储器（ROM）中，做成扩展卡插入主板，可以避免占用宝贵的内存，并提供快速、稳定的汉字处理能力。这是当时处理汉字的常见且有效的方法，因此该描述是正确的。选择F则表示该方法不可行或不正确，与历史事实不符。"
+    },
+    {
+      "id": "pVc1spRSXaoRC32yXEgy9",
+      "order": 17,
+      "type": "true_false",
+      "content": "神威·太湖之光超级计算机是中国自主研制的超级计算机，在全球超级计算机TOP500排行榜中多次荣膺榜首。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "神威·太湖之光超级计算机确实是由中国自主研制，并且在2016年至2017年期间多次荣登全球超级计算机TOP500榜首。因此，题目描述完全符合事实，选项T是正确的。选项F错误，因为它与神威·太湖之光超级计算机的实际成就和背景不符。"
+    },
+    {
+      "id": "ZqpRD22_7h8OOpAl2bUnZ",
+      "order": 18,
+      "type": "true_false",
+      "content": "C++表达式 `int(3.14)` 的值为 `3`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 表达式 `int(3.14)` 是一种显式类型转换（C风格转换），它将浮点数 `3.14` 转换为整数类型 `int`。在进行浮点数到整数的转换时，小数部分会被直接截断（丢弃），只保留整数部分。因此，`3.14` 转换为 `int` 后结果为 `3`。选项 T 正确，选项 F 错误。"
+    },
+    {
+      "id": "5vvwy-zvOFEKyInLQYfPg",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++语句 `cout << (2, 3, \"23\")` 的输出为 `2, 3, 23`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中的逗号运算符 `(expr1, expr2, ..., exprN)` 会从左到右依次计算每个表达式，并返回最右边表达式的值。因此，` (2, 3, \"23\") ` 的结果是字符串字面量 `\"23\"`。`cout` 会将这个 C 风格字符串 `\"23\"` 直接输出。实际输出应为 `23`，而不是 `2, 3, 23`，所以原题目描述是错误的。"
+    },
+    {
+      "id": "Ju98kurXd2S6eCbpLEtoH",
+      "order": 20,
+      "type": "true_false",
+      "content": "C++的循环语句 `for (int i = 0; i < 10; i += 2)` 表示 `i` 从 0 开始到 10 结束但不包含 10，间隔为 2。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该 `for` 循环的初始化语句 `int i = 0` 设定 `i` 从 0 开始。循环条件 `i < 10` 确保 `i` 的值会小于 10，即不包含 10。步进语句 `i += 2` 表示 `i` 在每次循环后增加 2，即间隔为 2。因此，题目对 `for (int i = 0; i < 10; i += 2)` 的描述是完全准确的。"
+    },
+    {
+      "id": "Ux9Z_Q6hu13XVMkAgdXeR",
+      "order": 21,
+      "type": "true_false",
+      "content": "C++表达式 `('1' + '1')` 的值为 `'2'`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中，字符字面量在算术运算中会被隐式转换为其对应的ASCII整数值。字符 `'1'` 的ASCII值为49，因此表达式 `('1' + '1')` 实际上是 `49 + 49`，结果为整数 `98`。而字符 `'2'` 的ASCII值为50。所以，表达式的值不是 `'2'`，原说法错误。"
+    },
+    {
+      "id": "VV-nPMmT9mFdfm2eRMoDE",
+      "order": 22,
+      "type": "true_false",
+      "content": "在C++语言中，`do-while` 循环不可能导致死循环，但 `while` 有可能。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这个说法是错误的。`do-while` 循环和 `while` 循环都有可能导致死循环。`do-while` 循环虽然会先执行一次循环体再判断条件，但如果其 `while (condition)` 中的 `condition` 表达式始终为真，它就会无限循环下去。例如，`do { /* 循环体 */ } while (true);` 就是一个典型的 `do-while` 死循环。因此，原题目中关于 `do-while` 循环不可能导致死循环的说法是错误的。"
+    },
+    {
+      "id": "dQyMBUkYgpNU2pqIa0aDf",
+      "order": 23,
+      "type": "true_false",
+      "content": "在下面的C++代码中，由于循环中的 `continue` 是无条件被执行，因此将导致死循环。\n\n```cpp\nfor (int i = 1; i < 10; i++) continue;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这个说法是错误的。`continue` 语句的作用是跳过当前循环体中剩余的语句，直接进入下一次循环的更新表达式和条件判断。在 `for (int i = 1; i < 10; i++) continue;` 中，`i++` 仍然会在每次循环结束前执行，因此变量 `i` 会正常递增，循环最终会结束。所以，选项 F (错误) 是正确的，选项 T (正确) 是不正确的。"
+    },
+    {
+      "id": "DN9fQ3voH9-pmkp_RbWgX",
+      "order": 24,
+      "type": "true_false",
+      "content": "在C++代码中，不可以将变量命名为 `cout`，因为 `cout` 是C++的关键字。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`cout` 并非 C++ 关键字，它是一个定义在 `iostream` 头文件中的标准输出流对象。因此，从语法上讲，你可以将变量命名为 `cout`，但这样做会导致名称冲突，使代码难以理解和维护，所以强烈不推荐。题目声称 `cout` 是关键字，这是错误的，所以选项 F（错误）是正确答案。"
+    },
+    {
+      "id": "V6p56KTfVy-tksk_2fkcq",
+      "order": 25,
+      "type": "true_false",
+      "content": "C++是一种高级程序设计语言。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++是一种高级程序设计语言，因为它提供了丰富的抽象机制，如类、对象、函数等，使得程序员可以用更接近人类思维的方式编写代码，而无需直接操作计算机硬件的底层细节。与机器语言或汇编语言等低级语言相比，C++更易读、易写、易维护。因此，选项T（正确）是符合事实的。"
+    }
+  ]
+}

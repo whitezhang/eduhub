@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-2ji-202412",
+  "url": "https://adacpp.com/practice/gesp-cpp-2ji-202412",
+  "title": "GESP C++二级 202412",
+  "description": "CCF编程能力等级认证 GESP C++ 二级 2024年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 2,
+    "ym": "202412"
+  },
+  "questions": [
+    {
+      "id": "VFwNcmYT0J67_HgdaxbQN",
+      "order": 1,
+      "type": "single_choice",
+      "content": "2024年10月8日，诺贝尔物理学奖\"意外地\"颁给了两位计算机科学家约翰·霍普菲尔德（John J. Hopfield）和杰弗里·辛顿（Geoffrey E. Hinton）。这两位科学家的主要研究方向是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "天体物理"
+        },
+        {
+          "label": "B",
+          "text": "流体力学"
+        },
+        {
+          "label": "C",
+          "text": "人工智能"
+        },
+        {
+          "label": "D",
+          "text": "量子理论"
+        }
+      ],
+      "answer": "C",
+      "explanation": "约翰·霍普菲尔德和杰弗里·辛顿是人工智能领域的奠基人。霍普菲尔德提出了著名的霍普菲尔德网络，而辛顿则在深度学习和神经网络方面做出了开创性贡献，因此他们的主要研究方向是人工智能。其他选项天体物理、流体力学和量子理论与这两位科学家的研究领域无关。"
+    },
+    {
+      "id": "-NHjSPmuyB-TFVGOu_xEu",
+      "order": 2,
+      "type": "single_choice",
+      "content": "计算机系统中存储的基本单位用B来表示，它代表的是（ ），比如某个照片大小为3MB。",
+      "options": [
+        {
+          "label": "A",
+          "text": "Byte"
+        },
+        {
+          "label": "B",
+          "text": "Block"
+        },
+        {
+          "label": "C",
+          "text": "Bulk"
+        },
+        {
+          "label": "D",
+          "text": "Bit"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`Byte`（字节）是计算机系统中存储数据的基本单位，通常用大写字母 `B` 表示，例如 `MB` 代表兆字节。一个 `Byte` 等于 8 个 `Bit`（位），而 `Bit` 是最小的信息单位（0或1），通常用小写字母 `b` 表示。因此，选项 A 正确。`Block`（块）是文件系统中的逻辑存储单位，`Bulk`（大量）则不是计算机存储单位。"
+    },
+    {
+      "id": "gSKwLK6ZwVL9Nf4ycbu9_",
+      "order": 3,
+      "type": "single_choice",
+      "content": "C++语句 `cout << (3 + 3 % 3 * 2 - 1)` 执行后输出的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "56"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "D",
+      "explanation": "根据C++运算符优先级，乘法（`*`）和取模（`%`）的优先级高于加法（`+`）和减法（`-`），同级运算符从左到右计算。\n1.  首先计算 `3 % 3` 结果为 `0`。\n2.  然后计算 `0 * 2` 结果为 `0`。\n3.  接着计算 `3 + 0` 结果为 `3`。\n4.  最后计算 `3 - 1` 结果为 `2`。\n因此，输出的值是 `2`，选项D正确。其他选项是由于错误理解运算符优先级或"
+    },
+    {
+      "id": "zXiDG7YXCB_zNMwXOcDSa",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面C++代码执行后其输出是（ ）。\n\n```cpp\nfor (int i=0; i<10; i++)\n    printf(\"%d\",i);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "123456789"
+        },
+        {
+          "label": "B",
+          "text": "0123456789"
+        },
+        {
+          "label": "C",
+          "text": "12345678910"
+        },
+        {
+          "label": "D",
+          "text": "012345678910"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该 `for` 循环从 `int i=0` 开始，只要 `i<10` 就会执行循环体。因此，`i` 的取值范围是 0 到 9。每次循环 `printf(\"%d\",i)` 会打印当前的 `i` 值，并且由于没有换行符，所有数字会紧密连接。所以，输出是 `0123456789`。选项 A 缺少 `0`，而选项 C 和 D 错误地包含了 `10`，因为当 `i` 等于 `10` 时循环条件 `i<10` 不再满足，循环终止。"
+    },
+    {
+      "id": "TDwJeipoEqjsXRavxyUxG",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面C++代码的相关说法中，正确的是（ ）。\n\n```cpp\nint tnt;\nfor (int i=0; i<10; i++)\n    tnt += i;\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "上述代码执行后其输出相当于求1-10的和（包含10）"
+        },
+        {
+          "label": "B",
+          "text": "上述代码执行后其输出相当于求1-10的和（不包含10）"
+        },
+        {
+          "label": "C",
+          "text": "上述代码执行后其输出相当于求0-10的和（不包含10）"
+        },
+        {
+          "label": "D",
+          "text": "上述代码执行后将输出不确定的值"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`int tnt;` 声明了变量 `tnt` 但没有对其进行初始化，这意味着 `tnt` 的初始值是不确定的。在循环中，将 `i` 的值（从0到9）累加到一个不确定的变量上，最终 `tnt` 的值仍然是不确定的。因此，输出将是一个不确定的值，选项D正确。选项A、B、C错误是因为它们假设 `tnt` 被初始化为0，从而能求出确定的和。"
+    },
+    {
+      "id": "WaBTHeH7x9Qk-S3keH1go",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint i;\n\nfor (i=1; i<10; i++)\n    if (i % 2)\n        continue;\n    else\n        break;\n\ncout << i;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "B",
+      "explanation": "当 `i=1` 时，`i % 2` 为真，执行 `continue` 跳过当前循环体剩余部分，`i` 变为 2。当 `i=2` 时，`i % 2` 为假，执行 `else` 块中的 `break` 语句，立即跳出 `for` 循环。此时 `i` 的值为 2，所以 `cout << i` 输出 2。选项 A、C、D 不符合代码的实际执行逻辑。"
+    },
+    {
+      "id": "_sfLA4UA4_nuhhJEp2WB7",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nfor (i=0; i<10; i++){\n    if (i % 3)\n        continue;\n    printf(\"0#\");\n}\nif(i>=10)\n    printf(\"1#\");\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0#0#0#0#0#0#0#1#"
+        },
+        {
+          "label": "B",
+          "text": "0#0#0#0#0#0#1#"
+        },
+        {
+          "label": "C",
+          "text": "0#0#0#0#1#"
+        },
+        {
+          "label": "D",
+          "text": "0#0#0#0#"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在 `for` 循环中，只有当 `i` 是 0、3、6、9 时，`i % 3` 的结果为 0，`if ("
+    },
+    {
+      "id": "MraZy0hGESl-YjZgVfilD",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码用于输出0-100之前（包含100）能被7整除但不能被3整除的数，横线处不能填入的代码是（ ）。\n\n```cpp\nfor (i=0; i<100; i++)\n    if(____________)\n        cout << i << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i % 7 == 0 && i % 3 != 0`"
+        },
+        {
+          "label": "B",
+          "text": "`!(i % 7) && i % 3 != 0`"
+        },
+        {
+          "label": "C",
+          "text": "`i % 7 && i % 3`"
+        },
+        {
+          "label": "D",
+          "text": "`i % 7 == 0 && !(i % 3 == 0)`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "题目要求筛选出能被7整除但不能被3整除的数。\n选项 A、B、D 都能正确表达“能被7整除” (`i %"
+    },
+    {
+      "id": "ioH9AEOloV8Fe6BVUIrXu",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码用于求正整数各位数字之和，横线处不应填入代码是（ ）。\n\n```cpp\nint tnt, N;\nprintf(\"请输入正整数: \");\ncin >> N;\ntnt = 0;\nwhile (N != 0){\n    ________________\n    N /= 10;\n}\ncout <<tnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`tnt = tnt + N % 10`"
+        },
+        {
+          "label": "B",
+          "text": "`tnt += N % 10`"
+        },
+        {
+          "label": "C",
+          "text": "`tnt = N % 10 + tnt`"
+        },
+        {
+          "label": "D",
+          "text": "`tnt = N % 10`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 A、B、C 都实现了将当前数字的个位（`N % 10`）累加到 `tnt` 变量中，从而正确计算各位数字之和。而选项 D `tnt = N % 10` 只是将当前个位数字赋值给 `tnt`，会覆盖之前累加的结果，导致 `tnt` 最终只保存了原数字的最高位（最后被处理的个位），无法得到所有数字之和。因此，横线处不应填入的代码是 D。"
+    },
+    {
+      "id": "s3tYlQUZdzY-iek302xOI",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下图的C++程序执行后的输出是（ ）。\n\n```cpp\nfor (i=0; i<5; i++)\n    for (j=0; j<i; j++)\n        cout <<j;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0010120123"
+        },
+        {
+          "label": "B",
+          "text": "01012012301234"
+        },
+        {
+          "label": "C",
+          "text": "001012012301234"
+        },
+        {
+          "label": "D",
+          "text": "01012012301234012345"
+        }
+      ],
+      "answer": "A",
+      "explanation": "外层循环 `for (i=0; i<5; i++)` 使 `i` 依次取值 0, 1, 2, 3,"
+    },
+    {
+      "id": "euugfbB3IH5jYmbWZC64B",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面C++代码用于实现图示的九九乘法表。相关说法错误的是（ ）。\n\n```cpp\n/*\n1*1=1\n1*2=2  2*2=4\n1*3=3  2*3=6  3*3=9\n1*4=4  2*4=8  3*4=12 4*4=16\n1*5=5  2*5=10 3*5=15 4*5=20 5*5=25\n1*6=6  2*6=12 3*6=18 4*6=24 5*6=30 6*6=36\n1*7=7  2*7=14 3*7=21 4*7=28 5*7=35 6*7=42 7*7=49\n1*8=8  2*8=16 3*8=24 4*8=32 5*8=40 6*8=48 7*8=56 8*8=64\n1*9=9  2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81\n*/\n\nfor (int Hang=1; Hang<10; Hang++){\n    for (int Lie=1; Lie<Hang+1; Lie++){\n        if (Lie * Hang > 9)\n            printf(\"%d*%d=%d \", Lie, Hang, Lie*Hang);\n        else\n            printf(\"%d*%d=%d  \", Lie, Hang, Lie*Hang);\n        // L2\n    }\n\n    printf(\"\\n\"); // L1\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "将L1注释的 `printf(\"\\n\")` 移到L2注释所在行，效果相同"
+        },
+        {
+          "label": "B",
+          "text": "将L1注释的 `printf(\"\\n\")` 修改为 `printf(\"%c\", '\\n')` 效果相同"
+        },
+        {
+          "label": "C",
+          "text": "将 `Lie * Hang > 9` 修改为 `Lie * Hang >= 10` 效果相同"
+        },
+        {
+          "label": "D",
+          "text": "将 `Lie * Hang > 9` 修改为 `Hang * Lie > 9` 效果相同"
+        }
+      ],
+      "answer": "A",
+      "explanation": "将 `printf(\"\\n\")` 从 `L1` 移到 `L2` 会导致每输出一个乘法项后就换行，而不是每行结束后换行，这将破坏"
+    },
+    {
+      "id": "F4XRlYD_6hzOrzbPqazxS",
+      "order": 12,
+      "type": "single_choice",
+      "content": "在数学中N!表示N的阶乘，即1到N的乘积，如 `3!=1*2*3` 。下面的C++用于求1-N的阶乘之和，如N为3，则是 `1!+2!+3!` 。下面代码段补充选项后用于实现上述功能，其中不能实现阶乘和的选项是（ ）。\n\n```cpp\nint N;\n\ncin >> N;\n\nint tnt=0, nowNum = 1; //tnt保存求和之值，当前N的阶乘\n\nfor (int i=1; i < N + 1; i++){\n    ______________ // 基于上一个计算出当前数的阶乘\n    ______________ // 从1到i每个数阶乘之和\n}\n\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`nowNum *= i;`\n`tnt += nowNum;`"
+        },
+        {
+          "label": "B",
+          "text": "`nowNum = nowNum * i;`\n`tnt = tnt + nowNum;`"
+        },
+        {
+          "label": "C",
+          "text": "`nowNum *= i;`\n`tnt = nowNum + tnt;`"
+        },
+        {
+          "label": "D",
+          "text": "`nowNum = nowNum + i;`\n`tnt *= nowNum;`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D 中，`nowNum = nowNum + i;` 错误地将 `nowNum` 更新为 `(i-1)! + i` 而不是 `(i-1)!"
+    },
+    {
+      "id": "AwoaFdyaxMxMRSWpiA9Kv",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面C++代码用于输出N和M之间（可以包括N和M）的孪生素数。孪生素数是指间隔为2的两个数均为素数，如11和13分别是素数，且间隔为2。isPrime(N)用于判断N是否为素数的函数。为完成上述功能，横线处应填上的代码是（ ）。\n\n```cpp\nint N,M;\n\n//本题假设N小于M\ncin >> N >> M;\n\nfor (int i = N; i < __________; i++)\n    if (isPrime(i) && isPrime(i + 2))\n        printf(\"%d %d\\n\",i, i + 2);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "M - 2"
+        },
+        {
+          "label": "B",
+          "text": "M - 1"
+        },
+        {
+          "label": "C",
+          "text": "M"
+        },
+        {
+          "label": "D",
+          "text": "M + 1"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n1.  **为什么 B 是对的：** 孪生素数对是 `(i, i+2)`。由于要求两个数都在 `N`"
+    },
+    {
+      "id": "IpCkpfWX3s8coTNzJo-qT",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面C++代码实现输出如下图形，横线应填入的代码是（ ）。\n\n```cpp\n/*\n高度:5\n    *\n   ***\n  *****\n *******\n*********\n*/\n\nint height;\ncout << \"高度: \";\n\n//获取用户输入的高度\ncin >> height;\nfor (i=0; i<height; i++){\n    //打印每行前面的空格\n    for (j = 0; j < ______________; j++)\n        cout << \" \";\n    //打印每行的星号\n    for (k = 0; k < ______________; k++)\n        cout << \"*\";\n    //输出一行后，换行\n    cout << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`height - i`\n`2 * i`"
+        },
+        {
+          "label": "B",
+          "text": "`height`\n`2 * i`"
+        },
+        {
+          "label": "C",
+          "text": "`height - i`\n`2 * i + 1`"
+        },
+        {
+          "label": "D",
+          "text": "`height - i - 1`\n`2 * i + 1`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。对于第 `i` 行（从0开始计数），需要打印的空格数为 `height - i - 1`，这样才能确保第一行有 `height-"
+    },
+    {
+      "id": "YJBkRR8PvMqua7m4F6WXd",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是30，则横线处不能填入（ ）。\n\n```cpp\nint a=10,b=20,c=30;\n\ncout << _____________________ << endl;\n\ncout << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`max(max(a, b), c)`"
+        },
+        {
+          "label": "B",
+          "text": "`min(a+b, c)`"
+        },
+        {
+          "label": "C",
+          "text": "`sqrt(a+b+c)`"
+        },
+        {
+          "label": "D",
+          "text": "`(a+b+c)/2`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n*   **C 选项** `sqrt(a+b+c)` 计算的是 `sqrt(10+20+30)` 即 `"
+    },
+    {
+      "id": "fy_aPSNp1gltmi93q7WG7",
+      "order": 16,
+      "type": "true_false",
+      "content": "在Windows的资源管理器中为已有文件A建立副本的操作是Ctrl+C，然后Ctrl+V。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在Windows资源管理器中，`Ctrl+C` 是将选定的文件或文件夹复制到剪贴板的快捷键。随后，`Ctrl+V` 是将剪贴板中的内容粘贴到目标位置的快捷键。因此，通过 `Ctrl+C` 和 `Ctrl+V` 的组合操作，确实可以为文件A创建一个副本，所以题目描述是正确的。"
+    },
+    {
+      "id": "z9YPbtpkpUBXsdkk6zzOI",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++代码中，假设N为正整数，则 `cout << (N - N / 10 * 10)` 将获得N的个位数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，`N / 10` 进行整数除法会截断小数部分，相当于去掉了 `N` 的个位数（例如 `123 / 10` 结果是 `12`）。接着 `N / 10 * 10` 得到的是 `N` 去掉个位数后，再补零的结果（例如 `12 * 10` 结果是 `120`）。因此，`N - (N / 10 * 10)` 就能准确地得到 `N` 的个位数，这与 `N % 10` 的效果相同。所以，该表述是正确的，选项 F 错误。"
+    },
+    {
+      "id": "eoBbuJ4fw62StwWKPsP_2",
+      "order": 18,
+      "type": "true_false",
+      "content": "在C++语句 `cout << (10 <= N <= 12)` 中，假设N为12，则其输出为1。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，`10 <= N <= 12` 表达式是按从左到右的顺序求值的。首先，`10 <= N`（即 `10 <= 12`）被求值，结果为布尔值 `true`。接着，这个 `true` 值被隐式转换为整数 `1`，然后与 `12` 进行比较：`1 <= 12`。这个比较的结果也是 `true`。当 `cout` 输出布尔值 `true` 时，它会显示为 `1`，因此题目描述是正确的。"
+    },
+    {
+      "id": "yFE6ERz2JD72tkpbuB429",
+      "order": 19,
+      "type": "true_false",
+      "content": "如果C++表达式 `int(sqrt(N))*int(sqrt(N)) == N` 的值为True，则说明N为完全平方数，如4、9、25等。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "当N是完全平方数时，`sqrt(N)` 的结果是一个整数。对其进行 `int()` 强制类型转换后，值保持不变，因此 `int(sqrt(N))*int(sqrt(N))` 的结果将等于N。如果N不是完全平方数，`sqrt(N)` 的结果将是一个带小数的浮点数，`int()` 转换会截断小数部分，导致乘积小于N，表达式为False。所以该判断方法是正确的。"
+    },
+    {
+      "id": "KYKHU18Z9T1-NDjDCn0wr",
+      "order": 20,
+      "type": "true_false",
+      "content": "下面C++代码执行后将输出2*3=6。\n\n```cpp\nint a = 2, b = 3;\nprintf(\"%%a*%%b=%d\",a*b);\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 `printf` 函数中，`%%` 是一个转义序列，表示输出一个字面量的百分号 `%`。因此，格式字符串 `%%a*%%b=%d` 会被解析为输出 `%a*%b=`，然后是 `a*b` 的值。实际输出将是 `%a*%b=6`，而不是 `2*3=6`。所以，原题描述的输出是错误的，选项 F 正确。"
+    },
+    {
+      "id": "F3iJlSyy0fXKlruOWNYSe",
+      "order": 21,
+      "type": "true_false",
+      "content": "以下C++代码因为循环变量为 `_` 将导致错误，即不能作为变量名称，不符合C++变量命名规范。\n\n```cpp\nfor (int _ = 0; _ < 10; _++)\n    continue;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "正确答案是 F。C++标准允许使用下划线 `_` 作为变量名，包括单独使用 `_`。虽然有一些关于下划线开头的标识符的保留规则（如双下划线或下划线后跟大写字母），但单独的 `_` 是一个合法的普通标识符。因此，题目中声称 `_` 不符合C++变量命名规范是错误的，代码 `for (int _ = 0; _ < 10; _++)` 是完全合法的，不会导致编译错误。"
+    },
+    {
+      "id": "oBUWtrijpoMvppHg3YnnI",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面C++代码执行后因为有break，将输出0。\n\n```cpp\nint i;\nfor (i = 0; i < 10; i++){\n    continue;\n    break;\n}\ncout << i;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 `for` 循环中，当执行到 `continue;` 语句时，它会立即跳过当前循环体中 `continue;` 之后的所有语句，直接进入下一次循环的判断和迭代。因此，`break;` 语句永远不会被执行到。循环会正常执行10次，`i` 从0递增到9，循环结束后 `i` 的值为10。所以，`cout << i;` 将输出 `10`，而不是 `0`。因此，题目描述是错误的。"
+    },
+    {
+      "id": "UDE0X-5uKiy-RxqgnudTr",
+      "order": 23,
+      "type": "true_false",
+      "content": "下面的C++代码执行后将输出18行\"OK\"。\n\n```cpp\nint i,j;\nfor (i = 8; i > 2; i-=2)\n    for (j =0; j < i; j++)\n        printf(\"OK\\n\");\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "外层循环变量 `i` 依次取值为 8、6、4。当 `i` 为 8 时，内层循环执行 8 次 `printf(\"OK\\n\")`；当 `i` 为 6 时，内层循环执行 6 次；当 `i` 为 4 时，内层循环执行 4 次。因此，总共输出 \"OK\" 的次数为 8 + 6 + 4 = 18 次。所以，题目描述是正确的，选项 T 为正确答案。"
+    },
+    {
+      "id": "5IGVTUSCMggeEoaI-IAt-",
+      "order": 24,
+      "type": "true_false",
+      "content": "将下面C++代码中的 `i = 1` 调整为 `i = 0` 的输出结果相同。\n\n```cpp\nint i;\nint cnt = 0;\nfor (i = 1; i < 5; i++)\n    if(i%2) cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "原代码中，循环遍历 `i` 的值为 1, 2, 3, 4。其中 `i = 1` 和 `i = 3` 满足 `i%2` 条件，使 `cnt` 最终为 2。将 `i"
+    },
+    {
+      "id": "XZJWwffhTfkSREV4RwsZ6",
+      "order": 25,
+      "type": "true_false",
+      "content": "下面两段C++代码都是用于求1-10的和，其运行结果相同。通常说来，for循环都可以用while循环实现。\n\n```cpp\nint tnt;\nint i;\n\ntnt = 0;\nfor (i = 1; i < 10 + 1; i++)\n    tnt += i;\ncout << tnt << endl;\n```\n\n```cpp\nint tnt;\nint i;\n\ntnt = 0;\ni = 1;\nwhile (i <= 10){\n    tnt += i;\n    i += 1;\n}\ncout << tnt << endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "两个代码片段都旨在计算1到10的和，并且逻辑上是等价的。第一个`for`循环通过`i = 1; i < 10 + 1; i++`确保`i`从1遍历到10。第二个`while`循环通过`i = 1; while (i <= 10)`也确保`i`从1遍历到10，每次循环体内部`i += 1`。因此，它们会产生相同的求和结果，且`for`循环确实可以等价地用`while`循环实现，故答案为T。"
+    }
+  ]
+}

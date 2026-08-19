@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-7ji-202512",
+  "url": "https://adacpp.com/practice/gesp-cpp-7ji-202512",
+  "title": "GESP C++七级 202512",
+  "description": "CCF编程能力等级认证 GESP C++ 七级 2025年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 7,
+    "ym": "202512"
+  },
+  "questions": [
+    {
+      "id": "UlzT_Bsk4-3VTldnZFFOe",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下面关于C++中形参、实参和定义域的说法中，正确的一项是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "形参是函数定义时所指定的变量，它只在函数内部有效。"
+        },
+        {
+          "label": "B",
+          "text": "在函数内部，可以修改传入的形参的值，即使该形参是一个常量引用。"
+        },
+        {
+          "label": "C",
+          "text": "实参和形参的类型必须完全一致，否则会导致编译错误。"
+        },
+        {
+          "label": "D",
+          "text": "使用指针作为形参时，形参是指向实参的地址，因此对该指针赋值会影响实参。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A. 形参是函数定义时声明的局部变量，其作用域和生命周期确实仅限于函数内部，用于接收函数调用时传入的实参值。\nB."
+    },
+    {
+      "id": "TkfMpsxW0_RGg5cIJHD_R",
+      "order": 2,
+      "type": "single_choice",
+      "content": "已知三个序列：s1 = {3, 1, 8, 2, 5, 6, 7, 4}，s2 = {1, 5, 1, 8, 6, 4, 7, 5, 6}，s3 = {1, 8, 3, 5, 7, 6, 2, 4}。以下哪个序列是它们的最长公共子序列（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "{1, 8, 5, 6}"
+        },
+        {
+          "label": "B",
+          "text": "{1, 5, 6, 7}"
+        },
+        {
+          "label": "C",
+          "text": "{1, 8, 6}"
+        },
+        {
+          "label": "D",
+          "text": "{1, 5, 7, 4}"
+        }
+      ],
+      "answer": "A",
+      "explanation": "序列 A `{1, 8, 5, 6}` 是 s1, s2, s3 的子序列，且长度为 4。选项 B `{1, 5,"
+    },
+    {
+      "id": "zDh8RtoGHkBFFRVbYpHlG",
+      "order": 3,
+      "type": "single_choice",
+      "content": "现有一个地址区间为 0 ~ 10 的哈希表，当出现冲突情况，会往后找第一个空的地址存储（到 10 冲突了就从 0 开始往后），现在要依次存储 (1, 3, 5, 7, 9)，哈希函数为 h(x) = (x² + x) mod 11。其中 9 存储在哈希表哪个地址中（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "首先，根据哈希函数 `h(x) = (x² + x) mod 11` 依次计算并存储：\n1.  `h(1)"
+    },
+    {
+      "id": "MuXOJ6amsB0ehRKMiPKKW",
+      "order": 4,
+      "type": "single_choice",
+      "content": "在0/1背包问题中，给定一组物品，每个物品有一个重量和价值，背包的容量有限。假设背包的最大容量为 W，物品的数量为 n，其中第 i 个物品的重量为 w[i]，价值为 v[i]。以下关于0/1背包问题的描述，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在解决0/1背包问题时，使用贪心算法可以保证找到最优解，因为物品只能放入一次。"
+        },
+        {
+          "label": "B",
+          "text": "0/1背包是P问题（多项式时间可解问题），它可以在 O(nW) 的时间复杂度内解决。"
+        },
+        {
+          "label": "C",
+          "text": "0/1背包问题中，动态规划解法的空间复杂度为 O(nW)，但可以通过滚动数组技巧将空间复杂度优化到 O(W)。"
+        },
+        {
+          "label": "D",
+          "text": "0/1背包问题中，每个物品只能选择一次，并且子问题之间是独立的，无法重用计算结果。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是C。0/1背包问题的动态规划解法，使用二维数组 `dp[i][j]` 时空间复杂度为 O(nW)，但由于当前物品的状态只"
+    },
+    {
+      "id": "Nsuw5KtS-q8mFihOVwJ8L",
+      "order": 5,
+      "type": "single_choice",
+      "content": "一棵深度为6（根节点深度为1）的完全二叉树，节点总数最少有（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "31"
+        },
+        {
+          "label": "B",
+          "text": "32"
+        },
+        {
+          "label": "C",
+          "text": "63"
+        },
+        {
+          "label": "D",
+          "text": "64"
+        }
+      ],
+      "answer": "B",
+      "explanation": "一棵深度为6的完全二叉树，其前5层必须是满的。前5层满二叉树的节点总数为 $2^5 - 1 ="
+    },
+    {
+      "id": "0m7NlBEmXCoeBo18pi5v5",
+      "order": 6,
+      "type": "single_choice",
+      "content": "对于如下二叉树（A为根节点，B和C为A的左右孩子，D和E为B的左右孩子，F和G为C的左右孩子，H和I为G的左右孩子，J为I的左孩子），下面关于访问的顺序说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "D E B F H J I G C A 是它的后序遍历序列。"
+        },
+        {
+          "label": "B",
+          "text": "A B C D E F G H I J 是它的广度优先遍历序列。"
+        },
+        {
+          "label": "C",
+          "text": "A B D E C F G H I J 是它的先序遍历序列。"
+        },
+        {
+          "label": "D",
+          "text": "D B E A F C H G J I 是它的中序遍历序列。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该题考察二叉树的遍历顺序。我们首先根据描述构建二叉树结构：\n\n```\n        A\n       / \\\n      B   C\n     / \\"
+    },
+    {
+      "id": "5IgIxaPVdaaUxuH9Rn54S",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面程序的运行结果为（ ）。\n\n```cpp\n#include <iostream>\n\nint query(int n, int *a, int x) {\n    int l = 0, r = n;\n    while (l < r) {\n        int mid = l + (r - l) / 2;\n        if (a[mid] >= x) r = mid;\n        else l = mid + 1;\n    }\n\n    if (l == n) return -1;\n    return l;\n}\n\nint main() {\n    int n = 10;\n    int x = 3;\n    int num[] = {1, 2, 2, 3, 3, 4, 5, 5, 6, 7};\n\n    std::cout << query(n, num, x) << \"\\n\";\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "` `query` 函数实现了一个二分查找，它会返回数组中第一个大于或等于 `x` 的元素的索引。对于 `x=3`，数组 `num` 中第一个大于"
+    },
+    {
+      "id": "i0KRMeSskpAL7wl8Ph17n",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面程序中，函数 `query` 的时间复杂度是（ ）。\n\n```cpp\n#include <iostream>\n\nint query(int n, int *a, int x) {\n    int l = 0, r = n;\n    while (l < r) {\n        int mid = l + (r - l) / 2;\n        if (a[mid] >= x) r = mid;\n        else l = mid + 1;\n    }\n\n    if (l == n) return -1;\n    return l;\n}\n\nint main() {\n    int n = 10;\n    int x = 3;\n    int num[] = {1, 2, 2, 3, 3, 4, 5, 5, 6, 7};\n\n    std::cout << query(n, num, x) << \"\\n\";\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n log n)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "函数 `query` 实现的是二分查找（binary search）算法。该算法的核心思想是每次迭代都将搜索范围减半，直到找到目标或范围为空。因此，在最坏情况下，它需要大约 `log₂n` 次比较。所以，其时间复杂度是 O(log n)。O(1) 是常数时间，O(n) 是线性时间，O(n log n) 通常与更复杂的排序或搜索操作相关，均不符合此函数的特性。"
+    },
+    {
+      "id": "0-rYVUgQpvNptC7MGLj_F",
+      "order": 9,
+      "type": "single_choice",
+      "content": "有5个字符，它们出现的次数分别为2次、2次、3次、3次、5次。现在要用哈夫曼编码的方式来为这些字符进行编码，最小加权路径长度WPL（每个字符的出现次数 * 它的编码长度，再把每个字符结果加起来）的值为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "30"
+        },
+        {
+          "label": "B",
+          "text": "34"
+        },
+        {
+          "label": "C",
+          "text": "43"
+        },
+        {
+          "label": "D",
+          "text": "47"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据哈夫曼编码原理，我们每次选取当前权值最小的两个节点合并。\n1.  初始节点：2, 2, 3, 3,"
+    },
+    {
+      "id": "o04euu_sly69ocX7yWS0k",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面程序的运行结果为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint f(int n) {\n    if (n <= 2) return n * 2;\n    return f(n - 1) + f(n - 2);\n}\nint main() {\n    cout << f(5) << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "26"
+        },
+        {
+          "label": "D",
+          "text": "30"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`f` 函数是一个递归函数，当 `n <= 2` 时返回 `n * 2`，否则返回 `f(n - 1) + f(n - 2"
+    },
+    {
+      "id": "liLRhAhWkZQo2CvtRWDKx",
+      "order": 11,
+      "type": "single_choice",
+      "content": "一个简单无向图 G 有36条边，且每个顶点的度数都为4，则图 G 的顶点个数为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "12"
+        },
+        {
+          "label": "C",
+          "text": "18"
+        },
+        {
+          "label": "D",
+          "text": "36"
+        }
+      ],
+      "answer": "C",
+      "explanation": "根据图论中的握手定理，一个无向图中所有顶点的度数之和等于边数的两倍。题目中边数为36，所以所有顶点的度数之和为 `2 * 36 = 72`。由于每个顶点的度数都为4，因此顶点个数为 `72 / 4 = 18`。选项C正确，其他选项计算出的顶点数不满足握手定理。"
+    },
+    {
+      "id": "zn_EZceUf1vJNT-DTzeLr",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面关于二叉树的说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "任意二叉树的中序遍历与后序遍历必定不相同。"
+        },
+        {
+          "label": "B",
+          "text": "对任意二叉树，若已知先序遍历与后序遍历，则该二叉树唯一确定。"
+        },
+        {
+          "label": "C",
+          "text": "若二叉树有 n 个结点，根节点高度为1，则其高度满足：⌈log₂(n+1)⌉ ≤ h ≤ n。"
+        },
+        {
+          "label": "D",
+          "text": "在二叉树的先序遍历中，根后紧跟的结点一定是根的左孩子。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C. 二叉树的最小高度（即最矮的树）发生在完全二叉树或满二叉树时，此时高度约为 `log₂(n)`，具体为 `⌈"
+    },
+    {
+      "id": "7dBoiQwvBQbgmIkbfZ-T0",
+      "order": 13,
+      "type": "single_choice",
+      "content": "假设一个算法时间复杂度的递推式是 T(n) = 8T(n/4) + n√n（n为正整数），和 T(0) = 1，那么这个算法的时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n√n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n√n log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n²)"
+        },
+        {
+          "label": "D",
+          "text": "O(n² log n)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据主定理（Master Theorem），对于递推式 `T(n) = aT(n/b) + f(n)`，本题中 `a=8`, `b=4`, `f(n)=n√n = n^(3/2)`。计算 `log_b(a) = log_4(8) = 3/2`。由于 `f(n) = n^(3/2)` 恰好等于 `n^(log_b(a))`，这符合主定理的第二种情况，即 `T(n) = O(n^(log_b(a)) log n)`。因此，时间复杂度为 `O(n^(3/2) log n) = O(n√n log n)`，所以选项 B 正确。其他选项不符合主定理的计算结果。"
+    },
+    {
+      "id": "OPVbfkog5BLfKt19lZS1z",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面哪一个可能是下图的深度优先遍历序列（ ）。\n\n图为一个3x3的网格图，节点编号为：第一行1、2、3，第二行4、5、6，第三行7、8、9。相邻节点之间有双向边连接。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1, 5, 6, 3, 2, 8, 9, 4, 7"
+        },
+        {
+          "label": "B",
+          "text": "1, 5, 8, 9, 7, 4, 6, 3, 2"
+        },
+        {
+          "label": "C",
+          "text": "3, 2, 1, 4, 7, 6, 9, 5, 8"
+        },
+        {
+          "label": "D",
+          "text": "2, 5, 6, 3, 8, 7, 9, 4, 1"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B 是一个有效的深度优先遍历序列。它从 `1` 开始，深入到 `5`，然后继续深入到 `8`、`9`、`7`，直到"
+    },
+    {
+      "id": "GZr8DKXzTMeh8zkV0vE2_",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面这个有向图的强连通分量的个数是（ ）。\n\n图包含12个节点，编号为1到12，排列为3行4列：第一行1、2、3、6，第二行4、5、10、11，第三行7、8、9、12。节点之间有多条有向边连接。",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "C",
+      "explanation": "强连通分量（SCC）是指有向图中一个最大的节点集合，其中任意两个节点 `u` 和 `v` 之间都存在从 `u` 到 `"
+    },
+    {
+      "id": "4M-vnaeas4HaC9OPVykX8",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++语言中，表达式 `3 ^ 2` 的结果类型为 `int`，值为 9。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 语言中，`^` 运算符表示按位异或（XOR），而非数学上的乘方。表达式 `3 ^ 2` 的计算是 `011` (3的二进制) 异或 `010` (2的二进制)，结果为 `001`，即十进制的 1。虽然结果类型确实是 `int`，但其值是 1，而不是 9。因此，原题目描述中关于值为 9 的说法是错误的。"
+    },
+    {
+      "id": "x8yfnwcjcHsNoAtSxW-9c",
+      "order": 17,
+      "type": "true_false",
+      "content": "使用 `cmath` 头文件中的正弦函数，表达式 `sin(90)` 的结果类型为 `double`，值约为 1.0。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`cmath` 库中的 `sin` 函数参数期望的是**弧度**，而不是角度。表达式 `sin(90)` 会将 `90` 视为弧度进行计算，其结果值远不等于 `1.0`。要计算 90 度的正弦值，需要将 90 度转换为弧度，例如 `sin(M_PI / 2)`。因此，原说法中关于值约为 `1.0` 的部分是错误的，所以正确答案是 F。"
+    },
+    {
+      "id": "O4Miv58tz0fwn2m0TYVjX",
+      "order": 18,
+      "type": "true_false",
+      "content": "使用 `strcmp(\"10\", \"9\")` 比较两个字符串，返回值大于0，说明 \"10\" 比 \"9\" 大。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`strcmp` 函数进行的是字符串的字典序（lexicographical）比较，而不是数值比较。在字典序比较中，它会逐个字符地比较 ASCII 值。由于字符 `'1"
+    },
+    {
+      "id": "8pjsBXkS03A6C_ZeRKLWa",
+      "order": 19,
+      "type": "true_false",
+      "content": "选择排序是一种不稳定的排序算法，而冒泡排序是一种稳定的排序算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "选择排序在每次迭代中将最小（或最大）元素与当前位置的元素交换，这种跳跃式交换可能破坏相等元素的相对顺序，因此是不稳定的。而冒泡排序只交换相邻的逆序元素，当遇到相等元素时不会进行交换，从而保持了相等元素的原始相对顺序，所以是稳定的。因此，题目描述是正确的，选项 F 是错误的。"
+    },
+    {
+      "id": "Cq5QVd7vOR_kM9d5JOb7V",
+      "order": 20,
+      "type": "true_false",
+      "content": "求两个长度为 n 序列的最长公共子序列（LCS）长度时，可以使用滚动数组将空间复杂度从 O(n²) 优化到 O(n)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "最长公共子序列（LCS）的动态规划算法中，计算当前状态 `dp[i][j]` 仅依赖于上一行 `dp[i-1]` 的值"
+    },
+    {
+      "id": "t1k_owAihEtlz240foftM",
+      "order": 21,
+      "type": "true_false",
+      "content": "在无向图中，所有顶点的度数之和等于边数的两倍。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在无向图中，每条边都连接着两个顶点。当我们计算所有顶点的度数之和时，每条边都会被精确地计算两次，因为它对它所连接的两个顶点的度数各贡献1。因此，所有顶点的度数之和必然等于边数的两倍，这是图论中的握手定理。选项 F 错误，因为它与该基本定理相悖。"
+    },
+    {
+      "id": "V5TIn44EFX4wYQSkPcnep",
+      "order": 22,
+      "type": "true_false",
+      "content": "使用邻接矩阵存储一个有 V 个顶点、E 条边的图，对该图进行一次完整的BFS遍历，时间复杂度为 O(V + E)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "当使用邻接矩阵存储图时，BFS遍历每个顶点时，需要检查矩阵中所有 `V` 列来找到其邻居，这会消耗 O(V) 的时间。由于有 `V` 个顶点，总的遍历时间复杂度是 O(V * V) = O(V^2)。因此，题目中声称的 O(V + E) 是错误的，O(V + E) 的时间复杂度适用于邻接表存储的图。"
+    },
+    {
+      "id": "v8LneCkROMp_lO1BG3bex",
+      "order": 23,
+      "type": "true_false",
+      "content": "在图像处理或游戏开发中，泛洪（flood fill）算法既可以用BFS实现，也可以用DFS实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "泛洪（flood fill）算法本质上是一种图遍历问题，从一个起始点开始，访问所有与其连通且满足特定条件的相邻点。广度优先搜索（BFS）和深度优先搜索（DFS）都是标准的图遍历算法，因此它们都可以用来实现泛洪填充。选项F错误，因为泛洪算法确实可以用这两种方式实现。"
+    },
+    {
+      "id": "RQbaKxKI_Z48ftsln5YPi",
+      "order": 24,
+      "type": "true_false",
+      "content": "使用链地址法处理冲突的哈希表，当所有元素都映射到同一个槽位时，查找操作的最坏时间复杂度为 O(n)，其中 n 为元素个数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "链地址法处理冲突时，哈希表的每个槽位都连接着一个链表。当所有 `n` 个元素都映射到同一个槽位时，该槽位对应的链表将包含所有 `n` 个元素。在这种情况下，查找一个特定元素的最坏情况需要遍历整个包含 `n` 个元素的链表，因此时间复杂度为 O(n)。所以，题目描述是正确的。"
+    },
+    {
+      "id": "YdfdkyBElQkXuKh6oXPO0",
+      "order": 25,
+      "type": "true_false",
+      "content": "一个包含 V 个顶点的连通无向图，其任何一棵生成树都恰好包含 V - 1 条边。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "一个包含 V 个顶点的连通无向图，其生成树的定义就是连接所有 V 个顶点且不包含任何环的子图。为了连接 V 个顶点并保持无环，恰好需要 V - 1 条边。这是生成树的基本性质，适用于任何一棵生成树，因此该陈述是正确的。"
+    }
+  ]
+}

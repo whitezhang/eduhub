@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202509",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202509",
+  "title": "GESP C++一级 202509",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2025年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202509"
+  },
+  "questions": [
+    {
+      "id": "8EKUQ4kUx9KDEFKspnhqs",
+      "order": 1,
+      "type": "single_choice",
+      "content": "人工智能现在非常火，小杨就想多了解一下，其中就经常听人提到\"大模型\"。那么请问这里说的\"大模型\"最贴切是指（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "大电脑模型"
+        },
+        {
+          "label": "B",
+          "text": "大规模智能"
+        },
+        {
+          "label": "C",
+          "text": "智能的单位"
+        },
+        {
+          "label": "D",
+          "text": "大语言模型"
+        }
+      ],
+      "answer": "D",
+      "explanation": "在当前人工智能热潮中，人们常说的\"大模型\"最主要、最典型的代表就是`大语言模型`（LLM），它们通过学习海量文本数据来理解、生成和处理人类语言。选项A\"大电脑模型\"不是AI领域的专业术语。选项B\"大规模智能\"描述的是大模型实现的目标或效果，而非模型本身。选项C\"智能的单位\"与\"大模型\"的概念无关。"
+    },
+    {
+      "id": "RLhAPEcEZyma-_0pAH5fN",
+      "order": 2,
+      "type": "single_choice",
+      "content": "小杨这学期刚开学就选修了一门编程课，然后就想编写程序来计算1到10001之间的所有偶数的和。他希望程序采用简单累加整数的方法，同时希望源程序尽可能清晰、简洁，则下面关于实现累加时采用的主要控制结构的哪个说法最不合适（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "使用循环结构"
+        },
+        {
+          "label": "B",
+          "text": "使用循环和分支的组合"
+        },
+        {
+          "label": "C",
+          "text": "仅使用顺序结构"
+        },
+        {
+          "label": "D",
+          "text": "不使用分支结构"
+        }
+      ],
+      "answer": "C",
+      "explanation": "仅使用顺序结构（C）来计算1到10001之间所有偶数的和，意味着你需要手动写出 `sum = 2 + 4 + 6 + ..."
+    },
+    {
+      "id": "f8l1aUq6ePOFF2DpH8uNG",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面的C++代码用于输入姓名，然后输出姓名，正确的说法是（ ）。\n\n```cpp\nstring XingMing;\ncout << \"请输入您的姓名：\";\ncin >> XingMing;\ncout << XingMing;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "XingMing 是汉语拼音，不能作为变量名称"
+        },
+        {
+          "label": "B",
+          "text": "可以将 XingMing 改为 Xing Ming"
+        },
+        {
+          "label": "C",
+          "text": "可以将 XingMing 改为 xingming"
+        },
+        {
+          "label": "D",
+          "text": "可以将 XingMing 改为 Xing-Ming"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`XingMing` 是一个合法的变量名，C++ 标识符允许使用字母、数字和下划线，且不能以数字开头。选项 C 中的 `xingming` 也符合这些规则，并且 C++ 区分大小写，因此 `xingming` 是一个不同的合法变量名。选项 A 错误，因为 `XingMing` 是合法的变量名。选项 B 错误，因为变量名不能包含空格。选项 D 错误，因为变量名不能包含连字符 `-`。"
+    },
+    {
+      "id": "c4d0TK0Cl8kOmbz1gjNT9",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下列C++代码中a和b都是整型变量，执行后，其结果是（ ）。\n\n```cpp\na = 13;\nb = 5;\ncout << a / b << a % b;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 3"
+        },
+        {
+          "label": "B",
+          "text": "23"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "以上都不准确"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`a / b` 执行整型除法，`13 / 5` 的结果是 `2`。`a % b` 执行取模运算，`13 % 5` 的结果是 `3`。`cout << a / b << a % b;` 会将这两个结果紧密连接输出，即 `2` 后面直接跟着 `3`，形成 `23`。因此，选项 B 是正确的。选项 A 错误是因为输出之间没有空格；选项 C 错误是因为计算结果不符。"
+    },
+    {
+      "id": "iA_Os7HHVCuLcwyKZDYwQ",
+      "order": 5,
+      "type": "single_choice",
+      "content": "C++表达式 `3 * 4 % 5 / 6` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++中，乘法 `*`、取模 `%` 和除法 `/` 运算符具有相同的优先级，并遵循从左到右的结合性。表达式 `3 * 4 % 5 / 6` 首先计算 `3 * 4` 得到 `12`，接着计算 `12 % 5` 得到 `2`，最后计算 `2 / 6`（整数除法）得到 `0`。因此，正确答案是 D。其他选项在计算过程中没有遵循正确的运算符优先级和整数除法规则。"
+    },
+    {
+      "id": "1VJrVYxou_uIUCUbZVc-2",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面的C++代码中变量N和M都是整型，则执行时如果先输入10并输入一个制表符后输入20并回车，其输出的数值是（ ）。\n\n```cpp\nscanf(\"%d\", &N);\nscanf(\"%d\", &M);\nprintf(\"{%d}\",N+M);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "{30}"
+        },
+        {
+          "label": "B",
+          "text": "1020"
+        },
+        {
+          "label": "C",
+          "text": "{N+M}"
+        },
+        {
+          "label": "D",
+          "text": "不输出，继续等待输入"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`scanf(\"%d\", &N);` 会读取 `10` 并赋值给 `N`。接着，`scanf(\"%d\", &M);` 会自动跳过制表符，然后读取 `20` 并赋值给 `M`。因此 `N` 为 `10`，`M` 为 `20`，`N+M` 的结果是 `30`。`printf` 语句会按照 `{}` 格式输出 `30`，即 `{30"
+    },
+    {
+      "id": "UdyJZQ-qmg5_KhPb1c6EX",
+      "order": 7,
+      "type": "single_choice",
+      "content": "当前是9月，编写C++代码求N个月后的月份。横线处应填入的代码是（ ）。\n\n```cpp\nint N, M;\ncin >> N;\nM = _____________;\nif (M == 0)\n    printf(\"%d个月后12月\", N);\nelse\n    printf(\"%d个月后是%d月\", N, M);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N % 12"
+        },
+        {
+          "label": "B",
+          "text": "9 + N % 12"
+        },
+        {
+          "label": "C",
+          "text": "(9 + N) / 12"
+        },
+        {
+          "label": "D",
+          "text": "(9 + N) % 12"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。**\n\n1.  **D 选项正确：** `(9 + N) % 12` 首先计算从年初算起经过的总月数 (`9 +"
+    },
+    {
+      "id": "cFR06bxWYVc1_JpDyd3Mf",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint n = 0;\nfor (int i = 0; i < 100; i++)\n    n += i % 2;\ncout << n;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5050"
+        },
+        {
+          "label": "B",
+          "text": "4950"
+        },
+        {
+          "label": "C",
+          "text": "50"
+        },
+        {
+          "label": "D",
+          "text": "49"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该代码中，循环 `for (int i = 0; i < 100; i++)` 使 `i` 从 `0` 遍历到 `99`。表达式 `i % 2` 在 `i` 为偶数时结果为 `0`，在 `i` 为奇数时结果为 `1`。因此，`n` 只在 `i` 为奇数时累加 `1`。在 `0` 到 `99` 之间共有 `50` 个奇数（1, 3, ..., 99），所以 `n` 的最终值为 `50`。选项 A 和 B 是求和的结果，选项 D 错误地计算了奇数的个数。"
+    },
+    {
+      "id": "zMZVF9ke2OJXPfsK7YOPQ",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面的C++代码执行后输出是（ ）。\n\n```cpp\nint N = 0, i;\nfor (i = -100; i < 100; i++)\n    N += i % 10;\ncout << N;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "900"
+        },
+        {
+          "label": "B",
+          "text": "100"
+        },
+        {
+          "label": "C",
+          "text": "0"
+        },
+        {
+          "label": "D",
+          "text": "-100"
+        }
+      ],
+      "answer": "C",
+      "explanation": "循环变量 `i` 从 -100 遍历到 99。每次循环，`N` 累加 `i % 10` 的结果。由于 `i %"
+    },
+    {
+      "id": "f7u-mIb4TSCIOUaIgY5eh",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint i;\nfor(i = 1; i < 5; i++){\n    if(i % 3 == 0)\n        break;\n    printf(\"%d#\",i);\n}\nif(i > 5) printf(\"END\\n\");\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1#2#"
+        },
+        {
+          "label": "B",
+          "text": "1#2#END"
+        },
+        {
+          "label": "C",
+          "text": "1#2"
+        },
+        {
+          "label": "D",
+          "text": "1#2#3#4#END"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当 `i` 为 `1` 和 `2` 时，`i % 3 == 0` 条件不满足，分别输出 `1#` 和 `2#`。当 `i` 递增到 `3` 时，`i % 3 == 0` 条件成立，`break` 语句会立即终止 `for` 循环。此时 `i` 的值为 `3`，不满足 `i > 5` 的条件，因此 `END` 不会被输出。所以正确输出是 `1#2#`，选项A正确。其他选项因输出 `END` 或输出不完整而错误。"
+    },
+    {
+      "id": "f4qUX_Cs8CJXmIDPnJu_K",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面的C++代码用于求N的镜面数（N的个位到最高位的各位数字依次反过来出现在数字中，但高位0将被忽略，不输出），如输入1234，则将输出 4321 ，又如输入120，则将输出 21 ，错误的选项是（ ）。\n\n```cpp\ncout << \"请输入个位数不为0的正整数：\";\ncin >> N;\nrst = 0; // 保存逆序结果\nwhile (______________){\n    rst = rst * 10 + N % 10;\n    N = N / 10;\n}\ncout << rst << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N != 0"
+        },
+        {
+          "label": "B",
+          "text": "not (N == 0)"
+        },
+        {
+          "label": "C",
+          "text": "N = 0"
+        },
+        {
+          "label": "D",
+          "text": "N > 0"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C `N = 0` 是赋值语句而非比较语句。在 `while` 循环中，`N = 0` 会将 `N` 赋值为 0，并且"
+    },
+    {
+      "id": "3_PIBoi34_VSEX_f7u2vv",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面C++代码用于交换两个正整数a和b的值，不能实现交换的代码是（ ）。\n\nA.\n```cpp\ncout << \"输入第一个正整数: \";\ncin >> a;\ncout << \"输入第二个正整数: \";\ncin >> b;\ntemp = a;\na = b;\nb = temp;\ncout << \"a=\" << a << \" b=\" << b << endl;\n```\n\nB.\n```cpp\ncout << \"输入第一个正整数: \";\ncin >> a;\ncout << \"输入第二个正整数: \";\ncin >> b;\nb = a - b;\na = a - b;\nb = a + b;\ncout << \"a=\" << a << \" b=\" << b << endl;\n```\n\nC.\n```cpp\ncout << \"输入第一个正整数: \";\ncin >> a;\ncout << \"输入第二个正整数: \";\ncin >> b;\na = a + b;\nb = a - b;\na = a - b;\ncout << \"a=\" << a << \" b=\" << b << endl;\n```\n\nD.\n```cpp\ncout << \"输入第一个正整数: \";\ncin >> a;\ncout << \"输入第二个正整数: \";\ncin >> b;\na, b = b, a;\ncout << \"a=\" << a << \" b=\" << b << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "选项A的代码"
+        },
+        {
+          "label": "B",
+          "text": "选项B的代码"
+        },
+        {
+          "label": "C",
+          "text": "选项C的代码"
+        },
+        {
+          "label": "D",
+          "text": "选项D的代码"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D的代码 `a, b = b, a;` 在C++中不能实现交换。在C++中，逗号运算符 `,` 会从左到右依次计算表达式"
+    },
+    {
+      "id": "CbLt3lhdWHeu51Nms5lMy",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面C++代码用于获得正整数N的第M位数，约定个位数为第1位，如N等于1234，M等于2，则输出3。假设M的值是大于等于1且小于等于N的位数。横线处应填入的代码是（ ）。\n\n```cpp\nint N, M, div=1;\ncout << \"请输入一个正整数：\";\ncin >> N;\ncout << \"请输入从右到左取第几位数：\";\ncin >> M;\n\nfor (int i = 0; i < (M - 1); i++) div *= 10;\n\ncout << (______________);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N % div / 10"
+        },
+        {
+          "label": "B",
+          "text": "N / div / 10"
+        },
+        {
+          "label": "C",
+          "text": "N % div % 10"
+        },
+        {
+          "label": "D",
+          "text": "N / div % 10"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是D。`N / div` 操作通过整数除法移除了 `N` 右侧的 `M-1` 位数字，使得原数字的第 `M` 位（从右往左数）变成了新的个位数。接着，`% 10` 操作可以精确地"
+    },
+    {
+      "id": "nwq7P9Yrh4uRdPlW94osZ",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nnum = 0;\nwhile (num <= 5){\n    num += 1;\n    if (num == 3)\n        continue;\n    printf(\"%d#\", num);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1#2#4#5#6#"
+        },
+        {
+          "label": "B",
+          "text": "1#2#4#5#6"
+        },
+        {
+          "label": "C",
+          "text": "1#2#3#4#5#6#"
+        },
+        {
+          "label": "D",
+          "text": "1#2#3#4#5#6"
+        }
+      ],
+      "answer": "A",
+      "explanation": "代码中的 `while` 循环会从 `num` 为 0 开始执行，每次循环先将 `num` 加 1。当 `num` 变为 3 时，`if (num == 3)` 条件成立，`continue` 语句会跳过当前循环中 `printf` 的执行，直接进入下一次循环。因此，数字 3 不会被打印。循环会一直执行到 `num` 变为 6，此时 `num <= 5` 不再成立，循环结束。最终输出为 `"
+    },
+    {
+      "id": "bpyYmevxqee_JFXENzzEM",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面C++代码用于记录多个输入数中的最大数和最小数（输入 -999 则输入结束），相关说法错误的是（ ）。\n\n```cpp\ncin >> now_num;\nmin_num = max_num = now_num;\n\nwhile (now_num != -999){\n    if (max_num < now_num)\n        max_num = now_num;\n\n    if (min_num > now_num)\n        min_num = now_num;\n\n    cin >> now_num;\n}\ncout << min_num << ' ' << max_num;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "程序运行时如果第一个数输入 -999 ，则输出将是 -999 -999"
+        },
+        {
+          "label": "B",
+          "text": "程序输入过程中，如果输入的第一个数不是 -999 ，则如果待输入的数据中没有 -999 ，则程序能求出已输入整数中的最大数和最小数"
+        },
+        {
+          "label": "C",
+          "text": "如果用于输入考试成绩，即成绩中不可能有 -999 ，则程序能求出已输入成绩中的最高成绩和最低成绩"
+        },
+        {
+          "label": "D",
+          "text": "可以将 cin >> now_num; 移动到 while (now_num != -999) { 下面，结果不变"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n\n1.  **解释 D 为什么错误：**\n    将 `cin >> now_num;` 移动到 `while (now_num != -99"
+    },
+    {
+      "id": "RCbPDN2B0T9adVU-3x6sP",
+      "order": 16,
+      "type": "true_false",
+      "content": "在集成开发环境里调试程序时，要注意不能修改源程序，因为如果修改，就要终止调试、关闭该文件并重新打开，才能再次开始调试。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "现代集成开发环境（IDE）通常允许在调试过程中修改源代码。修改后，IDE会提示重新编译，然后你可以选择继续调试，通常无需终止整个调试会话或关闭文件。题目中描述的“终止调试、关闭该文件并重新打开”才能再次调试的说法是不准确的，因此答案为F（错误）。"
+    },
+    {
+      "id": "qJKihj4Yef8x6xbeXNcKU",
+      "order": 17,
+      "type": "true_false",
+      "content": "执行C++表达式 `10 % 0.5` 将报错，因为 0.5 所在位置只能是整数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 的 `%` 运算符（取模运算符）要求其两边的操作数都必须是整数类型。表达式 `10 % 0.5` 中，`0.5` 是浮点数，不符合取模运算符的操作数类型要求。因此，编译器在编译时就会报错，指出操作数类型不匹配。题目描述是正确的。"
+    },
+    {
+      "id": "6wCDU2z3JqK0ocPytYr4s",
+      "order": 18,
+      "type": "true_false",
+      "content": "下面C++代码执行后将输出 9 。\n\n```cpp\nfor (i = 0; i < 10; i++)\n    break;\ncout << i;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "当 `i` 初始化为 `0` 时，`for` 循环条件 `i < 10` 成立。循环体内的 `break` 语句会立即终止循环，导致 `i++` 永远不会执行。因此，`i` 的值保持为 `0`，程序将输出 `0`。题目说输出 `9` 是错误的，所以选项 `F` 正确。"
+    },
+    {
+      "id": "z5hHiofI7M8qHFkg8pH1q",
+      "order": 19,
+      "type": "true_false",
+      "content": "下面C++代码执行后将输出 55 。\n\n```cpp\nn = 0;\nfor (int i = 0; i > -10; i--)\n    n = n + i * -1;\ncout << n;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "代码中的循环 `for (int i = 0; i > -10; i--)` 会使变量 `i` 从 0 递减到 -9。在循环体内，`n = n + i * -1` 实际上是将 `n` 加上 `i` 的绝对值。因此，`n` 的最终值是 `0 + 1 + 2 + ... + 9` 的和，即 45。题目说输出 55，与实际输出 45 不符，所以原说法是错误的。"
+    },
+    {
+      "id": "pnRa_32I5fb_lfuTNHhyA",
+      "order": 20,
+      "type": "true_false",
+      "content": "将下面C++代码中的 L1 行的 `i = 0` 修改为 `i = 1` ，其输出与当前代码输出相同。\n\n```cpp\ncnt = 0;\nfor (int i = 0; i < 100; i++) // L1\n    cnt += i;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "将 `L1` 行的 `i = 0` 修改为 `i = 1` 后，循环从 `i = 1` 开始累加，而不是从 `i = 0` 开始。由于 `cnt += 0` 不会改变 `cnt` 的值，所以无论是否包含 `i = 0` 时的累加，最终 `cnt` 的值都相同。因此，输出结果不变，选项 T 正确。"
+    },
+    {
+      "id": "P6xByrDpbQwan0nRD17fw",
+      "order": 21,
+      "type": "true_false",
+      "content": "将下面C++代码中的 `i < 10` 修改为 `i <= 10` ，其执行后输出相同。\n\n```cpp\nint n, i;\nn = i = 0;\nwhile (i < 10){\n    n += i;\n    i += 1;\n}\ncout << n;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "原始代码中，循环条件 `i < 10` 使得 `i` 的取值范围是 0 到 9，`n` 累加的是 0 到 9 的和。修改后，循环条件 `i <= 10` 使得 `i` 的取值范围是 0 到 10，`n` 会多累加一个 `i=10`。因此，两次执行 `cout << n;` 的输出结果将不同，所以题目中“其执行后输出相同”的说法是错误的，正确答案为 F。"
+    },
+    {
+      "id": "lYbpTlchuBdbEbIA_Rpj7",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面的C++代码执行后将输出 45 。\n\n```cpp\nint n, i;\nn = i = 0;\nwhile (i < 10){\n    i += 1;\n    n += i;\n}\ncout << n;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码计算的是从1到10所有整数的和。初始 `n` 和 `i` 都为0，循环中 `i` 从1递增到10，每次将 `i` 的当前值加到 `n` 上。当 `i` 达到10时，`n` 的值变为 1+2+...+10 = 55。因此，代码最终输出的是 55，而非 45，所以原题目描述是错误的。"
+    },
+    {
+      "id": "REt2l-TxNpP364vQt6uSM",
+      "order": 23,
+      "type": "true_false",
+      "content": "执行C++代码 `cout << (12 + 12.12)` 将报错，因为 12 是 int 类型，而 12.12 是 float 类型，不同类型不能直接运算。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 允许不同数值类型之间进行运算，不会报错。当 `int` 类型的 `12` 与 `double` 类型的 `12.12` 相加时，`12` 会被隐式提升为 `double` 类型，然后执行加法运算。因此，`cout << (12 + 12.12)` 会正常输出 `24.12`，选项 F 是正确的。"
+    },
+    {
+      "id": "5JnfV4mY0siwi92Sr0WU0",
+      "order": 24,
+      "type": "true_false",
+      "content": "下面C++代码执行时将导致无限循环（也称死循环）。\n\n```cpp\nint count = 0;\nwhile (count < 5){\n    count += 1;\n    if (count == 3)\n        continue;\n    cout << count << ' ';\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码不会导致无限循环。`count` 变量在每次循环开始时都会通过 `count += 1;` 递增，即使 `if (count == 3)` 条件为真，`continue` 语句也只是跳过当前迭代中 `cout` 的输出，并不会阻止 `count` 的更新。因此，`count` 最终会达到 5，使 `while (count < 5)` 条件变为假，循环正常终止。所以，题目中“将导致无限循环”的说法是错误的，正确答案为 F。"
+    },
+    {
+      "id": "f1LEVukfI8AAQh0KiW9nT",
+      "order": 25,
+      "type": "true_false",
+      "content": "下列C++代码用于求斐波那契数列，即第1个数为0，第2个数为1，从第三个数开始，依次是其前两个数之和。如果输入的值为大于1的正整数，该代码能实现所求。\n\n```cpp\ncin >> n;\na = 0, b = 1;\nfor (int j = 0; j < n; j++){\n    cout << a << \" \";\n    b = b + a;\n    a = b - a;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码正确实现了斐波那契数列的计算。在每次循环中，`cout << a` 打印当前的斐波那契数。接着，`b = b +"
+    }
+  ]
+}

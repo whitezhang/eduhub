@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202506",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202506",
+  "title": "GESP C++一级 202506",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2025年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202506"
+  },
+  "questions": [
+    {
+      "id": "mBNTRfkF7a-6hy6PZwgem",
+      "order": 1,
+      "type": "single_choice",
+      "content": "2025年4月19日在北京举行了一场颇为瞩目的人形机器人半程马拉松赛。比赛期间，跑动着的机器人会利用身上安装的多个传感器所反馈的数据来调整姿态、保持平衡等，那么这类传感器类似于计算机的（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "处理器"
+        },
+        {
+          "label": "B",
+          "text": "存储器"
+        },
+        {
+          "label": "C",
+          "text": "输入设备"
+        },
+        {
+          "label": "D",
+          "text": "输出设备"
+        }
+      ],
+      "answer": "C",
+      "explanation": "传感器从外部环境获取数据（如姿态、平衡信息）并传递给机器人系统进行处理，这与计算机的输入设备（如键盘、鼠标、摄像头）从外部获取信息并输入给计算机的原理一致，因此C是正确的。处理器负责处理这些数据，存储器用于保存数据，而输出设备则用于展示或执行处理后的结果，与传感器的功能不同。"
+    },
+    {
+      "id": "oZVMbHH5ln-M4NylOfyxT",
+      "order": 2,
+      "type": "single_choice",
+      "content": "在某集成开发环境中调试下面代码段时尝试设置断点和检查局部变量，下面哪个说法是错误的（ ）。\n\n```cpp\nint i,N = 0; // L1\ncin >> N; // L2\nfor (i = 1; i < 9; i++)\n    if (N % i == 0) break; // L3\nif (i < 9)\n    printf(\"N不能大于9\\n\"); // L4\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "断点不可以设在L1标记的代码行"
+        },
+        {
+          "label": "B",
+          "text": "执行暂停在L2标记的代码行时，可以检测i的值"
+        },
+        {
+          "label": "C",
+          "text": "执行暂停在L3标记的代码行时，可以修改i的值"
+        },
+        {
+          "label": "D",
+          "text": "执行有可能暂停在L4标记的代码行"
+        }
+      ],
+      "answer": "A",
+      "explanation": "L1 `int i,N = 0;` 是一个变量声明和初始化语句，是可执行的代码行，因此可以在其上设置断点，选项A的说法是错误的。当程序暂停在L2时，`i` 已经声明并存在于作用域中，可以检测其值，所以B正确。在调试暂停时，可以修改局部变量的值，因此C正确。L4 `printf(\"N不能大于9\\n\");` 是可执行语句，当 `i < 9` 条件满足时会执行，所以D正确。"
+    },
+    {
+      "id": "UZls2RqwGp39mszffxXte",
+      "order": 3,
+      "type": "single_choice",
+      "content": "对下列C++的代码，描述准确的是（ ）。\n\n```cpp\nint first = 10;\nprintf(\"{%d}\\n\", First)\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "执行后输出10"
+        },
+        {
+          "label": "B",
+          "text": "执行后输出 {First}"
+        },
+        {
+          "label": "C",
+          "text": "执行后输出 \"{First}\""
+        },
+        {
+          "label": "D",
+          "text": "编译报错，因为First应该是first"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++ 语言严格区分大小写，变量 `first` 和 `First` 是两个不同的标识符。代码中声明了 `int first = 10;`，但在 `printf` 函数中使用了未声明的 `First`。这会导致编译时报错，程序无法运行。因此，选项 A、B、C 描述的执行结果都不会发生。"
+    },
+    {
+      "id": "qK8hcCQuWvAKDqoYKaqct",
+      "order": 4,
+      "type": "single_choice",
+      "content": "在C++中，下列可以做变量名的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "X.cpp"
+        },
+        {
+          "label": "B",
+          "text": "X-cpp"
+        },
+        {
+          "label": "C",
+          "text": "X#cpp"
+        },
+        {
+          "label": "D",
+          "text": "X_cpp"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++变量名必须以字母或下划线开头，后续可包含字母、数字和下划线。选项 `D. X_cpp` 完全符合这些规则，因此是有效的变量名。而 `A. X.cpp` 包含 `.`，`B. X-cpp` 包含 `-`，`C. X#cpp` 包含 `#`，这些特殊字符都不能出现在C++变量名中。"
+    },
+    {
+      "id": "DvGpCarKzj6I7Qvx2Aiz3",
+      "order": 5,
+      "type": "single_choice",
+      "content": "C++表达式 `14-3*3%2` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "11"
+        },
+        {
+          "label": "C",
+          "text": "13"
+        },
+        {
+          "label": "D",
+          "text": "-67"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C++表达式 `14-3*3%2` 的计算遵循运算符优先级。乘法 `*` 和取模 `%` 的优先级高于减法 `-`。首先计算 `3*3` 得到 `9`，表达式变为 `14-9%2`。接着计算 `9%2` 得到 `1`。最后计算 `14-1`，结果是 `13`。因此，选项 C 是正确的。其他选项是由于没有正确遵循运算符优先级而导致的错误结果。"
+    },
+    {
+      "id": "YAvfRLaLzrzprVEMiQ39o",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面的C++代码执行后，其输出是（ ）。\n\n```cpp\nint x = 10, y = 20;\nx = x + y;\ny = x - y;\nx = x - y;\ncout << x << ' ' << y;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10 20"
+        },
+        {
+          "label": "B",
+          "text": "20 10"
+        },
+        {
+          "label": "C",
+          "text": "10 10"
+        },
+        {
+          "label": "D",
+          "text": "20 20"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码首先将 `x` 初始化为 10，`y` 初始化为 20。执行 `x = x + y;` 后，`x` 变为 30。接着，`y = x - y;` 将 `y` 更新为 `30 - 20 = 10`。最后，`x = x - y;` 将 `x` 更新为 `30 - 10 = 20`。因此，最终 `cout << x << ' ' << y;` 输出 `x` 为 20，`y` 为 10，即 `20 10`。这是一种不使用临时变量交换两个数值的方法。其他选项不符合代码执行的实际结果。"
+    },
+    {
+      "id": "5exzPzB_sLNAl3-pXiZ1o",
+      "order": 7,
+      "type": "single_choice",
+      "content": "定义整型变量 `int a=16`，则执行 `++a += 3` 之后，a的值会是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "17"
+        },
+        {
+          "label": "C",
+          "text": "19"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`++a` 是前置递增运算符，它会先将 `a` 的值加 `1`，此时 `a` 变为 `17`，并返回新值 `17`。接着，表达式变为 `17 += 3`，这等价于 `a = 17 + 3`。因此，`a` 的最终值是 `20`。选项 B 仅是 `++a` 后的结果，没有完成 `+= 3` 的运算；其他选项与计算过程不符。"
+    },
+    {
+      "id": "85Mg97CB3FCNAAaMGY9ww",
+      "order": 8,
+      "type": "single_choice",
+      "content": "C++的 `int` 类型变量 X 的值为8，如果执行 `cout << (++X)++;`，则输出和执行后 X 的值分别是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "8 9"
+        },
+        {
+          "label": "B",
+          "text": "9 9"
+        },
+        {
+          "label": "C",
+          "text": "9 10"
+        },
+        {
+          "label": "D",
+          "text": "编译错误，无法执行"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`++X` 会先将 `X` 增加到 9，并返回 `X` 的引用（lvalue）。接着，对这个引用执行 `(9)++`，这是一个后缀自增操作：它会先使用当前值 9 作为整个表达式的结果输出，然后将 `X` 再次增加到 10。因此，输出是 9，执行后 `X` 的值为 10。其他选项不符合 C++ 运算符的求值顺序和自增特性。"
+    },
+    {
+      "id": "I73U-4LQi7RdxkS8oxprU",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint a,b;\na = 3;\nb = 4;\nprintf(\"a+b=%02d#a+b={a+b}\", a+b, a+b);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "a+b=07#a+b={a+b}"
+        },
+        {
+          "label": "B",
+          "text": "a+b= 7#a+b=7"
+        },
+        {
+          "label": "C",
+          "text": "a+b=7#a+b={a+b}"
+        },
+        {
+          "label": "D",
+          "text": "a+b=7#a+b=7"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\n`printf` 函数中的 `%02d` 格式符表示将整数 `a+b`（即 7）以至少两位宽度输出，不足两位时前面用 `0` 填充，所以 `7` 会被格式化为 `07`。格式字符串中 `a+b={a+b}` 部分没有对应的格式符，因此会原样输出。其他选项错误在于未能正确理解 `%02d` 的零填充效果，或误以为 `a+b={a+b}` 中的 `{a+b}` 会被替换为变量值。"
+    },
+    {
+      "id": "K5JBTaB2qyJGn5l70y6Xv",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面的C++代码用于求M天后是星期几，两处横线处分别应填入的代码是（ ）。\n\n```cpp\nint N, M, D;\ncout << \"当前星期几? \"; // 星期日是0\ncin >> N;\ncout << \"求多少天后? \"; // 输入正整数\ncin >> M;\n\nD = ____________;\nif (____________)\n    printf(\"%d天后是星期日\", M);\nelse\n    printf(\"%d天后是星期%d\", M, D);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`(N + M) / 7` 和 `D == 0`"
+        },
+        {
+          "label": "B",
+          "text": "`(N + M) % 7` 和 `D == 0`"
+        },
+        {
+          "label": "C",
+          "text": "`(N + M) / 7` 和 `D <= 0`"
+        },
+        {
+          "label": "D",
+          "text": "`(N + M) % 7` 和 `D = 0`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。\n\n1.  **第一个空**：要求计算 `M` 天后是星期几。由于星期以7天为周期循环，我们应该使用模运算（"
+    },
+    {
+      "id": "o8OcC0PEWq84tFwJ227WK",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint i;\nfor (i = 1; i < 11; i += 3){\n    continue;\n    if (i % 2 == 0)\n        break;\n    printf(\"%d#\", i);\n}\nif (i >= 11)\n    printf(\"END\");\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "END"
+        },
+        {
+          "label": "B",
+          "text": "1#"
+        },
+        {
+          "label": "C",
+          "text": "1#4#END"
+        },
+        {
+          "label": "D",
+          "text": "1#4#7#10#END"
+        }
+      ],
+      "answer": "A",
+      "explanation": "循环体内的 `continue;` 语句会立即跳过当前循环迭代中它之后的所有代码，直接进入下一次迭代。因此，`printf(\"%d#\", i);` 永远"
+    },
+    {
+      "id": "CstJNoSO9Cx548Q82B6wP",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面的C++代码用于求N的所有因数（即能将N整除的数），如输入12则将输出 12,6,4,3,2,1 。横线处应填入（ ）。\n\n```cpp\nint i, N;\ncin >> N;\ni = N;\nwhile (______){\n    if (N % i == 0)\n        printf(\"%d,\", i);\n    i -= 1;\n}\nprintf(\"1\");\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i -= 1`"
+        },
+        {
+          "label": "B",
+          "text": "`i == 1`"
+        },
+        {
+          "label": "C",
+          "text": "`i > 1`"
+        },
+        {
+          "label": "D",
+          "text": "`i >= 1`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n1.  **为什么 C 是对的：** 题目要求输出 `12,6,4,3,2,1`，其中 `1`"
+    },
+    {
+      "id": "RglLPnZrTnJ1D3HWqS07Q",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出的是（ ）。\n\n```cpp\nint Sum = 0;\nfor (int i = 0; i < 10; i++){\n    if (i % 2 == 0)\n        continue;\n    if (i % 5 == 0)\n        break;\n    Sum += i;\n}\ncout << Sum;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "55"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "代码中的 `for` 循环从 `i = 0` 遍历到 `9`。当 `i` 是偶数时，`if (i % 2 =="
+    },
+    {
+      "id": "Uc-yW_xFa_25orEIOk6iP",
+      "order": 14,
+      "type": "single_choice",
+      "content": "试图编译并执行下面C++代码，下面描述正确的是（ ）。\n\n```cpp\nfloat x;\nx = 101;\nx++;\ncout << ++x;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "输出 101"
+        },
+        {
+          "label": "B",
+          "text": "输出 102"
+        },
+        {
+          "label": "C",
+          "text": "输出 103"
+        },
+        {
+          "label": "D",
+          "text": "编译将报错，无法执行"
+        }
+      ],
+      "answer": "C",
+      "explanation": "变量 `x` 首先被赋值为 `101`。执行 `x++` 后，`x` 的值变为 `102`。接着，`cout << ++x` 中的 `++x` 会先将 `x` 的值增加到 `103`，然后再输出。因此，最终输出 `103`。代码没有语法错误，可以正常编译执行。"
+    },
+    {
+      "id": "cd88dqATqk4aXHZutNyd_",
+      "order": 15,
+      "type": "single_choice",
+      "content": "以下C++代码可以找出百位、十位和个位满足特定条件的三位数，横线处应该填入的是（ ）。\n\n```cpp\nint count = 0;\nfor (int i = 100; i <= 999; i++) {\n    int a = i / 100;\n    _________________________\n    int c = i % 10;\n    if (a * a + b * b == c * c) {\n        count++;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int b = (i / 10) / 10;`"
+        },
+        {
+          "label": "B",
+          "text": "`int b = (i / 10) % 10;`"
+        },
+        {
+          "label": "C",
+          "text": "`int b = (i % 10) / 10;`"
+        },
+        {
+          "label": "D",
+          "text": "`int b = (i % 10) % 10;`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。要获取三位数 `i` 的十位数字 `b`，需要先通过 `i / 10` 移除个位（例如，123"
+    },
+    {
+      "id": "6TqG4mjvtSRICSn6D5kxg",
+      "order": 16,
+      "type": "true_false",
+      "content": "人们现在参加很多闭卷考试时通常都不允许带智能手机、平板电脑等，此外很多种智能手表同样因为具有嵌入操作系统及通信等功能，所以也不允许随身携带。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "题目描述了闭卷考试中禁止携带智能手机、平板电脑和智能手表等设备的常见规定，原因是这些设备具有通信和操作系统功能，可能用于作弊。这与实际考试规则相符，因此选择 T（正确）是正确的。选择 F（错误）则表示题目描述不符合事实，这显然是不对的。"
+    },
+    {
+      "id": "PNBiH40SsOH8lh5ojv-JI",
+      "order": 17,
+      "type": "true_false",
+      "content": "如果N是C++的整型变量，值为5，则表达式 `(N + !N)` 的值为4。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`N` 的值为5。逻辑非运算符 `!` 对非零值操作时结果为 `false`，在整型运算中 `false` 会转换为 `0`。因此，`!N` 的值为 `0`。表达式 `(N + !N)` 变为 `(5 + 0)`，其结果为 `5`。题目中说表达式的值为4，与实际结果不符，所以该说法是错误的。"
+    },
+    {
+      "id": "qqQtaT2XvoaSe8GaBuNbb",
+      "order": 18,
+      "type": "true_false",
+      "content": "在下面C++代码中，删除break语句对程序执行结果没有影响。\n\n```cpp\nint i;\nfor (i = 0; i < 10; i++){\n    continue;\n    cout << i << \"#\";\n    break;\n}\nif (i >= 10)\n    cout << \"END\";\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "代码中 `continue;` 语句会立即结束当前循环迭代，跳到下一次循环。因此，`cout << i << \"#\";` 和 `break;` 这两行代码永远不会被执行到。由于 `break;` 语句是不可达的，删除它对程序的执行流程和最终输出没有任何影响，循环会正常执行10次后结束，最后输出 \"END\"。所以，原说法是正确的。"
+    },
+    {
+      "id": "xqQWVutmKT6Vho5gckpVi",
+      "order": 19,
+      "type": "true_false",
+      "content": "删除下面C++代码中的continue后其输出是0#2#4#6#8#。\n\n```cpp\nint i;\nfor (i = 0; i < 10; i++){\n    if (i % 2 == 0){\n        cout << i << \"#\";\n        continue;\n    }\n}\nif (i >= 10)\n    cout << \"END\";\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "删除 `continue` 后，当 `i` 为偶数时，`cout << i << \"#\";` 会执行，但程序不会跳过当前循环的剩余部分。当"
+    },
+    {
+      "id": "2Ew_2eZ1tHVB9_gTdmmNJ",
+      "order": 20,
+      "type": "true_false",
+      "content": "将下面C++代码中的 `i < 100; i = i + 1` 修改为 `i < 200; i += i + 1`，其输出与当前代码输出相同。\n\n```cpp\nint cnt = 0;\nfor (int i = 0; i < 100; i = i + 1)\n    cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "原始代码中，循环 `for (int i = 0; i < 100; i = i + 1)` 会执行100次，使 `cnt` 最终"
+    },
+    {
+      "id": "vmsCOt9LNz-oT37wIIyuc",
+      "order": 21,
+      "type": "true_false",
+      "content": "交换下面C++代码中的 `i += 2` 和 `cnt += 1`，交换前后分别运行的两次输出相同。\n\n```cpp\nint i, cnt = 0;\ncnt = 0;\nwhile (i < 10){\n    i += 2;\n    cnt += 1;\n}\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "变量 `i` 在声明时没有初始化 (`int i;`)，其初始值是随机的（不确定的）。这导致 `while (i < 10)` 循环的判断"
+    },
+    {
+      "id": "HTBsxmOgiRtyTxgJ0jVPQ",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面的C++代码执行后将输出45。\n\n```cpp\nint cnt;\nfor (int i = 0; i < 10; i++)\n    cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`int cnt;` 声明了变量 `cnt` 但未对其进行初始化。访问未初始化的局部变量会导致未定义行为，程序输出结果不可预测，因此不一定会输出45。即使 `cnt` 碰巧初始值为0，循环结束后它也只会是10（循环执行10次，每次加1），而不是45。因此，题目说输出45是错误的。"
+    },
+    {
+      "id": "xxwnroyKWrSf8cHLj3Chw",
+      "order": 23,
+      "type": "true_false",
+      "content": "执行C++代码 `cout << (12 + 12.12)` 将报错，因为12是int类型，而12.12是float类型，不同类型不能直接运算。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 支持不同数据类型之间的隐式类型转换。在表达式 `12 + 12.12` 中，`int` 类型的 `12` 会被自动提升为 `double` 类型，与 `double` 类型的 `12.12` 进行运算，得到一个 `double` 类型的结果 `24.12`。这个过程是完全合法的，不会导致编译或运行时错误，因此原题目中“将报错”的说法是错误的。"
+    },
+    {
+      "id": "0BGo0iYkfsvfhawxF1ejC",
+      "order": 24,
+      "type": "true_false",
+      "content": "在C++代码中，不可以将变量命名为false，因为false是C++语言的关键字。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`false` 是 C++ 语言中的一个关键字，用于表示布尔类型的假值。C++ 规定关键字是保留的，不能用作变量名、函数名等标识符，否则会导致编译错误。因此，题目中“不可以将变量命名为false”的说法是正确的。"
+    },
+    {
+      "id": "ceajsvDdYd8DOPmvp-oTk",
+      "order": 25,
+      "type": "true_false",
+      "content": "X是C++的整型变量，则表达式 `3 < X < 5` 求值结果是4。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中，表达式 `3 < X < 5` 的求值顺序是从左到右。首先计算 `3 < X`，其结果是一个布尔值（`true` 或 `false`）。这个布尔值随后会被隐式转换为整数 `1` 或 `0`，再与 `5` 进行比较。因此，表达式会变成 `1 < 5` 或 `0 < 5`，两者都为 `true`。所以，无论 `X` 的值是多少，表达式 `3 < X < 5` 的最终结果总是 `true`（或 `1`），不可能是 `4`。题目描述错误，故选F。"
+    }
+  ]
+}

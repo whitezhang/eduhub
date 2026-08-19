@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202506",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202506",
+  "title": "GESP C++八级 202506",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2025年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202506"
+  },
+  "questions": [
+    {
+      "id": "CtKmZRJOt2YHG_5LbNntQ",
+      "order": 1,
+      "type": "single_choice",
+      "content": "一间的机房要安排6名同学进行上机考试，座位共2行3列。考虑到在座位上很容易看到同一行的左右两侧的屏幕，安排中间一列的同学做A卷，左右两列的同学做B卷。请问共有多少种排座位的方案？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "720"
+        },
+        {
+          "label": "B",
+          "text": "90"
+        },
+        {
+          "label": "C",
+          "text": "48"
+        },
+        {
+          "label": "D",
+          "text": "15"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该问题是关于将6名不同的同学安排到6个不同的座位上。虽然座位被分为A卷和B卷区域，但这只是描述了坐在该位置的同学将"
+    },
+    {
+      "id": "iC-KXJ-5pNURKCoXXK23R",
+      "order": 2,
+      "type": "single_choice",
+      "content": "又到了毕业季，学长学姐们都在开心地拍毕业照。现在有3位学长、3位学姐希望排成一排拍照，要求男生不相邻、女生不相邻。请问共有多少种拍照方案？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "720"
+        },
+        {
+          "label": "B",
+          "text": "72"
+        },
+        {
+          "label": "C",
+          "text": "36"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "B",
+      "explanation": "题目要求男生不相邻、女生不相邻，这表示男生和女生必须交替排列。由于男生和女生人数相同（各3位），共有两种可能的排列模式：`男 女 男 女 男 女` 或 `女 男 女 男 女 男`。\n\n对于第一种模式 `男 女 男 女 男 女`：3位男生可以在各自的位置上进行 `3!`"
+    },
+    {
+      "id": "214czqC4Mxuji_kDvVY_v",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下列关于C++类和对象的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "通过语句 `const int x = 5;` 定义了一个对象 `x`。"
+        },
+        {
+          "label": "B",
+          "text": "通过语句 `std::string t = \"12345\";` 定义了一个对象 `t`。"
+        },
+        {
+          "label": "C",
+          "text": "通过语句 `void (*fp)() = NULL;` 定义了一个对象 `fp`。"
+        },
+        {
+          "label": "D",
+          "text": "通过语句 `class MyClass;` 定义了一个类 `MyClass`。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误，因为 `class MyClass;` 只是一个类的**前向声明**，它告诉编译器 `MyClass` 是一个类名，但并未完整定义类的结构和成员。要定义一个类，需要使用花括号 `{}` 来包含其成员。选项A、B、C都正确，它们分别定义了一个 `const int` 类型的对象、一个 `std::string` 类型的对象和一个函数指针类型的对象。"
+    },
+    {
+      "id": "B2Y14blFzYgwy-TRBY7mD",
+      "order": 4,
+      "type": "single_choice",
+      "content": "关于生成树的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "一个无向连通图，一定有生成树。"
+        },
+        {
+          "label": "B",
+          "text": "n个顶点的无向图，其生成树要么不存在，要么一定包含n-1条边。"
+        },
+        {
+          "label": "C",
+          "text": "n个顶点、n-1条边的无向图，不可能有多颗生成树。"
+        },
+        {
+          "label": "D",
+          "text": "n个顶点、n-1条边的无向图，它本身就是自己的生成树。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D. n个顶点、n-1条边的无向图，它本身就是自己的生成树。\n    *   **错误原因：** 一个无向图要成为自己的生成树"
+    },
+    {
+      "id": "k0nF-a64xpdsDMby5rn3e",
+      "order": 5,
+      "type": "single_choice",
+      "content": "一对夫妻生男生女的概率相同。这对夫妻希望儿女双全。请问这对夫妻生下两个孩子时，实现儿女双全的概率是多少？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2/3"
+        },
+        {
+          "label": "B",
+          "text": "1/3"
+        },
+        {
+          "label": "C",
+          "text": "1/2"
+        },
+        {
+          "label": "D",
+          "text": "1/4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "生两个孩子的所有可能情况有：男男、女女、男女、女男，共4种等概率情况。其中，实现儿女双全（即一男一女）的情况有男女和女男两种。因此，儿女双全的概率是 2/4，即 1/2。选项A、B、D的概率值与计算结果不符，故不正确。"
+    },
+    {
+      "id": "paew0bGWM9bkPS7Pv3n1h",
+      "order": 6,
+      "type": "single_choice",
+      "content": "已定义变量 `double a, b;`，下列哪个表达式可以用来判断一元二次方程$x^2 + ax + b = 0$是否有实根？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`4 * b - a * a < 0`"
+        },
+        {
+          "label": "B",
+          "text": "`4 * b <= a * a`"
+        },
+        {
+          "label": "C",
+          "text": "`a * a - 4 * b`"
+        },
+        {
+          "label": "D",
+          "text": "`b * 4 - a * a`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "一元二次方程 $x^2 + ax + b = 0$ 有实根的条件是其判别式 $\\Delta \\ge 0$。对于此方程，判别式为 $\\Delta = a^2 - 4b$。因此，需要判断 $a^2 - 4b \\ge 0$，这等价于 $a^2 \\ge 4b$ 或 $4b \\le a^2$。选项 B `4 * b <= a * a` 正好符合此条件。选项 A `4 * b - a * a < 0` 对应 $4b < a^2$，表示有两个不相等的实根，且不等式方向相反。选项 C `a * a - 4 * b` 和 D `b * 4 - a * a` 只是判别式或其负值，并非判断条件。"
+    },
+    {
+      "id": "xyk3GxSgHgZ40zK1vmyA8",
+      "order": 7,
+      "type": "single_choice",
+      "content": "n个结点的二叉树，执行广度优先搜索的平均时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(log n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n)"
+        },
+        {
+          "label": "D",
+          "text": "O(2^n)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "广度优先搜索（BFS）遍历二叉树时，每个结点都会被访问且仅访问一次，每个边也会被检查一次。对于一个有 `n` 个结点的二叉树，总共需要处理 `n` 个结点和 `n-1` 条边，因此其时间复杂度与结点数量 `n` 成正比，为 `O(n)`。选项 A (`O(log n)`) 和 B (`O(n log n)`) 通常用于查找或排序等操作，而选项 D (`O(2^n)`) 是指数级复杂度，远超遍历所需。"
+    },
+    {
+      "id": "J6wWftGqmQoZNmyxzh05-",
+      "order": 8,
+      "type": "single_choice",
+      "content": "以下关于动态规划的说法中，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "动态规划方法通常能够列出递推公式。"
+        },
+        {
+          "label": "B",
+          "text": "动态规划方法的时间复杂度通常为状态的个数。"
+        },
+        {
+          "label": "C",
+          "text": "动态规划方法有递推和递归两种实现形式。"
+        },
+        {
+          "label": "D",
+          "text": "对很多问题，递推实现和递归实现动态规划方法的时间复杂度相当。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。动态规划的时间复杂度通常是“状态的个数”乘以“每个状态计算所需的时间”，而不仅仅是状态的个数。例如，如果每个状态的计算需要遍历O(N)次，总复杂度就会是O(状态数 * N)。选项A是正确的，动态规划的核心就是通过递推公式解决问题。选项C和D也是正确的，动态规划可以用带记忆化的递归（自顶向下）或迭代的递推（自底向上）两种方式实现，且它们的渐进时间复杂度通常是相同的。"
+    },
+    {
+      "id": "l26W4JrA4uNVgJF0mNPBM",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面的 `sum_digit` 函数试图求出从 1 到 n（包含 1 和 n）的数中，包含数字 d 的个数。该函数的时间复杂度为（ ）。\n\n```cpp\n#include <string>\nint count_digit(int n, char d) {\n    int cnt = 0;\n    std::string s = std::to_string(n);\n    for (int i = 0; i < s.length(); i++)\n        if (s[i] == d)\n            cnt++;\n    return cnt;\n}\nint sum_digit(int n, char d) {\n    int sum = 0;\n    for (int i = 1; i <= n; i++)\n        sum += count_digit(i, d);\n    return sum;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n)"
+        },
+        {
+          "label": "C",
+          "text": "O(log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n^2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`sum_digit` 函数包含一个从 `1` 到 `n` 的循环，共执行 `n` 次。在每次循环中，`count_digit` 函数将数字 `i` 转换为字符串，其长度（即数字位数）大约是 `log10(i)`，因此 `std::to_string` 和遍历字符串的操作时间复杂度为 `O(log i)`。所以，总时间复杂度是 `n` 乘以 `O(log n)`，即 `O(n log n)`。其他选项不符合 `count_digit` 函数的 `O(log i)` 特性或 `sum_digit` 的 `n` 次迭代。"
+    },
+    {
+      "id": "zOpZEIPq18-Ix7ViIWtMk",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nconst int N = 10;\nint ch[N][N][N];\nint main() {\n    for (int x = 0; x < N; x++)\n        for (int y = 0; y < N; y++)\n            for (int z = 0; z < N; z++)\n                if (x == 0 && y == 0 && z == 0)\n                    ch[x][y][z] = 1;\n                else {\n                    if (x > 0)\n                        ch[x][y][z] += ch[x - 1][y][z];\n                    if (y > 0)\n                        ch[x][y][z] += ch[x][y - 1][z];\n                    if (z > 0)\n                        ch[x][y][z] += ch[x][y][z - 1];\n                }\n    std::cout << ch[1][2][3] << std::endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "60"
+        },
+        {
+          "label": "B",
+          "text": "20"
+        },
+        {
+          "label": "C",
+          "text": "15"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该程序通过动态规划计算从 `(0,0,0)` 到 `(x,y,z)` 只能向 `x`、`y`、`z` 正方向"
+    },
+    {
+      "id": "pcA2dKsoJwwLbrDHE1OPa",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面 `count_triple` 函数的时间复杂度为（ ）。\n\n```cpp\nint gcd(int a, int b) {\n    if (a == 0)\n        return b;\n    return gcd(b % a, a);\n}\nint count_triple(int n) {\n    int cnt = 0;\n    for (int v = 1; v * v * 4 <= n; v++)\n        for (int u = v + 1; u * (u + v) * 2 <= n; u += 2)\n            if (gcd(u, v) == 1) {\n                int a = u * u - v * v;\n                int b = u * v * 2;\n                int c = u * u + v * v;\n                cnt += n / (a + b + c);\n            }\n    return cnt;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n^2)"
+        },
+        {
+          "label": "C",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n^2 log n)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`count_triple` 函数包含两层嵌套循环。外层循环 `v` 的条件是 `v * v * 4 <= n`，因此 `v` 的最大值约为"
+    },
+    {
+      "id": "RV-3UvR_7-GjIiBegB6Js",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面 `quick_sort` 函数试图实现快速排序算法，两处横线处分别应该填入的是（ ）。\n\n```cpp\nvoid swap(int & a, int & b) {\n    int temp = a; a = b; b = temp;\n}\nint partition(int a[], int l, int r) {\n    int pivot = a[l], i = l + 1, j = r;\n    while (i <= j) {\n        while (i <= j && a[j] >= pivot)\n            j--;\n        while (i <= j && a[i] <= pivot)\n            i++;\n        if (i < j)\n            swap(a[i], a[j]);\n    }\n    ________; // 在此处填入选项\n    return ________; // 在此处填入选项\n}\nvoid quick_sort(int a[], int l, int r) {\n    if (l < r) {\n        int pivot = partition(a, l, r);\n        quick_sort(a, l, pivot - 1);\n        quick_sort(a, pivot + 1, r);\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nswap(a[l], a[i])\ni\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nswap(a[l], a[j])\ni\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nswap(a[l], a[i])\nj\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nswap(a[l], a[j])\nj\n```"
+        }
+      ],
+      "answer": "D",
+      "explanation": "在 `partition` 函数中，`while` 循环结束后，`j` 指针指向的元素是最后一个小于或等于 `pivot` 的元素，而 `i` 指"
+    },
+    {
+      "id": "h4L0qr20TnMiwlgO3buM7",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面 `LIS` 函数试图求出最长上升子序列的长度，横线处应该填入的是（ ）。\n\n```cpp\nint max(int a, int b) {\n    return (a > b) ? a : b;\n}\nint LIS(vector<int> & nums) {\n    int n = nums.size();\n    if (n == 0)\n        return 0;\n    vector<int> dp(n, 1);\n    int maxLen = 1;\n    for (int i = 1; i < n; i++) {\n        for (int j = 0; j < i; j++)\n            if (nums[j] < nums[i])\n                ________; // 在此处填入选项\n        maxLen = max(maxLen, dp[i]);\n    }\n    return maxLen;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`dp[j] = max(dp[j] + 1, dp[i])`"
+        },
+        {
+          "label": "B",
+          "text": "`dp[j] = max(dp[j], dp[i] + 1)`"
+        },
+        {
+          "label": "C",
+          "text": "`dp[i] = max(dp[i] + 1, dp[j])`"
+        },
+        {
+          "label": "D",
+          "text": "`dp[i] = max(dp[i], dp[j] + 1)`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`dp[i]` 存储以 `nums[i]` 结尾的最长上升子序列的长度。当 `nums[j] < nums[i]` 时，`nums[i]` 可以接在以 `nums[j]` 结尾的子序列后面，形成一个长度为 `dp[j] + 1` 的新子序列。"
+    },
+    {
+      "id": "VqV8smtWYPAyd7KSa2dq6",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面 `LIS` 函数试图求出最长上升子序列的长度，其时间复杂度为（ ）。\n\n```cpp\n#define INT_MIN (-1000)\nint LIS(vector<int> & nums) {\n    int n = nums.size();\n    vector<int> tail;\n    tail.push_back(INT_MIN);\n    for (int i = 0; i < n; i++) {\n        int x = nums[i], l = 0, r = tail.size();\n        while (l < r) {\n            int mid = (l + r) / 2;\n            if (tail[mid] < x)\n                l = mid + 1;\n            else\n                r = mid;\n        }\n        if (r == tail.size())\n            tail.push_back(x);\n        else\n            tail[r] = x;\n    }\n    return tail.size() - 1;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(log n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n^2)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该函数的主体是一个 `for` 循环，它会遍历 `nums` 数组中的 `n` 个元素，所以外层循环的次数是 `n`。在每次循环内部，代码执行了一个二分查找 (`while (l < r)`) 来找到合适的位置。这个二分查找是在 `tail` 向量上进行的，`tail` 向量的最大长度可以达到 `n`，因此每次二分查找的时间复杂度是 O(log n)。所以，总的时间复杂度是 `n` 次循环乘以每次循环 O(log n) 的操作，即 O(n log n)。其他选项不符合代码中 `n` 次迭代和每次迭代 O(log n) 的操作特征。"
+    },
+    {
+      "id": "t8L9YDYdl-IJUmc_9-Bcw",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面的程序使用邻接矩阵表达的带权无向图，则从顶点0到顶点3的最短距离为（ ）。\n\n```cpp\nint weight[4][4] = {\n    { 0,  5,  8, 10},\n    { 5,  0,  1,  7},\n    { 8,  1,  0,  3},\n    {10,  7,  3,  0}};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "11"
+        },
+        {
+          "label": "D",
+          "text": "12"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。从顶点0到顶点3的最短路径是 0 -> 1 -> 2 -> 3，其总距离为 `weight[0][1]` (5)"
+    },
+    {
+      "id": "Dd2DS1Khlk9I51Zxex_qg",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++语言中，表达式 `9 | 12` 的结果类型为 `int`、值为 13。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "表达式 `9 | 12` 执行位或运算。`9` 的二进制表示是 `1001`，`12` 的二进制表示是 `1100`。进行位或运算 `1001 | 1100` 得到 `1101`，其十进制值为 `13`。由于操作数 `9` 和 `12` 都是 `int` 类型字面量，运算结果的类型也为 `int`。因此，题目描述完全正确，选项 T 是对的，F 是错的。"
+    },
+    {
+      "id": "iCv0CNnU8xB91-Ks3lwnd",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++语言中，访问数据发生下标越界时，总是会产生运行时错误，从而使程序异常退出。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++语言中，原始数组和指针的下标越界访问会导致“未定义行为”（Undefined Behavior），这意味着程序可能崩溃、产生错误结果，或者甚至看起来正常运行，而不是总是产生运行时错误并异常退出。因此，F是正确的。T选项错误，因为它断言“总是会”产生运行时错误并异常退出，这不符合C++标准对越界访问的处理方式。"
+    },
+    {
+      "id": "jxohEU7WUBwp8b6ATKWXh",
+      "order": 18,
+      "type": "true_false",
+      "content": "对n个元素的数组进行归并排序，最差情况的时间复杂度为O(n log n)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "归并排序是一种分治算法，它将数组递归地分成两半，直到每个子数组只有一个元素，然后将它们合并排序。无论输入数据如何，每次分割都将问题规模减半（`log n` 层），而每次合并都需要遍历所有元素（`n` 次操作）。因此，归并排序在最好、平均和最差情况下的时间复杂度都是稳定的 O(n log n)。所以题目描述是正确的。"
+    },
+    {
+      "id": "sYnMB2jep3kFDpUp35ZSq",
+      "order": 19,
+      "type": "true_false",
+      "content": "5个相同的红球和4个相同的蓝球排成一排，要求每个蓝球的两侧都必须至少有一个红球，则一共有15种排列方案。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该题目要求每个蓝球两侧都必须至少有一个红球。这意味着：\n1.  序列的开头和结尾不能是蓝球。\n2.  任意两个蓝球之间"
+    },
+    {
+      "id": "zYygeUb9MkfM0FVtx4wRY",
+      "order": 20,
+      "type": "true_false",
+      "content": "使用 `math.h` 或 `cmath` 头文件中的函数，表达式 `log(8)` 的结果类型为 `double`、值约为 3。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ `cmath` 库中的 `log()` 函数计算的是自然对数（以 e 为底），而不是以 10 为底或以 2 为底。`log(8)` 的实际值约为 2.079，而不是 3。如果需要计算以 2 为底的对数，应使用 `log2(8)`，其结果为 3。因此，题目中关于 `log(8)` 值约为 3 的说法是错误的，所以选择 F。"
+    },
+    {
+      "id": "Aa3U-F3d86lMATgtvCj4d",
+      "order": 21,
+      "type": "true_false",
+      "content": "C++是一种面向对象编程语言，C则不是。继承是面向对象三大特性之一，因此，使用C语言无法实现继承。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "虽然C语言本身不是面向对象语言，没有C++那样内置的继承特性，但面向对象是一种编程思想。在C语言中，我们可以通过巧妙地使用 `struct` 结构体和函数指针等机制来模拟实现继承、多态等面向对象特性。因此，题目中“使用C语言无法实现继承”的说法是错误的，所以选择F。"
+    },
+    {
+      "id": "wNcsGzi4sNPoyBEXh-x88",
+      "order": 22,
+      "type": "true_false",
+      "content": "n个顶点的无向完全图，有$n^{n-2}$棵生成树。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "题目描述的是凯莱公式（Cayley's Formula）的直接应用。凯莱公式明确指出，一个有 $n$ 个顶点的无向完全图，其生成树的数量恰好是 $n^{n-2}$。因此，题目中的描述与凯莱公式完全一致，是正确的。选择F则意味着否定了这一数学定理。"
+    },
+    {
+      "id": "IJIv_2WC-3myxANkoZvXV",
+      "order": 23,
+      "type": "true_false",
+      "content": "已知三个 `double` 类型的变量 `a`、`b` 和 `theta` 分别表示一个三角形的两条边长及二者的夹角（弧度），则三角形的周长可以通过表达式 `sqrt(a * a + b * b - 2 * a * b * cos(theta))` 求得。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该表达式 `sqrt(a * a + b * b - 2 * a * b * cos(theta))` 实际上是根据余弦定理计算三角形的第三条边长，而不是周长。三角形的周长是三条边长的总和。因此，题目描述是错误的，选项 F 正确。"
+    },
+    {
+      "id": "wwfS-XTWHgKt8RQY4iWJj",
+      "order": 24,
+      "type": "true_false",
+      "content": "有V个顶点、E条边的图的深度优先搜索遍历时间复杂度为O(V+E)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "深度优先搜索（DFS）遍历图时，每个顶点都会被访问且仅访问一次。同时，每条边（无论图的存储方式是邻接表还是邻接矩阵）在遍历过程中最多会被检查两次（对于无向图，从两个方向各一次；对于有向图，从起点到终点一次）。因此，DFS的总时间开销与顶点数V和边数E之和成正比，即时间复杂度为O(V+E)。所以，该说法是正确的。"
+    },
+    {
+      "id": "elLBb7DaLY1tHySNMHmbn",
+      "order": 25,
+      "type": "true_false",
+      "content": "从32名学生中选出4人分别担任班长、副班长、学习委员和组织委员，老师要求班级综合成绩排名最后的4名学生不得参选班长或学习委员（仍可以参选副班长和组织委员），则共有P(30,4)种不同的选法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该说法是正确的。\n\n1.  **班长和学习委员的选法：** 班级综合成绩排名最后的4名学生不能参选班长或学习委员。"
+    }
+  ]
+}

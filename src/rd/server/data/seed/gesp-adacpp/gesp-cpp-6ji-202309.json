@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-6ji-202309",
+  "url": "https://adacpp.com/practice/gesp-cpp-6ji-202309",
+  "title": "GESP C++六级 202309",
+  "description": "CCF编程能力等级认证 GESP C++ 六级 2023年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 6,
+    "ym": "202309"
+  },
+  "questions": [
+    {
+      "id": "xeTYc3tnvzVFwkvRFk2xX",
+      "order": 1,
+      "type": "single_choice",
+      "content": "近年来，线上授课变得普遍，很多有助于改善教学效果的设备也逐渐流行，其中包括比较常用的手写板，那么它属于哪类设备？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "输入"
+        },
+        {
+          "label": "B",
+          "text": "输出"
+        },
+        {
+          "label": "C",
+          "text": "控制"
+        },
+        {
+          "label": "D",
+          "text": "记录"
+        }
+      ],
+      "answer": "A",
+      "explanation": "手写板将用户的手写或绘图动作转换为数字信号，并将其传输给计算机进行处理，这正是输入设备的功能。输出设备（如显示器）用于显示或呈现信息，控制设备（如CPU）用于管理计算机操作，而记录（存储）设备用于长期保存数据，这些都不是手写板的主要作用。因此，手写板属于输入设备。"
+    },
+    {
+      "id": "VSIRzHm0ObslirWtyzRG2",
+      "order": 2,
+      "type": "single_choice",
+      "content": "如果 `a` 和 `b` 均为 `int` 类型的变量，且 `b` 的值不为 0，那么下列能正确判断“`a` 是 `b` 的3倍”的表达式是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`(a >> 3 == b)`"
+        },
+        {
+          "label": "B",
+          "text": "`(a - b) % 3 == 0`"
+        },
+        {
+          "label": "C",
+          "text": "`(a / b == 3)`"
+        },
+        {
+          "label": "D",
+          "text": "`(a == 3 * b)`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D `(a == 3 * b)` 直接判断 `a` 的值是否等于 `b` 的3倍，这是最直接且准确的表达方式。选项 C `"
+    },
+    {
+      "id": "zZdbGXlvvdLRrktwpA3yf",
+      "order": 3,
+      "type": "single_choice",
+      "content": "以下不属于面向对象程序设计语言的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "C++"
+        },
+        {
+          "label": "B",
+          "text": "Python"
+        },
+        {
+          "label": "C",
+          "text": "Java"
+        },
+        {
+          "label": "D",
+          "text": "C"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`C` 是一种面向过程的编程语言，它主要通过函数来组织代码，不具备类、对象、继承、多态等面向对象的核心特性。而 `C++`、`Python` 和 `Java` 都支持面向对象编程范式，允许开发者使用类和对象来构建程序，因此它们属于面向对象程序设计语言。"
+    },
+    {
+      "id": "YvtF_SZmymC7GKtqHC89Z",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面有关C++类定义的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "C++类实例化时，会执行构造函数。"
+        },
+        {
+          "label": "B",
+          "text": "C++自定义类可以通过定义构造函数实现自动类型转换。"
+        },
+        {
+          "label": "C",
+          "text": "C++自定义类可以通过重载 `>`、`<` 等运算符实现大小比较。"
+        },
+        {
+          "label": "D",
+          "text": "C++自定义类可以包含任意类型的成员。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D 错误，因为 C++ 类不能直接包含自身类型的成员对象（例如 `class A { A member; };` 会导致无限大小）。但它可以包含指向自身类型的指针或引用（例如 `A* next;`）。选项 A、B、C 的说法都是正确的 C++ 特性：类实例化时会调用构造函数；单参数构造函数可以实现自动类型转换；重载运算符可以实现自定义类型的大小比较。"
+    },
+    {
+      "id": "65iJMXy57ZQ96UFf8oFOp",
+      "order": 5,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法，错误的是（ ）。\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nclass MyStr {\n    string data;\npublic:\n    MyStr(string _data): data(_data) {}\n};\n\nint main() {\n    MyStr st(\"ABC\");\n    cout << st << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "代码 `cout << st << endl;` 会报错，因为没有为 MyStr 类重载 `<<` 运算符。"
+        },
+        {
+          "label": "B",
+          "text": "第 6 行代码的 `data` 是 MyStr 类的成员变量。"
+        },
+        {
+          "label": "C",
+          "text": "代码 `MyStr st(\"ABC\");` 不会报错，将执行构造函数。"
+        },
+        {
+          "label": "D",
+          "text": "代码 `cout << st.data << endl;` 可输出 ABC"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A. 代码 `cout << st << endl;` 会报错，因为 `MyStr` 类没有定义如何使用 `<<` 运算符输出自身，所以这个说法是正确的。题目要求"
+    },
+    {
+      "id": "e9G8pXrU_feIRj82xD-r-",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下列关于命名空间的说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "命名空间可以嵌套，例如 `namespace A { namespace B { int i; }}`。"
+        },
+        {
+          "label": "B",
+          "text": "命名空间只可以在全局定义。"
+        },
+        {
+          "label": "C",
+          "text": "命名空间中可以存放变量和函数。"
+        },
+        {
+          "label": "D",
+          "text": "如果程序中使用了 `using` 命令同时引用了多个命名空间，并且命名空间中存在相同的函数，会出现程序运行错误。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误，因为当 `using namespace` 引入多个命名空间且存在同名函数时，会导致编译错误（二义性），而不是程序运行错误。选项A、B、C的说法都是正确的：命名空间可以嵌套；命名空间只能在全局范围或其他命名空间内定义；命名空间中可以包含变量、函数、类等。"
+    },
+    {
+      "id": "sAkk7pzsxIphdLwN9KgB1",
+      "order": 7,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法，正确的是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass ManyData {\n    int * __data;\n    int head, tail, capacity;\npublic:\n    ManyData(int cap) {\n        capacity = cap;\n        __data = new int[capacity];\n        head = tail = 0;\n    }\n    void push(int val) {\n        __data[tail++] = val;\n    }\n    int pop() {\n        return __data[--tail];\n    }\n    int size() {\n        return tail - head;\n    }\n};\nint main() {\n    auto myData = ManyData(100);\n    myData.push(1);\n    myData.push(2);\n    myData.push(3);\n    myData.push(100);\n    cout << myData.size() << endl;\n    cout << myData.pop() << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "这段代码不能正常运行。"
+        },
+        {
+          "label": "B",
+          "text": "ManyData 类可用于构造队列（Queue）数据结构。"
+        },
+        {
+          "label": "C",
+          "text": "在上面代码环境，代码 `cout << myData.__data[0] << endl;` 可以增加到代码 main 函数末尾（`return 0;` 之前），且不会导致报错。"
+        },
+        {
+          "label": "D",
+          "text": "可以为 ManyData 类的 `push()`、`pop()` 函数增加异常处理代码，否则在使用 ManyData 类时可能导致运行时错误或逻辑错误（不一定局限于上述代码中的 main 函数）。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D. `push()` 函数没有检查容量，当 `tail` 等于 `capacity` 时继续 `push` 会导致数组越界；`pop()` 函数没有检查是否为空，"
+    },
+    {
+      "id": "HlQKAp4uwWXFmiO5P9J5h",
+      "order": 8,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法，错误的是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass MoreData {\n    int * __data;\n    int head, tail, capacity;\npublic:\n    MoreData(int cap) {\n        capacity = cap;\n        __data = new int[capacity];\n        head = tail = 0;\n    }\n    MoreData & push(int val) {\n        __data[tail++] = val;\n        return *this;\n    }\n    int pop() {\n        return __data[head++];\n    }\n    int size() {\n        return tail - head;\n    }\n};\nint main() {\n    auto myData = MoreData(100);\n    myData.push(1);\n    myData.push(2);\n    myData.push(3);\n    myData.push(11).push(12).push(13);\n    cout << myData.pop() << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "MoreData 类可用于构造队列（Queue）数据结构。"
+        },
+        {
+          "label": "B",
+          "text": "代码第29行，连续 `push()` 的用法将导致编译错误。"
+        },
+        {
+          "label": "C",
+          "text": "`__data` 是 MoreData 类的私有成员，只能在类内访问。"
+        },
+        {
+          "label": "D",
+          "text": "以上说法均没有错误。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。**\n\n1.  **解释为什么 B 是正确的：**\n    `MoreData` 类的 `push` 方法返回 `*this`（当前对象的引用），这种"
+    },
+    {
+      "id": "go8QppyLeVP7bFTDSIay-",
+      "order": 9,
+      "type": "single_choice",
+      "content": "某内容仅会出现 ABCDEFG，其对应的出现概率为0.40、0.30、0.15、0.05、0.04、0.03、0.03。按照哈夫曼编码规则，假设 B 的编码为 11，则 D 的编码为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "10010"
+        },
+        {
+          "label": "B",
+          "text": "10011"
+        },
+        {
+          "label": "C",
+          "text": "10111"
+        },
+        {
+          "label": "D",
+          "text": "10001"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据哈夫曼编码规则，首先将所有字符按概率从小到大排序：F(0.03), G(0.03), E(0.04), D"
+    },
+    {
+      "id": "5Q8p2P2s226656XgKS5SG",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面有关格雷码的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在格雷码中，任意两个相邻的代码只有一位二进制数不同。"
+        },
+        {
+          "label": "B",
+          "text": "格雷码是一种唯一性编码。"
+        },
+        {
+          "label": "C",
+          "text": "在格雷码中，最大数和最小数只有一位二进制数不同。"
+        },
+        {
+          "label": "D",
+          "text": "格雷码是一种可靠性编码。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "格雷码的核心特性是任意两个相邻的代码之间只有一位二进制数不同，这使得它在模拟量转换为数字量时能避免因多位同时变化而产生的错误，"
+    },
+    {
+      "id": "_EplVJr0P7dyH2OFbI_Q2",
+      "order": 11,
+      "type": "single_choice",
+      "content": "有关下图的二叉树，说法正确的是（ ）。\n\n二叉树结构：根节点为5，左子节点为2，右子节点为17。节点2的左子节点为-4，右子节点为3。节点17的左子节点为9，右子节点为21。节点21的左子节点为19，右子节点为25。",
+      "options": [
+        {
+          "label": "A",
+          "text": "既是完全二叉树也是满二叉树。"
+        },
+        {
+          "label": "B",
+          "text": "既是二叉搜索树也是平衡二叉树。"
+        },
+        {
+          "label": "C",
+          "text": "非平衡二叉树。"
+        },
+        {
+          "label": "D",
+          "text": "以上说法都不正确。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该二叉树是二叉搜索树，因为每个节点的左子节点值都小于它，右子节点值都大于它。同时，它也是平衡二叉树，因为任意节点的"
+    },
+    {
+      "id": "8YmQrlAKbRfNdUfY3qI2B",
+      "order": 12,
+      "type": "single_choice",
+      "content": "N个节点的二叉搜索树，其查找的平均时间复杂度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(N)"
+        },
+        {
+          "label": "C",
+          "text": "O(log N)"
+        },
+        {
+          "label": "D",
+          "text": "O(N²)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "N个节点的二叉搜索树，在平均情况下，其结构接近平衡，树的高度约为 `log N`。因此，查找一个节点需要沿着树的路径向下遍历，平均时间复杂度为 `O(log N)`。`O(1)` 表示常数时间，不随N变化，不符合查找树的特性；`O(N)` 是最坏情况（树退化成链表）的时间复杂度，不是平均情况；`O(N²)` 则过高，通常用于更复杂的算法。"
+    },
+    {
+      "id": "e8-a3y0hpcg5sCc9b3yDc",
+      "order": 13,
+      "type": "single_choice",
+      "content": "青蛙每次能跳1或2步。下面是青蛙跳到第 N 步台阶C++实现代码。该段代码采用的算法是（ ）。\n\n```cpp\nint jumpFrog(int N) {\n    if (N <= 3)\n        return N;\n    return jumpFrog(N - 1) + jumpFrog(N - 2);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "递推算法"
+        },
+        {
+          "label": "B",
+          "text": "贪心算法"
+        },
+        {
+          "label": "C",
+          "text": "动态规划算法"
+        },
+        {
+          "label": "D",
+          "text": "分治算法"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该段代码通过 `jumpFrog(N - 1) + jumpFrog(N - 2)` 的形式，将大问题分解为相互重叠的子问题，并利用"
+    },
+    {
+      "id": "i8adFIEk40hZUXCFLcAYw",
+      "order": 14,
+      "type": "single_choice",
+      "content": "N个节点的双向循环链表，在其中查找某个节点的平均时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(N)"
+        },
+        {
+          "label": "C",
+          "text": "O(log N)"
+        },
+        {
+          "label": "D",
+          "text": "O(N²)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在双向循环链表中查找一个节点，需要从某个起始点开始，逐个遍历节点直到找到目标。平均情况下，你需要检查大约 N/2 个节点，因此时间复杂度是 O(N)。O(1) 表示常数时间，只有直接访问才可能；O(log N) 通常用于二分查找等分治算法，链表不支持；O(N²) 则表示更复杂的嵌套操作，不适用于简单查找。"
+    },
+    {
+      "id": "04vp69_8TdwuLfRu8zYS7",
+      "order": 15,
+      "type": "single_choice",
+      "content": "关于C++语言，以下说法不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "若对象被定义为常量，则它只能调用以 `const` 修饰的成员函数。"
+        },
+        {
+          "label": "B",
+          "text": "所有的常量静态变量都只能在类外进行初始化。"
+        },
+        {
+          "label": "C",
+          "text": "若类 A 的对象 a 是类 B 的静态成员变量，则 a 在 `main()` 函数调用之前应被初始化。"
+        },
+        {
+          "label": "D",
+          "text": "静态全局对象、常量全局对象都是在 main 函数调用之前完成初始化，执行完 main 函数后被析构。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n\nD 选项不正确。静态全局对象和常量全局对象确实在 `main` 函数调用之前完成初始化。但是，它们是在程序结束时（"
+    },
+    {
+      "id": "FfDf7nPUsXsg6O88ewNcZ",
+      "order": 16,
+      "type": "true_false",
+      "content": "TCP/IP的传输层的两个不同的协议分别是UDP和TCP。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "TCP/IP模型是网络通信的基础，其传输层主要负责端到端的数据传输。在这个层次上，确实定义了两个核心协议：TCP（传输控制协议）和UDP（用户数据报协议）。TCP提供可靠的、面向连接的服务，而UDP提供不可靠的、无连接的快速服务，它们共同构成了传输层的主要功能，因此题目描述是正确的。"
+    },
+    {
+      "id": "oBWldudvyJ5OUzzqoHZ7L",
+      "order": 17,
+      "type": "true_false",
+      "content": "5G网络中，5G中的G表示Gigabytes/s，其中 1 GB = 1024 MB。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "5G中的“G”代表“Generation”（代），表示第五代移动通信技术，而不是数据传输单位“Gigabytes/s”。因此，题目中将“G”解释为“Gigabytes/s”是错误的。虽然 1 GB = 1024 MB 这个换算关系是正确的，但它不能改变“G”在“5G”中的真实含义，所以选项T（正确）是错误的。"
+    },
+    {
+      "id": "IMDBMYZig7DCMTyeEeRE5",
+      "order": 18,
+      "type": "true_false",
+      "content": "在面向对象中，类是对象的实例。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "题目描述反了。在面向对象编程中，类是创建对象的蓝图或模板，而对象才是类的具体实例。例如，`Car` 是一个类，`myCar` 是 `Car` 类的一个对象（实例）。因此，说“类是对象的实例”是错误的。"
+    },
+    {
+      "id": "NPBL9sGZMt3rGkm5DHILk",
+      "order": 19,
+      "type": "true_false",
+      "content": "在C++类的定义中，使用 `static` 修饰符定义的静态成员被该类的所有对象共享。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，使用 `static` 修饰符定义的成员不属于类的任何特定对象，而是属于类本身。这意味着无论创建多少个该类的对象，它们都共享同一份 `static` 成员的存储空间和值。因此，题目中“被该类的所有对象共享”的描述是完全正确的，选项F自然是错误的。"
+    },
+    {
+      "id": "pYIxQxr3vfQxqN2cUxMfb",
+      "order": 20,
+      "type": "true_false",
+      "content": "在C++类的定义中，可以定义初始化函数或运算符函数等。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++类中可以定义特殊的成员函数。例如，`构造函数`就是一种初始化函数，用于在对象创建时初始化成员；而`运算符重载`则允许我们为类的对象定义特定运算符（如`+`、`==`）的行为。因此，题目描述是正确的。"
+    },
+    {
+      "id": "O2G3nz7l0FFijkyJgcVy_",
+      "order": 21,
+      "type": "true_false",
+      "content": "DFS 是深度优先算法的英文简写。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "DFS是\"Depth-First Search\"的英文缩写，中文意为深度优先搜索。题目描述完全符合其标准定义，因此是正确的。选项F错误，因为DFS确实是深度优先算法的英文简写。"
+    },
+    {
+      "id": "ftSE2tC1b6q26hi-_hWwM",
+      "order": 22,
+      "type": "true_false",
+      "content": "哈夫曼编码是一种有损压缩算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哈夫曼编码是一种**无损压缩算法**，它通过为出现频率高的字符分配短编码，为出现频率低的字符分配长编码来压缩数据，并且能够**完全恢复原始数据**。因此，题目中称其为“有损压缩算法”是错误的。"
+    },
+    {
+      "id": "EBHK00PbjI5thDog3HAdt",
+      "order": 23,
+      "type": "true_false",
+      "content": "有些算法或数据结构在C/C++语言中使用指针实现，一个典型的例子就是链表。因此，链表这一数据结构在C/C++语言中只能使用指针来实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "题目中“只能”使用指针来实现链表的说法是错误的。尽管指针是实现链表最常见和直接的方式，但在C++中，我们也可以利用引用（references）"
+    },
+    {
+      "id": "HIdU_7RgjJ5J09vkJaLqh",
+      "order": 24,
+      "type": "true_false",
+      "content": "如果节点数为N，广度搜索算法的最差时间复杂度为O(N)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "广度优先搜索（BFS）在最坏情况下会访问图中的所有节点。对于一个有N个节点的图，每个节点都会被入队和出队一次，这部分操作的时间"
+    },
+    {
+      "id": "-LVcldu6F-ocN4jjkY0pk",
+      "order": 25,
+      "type": "true_false",
+      "content": "二叉搜索树的左右子树也是二叉搜索树。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "根据二叉搜索树（BST）的定义，任意节点的左子树中所有节点的值都小于该节点的值，右子树中所有节点的值都大于该节点的值。这个定义是递归的，它明确要求其左右子树也必须是二叉搜索树，才能保证整个树的有序性。因此，一个二叉搜索树的左右子树本身也一定是二叉搜索树。选择F则与二叉搜索树的根本定义相悖。"
+    }
+  ]
+}

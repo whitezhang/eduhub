@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-7ji-202312",
+  "url": "https://adacpp.com/practice/gesp-cpp-7ji-202312",
+  "title": "GESP C++七级 202312",
+  "description": "CCF编程能力等级认证 GESP C++ 七级 2023年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 7,
+    "ym": "202312"
+  },
+  "questions": [
+    {
+      "id": "WI9dR1UjVL7MeYgphzucK",
+      "order": 1,
+      "type": "single_choice",
+      "content": "定义变量 double x，如果下面代码输入为 100，输出最接近（ ）。\n\n```cpp\n#include <iostream>\n#include <string>\n#include <cmath>\n#include <vector>\nusing namespace std;\n\nint main()\n{\n    double x;\n\n    cin >> x;\n    cout << log10(x) - log2(x) << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "-5"
+        },
+        {
+          "label": "C",
+          "text": "-8"
+        },
+        {
+          "label": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "B",
+      "explanation": "当 `x` 输入为 100 时，`log10(x)` 的值为 `log10(100) = 2`。`log2(x)` 的值为 `log2(100)`，大约是 `6.64`。因此，表达式 `log10(x) - log2(x)` 的结果约为 `2 - 6.64 = -4.64`。这个值最接近选项 B 的 `-5`，其他选项与计算结果相差较大。"
+    },
+    {
+      "id": "X7DuRnZEt7_ZJnQBGaHtl",
+      "order": 2,
+      "type": "single_choice",
+      "content": "对于下面动态规划方法实现的函数，以下选项中最适合表达其状态转移函数的为（ ）。\n\n```cpp\nint s[MAX_N], f[MAX_N][MAX_N];\nint stone_merge(int n, int a[]) {\n    for (int i = 1; i <= n; i++)\n        s[i] = s[i - 1] + a[i];\n    for (int i = 1; i <= n; i++)\n        for (int j = 1; j <= n; j++)\n            if (i == j)\n                f[i][j] = 0;\n            else\n                f[i][j] = MAX_F;\n    for (int l = 1; l < n; l++)\n        for (int i = 1; i <= n - l; i++) {\n            int j = i + l;\n            for (int k = i; k < j; k++)\n                f[i][j] = min(f[i][j], f[i][k] + f[k + 1][j] + s[j] - s[i - 1]);\n        }\n    return f[1][n];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "f(i,j) = min(f(i,j), f(i,k) + f(k+1,j) + s(j) - s(i-1))，其中 i <= k < j"
+        },
+        {
+          "label": "B",
+          "text": "f(i,j) = min(f(i,j), f(i,k) + f(k+1,j) + sum(a(k), k=i..j))，其中 i <= k < j"
+        },
+        {
+          "label": "C",
+          "text": "f(i,j) = min(f(i,k) + f(k+1,j) + sum(a(k), k=i..j+1))，其中 i <= k <= j"
+        },
+        {
+          "label": "D",
+          "text": "f(i,j) = min(f(i,k) + f(k+1,j)) + sum(a(k), k=i..j)，其中 i <= k < j"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该函数实现的是经典的石子合并问题。`f[i][j]`表示合并从第`i`颗石子到第`j`颗石子的最小代价。\n\n1."
+    },
+    {
+      "id": "fXiwG9rubn65wVXeyLwsg",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面代码可以用来求最长上升子序列（LIS）的长度，如果输入是：5 1 7 3 5 9，则输出是（ ）。\n\n```cpp\nint a[2023], f[2023];\nint main()\n{\n    int n,i,j,ans = -1;\n\n    cin>>n;\n    for( i=1; i<=n; i++){\n        cin >> a[i];\n        f[i] = 1;\n    }\n\n    for( i=1; i<=n; i++)\n        for( j=1; j<i; j++)\n            if(a[j] < a[i])\n                f[i] = max(f[i], f[j]+1);\n    for( i=1; i<=n; i++){\n        ans = max(ans, f[i]);\n        cout << f[i] << \" \";\n    }\n\n    cout << ans << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "9 7 5 1 1 9"
+        },
+        {
+          "label": "B",
+          "text": "1 2 2 3 4 4"
+        },
+        {
+          "label": "C",
+          "text": "1 3 5 7 9 9"
+        },
+        {
+          "label": "D",
+          "text": "1 1 1 1 1 1"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该代码使用动态规划计算以每个元素结尾的最长上升子序列长度。对于输入 `5 1 7 3 5 9`：\n1. 初始化 `f`"
+    },
+    {
+      "id": "hcEmF7Q44g1ERtB0lbUND",
+      "order": 4,
+      "type": "single_choice",
+      "content": "C++语言中，下列关于关键字 static 的描述不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "可以修饰类的成员函数。"
+        },
+        {
+          "label": "B",
+          "text": "常量静态成员可以在类外进行初始化。"
+        },
+        {
+          "label": "C",
+          "text": "若 a 是类 A 常量静态成员，则 a 的地址都可以访问且唯一。"
+        },
+        {
+          "label": "D",
+          "text": "静态全局对象一定在 main 函数调用前完成初始化，执行完 main 函数后被析构。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C 描述不正确。** 对于 `static const` 整型成员（如 `static const int a = 10;`），如果其在类内初始化且没有在"
+    },
+    {
+      "id": "YxRYM3tjNQtLc04oEs_B8",
+      "order": 5,
+      "type": "single_choice",
+      "content": "G 是一个非连通无向图，共有 28 条边，则该图至少有（ ）个顶点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "D",
+      "explanation": "一个非连通无向图至少需要两个连通分量。为了在给定边数的情况下使总顶点数最少，我们应将所有边集中在一个连通分量"
+    },
+    {
+      "id": "CgiLuWUBEJVMYxRSyNNdV",
+      "order": 6,
+      "type": "single_choice",
+      "content": "哈希表长31，按照下面的程序依次输入 4 17 28 30 4，则最后的 4 存入哪个位置？（ ）\n\n```cpp\n#include <iostream>\n#include <string>\n#include <cmath>\n#include <vector>\nusing namespace std;\n\nconst int N=31;\nint htab[N],flag[N];\nint main()\n{\n    int n,x,i,j,k;\n\n    cin >> n;\n    for(i=0; i<n; i++){\n        cin >> x;\n        k=x%13;\n        while(flag[k]) k = (k+1)%13;\n        htab[k]=x;\n        flag[k]=1;\n    }\n\n    for(i=0; i<N; i++)\n        cout << htab[i] << \" \";\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "D",
+      "explanation": "根据哈希函数 `k = x % 13` 和线性探测法解决冲突 `k = (k+1)%13`，我们逐步分析：\n1.  第一个 `"
+    },
+    {
+      "id": "qS5VEpZmGoUZxywsnfKh-",
+      "order": 7,
+      "type": "single_choice",
+      "content": "某二叉树T的先序遍历序列为：{A B D F C E G H}，中序遍历序列为：{B F D A G E H C}，则下列说法中正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "T的度为1"
+        },
+        {
+          "label": "B",
+          "text": "T的高为4"
+        },
+        {
+          "label": "C",
+          "text": "T有4个叶节点"
+        },
+        {
+          "label": "D",
+          "text": "以上说法都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据先序和中序遍历序列，我们可以重建二叉树。\n先序遍历：{A B D F C E G H}\n中序遍历：{B F"
+    },
+    {
+      "id": "i9ntppMlqmSiNa9Lsv0TO",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面代码段可以求两个字符串 s1 和 s2 的最长公共子串（LCS），下列相关描述不正确的是（ ）。\n\n```cpp\nwhile (cin >> s1 >> s2)\n{\n    memset(dp, 0, sizeof(dp));\n    int n1 = strlen(s1), n2 = strlen(s2);\n    for (int i = 1; i <= n1; ++i)\n        for (int j = 1; j <= n2; ++j)\n            if (s1[i - 1] == s2[j - 1])\n                dp[i][j] = dp[i-1][j-1] + 1;\n            else\n                dp[i][j] = max(dp[i-1][j], dp[i][j-1]);\n    cout << dp[n1][n2] << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "代码的时间复杂度为O(n^2)"
+        },
+        {
+          "label": "B",
+          "text": "代码的空间复杂度为O(n^2)"
+        },
+        {
+          "label": "C",
+          "text": "空间复杂度已经最优"
+        },
+        {
+          "label": "D",
+          "text": "采用了动态规划求解"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该代码段实际上求解的是最长公共子序列（Longest Common Subsequence, LCS），而非最长公共子串（Longest Common Substring）。\n\n*   **C"
+    },
+    {
+      "id": "uBqQka3T1Xv0eQ86A7qTl",
+      "order": 9,
+      "type": "single_choice",
+      "content": "图的广度优先搜索中既要维护一个标志数组标志已访问的图的结点，还需哪种结构存放结点以实现遍历？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "双向栈"
+        },
+        {
+          "label": "B",
+          "text": "队列"
+        },
+        {
+          "label": "C",
+          "text": "哈希表"
+        },
+        {
+          "label": "D",
+          "text": "堆"
+        }
+      ],
+      "answer": "B",
+      "explanation": "广度优先搜索（BFS）的特点是逐层遍历图，需要一种先进先出（FIFO）的数据结构来存储待访问的结点。队列（Queue）正是这种结构，它能确保先加入的结点先被处理，从而实现逐层扩展。栈（Stack）是后进先出（LIFO），用于深度优先搜索（DFS）；哈希表主要用于快速查找；堆是优先级队列，它们都不适合BFS的遍历顺序管理。"
+    },
+    {
+      "id": "Leu623W4gDGjaKZuCJuK4",
+      "order": 10,
+      "type": "single_choice",
+      "content": "对关键字序列 {44, 36, 23, 35, 52, 73, 90, 58} 建立哈希表，哈希函数为 h(k)=k%7，执行下面的 Insert 函数，则等概率情况下的平均成功查找长度（即查找成功时的关键字比较次数的均值）为（ ）。\n\n```cpp\n#include <iostream>\n#include <string>\n#include <cmath>\n#include <vector>\nusing namespace std;\n\ntypedef struct Node{\n    int data;\n    struct Node *next;\n}Node;\nNode* hTab[7];\nint key[]={44, 36, 23, 35, 52, 73, 90, 58, 0};\nvoid Insert()\n{\n    int i,j;\n    Node *x;\n\n    for(i=0; key[i];i++){\n        j = key[i] % 7;\n        x=new Node;\n        x->data = key[i];\n        x->next = hTab[j];\n        hTab[j] = x;\n    }\n\n    return;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "7/8"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "1.5"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "C",
+      "explanation": "根据哈希函数 `h(k)=k%7` 和链地址法（新元素插到链表头部），我们计算每个关键字的查找次数：\n1."
+    },
+    {
+      "id": "2UNbol4VHOz8tnAJQp4AX",
+      "order": 11,
+      "type": "single_choice",
+      "content": "学生在读期间所上的某些课程中需要先上其他的课程，所有课程和课程间的先修关系构成一个有向图 G，有向边 <U, V> 表示课程 U 是课程 V 的先修课，则要找到某门课程 C 的全部先修课下面哪种方法不可行？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "BFS搜索"
+        },
+        {
+          "label": "B",
+          "text": "DFS搜索"
+        },
+        {
+          "label": "C",
+          "text": "DFS+BFS"
+        },
+        {
+          "label": "D",
+          "text": "动态规划"
+        }
+      ],
+      "answer": "D",
+      "explanation": "动态规划 (Dynamic Programming) 主要用于解决具有重叠子问题和最优子结构性质的优化问题，不适合直接用于列举图中的所有前驱节点。而广度优先搜索 (BFS) 和 深度优先搜索 (DFS) 都是标准的图遍历算法，可以从目标课程出发，沿着反向边（即从V到U，表示U是V的先修课）遍历所有可达的节点，从而找到全部先修课。因此，`BFS` 和 `DFS` 都是可行的方法，`DFS+BFS` 并非标准组合算法但其组成部分可行，只有动态规划不适用于此问题。"
+    },
+    {
+      "id": "XnjlDQZO5jnlKLuIbxJol",
+      "order": 12,
+      "type": "single_choice",
+      "content": "一棵完全二叉树有 2023 个结点，则叶结点有多少个？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "1024"
+        },
+        {
+          "label": "B",
+          "text": "1013"
+        },
+        {
+          "label": "C",
+          "text": "1012"
+        },
+        {
+          "label": "D",
+          "text": "1011"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在一棵完全二叉树中，非叶结点（内部结点）的数量是 `floor(总结点数 / 2)`。所以，非叶结点有 `floor(202"
+    },
+    {
+      "id": "MagLTQi2g7sVnv36L7nUI",
+      "order": 13,
+      "type": "single_choice",
+      "content": "用下面的邻接表结构保存一个有向图 G，InfoType 和 VertexType 是定义好的类。设 G 有 n 个顶点、e 条弧，则求图 G 中某个顶点 u（其顶点序号为 k）的度的算法复杂度是（ ）。\n\n```cpp\ntypedef struct ArcNode{\n    int             adjvex;     // 该弧所指向的顶点的位置\n    struct ArcNode  *nextarc;   // 指向下一条弧的指针\n    InfoType        *info;      // 该弧相关信息的指针\n} ArcNode;\ntypedef struct VNode{\n    VertexType      data;       // 顶点信息\n    ArcNode         *firstarc;  // 指向第一条依附该顶点的弧\n} VNode, AdjList[MAX_VERTEX_NUM];\ntypedef struct{\n    AdjList vertices;\n    int     vexnum, arcnum;\n    int     kind;               // 图的种类标志\n} ALGraph;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(e)"
+        },
+        {
+          "label": "C",
+          "text": "O(n+e)"
+        },
+        {
+          "label": "D",
+          "text": "O(n+2*e)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在邻接表结构中，要计算有向图某个顶点 `u` 的度，通常指的是它的入度和出度之和。\n1.  **出度 (Out-"
+    },
+    {
+      "id": "lAn2hrw88vza_XERoo8O2",
+      "order": 14,
+      "type": "single_choice",
+      "content": "给定一个简单有向图 G，判断其中是否存在环路的下列说法哪个最准确？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "BFS更快"
+        },
+        {
+          "label": "B",
+          "text": "DFS更快"
+        },
+        {
+          "label": "C",
+          "text": "BFS和DFS一样快"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "answer": "D",
+      "explanation": "检测有向图环路，BFS和DFS都可以实现，它们的时间复杂度均为`O(V+E)`。然而，实际运行速度受图的具体结构（稀疏或稠密）、数据存储方式、系统缓存等多种因素影响，没有绝对的快慢之分。因此，A、B、C选项都不准确，D选项“不确定”最符合实际情况。"
+    },
+    {
+      "id": "Nab8j1zlBosAjsdg3F3sK",
+      "order": 15,
+      "type": "single_choice",
+      "content": "从顶点 v1 开始遍历下图 G（无向图：v1-v2, v1-v3, v2-v3, v3-v4, v3-v5, v4-v5）得到顶点访问序列，在下面所给的 4 个序列中符合广度优先的序列有几个？（ ）\n{v1 v2 v3 v4 v5}，{v1 v2 v4 v3 v5}，{v1 v4 v2 v3 v5}，{v1 v2 v4 v5 v3}",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "1"
+        }
+      ],
+      "answer": "B",
+      "explanation": "广度优先搜索（BFS）从 `v1` 开始，首先访问 `v1`。接着访问 `v1` 的所有邻居（`v2`, `v3`"
+    },
+    {
+      "id": "lSkM0qnctIkMRjlBn_900",
+      "order": 16,
+      "type": "true_false",
+      "content": "小杨这学期准备参加GESP的7级考试，其中有关于三角函数的内容，他能够通过下面的代码找到结束循环的角度值。\n\n```cpp\nint main()\n{\n    double x;\n\n    do{\n        cin >> x;\n        x=x/180*3.14;\n    }while(int(sin(x)*sin(x)+cos(x)*cos(x)) == 1);\n    cout << \"/\" << sin(x) << \" \" << cos(x);\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确答案是T。\n\n该循环条件 `int(sin(x)*sin(x)+cos(x)*cos(x)) == 1` 依赖于三角恒等式"
+    },
+    {
+      "id": "HewotJCJOHOEjxDyz1R-0",
+      "order": 17,
+      "type": "true_false",
+      "content": "小杨在开发画笔刷小程序（applet），操作之一是选中黄颜色，然后在下面的左图的中间区域双击后，就变成了右图。这个操作可以用图的泛洪算法来实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "泛洪算法（Flood Fill）是一种经典的图像处理算法，它从一个起始点开始，将所有与其颜色相同且连通的像素区域替换为新的颜色。题目中描述的“选中黄颜色，然后在中间区域双击后，就变成了右图”的操作，正是泛洪算法的典型应用场景，因此T选项正确。F选项错误，因为它否定了泛洪算法在此类“油漆桶”填充功能中的适用性。"
+    },
+    {
+      "id": "Dp8vCWPGCe9qThUqu1GC2",
+      "order": 18,
+      "type": "true_false",
+      "content": "假设一棵完全二叉树共有N个节点，则树的深度为log(N) + 1。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法是错误的。对于一棵完全二叉树，其深度 `h` 与节点数 `N` 的关系应为 `h = floor(log2(N)) +"
+    },
+    {
+      "id": "x2An4opsJNB6Sg8XdIq-8",
+      "order": 19,
+      "type": "true_false",
+      "content": "给定一个数字序列 A1，A2，A3，...，An，要求 i 和 j（1<=i<=j<=n），使 Ai+...+Aj 最大，可以使用动态规划方法来求解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该问题是经典的“最大子数组和”问题，可以使用动态规划（Kadane's algorithm）高效求解。动态规划的核心思想是定义 `dp[i]` 为以 `A[i]` 结尾的最大子数组和，通过 `dp[i] = max(A[i], dp[i-1] + A[i])` 进行状态转移。最终结果是所有 `dp[i]` 中的最大值。因此，题目描述正确，选项 T 为正确答案。选项 F 错误，因为动态规划确实可以解决此问题。"
+    },
+    {
+      "id": "PcHaxOzx1XHRw8gc6W8XE",
+      "order": 20,
+      "type": "true_false",
+      "content": "若变量 x 为 double 类型正数，则 log(exp(x)) > log10(x)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `log(exp(x))` 等价于 `ln(e^x)`，根据对数性质，其结果为 `x`。因此，原不等式简化为 `x >"
+    },
+    {
+      "id": "FeAA1F8n4IPHIwIVviuFc",
+      "order": 21,
+      "type": "true_false",
+      "content": "简单有向图有 n 个顶点和 e 条弧，可以用邻接矩阵或邻接表来存储，二者求节点 u 的度的时间复杂度一样。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在有向图中，节点的度通常指入度和出度之和。\n使用邻接矩阵存储时，计算节点 `u` 的出度需要遍历 `u` 所在"
+    },
+    {
+      "id": "IDvj6I0w4bLEGblMISjUL",
+      "order": 22,
+      "type": "true_false",
+      "content": "某个哈希表键值 x 为整数，为其定义哈希函数 H(x)=x%p，则 p 选择素数时不会产生冲突。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哈希函数 `H(x) = x % p` 无论 `p` 是否为素数，都可能产生冲突。例如，当 `p=5` 时，`H(1)=1` 和 `H(6)=1` 就会发生冲突。选择素数 `p` 的目的是为了让哈希值分布更均匀，从而**减少**冲突的概率，而不是完全**消除**冲突。因此，原说法是错误的。"
+    },
+    {
+      "id": "cStOqG5vRIpQCVhxyak0_",
+      "order": 23,
+      "type": "true_false",
+      "content": "动态规划只要推导出状态转移方程，就可以写出递归程序来求出最优解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "动态规划的核心在于避免重复计算子问题。虽然推导出状态转移方程是第一步，但如果直接写成递归程序而不进行记忆化（`memoization`）或使用迭代（`tabulation`）来存储子问题的结果，会导致大量的重复计算，使得程序效率低下，甚至无法在规定时间内求出最优解。因此，仅仅推导出方程不足以保证高效的递归实现。选项 T 错误，因为它忽略了动态规划对效率的要求。"
+    },
+    {
+      "id": "E0oskF5ciDyPWkSd30FQK",
+      "order": 24,
+      "type": "true_false",
+      "content": "广度优先搜索（BFS）能够判断图是否连通。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "BFS从一个起始节点开始，能够访问到所有与该节点连通的节点。如果在一次完整的BFS遍历后，图中所有节点都被访问到，则说明图是连通的；反之，如果还有未被访问的节点，则图不连通。因此，BFS可以有效判断图的连通性，选项T正确。选项F错误，因为它否定了BFS的这一能力。"
+    },
+    {
+      "id": "Kmxo0GhD2bmSbXP9CI407",
+      "order": 25,
+      "type": "true_false",
+      "content": "在C++中，如果定义了构造函数，则创建对象时先执行完缺省的构造函数，再执行这个定义的构造函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在C++中，当用户定义了任何构造函数时，编译器通常就不会再自动生成一个无参数的默认构造函数了。创建对象时，只会根据提供的参数调用并"
+    }
+  ]
+}

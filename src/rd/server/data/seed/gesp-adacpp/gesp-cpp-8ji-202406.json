@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202406",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202406",
+  "title": "GESP C++八级 202406",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2024年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202406"
+  },
+  "questions": [
+    {
+      "id": "12kyJBLhOJY7XCSH3jxrV",
+      "order": 1,
+      "type": "single_choice",
+      "content": "GESP活动期间，举办方从获胜者ABCDE五个人中选出三个人排成一队升国旗，其中A不能排在队首，请问有多少种排法？",
+      "options": [
+        {
+          "label": "A",
+          "text": "24"
+        },
+        {
+          "label": "B",
+          "text": "48"
+        },
+        {
+          "label": "C",
+          "text": "32"
+        },
+        {
+          "label": "D",
+          "text": "12"
+        }
+      ],
+      "answer": "B",
+      "explanation": "这道题是排列组合问题。首先计算从5人中选3人排队的所有可能方法，即 P(5, 3) = 5 × 4 × 3 ="
+    },
+    {
+      "id": "rnxNt-wtTaqv9lplch0LY",
+      "order": 2,
+      "type": "single_choice",
+      "content": "7进制数235转换成3进制数是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "11121"
+        },
+        {
+          "label": "B",
+          "text": "11122"
+        },
+        {
+          "label": "C",
+          "text": "11211"
+        },
+        {
+          "label": "D",
+          "text": "11112"
+        }
+      ],
+      "answer": "A",
+      "explanation": "首先将7进制数235转换为10进制数：`2 * 7^2 + 3 * 7^1 + 5 * 7^0 = 98 + 21 + 5 = 124`。接着将10进制数124转换为3进制数，通过连续除以3取余数法（124"
+    },
+    {
+      "id": "0NKiiaZS8djEqw3LwQpt_",
+      "order": 3,
+      "type": "single_choice",
+      "content": "0,1,2,3,4,5这些数字组成一个三位数，请问没有重复数字的情况下，有多少种组法（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "180"
+        },
+        {
+          "label": "B",
+          "text": "120"
+        },
+        {
+          "label": "C",
+          "text": "80"
+        },
+        {
+          "label": "D",
+          "text": "100"
+        }
+      ],
+      "answer": "D",
+      "explanation": "百位不能是0，有5种选择（1,2,3,4,5）。十位可以在剩下的5个数字中选择（包括0），有5种选择。个位在剩下的4个数字中选择，有4种选择。因此，总组法为 5 × 5 × 4 = 100 种，所以D是正确的。选项B (120) 忽略了百位不能为0的限制，而其他选项的计算方式也与题目要求不符。"
+    },
+    {
+      "id": "6YFTt34gwQkOBBuvg2Ewr",
+      "order": 4,
+      "type": "single_choice",
+      "content": "有V个顶点、E条边的图的深度优先搜索遍历时间复杂度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(V)"
+        },
+        {
+          "label": "B",
+          "text": "O(E)"
+        },
+        {
+          "label": "C",
+          "text": "O(V + E)"
+        },
+        {
+          "label": "D",
+          "text": "O(log(V + E))"
+        }
+      ],
+      "answer": "C",
+      "explanation": "深度优先搜索（DFS）会访问图中的每个顶点一次，并检查每条边一次（通过其邻接表或邻接矩阵）。因此，其时间复杂度是 O(V + E)，其中 V 是顶点数，E 是边数。选项 A (O(V)) 和 B (O(E)) 不全面，因为它们只考虑了顶点或边，而 DFS 的操作依赖于两者。选项 D (O(log(V + E))) 的对数复杂度不适用于图的遍历。"
+    },
+    {
+      "id": "0dyrmtta8fhqHZZyo_AMG",
+      "order": 5,
+      "type": "single_choice",
+      "content": "一对夫妻生男生女的概率相同。已知这对夫妻有两个孩子，其中一个是女孩，另一个是男孩的概率是多少？",
+      "options": [
+        {
+          "label": "A",
+          "text": "2/3"
+        },
+        {
+          "label": "B",
+          "text": "1/4"
+        },
+        {
+          "label": "C",
+          "text": "1/2"
+        },
+        {
+          "label": "D",
+          "text": "1/3"
+        }
+      ],
+      "answer": "C",
+      "explanation": "对于两个孩子的情况，所有等概率的组合有四种：\n1.  哥哥是男孩，妹妹是女孩 (BG)\n2.  姐姐是女孩，弟弟是男孩 (GB"
+    },
+    {
+      "id": "Aj_v6kfSYBZsvwTlrUGiO",
+      "order": 6,
+      "type": "single_choice",
+      "content": "从1到2024这2024个数中，共有（ ）个包含数字6的数。",
+      "options": [
+        {
+          "label": "A",
+          "text": "544"
+        },
+        {
+          "label": "B",
+          "text": "546"
+        },
+        {
+          "label": "C",
+          "text": "564"
+        },
+        {
+          "label": "D",
+          "text": "602"
+        }
+      ],
+      "answer": "A",
+      "explanation": "要找出1到2024中包含数字6的数，最简单的方法是计算不包含数字6的数的数量，然后用总数减去它。\n\n1"
+    },
+    {
+      "id": "pqDnjJRYNsgipvCi2QI6Y",
+      "order": 7,
+      "type": "single_choice",
+      "content": "二进制数 100.001 转换成十进制数是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "4.25"
+        },
+        {
+          "label": "B",
+          "text": "4.125"
+        },
+        {
+          "label": "C",
+          "text": "4.5"
+        },
+        {
+          "label": "D",
+          "text": "4.75"
+        }
+      ],
+      "answer": "B",
+      "explanation": "二进制数 `100.001` 的整数部分 `100` 转换为十进制是 $1 \\times 2^2 = 4$。小数部分 `001` 转换为十进制是 $0 \\times 2^{-1} + 0 \\times 2^{-2} + 1 \\times 2^{-3} = 0 + 0 + 0.125 = 0.125$。因此，`100.001` 转换成十进制数是 $4 + 0.125 = 4.125$，所以 B 是正确答案。其他选项 A、C、D 的值与正确计算结果不符。"
+    },
+    {
+      "id": "buYATDjsefbc27mY8EVPG",
+      "order": 8,
+      "type": "single_choice",
+      "content": "以下函数声明，哪个是符合C++语法的？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "void BubbleSort(char a[][], int n);"
+        },
+        {
+          "label": "B",
+          "text": "void BubbleSort(char a[][20], int n);"
+        },
+        {
+          "label": "C",
+          "text": "void BubbleSort(char a[10][], int n);"
+        },
+        {
+          "label": "D",
+          "text": "void BubbleSort(char[,] a, int n);"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案B。在C++中，当二维数组作为函数参数时，除第一维可以省略大小外，所有后续维度（如第二维）都必须明确指定其大小，以便编译器正确计算数组元素的地址。选项A和C的第二维大小未指定，导致编译错误。选项D的语法 `char[,]` 不是C++声明二维数组的正确方式。"
+    },
+    {
+      "id": "9ir-lmY8RvxCj9vvQecnV",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面有关C++重载的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "两个参数个数不同的函数可以重名。"
+        },
+        {
+          "label": "B",
+          "text": "两个参数类型不同的函数可以重名。"
+        },
+        {
+          "label": "C",
+          "text": "两个类的方法可以重名。"
+        },
+        {
+          "label": "D",
+          "text": "所有C++运算符均可以重载。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误，因为C++中并非所有运算符都可以重载，例如 `.` (成员访问运算符)、`::` (作用域解析运算符) 和 `?:` (条件运算符) 等就不能重载。选项A、B、C都描述了C++中函数重载的正确特性：函数名可以相同，只要它们的参数个数（A）或参数类型（B）不同，这同样适用于类的成员函数（C）。"
+    },
+    {
+      "id": "AOfTIVB8iOnMlNjwV4fR7",
+      "order": 10,
+      "type": "single_choice",
+      "content": "小于或等于给定正整数n的数中，与n互质的数的个数，我们称为欧拉函数，记作φ(n)。下面说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果n是质数，那么φ(n) = n - 1。"
+        },
+        {
+          "label": "B",
+          "text": "两个质数一定是互质数。"
+        },
+        {
+          "label": "C",
+          "text": "两个相邻的数一定是互质数。"
+        },
+        {
+          "label": "D",
+          "text": "相邻的两个质数不一定是互质数。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是D。\n\nD. 相邻的两个质数不一定是互质数。这是错误的说法。任意两个不同的质数，它们的公因数只有1，所以它们"
+    },
+    {
+      "id": "Jd2DFKZiTqHfMwZzpe--9",
+      "order": 11,
+      "type": "single_choice",
+      "content": "已知一棵二叉树有10个节点，则其中至多有（ ）个节点有2个子节点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "A",
+      "explanation": "一棵有 `N` 个节点的二叉树，其总边数为 `N-1`。每个有2个子节点的节点贡献2条边，每个有1个子"
+    },
+    {
+      "id": "yE9y_hyiSsuSHsfP4IgM2",
+      "order": 12,
+      "type": "single_choice",
+      "content": "二项展开式 (x + y)^n = x^n + n*x^(n-1)*y + n(n-1)/2 * x^(n-2) * y^2 + ... + y^n 的系数，正好满足杨辉三角的规律。当 n = 10 时，二项式展开式中 x*y^9 项的系数是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "9"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "C",
+      "explanation": "二项式展开式 `(x + y)^n` 中 `x^(n-k) * y^k` 项的系数是组合数 `C(n, k)`。对于 `(x + y)^10` 展开式中的 `x * y^9` 项，`n = 10` 且 `k = 9`。因此，其系数为 `C(10, 9)`。计算 `C(10, 9) = 10! / (9! * (10-9)!) = 10! / (9! * 1!) = 10`。所以正确答案是 C，其他选项不符合计算结果。"
+    },
+    {
+      "id": "FkIyPT1nMALr6JKnfYGr2",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面程序的时间复杂度为（ ）。\n```cpp\nbool notPrime[N] = {false};\nvoid sieve() {\n    for (int n = 2; n * n < N; n++)\n        if (!notPrime[n])\n            for (int i = n * n; i < N; i += n)\n                notPrime[i] = true;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(N)"
+        },
+        {
+          "label": "B",
+          "text": "O(N × log N)"
+        },
+        {
+          "label": "C",
+          "text": "O(N × log log N)"
+        },
+        {
+          "label": "D",
+          "text": "O(N^2)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该程序实现了埃拉托斯特尼筛法（Sieve of Eratosthenes），用于高效地找出 `N` 以内的所有素数。其时间复杂度是计算每个合数被"
+    },
+    {
+      "id": "czTbeNdMEpScLYh7H-5AV",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面程序的最差时间复杂度为（ ）。\n```cpp\nint gcd(int m, int n) {\n    if (m == 0)\n        return n;\n    return gcd(n % m, m);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(√n)"
+        },
+        {
+          "label": "B",
+          "text": "O(log(n))"
+        },
+        {
+          "label": "C",
+          "text": "O(n)"
+        },
+        {
+          "label": "D",
+          "text": "O(1)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该 `gcd` 函数实现了经典的欧几里得算法。欧几里得算法的特点是每次递归调用都会显著减小参数的大小，其迭代次数与输入数字的对数成正比，因此最差时间复杂度为 O(log(n))。选项 A (O(√n)) 和 C (O(n)) 都太慢，欧几里得算法的收敛速度远快于它们。选项 D (O(1)) 表示常数时间，这对于需要处理任意大小输入的算法是不可能的。"
+    },
+    {
+      "id": "0RrEA7mB_ut6RhR-95drd",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int cnt = 0;\n    for (int x = 0; x <= 10; x++)\n        for (int y = 0; y <= 10; y++)\n            for (int z = 0; z <= 10; z++)\n                if (x + y + z <= 15)\n                    cnt++;\n    cout << cnt << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "90"
+        },
+        {
+          "label": "B",
+          "text": "91"
+        },
+        {
+          "label": "C",
+          "text": "710"
+        },
+        {
+          "label": "D",
+          "text": "711"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该程序使用三层嵌套循环遍历 `x`, `y`, `z` 所有从 0 到 10 的整数组合。对于每组 `(x, y, z)`"
+    },
+    {
+      "id": "XJaT7wm7OyWEjJYUA8i4-",
+      "order": 16,
+      "type": "true_false",
+      "content": "ABCDE五个小朋友，排成一队跑步，其中AB两人必须排在一起，一共有48种排法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "将AB视为一个整体，与C、D、E一起，共有4个元素进行全排列，即4! = 24种排法。同时，AB内部也可以互换位置，有2! = 2种排法（AB或BA）。因此，总排法数为4! × 2! = 24 × 2 = 48种。题目描述与计算结果一致，所以T正确。"
+    },
+    {
+      "id": "SzZLhT1aJcFlLeJmA13Fa",
+      "order": 17,
+      "type": "true_false",
+      "content": "已知 double 类型的变量 a 和 b ，则执行语句 a = a + b; b = a - b; a = a - b; 后，变量 a 和 b 的值会互换。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "正确答案是 F。尽管这种算术方法在数学上可以实现变量互换，但 `double` 类型是浮点数，其运算存在精度问题。在执行 `a"
+    },
+    {
+      "id": "VxUUJVqKu_ipLhOh0HsVb",
+      "order": 18,
+      "type": "true_false",
+      "content": "一个袋子中有3个完全相同的红色小球、2个完全相同的蓝色小球。每次从中取出1个，再放回袋子，这样进行3次后，可能的颜色顺序有8种。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "每次取球时，袋中都有红色和蓝色两种颜色可选。由于每次取球后都放回袋子，所以每次取球都是独立的，且都有2种颜色选择。进行3次取球，总的颜色顺序种类为 2 × 2 × 2 = 8 种。因此，题目描述是正确的。"
+    },
+    {
+      "id": "_yEDoOOtgkPT5b7dICDu7",
+      "order": 19,
+      "type": "true_false",
+      "content": "已知 int 类型的变量 a 和 b 中分别存储着一个直角三角形的两条直角边的长度，则斜边的长度可以通过表达式 sqrt(a * a + b * b) 求得。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "根据勾股定理，直角三角形斜边的平方等于两条直角边平方的和。因此，斜边的长度是 `a * a + b * b` 的平方根。C++ 中的 `sqrt()` 函数正是用于计算平方根的，所以表达式 `sqrt(a * a + b * b)` 正确地计算了斜边的长度。题目描述完全符合数学原理和 C++ 语法，故为正确。"
+    },
+    {
+      "id": "ObNj2qCU952Pi_IeInrhZ",
+      "order": 20,
+      "type": "true_false",
+      "content": "在一个包含 v 个顶点、 e 条边的带权连通简单有向图上使用Dijkstra算法求最短路径，时间复杂度为O(v^2)，可进一步优化至O(e + v log(v))。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该说法正确。Dijkstra算法的朴素实现，每次从所有未访问顶点中找到距离最小的顶点，需要O(v)时间，重复v次，总复杂度为O(v^2)。通过使用最小优先队列（如C++的`std::priority_queue`）来存储待访问顶点，每次取出最小距离顶点的时间为O(log v)，更新邻接点距离并插入队列的时间也为O(log v)。总共处理v个顶点和e条边，因此优化后的时间复杂度为O(e + v log v)。"
+    },
+    {
+      "id": "QLAIrfHl0hFV5jlxHUBQK",
+      "order": 21,
+      "type": "true_false",
+      "content": "在N个元素的二叉排序树中查找一个元素，最差情况的时间复杂度是O(logN)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "二叉排序树在最差情况下可能退化成链表（例如，插入的元素总是递增或递减），此时树的高度为N。在这种退化树中查找元素，需要遍历所有N个节点，因此最差时间复杂度是O(N)。只有当二叉排序树是平衡树时（如AVL树、红黑树），查找的最差时间复杂度才是O(logN)。题目没有指明是平衡二叉排序树，所以原说法是错误的。"
+    },
+    {
+      "id": "fKoFMLjq71IUd7vuYle2Q",
+      "order": 22,
+      "type": "true_false",
+      "content": "C++语言中，可以为同一个类定义多个析构函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，一个类只能拥有一个析构函数。析构函数用于对象生命周期结束时自动调用，执行清理工作，它没有参数，因此不能被重载。选项 T 错误，因为它违反了 C++ 语言关于析构函数定义的规则。"
+    },
+    {
+      "id": "rlXXY9S2_xEToLxCNMope",
+      "order": 23,
+      "type": "true_false",
+      "content": "使用单链表和使用双向链表，查找元素的时间复杂度相同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "查找单链表和双向链表中的元素，都需要从链表头部（或尾部）开始，逐个节点地遍历直到找到目标或到达链表末尾。在最坏情况下，这两种链表都需要访问所有 `n` 个节点，因此查找时间复杂度均为 `O(n)`。所以，它们的查找时间复杂度是相同的，选项 T 正确。选项 F 错误，因为双向链表虽然在某些操作（如已知节点删除）上更高效，但对未知位置的查找并无本质优势。"
+    },
+    {
+      "id": "XzcuQXxcOmWL_ibzzDJMJ",
+      "order": 24,
+      "type": "true_false",
+      "content": "为解决哈希函数冲突，可以使用不同的哈希函数为每个表项各建立一个子哈希表，用来管理该表项的所有冲突元素。这些子哈希表一定不会发生冲突。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这种方法被称为二级哈希，但子哈希表本身仍然是哈希表。任何哈希函数，除非是针对特定数据集的完美哈希函数，都可能产生冲突。因此，断言子哈希表“一定不会发生冲突”是错误的，它们内部仍然可能发生冲突。选项 T 错误地认为子哈希表能完全避免冲突。"
+    },
+    {
+      "id": "vrETS7bB5kwv7RYdwpgxf",
+      "order": 25,
+      "type": "true_false",
+      "content": "要判断无向图的连通性，在深度优先搜索和广度优先搜索中选择，深度优先的平均时间复杂度更低。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "判断无向图连通性时，深度优先搜索（DFS）和广度优先搜索（BFS）的平均时间复杂度都是 `O(V+E)`（V为顶点数，E为边数），因为它们都需要访问图中所有的顶点和边来确定连通分量。因此，两种算法在时间复杂度上是相同的，不存在谁比谁更低的情况。所以原题目中“深度优先的平均时间复杂度更低”的说法是错误的。"
+    }
+  ]
+}

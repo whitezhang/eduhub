@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202309",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202309",
+  "title": "GESP C++三级 202309",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2023年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202309"
+  },
+  "questions": [
+    {
+      "id": "6K7SAxYgYnHfe5Ly_U9Lj",
+      "order": 1,
+      "type": "single_choice",
+      "content": "人们所使用的手机上安装的App通常指的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "一款操作系统"
+        },
+        {
+          "label": "B",
+          "text": "一款应用软件"
+        },
+        {
+          "label": "C",
+          "text": "一种通话设备"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "手机上的App是“Application”的缩写，它是一种安装在操作系统之上，为用户提供特定功能的软件，因此正确答案是B“一款应用软件”。操作系统（如Android、iOS）是手机的基础软件，App在其上运行，所以A不对。手机是通话设备，而App是设备上的软件，C也不对。"
+    },
+    {
+      "id": "-qCUaVjf9XBG_s7SBo3gf",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下列流程图的输出结果是？（ ）\n\n流程图描述：开始 -> a=5, s=1 -> 判断 a>=4，若是则 s=s*a, a=a-1，循环；若否则输出 s -> 结束。",
+      "options": [
+        {
+          "label": "A",
+          "text": "60"
+        },
+        {
+          "label": "B",
+          "text": "20"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "1"
+        }
+      ],
+      "answer": "B",
+      "explanation": "流程图初始化 `a=5`, `s=1`。进入循环，当 `a=5`时，`s`更新为 `1*5=5`，`a`变为 `4`。接着当 `a=4`时，`s`更新为 `5*4=20`，`a`变为 `3`。此时 `a=3`不满足 `a>=4`的条件，循环终止，输出 `s`的值 `20`。因此B选项正确。其他选项不符合流程图的计算结果。"
+    },
+    {
+      "id": "XX0BWOHU6qFdB4oAHNBlT",
+      "order": 3,
+      "type": "single_choice",
+      "content": "已知大写字符 `'A'` 的ASCII编码的十六进制表示为 `0x41`，则字符 `'L'` 的ASCII编码的十六进制表示为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`4A`"
+        },
+        {
+          "label": "B",
+          "text": "`4B`"
+        },
+        {
+          "label": "C",
+          "text": "`4C`"
+        },
+        {
+          "label": "D",
+          "text": "`52`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "ASCII编码中，大写字母是连续排列的。从 `'A'` 到 `'L'` 共有 `('L' - 'A')` 即 11 个字符的间隔。因此，`'L'` 的ASCII编码是 `0x41` 加上 11（十进制），即 `0x41 + 0xB = 0x4C`。选项 A、B、D 分别对应 `'J'`、`'K'` 或其他不相关的编码，不符合题意。"
+    },
+    {
+      "id": "D6P3_fL0_W8V4ARKjpLJ0",
+      "order": 4,
+      "type": "single_choice",
+      "content": "以下哪个不是C++语言中的运算符？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`~`"
+        },
+        {
+          "label": "B",
+          "text": "`~~`"
+        },
+        {
+          "label": "C",
+          "text": "`<`"
+        },
+        {
+          "label": "D",
+          "text": "`<<`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`~~` 不是C++语言中定义的有效运算符组合。选项A中的 `~` 是按位取反运算符，选项C中的 `<` 是小于运算符。选项D中的 `<<` 是左移运算符，也常用于输出流操作。"
+    },
+    {
+      "id": "ZEKIQGKBO4MXAGkS2qY9g",
+      "order": 5,
+      "type": "single_choice",
+      "content": "如果数组定义为 `long long array[] = {3, 5, 7, 2};`，则数组 `array` 占用的字节数为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "32"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在 C++ 中，`long long` 类型通常占用 8 字节。题目中的数组 `array` 包含 4 个 `long long` 类型的元素，因此它占用的总字节数为 `4 * 8 = 32` 字节，所以 A 是正确答案。其他选项的字节数与 `long long` 类型的大小或数组元素数量不符。"
+    },
+    {
+      "id": "NwdTYdbxsH2CLiw-YsYnp",
+      "order": 6,
+      "type": "single_choice",
+      "content": "一个数组定义为 `double array[3];`，则可合理访问这个数组的元素的下标最大为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "23"
+        },
+        {
+          "label": "D",
+          "text": "24"
+        }
+      ],
+      "answer": "A",
+      "explanation": "C++ 数组的下标总是从 0 开始。对于 `double array[3];` 这样的定义，它表示一个包含 3 个元素的数组，它们的有效下标分别是 0、1 和 2。因此，可合理访问的元素的最大下标是 2。选项 B、C、D 都超出了数组的有效下标范围，会导致访问越界错误。"
+    },
+    {
+      "id": "20BgvEdKiNaQXAKuW2L88",
+      "order": 7,
+      "type": "single_choice",
+      "content": "以下数组定义，符合C++语言语法的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`double a[];`"
+        },
+        {
+          "label": "B",
+          "text": "`double b[] = {1, 2.0, '3'};`"
+        },
+        {
+          "label": "C",
+          "text": "`double c[3.0];`"
+        },
+        {
+          "label": "D",
+          "text": "`double[] d = new double[3];`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B `double b[] = {1, 2.0, '3'};` 是正确的，C++允许通过初始化列表自动推断数组大小，并对列表中的值进行隐式类型转换。选项 A `double a[];` 错误，因为未指定数组大小且没有初始化列表。选项 C `double c[3.0];` 错误，数组大小必须是整数类型。选项 D `double[] d = new double[3];` 是Java语法，C++中动态分配数组应使用指针，如 `double* d = new double[3];`。"
+    },
+    {
+      "id": "28QergRBf48VE7yw6UquP",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下列关于进制的叙述，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "只有十进制和二进制能够用来表示小数，八进制和十六进制不可以。"
+        },
+        {
+          "label": "B",
+          "text": "常用的进制包括二进制、八进制、十进制、十六进制，其他进制在日常生活中很少使用。"
+        },
+        {
+          "label": "C",
+          "text": "对任意正整数，其二进制表示不会比它的十进制表示更短。"
+        },
+        {
+          "label": "D",
+          "text": "正整数的八进制表示中，每一位可能出现的最大数字是8。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C 正确，因为二进制的基数（2）小于十进制的基数（10），表示同一个正整数时，二进制通常需要更多的位数，不可能比它的十进制表示更短。选项 A 错误，所有进制都可以用来表示小数。选项 B 错误，日常生活中主要使用十进制，二进制、八进制、十六进制主要在计算机领域常用。选项 D 错误，八进制的每一位可能出现的最大数字是 7，而不是 8。"
+    },
+    {
+      "id": "LdVUD9ZQZhfFTiTFPDTbC",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下列关于C++语言中数组的叙述，不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "可以定义 0 个元素的数组。"
+        },
+        {
+          "label": "B",
+          "text": "不能定义 -1 个元素的数组。"
+        },
+        {
+          "label": "C",
+          "text": "数组下标越界访问会产生编译错误。"
+        },
+        {
+          "label": "D",
+          "text": "程序运行时发生数组下标的越界访问，程序依然可能正常结束。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C. **数组下标越界访问会导致未定义行为，而不是编译错误。** C++的内置数组不提供自动的边界检查，编译器通常不会在编译时发现越"
+    },
+    {
+      "id": "fjNW77hoTqiGqxUuztoOF",
+      "order": 10,
+      "type": "single_choice",
+      "content": "如果 `a` 是 `int` 类型的变量，下列哪个表达式的值一定为 `true`？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`a + 1000 - 1000 == a`"
+        },
+        {
+          "label": "B",
+          "text": "`a * 2 / 2 == a`"
+        },
+        {
+          "label": "C",
+          "text": "`(a & 1) == 1`"
+        },
+        {
+          "label": "D",
+          "text": "`(a | 1) == a + 1`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\nA. `a + 1000 - 1000 == a`：在不发生整数溢出的情况下，加一个数再"
+    },
+    {
+      "id": "oDK0FyHT8O_vnYtclWj_L",
+      "order": 11,
+      "type": "single_choice",
+      "content": "如果 `a` 和 `b` 均为 `int` 类型的变量，下列表达式不能正确判断\"`a` 等于 `b`\"的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`((a >= b) && (a <= b))`"
+        },
+        {
+          "label": "B",
+          "text": "`((a >> 1) == (b >> 1))`"
+        },
+        {
+          "label": "C",
+          "text": "`((a + b) == (a + a))`"
+        },
+        {
+          "label": "D",
+          "text": "`((a ^ b) == 0)`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n选项 B `((a >> 1) == (b >> 1))` 不能正确判断 `a` 等于 `b`。例如，当 `"
+    },
+    {
+      "id": "TYEShuntwtUUrBD00pnne",
+      "order": 12,
+      "type": "single_choice",
+      "content": "如果 `a` 为 `char` 类型的变量，下列哪个表达式可以正确判断\"a是大写字母\"？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`a - 'A' <= 26`"
+        },
+        {
+          "label": "B",
+          "text": "`'A' <= a <= 'Z'`"
+        },
+        {
+          "label": "C",
+          "text": "`'A' <= 'a' <= 'Z'`"
+        },
+        {
+          "label": "D",
+          "text": "`('A' <= a) && (a <= 'Z')`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n\nD. `('A' <= a) && (a <= 'Z')` 是正确的判断方式。它使用逻辑与运算符 `&&` 将两个独立的"
+    },
+    {
+      "id": "fFln7dAT7wFtIWQYBYUZR",
+      "order": 13,
+      "type": "single_choice",
+      "content": "在下列代码的横线处填写（ ），可以使得输出是\"20 10\"。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 10, b = 20;\n    a = (a << 8) | b;\n    _______  // 在此处填入代码\n    cout << a << \" \" << b << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`a = a >> 8; b = a & 0xff;`"
+        },
+        {
+          "label": "B",
+          "text": "`b = a >> 8; a = a & 0xff;`"
+        },
+        {
+          "label": "C",
+          "text": "`a = b; b = a & 0xff;`"
+        },
+        {
+          "label": "D",
+          "text": "`b = a; a = b;`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在 `a = (a << 8) | b;` 执行后，`a` 的值变为 `(10 << 8) | 20`，即 `"
+    },
+    {
+      "id": "L6nO-MU9xSuXWuymwN-yv",
+      "order": 14,
+      "type": "single_choice",
+      "content": "在下列代码的横线处填写（ ），可以使得输出是\"120\"。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int array[5] = {1, 2, 3, 4, 5};\n    int res = 0;\n    for (int i = 0; i < 5; i++)\n        _______;  // 在此处填入代码\n    cout << res << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`res += array[i];`"
+        },
+        {
+          "label": "B",
+          "text": "`res *= array[i]`"
+        },
+        {
+          "label": "C",
+          "text": "`res = array[i]`"
+        },
+        {
+          "label": "D",
+          "text": "以上均不对。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "题目要求输出 `120`，而 `120` 是数组元素 `1 * 2 * 3 * 4 * 5` 的乘积。\n选项 A"
+    },
+    {
+      "id": "o3SQFNHLTupb-rp_YyB6t",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列代码的输出是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int array[10];\n    for (int i = 0; i < 10; i++)\n        array[i] = i;\n    for (int p = 2; p < 10; p++)\n        if (array[p] == p)\n            for (int n = p; n < 10; n += p)\n                array[n] = array[n] / p * (p - 1);\n    int res = 0;\n    for (int n = 1; n < 10; n++)\n        res += array[n];\n    cout << res << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "15"
+        },
+        {
+          "label": "B",
+          "text": "28"
+        },
+        {
+          "label": "C",
+          "text": "45"
+        },
+        {
+          "label": "D",
+          "text": "55"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码首先将 `array` 初始化为 `{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}`"
+    },
+    {
+      "id": "gGLUoXsY95e57dWDgJ_Ue",
+      "order": 16,
+      "type": "true_false",
+      "content": "二进制数 `101.101` 在十进制下是 `5.005`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "二进制数 `101.101` 转换为十进制：整数部分 `101` 对应 `1*2^2 + 0*2^1 + 1*2^0 = 5`。小数部分 `.101` 对应 `1*2^-1 + 0*2^-2 + 1*2^-3 = 0.5 + 0 + 0.125 = 0.625`。因此，`101.101` 在十进制下是 `5.625`，而不是 `5.005`。所以原题目描述是错误的，选项 F 正确。"
+    },
+    {
+      "id": "k9XxoBIrnCXek8xKMAvW7",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++语言中，位运算符也有类似\"先乘除、后加减\"的优先级规则。因此，使用时应注意合理使用括号。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中的位运算符确实有其优先级规则，例如移位运算符 `<<` 和 `>>` 的优先级高于按位与 `&`、按位或 `|` 等。同时，它们的优先级通常低于算术运算符，这意味着 `a & b + c` 会先计算 `b + c`。因此，为了确保运算顺序符合预期，合理使用括号是非常必要的。选项T正确，因为它准确描述了位运算符的优先级特性及括号的重要性。选项F错误，因为位运算符并非没有优先级规则。"
+    },
+    {
+      "id": "9Rkv_2KGXrU2Ed3iPYBk5",
+      "order": 18,
+      "type": "true_false",
+      "content": "字符常量 `'3'` 的值和 `int` 类型常量 `3` 的值是相同的，只是占用的字节数不同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "字符常量 `'3'` 的值是其对应的 ASCII 码（通常为 51），类型是 `char`。而 `int` 类型常量 `3` 的值就是整数 3，类型是 `int`。因此，它们的值是不同的，例如 `int('3')` 的结果是 51，而不是 3。虽然它们占用的字节数也不同，但关键在于它们的值本身就不相同，所以原题的说法是错误的。"
+    },
+    {
+      "id": "1cmxmPqLsjNEY1pq3iBHu",
+      "order": 19,
+      "type": "true_false",
+      "content": "在C++语言中，长度为 n 的数组，访问下标为 n 的元素会引起编译错误。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，长度为 `n` 的数组，其有效下标范围是 `0` 到 `n-1`。因此，下标为 `n` 的元素超出了数组"
+    },
+    {
+      "id": "nVwLL47VtbbP__MDRUNyy",
+      "order": 20,
+      "type": "true_false",
+      "content": "在C++语言中，所有 `int` 类型的值，经过若干次左移操作（`<<`）后，它们的值总会变为 `0`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法是错误的。\n\n1.  **为什么错误 (F)**：\n    *   如果 `int` 初始值为 `0`，它经过任何次数的左移"
+    },
+    {
+      "id": "1jJEg2snDJdRrbVvruwpA",
+      "order": 21,
+      "type": "true_false",
+      "content": "在C++语言中，数组下标的大小决定元素在逻辑上的先后顺序，与元素在内存中位置的先后顺序无关。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 数组的元素在内存中是**连续存储**的。这意味着 `arr[0]`、`arr[1]` 等元素在内存中的物理位置是紧密相连的，并且它们的先后顺序与数组下标所决定的逻辑顺序是**完全一致**的。因此，题目中“与元素在内存中位置的先后顺序无关”的说法是错误的，所以选择 F。选择 T 则意味着认为题目描述正确，与 C++ 数组的内存存储机制不符。"
+    },
+    {
+      "id": "UWzOCf-Ub48cb0IR9Vp8k",
+      "order": 22,
+      "type": "true_false",
+      "content": "在C++语言中，定义数组时，`[]` 中必须指定元素个数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在C++中，定义数组时并非总是需要在 `[]` 中明确指定元素个数。当数组在定义时进行初始化，编译器可以根据初始化列表中的元素数量自动推断数组大小，例如 `int arr[] = {1, 2, 3};`。因此，题目中“必须指定”的说法是错误的，选项F正确。"
+    },
+    {
+      "id": "aEcmSwSGA5j_VOdR3aHgW",
+      "order": 23,
+      "type": "true_false",
+      "content": "著名的哥德巴赫猜想：任一大于2的偶数都可写成两个素数之和。我们可以通过枚举法来证明它。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哥德巴赫猜想是一个尚未被数学界完全证明的猜想，而非已证实的定理。枚举法只能验证有限个偶数符合猜想，但无法证明它对所有无限个大于2的偶数都成立。数学证明需要严谨的逻辑推导，而非仅仅通过列举有限个例子。因此，选项F（错误）是正确的，因为枚举法不能“证明”哥德巴赫猜想。"
+    },
+    {
+      "id": "HNxzCORKnRt9i-a9ZrprU",
+      "order": 24,
+      "type": "true_false",
+      "content": "在C++语言中，表达式 `(0xff == 255)` 的值为 `true`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "表达式 `0xff` 是一个十六进制数，其中 `0x` 前缀表示十六进制。十六进制的 `ff` 转换为十进制是 `15 * 16 + 15 = 255`。因此，`0xff` 等于十进制的 `255`，所以 `(0xff == 255)` 的结果为 `true`。选项 F 错误是因为这两个数值确实相等。"
+    },
+    {
+      "id": "8YbQCem2giXC8JgEJQjEa",
+      "order": 25,
+      "type": "true_false",
+      "content": "如果 `a` 为 `int` 类型的变量，且表达式 `((a & 1) == 0)` 的值为 `true`，则说明 `a` 是偶数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "表达式 `a & 1` 对变量 `a` 和数字 `1` 进行按位与操作。在二进制表示中，偶数的最低位（最右边一位）总是 `0`，而奇数的最低位总是 `1`。因此，当 `a` 是偶数时，`a & 1` 的结果是 `0`；当 `a` 是奇数时，`a & 1` 的结果是 `1`。所以，表达式 `((a & 1) == 0)` 能够准确判断 `a` 是否为偶数，该说法是正确的。"
+    }
+  ]
+}

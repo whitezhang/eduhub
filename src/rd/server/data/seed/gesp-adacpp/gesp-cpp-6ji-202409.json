@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-6ji-202409",
+  "url": "https://adacpp.com/practice/gesp-cpp-6ji-202409",
+  "title": "GESP C++六级 202409",
+  "description": "CCF编程能力等级认证 GESP C++ 六级 2024年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 6,
+    "ym": "202409"
+  },
+  "questions": [
+    {
+      "id": "4lfmZHqy3Id_VZUtQYgZG",
+      "order": 1,
+      "type": "single_choice",
+      "content": "以下（ ）没有涉及 C++ 语言的面向对象特性支持。",
+      "options": [
+        {
+          "label": "A",
+          "text": "C++ 中构造一个 class 或 struct"
+        },
+        {
+          "label": "B",
+          "text": "C++ 中调用 printf 函数"
+        },
+        {
+          "label": "C",
+          "text": "C++ 中调用用户定义的类成员函数"
+        },
+        {
+          "label": "D",
+          "text": "C++ 中构造来源于同一基类的多个派生类"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`printf` 是 C 语言的标准库函数，其调用不涉及 C++ 的类、对象、继承或多态等面向对象特性。选项 A (构造 `class` 或 `struct`) 是 C++ 定义面向对象类型的基础。选项 C (调用用户定义的类成员函数) 是对象行为的体现。选项 D (构造来源于同一基类的多个派生类) 是继承的体现，这些都是 C++ 面向对象的核心特性。"
+    },
+    {
+      "id": "lL68nrFu55H4ZPDzQxHx2",
+      "order": 2,
+      "type": "single_choice",
+      "content": "关于以下C++代码，（ ）行代码会引起编译错误。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass Base {\nprivate:\n    int a;\nprotected:\n    int b;\npublic:\n    int c;\n    Base() : a(1), b(2), c(3) {}\n};\n\nclass Derived : public Base {\npublic:\n    void show() {\n        cout << a << endl;    // Line 1\n        cout << b << endl;    // Line 2\n        cout << c << endl;    // Line 3\n    }\n};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "Line 1"
+        },
+        {
+          "label": "B",
+          "text": "Line 2"
+        },
+        {
+          "label": "C",
+          "text": "Line 3"
+        },
+        {
+          "label": "D",
+          "text": "没有编译错误"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`Line 1` 会引起编译错误，因为 `a` 是 `Base` 类的 `private` 成员。`private` 成员只能在其声明的类内部访问，派生类 `Derived` 无法直接访问。`Line 2` 和 `Line 3` 不会报错，因为 `b` 是 `protected` 成员，可以在派生类中访问；`c` 是 `public` 成员，可以在任何地方访问。"
+    },
+    {
+      "id": "LAaK_evM7jh-mY_eXftGB",
+      "order": 3,
+      "type": "single_choice",
+      "content": "有6个元素，按照 6,5,4,3,2,1 的顺序进入栈S，下列（ ）的出栈序列是不能出现的。",
+      "options": [
+        {
+          "label": "A",
+          "text": "5,4,3,6,1,2"
+        },
+        {
+          "label": "B",
+          "text": "4,5,3,1,2,6"
+        },
+        {
+          "label": "C",
+          "text": "3,4,6,5,2,1"
+        },
+        {
+          "label": "D",
+          "text": "2,3,4,1,5,6"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n**解释为什么 C 是不能出现的：**\n栈的特性是“后进先出”（LIFO）。当元素 6, 5, 4"
+    },
+    {
+      "id": "ndy1HCPxQdTthyfsqBi_a",
+      "order": 4,
+      "type": "single_choice",
+      "content": "采用如下代码实现检查输入的字符串括号是否匹配，横线上应填入的代码为（ ）。\n\n```cpp\n#include <iostream>\n#include <stack>\n#include <string>\n\nusing namespace std;\n\nbool is_valid(string s) {\n    stack<char> st;\n    char top;\n\n    for (char& ch : s) {\n        if (ch == '(' || ch == '{' || ch == '[') {\n            st.push(ch);    // 左括号入栈\n        }\n        else\n        {\n            if (st.empty())\n                return false;\n            ———————————————————————— // 在此处填入代码\n            if ((ch == ')' && top != '(') ||\n                (ch == '}' && top != '{') ||\n                (ch == ']' && top != '[')) {\n                return false;\n            }\n        }\n    }\n\n    return st.empty();    // 栈为空则说明所有括号匹配成功\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`top = st.top(); st.pop();`"
+        },
+        {
+          "label": "B",
+          "text": "`st.pop(); top = st.top();`"
+        },
+        {
+          "label": "C",
+          "text": "`st.pop(); top = st.front();`"
+        },
+        {
+          "label": "D",
+          "text": "`top = st.front(); st.pop();`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当遇到右括号时，我们需要先获取栈顶元素（`st.top()`）进行匹配判断，然后才能将其从栈中弹出（`st.pop()`）。选项 A 的 `top = st.top(); st.pop();` 顺序正确地实现了这一逻辑。选项 B `st.pop(); top = st.top();` 会先弹出元素，导致 `top` 变量获取的是错误的（下一个）栈顶元素。选项 C 和 D 中使用了 `st.front()`，但 `std::stack` 没有 `front()` 方法，会导致编译错误。"
+    },
+    {
+      "id": "4mWoT0A3NnKf0wATBtIdf",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面代码判断队列的第一个元素是否等于 a，并删除该元素，横线上应填写（ ）。\n\n```cpp\n#include <iostream>\n#include <queue>\nusing namespace std;\n\nbool is_front_equal(std::queue<int>& q, int a) {\n    bool is_equal = false;\n    if (!q.empty()) {\n        ———————————————————————— // 在此处填入代码\n    }\n    return is_equal;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`is_equal = (q.front() == a);`"
+        },
+        {
+          "label": "B",
+          "text": "`is_equal = (q.front() == a); q.pop();`"
+        },
+        {
+          "label": "C",
+          "text": "`q.pop(); is_equal = (q.front() == a);`"
+        },
+        {
+          "label": "D",
+          "text": "`q.pop(); is_equal = (q.top() == a);`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。`is_equal = (q.front() == a); q.pop();` 首先使用 `q.front()` 获取队首元素进行判断并记录结果，然后调用 `q.pop()` 删除该元素，这完全符合题目“判断队列的第一个元素是否等于 a，并删除该元素”"
+    },
+    {
+      "id": "jCr7K-CHwcOs0qeoqzkUY",
+      "order": 6,
+      "type": "single_choice",
+      "content": "假设字母表 {a,b,c,d,e} 在字符串出现的频率分别为 10%，15%，30%，16%，29%。若使用哈夫曼编码方式对字母进行二进制编码，则字符 abcde 分别对应的一组哈夫曼编码的长度分别为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "4, 4, 1, 3, 2"
+        },
+        {
+          "label": "B",
+          "text": "3, 3, 2, 2, 2"
+        },
+        {
+          "label": "C",
+          "text": "3, 3, 1, 2, 1"
+        },
+        {
+          "label": "D",
+          "text": "4, 4, 1, 2, 2"
+        }
+      ],
+      "answer": "B",
+      "explanation": "哈夫曼编码的原则是频率越高的字符编码越短。根据给定的频率，我们构建哈夫曼树：首先合并频率最低的 `a(10%)"
+    },
+    {
+      "id": "RRDhdjKZS7YKLqKKllhJl",
+      "order": 7,
+      "type": "single_choice",
+      "content": "以下C++代码实现 n 位的格雷码，则横线上应填写（ ）。\n\n```cpp\n#include <iostream>\n#include <vector>\n#include <string>\nusing namespace std;\n\n// 生成 n 位的格雷码\nvector<string> generate_graycode(int n) {\n    vector<string> graycode_list;\n    if (n <= 0) {\n        return graycode_list;\n    }\n\n    // 初始1位格雷码\n    graycode_list.push_back(\"0\");\n    graycode_list.push_back(\"1\");\n\n    // 迭代生成 n 位的格雷码\n    for (int i = 2; i <= n; i++) {\n        int current_size = graycode_list.size();\n\n        for (int j = current_size - 1; j >= 0; j--) {\n            graycode_list.push_back(\"1\" + graycode_list[j]);\n        }\n\n        for (int j = 0; j < current_size; j++) {\n            ———————————————————————— // 在此处填入代码\n        }\n    }\n\n    return graycode_list;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`graycode_list.push_back(\"0\" + graycode_list[j]);`"
+        },
+        {
+          "label": "B",
+          "text": "`graycode_list[j] = \"0\" + graycode_list[j];`"
+        },
+        {
+          "label": "C",
+          "text": "`graycode_list.push_back(\"1\" + graycode_list[j]);`"
+        },
+        {
+          "label": "D",
+          "text": "`graycode_list[j] = \"1\" + graycode_list[j];`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n1.  **为什么 B 是对的：** 生成 n 位的格雷码，是从 (n-1) 位的格雷码列表 `L`"
+    },
+    {
+      "id": "Rr7DHEPqLaBEeKREsyfnf",
+      "order": 8,
+      "type": "single_choice",
+      "content": "给定一棵二叉树，其前序遍历结果为：ABDECFG，中序遍历结果为：DEBACFG，则这棵树的正确后序遍历结果是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "EDBGFCA"
+        },
+        {
+          "label": "B",
+          "text": "EDGBFCA"
+        },
+        {
+          "label": "C",
+          "text": "DEBGFCA"
+        },
+        {
+          "label": "D",
+          "text": "DBEGFCA"
+        }
+      ],
+      "answer": "A",
+      "explanation": "根据前序遍历 `ABDECFG`，根节点是 `A`。在中序遍历 `DEBACFG` 中，`A` 左侧的 `DEB` 是左"
+    },
+    {
+      "id": "sV-r8K51mzN8ITXPmayFO",
+      "order": 9,
+      "type": "single_choice",
+      "content": "一棵有 n 个结点的完全二叉树用数组进行存储与表示，已知根结点存储在数组的第1个位置。若存储在数组第9个位置的结点存在兄弟结点和两个子结点，则它的兄弟结点和右子结点的位置分别是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "8, 18"
+        },
+        {
+          "label": "B",
+          "text": "10, 18"
+        },
+        {
+          "label": "C",
+          "text": "8, 19"
+        },
+        {
+          "label": "D",
+          "text": "10, 19"
+        }
+      ],
+      "answer": "C",
+      "explanation": "对于1-indexed数组存储的完全二叉树，若结点 `i` 是右子结点（`i` 为奇数），则其兄弟结点是 `i - 1`，所以第9个结点的兄弟结点是 `9 - 1 = 8`。结点的左子结点位置是 `2 * i`，右子结点位置是 `2 * i + 1`，因此第9个结点的右子结点位置是 `2 * 9 + 1 = 19`。结合可知，兄弟结点是8，右子结点是19，故选项C正确。其他选项的兄弟结点或右子结点计算不符合完全二叉树的数组存储规则。"
+    },
+    {
+      "id": "522Fqf0QrlyBcmMmvmZs7",
+      "order": 10,
+      "type": "single_choice",
+      "content": "二叉树的深度定义为从根结点到叶结点的最长路径上的结点数，则以下基于二叉树的深度优先搜索实现的深度计算函数中横线上应填写（ ）。\n\n```cpp\n// 定义二叉树的结点结构\nstruct tree_node {\n    int val;\n    tree_node* left;\n    tree_node* right;\n\n    tree_node(int x) : val(x), left(nullptr), right(nullptr) {}\n};\n\n// 计算二叉树的深度\nint max_depth(tree_node* root) {\n    if (root == nullptr) {\n        return 0;    // 如果根结点为空，则深度为 0\n    }\n\n    int left_depth = max_depth(root->left);\n    int right_depth = max_depth(root->right);\n\n    ———————————————————————— // 在此处填入代码\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`return left_depth + right_depth;`"
+        },
+        {
+          "label": "B",
+          "text": "`return max(left_depth, right_depth);`"
+        },
+        {
+          "label": "C",
+          "text": "`return max(left_depth, right_depth) + 1;`"
+        },
+        {
+          "label": "D",
+          "text": "`return left_depth + right_depth + 1;`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "二叉树的深度是其左右子树深度的最大值再加 1（算上当前结点本身）。`max(left_depth, right_depth)` 找到了左右子树中最深的路径，`+ 1` 则计入了当前 `root` 结点，因此选项 C 正确。选项 A 和 D 错误地将左右子树深度相加，不符合“最长路径”的定义；选项 B 找到了左右子树的最大深度，但忘记加上当前结点自身的深度。"
+    },
+    {
+      "id": "aypcBsetmfnpspDa80IB4",
+      "order": 11,
+      "type": "single_choice",
+      "content": "上一题的二叉树深度计算还可以采用二叉树的广度优先搜索来实现。以下基于二叉树的广度优先搜索实现的深度计算函数中横线上应填写（ ）。\n\n```cpp\n#include <queue>\n\nint max_depth_bfs(tree_node* root) {\n    if (root == nullptr) {\n        return 0;    // 如果树为空，深度为 0\n    }\n\n    queue <tree_node*> q;\n    q.push(root);\n    int depth = 0;\n\n    // 使用队列进行层序遍历\n    while (!q.empty()) {\n        ———————————————————————— // 在此处填入代码\n        for (int i = 0; i < level_size; ++i) {\n            tree_node* node = q.front();\n            q.pop();\n\n            if (node->left) {\n                q.push(node->left);\n            }\n            if (node->right) {\n                q.push(node->right);\n            }\n        }\n    }\n\n    return depth;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`int level_size = q.size(); depth++;`"
+        },
+        {
+          "label": "B",
+          "text": "`int level_size = 2; depth++;`"
+        },
+        {
+          "label": "C",
+          "text": "`int level_size = q.size(); depth += level_size;`"
+        },
+        {
+          "label": "D",
+          "text": "`int level_size = 2; depth += level_size;`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案A。`int level_size = q.size();` 用于获取当前层节点的数量，确保循环能遍历完当前层所有节点。`depth++;` 在处理完当前层的所有节点后，将深度加一，表示成功遍历了一层。选项B和D中的 `level_size = 2` 是错误的，因为每层的节点数不固定。选项C和D中的 `depth += level_size` 是错误的，因为每处理完一层，深度只增加1，而不是增加当前层的节点数。"
+    },
+    {
+      "id": "po5_z3GPxTY8OF-21JNT3",
+      "order": 12,
+      "type": "single_choice",
+      "content": "二叉搜索树中的每个结点，其左子树的所有结点值都小于该结点值，右子树的所有结点值都大于该结点值。以下代码对给定的整数数组（假设数组中没有数值相等的元素），构造一个对应的二叉搜索树，横线上应填写（ ）。\n\n```cpp\n// 定义二叉树的结点结构\nstruct tree_node {\n    int val;\n    tree_node* left;\n    tree_node* right;\n\n    tree_node(int x) : val(x), left(nullptr), right(nullptr) {}\n};\n\n// 插入结点到二叉搜索树中\ntree_node* insert(tree_node* root, int val) {\n    if (root == nullptr) {\n        return new tree_node(val);\n    }\n\n    ———————————————————————— // 在此处填入代码\n\n    return root;\n}\n\n// 根据给定数组构造二叉搜索树\ntree_node* constructBST(const int arr[], int size) {\n    tree_node* root = nullptr;\n\n    for (int i = 0; i < size; ++i) {\n        root = insert(root, arr[i]);\n    }\n    return root;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nif (val < root->val)\n    root->left = insert(root->left, val);\nelse\n    root->right = insert(root->right, val);\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nif (val > root->val)\n    root->left = insert(root->left, val);\nelse\n    root->right = insert(root->right, val);\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nif (val < root->val)\n    root->left = insert(root, val);\nelse\n    root->right = insert(root, val);\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nif (val > root->val)\n    root->left = insert(root, val);\nelse\n    root->right = insert(root, val);\n```"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\n根据二叉搜索树的定义，如果待插入值 `val` 小于当前结点值 `root->val`，它应该被插入到左子树中，所以需要递归调用 `insert("
+    },
+    {
+      "id": "_yvjtO_AVhhm5IYv-apgq",
+      "order": 13,
+      "type": "single_choice",
+      "content": "对上题中的二叉搜索树，当输入数组为 [5,3,7,2,4,6,8] 时，构建二叉搜索树，并采用如下代码实现的遍历方式，得到的输出是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\n// 遍历二叉搜索树，输出结点值\nvoid traversal(tree_node* root) {\n    if (root == nullptr) {\n        return;\n    }\n\n    traversal(root->left);\n    cout << root->val << \" \";\n    traversal(root->right);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 3 7 2 4 6 8"
+        },
+        {
+          "label": "B",
+          "text": "2 3 4 5 6 7 8"
+        },
+        {
+          "label": "C",
+          "text": "2 4 3 6 8 7 5"
+        },
+        {
+          "label": "D",
+          "text": "2 4 3 5 6 7 8"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该代码实现的 `traversal` 函数是二叉树的**中序遍历**。对于二叉搜索树，中序遍历总是按节点值的升序输出所有元素。将输入数组"
+    },
+    {
+      "id": "9J7GX4dGFLSDluCbarmEH",
+      "order": 14,
+      "type": "single_choice",
+      "content": "动态规划通常用于解决（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "无法分解的问题"
+        },
+        {
+          "label": "B",
+          "text": "可以分解成相互依赖的子问题的问题"
+        },
+        {
+          "label": "C",
+          "text": "可以通过贪心算法解决的问题"
+        },
+        {
+          "label": "D",
+          "text": "只能通过递归解决的问题"
+        }
+      ],
+      "answer": "B",
+      "explanation": "动态规划主要用于解决那些可以分解成相互依赖（即重叠子问题）的子问题，并通过存储子问题解来避免重复计算的问题，这正是选项 B 的描述。选项 A 错误，因为动态规划的核心就是分解问题。选项 C 描述的是贪心算法的适用范围，与动态规划不同，贪心算法通常不需要考虑子问题之间的依赖。选项 D 不准确，动态规划既可以通过递归（带记忆化）也可以通过迭代解决。"
+    },
+    {
+      "id": "--Lb0jkXhbeUBz2Cg0gJS",
+      "order": 15,
+      "type": "single_choice",
+      "content": "阅读以下用动态规划解决的0-1背包问题的函数，假设背包的容量 W 是10kg，假设输入4个物品的重量 weights 分别为 1,3,4,6（单位为kg），每个物品对应的价值 values 分别为 20,30,50,60，则函数的输出为（ ）。\n\n```cpp\n#include <iostream>\n#include <vector>\nusing namespace std;\n\n// 0/1背包问题\nint knapsack(int W, const vector<int>& weights, const vector<int>& values, int n) {\n    vector<vector<int>> dp(n + 1, vector<int>(W + 1, 0));\n\n    for (int i = 1; i <= n; ++i) {\n        for (int w = 0; w <= W; ++w) {\n            if (weights[i - 1] <= w) {\n                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] + values[i - 1]);\n            }\n            else\n            {\n                dp[i][w] = dp[i - 1][w];\n            }\n        }\n    }\n\n    return dp[n][W];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "90"
+        },
+        {
+          "label": "B",
+          "text": "100"
+        },
+        {
+          "label": "C",
+          "text": "110"
+        },
+        {
+          "label": "D",
+          "text": "140"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该函数实现了经典的0-1背包问题。`dp[i][w]` 表示考虑前 `i` 个物品，背包容量为 `w` 时能获得的最大价值。"
+    },
+    {
+      "id": "Ab04FZ-d6cVhHMlweEIWi",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++、Python和JAVA等都是面向对象的编程语言。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++、Python和Java都支持面向对象编程（OOP）的核心概念，例如封装、继承和多态。它们允许开发者通过定义 `类` 和创建 `对象` 来构建程序，有效地模拟现实世界中的实体和行为。因此，题目中的描述是正确的，选择F则不符合事实。"
+    },
+    {
+      "id": "TpD0l9rY5l_5BSTep4jWY",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++中，类的静态成员变量只能被该类对象的成员函数访问。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "类的静态成员变量属于类本身，而不是属于任何一个特定的对象。因此，它们可以通过 `类名::静态成员变量名` 的方式直接访问，无需创建对象。如果静态成员变量是 `public` 的，它甚至可以被类的非成员函数或外部代码访问。题目中“只能被该类对象的成员函数访问”的说法过于绝对，因此是错误的。"
+    },
+    {
+      "id": "xjyM-N4BMM8NSx8KUxpeE",
+      "order": 18,
+      "type": "true_false",
+      "content": "栈是一种线性结构，可通过数组或链表来实现。二者相比，数组实现占用的内存较少，链表实现的入队和出队操作的时间复杂度较低。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "题目中关于内存占用和时间复杂度的说法有误。链表实现由于每个节点需要额外存储指针，通常会比数组实现占用更多内存。同时，栈的 `push` 和"
+    },
+    {
+      "id": "sB71eQCLTVEp4aOFRtG47",
+      "order": 19,
+      "type": "true_false",
+      "content": "运行以下C++代码，屏幕将输出\"derived class\"。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass base {\npublic:\n    virtual void show() {\n        cout << \"base class\" << endl;\n    }\n};\n\nclass derived : public base {\npublic:\n    void show() override {\n        cout << \"derived class\" << endl;\n    }\n};\n\nint main() {\n    base* b;\n    derived d;\n    b = &d;\n    b->show();\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`base` 类的 `show()` 函数被声明为 `virtual`，这使得它具有多态性。`derived` 类重写了 `show()` 函数。在 `main` 函数中，`base` 类型的指针 `b` 指向了一个 `derived` 类的对象 `d`。当通过 `b->show()` 调用函数时，由于 `show()` 是虚函数，C++ 会在运行时根据指针实际指向的对象类型（即 `derived` 类）来决定调用哪个版本的 `show()`，从而输出 \"derived class\"。"
+    },
+    {
+      "id": "cImMB_CU48VZjdJ4ErWZw",
+      "order": 20,
+      "type": "true_false",
+      "content": "如下列代码所示的基类（base）及其派生类（derived），则生成一个派生类的对象时，只调用派生类的构造函数。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass base {\npublic:\n    base() {\n        cout << \"base constructor\" << endl;\n    }\n    ~base() {\n        cout << \"base destructor\" << endl;\n    }\n};\n\nclass derived : public base {\npublic:\n    derived() {\n        cout << \"derived constructor\" << endl;\n    }\n    ~derived() {\n        cout << \"derived destructor\" << endl;\n    }\n};\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "创建派生类对象时，会先自动调用基类的构造函数 `base()` 来初始化基类部分，然后才调用派生类的构造函数 `derived()`。这是C++继承机制的规定，确保基类成员在派生类成员之前被正确构造。因此，题目中“只调用派生类的构造函数”的说法是错误的，正确答案为F。"
+    },
+    {
+      "id": "xappurLdW3NcUZoYzMm6N",
+      "order": 21,
+      "type": "true_false",
+      "content": "哈夫曼编码本质上是一种贪心策略。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "哈夫曼编码在构建哈夫曼树时，每次都选择当前频率最小的两个节点进行合并，生成一个新节点。这种局部最优的选择（每次合并最小的两个）最终能得到全局最优的编码方案（总带权路径长度最小），这正是贪心策略的典型特征。因此，题目描述是正确的。"
+    },
+    {
+      "id": "AfCn6LktjQAD3Hsx0jKY9",
+      "order": 22,
+      "type": "true_false",
+      "content": "如果根结点的深度记为1，则一棵恰有2024个叶结点的二叉树的深度最少是12。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "为了使二叉树的深度最小，树的结构应该尽可能地“宽”或“完全”。在这种情况下，一棵深度为 `D` 的二叉树最多可以有"
+    },
+    {
+      "id": "qHt7B6v_hQTkFLxFBefIF",
+      "order": 23,
+      "type": "true_false",
+      "content": "在非递归实现的树的广度优先搜索中，通常使用栈来辅助实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "树的广度优先搜索（BFS）是一种层序遍历，它总是优先访问当前节点的所有邻居节点。为了实现这种“先进先出”的访问顺序，非递归的BFS通常使用 `std::queue`（队列）来辅助实现。而栈（`std::stack`）是“后进先出”的数据结构，它通常用于非递归实现树的深度优先搜索（DFS）。因此，题目中说BFS使用栈是错误的。"
+    },
+    {
+      "id": "ACzIU3zPAT496H3fZSCiY",
+      "order": 24,
+      "type": "true_false",
+      "content": "状态转移方程是动态规划的核心，可以通过递推方式表示问题状态的变化。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "状态转移方程是动态规划（DP）的基石，它精确地描述了如何从较小规模子问题的解推导出当前问题的解。这种递推关系正是动态规划避免重复计算、逐步构建最优解的关键所在。因此，该描述完全符合动态规划的核心思想和实现方式，是正确的。选择F则表示该描述错误，与动态规划的原理不符。"
+    },
+    {
+      "id": "0VJ-4BdJNGkOQ87QJJuIW",
+      "order": 25,
+      "type": "true_false",
+      "content": "应用动态规划算法时，识别并存储重叠子问题的解是必须的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "动态规划算法的标志性特征就是利用“重叠子问题”和“最优子结构”。识别并存储重叠子问题的解（通常通过记忆化搜索或表格法）是动态规划避免重复计算、提高效率的关键所在。如果不存储这些解，算法会多次重复计算相同的子问题，导致效率低下，失去动态规划的优势。因此，题目描述是正确的。"
+    }
+  ]
+}

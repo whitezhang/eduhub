@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202409",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202409",
+  "title": "GESP C++三级 202409",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2024年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202409"
+  },
+  "questions": [
+    {
+      "id": "3Z5vPWg-aIEFdYjHGyZkd",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下列代码中，输出结果是（ ）\n```cpp\n#include<iostream>\nusing namespace std;\nint main()\n{\n    double a=0.9;\n    double b=1.0;\n    if(((b-a)==0.1))\n    {\n        cout<<\"Equal\"<<endl;\n    }\n    else\n    {\n        cout<<\"Not equal\"<<endl;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "Equal"
+        },
+        {
+          "label": "B",
+          "text": "Not equal"
+        },
+        {
+          "label": "C",
+          "text": "程序不能正确执行"
+        },
+        {
+          "label": "D",
+          "text": "没有输出"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。`double` 类型的浮点数在计算机中以二进制形式存储，无法精确表示所有十进制小数，例如 `0.1`。因此，`1.0 - 0.9` 的结果可能不是精确的 `0.1`，而是与其非常接近但略有差异的值。直接使用 `==` 比较浮点数通常是不可靠的，导致 `((b-a)==0.1)` 判断为假，程序输出 \"Not equal\"。选项 A 错误因为它没有考虑到浮点数精度问题。选项 C 和 D 错误因为代码语法正确且一定会产生输出。"
+    },
+    {
+      "id": "p-LzyoWU4KqbsRQhEryvY",
+      "order": 2,
+      "type": "single_choice",
+      "content": "关于计算机中的编码，下列说法中正确的是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "机器数的形式值和真值是一致的"
+        },
+        {
+          "label": "B",
+          "text": "原码就是符号位加上真值"
+        },
+        {
+          "label": "C",
+          "text": "机器数是带符号的"
+        },
+        {
+          "label": "D",
+          "text": "[-1]=[1000 0001]原=[1111 1111]反"
+        }
+      ],
+      "answer": "C",
+      "explanation": "计算机中的机器数通常采用补码、原码或反码等形式来表示，这些表示方法都包含符号位来区分正数和负数，因此机器数是带符号的"
+    },
+    {
+      "id": "z0zKBfBI7lOYSHzWRKYLa",
+      "order": 3,
+      "type": "single_choice",
+      "content": "8进制数3703转换成16进制数是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "7C3"
+        },
+        {
+          "label": "B",
+          "text": "7A3"
+        },
+        {
+          "label": "C",
+          "text": "7B3"
+        },
+        {
+          "label": "D",
+          "text": "7D3"
+        }
+      ],
+      "answer": "A",
+      "explanation": "将八进制数 `3703` 的每一位转换为三位二进制数：`3` 是 `011`，`7` 是 `111`，`0` 是 `000`，`3` 是 `011`。拼接得到二进制数 `011111000011`。再将此"
+    },
+    {
+      "id": "-WApBoyP6If9qbRlaQgWa",
+      "order": 4,
+      "type": "single_choice",
+      "content": "0.8125变成二进制是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0.1110"
+        },
+        {
+          "label": "B",
+          "text": "0.1 1111 1011 1101"
+        },
+        {
+          "label": "C",
+          "text": "0.1 1111 1011 1100"
+        },
+        {
+          "label": "D",
+          "text": "0.1101"
+        }
+      ],
+      "answer": "D",
+      "explanation": "将十进制小数0.8125转换为二进制小数，采用“乘2取整，顺序排列”的方法。具体步骤为：0.8125 × 2 = 1.625（取1），0.625 × 2 = 1.25（取1），0.25 × 2 = 0.5（取0），0.5 × 2 = 1.0（取1）。将这些整数部分按顺序排列，得到0.1101，所以D是正确答案。其他选项的转换结果与此不符。"
+    },
+    {
+      "id": "HLEHemZFWXUDCjJcrPgBg",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面说法正确的是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "（22&01）==（22&&01）成立"
+        },
+        {
+          "label": "B",
+          "text": "(23|11)==30"
+        },
+        {
+          "label": "C",
+          "text": "(23|10)==31"
+        },
+        {
+          "label": "D",
+          "text": "(23|01)==31"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C 正确。`23` 的二进制是 `00010111`，`10` 的二进制是 `00001010`"
+    },
+    {
+      "id": "d7v0kkgPajraTtvY_Dxqu",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下列说法正确的是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "2>>1和1>>1的值是一样的"
+        },
+        {
+          "label": "B",
+          "text": "(2>>2)和(1>>1)的值是一样的"
+        },
+        {
+          "label": "C",
+          "text": "(11^00)和(1^0)的值是一样的"
+        },
+        {
+          "label": "D",
+          "text": "(~0的输出值是1)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B 正确，因为 `2>>2` 表示将十进制数 2 (二进制 `10`) 右移两位，结果为 `0` (二进制 `00`)；"
+    },
+    {
+      "id": "JDsjIPqC_LbiyqdK01m-R",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下列代码实现的是（ ）\n```cpp\nvoid Swap(int &a, int &b) {\n    if (a != b) {\n        a ^= b;\n        b ^= a;\n        a ^= b;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "a和b的异或"
+        },
+        {
+          "label": "B",
+          "text": "a和b的同或"
+        },
+        {
+          "label": "C",
+          "text": "a和b的值交换"
+        },
+        {
+          "label": "D",
+          "text": "a和b的高低位互换"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该代码段实现的是经典的异或交换算法。通过 `a ^= b; b ^= a; a ^= b;` 这三步异或操作，最终使变量 `a` 存储了 `b` 的原值，变量 `b` 存储了 `a` 的原值，从而实现了 `a` 和 `b` 的值交换。`if (a != b)` 条件避免了当 `a` 和 `b` 相等时值被错误地清零。因此，C 是正确的。A 和 B"
+    },
+    {
+      "id": "-PUgknHD7A3jCPS-lFPvE",
+      "order": 8,
+      "type": "single_choice",
+      "content": "a&~1运算实现的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "使a的最低位为1"
+        },
+        {
+          "label": "B",
+          "text": "使a的最高位为1"
+        },
+        {
+          "label": "C",
+          "text": "使a的最低位为0"
+        },
+        {
+          "label": "D",
+          "text": "使a的最高位为0"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`1` 的二进制表示是 `...0001`。对 `1` 进行位非运算 `~1` 得到 `...1110`，这意味着除了最低位是 `0`，其他位都是 `1`。将 `a` 与 `~1` 进行位与运算 `a & ~1`，会使 `a` 的最低位与 `0` 进行位与，结果必然是 `0`，而其他位与 `1` 进行位与，保持不变。因此，该运算实现了使 `a` 的最低位为 `0`。选项 A、B、D 均不符合 `a & ~1`"
+    },
+    {
+      "id": "DwHXT16RY8mAMVSI0vLfS",
+      "order": 9,
+      "type": "single_choice",
+      "content": "a=1010 1110,a<<2,下面关于这个说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a的值变为1011 1000"
+        },
+        {
+          "label": "B",
+          "text": "a的值变为1011 1010"
+        },
+        {
+          "label": "C",
+          "text": "a的值变为0101 1101"
+        },
+        {
+          "label": "D",
+          "text": "a的值变为0101 1100"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`a << 2` 表示将 `a` 的二进制位向左移动2位。原始值 `1010 1110` 左移2位后，最左边的两位 `10` 被丢弃，最右边补上两个 `0`，因此结果是 `1011 1000`，选项A正确。其他选项均不符合左移2位的规则，例如D选项是左移1位后的结果。"
+    },
+    {
+      "id": "_ZpCVmyQmOL6qaABYAXQN",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下列程序中，result和result2输出分别是（ ）\n```cpp\nlong a = 123;\nint b = 1;\nlong result = a & b;\ncout<<result<<endl;\n\nlong a2 = -123;\nunsigned int b2 = -1;\nlong result2 = a2 & b2;\ncout<<result2<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "123 -1"
+        },
+        {
+          "label": "B",
+          "text": "123 -123"
+        },
+        {
+          "label": "C",
+          "text": "1 -1"
+        },
+        {
+          "label": "D",
+          "text": "1 -123"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`\n`result` 的计算：`a` 为 `123`，`b` 为 `1`。进行位与操作 `a & b` 时，`b` 会"
+    },
+    {
+      "id": "MfzPsHE__LJnDf7gekop0",
+      "order": 11,
+      "type": "single_choice",
+      "content": "陈A夕种植一批农作物，第一天需要浇水一次，随后的两天（第2、第3天），每天需要浇水2次，再随后的3天（第4、第5、第6天），需要每天浇水3次，这样持续下去，随后的n天，每天需要浇水n次。请问在100天里，总共浇了多少次水（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "994"
+        },
+        {
+          "label": "B",
+          "text": "996"
+        },
+        {
+          "label": "C",
+          "text": "995"
+        },
+        {
+          "label": "D",
+          "text": "945"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该题考察循环累加计算。浇水规律是：第1天浇水1次；第2-3天（共2天）每天浇水2次；第4"
+    },
+    {
+      "id": "rOfQAoh_Tk8XvQL7s996w",
+      "order": 12,
+      "type": "single_choice",
+      "content": "关于一维数组，下列程序能够正确执行的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nint a[10];\nint sum=0;\nfor(int i=0;i<=10;i++) {\n    sum=sum+a[i];\n}\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nint a[10]={1,2,3,4,5,6,7,8,9,10};\nint sum=0;\nfor(int i=0;i<=10;i++) {\n    sum=sum+a[i];\n}\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nint a[10]={1,2,3,4,5,6,7,8,9,10};\nint sum=0;\nfor(int i=0;i<10;i++) {\n    um=sum+a[i];\n}\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nint a[10]={0};\nint sum=0;\nfor(int i=0;i<=10;i++) {\n    sum=sum+a[i];\n}\n```"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n选项 C 中，`int a[10]` 定义了一个包含 10 个元素的数组，其有效下标范围是 `0` 到 `9`。循环"
+    },
+    {
+      "id": "q1Lkba4cdyqOax1mzN4DW",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面的程序中，会输出（ ）。\n```cpp\nint a[10]={1,2,3,4,5,6,7,8,9,10};\ncout<<a[10]<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "0"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "不确定的值"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`int a[10]` 定义了一个包含10个元素的数组，其有效索引范围是 `a[0]` 到 `a[9]`。`cout<<a[10]<<endl;` 尝试访问数组边界之外的内存位置，这属于数组越界访问。数组越界访问是未定义行为，意味着程序的输出是不可预测的，可能是一个随机值，也可能导致程序崩溃。因此，选项D“不确定的值”是正确的。选项A、B、C都指定了确定的值，但由于越界访问，这些值都不能保证输出。"
+    },
+    {
+      "id": "U11BLmpMD5bZjowavjx1v",
+      "order": 14,
+      "type": "single_choice",
+      "content": "有ABCD4个人，其中一个是小偷，每个人说一句话，只有小偷说的是假话，其中A说：不是我。B说：是C。C说：是D。D说：C瞎说，请问谁是小偷（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "A"
+        },
+        {
+          "label": "B",
+          "text": "B"
+        },
+        {
+          "label": "C",
+          "text": "C"
+        },
+        {
+          "label": "D",
+          "text": "D"
+        }
+      ],
+      "answer": "C",
+      "explanation": "D说“C瞎说”和C说“是D”是相互矛盾的，这意味着小偷一定在C和D之间。\n如果C是小偷，C说假"
+    },
+    {
+      "id": "e0uAprIbrTO9XbqJdxNWM",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列程序输出的是（ ）\n```cpp\nstring str = \"Hello,CHAD\";\ncout << str.find(\"A\") << '\\n';\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`str.find(\"A\")` 方法用于查找子字符串 \"A\" 在 `str` 中第一次出现的位置，并返回其0-based索引。在字符串 \"Hello,CHAD\" 中，第一个 'A' 位于索引 8（H-0, e-1, l-2, l-3, o-4, ,-5, C-6, H-7, A-8）。因此，程序输出 8，选项 B 正确。其他选项不符合 `find` 方法返回的0-based索引。"
+    },
+    {
+      "id": "p_VP2x_gBlRMhEzRSPtmq",
+      "order": 16,
+      "type": "true_false",
+      "content": "+1和-1的原码进行1+（-1）计算的结果是-2。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在原码表示法中，最高位是符号位（0为正，1为负），其余位表示数值的绝对值。`+1` 的原码是 `0"
+    },
+    {
+      "id": "9MAEQ4IZf3--c6KFP5nly",
+      "order": 17,
+      "type": "true_false",
+      "content": "~1 的输出值是 -2。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`~` 是位运算符，它将一个数的二进制表示中所有位取反（0变1，1变0）。对于整数 `1`，其二进制表示（假设32位）是 `0...0001`。取反后变为 `1...1110`。在计算机中，负数通常使用补码表示，`1...1110` 正是补码形式的 `-2`。因此，`~1` 的输出值是 `-2`，选项 `T` 正确，选项 `F` 错误。"
+    },
+    {
+      "id": "qGo2yJ-RdDJ82hgmrO1UD",
+      "order": 18,
+      "type": "true_false",
+      "content": "~1 = 1111 1110。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "整数 `1` 的二进制表示是 `0000 0001`（假设为8位）。位运算符 `~`（按位取反）会将操作数的所有二进制位取反，即 `0` 变为 `1`，`1` 变为 `0`。因此，`~1` 的结果就是将 `0000 0001` 的每一位取反，得到 `1111 1110`。所以，题目中的等式是正确的。"
+    },
+    {
+      "id": "La2rcser3pGCVj9HKjYN9",
+      "order": 19,
+      "type": "true_false",
+      "content": "取 X 的低四位，可以用 Y = 0000 1111，用 X&Y 获取 X 的低四位。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。在二进制中，`0000 1111` 是一个掩码，其低四位为 `1`，高位为 `0`。当 `X` 与这个掩码进行位与 (`&`) 运算时，`X` 的高位与 `0` 进行位与后变为 `0`，而 `X` 的低四位与 `1` 进行位与后保持不变。因此，`X&Y` 能够有效地获取 `X` 的低四位。错误选项不符合位运算的原理。"
+    },
+    {
+      "id": "7RWOaVs3KJBw_0vqHEwgG",
+      "order": 20,
+      "type": "true_false",
+      "content": "下列程序输出的是 A。\n```cpp\nchar x=65;\nx++;\ncout<<x++<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`char x=65;` 将 `x` 初始化为字符 'A'。`x++;` 使 `x` 的值变为 66，对应字符 'B'。`cout<<x++<<endl;` 会先输出 `x` 的当前值 'B'，然后 `x` 再自增。因此，程序输出的是 'B'，而不是 'A'，所以题目中“输出的是 A”的说法是错误的。"
+    },
+    {
+      "id": "0bEeHc2cJl9S5-8iCk4Cb",
+      "order": 21,
+      "type": "true_false",
+      "content": "下列程序输出的是 3。\n```cpp\nstring str=\"CHADai\";\nsize_t pos = str.find('D');\ncout<<pos<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`str.find('D')` 方法用于查找字符 'D' 在字符串 `str` 中首次出现的索引。在字符串 \"CHADai\" 中，字符 'D' 位于索引 3（从 0 开始计数）。因此，`pos` 的值为 3，程序会输出 3。所以，选项 T (正确) 是符合程序实际输出的，而 F (错误) 则不符。"
+    },
+    {
+      "id": "E9cOM9ycsmpafuPmALaIm",
+      "order": 22,
+      "type": "true_false",
+      "content": "下列程序将输出 1。\n```cpp\nint a[10]={1};\ncout<<a[1]<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "当数组 `int a[10]={1};` 被这样初始化时，只有第一个元素 `a[0]` 被设置为 `1`。数组中其余的元素（从 `a[1]` 到 `a[9]`）都会被自动初始化为 `0`。因此，`cout<<a[1]<<endl;` 将输出 `0`，而不是 `1`。所以原题目描述是错误的。"
+    },
+    {
+      "id": "OFI2FUX_snz5_Um93buRy",
+      "order": 23,
+      "type": "true_false",
+      "content": "下列程序将输出 A。\n```cpp\nint a=65;\ncout<<(char)a<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "程序中 `int a = 65;` 将整数 65 赋值给变量 `a`。在 ASCII 编码中，整数 65 对应的是大写字母 'A'。`cout << (char)a << endl;` 将整数 `a` 强制类型转换为 `char` 类型，然后输出其对应的字符，因此会打印出 'A'。所以，题目描述“下列程序将输出 A”是正确的。"
+    },
+    {
+      "id": "lybeXYcnm89-8DBbixwNw",
+      "order": 24,
+      "type": "true_false",
+      "content": "16进制数 AB，表示成2进制数是 10101011。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "16进制数 AB 可以拆分为 A 和 B。16进制数 A 对应十进制数 10，转换为 4 位二进制是 `1010`。16进制数 B 对应十进制数 11，转换为 4 位二进制是 `1011`。将这两个二进制数按顺序组合起来，就是 `10101011`。因此，题目描述是正确的，选择 T。"
+    },
+    {
+      "id": "KX30KAaFXThvvOd15ZxuD",
+      "order": 25,
+      "type": "true_false",
+      "content": "def（十六进制）= 103231（五进制）。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "将十六进制数 `def` 转换为十进制是 `13 * 16^2 + 14 * 16^1 + 15 * 16^0 = 3328 + 224 + 15 = 3567`。将五进制数 `103231` 转换为十进制是 `1 * 5^5 + 0 * 5^4 + 3 * 5^3 + 2 * 5^2 + 3 * 5^1 + 1 * 5^0 = 3125 + 0 + 375 + 50 + 15 + 1 = 3566`。由于 `3567` 不等于 `3566`，所以原等式是错误的，因此选项 F (错误) 是正确的。选项 T (正确) 是不正确的，因为两个数在转换为十进制后并不相等。"
+    }
+  ]
+}

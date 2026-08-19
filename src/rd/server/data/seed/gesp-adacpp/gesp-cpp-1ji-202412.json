@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202412",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202412",
+  "title": "GESP C++一级 202412",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2024年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202412"
+  },
+  "questions": [
+    {
+      "id": "T6Ob9a13G_mfIwgF1DJP9",
+      "order": 1,
+      "type": "single_choice",
+      "content": "2024年10月8日，诺贝尔物理学奖\"意外地\"颁给了两位计算机科学家约翰·霍普菲尔德（John J. Hopfield）和杰弗里·辛顿（Geoffrey E. Hinton）。这两位科学家的主要研究方向是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "天体物理"
+        },
+        {
+          "label": "B",
+          "text": "流体力学"
+        },
+        {
+          "label": "C",
+          "text": "人工智能"
+        },
+        {
+          "label": "D",
+          "text": "量子理论"
+        }
+      ],
+      "answer": "C",
+      "explanation": "约翰·霍普菲尔德和杰弗里·辛顿是人工智能领域的先驱，他们的研究（如霍普菲尔德网络、深度学习等）为现代人工智能技术奠定了基础。因此，正确答案是C。其他选项天体物理、流体力学和量子理论与这两位科学家的主要研究方向无关。"
+    },
+    {
+      "id": "lsTZxus06uBZRmh3LvmZK",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下列软件中是操作系统的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "高德地图"
+        },
+        {
+          "label": "B",
+          "text": "腾讯会议"
+        },
+        {
+          "label": "C",
+          "text": "纯血鸿蒙"
+        },
+        {
+          "label": "D",
+          "text": "金山永中"
+        }
+      ],
+      "answer": "C",
+      "explanation": "纯血鸿蒙是华为自主研发的操作系统，负责管理计算机硬件和软件资源，是设备运行的基础。高德地图和腾讯会议是运行在操作系统之上的应用程序，提供导航和会议服务。金山永中是一款办公软件，也属于应用层软件。因此，只有纯血鸿蒙是操作系统。"
+    },
+    {
+      "id": "U-utQco2ypB008PHbPsOv",
+      "order": 3,
+      "type": "single_choice",
+      "content": "有关下列C++代码的说法，正确的是（ ）。\n\n```cpp\nprintf(\"Hello,GESP!\");\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "配对双引号内，不可以有汉字"
+        },
+        {
+          "label": "B",
+          "text": "配对双引号可以相应改变为英文单引号而输出效果不变"
+        },
+        {
+          "label": "C",
+          "text": "配对双引号可以相应改变为三个连续英文单引号而输出效果不变"
+        },
+        {
+          "label": "D",
+          "text": "配对双引号可以相应改变为三个连续英文双引号而输出效果不变"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n\n*   **D 选项正确**：C++11 引入了原始字符串字面量（Raw String Literals），允许使用自定义的定界符"
+    },
+    {
+      "id": "2iZKxTLtAmA3YEo56he9m",
+      "order": 4,
+      "type": "single_choice",
+      "content": "C++表达式 `12 - 3 * 2 && 2` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "B",
+      "explanation": "C++表达式 `12 - 3 * 2 && 2` 遵循运算符优先级。首先计算 `3 * 2` 得到 `6`，表达式变为 `12 - 6 && 2`。接着计算 `12 - 6` 得到 `6`，表达式变为 `6 && 2`。在C++中，任何非零值在逻辑运算中都被视为 `true`，所以 `6` 和 `2` 都为 `true`。因此 `true && true` 的结果是 `true`，转换为整数值即为 `1`。选项 A、C、D 均不符合正确的运算顺序和逻辑规则。"
+    },
+    {
+      "id": "5YE47BFFPkSzCMflVIvbL",
+      "order": 5,
+      "type": "single_choice",
+      "content": "在C++中，假设N为正整数2，则 `cout << (N / 3 + N % 3)` 将输出（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "B",
+      "explanation": "当 `N` 为 2 时，`N / 3` 执行整数除法，结果为 0。`N % 3` 计算 2 除以 3 的余数，结果为 2。因此，表达式 `0 + 2` 的值为 2，程序将输出 2。选项 A、C、D 的结果与此计算不符。"
+    },
+    {
+      "id": "UZLW9Hw_yu76c8lwd87Hb",
+      "order": 6,
+      "type": "single_choice",
+      "content": "C++语句 `cout << 7%3 << ' ' << \"7%3\" << ' ' << \"7%3={7%3}\"` 执行后的输出是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 1 1=1"
+        },
+        {
+          "label": "B",
+          "text": "1 7%3 1=1"
+        },
+        {
+          "label": "C",
+          "text": "1 7%3 7%3=1"
+        },
+        {
+          "label": "D",
+          "text": "1 7%3 7%3={7%3}"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++中，`cout` 会根据输出内容的类型进行处理。`7%3` 是一个整数表达式，其结果是 `1`。`\"7%3\"` 和 `\"7%3={7%3}\"` 都是字符串字面量，`cout` 会原样输出它们包含的字符。因此，输出依次是 `1`、一个空格、`7%3`、一个空格、`7%3={7%3}`。其他选项错误在于将字符串字面量错误地当作表达式进行了求值。"
+    },
+    {
+      "id": "1TcEM71Q1dhzHSy8Z5Cbg",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面C++代码执行后，求出几天后星期几。如果星期日则输出\"星期天\"否则输出形如\"星期1\"。横线上应填入的代码是（ ）。\n\n```cpp\nint N, nowDay, afterDays;\ncout << \"今天星期几？\" << endl;\ncin >> nowDay;\ncout << \"求几天后星期几？\" << endl;\ncin >> afterDays;\n\nN = nowDay + afterDays;\n\nif(________________)\n    printf(\"星期天\");\nelse\n    printf(\"星期%d\", N%7);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N % 7 != 0"
+        },
+        {
+          "label": "B",
+          "text": "N % 7 == 0"
+        },
+        {
+          "label": "C",
+          "text": "N == 0"
+        },
+        {
+          "label": "D",
+          "text": "N % 7"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该题旨在计算几天后的星期几。在计算星期几时，通常会使用模运算 `% 7`。当 `N % 7` 的结果为 `0` 时，表示"
+    },
+    {
+      "id": "BNEm2Cyk7l-bX_k5j5T04",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint N=0, i;\nfor (i = 1; i < 10; i++)\n    N += 1;\ncout << (N + i);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "54"
+        },
+        {
+          "label": "B",
+          "text": "20"
+        },
+        {
+          "label": "C",
+          "text": "19"
+        },
+        {
+          "label": "D",
+          "text": "18"
+        }
+      ],
+      "answer": "C",
+      "explanation": "循环 `for (i = 1; i < 10; i++)` 会执行9次（当 `i` 从1到9时）。因此，`N += 1` 会执行9次，最终 `N` 的值为9。循环结束后，`i` 的值会是10（因为当 `i` 增加到10时，条件 `i < 10` 才不再满足，循环终止）。所以 `cout << (N + i)` 输出的是 `9 + 10`，即19。选项A、B、D的计算结果不符合 `N` 和 `i` 的最终值。"
+    },
+    {
+      "id": "ufJ3S7fQmKMGaDtW8wiRj",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出的是（ ）。\n\n```cpp\nint tnt = 0;\nfor (i = 0; i < 100; i++)\n    tnt += i % 10;\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "4950"
+        },
+        {
+          "label": "B",
+          "text": "5050"
+        },
+        {
+          "label": "C",
+          "text": "450"
+        },
+        {
+          "label": "D",
+          "text": "100"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该循环从 `i=0` 运行到 `i=99`，共100次。每次循环 `tnt` 累加 `i % 10` 的"
+    },
+    {
+      "id": "dxH-TPbCU-1P2cAO8JtUG",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出的是（ ）。\n\n```cpp\nint N=0, i;\nint tnt = 0;\nfor (i = 5; i < 100; i+=5){\n    if (i % 2 == 0)\n        continue;\n    tnt += 1;\n    if (i >= 50)\n        break;\n}\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "9"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "C",
+      "explanation": "循环从 `i=5` 开始，每次递增 `5`。`if (i % 2 == 0) continue;` 跳过所有偶数，因此 `"
+    },
+    {
+      "id": "MqzHJqcj2hsbigdv19DbU",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面的程序用于判断输入的整数N是否为能被3整除的偶数，横线处应填写代码是（ ）。\n\n```cpp\nint N;\ncin >> N;\n\nif(________________)\n    cout << \"能被3整除的偶数\" << endl;\nelse\n    cout << \"其他情形\" << endl;\n\ncout << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "(N%2)&&(N%3)"
+        },
+        {
+          "label": "B",
+          "text": "(N%2==0)&&(N%3)"
+        },
+        {
+          "label": "C",
+          "text": "(N%2)&&(N%3==0)"
+        },
+        {
+          "label": "D",
+          "text": "(N%2==0)&&(N%3==0)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "要判断一个整数N是否为偶数，应使用 `N % 2 == 0`；判断是否能被3整除，应使用 `N % 3 =="
+    },
+    {
+      "id": "9jF0ajmMvbqUs90JjEOXX",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint cnt;\n\ncnt = 0;\nfor(int i = 1; i < 10; i++)\n    cnt += i++;\ncout << cnt;\n\ncout << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "54"
+        },
+        {
+          "label": "B",
+          "text": "45"
+        },
+        {
+          "label": "C",
+          "text": "25"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该代码中的 `for` 循环条件是 `i < 10`，循环体内的 `cnt += i++;` 语句使用了 `i` 的当前值后才将其递"
+    },
+    {
+      "id": "hL4LzbHwolb5kd0PTfKco",
+      "order": 13,
+      "type": "single_choice",
+      "content": "int类型变量a的值是一个正方形的边长，如下图中的正方形的四条边长都为4，则下列哪个语句执行后能够使得正方形的周长（四条边长的和）增加4？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a*4;"
+        },
+        {
+          "label": "B",
+          "text": "a+4;"
+        },
+        {
+          "label": "C",
+          "text": "a+1;"
+        },
+        {
+          "label": "D",
+          "text": "++a;"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`++a;` 会将变量 `a` 的值增加 1。当正方形的边长 `a` 增加 1 时，其周长（`4 * a`）就会增加 `4 * 1 = 4`。选项 A (`a*4;`)、B (`a+4;`)、C (`a+1;`) 都只是计算一个表达式的值，但并没有将计算结果赋值回 `a`，因此 `a` 的值不会改变，周长也不会增加。"
+    },
+    {
+      "id": "-HcfPEk-A1NrXdW2fF4kc",
+      "order": 14,
+      "type": "single_choice",
+      "content": "C++表达式 `(6 > 2) * 2` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "true"
+        },
+        {
+          "label": "D",
+          "text": "truetrue"
+        }
+      ],
+      "answer": "B",
+      "explanation": "表达式 `(6 > 2)` 的结果是 `true`。在 C++ 中，当布尔值 `true` 参与算术运算时，会被隐式转换为整数 `1`。因此，原表达式变为 `1 * 2`，最终结果是 `2`。选项 A 忽略了乘法，选项 C 混淆了布尔值和整数类型，选项 D 语法错误。"
+    },
+    {
+      "id": "2W6QqbG3i_ysPlNODioFL",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面C++代码用于判断输入的整数是否为位增数，即从首位到个位逐渐增大，是则输出1。如123是一个位增数。下面横线处应填入的是（ ）。\n\n```cpp\nint N;\nint n1, n2;\n\ncin >> N;\n\n________________;\nwhile(N){\n    n1 = N % 10;\n    if(n1 >= n2){\n        cout << 0;\n        return 1;\n    }\n    n2 = n1, N /= 10;\n}\n\ncout << 1;\n\ncout << endl;\nreturn 0;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "n2 = N%10"
+        },
+        {
+          "label": "B",
+          "text": "N /= 10"
+        },
+        {
+          "label": "C",
+          "text": "n2 = N/10, N %= 10"
+        },
+        {
+          "label": "D",
+          "text": "n2 = N%10, N /= 10"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是D。\n\n1.  **正确答案D的解释：** `n2 = N%10, N /= 10;` 这行代码在循环开始前"
+    },
+    {
+      "id": "MTmZ_bzAPgJ9jeRIYXOLS",
+      "order": 16,
+      "type": "true_false",
+      "content": "在Windows的资源管理器中为已有文件A建立副本的操作是 `Ctrl+C`，然后 `Ctrl+V`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在Windows资源管理器中，`Ctrl+C` 操作会将选中的文件A复制到剪贴板。接着，`Ctrl+V` 操作会将剪贴板中的内容粘贴出来，从而在当前位置创建文件A的一个副本。因此，题目描述的操作确实是建立文件副本的方法，所以是正确的。"
+    },
+    {
+      "id": "pcMBR2Gr9QTAi-5qgQxyg",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++中，表达式 `8/3` 和 `8%3` 的值相同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`8/3` 是整数除法，结果会截断小数部分，所以 `8/3` 的值是 `2`。`8%3` 是取模运算，表示 `8` 除以 `3` 的余数，其值也是 `2`。因此，这两个表达式的值都是 `2`，它们是相同的。选项 F 错误，因为表达式的值确实相同。"
+    },
+    {
+      "id": "4wr9IOOCZIuwBTu5CnbYD",
+      "order": 18,
+      "type": "true_false",
+      "content": "X是C++语言的基本类型变量，则语句 `cin>>X, cout <<X` 能接收键盘输入并原样输出。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该语句能接收键盘输入，但 `cout` 的默认输出格式不一定与键盘输入完全一致。例如，当 `X` 是 `double` 类型时，输入 `"
+    },
+    {
+      "id": "XydCBB0MT7drGoXuqyjbt",
+      "order": 19,
+      "type": "true_false",
+      "content": "下面C++代码执行后将输出10。\n\n```cpp\nint N = 0;\nfor (int i = 0; i < 10; i++){\n    continue;\n    N += 1;\n}\ncout << N;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "正确答案是 F。代码中，`continue;` 语句会跳过当前循环中 `continue` 之后的所有语句，直接进入下一次循环。因此，`N += 1;` 永远不会被执行，`N` 的值始终保持为 `0`。最终程序将输出 `0`，而不是 `10`。所以，选项 T (正确) 是错误的。"
+    },
+    {
+      "id": "ydoJalUhm1-5xVdrSJXum",
+      "order": 20,
+      "type": "true_false",
+      "content": "下面C++代码执行后将输出100。\n\n```cpp\nint i;\nfor (i = 0; i <= 100; i++)\n    continue;\ncout << i;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "代码中的 `for` 循环条件是 `i <= 100`。循环会从 `i=0` 开始递增，当 `i` 增加到 101 时，条件 `101 <= 100` 为假，循环终止。此时 `i` 的值为 101，所以 `cout << i;` 将输出 101，而不是 100"
+    },
+    {
+      "id": "L__PEgtxs7FUAae330Zw8",
+      "order": 21,
+      "type": "true_false",
+      "content": "下面C++代码被执行时，将执行三次输出（即标记行L2将被执行一次）。\n\n```cpp\nfor (int i = 0; i < 10; i+=3)\n    cout << i; //L2\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该 `for` 循环中，变量 `i` 的值依次为 0, 3, 6, 9。每次 `i` 的值都满足 `i < 10` 的条件，因此 `cout << i;` (L2) 会被执行四次。题目声称执行三次输出是错误的，所以正确答案是 F。选项 T 不正确，因为它与实际执行次数不符。"
+    },
+    {
+      "id": "AzkQaH5Ls1FAp0Zh8uZda",
+      "order": 22,
+      "type": "true_false",
+      "content": "C++语句 `cout << (3,2)` 执行后，将输出3和2，且3和2之间有逗号间隔。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中的 `(3,2)` 是逗号运算符，它会从左到右依次计算表达式，并返回最右边表达式的值。因此，`(3,2)` 的结果是 `2`。语句 `cout << (3,2)` 实际上等同于 `cout << 2`，只会输出 `2`。题目描述的输出是错误的，所以正确答案是F。"
+    },
+    {
+      "id": "SZ_3y43fHrJfQI5YOx1w9",
+      "order": 23,
+      "type": "true_false",
+      "content": "在C++代码中，`studentName`、`student_name` 以及 `sStudentName` 都是合法的变量名称。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 变量名必须以字母或下划线开头，后续可包含字母、数字或下划线。`studentName`、`student_name` 和 `sStudentName` 都符合这些规则，它们都以字母开头，且只包含字母和下划线，因此都是合法的变量名称。所以，题目描述是正确的，选择 T。"
+    },
+    {
+      "id": "iceimDKI15agZeJSWQj7Q",
+      "order": 24,
+      "type": "true_false",
+      "content": "在C++中，对浮点变量 `float f`，则语句 `cin >> f; cout << (f<1);` 在输入是 `2e-1` 时，输出是0。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "输入 `2e-1` 表示浮点数 `0.2`。语句 `cin >> f;` 会将 `f` 赋值为 `0.2`。接着，表达式 `f < 1`（即 `0.2 < 1`）的结果是 `true`。在 C++ 中，`true` 会被 `cout` 输出为 `1`，而不是 `0`。因此，题目中输出是 `0` 的说法是错误的，所以选择 F。"
+    },
+    {
+      "id": "fAy8R-gW5PCHgsBzJ9xz6",
+      "order": 25,
+      "type": "true_false",
+      "content": "在C++的循环体内部，如果 `break` 和 `continue` 语句连续在一起，那么作用抵消，可以顺利执行下一次循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`break` 语句会立即终止整个循环，程序流程会跳到循环体外部。因此，如果 `break` 后面紧跟着 `continue`，那么 `continue` 语句永远不会被执行到。它们的作用不会抵消，更不会“顺利执行下一次循环”，因为循环已经被 `break` 终止了。所以原说法是错误的。"
+    }
+  ]
+}

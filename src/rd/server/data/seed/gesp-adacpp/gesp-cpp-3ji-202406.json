@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202406",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202406",
+  "title": "GESP C++三级 202406",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2024年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202406"
+  },
+  "questions": [
+    {
+      "id": "t2TAzy7E6fUOQNps2eKcc",
+      "order": 1,
+      "type": "single_choice",
+      "content": "小杨父母带他到某培训机构给他报名参加CCF组织的GESP认证考试的第1级，那他可以选择的认证语言有（ ）种。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "GESP认证考试第1级目前支持C++、Python和Scratch三种编程语言。因此，小杨有3种语言可以选择。选项A、B、D不符合GESP的语言设置。"
+    },
+    {
+      "id": "PsaoLiSV895-vFTW2-PqK",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面流程图在yr输入2024时，可以判定yr代表闰年，并输出 2月是29天 ，则图中菱形框中应该填入（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`(yr%400==0) || (yr%4==0)`"
+        },
+        {
+          "label": "B",
+          "text": "`(yr%400==0) || (yr%4==0 && yr%100!=0)`"
+        },
+        {
+          "label": "C",
+          "text": "`(yr%400==0) && (yr%4==0)`"
+        },
+        {
+          "label": "D",
+          "text": "`(yr%400==0) && (yr%4==0 && yr%100!=0)`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案B符合闰年的标准判断条件：`yr` 能被400整除，或者 `yr` 能被4整除但不能被100整除"
+    },
+    {
+      "id": "PB-k8DL-iHwy9vR1JNb66",
+      "order": 3,
+      "type": "single_choice",
+      "content": "一般默认64位计算机系统中整型变量（int）还是32位，则整数能够表示的数据范围是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0 ~ 2^32"
+        },
+        {
+          "label": "B",
+          "text": "0 ~ 2^64"
+        },
+        {
+          "label": "C",
+          "text": "-2^31 ~ (2^31) - 1"
+        },
+        {
+          "label": "D",
+          "text": "-2^63 ~ (2^63) - 1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "题目明确指出 `int` 类型是32位。在C++中，`int` 默认是有符号整型，采用补码表示，其32位有符号整数的范围是 `-2^31` 到 `(2^31) - 1`，因此C是正确的。选项A和B表示的是无符号整数的范围，与 `int` 的有符号特性不符。选项D表示的是64位有符号整数的范围，与题目中 `int` 为32位的设定不符。"
+    },
+    {
+      "id": "GYnUdrOVe-sp6o3FR2K3Q",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下列代码将十进制转化成八进制，则横线上应填入（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nvoid decimal2octal(int decimal) {\n    int oct_number[100];\n    int i = 0;\n\n    while (decimal > 0) {\n        __________________________ //在此处填入代码\n    }\n\n    for (int j = i - 1; j >= 0; j--) {\n        cout << oct_number[j];\n    }\n    cout << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`oct_number[i] = decimal % 8; decimal /= 8;`"
+        },
+        {
+          "label": "B",
+          "text": "`oct_number[i] = decimal / 8; decimal %/= 8;`"
+        },
+        {
+          "label": "C",
+          "text": "`oct_number[i++] = decimal % 8; decimal /= 8;`"
+        },
+        {
+          "label": "D",
+          "text": "`oct_number[i++] = decimal / 8; decimal %= 8;`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项C `oct_number[i++] = decimal % 8; decimal /= 8;` 正确实现了十进制转八进制的“除8取余，逆序排列”算法。`decimal % 8` 获取当前八进制位，`decimal /= 8` 更新十进制数，而 `i++` 确保将每个位存入数组的不同位置并正确计数。\n\n选项A缺少 `i++`，会导致"
+    },
+    {
+      "id": "AZqt-8PxLCEMRFS4PTi00",
+      "order": 5,
+      "type": "single_choice",
+      "content": "二进制数101.11对应的十进制数是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6.5"
+        },
+        {
+          "label": "B",
+          "text": "5.5"
+        },
+        {
+          "label": "C",
+          "text": "5.75"
+        },
+        {
+          "label": "D",
+          "text": "5.25"
+        }
+      ],
+      "answer": "C",
+      "explanation": "二进制数 `101.11` 转换为十进制时，整数部分 `101` 对应 `1*2^2 + 0*2^1 + 1*2^0 = 4 + 0 + 1 = 5`。小数部分 `0.11` 对应 `1*2^-1 + 1*2^-2 = 0.5 + 0.25 = 0.75`。因此，`101.11` 对应的十进制数是 `5 + 0.75 = 5.75`。其他选项的计算方式不符合二进制数位权展开的规则。"
+    },
+    {
+      "id": "rUNAYzKji1zk-dlKx_h1S",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下列流程图的输出结果是（ ）。\n\n流程图描述：开始 -> sum=0, i=0 -> 判断 i<5，若YES -> j=0 -> 判断 j<i，若YES -> sum增加1 -> j增加1（回到判断j<i）；若NO -> i增加1（回到判断i<5）；判断i<5若NO -> 输出sum -> 结束。",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "30"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该流程图描述了一个嵌套循环。外层循环变量 `i` 从 0 遍历到 4。内层循环变量 `j` 从 0 遍历到 `i-1"
+    },
+    {
+      "id": "XmJV5lsUmBYWpVDxxnchT",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下列代码的输出结果是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 12;\n    int result = a >> 2;\n    cout << result << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "12"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`a >> 2` 是位运算符右移操作。整数 `12` 的二进制表示是 `0000 1100`。将其右移 `2` 位，相当于丢弃最右边的 `2` 位，并在左侧补 `0`，结果变为 `0000 0011`，即十进制的 `3`。因此，`result` 的值为 `3`。选项 A、B、D 不符合右移 `2` 位的计算结果。"
+    },
+    {
+      "id": "0ZsqpA_y9FIiKEi_m527s",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下列代码的输出结果是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 5;\n    int b = 10;\n\n    a = a ^ b;\n    b = a ^ b;\n    a = a ^ b;\n\n    cout << \"a = \" << a << \", b = \" << b << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "a = 5, b = 10"
+        },
+        {
+          "label": "B",
+          "text": "a = 5, b = 5"
+        },
+        {
+          "label": "C",
+          "text": "a = 10, b = 5"
+        },
+        {
+          "label": "D",
+          "text": "a = 10, b = 10"
+        }
+      ],
+      "answer": "C",
+      "explanation": "这段代码利用异或（XOR）运算符 `^` 实现了变量 `a` 和 `b` 值的交换，而无需使用额外的临时变量。\n初始 `a=5,"
+    },
+    {
+      "id": "xHtdd4wM37MmBRKF9uwxw",
+      "order": 9,
+      "type": "single_choice",
+      "content": "如果字符串定义为 `char str[] = \"GESP\";` ，则字符数组 str 的长度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C-style字符串 `char str[] = \"GESP\";` 在内存中会自动在字符串末尾添加一个空字符 `\\0` 作为结束标志。因此，`\"GESP\"` 包含 'G', 'E', 'S', 'P' 四个字符，再加上一个 `\\0`，总长度为 4 + 1 = 5。选项 B 仅计算了可见字符，忽略了 `\\0`；选项 A 和 D 显然不符合实际。"
+    },
+    {
+      "id": "YCr83rx7E9JRVmHNKe7vw",
+      "order": 10,
+      "type": "single_choice",
+      "content": "在下列代码的横线处填写（ ），可以使得输出是\"7\"。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int array[5] = {3, 7, 5, 2, 4};\n\n    int max = 0;\n    for(int i=0; i<5; i++)\n        if(______________) // 在此处填入代码\n            max = array[i];\n\n    cout << max << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`max > array[i]`"
+        },
+        {
+          "label": "B",
+          "text": "`max < array[i]`"
+        },
+        {
+          "label": "C",
+          "text": "`max = array[i]`"
+        },
+        {
+          "label": "D",
+          "text": "以上均不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B `max < array[i]` 是正确的。它实现了寻找最大值的逻辑：当数组当前元素 `array[i]` 大于当前的 `max` 值时，就更新 `max` 为 `array[i]`。"
+    },
+    {
+      "id": "JPHJQIk5-awoKNmOp4fn4",
+      "order": 11,
+      "type": "single_choice",
+      "content": "小杨在做数学题，题目要求找出从1到35中能被7整除的数字，即[7, 14, 21, 28, 35]，则横线处应填入哪个代码？（ ）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int arr[35];\n\n    int count = 0;\n    for (int i = 1; i <= 35; i++) {\n        if (i % 7 == 0)\n            __________________________ // 在此处填入代码\n    }\n\n    for (int i = 0; i < count; i++)\n        cout << arr[i] << endl;\n\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`arr[count++] = i;`"
+        },
+        {
+          "label": "B",
+          "text": "`arr[i] = count++;`"
+        },
+        {
+          "label": "C",
+          "text": "`arr[i] = count;`"
+        },
+        {
+          "label": "D",
+          "text": "`arr[count] = count++;`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案 A (`arr[count++] = i;`) 将当前满足条件的数字 `i` 存入数组 `arr` 的 `count` 索引位置，然后 `count` 自增，确保下一个满足条件的数字能存入数组的下一个空位。选项 B 和 C 错误地使用 `i` 作为数组索引，这会导致数组元素"
+    },
+    {
+      "id": "jEAw2uBiXuB7nruo76UF1",
+      "order": 12,
+      "type": "single_choice",
+      "content": "已知字符 '0' 的ASCII编码的十进制表示为48，则执行下面C++代码后，输出是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    string s = \"0629\";\n    int n = s.length();\n    int x = 0;\n    for(int i = 0; i < n; i++)\n        x += s[i];\n    cout << x << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "17"
+        },
+        {
+          "label": "B",
+          "text": "158"
+        },
+        {
+          "label": "C",
+          "text": "209"
+        },
+        {
+          "label": "D",
+          "text": "316"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该代码将字符串 `s` 中每个字符的ASCII值累加到 `x`。根据已知条件，'0' 的ASCII值为48，则 '6'、'2'、'9' 的ASCII值分别为54、50、57。将这些ASCII值相加：48 + 54 + 50 + 57 ="
+    },
+    {
+      "id": "hcKQ2WcWppvSlK64UXgw4",
+      "order": 13,
+      "type": "single_choice",
+      "content": "某小学男子篮球队招募新成员，要求加入球队的成员身高在135厘米以上（不含135厘米）。本次报名的人员有10人，他们的身高分别是125、127、136、134、137、138、126、135、140、145。完善以下代码，求出本次球队能够招募到新成员的人数？（ ）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int arr[10] = {125, 127, 136, 134, 137, 138, 126, 135, 140, 145};\n\n    int count = 0;\n    for(int i=0; i<10; i++)\n        __________________________ // 在此处填入代码\n\n    cout << count << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`count = arr[i]>135? 1: 0;`"
+        },
+        {
+          "label": "B",
+          "text": "`count += arr[i]>135? 1: 0;`"
+        },
+        {
+          "label": "C",
+          "text": "`count++;`"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B `count += arr[i]>135? 1: 0;` 正确。它使用三元运算符判断当前身高 `arr[i]` 是否大于 135（题目要求“不含135厘米”），如果满足条件则 `count` 累加 1，否则累加 0，从而正确统计符合条件的人数。选项 A `count = arr[i]>135? 1: 0;` 错误，它会每次循环都重新赋值 `count`，而不是累加。选项 C `count++;` 错误，它会无条件地将 `count` 加 1，没有判断身高条件。"
+    },
+    {
+      "id": "_igI08XJmKl7DxBsjFXVw",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面可以正确输出 `They're planning a party for their friend's birthday.` 的C++语句是？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`cout << 'They\\'re planning a party for their friend'\\s birthday.\" << endl;`"
+        },
+        {
+          "label": "B",
+          "text": "`cout << \"They\\'re planning a party for their friend's birthday.'<< endl;`"
+        },
+        {
+          "label": "C",
+          "text": "`cout << 'They're planning a party for their friend's birthday.'<< endl;`"
+        },
+        {
+          "label": "D",
+          "text": "`cout << \"They\\'re planning a party for their friend\\'s birthday.\" << endl;`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案D使用双引号 `\"` 来定义字符串字面量，并正确地使用 `\\'` 转义字符来表示字符串中的单引号，符合C++语法。选项A和C错误地使用单引号 `'`"
+    },
+    {
+      "id": "Y_Mh5tLaDGwyud6iEPKWb",
+      "order": 15,
+      "type": "single_choice",
+      "content": "如果执行下面C++代码后，输出的结果是\"gesp ccf org cn \"，则横线上应填入哪个代码？（ ）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    string str = \"gesp.ccf.org.cn\";\n\n    string delimiter = \".\";\n    string result=\"\";\n    string token;\n    size_t found = str.find(delimiter);\n    while (found != string::npos) {\n        token = str.substr(0, found);\n        result += token;\n        result += \" \";\n        __________________________ // 在此处填入代码\n        found = str.find(delimiter);\n    }\n\n    //最后一部分\n    result += str;\n    result += \" \";\n\n    cout << result << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`str = str.substr(found + delimiter.length(), str.length() - 1);`"
+        },
+        {
+          "label": "B",
+          "text": "`str = str.substr(found, str.length());`"
+        },
+        {
+          "label": "C",
+          "text": "`str = str.substr(found, str.length() - 1);`"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。\n\n1.  **解释为什么 A 是正确的：**\n    为了正确地处理字符串，每次找到分隔符后，我们需要将 `str` 更新为分隔"
+    },
+    {
+      "id": "39G9Q2HCD_8cCZGGTr6cp",
+      "order": 16,
+      "type": "true_false",
+      "content": "GESP测试是对认证者的编程能力进行等级认证，同一级别的能力基本上与编程语言无关。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "GESP测试旨在评估学生的通用编程能力，例如问题解决、逻辑思维和算法设计。这些核心能力是编程的本质，不局限于某一种特定的编程语言。因此，达到某一等级的编程能力，其核心是解决问题的思维和方法，这在不同编程语言之间是共通的，所以选项T是正确的。"
+    },
+    {
+      "id": "ogR410y6WLlBFNjb2CGxn",
+      "order": 17,
+      "type": "true_false",
+      "content": "整数-6的16位补码可用十六进制表示为FFFA。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "首先，将正数6表示为16位二进制：`0000 0000 0000 0110`。接着，对其进行按位取反（得到反码）：`1111 1111 1111 1001`。最后，将反码加1（得到补码）：`1111 1111 1111 1001` + `1` = `1111 1111 1111 1010`。将此二进制补码转换为十六进制，即为 `FFFA`。因此，题目描述是正确的。"
+    },
+    {
+      "id": "93uRKF78NJgyL3JX54YZu",
+      "order": 18,
+      "type": "true_false",
+      "content": "补码的优点是可以将减法运算转化为加法运算，从而简化计算机的硬件设计。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "补码（Two's Complement）是计算机中表示有符号数的一种标准方法。它的主要优点是能够将减法运算（例如 `A - B`）转换为加法运算（例如 `A + (-B)`），其中 `-B` 就是 `B` 的补码表示。这意味着计算机的算术逻辑单元（ALU）只需要设计一套加法器电路，就能同时处理加法和减法，从而极大地简化了硬件设计，降低了复杂性和成本。因此，题目描述是正确的。"
+    },
+    {
+      "id": "gVMWgh-csTk9qoArplxna",
+      "order": 19,
+      "type": "true_false",
+      "content": "字符常量`'\\0'`常用来表示字符串结束，和字符常量`'0'`相同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`'\\0'`和`'0'`是两个不同的字符常量。`'\\0'`是空字符（null character），其ASCII值为0，常用于标记C风格字符串的结束。而`'0'`是数字字符'0'，其ASCII值为48。因此，它们的值不同，题目中“相同”的说法是错误的，所以选择F。"
+    },
+    {
+      "id": "cKG_QvfKrTqVIo2GVE0zH",
+      "order": 20,
+      "type": "true_false",
+      "content": "数组的所有元素在内存中可以不连续存放。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "数组在内存中是连续存放的。这意味着数组的每个元素都紧挨着前一个元素存储，没有间隔，这种连续性是数组的基本特性。正是这种连续性使得我们可以通过索引 `[]` 或指针算术快速访问任意元素。因此，题目描述“可以不连续存放”是错误的。"
+    },
+    {
+      "id": "4NBl0cN59jtMSymUeHGrf",
+      "order": 21,
+      "type": "true_false",
+      "content": "C++中可以对数组和数组的每个基础类型的元素赋值。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中可以对数组的每个元素赋值，例如 `arr[0] = 10;`。但是，对于原始C风格数组，不能直接使用赋值运算符 `=` 对整个数组进行赋值，例如 `arr1 = arr2;` 是不允许的。由于题目中“和”连接的两个条件必须都满足，而“对数组赋值”不成立，因此该说法是错误的。"
+    },
+    {
+      "id": "kNRDtiqdAygsPjCElU5W1",
+      "order": 22,
+      "type": "true_false",
+      "content": "如果a为 `int` 类型的变量，且表达式 `((a | 3) == 3)` 的值为 `true` ，则说明a在从0到3之间（可能为0、可能为3）。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "当 `(a | 3) == 3` 为 `true` 时，表示 `a` 和 `3` 进行按位或运算的结果是 `3`。由于 `3"
+    },
+    {
+      "id": "jDEAnY4bIVEThLIqDe22V",
+      "order": 23,
+      "type": "true_false",
+      "content": "执行下面C++代码后，输出的结果是8。\n\n```cpp\nint a = 0b1010;\nint b = 01100;\nint c = a & b;\ncout << c << endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`int a = 0b1010;` 表示 `a` 是二进制数 `1010`，其十进制值为 `8 + 2 = 1"
+    },
+    {
+      "id": "zmNiMbA8eKeJ139MTV9HT",
+      "order": 24,
+      "type": "true_false",
+      "content": "执行下面C++代码后，输出的结果不可能是89781。\n\n```cpp\n#include <iostream>\n#include <cstdlib> // 为了使用 rand() 和 srand()\n#include <ctime>   // 为了使用 time()\nusing namespace std;\n\nint main() {\n    // 设置随机种子\n    srand(time(NULL));\n\n    int i = 1;\n    int s[5];\n    while(i <= 5)\n    {\n        int a = rand() % 10;\n        if(a % 3 == (i + 1) % 3)\n            s[i++] = a;\n    }\n    for(int i = 1; i <= 5; i++)\n        cout << s[i];\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确答案是 T。\n\n1.  **解释为什么正确答案是对的：**\n    代码中的 `if(a % 3 == (i + 1) % 3"
+    },
+    {
+      "id": "Sb5-Tf3m1ugMX_cdwyu6T",
+      "order": 25,
+      "type": "true_false",
+      "content": "把整数3025从中剪开分为30和25两个数，此时再将这两数之和平方，计算结果又等于原数。(30 + 25) × (30 + 25) = 55 × 55 = 3025，这样的数叫\"雷劈数\"。可以使用枚举的方法求出所有符合这样条件的四位数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "枚举法（或称遍历法）是指逐一检查所有可能的值。对于四位数，其范围是从1000到9999，这是一个有限且相对较小的集合。我们可以通过一个循环 `for (int i = 1000; i <= 9999; ++i)` 遍历所有四位数，对每个数按照“雷劈数”的定义进行判断。这种方法是完全可行且有效的，因此题目描述正确。"
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202606",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202606",
+  "title": "GESP C++八级 202606",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2026年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202606"
+  },
+  "questions": [
+    {
+      "id": "3mMaa4ab8GxXbKdWdAuYj",
+      "order": 1,
+      "type": "single_choice",
+      "content": "从7本不同的算法书和5本不同的数学书中选出4本,要求两类书都至少选1本,共有()种不同选法。",
+      "options": [
+        {
+          "label": "A",
+          "text": "420"
+        },
+        {
+          "label": "B",
+          "text": "455"
+        },
+        {
+          "label": "C",
+          "text": "465"
+        },
+        {
+          "label": "D",
+          "text": "495"
+        }
+      ],
+      "answer": "B",
+      "explanation": "总共12本书，选出4本的总方法数是C(12, 4) = (12*11*10*9)/(4*3*2*1) = 495。只选算法书的方法数是C(7, 4) = (7*6*5)/(3*2*1) = 35。只选数学书的方法数是C(5, 4) = 5。根据容斥原理，要求两类书都至少选1本的方法数是总方法数减去只选算法书和只选数学书的方法数，即495 - 35 - 5 = 455。"
+    },
+    {
+      "id": "X652KezYb1hdS6meMB78m",
+      "order": 1,
+      "type": "true_false",
+      "content": "若一项任务可从两种互斥的方案中选择一种完成,其中,方案A有m种做法,方案B有n种做法,则总做法数为m+n。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这是组合数学中的加法原理。如果完成一件事情有分类的`m`种方法和`n`种方法，且这些方法互斥，则完成这件事情的总方法数为`m+n`。"
+    },
+    {
+      "id": "56onV0W4vKvWBHn5mzOlg",
+      "order": 2,
+      "type": "single_choice",
+      "content": "6个人排成一排照相,其中甲、乙两人不能相邻,共有()种不同排法。",
+      "options": [
+        {
+          "label": "A",
+          "text": "240"
+        },
+        {
+          "label": "B",
+          "text": "480"
+        },
+        {
+          "label": "C",
+          "text": "600"
+        },
+        {
+          "label": "D",
+          "text": "720"
+        }
+      ],
+      "answer": "B",
+      "explanation": "6个人排成一排的总排法数是6! = 720。如果甲、乙两人相邻，可以将甲、乙看作一个整体。这样有5个“人”进行排列，排法数为5! = 120。同时，甲、乙两人内部可以交换位置，有2! = 2种排法。所以甲、乙相邻的排法数为5! * 2! = 120 * 2 = 240。甲、乙两人不能相邻的排法数为总排法数减去相邻的排法数，即720 - 240 = 480。"
+    },
+    {
+      "id": "44kYqzU5_d90oTk1c0GHk",
+      "order": 2,
+      "type": "true_false",
+      "content": "将n个不同元素围成一圈,若只把旋转视为同一种排法、翻转仍视为不同排法,则方案数为`(n-1)!`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "对于`n`个不同元素的圆排列，如果只考虑旋转相同，不考虑翻转相同，则有`(n-1)!`种不同的排法。这是圆排列的基本公式。"
+    },
+    {
+      "id": "2BhXuAgoUCE2hQ1rSSUli",
+      "order": 3,
+      "type": "single_choice",
+      "content": "展开式`(x² - 1/x)⁶`中,常数项的系数为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "12"
+        },
+        {
+          "label": "C",
+          "text": "15"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "answer": "C",
+      "explanation": "根据二项式定理，展开式`(a+b)ⁿ`的通项公式为`C(n, k) * a^(n-k) * b^k`。对于`(x² - 1/x)⁶`，`a = x²`，`b = -x⁻¹`，`n = 6`。通项为`C(6, k) * (x²)^(6-k) * (-x⁻¹)^k = C(6, k) * x^(12-2k) * (-1)^k * x⁻ᵏ = C(6, k) * (-1)^k * x^(12-3k)`。要找到常数项，令`x`的指数为0，即`12 - 3k = 0`，解得`k = 4`。将`k=4`代入系数部分，得到`C(6, 4) * (-1)⁴ = C(6, 2) * 1 = (6*5)/(2*1) = 15`。"
+    },
+    {
+      "id": "EJfOOgz4HG98ZGLsZCIh9",
+      "order": 3,
+      "type": "true_false",
+      "content": "从n个不同元素中可重复地选取k个且不考虑顺序,方案数为`C(n+k,k)`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "从`n`个不同元素中可重复选取`k`个且不考虑顺序的方案数，是组合数学中的“隔板法”问题，其公式为`C(n+k-1, k)`或`C(n+k-1, n-1)`。题目中给出的`C(n+k, k)`是错误的。"
+    },
+    {
+      "id": "O82G9x-90v6KGMv2wNrur",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面代码用于预处理组合数,横线处应填入的是()。\n```cpp\n1 for (int i = 0; i <= n; i++) {\n2   c[i][0] = c[i][i] = 1;\n3   for (int j = 1; j < i; j++)\n4     c[i][j] = __________;\n5 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "c[i - 1][j - 1] + c[i - 1][j]"
+        },
+        {
+          "label": "B",
+          "text": "c[i][j - 1] + c[i - 1][j - 1]"
+        },
+        {
+          "label": "C",
+          "text": "c[i - 1][j] + c[i][j + 1]"
+        },
+        {
+          "label": "D",
+          "text": "c[i][j - 1] * c[i - 1][j]"
+        }
+      ],
+      "answer": "A",
+      "explanation": "这段代码是使用动态规划预处理组合数（杨辉三角）。杨辉三角的递推关系是`C(n, k) = C(n-1, k-1) + C(n-1, k)`。在代码中，`c[i][j]`表示`C(i, j)`。因此，`c[i][j]`应该等于`c[i-1][j-1] + c[i-1][j]`。"
+    },
+    {
+      "id": "I0nVC5V-D0x8AcLf7rF3j",
+      "order": 4,
+      "type": "true_false",
+      "content": "杨辉三角中的组合数满足`C(n,k) = C(n - 1, k) + C(n - 2,k)`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "杨辉三角（Pascal's Triangle）中组合数的递推关系是`C(n, k) = C(n-1, k-1) + C(n-1, k)`。题目中给出的公式`C(n,k) = C(n - 1, k) + C(n - 2,k)`是错误的。"
+    },
+    {
+      "id": "VxIBGZZ5TJdgBjxWoLfcq",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下列程序输出的值为()。\n```cpp\n#include <iostream>\nusing namespace std;\n\nlong long qpow(long long a, long long b, long long mod) {\n  long long ans = 1 % mod;\n  while (b) {\n    if (b & 1)\n      ans = ans * a % mod;\n    a = a * a % mod;\n    b >>= 1;\n  }\n  return ans;\n}\n\nint main() {\n  cout << qpow(3, 20, 17) << endl;\n  return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "13"
+        },
+        {
+          "label": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`qpow`函数实现了快速幂算法，计算`a^b % mod`。这里调用`qpow(3, 20, 17)`，即计算`3^20 % 17`。\n计算过程如下：\n`3^1 % 17 = 3`\n`3^2 % 17 = 9`\n`3^4 % 17 = 9^2 % 17 = 81 % 17 = 13`\n`3^8 % 17 = 13^2 % 17 = 169 % 17 = 16`\n`3^16 % 17 = 16^2 % 17 = 256 % 17 = 1`\n因为`20`的二进制表示是`10100`，即`20 = 16 + 4`。\n所以`3^20 % 17 = (3^16 % 17 * 3^4 % 17) % 17 = (1 * 13) % 17 = 13`。\n根据标准计算，结果应为13。如果答案为16，则可能是题目中指数`20`误写为`8`，因为`3^8 % 17 = 16`。"
+    },
+    {
+      "id": "7QTgEL4hQHTIYO_tv8Jj-",
+      "order": 5,
+      "type": "true_false",
+      "content": "快速幂通过二进制拆分指数,可以在 `O(logb)` 时间内计算 `a^b mod m`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "快速幂（或二进制幂）算法通过将指数`b`进行二进制拆分，将`a^b`的计算转化为一系列平方和乘法操作。这些操作的次数与`b`的二进制位数成正比，即`logb`次。因此，其时间复杂度为`O(logb)`。"
+    },
+    {
+      "id": "eQp_Ha81sKliwCWtNftiA",
+      "order": 6,
+      "type": "single_choice",
+      "content": "归并排序每次把长度为n的序列分成两个规模约为n/2的子序列,递归排序后再用线性时间合并。该算法的时间复杂度通常为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n²)"
+        },
+        {
+          "label": "C",
+          "text": "O(log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n log n)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "归并排序是一种分治算法。它将一个大小为`n`的问题分解为两个大小约为`n/2`的子问题，然后递归地解决这些子问题，最后在线性时间`O(n)`内合并结果。其时间复杂度可以用递推关系式`T(n) = 2T(n/2) + O(n)`表示。根据主定理或递归树分析，该算法的时间复杂度为`O(n log n)`。"
+    },
+    {
+      "id": "0za9cRF6mbL_eMg2Io6pX",
+      "order": 6,
+      "type": "true_false",
+      "content": "只要图中不存在负权环,Dijkstra 算法就一定能正确处理带负权边的图。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "Dijkstra算法要求图中所有边的权值都为非负数。如果图中存在负权边（即使没有负权环），Dijkstra算法也可能无法得到正确的最短路径。对于含有负权边但无负权环的图，需要使用Bellman-Ford或SPFA等算法。"
+    },
+    {
+      "id": "4J8TdDDar5uGjTjey_1z1",
+      "order": 7,
+      "type": "single_choice",
+      "content": "在平面直角坐标系中,三角形三个顶点为A(1,1)、B(5,2)、C(3,6),该三角形面积为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "12"
+        },
+        {
+          "label": "D",
+          "text": "18"
+        }
+      ],
+      "answer": "B",
+      "explanation": "可以使用鞋带公式计算三角形面积：`Area = 0.5 * |x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)|`。\n代入顶点A(1,1)、B(5,2)、C(3,6)：\n`Area = 0.5 * |1*(2 - 6) + 5*(6 - 1) + 3*(1 - 2)|`\n`Area = 0.5 * |1*(-4) + 5*(5) + 3*(-1)|`\n`Area = 0.5 * |-4 + 25 - 3|`\n`Area = 0.5 * |18| = 9`。\n根据标准计算，结果应为9。如果答案为10，则可能是题目坐标或选项有误。"
+    },
+    {
+      "id": "rIshlploLVTCq2PxVnQ2o",
+      "order": 7,
+      "type": "true_false",
+      "content": "若一张连通无向图所有边权两两不同,则它的最小生成树一定唯一。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这是一个关于最小生成树的重要性质。如果一个连通无向图中所有边的权值都互不相同，那么它的最小生成树是唯一的。无论是Kruskal算法还是Prim算法，都会找到这棵唯一的最小生成树。"
+    },
+    {
+      "id": "-e7PThJo4AsCIIwVfM3m7",
+      "order": 8,
+      "type": "single_choice",
+      "content": "某程序需要判断点 P(x, y) 是否在以原点为圆心、半径为5的圆内或圆上。下列判断条件正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "x * x + y * y <= 25"
+        },
+        {
+          "label": "B",
+          "text": "abs(x) + abs(y) <= 5"
+        },
+        {
+          "label": "C",
+          "text": "x * x - y * y <= 25"
+        },
+        {
+          "label": "D",
+          "text": "x + y <= 5"
+        }
+      ],
+      "answer": "A",
+      "explanation": "以原点为圆心、半径为`r`的圆的方程是`x² + y² = r²`。点`(x, y)`在圆内或圆上的条件是它到圆心的距离小于或等于半径。距离的平方是`x² + y²`，所以条件是`x² + y² <= r²`。题目中半径`r=5`，所以`r²=25`。因此，正确的判断条件是`x * x + y * y <= 25`。"
+    },
+    {
+      "id": "hTJkjK8XVFcU8koPq3PgN",
+      "order": 8,
+      "type": "true_false",
+      "content": "判断点`(x, y)` 是否在以原点为圆心、半径为r的圆内或圆上时,可以比较 `x² + y²`与`r²`,不必先开平方。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "点`(x, y)`到原点的距离是`sqrt(x² + y²)`。判断该距离是否小于等于半径`r`，即`sqrt(x² + y²) <= r`。由于`r`通常为非负数，两边平方后不等式方向不变，变为`x² + y² <= r²`。这样做可以避免浮点数运算的精度问题和开平方的计算开销，是一种更优的判断方式。"
+    },
+    {
+      "id": "aI14_-4OkGANBoFa-io9S",
+      "order": 9,
+      "type": "single_choice",
+      "content": "某无向带权图有边 `(1,2,4)`、`(1,3,2)`、`(2,3,1)`、`(2,4,5)`、`(3,4,8)`、`(3,5,10)`、`(4,5,2)`。该图最小生成树的总权值为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "7"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "B",
+      "explanation": "使用Kruskal算法寻找最小生成树。首先将所有边按权值从小到大排序：\n1. `(2,3,1)`\n2. `(1,3,2)`\n3. `(4,5,2)`\n4. `(1,2,4)`\n5. `(2,4,5)`\n6. `(3,4,8)`\n7. `(3,5,10)`\n\n图中有5个顶点，最小生成树需要4条边。\n1. 选择边`(2,3,1)`，加入MST。当前权值和：1。连通分量：`{1}, {2,3}, {4}, {5}`。\n2. 选择边`(1,3,2)`，加入MST。当前权值和：1+2=3。连通分量：`{1,2,3}, {4}, {5}`。\n3. 选择边`(4,5,2)`，加入MST。当前权值和：3+2=5。连通分量：`{1,2,3}, {4,5}`。\n4. 边`(1,2,4)`连接`1`和`2`，它们已在同一连通分量`{1,2,3}`中，跳过。\n5. 选择边`(2,4,5)`，连接`2`（在`{1,2,3}`中）和`4`（在`{4,5}`中），加入MST。当前权值和：5+5=10。所有顶点已连通。\n\n因此，最小生成树的总权值为10。如果答案为8，则可能是题目边权或选项有误。"
+    },
+    {
+      "id": "8IPI8qLdpx6c-NYBQIhVx",
+      "order": 9,
+      "type": "true_false",
+      "content": "若能写出判定函数 `check(x)`,表示“答案为 `x` 时是否可行”,即使 `check(x)`不满足单调性,也一定可以使用二分答案求最优解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "二分答案（或二分查找）的核心前提是判定函数`check(x)`必须具有单调性。如果`check(x)`不满足单调性，二分查找就无法保证能够找到最优解，因为它可能会跳过正确的答案区间。"
+    },
+    {
+      "id": "oBqghfoyIRTlntGksEA_Z",
+      "order": 10,
+      "type": "single_choice",
+      "content": "有向非负权图边为`1→2(3)`、`2→4(4)`、`1→3(10)`、`3→4(1)`、`2→3(2)`。使用Dijkstra 算法从 1 号顶点出发到4号顶点的最短距离为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "11"
+        }
+      ],
+      "answer": "A",
+      "explanation": "使用Dijkstra算法计算从顶点1到顶点4的最短距离：\n1. 初始化：`dist = {1:0, 2:∞, 3:∞, 4:∞}`。已访问集合`S = {}`。\n2. 从未访问顶点中选择距离最小的顶点1。`dist[1]=0`。\n   更新邻居：`dist[2] = min(∞, dist[1]+w(1,2)) = min(∞, 0+3) = 3`。\n   `dist[3] = min(∞, dist[1]+w(1,3)) = min(∞, 0+10) = 10`。\n   将1加入`S`。\n3. 从未访问顶点中选择距离最小的顶点2。`dist[2]=3`。\n   更新邻居：`dist[4] = min(∞, dist[2]+w(2,4)) = min(∞, 3+4) = 7`。\n   `dist[3] = min(10, dist[2]+w(2,3)) = min(10, 3+2) = 5`。\n   将2加入`S`。\n4. 从未访问顶点中选择距离最小的顶点3。`dist[3]=5`。\n   更新邻居：`dist[4] = min(7, dist[3]+w(3,4)) = min(7, 5+1) = 6`。\n   将3加入`S`。\n5. 从未访问顶点中选择距离最小的顶点4。`dist[4]=6`。\n   顶点4已是目标顶点，最短距离为6。"
+    },
+    {
+      "id": "Fa32mAsz2XHHSB8aMpfzM",
+      "order": 10,
+      "type": "true_false",
+      "content": "归并排序是一种稳定排序算法,常见实现的时间复杂度为`O(nlogn)`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "归并排序是一种稳定的排序算法，这意味着对于具有相同键值的元素，它们在排序前后的相对顺序保持不变。其时间复杂度在最好、平均和最坏情况下都是`O(n log n)`。"
+    },
+    {
+      "id": "gRhPXKaZtx3vVA520Tbm9",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下列代码片段的时间复杂度为()。\n```cpp\n1 long long s = 0;\n2 for (int i = 1; i <= n; i++) {\n3   for (int j = 1; j * j <= n; j++) {\n4     s += i + j;\n5   }\n6 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n√n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n²)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "外层循环`for (int i = 1; i <= n; i++)`执行`n`次。\n内层循环`for (int j = 1; j * j <= n; j++)`的条件是`j * j <= n`，这意味着`j`的最大值约为`√n`。因此，内层循环大约执行`√n`次。\n总的时间复杂度是外层循环次数乘以内层循环次数，即`n * √n = O(n√n)`。"
+    },
+    {
+      "id": "RrBsRl_FqXQXF9X5xCu88",
+      "order": 12,
+      "type": "single_choice",
+      "content": "某优化问题的答案是 `[1, M]` 內的整数,存在单调判定函数 `check(x)`,且每次判定的时间复杂度为 `O(n)`。使用二分答案求最小可行值,整体时间复杂度通常为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(nM)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log M)"
+        },
+        {
+          "label": "C",
+          "text": "O(M log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n + M)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "二分答案（或二分查找）在范围`[1, M]`内进行，其迭代次数为`O(log M)`。在每次迭代中，都需要调用判定函数`check(x)`来判断当前值是否可行。题目说明`check(x)`的时间复杂度为`O(n)`。因此，整体的时间复杂度是二分查找的迭代次数乘以每次判定的时间复杂度，即`O(log M * n) = O(n log M)`。"
+    },
+    {
+      "id": "S09bwU493Xwb1w0pLr26x",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下列线性筛的代码片段中,当枚举到质数 `p` 且 `i % p == 0` 时,使用 `break;` 语句停止继续枚举。这样做主要目的是()。\n```cpp\n1 for (int i = 2; i <= n; ++i) {\n2   if (!is_composite[i])\n3     primes.push_back(i);\n4   for (int p: primes) {\n5     if (i * p > n)\n6       break;\n7     is_composite[i * p] = true;\n8     if (i % p == 0)\n9       break; // 这条语句的目的是?\n10   }\n11 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "保证递归深度不超过 O(logn)。"
+        },
+        {
+          "label": "B",
+          "text": "保证每个合数只被它的最小质因子筛去一次。"
+        },
+        {
+          "label": "C",
+          "text": "保证每个素数都被标记为合数。"
+        },
+        {
+          "label": "D",
+          "text": "把筛法时间复杂度提高到 O(nlogn)。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "线性筛（欧拉筛）的关键优化在于确保每个合数只被其最小质因子筛去一次。当`i % p == 0`时，表示`p`是`i`的最小质因子。此时，`i * p`的最小质因子也是`p`。如果继续用更大的质数`p'`来筛`i * p'`，那么`i * p'`的最小质因子仍然是`p`（因为`p`是`i`的最小质因子，且`p < p'`）。为了避免重复标记，当`i % p == 0`时就`break`，确保`i * p`只被`p`筛去，从而达到`O(n)`的时间复杂度。"
+    },
+    {
+      "id": "4_PCFNTu6t0GLJ2LqpeIF",
+      "order": 14,
+      "type": "single_choice",
+      "content": "在C++中,关于类的继承和构造、析构顺序,下列说法正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "派生类可以直接访问基类的 `private` 成员。"
+        },
+        {
+          "label": "B",
+          "text": "基类的 `protected` 成员在私有继承后会变成派生类的 `public` 成员。"
+        },
+        {
+          "label": "C",
+          "text": "创建派生类对象时,会先调用基类构造函数,再调用派生类构造函数。"
+        },
+        {
+          "label": "D",
+          "text": "销毁派生类对象时,会先调用基类析构函数,再调用派生类析构函数。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "A选项错误，基类的`private`成员不能被派生类直接访问。\nB选项错误，在私有继承中，基类的`public`和`protected`成员在派生类中都变为`private`成员。\nC选项正确，创建派生类对象时，会先调用基类的构造函数来初始化基类部分，然后才调用派生类的构造函数来初始化派生类部分。\nD选项错误，销毁派生类对象时，析构函数的调用顺序与构造函数相反，即先调用派生类的析构函数，再调用基类的析构函数。"
+    },
+    {
+      "id": "Yk4HQRlejMADOGq4rjxGg",
+      "order": 15,
+      "type": "single_choice",
+      "content": "将4个元素按1,2,3,4的顺序入栈,在该过程中可随时插入出栈操作。下列序列中不可能作为出栈序列的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1, 2, 3, 4"
+        },
+        {
+          "label": "B",
+          "text": "2, 1, 4, 3"
+        },
+        {
+          "label": "C",
+          "text": "3, 2, 1, 4"
+        },
+        {
+          "label": "D",
+          "text": "3, 1, 2, 4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "这是一个栈的合法出栈序列问题。入栈顺序为1, 2, 3, 4。\nA. 1, 2, 3, 4：入1出1，入2出2，入3出3，入4出4。合法。\nB. 2, 1, 4, 3：入1入2出2出1，入3入4出4出3。合法。\nC. 3, 2, 1, 4：入1入2入3出3出2出1，入4出4。合法。\nD. 3, 1, 2, 4：入1入2入3，出3。此时栈中为[1, 2]。要出1，必须先将2出栈。但序列要求出1，所以不可能。因此，3, 1, 2, 4是不可能的出栈序列。"
+    }
+  ]
+}

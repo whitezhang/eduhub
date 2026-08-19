@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-2ji-202512",
+  "url": "https://adacpp.com/practice/gesp-cpp-2ji-202512",
+  "title": "GESP C++二级 202512",
+  "description": "CCF编程能力等级认证 GESP C++ 二级 2025年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 2,
+    "ym": "202512"
+  },
+  "questions": [
+    {
+      "id": "AxYNAjP3Gs4mkFIGLACdx",
+      "order": 1,
+      "type": "single_choice",
+      "content": "近日，空中客车公司表示，约6000架空客A320系列飞机需要紧急更换一种易受太阳辐射影响的飞行控制软件。空客表示，在对一起飞行事故分析后的结果显示，强烈的太阳辐射可能会损坏飞行控制系统所需的关键数据，导致判断失误，进而引发飞行异常。那这里的飞行控制系统执行判断的部件最可能是下面的（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "辐射传感器"
+        },
+        {
+          "label": "B",
+          "text": "处理器"
+        },
+        {
+          "label": "C",
+          "text": "内存单元"
+        },
+        {
+          "label": "D",
+          "text": "输出设备"
+        }
+      ],
+      "answer": "B",
+      "explanation": "**B. 处理器** 是计算机系统的“大脑”，负责执行软件指令、进行计算和逻辑判断。题目中提到软件受损导致“判断失误”，正是处理器执行了错误的软件逻辑或处理了错误数据。**A. 辐射传感器** 负责收集数据，是输入设备；**C. 内存单元** 负责存储数据和指令；**D. 输出设备** 负责根据处理结果执行动作，它们本身都不执行判断。"
+    },
+    {
+      "id": "8tba3g6lRFdkXnUnzdr7F",
+      "order": 2,
+      "type": "single_choice",
+      "content": "小明最近为了备考GESP，开始看B站上关于网络知识的视频。其中提到计算机网络系统有不同的划分标准，那他平时上学所在的教学楼内的网络是一个（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "PAN"
+        },
+        {
+          "label": "B",
+          "text": "LAN"
+        },
+        {
+          "label": "C",
+          "text": "MAN"
+        },
+        {
+          "label": "D",
+          "text": "WAN"
+        }
+      ],
+      "answer": "B",
+      "explanation": "教学楼内的网络属于局域网（LAN），因为它覆盖的地理范围较小，通常在一个建筑物内部。个人区域网（PAN）范围太小，仅限于个人设备间的连接。城域网（MAN）和广域网（WAN）的覆盖范围则分别是一个城市和更广阔的区域，远超一栋教学楼的范围。"
+    },
+    {
+      "id": "eEYVxB1Aa8HeCeap9Tp-7",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面有关C++变量的说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "不可以用 `for` 作为变量名，因为 `for` 是C++的关键字（保留字）。"
+        },
+        {
+          "label": "B",
+          "text": "`_tnt` 不可以是变量名，因为变量名的第一个字符必须是英文字母。"
+        },
+        {
+          "label": "C",
+          "text": "`_tnt_` 不可以是变量名，因为最后一个字符容易与减号混淆。"
+        },
+        {
+          "label": "D",
+          "text": "可以用 `printf` 作为变量名，因为 `printf` 是关键字，但这不是好习惯，因为 `printf` 有约定的功能与含义。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "**A正确**，因为 `for` 是C++的关键字（保留字），关键字不能被用作自定义的变量名。\n**B错误**，C++变量名可以以下划线 `_` 开头，所以 `_tnt` 是合法的变量名。\n**C错误**，C++变量名可以以下划线 `_` 结尾，且下划线与减号混淆的说法不成立。\n**D错误**，`printf` 不是C++的关键字，它是一个标准库函数。虽然技术上可以将其作为变量名（但不推荐），但选项中关于它是关键字的说法是错误的。"
+    },
+    {
+      "id": "2LFPRc27TQOKF7RmPBpi2",
+      "order": 4,
+      "type": "single_choice",
+      "content": "一个小数是0.123123123......无限循环，其小数点后1位是1，后2位是2，依此类推，求第N位的值。横线处应填入的代码是（ ）。\n\n```cpp\nint N;\ncin >> N;\nremainder = ______________;\n\nif (remainder == 0)\n    cout << 1;\nelse if (remainder == 1)\n    cout << 2;\nelse\n    cout << 3;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`N % 3`"
+        },
+        {
+          "label": "B",
+          "text": "`(N - 1) % 3`"
+        },
+        {
+          "label": "C",
+          "text": "`N / 3`"
+        },
+        {
+          "label": "D",
+          "text": "`(N - 1) / 3`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n该小数的循环节是 \"123\"，长度为3。为了找到第N位的值，我们需要计算 N 在这个循环中的位置。由于 `N %"
+    },
+    {
+      "id": "gEXRoTLKdjXX25jRXY7VV",
+      "order": 5,
+      "type": "single_choice",
+      "content": "某同学执行C++代码时 `printf(\"%g\\n\", (3 + 3.1415926535));` 输出 `6.14159`，其原因最可能是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "C++中整数和浮点数相加时，整数会被转换为浮点数，而某些十进制小数无法精确表示为二进制小数，从而产生某些舍入误差。"
+        },
+        {
+          "label": "B",
+          "text": "C++的 `printf` 函数在输出浮点数时根据格式有默认小数点位数，因此输出了较少的位数。"
+        },
+        {
+          "label": "C",
+          "text": "`3.1415926535` 是一个无限循环小数，在计算机中无法精确表示。"
+        },
+        {
+          "label": "D",
+          "text": "由于计算机CPU的运算错误导致。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`printf` 函数的 `%g` 格式符在输出浮点数时，会根据数值大小自动选择 `%f` 或 `%e` 格式，并默认限制输出的有效"
+    },
+    {
+      "id": "ybwQMvIuzCqXCeXKErrlc",
+      "order": 6,
+      "type": "single_choice",
+      "content": "某单位工号的编码规则：编码总长5位，均为数字，前4位依次整除以3其值累加之和除以10的余数为第5位数字。如某工号为76587，前4位分别整除以3后，商分别为2、2、1、2，其累加之和为7，除以10的余数为7，故第5位为7。下面代码依次输入前4位后，两个横线处分别应填的是（ ）。\n\n```cpp\nint rst = 0, N;\nfor (int i = 0; i < 4; i++){\n    cin >> N;\n    rst += ___________; // L1\n}\ncout << ___________; // L2\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "L1: `N % 3`\nL2: `rst / 10`"
+        },
+        {
+          "label": "B",
+          "text": "L1: `N % 3`\nL2: `rst % 10`"
+        },
+        {
+          "label": "C",
+          "text": "L1: `N / 3`\nL2: `rst / 10`"
+        },
+        {
+          "label": "D",
+          "text": "L1: `N / 3`\nL2: `rst % 10`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "题目要求计算前4位数字分别除以3的“商”并累加，C++中整数除法 `N / 3` 得到的就是商，因此L1应填 `N / 3`。最终结果是累加和除以10的“余数”，C++中取模运算符 `rst % 10` 得到的是余数，因此L2应填 `rst % 10`。选项A、B的L1错误地使用了取余运算符 `%`，选项A、C的L2错误地使用了整数除法 `/` 来取余数。只有选项D完全符合题目描述的计算规则。"
+    },
+    {
+      "id": "aPe9O_BhM2md3Yg1KJivy",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面的C++代码执行后的输出是（ ）。\n\n```cpp\nfor (int i = -2; i < 2; i++)\n    if (i % 2)\n        printf(\"%d#\",i);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`-1#1#`"
+        },
+        {
+          "label": "B",
+          "text": "`-1#0#1#`"
+        },
+        {
+          "label": "C",
+          "text": "`-2#-1#1#`"
+        },
+        {
+          "label": "D",
+          "text": "`-2#-1#1#2#`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该 `for` 循环使变量 `i` 从 `-2` 递增到 `1`。`if (i % 2)` 条件判断 `i` 是否为奇数（即 `i` 除以 `2` 的余数非零）。只有当 `i` 为 `-1` 和 `1` 时，条件才成立，分别输出 `-1#` 和 `1#`。因此，正确输出是 `A. -1#1#`。其他选项包含了偶数或超出循环范围的数字，故不正确。"
+    },
+    {
+      "id": "kN9mNjW73I7-e3nrWsp_j",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面的C++代码执行后其输出是（ ）。\n\n```cpp\nint cnt = 0, N;\nfor (int i =1; i < 10; i += 2)\n    for (int j =0; j < i; j++)\n        cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "100"
+        },
+        {
+          "label": "B",
+          "text": "55"
+        },
+        {
+          "label": "C",
+          "text": "45"
+        },
+        {
+          "label": "D",
+          "text": "25"
+        }
+      ],
+      "answer": "D",
+      "explanation": "外层循环 `i` 的取值依次为 1, 3, 5, 7, 9。内层循环 `j` 的次数由当前的 `i` 决定，每次 `cnt` 增加 1。因此，`cnt` 的最终值为 1 (当 `i=1`) + 3 (当 `i=3`) + 5 (当 `i=5`) + 7 (当 `i=7`) + 9 (当 `i=9`) = 25。选项 A、B、C 的值与实际计算结果不符。"
+    },
+    {
+      "id": "GPkLQeLbyR9mnU1-B_7Rv",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后其输出是（ ）。\n\n```cpp\nint i,j;\n\nfor (i = 1; i < 12; i++){\n    if (i % 2 == 0)\n        continue;\n\n    for (j = 0; j < i; j++)\n        if (i * j % 2 == 0)\n            break;\n    if(j >= i)\n        cout << i * j << \" \";\n}\nif(i >= 12)\n    cout << (i * j);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`0 0`"
+        },
+        {
+          "label": "B",
+          "text": "`11`"
+        },
+        {
+          "label": "C",
+          "text": "`0`"
+        },
+        {
+          "label": "D",
+          "text": "`0 11`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "外层循环只处理 `i` 为奇数的情况。对于任何奇数 `i`，内层循环会在 `j = 0` 时因 `i * j % 2"
+    },
+    {
+      "id": "u5whAHmSqYC7Z4jFzEZcE",
+      "order": 10,
+      "type": "single_choice",
+      "content": "与下面C++输出效果不一致的代码是（ ）。\n\n```cpp\nint i;\nfor (i = 0; i < 10; i++)\n    cout << i;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nint i = 0;\nwhile (i < 10){\n    cout << i;\n    i += 1;\n}\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nint i = 0;\nwhile (i < 10){\n    i += 1;\n    cout << i;\n}\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nint i = 0;\nwhile (true){\n    cout << i;\n    i += 1;\n    if (i >= 10)\n        break;\n}\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nint i = 0;\nwhile (true){\n    if (i >= 10)\n        break;\n    cout << i;\n    i += 1;\n}\n```"
+        }
+      ],
+      "answer": "B",
+      "explanation": "原代码会输出 `0123456789`。选项 B 中，`i += 1;` 在 `cout << i;` 之前执行，导致 `i` 的值先增加再输出，因此会输出 `12345678910`，与原代码不一致。选项 A、C、D 的代码逻辑与原代码相同，都是先输出 `i` 的当前值，再递增 `i`，并在 `i` 达到 10 时停止，因此它们的输出与原代码一致。"
+    },
+    {
+      "id": "3M6hZjgZPNxkQrx2B3TpN",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint num = 0;\nwhile (num <= 5){\n    num += 1;\n    if (num % 3)\n        continue;\n    printf(\"%d#\",num);\n}\nif(num > 5)\n    printf(\"%d\", num);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`3#6#`"
+        },
+        {
+          "label": "B",
+          "text": "`3#6#6`"
+        },
+        {
+          "label": "C",
+          "text": "`1#2#3#4#5#6#`"
+        },
+        {
+          "label": "D",
+          "text": "`1#2#3#4#5#6#6`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码中的 `while` 循环会使 `num` 从 1 递增到 6。`if (num % 3)` 语句判断 `num` 是否能被 3"
+    },
+    {
+      "id": "nlGLRaCcn1kOH-U2atYnm",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面C++代码执行后，其输出是（ ）。\n\n```cpp\nint cnt = 0;\nfor (int i = 0; i <5; i++)\n    for (int j =i; j < 4; j++)\n        cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "14"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该代码包含一个嵌套循环。外层循环 `for (int i = 0; i < 5; i++)` 控制 `i` 从 0 遍历到 4。内层循环 `for (int j = i; j < 4; j++)` 的起始值 `j` 依赖于 `i`。当 `i` 分别为 0, 1, 2, 3 时，内层循环会执行 4, 3, 2, 1 次；当 `i=4` 时，内层循环不执行。因此，`cnt` 的总增量为 `4 + 3 + 2 + 1 + 0 = 10`。最终输出是 10，所以选项 B 正确。其他选项不符合循环的实际执行次数。"
+    },
+    {
+      "id": "dacnA0vb9WB4IjbEHphZm",
+      "order": 13,
+      "type": "single_choice",
+      "content": "漂亮数的定义是：如果N能被M整除，或者某位是M，或者N的每位数之和能被M整除，则说N是M的漂亮数。如果三个条件都满足，则是完整漂亮数。123是3的完整漂亮数，因为123能被3整除，也含有3，其每位数之和为6也能被3整除。下面的代码用于判断N是否为M的完整漂亮数并输出。相关说法正确的是（ ）。\n\n```cpp\nint N, M, Flag, Sum, num;\ncout << \"请输入N，不等于0的正整数：\";\ncin >> N;\ncout << \"请输入M：M必须大于1小于9：\";\ncin >> M;\n\nSum = 0; // 记录各位数之和\nFlag = 0; // 假设记录N不含有M\n\nwhile (N != 0){\n    num = N % 10;\n\n    Sum += num;\n    if (num == M)\n        Flag = 1;\n\n    N /= 10;\n}\nif ((N % M == 0) && (Flag == 1) && (Sum % M == 0)) // L1\n    printf(\"%d 是 %d 的完整漂亮数\", N, M);\nelse\n    printf(\"%d 不是 %d 的完整漂亮数\", N, M);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "代码能完成题目设定目标。"
+        },
+        {
+          "label": "B",
+          "text": "在 `while` 循环中N最终将变成0，因此L1行代码中 `N % M` 将总是满足条件，可以在 `while` 前增加一行代码 `int old_num = N;`，并将L1开始这4行代码中的 `N` 都改为 `old_num` 就可以做出正确的判定。"
+        },
+        {
+          "label": "C",
+          "text": "`while` 循环中 `if` 判断语句可以增加 `else` 子句，其内容为 `Flag = 0`。"
+        },
+        {
+          "label": "D",
+          "text": "如果先后输入 `0` 和 `3`，则肯定会输出 `0是3的完整漂亮数`。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。\n\n**B选项正确的原因：**\n代码在 `while` 循环中通过 `N /= 10` 不断修改 `N` 的值，导致"
+    },
+    {
+      "id": "8VSA6Z4BbMYxXoRa_FueS",
+      "order": 14,
+      "type": "single_choice",
+      "content": "阅读下面的C++代码。执行后如输入 `5`，其输出的字符图形是（ ）。\n\n```cpp\nint n,i,j,k;\ncin >> n;\nfor (i = 0; i < n; i++){\n    for (j = 0; j < n-i-1; j++)\n        cout << \" \";\n    for (k = 0; k < 2*i+1; k++)\n        cout << \"*\";\n    cout << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```\n*****\n ****\n  ***\n   **\n    *\n```"
+        },
+        {
+          "label": "B",
+          "text": "```\n    *\n   ***\n  *****\n *******\n*********\n```"
+        },
+        {
+          "label": "C",
+          "text": "```\n*\n**\n***\n****\n*****\n```"
+        },
+        {
+          "label": "D",
+          "text": "```\n    *\n   **\n  ***\n ****\n*****\n```"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该代码通过外层循环 `for (i = 0; i < n; i++)` 控制行数。内层循环 `for (j = 0; j <"
+    },
+    {
+      "id": "BkRYsbbhnEWyQVkIImImq",
+      "order": 15,
+      "type": "single_choice",
+      "content": "某学校举办\"十佳歌手大奖赛\"，经过选拔最终参赛选手有25人，评委10人，最终计分规则去掉一个最高分去掉一个最低分作为该参赛选手的最终得分，并输出该得分。如果单个评委可给满分为10分，则相关说法正确的是（ ）。\n\n```cpp\nfloat total_score, max_score, min_score, now_score;\nfor (int i = 0; i < 25; i++){\n    max_score = 0;  // 记录最高分\n    min_score = 10; // 记录最低分\n    total_score = 0; // 记录总分\n\n    for (int j = 0; j < 10; j++){\n        cin >> now_score; // 录入评委打分\n\n        max_score = max(max_score, now_score); // L1\n        min_score = min(min_score, now_score); // L2\n\n        total_score += now_score;\n    }\n\n    cout << (total_score - max_score - min_score);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "程序总体逻辑错误。因为要去掉最高分和最低分，需要排序，而程序没有相关代码。"
+        },
+        {
+          "label": "B",
+          "text": "内层循环和外层循环之间的三行代码也就是 `max_score = 0` 开始的三行代码应该移动到外层循环外。"
+        },
+        {
+          "label": "C",
+          "text": "L1和L2标记的两行代码可以分别改为简单的 `if` 语句或 `? :` 语句。"
+        },
+        {
+          "label": "D",
+          "text": "`total_score += now_score` 不可以更改为 `total_score = total_score + now_score`。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项C正确，因为`max()`和`min()`函数的功能是比较两个值并返回较大或较小的一个，这完全可以通过简单的`if`语句（例如 `if (now_score > max_score) max_score = now_score;`）或三元运算符 `? :` 来实现。\n\n选项A错误，因为题目要求是去掉一个最高分和一个最低分，而不是对所有分数进行排序。程序中通过迭代更新`max_score`和`min_score`的方式是找出最高分和最低分的有效且高效方法，无需排序。\n\n选项B错误，`max_score`, `min_score`, `total_score` 必须在处理每个选手之前重新初始化为0、10和0，否则前一个选手的数据会影响到后一个选手的计算。\n\n选项D错误，`total_score += now_score` 是 `total_score = total_score + now_score` 的简写形式，两者在C++中功能完全相同。"
+    },
+    {
+      "id": "sj3xOt4xuKu2xhV0qI1VY",
+      "order": 16,
+      "type": "true_false",
+      "content": "鸿蒙是华为公司开发的一款操作系统，那么它能够将正确的源程序翻译成目标程序，并运行。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "操作系统（如鸿蒙）的主要功能是管理计算机资源，并为程序提供运行环境。将源程序（如 C++ 代码）翻译成目标程序（机器码）的工作是由编译器（例如 `g++`）完成的，而不是操作系统。操作系统负责加载和运行这个已经翻译好的目标程序。因此，题目描述错误，正确答案为F。"
+    },
+    {
+      "id": "ie-GnjJBujTcHJ3SezDJ0",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++表达式 `5 < 10 && 20` 对应的逻辑值为 `true`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "表达式 `5 < 10` 的结果是 `true`。在 C++ 中，非零整数在逻辑上下文中被视为 `true`，所以 `20` 被视为 `true`。因此，`true && true` 的逻辑结果为 `true`，题目描述正确。"
+    },
+    {
+      "id": "fwHBIKeNdMGqyXxHaO_xC",
+      "order": 18,
+      "type": "true_false",
+      "content": "C++表达式 `10 / 0.333333 == 10 / (1 / 3)` 的值为 `true`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `10 / (1 / 3)` 中，`1 / 3` 是整数除法，结果为 `0`。因此，右侧变为 `10 /"
+    },
+    {
+      "id": "YnwMlg0JeH0AzhfaT-8VL",
+      "order": 19,
+      "type": "true_false",
+      "content": "下面C++代码中N是整数，执行时无论输入负整数、0或正整数，其输出都将是 `0`。\n\n```cpp\ncin >> N;\nwhile (N)\n    N /= 10;\ncout << N;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码的 `while (N)` 循环会持续执行，直到变量 `N` 的值为 `0`。无论初始输入的 `N` 是正数、负数还是 `0`，`N /= 10` 操作（整数除法）都会逐步将 `N` 减小（或增大，对于负数）直至其变为 `0`。一旦 `N` 变为 `0`，循环终止，`cout << N;` 便会输出最终的 `0`。因此，该描述是正确的。"
+    },
+    {
+      "id": "uFUdY9VlwZ8HOxk7pTNyC",
+      "order": 20,
+      "type": "true_false",
+      "content": "下面的C++代码执行后，其输出是 `4 0`。\n\n```cpp\nint a,b;\na = 4;\nb = a == 5;\ncout << a << ' ' << b;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "变量 `a` 被赋值为 `4`。表达式 `a == 5`（即 `4 == 5`）的结果是布尔值 `false`。在 C++ 中，布尔值 `false` 转换为整数类型时为 `0`，所以 `b` 的值为 `0`。因此，`cout << a << ' ' << b;` 的输出是 `4 0`，与题目描述一致，所以选项 T 是正确的。"
+    },
+    {
+      "id": "48Gm7VscD0RsBH_AVw-n3",
+      "order": 21,
+      "type": "true_false",
+      "content": "C++代码中对表达式 `('Z' - 'A') < ('z' - 'A')` 的结果输出为 `0`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `('Z' - 'A')` 的结果是 25，而 `('z' - 'A')` 的结果是 57。因此，`25 < 57` 这个比较是 `true`。在 C++ 中，布尔值 `true` 在作为整数输出时通常为 `1`。题目中说输出为 `0`，与实际结果 `1` 不符，所以该陈述是错误的，正确答案是 F。"
+    },
+    {
+      "id": "q0susFjzz2xkytrlg8yU0",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面的C++代码可以用于判断正整数N的位数（即几位数，如123是3位数，12为2位数）。\n\n```cpp\nint N, N10, i;\ncin >> N;\nN10 = 10, i = 1;\nwhile (1) {\n    if (N % N10 == N) {\n        printf(\"%d 是 %d 位数\", N, i);\n        break;\n    }\n    i++, N10 *= 10;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码逻辑正确。循环中，`i` 记录当前尝试的位数，`N10` 记录 `10` 的相应幂次。当 `N` 小于 `"
+    },
+    {
+      "id": "dMKT-gEdxBbNNYWPEvUfD",
+      "order": 23,
+      "type": "true_false",
+      "content": "计算交叉加减的结果，形如 `1-2+3-4+5-......`。下面C++代码中的变量都是整型，则将 `Flag = -Flag` 改为 `Flag -= Flag` 效果相同。\n\n```cpp\ncin >> N;\nFlag = -1;\ntnt = 0;\nfor (i = 1; i < N + 1; i++) {\n    Flag = -Flag;\n    tnt += Flag * i;\n}\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`Flag = -Flag` 的作用是将 `Flag` 的值取反（例如，1 变为 -1，-1 变为 1），从而实现符号交替。而 `Flag -= Flag` 等价于 `Flag = Flag - Flag`，其结果总是将 `Flag` 的值变为 0。因此，这两种操作的效果完全不同，`"
+    },
+    {
+      "id": "Q4k_k4QxpSxR3JP2U5_T3",
+      "order": 24,
+      "type": "true_false",
+      "content": "下列C++代码执行后将输出 `55`。\n\n```cpp\nint cnt = 0;\nfor (i = 0; i < 10; i++)\n    for (j = i; j < 10; j++)\n        cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码包含一个嵌套循环。外层循环 `i` 从 0 遍历到 9，内层循环 `j` 从 `i` 遍历到 9，每次 `cnt` 增加 1。因此，`cnt` 的最终值是 `(10-0) + (10-1) + ... + (10-9)`，即 `10 + 9 + ... + 1`。这个求和结果为 `55`，所以输出 `55` 是正确的，选项 T 正确。"
+    },
+    {
+      "id": "TbQD85pKLeSmJsemMsAH4",
+      "order": 25,
+      "type": "true_false",
+      "content": "下面C++代码执行后输出如下，因为代码 `printf(\"\\n\")` 没有任何可读内容，删除不影响输出效果。\n\n输出：\n```\n  1  2  3  4  5  6  7  8  9\n  2  4  6  8 10 12 14 16 18\n  3  6  9 12 15 18 21 24 27\n  4  8 12 16 20 24 28 32 36\n  5 10 15 20 25 30 35 40 45\n  6 12 18 24 30 36 42 48 54\n  7 14 21 28 35 42 49 56 63\n  8 16 24 32 40 48 56 64 72\n  9 18 27 36 45 54 63 72 81\n```\n\n代码：\n```cpp\nfor (int i = 1; i < 10; i++) {\n    for(int j = 1; j < 10; j++)\n        printf(\"%3d\", i * j);\n    printf(\"\\n\");\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`printf(\"\\n\")` 的作用是输出一个换行符，使得每次内层循环结束后，下一行的数字从新的一行开始打印。如果删除 `printf(\"\\n\")`，所有 `i * j` 的结果将会在同一行连续输出，而不是像题目所示那样分行显示。因此，删除该语句会严重影响输出效果，题目描述是错误的。"
+    }
+  ]
+}

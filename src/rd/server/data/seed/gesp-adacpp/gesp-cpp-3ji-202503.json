@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202503",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202503",
+  "title": "GESP C++三级 202503",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2025年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202503"
+  },
+  "questions": [
+    {
+      "id": "Pw5R9_fAci6OsMZbi9gwF",
+      "order": 1,
+      "type": "single_choice",
+      "content": "Base64编码将每3字节的输入数据编码为4字节的输出数据。如果输入数据长度不是3的倍数，会用=号填充。在Base64编码中，如果输入字符串的长度为10字节，编码后的字符串长度是多少（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "12字节"
+        },
+        {
+          "label": "B",
+          "text": "13字节"
+        },
+        {
+          "label": "C",
+          "text": "14字节"
+        },
+        {
+          "label": "D",
+          "text": "16字节"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Base64编码将每3字节输入数据编码为4字节输出数据。对于10字节的输入，需要 `ceil(10 / 3)` 即4个输出块。因此，编码后的长度是 `4 * 4 = 16` 字节，即使输入不是3的倍数，也会向上取整并用 `=` 填充。其他选项不符合Base64编码的长度计算规则。"
+    },
+    {
+      "id": "tIWm1vvGiBTUM4e0FujkO",
+      "order": 2,
+      "type": "single_choice",
+      "content": "UTF-8编码规则如下：\n\n1字节：0xxxxxxx\n2字节：110xxxxx 10xxxxxx\n3字节：1110xxxx 10xxxxxx 10xxxxxx\n4字节：11110xxx 10xxxxxx 10xxxxxx 10xxxxxx\n\n以下哪个字节序列是合法的UTF-8编码（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "0xC0 0x80"
+        },
+        {
+          "label": "B",
+          "text": "0xF0 0x90 0x80 0x80"
+        },
+        {
+          "label": "C",
+          "text": "0x80 0x80 0x80"
+        },
+        {
+          "label": "D",
+          "text": "0xFF 0xFE 0xFD"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n*   **B. `0xF0 0x90 0x80 0x80`** 是合法的UTF-8编码"
+    },
+    {
+      "id": "IRDx3sNq6nO_8u3cTkOSH",
+      "order": 3,
+      "type": "single_choice",
+      "content": "在8位二进制原码表示中，八进制数-5的二进制形式是什么（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "10000101"
+        },
+        {
+          "label": "B",
+          "text": "11111010"
+        },
+        {
+          "label": "C",
+          "text": "11111011"
+        },
+        {
+          "label": "D",
+          "text": "00000101"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在8位二进制原码表示中，最高位是符号位（`0` 表示正，`1` 表示负），其余7位表示数值的绝对值。八进制数-5的绝对值是十进制数5，其二进制表示为 `101`。将其补足7位为 `0000101`。由于是负数，符号位为 `1`，所以最终结果是 `10000101`，因此A是正确答案。选项D (`00000101`) 表示的是正数5的原码。选项B (`11111010`) 和 C (`11111011`) 是补码表示，而不是原码表示。"
+    },
+    {
+      "id": "HC19vgxo6fCrdZx7U0s03",
+      "order": 4,
+      "type": "single_choice",
+      "content": "十进制数111.111的二进制表示可以是下面的（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1101111.0001110001"
+        },
+        {
+          "label": "B",
+          "text": "1101110.1001110001"
+        },
+        {
+          "label": "C",
+          "text": "1101111.1001110001"
+        },
+        {
+          "label": "D",
+          "text": "1101111.0011110001"
+        }
+      ],
+      "answer": "A",
+      "explanation": "将十进制数111转换为二进制是 `1101111`。将十进制数0.111转换为二进制，需要不断乘以2并取"
+    },
+    {
+      "id": "oyIvjcrMI-YScmEUaWemD",
+      "order": 5,
+      "type": "single_choice",
+      "content": "在C++中，补码的主要作用是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "提高浮点数的精度"
+        },
+        {
+          "label": "B",
+          "text": "简化整数的加减法运算"
+        },
+        {
+          "label": "C",
+          "text": "增加整数的表示范围"
+        },
+        {
+          "label": "D",
+          "text": "优化内存分配"
+        }
+      ],
+      "answer": "B",
+      "explanation": "补码（Two's Complement）的主要作用是简化整数的加减法运算。通过补码，计算机可以将减法操作转换为加法操作（加上负数的补码），这样硬件只需一套加法器就能处理所有整数的加减运算，极大简化了CPU设计。选项A、C、D均不正确，因为补码是针对整数的表示和运算，与浮点数精度、增加表示范围或内存分配没有直接关系。"
+    },
+    {
+      "id": "8t6y7NBdt9MmECwdb1qxs",
+      "order": 6,
+      "type": "single_choice",
+      "content": "在C++中，一个8位有符号整数（使用补码表示）的范围是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "-128到127"
+        },
+        {
+          "label": "B",
+          "text": "-127到128"
+        },
+        {
+          "label": "C",
+          "text": "-256到255"
+        },
+        {
+          "label": "D",
+          "text": "0到255"
+        }
+      ],
+      "answer": "A",
+      "explanation": "一个8位有符号整数（如C++中的 `char` 类型）使用1位表示符号，7位表示数值。因此，它能表示的最大正数是 `2^7 - 1 = 127`。最小的负数（使用补码表示）是 `-2^7 = -128`，所以范围是 -128 到 127。选项D是8位无符号整数的范围，而选项B和C的范围均不正确。"
+    },
+    {
+      "id": "rHsp0XKnlTkQcs6oDln_B",
+      "order": 7,
+      "type": "single_choice",
+      "content": "在C++中，以下代码的输出是什么（ ）\n\n```cpp\nint a = -5;\nunsigned int b = a;\ncout << b;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "-5"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "4294967291"
+        },
+        {
+          "label": "D",
+          "text": "编译错误"
+        }
+      ],
+      "answer": "C",
+      "explanation": "当一个有符号整数（`int`）被赋值给一个无符号整数（`unsigned int`）时，如果原值为负数，C++会将其二进制位模式直接解释"
+    },
+    {
+      "id": "e_e1NVzRXyA1PVWw6Oist",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下列程序的作用是（ ）\n\n```cpp\nint main() {\n    int decimal = 25;\n    cout << oct << decimal;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "将十进制数转换成八进制数"
+        },
+        {
+          "label": "B",
+          "text": "将八进制数转换成十进制数"
+        },
+        {
+          "label": "C",
+          "text": "将二进制数转换成八进制数"
+        },
+        {
+          "label": "D",
+          "text": "将八进制数转换成16进制数"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`oct` 是一个输出流操纵符，它指示 `cout` 将后续的整数以八进制形式显示。程序中 `decimal` 存储的是十进制数 25，所以 `cout << oct << decimal;` 的作用是将这个十进制数 25 转换成八进制并输出。因此，选项 A 正确。其他选项描述的转换方向或进制类型与代码功能不符。"
+    },
+    {
+      "id": "nLcBDcKnCT-WfNEq6EHgh",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面程序是将十进制转十六进制，横线处应该填入的是（ ）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int decimal = 255;\n    ______________________\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`cout << oct << decimal;`"
+        },
+        {
+          "label": "B",
+          "text": "`cout << decimal << decimal;`"
+        },
+        {
+          "label": "C",
+          "text": "`cout << hex << decimal;`"
+        },
+        {
+          "label": "D",
+          "text": "不能正确执行"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C `cout << hex << decimal;` 是正确的。`hex` 是 C++ `iostream` 库中的流操纵符，用于将后续整数的输出格式设置为十六进制，从而实现十进制转十六进制的显示。选项 A `oct` 用于八进制输出，选项 B 只是重复输出十进制数，都不能实现十六进制转换。选项 D 不正确，因为程序可以正确执行。"
+    },
+    {
+      "id": "F4njo-HQayr_W0sbiyC7j",
+      "order": 10,
+      "type": "single_choice",
+      "content": "以下代码的说法正确的是什么（ ）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 0b1101;\n    int b = 0b1011;\n    cout << (a ^ b);\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "进行的是整体异或运算"
+        },
+        {
+          "label": "B",
+          "text": "进行的是按位同或运算"
+        },
+        {
+          "label": "C",
+          "text": "进行的是按位与运算"
+        },
+        {
+          "label": "D",
+          "text": "进行的是按位异或运算"
+        }
+      ],
+      "answer": "D",
+      "explanation": "代码中的 `^` 符号在 C++ 中是按位异或运算符，它会对两个操作数的对应二进制位进行异或运算，因此选项 D 正确。按位异或的规则是：相同为0，不同为1。选项 A 的“整体异或”不是标准概念。选项 B 的“按位同或”和选项 C 的“按位与”分别对应不同的运算符，并非 `^`。"
+    },
+    {
+      "id": "buSRJmI2VjV8XQTmkWUAD",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面枚举法查找最大值索引程序中，横线处应该填写的是（ ）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int arr[] = {3, 7, 2, 9, 5};\n    int maxIndex = 0;\n    for (int i = 1; i < 5; i++) {\n        ______________________________\n        {\n            maxIndex = i;\n        }\n    }\n    cout << maxIndex;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`if (arr[maxIndex] > arr[i])`"
+        },
+        {
+          "label": "B",
+          "text": "`if (arr[i]-1 > arr[maxIndex])`"
+        },
+        {
+          "label": "C",
+          "text": "`if (arr[i]+1 > arr[maxIndex])`"
+        },
+        {
+          "label": "D",
+          "text": "`if (arr[i] > arr[maxIndex])`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。程序的目标是找到数组中最大值的索引，因此需要比较当前遍历到的元素 `arr[i]` 是否大于目前记录的最大值 `arr[maxIndex]`。`if (arr[i] > arr[maxIndex])` 正确地实现了这一逻辑：如果 `arr[i]` 更大，就更新 `maxIndex` 为 `i`。选项 A 的条件 `if (arr[maxIndex] > arr[i])` 逻辑相反，"
+    },
+    {
+      "id": "cYb1nPrIwz1pNiEXrfIAy",
+      "order": 12,
+      "type": "single_choice",
+      "content": "以下代码的功能是将数组中的奇数和偶数分别放在数组的前半部分和后半部分，横线处应该填入的是（ ）\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    int left = 0, right = 4;\n    while (left < right) {\n        while (arr[left] % 2 == 1 && left < right) left++;\n        ________________________________________________\n        if (left < right) {\n            swap(arr[left], arr[right]);\n        }\n    }\n    for (int i = 0; i < 5; i++) {\n        cout << arr[i] << \" \";\n    }\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`while (arr[left] % 2 == 0 && left < right) right--;`"
+        },
+        {
+          "label": "B",
+          "text": "`while (arr[right] % 2 == 0 && left < right) left--;`"
+        },
+        {
+          "label": "C",
+          "text": "`while (arr[right] % 2 != 0 && left < right) right--;`"
+        },
+        {
+          "label": "D",
+          "text": "`while (arr[right] % 2 == 0 && left < right) right--;`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "第一个 `while` 循环 (`while (arr[left] % 2 == 1 && left < right) left++;`) 的作用是找到左边第一个偶数（即"
+    },
+    {
+      "id": "bAFvaRjod60OSkgbzCXwU",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面程序最后能够得到HelloC++的是（ ）\n\n```cpp\nint main() {\n    string str = \"HelloWorld\";\n    ___________________\n    cout << str;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`str.replace(0, 5, \"C++\");`"
+        },
+        {
+          "label": "B",
+          "text": "`str.replace(5, 5, \"C++\");`"
+        },
+        {
+          "label": "C",
+          "text": "`str.replace(1, 5, \"C++\");`"
+        },
+        {
+          "label": "D",
+          "text": "`str.replace(4, 5, \"C++\");`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。`str.replace(pos, len, new_string)` 方法用于替换字符串。选项 B `str.replace(5, 5, \"C++\");` 表示从索引 5 开始，替换 5 个字符 (\"World\") 为 \"C++\"，最终得到 \"HelloC++\"。其他选项的起始位置或替换长度不正确，无法得到目标结果。"
+    },
+    {
+      "id": "n-L4asVCnoFz7YQVKXqYi",
+      "order": 14,
+      "type": "single_choice",
+      "content": "想要得到字符串world，下面程序横线处应该填入的是（ ）\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string str = \"HelloC++\";\n    _________________\n    _________________\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`str.insert(4, \"World\");`\n`cout << str.substr(4, 4);`"
+        },
+        {
+          "label": "B",
+          "text": "`cout << str.substr(5, 5);`"
+        },
+        {
+          "label": "C",
+          "text": "`str.insert(\"World\");`\n`cout << str.substr(5, 5);`"
+        },
+        {
+          "label": "D",
+          "text": "`str.insert(5, \"World\");`\n`cout << str.substr(5, 5);`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D选项中，`str.insert(5, \"World\");` 会在\"Hello\"后面插入\"World\"，使字符串变为\"HelloWorldC++\"。接着，`str.substr"
+    },
+    {
+      "id": "ml3DNr4JBdW2mKLEIzpRr",
+      "order": 15,
+      "type": "single_choice",
+      "content": "有n个正整数，假设一个正整数是美丽数字当且仅当该正整数是9的倍数但不是8的倍数。下面的程序是编写计算n个正整数中美丽数字的数量，横线处应该填入的是（ ）\n\n```cpp\nfor (int i = 1; i <= n; i++) {\n    cin >> a;\n    __________________________\n    cnt++;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`if (a % 9 != 0 && a % 8 != 0)`"
+        },
+        {
+          "label": "B",
+          "text": "`if (a % 9 == 0 & a % 8 == 0)`"
+        },
+        {
+          "label": "C",
+          "text": "`if (a % 9 == 0 && a % 8 != 0)`"
+        },
+        {
+          "label": "D",
+          "text": "`if (a % 9 == 0 & a % 8 != 0)`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "美丽数字的定义是9的倍数 (`a % 9 == 0`) 并且不是8的倍数 (`a % 8 != 0`)。选项 C `if"
+    },
+    {
+      "id": "T532dlLxi35-5lO3vf13y",
+      "order": 16,
+      "type": "true_false",
+      "content": "判断一个三角形是否成立的条件只有：任意两边长度之和大于第三条边的长度。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "判断一个三角形是否成立，除了任意两边长度之和必须大于第三边外，还有一个隐含但非常重要的条件：**所有边的长度都必须是正数**。题目中的"
+    },
+    {
+      "id": "i4cY-oShV97MaGXreWCy8",
+      "order": 17,
+      "type": "true_false",
+      "content": "这段程序进行的是判断一个从键盘输入的字符的ASCII是否是奇数，若是，输出YES，否则，输出NO。\n\n```cpp\nint main()\n{\n    char x;\n    scanf(\"%c\", &x);\n    int ASCII = (int)x;\n    cout << (x & 1 ? \"YES\" : \"NO\") << '\\n';\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该程序是正确的。表达式 `x & 1` 通过位运算判断字符 `x` 的ASCII值是否为奇数：如果ASCII值的最低位是1（奇数），结果为1（真），输出\"YES\"；如果最低位是0（偶数），结果为0（假），输出\"NO\"。这与题目描述的功能完全一致。"
+    },
+    {
+      "id": "pQ8OQ054FG6CQ0y56b4-u",
+      "order": 18,
+      "type": "true_false",
+      "content": "闰年的定义：\n普通闰年：公历年份是4的倍数，且不是100的倍数的，为闰年（如2004年、2020年等就是闰年）。\n世纪闰年：公历年份是整百数的，必须是400的倍数才是闰年（如1900年不是闰年，2000年是闰年）。\n下面程序是判断是否是闰年的正确程序。\n\n```cpp\ncin>>n;\ncout<<((n%4==0&&n%100!=0)||(n%400==0))?1:0;\nreturn 0;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该程序是正确的。代码 `(n%4==0&&n%100!=0)` 精确判断了普通闰年（年份是4的倍数且不是100的倍数），而 `(n%400==0)` 则判断了世纪闰年（年份是400的倍数）。这两个条件通过 `||` 逻辑或运算符连接，表示只要满足其中一个条件，该年份就是闰年，这与题目中给出的闰年定义完全一致。"
+    },
+    {
+      "id": "FZQx2CSVzCpWpdIA6m0gM",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++语句`cout<<(n%15==0? \"YES\":\"NO\");`能够判断一个整数能否被3和5同时整除。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "一个整数如果能同时被3和5整除，那么它一定能被3和5的最小公倍数整除。由于3和5都是质数，它们的最小公倍数是3乘以5，即15。因此，判断一个数能否被15整除（`n%15==0`）就等同于判断它能否同时被3和5整除。所以，该语句的判断逻辑是正确的，选项T正确，选项F错误。"
+    },
+    {
+      "id": "zvCBtzwk4g7xRxnoOKp13",
+      "order": 20,
+      "type": "true_false",
+      "content": "有n个同学，从中抽取任意个人数来参加学校组织的大合唱，共有2的n次幂个方法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "对于每个同学，都有两种选择：参加合唱或不参加。由于有 `n` 个同学，且每个同学的选择相互独立，所以总的方法数是 2 乘以自身 `n` 次，即 `2^n`。这包括了从0人到n人所有可能的组合情况。因此，T选项是正确的，F选项是错误的。"
+    },
+    {
+      "id": "TE4mn7UiQwQiemXrK8COg",
+      "order": 21,
+      "type": "true_false",
+      "content": "若将一个正整数化为二进制数，在此二进制数中，我们将数字1的个数是偶数的这类二进制数称为A类数，否则就称其为B类数。\n例如：\n(13)10 = (1101)2，其中1的个数为3则称此数为B类数；\n(10)10 = (1010)2，其中1的个数为2，称此数为A类数；\n判断（2025）10化为二进制后，1的个数为偶数个，因此2025为A类数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "将 (2025)10 化为二进制数是 (11111101001)2。在此二进制数中，数字1的个数为8。由于8是偶数，根据题目定义，1的个数为偶数的二进制数被称为A类数。因此，题目中判断2025为A类数是正确的。选择F则意味着该判断是错误的，与实际计算不符。"
+    },
+    {
+      "id": "wctz6HFNfojP37q8_78z4",
+      "order": 22,
+      "type": "true_false",
+      "content": "该段程序将n不停地除以2，并输出此时的商和余数，直到n=0为止。\n\n```cpp\nlong long n;\ncin >> n;\nwhile(n != 0) {\n    cout << n/2 << ' ' << n%2 << '\\n';\n    n /= 2;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该程序通过 `while(n != 0)` 循环确保 `n` 不为 0 时持续执行。在循环体内，`cout << n/2 << ' ' << n%2 << '\\n';` 输出了 `n` 除以 2 的商和余数，随后 `n /= 2;` 将 `n` 更新为新的值。这完全符合题目描述中“将n不停地除以2，并输出此时的商和余数，直到n=0为止”的要求，因此选项T正确。选项F错误，因为代码与描述完全一致。"
+    },
+    {
+      "id": "YFTrem830zym2DodAyiOu",
+      "order": 23,
+      "type": "true_false",
+      "content": "两个13进制的数A和B，在10进制下分别表示10和11。（A+B）13=（18）13，也就是说13进制数A加上13进制数B，和是13进制数18。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在13进制中，数字10用字母 `A` 表示，数字11用字母 `B` 表示。题目中的“13进制数A”实际上就是1"
+    },
+    {
+      "id": "Pc3M63msmLKUy1MaOYoWM",
+      "order": 24,
+      "type": "true_false",
+      "content": "k进制，逢k进第二位，k²进百位，k³进千位。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在k进制中，逢k向高一位进1，这是正确的进位规则。但“第二位”、“百位”、“千位”等是基于十进制的位名。在"
+    },
+    {
+      "id": "WTT_rmtnP0JV7_P0MImOm",
+      "order": 25,
+      "type": "true_false",
+      "content": "CCF(十九进制) = 21AC(十三进制)（不区分大小写）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "将 `CCF(十九进制)` 转换为十进制：`12 * 19^2 + 12 * 19^1 + 15 * 19^0 = 4332 + 228 + 15 = 4575`。将 `21AC(十三进制)` 转换为十进制：`2 * 13^3 + 1 * 13^2 + 10 * 13^1 + 12 * 13^0 = 4394 + 169 + 130 + 12 = 4705`。由于 `4575` 不等于 `4705`，所以原等式是错误的，选项 F 正确。选项 T 是错误的，因为它表示原等式成立。"
+    }
+  ]
+}

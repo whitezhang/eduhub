@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202403",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202403",
+  "title": "GESP C++三级 202403",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2024年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202403"
+  },
+  "questions": [
+    {
+      "id": "WHJMjZ_9dVx19zsR-E0vk",
+      "order": 1,
+      "type": "single_choice",
+      "content": "整数-5的16位补码表示是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1005"
+        },
+        {
+          "label": "B",
+          "text": "1006"
+        },
+        {
+          "label": "C",
+          "text": "FFFA"
+        },
+        {
+          "label": "D",
+          "text": "FFFB"
+        }
+      ],
+      "answer": "D",
+      "explanation": "整数-5的16位补码计算方法是：先取其绝对值5的16位二进制表示 `0000 0000 0000 0101`，然后按位取反得到 `1111 1111 1111 1010`，最后加1得到 `1111 1111 1111 1011`。将其转换为十六进制就是 `FFFB`，所以D是正确的。选项A和B是错误的十六进制表示。选项C `FFFA` 是-5的16位反码，补码还需要在此基础上加1。"
+    },
+    {
+      "id": "x68mV9oAmN4M9omAYM1qT",
+      "order": 2,
+      "type": "single_choice",
+      "content": "如果16位短整数 -2 的二进制是\"FFFE\"，则短整数 -4 的十六进制是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "FF04"
+        },
+        {
+          "label": "B",
+          "text": "FFFA"
+        },
+        {
+          "label": "C",
+          "text": "FFFC"
+        },
+        {
+          "label": "D",
+          "text": "FFFH"
+        }
+      ],
+      "answer": "C",
+      "explanation": "16位短整数采用补码表示负数。正数 `4` 的16位二进制是 `0000 0000 0000 0100`。将其所有位取反得到 `1111 1111 1111 1011`，然后加 `1` 得到 `1111 1"
+    },
+    {
+      "id": "MpT-7sp7yRY4f0x4N9-Qv",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint main()\n{\n    cout << (3|16) << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "19"
+        },
+        {
+          "label": "D",
+          "text": "48"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C++代码 `cout << (3|16) << endl;` 中的 `|` 是位或运算符。将十进制数 3 转换为二进制是 `0011`"
+    },
+    {
+      "id": "TK9Haz0QVeKMJmyLwJPD8",
+      "order": 4,
+      "type": "single_choice",
+      "content": "定义整数 `int x=-5`，则执行C++代码 `cout << (x == (x<<1>>1))` 输出是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "-5"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`x << 1` 将 `-5` 左移一位得到 `-10`。接着，`(-10) >> 1` 对有符号整数进行算术右移，高位补符号位，结果仍为 `-5`。因此，表达式 `x == (x<<1>>1)` 变为 `-5 == -5`，其结果为 `true`。在 C++ 中，`true` 在输出时会被转换为 `1`，所以正确答案是 B。选项 A、C、D 均不符合逻辑运算的布尔值输出规则。"
+    },
+    {
+      "id": "u6M1BscL_4CAbRDtyjM_Y",
+      "order": 5,
+      "type": "single_choice",
+      "content": "已知字符 '0' 的ASCII编码的十进制表示为48，则执行下面C++代码后，输出是（ ）。\n\n```cpp\nint main()\n{\n    string s=\"316\";\n    int n=s.length();\n    int x=0;\n    for(int i = 0; i < n; i++)\n        x += s[i];\n    cout << x << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "58"
+        },
+        {
+          "label": "C",
+          "text": "154"
+        },
+        {
+          "label": "D",
+          "text": "316"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。代码中的 `for` 循环将字符串 `s` 中的每个字符 `s[i]` 的 **ASCII 码值** 加到整数变量 `x` 上。字符 '0' 的ASCII码是48，所以 '3' 的ASCII码是 48+3=51，'1' 是 48+1=49，'6' 是 48+6=54。因此，`x` 的最终值为 51 + 49 + 54 = 154。选项 A 错误地将字符当作数字值相加 (3+1+6=10)；选项 D 错误地认为会直接输出字符串的数字表示。"
+    },
+    {
+      "id": "VhhvYaXZ_t1KV7VhW7WHp",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面C++代码执行后数组中大于0的数的特征是（ ）。\n\n```cpp\nint main()\n{\n    int a[20],i;\n    for(i = 0; i < 20; i++)\n        a[i] = i+1;\n\n    for(int i = 0; i < 20; i++)\n        if((a[i]%2)&&(a[i]%3))\n            a[i] = 0;\n\n    for(i = 0; i < 20; i++)\n        if(a[i])\n            cout << a[i] << \" \";\n\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2的倍数"
+        },
+        {
+          "label": "B",
+          "text": "3的倍数"
+        },
+        {
+          "label": "C",
+          "text": "能被2或3整除的数"
+        },
+        {
+          "label": "D",
+          "text": "能被2和3同时整除的数"
+        }
+      ],
+      "answer": "C",
+      "explanation": "代码中的 `if((a[i]%2)&&(a[i]%3))` 条件表示当 `a[i]` 既不能被2整除（即是奇数）又不能"
+    },
+    {
+      "id": "KJWYrmqi5r--Jjf1cb88l",
+      "order": 7,
+      "type": "single_choice",
+      "content": "执行下面C++代码后输出的第一个数是（ ）。\n\n```cpp\nint main()\n{\n    int a[20],i;\n    for(i = 0; i < 20; i++)\n        a[i] = i+1;\n\n    for( ; i > 0; i--)\n        cout << a[i-1] << \" \";\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "20"
+        },
+        {
+          "label": "B",
+          "text": "19"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "answer": "A",
+      "explanation": "第一个 `for` 循环将数组 `a` 初始化为 `a[0]=1, a[1]=2, ..., a[19]=20`，并且循环结束后 `i` 的值为 `20`。第二个 `for` 循环从 `i=20` 开始，"
+    },
+    {
+      "id": "YJ97Kfe7kKW06HkWemURv",
+      "order": 8,
+      "type": "single_choice",
+      "content": "在下列代码的横线处填写（ ），可以使得输出是 GESP IS INTERESTING 。\n\n```cpp\nint main()\n{\n    string str=\"gEsP is Interesting\";\n    int x = str.length();\n\n    for(int i = 0; i < x; i++)\n        if ((str[i]>='a') && (str[i]<='z'))\n            ________________________;\n    cout << str << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "str[i]+='a'-'A'"
+        },
+        {
+          "label": "B",
+          "text": "str[i]+=20"
+        },
+        {
+          "label": "C",
+          "text": "str[i]+='A'-'a'"
+        },
+        {
+          "label": "D",
+          "text": "无法实现"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n1.  **正确答案 C 的解释：** 题目要求将字符串中的小写字母转换为大写字母。在 ASCII 编码中，大"
+    },
+    {
+      "id": "9aU9tiAYZYfX8DtKQhqp6",
+      "order": 9,
+      "type": "single_choice",
+      "content": "假设英文句子由若干词构成。下面C++代码统计输出的词数是（ ）。\n\n```cpp\nint main()\n{\n    string str=\"gEsP is  Interesting  !\";\n    int x = str.length();\n    int nwords = 0;\n\n    for(int i = 0; i < x; i++)\n        if (str[i]==' '){\n            nwords++;\n            while(str[++i]==' ') ;\n        }\n    cout << nwords << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该代码通过遍历字符串，每当遇到一个空格字符时，就将 `nwords` 加一，并使用 `while(str[++i]==' ')` 跳过所有连续的"
+    },
+    {
+      "id": "_VMdoAavfGUtwRLHMXd6L",
+      "order": 10,
+      "type": "single_choice",
+      "content": "C++的字符变量的码值是整数，下面字面量形式的字符码值最大的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "100"
+        },
+        {
+          "label": "B",
+          "text": "075"
+        },
+        {
+          "label": "C",
+          "text": "0x70"
+        },
+        {
+          "label": "D",
+          "text": "0x60"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C++中，以 `0` 开头表示八进制数，以 `0x` 开头表示十六进制数。选项 A `100` 是十进制的 100。选项 B `075` 是八进制数，转换为十进制是 `7*8 + 5 = 61`。选项 C `0x70` 是十六进制数，转换为十进制是 `7*16 + 0 = 112`。选项 D `0x60` 是十六进制数，转换为十进制是 `6*16 + 0 = 96`。比较这些十进制值，`112` 最大，因此 `0x70` 的码值最大。"
+    },
+    {
+      "id": "bQpfdPxvunrv3RSSSHgjY",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面C++程序执行的结果是（ ）。\n\n```cpp\nint main()\n{\n    int a[20],i;\n    int cnt=0;\n    for(i = 0; i < 20; i++)\n        a[i] = i+1;\n\n\n    for( ; i > 1; i--)\n        if((a[i-1]+a[i-2])%3)\n            cnt++;\n    cout << cnt << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "12"
+        }
+      ],
+      "answer": "D",
+      "explanation": "程序首先初始化数组 `a`，使其元素为 `a[i] = i+1`，即 `a` 存储 `1, 2, ..., 20`。"
+    },
+    {
+      "id": "s5EXWU59MJvVHTGAiq2Ed",
+      "order": 12,
+      "type": "single_choice",
+      "content": "定义字符数组 `char str[20] = {'G', 'E', 'S', 'P'};`，则 `str` 的字符串长度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "19"
+        },
+        {
+          "label": "D",
+          "text": "20"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当 `char str[20] = {'G', 'E', 'S', 'P'};` 定义时，数组中未显式初始化的元素会被自动填充为 `\\0` (空字符)。字符串长度是指从开头到第一个 `\\0` 之间的字符数量，这里是 'G', 'E', 'S', 'P' 共4个字符，因此长度为4。选项B错误，字符串长度不包含 `\\0`；选项C和D错误，它们分别代表数组最大可存储的字符数（19）和数组的总大小（20），而非当前字符串的实际长度。"
+    },
+    {
+      "id": "K-NqHJ2oHp_JTWwXCY5Ei",
+      "order": 13,
+      "type": "single_choice",
+      "content": "定义整型变量 `int a=3, b=16`，则 `a|b` 的值和 `a+b` 的关系是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "大于"
+        },
+        {
+          "label": "B",
+          "text": "等于"
+        },
+        {
+          "label": "C",
+          "text": "小于"
+        },
+        {
+          "label": "D",
+          "text": "等于或小于"
+        }
+      ],
+      "answer": "B",
+      "explanation": "将 `a=3` 和 `b=16` 转换为二进制：`a` 是 `0011`，`b` 是 `10000`。计算 `a|b`（按位或）：`001"
+    },
+    {
+      "id": "51bm0X1ubh0I7rSDJBQ9J",
+      "order": 14,
+      "type": "single_choice",
+      "content": "小杨的父母最近刚刚给他买了一块华为手表，他说手表上跑的是鸿蒙，这个鸿蒙是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "小程序"
+        },
+        {
+          "label": "B",
+          "text": "计时器"
+        },
+        {
+          "label": "C",
+          "text": "操作系统"
+        },
+        {
+          "label": "D",
+          "text": "神话人物"
+        }
+      ],
+      "answer": "C",
+      "explanation": "鸿蒙（HarmonyOS）是华为公司自主研发的**操作系统**，它负责管理和控制智能手表等设备的硬件与软件资源，让设备能够正常运行各种应用。选项A小程序和选项B计时器都是运行在操作系统之上的**应用**，而不是操作系统本身。选项D神话人物则与技术概念无关。"
+    },
+    {
+      "id": "wXsaMbyXFOIaNn6p_q_-v",
+      "order": 15,
+      "type": "single_choice",
+      "content": "中国计算机学会（CCF）在2024年1月27日的颁奖典礼上颁布了王选奖，王选先生的重大贡献是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "制造自动驾驶汽车"
+        },
+        {
+          "label": "B",
+          "text": "创立培训学校"
+        },
+        {
+          "label": "C",
+          "text": "发明汉字激光照排系统"
+        },
+        {
+          "label": "D",
+          "text": "成立方正公司"
+        }
+      ],
+      "answer": "C",
+      "explanation": "王选先生的重大贡献是C选项，他发明了汉字激光照排系统，这项技术彻底改变了中国的印刷出版行业，被誉为“汉字印刷术的第二次革命”。选项A（制造自动驾驶汽车）与王选先生的研究领域无关。选项B（创立培训学校）和D（成立方正公司）虽然与他有一定关联，但并非他最核心、最重大的科学技术贡献。"
+    },
+    {
+      "id": "k5MGqLkVQxr9E__J8Nrga",
+      "order": 16,
+      "type": "true_false",
+      "content": "任意整数 a 的二进制反码与补码都有1位不同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "错误。任意整数 `a` 的二进制反码与补码并不总是有1位不同。补码是在反码的基础上加1得到的。如果反码的最低位是0"
+    },
+    {
+      "id": "JhygIM1buiKSjgtVdjn8l",
+      "order": 17,
+      "type": "true_false",
+      "content": "对整型变量 `int a = 3`，执行C++代码 `a<<2` 将把2输出到 a 中。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中的 `<<` 是左移运算符。`a << 2` 会将变量 `a` 的值（二进制 `0011`，即十进制 `3`）向左移动两位，计算结果是 `12`（二进制 `1100`）。然而，左移运算符本身并不会改变 `a` 的值，它只是返回一个新的计算结果。因此，执行 `a << 2` 后，`a` 的值仍为 `3`，而不是 `2`，所以原说法错误。"
+    },
+    {
+      "id": "9rWl3XeIMsYNmDfh2X4r9",
+      "order": 18,
+      "type": "true_false",
+      "content": "下面C++代码可以计算1到100的累加和，采用的是穷举法。\n\n```cpp\nint main()\n{\n    int i,sum=0;\n    for(int i = 1; i <= 100 ; i++)\n        sum += i;\n    cout << sum << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "代码缺少必要的头文件 `#include <iostream>` 和 `using namespace std;` 声明。因此，`cout` 和 `endl` 未定义，会导致编译错误，程序无法正常运行。选项 T 错误，因为代码无法成功编译和执行。"
+    },
+    {
+      "id": "UawrWWmcRoQtDmWoQTBT6",
+      "order": 19,
+      "type": "true_false",
+      "content": "一个 `int` 类型变量 a，执行操作 `(a<<2>>2)` 后的值一定是 a。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这个操作不一定等于 `a`。当 `int` 变量 `a` 的值过大，导致 `a << 2` 发生有符号整数溢出时，"
+    },
+    {
+      "id": "5OcFt-8QFK9D0Ja2jevjI",
+      "order": 20,
+      "type": "true_false",
+      "content": "在C++语言中，`(010<<1)` 执行结果是 100。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`010` 是一个八进制数，其十进制值为 8。左移运算符 `<<1` 表示将数值的二进制位向左移动一位，相当于乘以 2。因此，`(010<<1)` 的实际计算结果是 `8 * 2 = 16`。题目中声称结果是 100，与实际结果 `16` 不符，所以该说法是错误的。"
+    },
+    {
+      "id": "jUwoPTPDrzmpS8PctbUMJ",
+      "order": 21,
+      "type": "true_false",
+      "content": "执行下面C++代码后将输出 2。\n\n```cpp\nint main()\n{\n    string str=\"gEsP is Interesting\";\n    int x = str.find(\"s\");\n\n    cout << x << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`string::find()` 方法用于查找子字符串在原字符串中第一次出现的位置（索引从 0 开始）。在字符串 `\"gEsP is Interesting\"` 中，字符 's' 第一次出现在索引 2。因此，`str.find(\"s\")` 的结果是 2，并将其赋值给变量 `x`。最终 `cout << x << endl;` 会输出 2，所以题目描述是正确的。"
+    },
+    {
+      "id": "MryduwaSn2rWp4Jf1lBvz",
+      "order": 22,
+      "type": "true_false",
+      "content": "在C++语言中，字符数组被定义时，它的大小可以调整。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，字符数组（或其他任何类型的数组）一旦定义，其大小在编译时或创建时就已确定，并且是固定的，不能在程序运行时动态调整。例如，`char arr[10];` 定义了一个大小为10的数组，它的大小始终是10。因此，题目中“大小可以调整”的说法是错误的。如果需要可变大小的字符序列，应该使用 `std::string` 或 `std::vector<char>` 等动态容器。"
+    },
+    {
+      "id": "O9wDEXR7cMie9i2g_Om8A",
+      "order": 23,
+      "type": "true_false",
+      "content": "对定义的数组 `int a[7]={2,0,2,4,3,1,6}`，可以用简单循环就找到其中最小的整数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "一个简单的 `for` 循环可以遍历数组 `a` 中的每一个元素。在循环过程中，我们可以用一个变量来记录当前找到的最小值，每次遇到比它更小的元素就更新这个变量。因此，通过一次遍历就能找到数组中的最小整数，所以题目描述是正确的。选项 F 错误，因为它否定了这种简单且常用的方法。"
+    },
+    {
+      "id": "RDQTQyaBvPojfpqPOSqXb",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨今年春节回奶奶家了，奶奶家的数字电视要设置ip地址并接入到WIFI盒子才能收看节目，那这个WIFI盒子具有路由器的功能。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "WIFI盒子让电视能设置IP地址并接入网络，这正是路由器的核心功能之一。路由器负责分配IP地址、管理设备间的网络通信，并将家庭网络连接到互联网。因此，题目描述的WIFI盒子具备了路由器的功能，选项T是正确的。如果它不具备路由器功能，电视将无法通过它设置IP并上网，所以选项F是错误的。"
+    },
+    {
+      "id": "XrQ6P4ELMIPe9xUGXck_3",
+      "order": 25,
+      "type": "true_false",
+      "content": "任何一个 `for` 循环都可以转化为等价的 `while` 循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`for` 循环的结构包括初始化、条件判断和循环步进。这些部分都可以直接映射到 `while` 循环中：初始化语句放在 `while` 循环前，条件作为 `while` 的判断条件，循环步进语句放在 `while` 循环体内部。因此，任何 `for` 循环都可以等价地转化为 `while` 循环，保持相同的逻辑和执行顺序。选项 F 错误，因为这种转化总是可行的。"
+    }
+  ]
+}

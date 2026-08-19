@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-7ji-202412",
+  "url": "https://adacpp.com/practice/gesp-cpp-7ji-202412",
+  "title": "GESP C++七级 202412",
+  "description": "CCF编程能力等级认证 GESP C++ 七级 2024年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 7,
+    "ym": "202412"
+  },
+  "questions": [
+    {
+      "id": "Ip_O7jIm94XJN5QWbZfIS",
+      "order": 1,
+      "type": "single_choice",
+      "content": "已知小写字母 b 的ASCII码为98，下列C++代码的输出结果是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    char a = 'b';\n    cout << a + 1;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "b"
+        },
+        {
+          "label": "B",
+          "text": "c"
+        },
+        {
+          "label": "C",
+          "text": "98"
+        },
+        {
+          "label": "D",
+          "text": "99"
+        }
+      ],
+      "answer": "D",
+      "explanation": "当 `char` 类型变量 `a`（其ASCII码为98）与整数 `1` 进行算术运算 `a + 1` 时，`a` 会发生隐式类型提升，其ASCII码值被当作 `int` 类型参与计算。因此，表达式 `a + 1` 的结果是 `98 + 1 = 99`。`cout` 会直接输出这个整数值 `99`，所以选项 D 正确。选项 A 和 B 错误是因为 `a + 1` 的结果是 `int` 类型，不会直接输出字符；选项 C 错误是因为结果是 99 而非 98。"
+    },
+    {
+      "id": "t2rqbRGaXnDu9ZImLCxn7",
+      "order": 2,
+      "type": "single_choice",
+      "content": "已知 a 为 int 类型变量，p 为 int * 类型变量，下列赋值语句不符合语法的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "+a = *p;"
+        },
+        {
+          "label": "B",
+          "text": "*p = +a;"
+        },
+        {
+          "label": "C",
+          "text": "a = *(p + a);"
+        },
+        {
+          "label": "D",
+          "text": "*(p + a) = a;"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项 A 中，`+a` 是一元正号运算符，它返回 `a` 的值，但其结果是一个右值（rvalue），不能作为赋值语句的左值。赋值语句的左侧必须是可修改的左值。而选项 B、C、D 的左侧分别是 `*p`、`a` 和 `*(p + a)`，它们都是有效的左值，可以接受赋值，因此语法正确。"
+    },
+    {
+      "id": "NozjSW-vldbInhDmgQbdr",
+      "order": 3,
+      "type": "single_choice",
+      "content": "已知数组 a 的定义 `int a[10] = {0};`，下列说法不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "语句 `a[-1] = 0;` 会产生编译错误。"
+        },
+        {
+          "label": "B",
+          "text": "数组 a 的所有元素均被初始化为 0。"
+        },
+        {
+          "label": "C",
+          "text": "数组 a 至少占用 10 个 int 大小的内存，一般为 40 个字节。"
+        },
+        {
+          "label": "D",
+          "text": "语句 `a[13] = 0;` 不会产生编译错误，但会导致难以预测的运行结果。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。C++ 数组的越界访问，例如 `a[-1]`，通常不会在编译时产生错误，而是在程序运行时导致未定义行为。选项 B 中"
+    },
+    {
+      "id": "W1QlOxO9QyqL1mm0OTfsV",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下列关于C++类的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "构造函数不能声明为虚函数，但析构函数可以。"
+        },
+        {
+          "label": "B",
+          "text": "函数参数如声明为类的引用类型，调用时不会调用该类的复制构造函数。"
+        },
+        {
+          "label": "C",
+          "text": "静态方法属于类、不属于对象，因此不能使用 `对象.方法(...)` 的形式调用静态方法。"
+        },
+        {
+          "label": "D",
+          "text": "析构派生类的对象时，一定会调用基类的析构函数。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C选项错误。静态方法确实属于类而不属于对象，但C++语法允许通过 `对象.方法(...)` 的形式调用静态方法，编译器会自动将其解析为 `类名"
+    },
+    {
+      "id": "RLNGWunRGmlRbbHDlCYnu",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下列关于有向图的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "n个顶点的弱连通有向图，最少有n-1条边。"
+        },
+        {
+          "label": "B",
+          "text": "n个顶点的强连通有向图，最少有n条边。"
+        },
+        {
+          "label": "C",
+          "text": "n个顶点的有向图，最多有n×(n-1)条边。"
+        },
+        {
+          "label": "D",
+          "text": "n个顶点的有向完全图，有n×(n-1)条边。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n*   **C 错误的原因：** n个顶点的有向图，最多可以有 `n × (n-1)` 条边。这是因为每个"
+    },
+    {
+      "id": "Mqrkc0x021IMEzMCCHDZ-",
+      "order": 6,
+      "type": "single_choice",
+      "content": "一棵二叉树的每个结点均满足：结点的左子树和右子树，要么同时存在，要么同时不存在。该树有197个结点，则其叶结点有多少个？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "98"
+        },
+        {
+          "label": "B",
+          "text": "99"
+        },
+        {
+          "label": "C",
+          "text": "不存在这样的树。"
+        },
+        {
+          "label": "D",
+          "text": "无法确定叶结点数量。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "这棵树的特性表明它是一棵满二叉树（或严格二叉树），即每个非叶结点都有两个子结点。对于满二叉树，总结点数 `N` 与叶结点数 `L` 之间存在关系 `N = 2L - 1`。将 `N = 197` 代入公式，得到 `197 = 2L - 1`，解得 `L = 99`。因此，正确答案是 B。其他选项不符合满二叉树的性质或计算结果。"
+    },
+    {
+      "id": "dz2ULsgYnYY7OMc9WVfHy",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下列关于二叉树的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "二叉排序树的中序遍历顺序与元素排序的顺序是相同的。"
+        },
+        {
+          "label": "B",
+          "text": "n个元素的二叉排序树，其高一定为⌊log₂n⌋。"
+        },
+        {
+          "label": "C",
+          "text": "自平衡二叉查找树（AVL树）是一种二叉排序树。"
+        },
+        {
+          "label": "D",
+          "text": "任意的森林，都可以映射为一颗二叉树进行表达和存储。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "B选项错误。n个元素的二叉排序树，其高度不一定为 `⌊log₂n⌋`。这是完全二叉树的最小高度，但二叉排序树可能退化为链表形式，此时高度为 `n`。A选项正确，二叉排序树的中序遍历结果是排序的。C选项正确，AVL树是一种特殊的自平衡二叉查找树，它本质上仍是二叉排序树。D选项正确，任何森林都可以通过“左孩子右兄弟”表示法等方式唯一地转换为一棵二叉树。"
+    },
+    {
+      "id": "Rem05pYYjVpw0rMRLeJdb",
+      "order": 8,
+      "type": "single_choice",
+      "content": "一个简单无向图有10个结点、6条边。在最差情况，至少增加多少条边可以使其连通？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "C",
+      "explanation": "一个有10个结点、6条边的无向图，在最差情况下，其连通分量的数量最多。每个边最多能将连通分量数量减少"
+    },
+    {
+      "id": "Q2-sLJM1XYsXKjWQ12T2B",
+      "order": 9,
+      "type": "single_choice",
+      "content": "一个哈希表，包括n个位置（分别编号0~(n-1)），每个位置最多仅能存储一个元素。该哈希表只有插入元素和查询两种操作，没有删除或修改元素的操作。以下说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果哈希函数取值范围为0~(n-1)，且当发生哈希函数碰撞时循环向后寻找空位，则查询操作的最差时间复杂度为O(n)。（“循环向后”指：0向后一位为1，1向后一位为2，……，(n-2)向后一位为(n-1)，(n-1)向后一位为0）"
+        },
+        {
+          "label": "B",
+          "text": "如果哈希函数取值范围为0~(n-1)，且当发生哈希函数碰撞时仅循环向后一个位置寻找空位，则查询操作的最差时间复杂度为O(1)。"
+        },
+        {
+          "label": "C",
+          "text": "如果哈希函数取值范围为0~(m-1)（m < n），且当发生哈希函数碰撞时仅在m~(n-1)的范围内寻找空位，则查询操作的最差时间复杂度为O(n-m)。"
+        },
+        {
+          "label": "D",
+          "text": "查询操作时，如果发现查询元素经哈希函数对应的位置为空位，该查询元素仍可能出现在哈希表内。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。\n\n**D 错误的原因：**\n在没有删除操作的哈希表中，如果查询元素 `key` 经过哈希函数 `hash(key)`"
+    },
+    {
+      "id": "77Tm2APlB5-BeHuSNdmOC",
+      "order": 10,
+      "type": "single_choice",
+      "content": "以下关于动态规划的说法中，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "动态规划方法将原问题分解为一个或多个相似的子问题。"
+        },
+        {
+          "label": "B",
+          "text": "动态规划方法通常能够列出递推公式。"
+        },
+        {
+          "label": "C",
+          "text": "动态规划方法有递推和递归两种实现形式。"
+        },
+        {
+          "label": "D",
+          "text": "递推实现动态规划方法的时间复杂度总是不低于递归实现。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "递推（迭代）实现和递归（记忆化搜索）实现动态规划的时间复杂度在渐近意义上是相同的。但递推实现通常因没有函数调用开销和更好的缓存"
+    },
+    {
+      "id": "03YajzI5k04wP_NeGAybg",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\nint main() {\n    cout << (int)exp(2) << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "7"
+        },
+        {
+          "label": "C",
+          "text": "100"
+        },
+        {
+          "label": "D",
+          "text": "无法通过编译。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`exp(2)` 函数计算自然常数 e 的 2 次方，其值约为 7.389。`(int)` 类型转换会将浮点数的小数部分截断，只保留整数部分，所以 7.389 转换为 `int` 后变为 7。因此，程序输出 7。选项 A 错误，因为 `exp(2)` 不是计算 2 的 2 次方；选项 C 错误，与计算结果不符；选项 D 错误，程序语法正确，可以正常编译运行。"
+    },
+    {
+      "id": "zf_SRfew-3c0OM5OHE-qY",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\n#define N 10\nusing namespace std;\nint h[N];\nint main() {\n    h[0] = h[1] = 1;\n    for (int n = 2; n < N; n++)\n        for (int j = 0; j < n; j++)\n            h[n] += h[j] * h[n - j - 1];\n    cout << h[6] << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "132"
+        },
+        {
+          "label": "B",
+          "text": "1430"
+        },
+        {
+          "label": "C",
+          "text": "16796"
+        },
+        {
+          "label": "D",
+          "text": "结果是随机的。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该程序计算卡特兰数。`h[0]` 和 `h[1]` 初始化为 1，随后的 `h[n]` 通过 `h[n] = sum(h[j] * h[n"
+    },
+    {
+      "id": "YHEQNZti5xc02XlaZDWYZ",
+      "order": 13,
+      "type": "single_choice",
+      "content": "上题中程序的时间复杂度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(N)"
+        },
+        {
+          "label": "B",
+          "text": "O(N log N)"
+        },
+        {
+          "label": "C",
+          "text": "O(N^(3/2))"
+        },
+        {
+          "label": "D",
+          "text": "O(N²)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "上题程序的时间复杂度为 O(N²)，这通常是因为程序中包含两层嵌套循环，且每层循环的执行次数都与 N 成正比，例如 `for (int i ="
+    },
+    {
+      "id": "v5XJmMeLCt2l2ud8DrI2b",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面 init_sieve 函数的时间复杂度为（ ）。\n\n```cpp\nint sieve[MAX_N];\nvoid init_sieve(int n) {\n    for (int i = 1; i <= n; i++)\n        sieve[i] = i;\n    for (int i = 2; i <= n; i++)\n        for (int j = i; j <= n; j += i)\n            sieve[j]--;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n²)"
+        },
+        {
+          "label": "D",
+          "text": "无法正常结束。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "第一个 `for` 循环 `for (int i = 1; i <= n; i++)` 执行 `n` 次，时间复杂度为 `O(n)`。第二个嵌套循环中，外层循环从 `i=2` 到 `n`，内层循环 `for (int j = i; j <= n; j += i)` 对每个 `i` 执行 `n/i` 次。"
+    },
+    {
+      "id": "oTw9mjO2fmgnjWBusfYcF",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列选项中，哪个不可能是下图的深度优先遍历序列（ ）。\n\n图为一个3×3的有向图，顶点编号为1-9，排列如下：\n第一行：1 → 2 → 3\n第二行：4 ← → 5 ← → 6\n第三行：7 → 8 → 9\n其中存在多条从上到下、从下到上的双向边连接各行顶点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1, 2, 3, 5, 7, 8, 6, 9, 4"
+        },
+        {
+          "label": "B",
+          "text": "1, 4, 7, 8, 9, 5, 2, 3, 6"
+        },
+        {
+          "label": "C",
+          "text": "1, 5, 7, 8, 9, 4, 2, 3, 6"
+        },
+        {
+          "label": "D",
+          "text": "1, 2, 3, 6, 9, 8, 5, 7, 4"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项A中，序列在访问完8后访问了6，但9是8的直接邻居（8 → 9），且9尚未被访问。根据深度优先遍历的规则"
+    },
+    {
+      "id": "FSZt-z9pcrFN2K7fhcjfh",
+      "order": 16,
+      "type": "true_false",
+      "content": "表达式 `5 ^ 3` 的结果为 125。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，`^` 运算符不是数学上的乘方（幂运算），而是位异或（XOR）运算符。表达式 `5 ^ 3` 的计算过程是：5 的二进制是 `0101`，3 的二进制是 `0011`，进行位异或运算后结果是 `0110`，即十进制的 6。因此，题目中说结果为 125 是错误的，选项 T 不正确。"
+    },
+    {
+      "id": "vYj_B6SR8ru-diYPYJF6s",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++语言中，函数定义和函数调用可以不在同一个文件内。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++支持多文件编译。通常，函数定义放在一个 `.cpp` 源文件中，而函数声明（原型）放在一个 `.h` 头文件中。其他源文件通过包含该头文件来调用函数，最终由链接器将函数调用与实际定义关联起来。因此，函数定义和函数调用完全可以不在同一个文件内，这是C++模块化开发的基础。选项F错误，因为它不符合C++多文件编译和链接的机制。"
+    },
+    {
+      "id": "z5BCdANjCm6MSh8ARHOgC",
+      "order": 18,
+      "type": "true_false",
+      "content": "在n个元素中进行二分查找，平均时间复杂度是O(log n)，但须要事先进行排序。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "二分查找（Binary Search）每次都将搜索范围减半，因此其平均时间复杂度确实是 O(log n)。然而，二分查找的前提是数据必须已经排序，否则无法正确工作。题目描述完全符合二分查找的特性，所以是正确的。"
+    },
+    {
+      "id": "1hqjvUoKRkxlLqJRADMMd",
+      "order": 19,
+      "type": "true_false",
+      "content": "unsigned long long 类型是C++语言中表达范围最大的非负整数类型之一，其表达范围是[0, 2⁶⁴ - 1]。超出该范围的非负整数运算，将无法使用C++语言进行计算。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "题目断言超出 `unsigned long long` 范围的非负整数“将无法使用C++语言进行计算”，这是错误的。C++可以通过引入第三方大整数库（如 `Boost.Multiprecision`）或自定义数据结构和算法，实现任意精度的大整数运算。因此，C++语言本身具备处理更大数值的能力，并非仅限于内置类型的范围。所以，正确答案是F。"
+    },
+    {
+      "id": "OImPB1hqwkexdCOUInhVr",
+      "order": 20,
+      "type": "true_false",
+      "content": "使用 math.h 或 cmath 头文件中的函数，表达式 `log2(32)` 的结果为 5、类型为 int。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`log2` 函数（在 `cmath` 头文件中）返回的是浮点类型（通常是 `double`），即使计算结果是整数。因此，`log2(32)` 的结果类型是 `double`（值为 `5.0`），而不是 `int`。题目中声称结果类型为 `int` 是错误的，所以选项 T 不正确。"
+    },
+    {
+      "id": "TWvBvYRJyI6kOjzLis3J4",
+      "order": 21,
+      "type": "true_false",
+      "content": "C++是一种面向对象编程语言，C则不是。继承是面向对象三大特性之一。因此，使用C语言无法实现继承。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法是错误的。尽管C语言本身不是面向对象的，但它可以通过结构体（`struct`）和函数指针等机制来模拟实现面向对象的三大特性，包括继承。例如，可以在一个结构体中嵌入另一个结构体来模拟“is-a”关系，从而实现继承的效果。因此，C语言并非“无法实现”继承，只是实现起来不如C++那样直接和方便。"
+    },
+    {
+      "id": "ZEKwrmubGMRwYEcqLJaBg",
+      "order": 22,
+      "type": "true_false",
+      "content": "邻接表和邻接矩阵都是图的存储形式。邻接表在遍历单个顶点的所有边时，时间复杂度更低；邻接矩阵在判断两个顶点之间是否有边时，时间复杂度更低。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该题目描述完全正确。邻接表在遍历单个顶点的所有边时，只需访问该顶点的邻接链表，时间复杂度为 `O(度)`；而邻接矩阵需要遍历整行，时间复杂度为 `O(V)`。邻接矩阵在判断两个顶点 `u` 和 `v` 之间是否有边时，只需直接访问 `matrix[u][v]`，时间复杂度为 `O(1)`；而邻接表需要遍历 `u` 的邻接链表查找 `v`，时间复杂度为 `O(度)`。因此，选项 T 是正确的。"
+    },
+    {
+      "id": "ro3mA_ng6qqQBhgdNwr2l",
+      "order": 23,
+      "type": "true_false",
+      "content": "MD5是一种常见的哈希函数，可以由任意长度的数据生成128位的哈希值，曾广泛应用于数据完整性校验。中国科学家的系列工作首次发现了可实用的MD5破解方法。之后，MD5逐渐被其他哈希函数所取代。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "MD5是一种常见的哈希函数，它能将任意长度的数据生成固定128位的哈希值，曾广泛用于数据完整性校验。中国科学家确实发现了MD5的实用破解方法，导致其安全性降低。因此，MD5逐渐被更安全的哈希函数（如SHA-256）所取代，题目描述完全正确。"
+    },
+    {
+      "id": "uxIzU7lCicy1jZCjQSTBL",
+      "order": 24,
+      "type": "true_false",
+      "content": "递归调用在运行时会由于层数过多导致程序崩溃，可以通过循环配合栈缓解这一问题。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "递归调用会占用系统栈空间，当递归层数过多时，会导致栈溢出（stack overflow），使程序崩溃。通过将递归转换为循环迭代，并使用一个显式的栈（如 `std::stack`）来管理状态，可以避免系统调用栈的深度限制。这种方法能有效缓解因递归过深导致的程序崩溃问题。因此，题目描述是正确的。"
+    },
+    {
+      "id": "01CPTZ344BqpEB0kshX1y",
+      "order": 25,
+      "type": "true_false",
+      "content": "一个图中，每个顶点表达一个城市，连接两个顶点的边表达从一个城市到达另一个城市的一种交通方式。这个图可以用来表达交通网络，且是简单有向图。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "简单有向图的定义是不允许两个顶点之间有多条边（重边）。然而，在交通网络中，从一个城市到另一个城市可能存在多种交通方式（如火车、飞机），这表示两个城市之间可能有多条边。这种情况下，图就不是“简单有向图”，而是“多重有向图”。因此，题目描述是错误的。"
+    }
+  ]
+}

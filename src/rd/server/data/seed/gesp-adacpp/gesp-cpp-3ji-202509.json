@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202509",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202509",
+  "title": "GESP C++三级 202509",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2025年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202509"
+  },
+  "questions": [
+    {
+      "id": "SO2VrzIOxkCttypnJVV0H",
+      "order": 1,
+      "type": "single_choice",
+      "content": "执行以下C++代码后，`c` 的数值是（ ）。\n\n```cpp\nint a = 10, b = 3;\ndouble c = a / b;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "3.33333"
+        },
+        {
+          "label": "B",
+          "text": "3.333"
+        },
+        {
+          "label": "C",
+          "text": "3.0"
+        },
+        {
+          "label": "D",
+          "text": "3.3"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`a` 和 `b` 都是 `int` 类型，所以表达式 `a / b` 执行的是整数除法，结果是 `3`（舍弃小数部分）。这个整数值 `3` 随后被赋值给 `double` 类型的变量 `c`，因此 `c` 的数值变为 `3.0`。选项 A、B、D 错误，因为它们假设在除法运算时发生了浮点数计算，但实际在赋值给 `c` 之前，除法已经以整数形式完成了。"
+    },
+    {
+      "id": "R3HXcSVWMBcerr7iJRWWk",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下列C++表达式的结果为 `true` 的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "(5 <= 5) && (7 < 5)"
+        },
+        {
+          "label": "B",
+          "text": "!(10 > 5)"
+        },
+        {
+          "label": "C",
+          "text": "(10 != 10) || (5 >= 3)"
+        },
+        {
+          "label": "D",
+          "text": "(5 == 3) && (4 > 2)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C 中，`(10 != 10)` 结果为 `false`，而 `(5 >= 3)` 结果为 `true`，因此 `false || true` 的"
+    },
+    {
+      "id": "BU_YVFJzJIHY4qh1kOryq",
+      "order": 3,
+      "type": "single_choice",
+      "content": "以下关于C++数组的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "数组的下标通常从 0 开始。"
+        },
+        {
+          "label": "B",
+          "text": "int arr[5]; 声明了一个包含5个整数的数组。"
+        },
+        {
+          "label": "C",
+          "text": "数组的大小必须在编译时确定，不能使用变量定义大小。"
+        },
+        {
+          "label": "D",
+          "text": "可以通过 arr[5] 来访问 int arr[5]; 数组的最后一个元素。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D 错误，因为对于 `int arr[5];` 数组，其有效下标范围是 0 到 4，最后一个元素的下标是 4。访问 `arr[5]` 会超出数组边界，导致未定义行为。选项 A、B、C 的说法都是正确的：C++数组下标从 0 开始；`int arr[5];` 声明了 5 个元素的数组；普通 C++数组的大小必须在编译时确定。"
+    },
+    {
+      "id": "1EejwF_Xkw5NOZc3CJMv9",
+      "order": 4,
+      "type": "single_choice",
+      "content": "执行以下C++代码后，变量 `sum` 的值是（ ）。\n\n```cpp\nint sum = 0;\nfor (int i = 1; i <= 5; i += 2) {\n    sum += i;\n    int sum=0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "9"
+        },
+        {
+          "label": "C",
+          "text": "15"
+        },
+        {
+          "label": "D",
+          "text": "死循环"
+        }
+      ],
+      "answer": "B",
+      "explanation": "循环中 `i` 的值依次为 1、3、5。每次循环执行 `sum += i;` 时，更新的是外部定义的 `sum` 变量。语句 `int sum = 0;` 在循环体内声明了一个**局部**变量 `sum`，它与外部的 `sum` 变量是不同的，且在每次循环结束时被销毁，因此不会影响外部 `sum` 的值。最终 `sum` 的值为 0 + 1 + 3 + 5 = 9。选项 A、C 错误是因为计算过程不符，选项 D 错误是因为循环条件 `i <= 5` 和 `i += 2` 会使循环正常终止。"
+    },
+    {
+      "id": "WpjPujPk3rfaiqmePlLIL",
+      "order": 5,
+      "type": "single_choice",
+      "content": "要正确定义一个返回两个整数中较大值的函数 `max` ，应该使用（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "void max(int a, int b) { return a > b ? a : b; }"
+        },
+        {
+          "label": "B",
+          "text": "int max(int a, int b) { if (a > b) return a; else return b; }"
+        },
+        {
+          "label": "C",
+          "text": "int max(a, b) { if (a > b) return a; else return b; }"
+        },
+        {
+          "label": "D",
+          "text": "void max(a, b) { cout << (a > b ? a : b); }"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B `int max(int a, int b) { ... }` 正确定义了函数，返回类型 `int` 与返回的整数值匹配，且参数 `a`"
+    },
+    {
+      "id": "pld2hfbmZgyWrRjNTB8jV",
+      "order": 6,
+      "type": "single_choice",
+      "content": "执行以下C++代码后，数组 `arr` 的内容是（ ）。\n\n```cpp\nint arr[4] = {1, 2, 3};\narr[3] = arr[0] + arr[2];\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "{1, 2, 3, 3}"
+        },
+        {
+          "label": "B",
+          "text": "{1, 2, 3, 4}"
+        },
+        {
+          "label": "C",
+          "text": "{1, 2, 3, 5}"
+        },
+        {
+          "label": "D",
+          "text": "{1, 2, 3, 6}"
+        }
+      ],
+      "answer": "B",
+      "explanation": "首先，`int arr[4] = {1, 2, 3};` 初始化了数组的前三个元素，`arr[0]` 为 1，`arr[1]` 为 2，`arr[2]` 为 3。由于数组大小是 4，未初始化的 `arr[3]` 会被默认初始化为 0。接着，`arr[3] = arr[0] + arr[2];` 计算 `1 + 3` 得到 4，并将结果赋值给 `arr[3]`。因此，数组 `arr` 的最终内容是 `{1, 2, 3, 4}`。选项 B 正确，其他选项的 `arr[3]` 值计算错误。"
+    },
+    {
+      "id": "90CQR3507Mct2Y1HGwTrY",
+      "order": 7,
+      "type": "single_choice",
+      "content": "以下关于C++函数的描述，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "函数必须要有参数。"
+        },
+        {
+          "label": "B",
+          "text": "函数通过 return 语句只能返回一个值。但是可以通过很多间接的方式返回多个值。"
+        },
+        {
+          "label": "C",
+          "text": "main 函数可以被其他函数调用。"
+        },
+        {
+          "label": "D",
+          "text": "函数的定义可以直接嵌套，即一个函数内部可以真正定义另一个函数。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`return`语句确实只能返回一个值，但可以通过指针、引用、结构体或元组等方式“间接”地返回多个数据，因此B是正确的。选项A错误，函数可以没有参数，例如 `void func()`。选项C错误，`main`函数是程序的入口，通常由操作系统调用，不应被程序内的其他函数调用。选项D错误，C++标准不允许函数定义直接嵌套。"
+    },
+    {
+      "id": "nH40adjEcYxXJlEPnCs9h",
+      "order": 8,
+      "type": "single_choice",
+      "content": "以下C++代码 `count++` 执行的次数是（ ）。\n\n```cpp\nint i = 10;\nint count=0;\nwhile (i > 0) {\n    i -= 3;\n    continue;\n    count++;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "D",
+      "explanation": "在 `while` 循环中，`continue` 语句会立即结束当前循环的本次迭代，并跳到下一次迭代的开始。因此，`continue` 后面的 `count++` 语句永远不会被执行到。所以 `count++` 执行的次数是 0。选项 A、B、C 错误，因为它们没有考虑到 `continue` 的作用，误认为 `count++` 会被执行。"
+    },
+    {
+      "id": "yZkbaof-o7JEcAzbDdexB",
+      "order": 9,
+      "type": "single_choice",
+      "content": "以下C++代码段的输出是（ ）。\n\n```cpp\nfor (int i = 0; i < 4; i++) {\n    for (int j = 0; j <= i; j++) {\n        cout << j;\n    }\n    cout << \"#\";\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0#01#012#0123#"
+        },
+        {
+          "label": "B",
+          "text": "1#12#123#1234#"
+        },
+        {
+          "label": "C",
+          "text": "0#1#2#3#"
+        },
+        {
+          "label": "D",
+          "text": "0#01#012#01243#"
+        }
+      ],
+      "answer": "A",
+      "explanation": "外层循环 `for (int i = 0; i < 4; i++)` 使 `i` 依次取值 0, 1, 2, 3。内层循环 `for (int j = 0; j <= i; j++)` 打印 `j` 的值，每次内层循环结束后打印 `#`。因此，当 `i=0` 时输出 `0#`；当 `i=1` 时输出 `01#`；当 `i=2` 时输出 `012#`；当 `i=3` 时输出 `0123"
+    },
+    {
+      "id": "aDA9LwLUosXoy3jXghjAX",
+      "order": 10,
+      "type": "single_choice",
+      "content": "以下关于C++变量作用域的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在 for 循环语句中声明的变量，其作用域仅限于该循环体内。"
+        },
+        {
+          "label": "B",
+          "text": "在函数内部声明的变量（局部变量），仅在函数内部有效。"
+        },
+        {
+          "label": "C",
+          "text": "在所有函数外部声明的变量，在整个程序中都有效。"
+        },
+        {
+          "label": "D",
+          "text": "不同函数中的局部变量可以同名，它们代表不同的内存单元"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C选项错误。全局变量（在所有函数外部声明的变量）从其声明点开始，仅在声明它的当前源文件（翻译单元）中直接有效。若要在其他源文件中使用，需要通过 `extern` 关键字进行声明，并非自动在“整个程序”中都有效。\n\nA、B、D选项的说法都是正确的。A选项，`for (int i = 0; ...)` 中 `i` 的作用域确实仅限于循环体。B选项，局部变量只在其声明的函数内部有效。D选项，不同函数中的局部变量即使同名，也是独立的，代表不同的内存单元。"
+    },
+    {
+      "id": "OS731OzApkzXklsbPsYlK",
+      "order": 11,
+      "type": "single_choice",
+      "content": "关于以下代码的说法正确的是（ ）。\n\n```cpp\nint reversed = 0;\nwhile (x != 0) {\n    int digit = x % 10;\n    x /= 10;\n    reversed = reversed * 10 + digit;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "能够反转任何位数的整数"
+        },
+        {
+          "label": "B",
+          "text": "能够反转的最大位数正整数是 2147483647"
+        },
+        {
+          "label": "C",
+          "text": "能够反转的最大位数正整数是 2147483648"
+        },
+        {
+          "label": "D",
+          "text": "能够反转的最大位数正整数是 1463847412"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该代码通过循环将整数 `x` 逐位反转并存储到 `reversed` 变量中。由于 `reversed` 是 `int` 类型，其最大值通常为 `"
+    },
+    {
+      "id": "nl-r6bDgLSuauTy_88d8p",
+      "order": 12,
+      "type": "single_choice",
+      "content": "以下C++代码试图查找数组中的最大值，划线处应填入（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint findMax(int arr[], int size) {\n    int maxVal = ________; // 划线处\n    for (int i = 1; i < size; i++) {\n        if (arr[i] > maxVal) {\n            maxVal = arr[i];\n        }\n    }\n    return maxVal;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "arr[-1]"
+        },
+        {
+          "label": "C",
+          "text": "arr[0]"
+        },
+        {
+          "label": "D",
+          "text": "size"
+        }
+      ],
+      "answer": "C",
+      "explanation": "将 `maxVal` 初始化为 `arr[0]` 是正确的，因为它确保 `maxVal` 从数组中取一个有效值作为初始比较基准，然后循环从 `arr[1]` 开始遍历剩余元素。选项 A (`0`) 在数组元素全为负数时会返回错误结果。选项 B (`arr[-1]`) 是越界访问，会导致程序崩溃。选项 D (`size`) 是数组长度，不是数组元素值，不适合作为最大值的初始值。"
+    },
+    {
+      "id": "fBiVgB8wKdXaFBjNqB0FK",
+      "order": 13,
+      "type": "single_choice",
+      "content": "以下关于C++函数的说法，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "函数参数传递只有值传递一种方式。"
+        },
+        {
+          "label": "B",
+          "text": "函数的形参在函数调用结束后依然占用内存空间"
+        },
+        {
+          "label": "C",
+          "text": "没有返回值的函数必须声明为 void 类型，且不能包含 return 语句"
+        },
+        {
+          "label": "D",
+          "text": "C++11 及之后标准要求函数必须显式声明返回类型，不允许默认返回 int"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D是正确的，C++11及之后标准要求所有函数都必须显式声明返回类型，不再允许默认返回 `int`。A错误，C++除了值传递，还有引用传递和指针传递等多种参数传递方式。B错误，函数的形参是局部变量，在函数调用结束后其占用的内存空间会被释放。C错误，`void` 函数可以包含 `return;` 语句来提前结束函数执行。"
+    },
+    {
+      "id": "WM77uWwQBFtHkaFRN_2xi",
+      "order": 14,
+      "type": "single_choice",
+      "content": "以下C++代码中存在几处错误（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    const int SIZE = 5;\n    int arr[SIZE];\n    for (int i = 0; i <= SIZE; i++) {\n        arr[i] = i * 2;\n    }\n    cout << arr[SIZE] << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0处"
+        },
+        {
+          "label": "B",
+          "text": "1处"
+        },
+        {
+          "label": "C",
+          "text": "2处"
+        },
+        {
+          "label": "D",
+          "text": "3处"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该代码存在两处错误。数组 `arr` 的有效下标范围是 `0` 到 `SIZE - 1` (即 `0` 到 `4`)。`for"
+    },
+    {
+      "id": "SPYqyAt_Uuabdv6xCKEBJ",
+      "order": 15,
+      "type": "single_choice",
+      "content": "以下关于C++中 `string` 类和字符数组（`char[]`）的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "string 对象可以使用 = 进行赋值，而字符数组需要使用 strcpy 。"
+        },
+        {
+          "label": "B",
+          "text": "string 对象的长度可以使用 length() 成员函数获取，而字符数组需要使用 strlen() 函数。"
+        },
+        {
+          "label": "C",
+          "text": "string 对象在内存中是动态分配空间的，因此可以自动处理字符串长度的变化。"
+        },
+        {
+          "label": "D",
+          "text": "string 对象和字符数组都可以使用 == 运算符来直接比较两个字符串的内容是否相同。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误。`string` 对象可以使用 `==` 运算符直接比较两个字符串的内容是否相同，但字符数组 `char[]` 使用 `==` 运算符比较的是它们在内存中的地址，而非字符串内容。要比较两个字符数组的内容，需要使用 `strcmp()` 函数。选项A、B、C的描述都是正确的，`string` 类提供了更便捷、安全的字符串操作，并能自动管理内存。"
+    },
+    {
+      "id": "a3UZzJAHcLmd0t-S98Sen",
+      "order": 16,
+      "type": "true_false",
+      "content": "表达式 `sizeof('a')` 的结果总是 1 ，因为 `'a'` 是一个字符。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，字符字面量（如 `'a'`）的类型是 `int`，而不是 `char`。因此，`sizeof('a')` 的结果是 `sizeof(int)`，这通常是 4 字节（取决于系统），而不是 1 字节。所以原说法“结果总是 1”是错误的。"
+    },
+    {
+      "id": "Luz_7-pHkErf-Q4dIC3Cg",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++中，所有全局变量如果没有显式初始化，都会被自动初始化为0。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，全局变量（以及使用 `static` 关键字修饰的变量）都具有静态存储期。对于这类变量，如果程序员没有显式地给它们初始化，编译器会确保它们被自动初始化为0（对于指针类型是 `nullptr`，对于浮点类型是 `0.0`，对于布尔类型是 `false` 等）。这与局部变量不同，局部变量如果不初始化，其值是不确定的。因此，题目描述是正确的。"
+    },
+    {
+      "id": "KfkgbkpqKBeyIlxhyyeyp",
+      "order": 18,
+      "type": "true_false",
+      "content": "`do { ... } while (false);` 循环体内的语句至少会被执行一次。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`do-while` 循环的特点是先执行循环体内的语句，然后再判断循环条件。对于 `do { ... } while (false);`，循环体会在第一次判断 `false` 之前被执行一次。由于条件 `false` 导致循环不再继续，所以循环体只执行一次就结束了。因此，语句至少会被执行一次是正确的，F 选项错误。"
+    },
+    {
+      "id": "m58p8z1WSmPt2YLEGPhd-",
+      "order": 19,
+      "type": "true_false",
+      "content": "在C++中，`++i` 是一个左值表达式，而 `i++` 是一个右值表达式。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`++i` 是前置递增，它会先将 `i` 的值加 1，然后返回 `i` 本身（一个引用）。因为返回的是 `i` 本身，它有内存地址，所以是一个左值表达式，可以被赋值，例如 `(++i) = 10;`。而 `i++` 是后置递增，它会先记录 `i` 当前的值，然后将 `i` 的值加 1，最后返回之前记录的那个值（一个临时副本）。这个临时副本没有固定的内存地址，不能被赋值，所以是一个右值表达式。因此，题目描述是正确的。"
+    },
+    {
+      "id": "Sph8ds-yd4PxhdBvCZQkX",
+      "order": 20,
+      "type": "true_false",
+      "content": "对于 `enum Color { RED, GREEN, BLUE };`，`RED` 的类型是 `int`",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`RED` 的类型是 `Color`，而不是 `int`。在 C++ 中，枚举常量（如 `RED`）的类型是它所属的枚举类型 `Color`。虽然 `RED` 的值可以隐式转换为 `int` 类型（默认为 0），但其本身的类型并非 `int`。因此，选项 F（错误）是正确的。"
+    },
+    {
+      "id": "ze9PkWz3yd8l-LNGeRQVS",
+      "order": 21,
+      "type": "true_false",
+      "content": "`#define SQUARE(x) x * x` 是一个安全的宏定义，`SQUARE(2+3)` 会正确计算出 25 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该语句是错误的。宏定义`#define SQUARE(x) x * x`并不安全。当`SQUARE(2+3)`展开时，会变成`2+3 * 2+3`。由于乘法运算符的优先级高于加法，表达式会计算为`2 + (3*2) + 3 = 11`，而不是预期的25。因此，该宏定义不是安全的，也不会正确计算出25。"
+    },
+    {
+      "id": "Ctzzna9_ovHv4pt3O_qIA",
+      "order": 22,
+      "type": "true_false",
+      "content": "在C++中，`char` 类型的取值范围总是 -128 到 127。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 标准规定 `char` 类型是否为有符号（`signed char`）或无符号（`unsigned char`）是**由实现定义的**。这意味着 `char` 的默认符号性取决于编译器和平台，因此其取值范围不总是 -128 到 127。例如，在某些系统上，`char` 默认可能是无符号的，其范围为 0 到 255。所以，题目中“总是”的说法是错误的。"
+    },
+    {
+      "id": "rlSRrIqxyiLpY7snyZDAb",
+      "order": 23,
+      "type": "true_false",
+      "content": "表达式 `a > b ? a : b = 10;` 一定是合法的C++代码。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这个表达式 `a > b ? a : b = 10;` 的合法性取决于操作符的结合性和优先级。\n\n1.  **解析为什么正确答案是F：**"
+    },
+    {
+      "id": "pfxD-CWqjBCvbCOKab7En",
+      "order": 24,
+      "type": "true_false",
+      "content": "`#include \"file.h\"` 和 `#include <file.h>` 在编译器查找头文件时的搜索策略是完全相同的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`#include \"file.h\"` 会首先在当前源文件所在的目录查找头文件，如果找不到，再到标准库路径中查找。而 `#include <file.h>` 则直接在编译器预设的标准库路径中查找。因此，它们的查找策略是不同的，题目描述是错误的。"
+    },
+    {
+      "id": "L_bdbBPSf9lsFqu8rSrro",
+      "order": 25,
+      "type": "true_false",
+      "content": "在同一个作用域内，`extern` 声明的变量可以多次定义。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`extern` 关键字用于声明变量在别处定义，它本身不进行定义。一个变量在同一个作用域内只能被定义一次，无论是否使用 `extern` 声明过。多次定义会导致编译错误，违反了 C++ 的“单一定义规则”（One Definition Rule）。因此，题目中的说法是错误的。"
+    }
+  ]
+}

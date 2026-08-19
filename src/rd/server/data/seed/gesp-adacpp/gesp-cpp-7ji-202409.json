@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-7ji-202409",
+  "url": "https://adacpp.com/practice/gesp-cpp-7ji-202409",
+  "title": "GESP C++七级 202409",
+  "description": "CCF编程能力等级认证 GESP C++ 七级 2024年9月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 7,
+    "ym": "202409"
+  },
+  "questions": [
+    {
+      "id": "fmLU00-FDbFg23KAfystF",
+      "order": 1,
+      "type": "single_choice",
+      "content": "已知小写字母 b 的ASCII码为98，下列C++代码的输出结果是（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    char a = 'b';\n    a++;\n    cout << a;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "b"
+        },
+        {
+          "label": "B",
+          "text": "c"
+        },
+        {
+          "label": "C",
+          "text": "98"
+        },
+        {
+          "label": "D",
+          "text": "99"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`char a = 'b';` 将变量 `a` 初始化为字符 'b'。`a++` 操作会将 `a` 的ASCII码值加1，即从 98 变为 99。`cout << a` 会输出ASCII码为 99 的字符 'c'，所以 B 正确。A 错误是因为 `a` 的值已改变。C 和 D 错误是因为 `cout` 输出 `char` 类型变量时，默认显示的是字符，而非其ASCII码值。"
+    },
+    {
+      "id": "MVykuDPdBUzx7rvA-YM1d",
+      "order": 2,
+      "type": "single_choice",
+      "content": "已知 a 为 int 类型变量，下列表达式不符合语法的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "&a + 3"
+        },
+        {
+          "label": "B",
+          "text": "+a & 3"
+        },
+        {
+          "label": "C",
+          "text": "a - - 4"
+        },
+        {
+          "label": "D",
+          "text": "a++3"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D `a++3` 不符合语法，因为 `++` 运算符后不能直接跟数字。正确的写法应该是 `a++ + 3` 或 `a + 3`。选项 A `&a + 3` 是有效的指针算术表达式。选项 B `+a & 3` 是有效的位运算表达式，`+a` 表示 `a` 的正值。选项 C `a - - 4` 等价于 `a - (-4)`，即 `a + 4`，是有效的算术表达式。"
+    },
+    {
+      "id": "VHQ7IX7Zf4MNZ6tmkYe90",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下列关于C++语言中指针的叙述，不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "指针变量中存储的是内存地址。"
+        },
+        {
+          "label": "B",
+          "text": "指针变量指向的内存地址不一定能够合法访问。"
+        },
+        {
+          "label": "C",
+          "text": "结构类型中的指针成员不能指向该结构类型。"
+        },
+        {
+          "label": "D",
+          "text": "定义指针变量时必须指定其指向的类型。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项C不正确，结构体中的指针成员可以指向该结构体类型本身，这是实现链表、树等自引用数据结构的基础，例如 `struct Node { int data; Node* next; };`。选项A正确，指针变量的核心作用就是存储内存地址。选项B正确，指针可能指向未分配或无权限的内存区域，直接访问会导致程序崩溃或未定义行为。选项D正确，定义指针时必须指定其指向的类型（如 `int*`），以便编译器进行类型检查和正确地解引用。"
+    },
+    {
+      "id": "9khOSMB8pllGXvQNUQ3HM",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下列关于C++类的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "将C++类对象通过值传递给函数参数时，会自动调用复制构造函数。"
+        },
+        {
+          "label": "B",
+          "text": "将一个类的对象赋值给该类的另一个对象时，不会自动调用构造函数。"
+        },
+        {
+          "label": "C",
+          "text": "定义C++类对象时，一定会调用默认构造函数。"
+        },
+        {
+          "label": "D",
+          "text": "构造派生类的对象时，一定会调用基类的构造函数。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项C错误。定义C++类对象时，如果类中只定义了带参数的构造函数而没有提供默认构造函数，则无参数创建对象会引发编译错误"
+    },
+    {
+      "id": "lAgGEPR-aLZiQ9SoCrPhT",
+      "order": 5,
+      "type": "single_choice",
+      "content": "某二叉树T的先序遍历序列为：{A B D C E G H F}，中序遍历序列为：{D B A H G E C F}，则下列说法中正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "T的高为5"
+        },
+        {
+          "label": "B",
+          "text": "T有4个叶节点"
+        },
+        {
+          "label": "C",
+          "text": "T是平衡树"
+        },
+        {
+          "label": "D",
+          "text": "以上说法都不对"
+        }
+      ],
+      "answer": "A",
+      "explanation": "根据先序和中序遍历序列，我们可以唯一确定这棵二叉树的结构：\n\n```\n      A\n     / \\\n    B   C\n   /   /"
+    },
+    {
+      "id": "tG2SdnS1nlEcXF0FkSaHD",
+      "order": 6,
+      "type": "single_choice",
+      "content": "一棵完全二叉树有431个结点，则叶结点有多少个？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "176"
+        },
+        {
+          "label": "B",
+          "text": "215"
+        },
+        {
+          "label": "C",
+          "text": "216"
+        },
+        {
+          "label": "D",
+          "text": "255"
+        }
+      ],
+      "answer": "C",
+      "explanation": "对于一棵完全二叉树，内部结点（非叶结点）的数量为 `floor(N/2)`。因此，叶结点数量 `L` 等于总结点数 `N`"
+    },
+    {
+      "id": "lkJSXAZHpNfPVYnxCUHh8",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下列关于树的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "二叉树的中序遍历与其深度优先遍历总是相同的。"
+        },
+        {
+          "label": "B",
+          "text": "所有树都可以构造一颗二叉树与之一一对应。"
+        },
+        {
+          "label": "C",
+          "text": "如果树的一个叶结点有两个不同的祖先结点，那么其中一个一定是另一个的祖先结点。"
+        },
+        {
+          "label": "D",
+          "text": "树的结点不能有两个父结点。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "二叉树的中序遍历是深度优先遍历的一种，但深度优先遍历还包括前序遍历和后序遍历，它们的结果通常不同。因此，说中序遍历总是"
+    },
+    {
+      "id": "NSB5mN0rK5ZMVoPOa1pjd",
+      "order": 8,
+      "type": "single_choice",
+      "content": "一个简单无向图有10个结点、30条边。再增加多少条边可以成为完全图。（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "51"
+        },
+        {
+          "label": "D",
+          "text": "60"
+        }
+      ],
+      "answer": "B",
+      "explanation": "一个有 `n` 个结点的完全无向图有 `n * (n - 1) / 2` 条边。对于10个结点，完全图应有 `10 * (10 - 1) / 2 = 45` 条边。由于图中已有30条边，所以还需要增加 `45 - 30 = 15` 条边才能成为完全图。因此，选项B是正确的。其他选项的数值不符合计算结果。"
+    },
+    {
+      "id": "7rrCNjDRvrw4rbcYYPu6H",
+      "order": 9,
+      "type": "single_choice",
+      "content": "以下哪个方案可以合理解决或缓解哈希表冲突（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "丢弃发生冲突的新元素。"
+        },
+        {
+          "label": "B",
+          "text": "用新元素覆盖发生冲突的元素。"
+        },
+        {
+          "label": "C",
+          "text": "用新元素覆盖在冲突位置的下一个位置。"
+        },
+        {
+          "label": "D",
+          "text": "将新元素放置在冲突位置之后的第一个空位。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D描述的是开放寻址法（如线性探测）的核心思想，即在哈希冲突发生时，寻找冲突位置之后的第一个空位来存放新元素，这能有效解决冲突并保留所有数据。选项A和B都会导致数据丢失，不符合哈希表存储所有元素的初衷。选项C更是错误地覆盖了不相关的元素，会造成数据损坏。"
+    },
+    {
+      "id": "smLOQicRDAc8fP0M0fBn4",
+      "order": 10,
+      "type": "single_choice",
+      "content": "一个迷宫，已知从起点不经过重复结点到达终点的路径有且仅有一条，则下面说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "可以使用深度优先搜索找到这条路径。"
+        },
+        {
+          "label": "B",
+          "text": "可以使用广度优先搜索找到这条路径。"
+        },
+        {
+          "label": "C",
+          "text": "该迷宫内与起点连通的结点，一定也与终点连通。"
+        },
+        {
+          "label": "D",
+          "text": "该迷宫内与起点连通的结点及它们之间的路径可以抽象为无向无环图。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误。一个迷宫即使从起点到终点的路径唯一且不重复，迷宫内与起点连通的其他部分仍可能存在环路，例如从某个点出发又回到该点，因此不一定是无向无环图（树）。选项A和B都正确，深度优先搜索和广度优先搜索都能找到迷宫中的路径。选项C正确，因为起点和终点之间有路径，它们属于同一个连通分量，该连通分量内的所有节点都互相连通。"
+    },
+    {
+      "id": "7WbQUVQPyV8h8ZjOLvZVA",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\nint main() {\n    cout << (int)log(8) << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "无法通过编译。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`log(8)`计算的是以自然常数e（约2.718）为底的对数，其值约为2.079。`(int)`强制类型转换会将浮点数的小数部分截断，只保留整数部分，因此`2.079`被截断为`2`。选项A正确。选项B错误，因为`log`函数默认是自然对数，而不是以2为底的对数。选项C错误，程序输出的是对数运算结果而非参数本身。选项D错误，代码语法正确，可以正常编译运行。"
+    },
+    {
+      "id": "VPW9ESKYqqeK5qAK9AzUm",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\n#define N 10\nusing namespace std;\nint path[N][N];\nint main() {\n    for (int i = 1; i < N; i++)\n        path[i][0] = i;\n    for (int j = 1; j < N; j++)\n        path[0][j] = j;\n    for (int i = 1; i < N; i++)\n        for (int j = 1; j < N; j++)\n            path[i][j] = path[i - 1][j] + path[i][j - 1];\n    cout << path[8][4] << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "84"
+        },
+        {
+          "label": "B",
+          "text": "495"
+        },
+        {
+          "label": "C",
+          "text": "1012"
+        },
+        {
+          "label": "D",
+          "text": "结果是随机的。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "程序首先将 `path` 数组的第0行和第0列（除了 `path[0][0]`）初始化为对应的行/列索引值。然后，通过 `"
+    },
+    {
+      "id": "2UhiGFE8v2EoUntiYPivX",
+      "order": 13,
+      "type": "single_choice",
+      "content": "上题中程序的时间复杂度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(N)"
+        },
+        {
+          "label": "C",
+          "text": "O(N log N)"
+        },
+        {
+          "label": "D",
+          "text": "O(N²)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。该程序的时间复杂度为 O(N²)，通常是因为代码中存在两个嵌套的循环，例如 `for (int i = 0; i < N; ++i)`"
+    },
+    {
+      "id": "ZBpJxB6wsYPnDbeWxMJ3e",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面 fib 函数的时间复杂度为（ ）。\n\n```cpp\nint fib_rcd[MAX_N];\nint fib(int n) {\n    if (n <= 1)\n        return 1;\n    if (fib_rcd[n] > 0)\n        return fib_rcd[n];\n    return fib(n - 1) + fib(n - 2);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(φⁿ)，φ = (√5 - 1) / 2"
+        },
+        {
+          "label": "C",
+          "text": "O(2ⁿ)"
+        },
+        {
+          "label": "D",
+          "text": "无法正常结束。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该 `fib` 函数虽然设置了 `fib_rcd` 数组，但在计算 `fib(n - 1) + fib(n - 2)` 后，并没有将"
+    },
+    {
+      "id": "2guYEK6maZoKSU1z0ObsD",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列选项中，哪个可能是下图的广度优先遍历序列（ ）。\n\n图为一个有向图，顶点编号为1-9，结构如下：\n第一行：1 → 2 → 4 → 9\n中间行：3 连接 5、7\n底部行：5 → 7，6，8\n其中存在多条双向边连接各顶点。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1, 3, 5, 7, 4, 2, 6, 8, 9"
+        },
+        {
+          "label": "B",
+          "text": "9, 4, 2, 1, 3, 7, 5, 6, 8"
+        },
+        {
+          "label": "C",
+          "text": "1, 3, 5, 7, 6, 8, 9, 4, 2"
+        },
+        {
+          "label": "D",
+          "text": "9, 4, 7, 2, 1, 3, 5, 6, 8"
+        }
+      ],
+      "answer": "A",
+      "explanation": "广度优先遍历（BFS）从起始节点开始，逐层访问所有相邻节点。\n\n1.  **正确选项A分析：**\n    *   从节点 `1"
+    },
+    {
+      "id": "zEnqYX-Wq53oX7f8zSeuD",
+      "order": 16,
+      "type": "true_false",
+      "content": "表达式 `'a' << 1` 的结果为 `'a '`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `'a' << 1` 中的字符 `'a'` 会被提升为它的 ASCII 整数值 `97`。`<<` 是位左移运算符，所以 `97 << 1` 的结果是整数 `194`。题目中的 `'a '` 既不是一个有效的字符字面量，也不是位移操作可能产生的结果，因此原说法是错误的。"
+    },
+    {
+      "id": "09XQcpVELC9lb6btIdSW_",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++语言中，函数可以定义在另一个函数定义之内。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在C++语言中，函数不能定义在另一个函数定义之内。C++标准规定，所有函数都必须在全局作用域或类作用域中定义，不支持函数的嵌套定义。因此，题目中“函数可以定义在另一个函数定义之内”的说法是错误的。"
+    },
+    {
+      "id": "K6XUtEz0d2HCMVdDjTtxa",
+      "order": 18,
+      "type": "true_false",
+      "content": "选择排序一般是不稳定的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "选择排序在每一轮都会找到未排序部分的最小元素，并将其与未排序部分的第一个元素交换。当数组中存在相等的元素时，如果最小元素位于当前未排序部分的"
+    },
+    {
+      "id": "3gp7-xr8ZrOvbkgVr9IOp",
+      "order": 19,
+      "type": "true_false",
+      "content": "埃氏筛法和欧拉筛法都是使用筛法思想生成素数表的算法，欧拉筛法的时间复杂度更低。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "埃氏筛法和欧拉筛法都属于筛法，用于高效地生成素数表。欧拉筛法是埃氏筛法的一种优化，它通过确保每个合数只被其最小质因数筛除一次，从而避免了重复标记。因此，欧拉筛法的时间复杂度是线性的 `O(N)`，而埃氏筛法的时间复杂度是 `O(N log log N)`，欧拉筛法的时间复杂度确实更低。"
+    },
+    {
+      "id": "UP954kgltXCHnOPCcIVH_",
+      "order": 20,
+      "type": "true_false",
+      "content": "使用 math.h 或 cmath 头文件中的正弦函数，表达式 `sin(30)` 的结果类型为 double、值约为 0.5。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 的 `sin` 函数（来自 `cmath` 或 `math.h`）接受的参数是**弧度**，而非角度。因此，`sin(30)` 计算的是 30 弧度的正弦值，其结果远不等于 0.5。虽然 `sin` 函数的返回类型确实是 `double`，但由于其值不约为 0.5，所以整个表述是错误的。"
+    },
+    {
+      "id": "7Va27sgpd6rH4QjI_VOvx",
+      "order": 21,
+      "type": "true_false",
+      "content": "一颗N层的完全二叉树，一定有2^N - 1个结点。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "N层的完全二叉树不一定有2^N - 1个结点。只有N层的**满二叉树**（或完美二叉树）才一定有2^N - 1个结点。完全二叉树的定义是除了最后一层，其他层都是满的，且最后一层从左到右填充，因此其结点数可能少于2^N - 1。所以原说法是错误的，T选项不正确。"
+    },
+    {
+      "id": "lAbY_byaeKZx3ifVvu5pP",
+      "order": 22,
+      "type": "true_false",
+      "content": "一个图，不管是否连通，都可以使用深度优先搜索算法进行遍历。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "深度优先搜索（DFS）算法可以遍历任何图，无论它是否连通。对于不连通的图，我们只需从图中每个未访问过的顶点开始一次新的DFS。这样，每个连通分量都会被完整遍历，最终所有顶点都能被访问到。因此，选项T是正确的。选项F错误，因为它否定了DFS遍历不连通图的能力。"
+    },
+    {
+      "id": "Fdj8hLWnsGRpMlcQTaICp",
+      "order": 23,
+      "type": "true_false",
+      "content": "某个哈希表键值 x 为整数，H(x) = x % p 是常用的哈希函数之一，要求 p 选择素数是因为这样不会产生冲突。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哈希函数 `H(x) = x % p` 中，选择素数 `p` 确实能帮助哈希值更均匀地分布，从而**减少**冲突的发生。然而，它并不能**完全避免**冲突。例如，如果 `p=5`，那么 `H(5)` 和 `H(10)` 的结果都是 `0`，这就是一个冲突。只要可能的键值数量大于哈希表的大小，冲突就必然会发生，这是哈希表的固有特性，因此原题目中“不会产生冲突”的说法是错误的。"
+    },
+    {
+      "id": "uYvH_Q-ZTn-VYZaTqMLSI",
+      "order": 24,
+      "type": "true_false",
+      "content": "使用单链表实现队列时，链表头结点作为队首比链表头结点作为队尾更便于操作。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。使用单链表实现队列时，通常将链表头结点作为队首（出队端），并额外维护一个尾结点指针作为队尾（入队端）。"
+    },
+    {
+      "id": "X3rxJ30-G7htWoUSrm7ob",
+      "order": 25,
+      "type": "true_false",
+      "content": "一个图中，每个结点表达一个人，连接两个结点的边表达两个结点对应的人相互认识，则这个图可以用来表达社交网络。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这个描述完全符合图论在社交网络建模中的应用。图中结点（顶点）天然地可以代表个体（人），而连接这些结点的边则可以表示他们之间的关系（如相互认识）。因此，这种图结构非常适合用来表达社交网络，选项T是正确的。选项F错误，因为该描述是图论在现实世界中一个非常经典且准确的应用。"
+    }
+  ]
+}

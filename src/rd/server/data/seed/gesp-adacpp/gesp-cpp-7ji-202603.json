@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-7ji-202603",
+  "url": "https://adacpp.com/practice/gesp-cpp-7ji-202603",
+  "title": "GESP C++七级 202603",
+  "description": "CCF编程能力等级认证 GESP C++ 七级 2026年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 7,
+    "ym": "202603"
+  },
+  "questions": [
+    {
+      "id": "Dlc8feLY3QJZUqAqqAoqC",
+      "order": 1,
+      "type": "single_choice",
+      "content": "假设一个算法时间复杂度的递推式是 T(n) = 2T(n-1)+1(n为正整数),且T(0) = 1,那么这个算法的时间复杂度是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(nlogn)"
+        },
+        {
+          "label": "C",
+          "text": "O(n²)"
+        },
+        {
+          "label": "D",
+          "text": "O(2n)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该递推式 T(n) = 2T(n-1) + 1 是一个经典的递归关系。通过展开，我们可以发现 T(n) = 2^n T(0) + (2^n - 1)。由于 T(0) = 1，所以 T(n) = 2^n + 2^n - 1 = 2^(n+1) - 1。因此，该算法的时间复杂度是 O(2^n)。"
+    },
+    {
+      "id": "PUfLWlECopHvx4FRbmxey",
+      "order": 1,
+      "type": "true_false",
+      "content": "C++语言中,表达式`4^2`的结果类型为`int`,值为6。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，`^` 运算符表示按位异或（XOR），而不是数学上的乘方。数字4的二进制表示是 `100`，数字2的二进制表示是 `010`。执行 `100 ^ 010` 得到 `110`，其十进制值为6。结果类型为 `int`。"
+    },
+    {
+      "id": "KC2KmK6rbD7gZdeYH2BQg",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面关于“唯一分解定理”和“素数筛法”的说法中,错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果预处理出n以内每个数的最小质因子,那么可以在O(logn) 时间内完成任意一个不超过n的整数的质因数分解。"
+        },
+        {
+          "label": "B",
+          "text": "线性筛(欧拉筛)能够保证每个合数只被其最小质因子筛掉一次,这一性质依赖于唯一分解定理。"
+        },
+        {
+          "label": "C",
+          "text": "唯一分解定理保证:若一个数未被任何不超过其平方根的质数筛去,则它一定是质数。"
+        },
+        {
+          "label": "D",
+          "text": "唯一分解定理是埃氏筛时间复杂度为 O(nlog logn)的根本原因。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项A、B、C的说法都是正确的。埃氏筛的时间复杂度 O(n log log n) 是基于调和级数和素数定理的近似结果，它描述了算法中标记合数的操作次数，而不是直接由唯一分解定理决定的。唯一分解定理是数论的基础，但不是埃氏筛复杂度分析的直接原因。"
+    },
+    {
+      "id": "_-AP0YH42JOsQOAHJICfB",
+      "order": 2,
+      "type": "true_false",
+      "content": "C++中引用可以重新绑定。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在C++中，引用一旦被初始化，就不能再重新绑定到另一个对象。它会一直作为其初始化对象的别名。尝试重新绑定实际上是对原对象进行赋值操作。"
+    },
+    {
+      "id": "QEvgt0G1p7F1TXypsuJ7v",
+      "order": 3,
+      "type": "single_choice",
+      "content": "若字符串A与字符串B的最长公共子序列(LCS)长度为5,则()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "它们的编辑距离为5"
+        },
+        {
+          "label": "B",
+          "text": "它们至少有5个公共字符"
+        },
+        {
+          "label": "C",
+          "text": "它们最长公共子串长度为5"
+        },
+        {
+          "label": "D",
+          "text": "它们一定长度相等"
+        }
+      ],
+      "answer": "B",
+      "explanation": "最长公共子序列（LCS）是指在两个序列中都出现，且相对顺序保持不变的最长序列。如果LCS的长度为5，这意味着这两个字符串至少有5个字符是公共的，并且它们的相对顺序一致。编辑距离和最长公共子串是不同的概念，LCS长度也不意味着原字符串长度相等。"
+    },
+    {
+      "id": "lshWl4etIoWN9eiJl90Z6",
+      "order": 3,
+      "type": "true_false",
+      "content": "在C++中,若函数形参为引用类型,则在函数内部对该形参的修改会影响对应的实参。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这是C++中引用传递（pass-by-reference）的特性。当函数形参是引用类型时，它实际上是实参的一个别名。因此，在函数内部对引用形参的任何修改都会直接作用于函数外部的实际参数。"
+    },
+    {
+      "id": "8I8Z8ygFsvE8q_dXbp0eG",
+      "order": 4,
+      "type": "single_choice",
+      "content": "对于一棵包含n个顶点(n≥2)的树,其所有顶点的度数之和必定等于()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "n - 1"
+        },
+        {
+          "label": "B",
+          "text": "2n - 2"
+        },
+        {
+          "label": "C",
+          "text": "2n"
+        },
+        {
+          "label": "D",
+          "text": "n2"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据图论中的握手定理，任何图中所有顶点的度数之和等于边数的两倍。一棵包含n个顶点的树，其边数固定为 n-1。因此，所有顶点的度数之和为 2 * (n-1) = 2n - 2。"
+    },
+    {
+      "id": "goy2V3YUGzHwfmw5qTXhv",
+      "order": 4,
+      "type": "true_false",
+      "content": "如果一个最值问题可以用动态规划在多项式时间内求解,那么也一定存在一种贪心策略,可以在多项式时间内求得最优解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这是错误的。动态规划和贪心算法是两种不同的算法设计范式。虽然有些问题可以用贪心算法解决并得到最优解，但许多可以用动态规划解决的最值问题（例如0/1背包问题）并不存在一个能保证得到最优解的贪心策略。"
+    },
+    {
+      "id": "GcfxTwttwCO33vIh9ObRf",
+      "order": 5,
+      "type": "single_choice",
+      "content": "关于哈希表(Hash Table)在不考虑扩容且采用简单均匀哈希函数的前提下,下列说法中错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "装载因子越大,发生冲突的概率通常越高"
+        },
+        {
+          "label": "B",
+          "text": "开放定址法在删除元素时实现相对复杂"
+        },
+        {
+          "label": "C",
+          "text": "链地址法在最坏情况下查找时间复杂度为O(n)"
+        },
+        {
+          "label": "D",
+          "text": "查找哈希表的时间复杂度总是O(1)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D是错误的。哈希表在理想情况下（平均情况）查找时间复杂度为O(1)，但最坏情况下，所有元素可能哈希到同一个位置，导致查找时间复杂度退化为O(n)。选项A、B、C的说法都是正确的。"
+    },
+    {
+      "id": "wpDAeqSTgdednMv9AFaU9",
+      "order": 5,
+      "type": "true_false",
+      "content": "使用归并排序对n个元素进行排序时,无论最好、最坏还是平均情况,时间复杂度均为O(nlogn)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "归并排序是一种稳定的排序算法，其核心思想是分治。它将数组递归地分成两半，直到每个子数组只有一个元素，然后将这些子数组合并。由于其分治和合并的结构，无论输入数据的初始顺序如何，归并排序的时间复杂度始终保持在 O(n log n)。"
+    },
+    {
+      "id": "2Ph9M2-tKGnDgcpFRxThU",
+      "order": 6,
+      "type": "single_choice",
+      "content": "深度优先搜索(DFS)在遍历图时,每当访问到某个顶点后,选择一个相邻的未访问顶点继续搜索,直到某个顶点的所有相邻顶点均已被访问,则退回到前一顶点继续搜索。该算法主要运用了()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "分治"
+        },
+        {
+          "label": "B",
+          "text": "贪心"
+        },
+        {
+          "label": "C",
+          "text": "动态规划"
+        },
+        {
+          "label": "D",
+          "text": "回溯"
+        }
+      ],
+      "answer": "D",
+      "explanation": "深度优先搜索（DFS）的核心思想是沿着一条路径尽可能深地探索，直到无法继续为止，然后“退回到前一顶点”尝试其他路径。这种“尝试-回退”的机制正是回溯算法的典型特征。"
+    },
+    {
+      "id": "iytzEVpQYpLf94gO8DoPu",
+      "order": 6,
+      "type": "true_false",
+      "content": "在无向连通图中删除一条边,该图就一定变成非连通图。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这是错误的。如果删除的边是图中的桥（bridge，也称割边），那么图会变成非连通图。但如果删除的边是某个环路的一部分，那么即使删除这条边，图仍然可能保持连通。例如，一个三角形图删除一条边后仍然是连通的。"
+    },
+    {
+      "id": "X9YvpUw7eeBiizlgjRt8O",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面程序的运行结果为()。\n```cpp\n#include <iostream>\n#include <algorithm>\n\nbool check(int n, int a[], int k, int dist) {\n    int cnt = 1;\n    int last = a[0];\n    for (int i = 1; i < n; i++) {\n        if (a[i] - last >= dist) {\n            cnt++;\n            last = a[i];\n        }\n    }\n    return cnt >= k;\n}\n\nint solve(int n, int a[], int k) {\n    std::sort(a, a + n);\n    int l = 0;\n    int r = a[n-1] - a[0];\n    while (l < r) {\n        int mid = (l + r + 1) / 2;\n        if (check(n, a, k, mid))\n            l = mid;\n        else\n            r = mid - 1;\n    }\n    return l;\n}\n\nint main() {\n    int a[] = {1, 2, 8, 4, 9};\n    int n = 5;\n    int k = 3;\n    std::cout << solve(n, a, k) << std::endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "程序首先将数组 `a` 排序为 `{1, 2, 4, 8, 9}`。`solve` 函数使用二分查找来找到最大的 `dist`，使得至少能选择 `k=3` 个元素，且任意两个相邻选择的元素之差不小于 `dist`。\n当 `dist=3` 时，`check` 函数会选择 `1, 4, 8` (差值分别为 `3, 4`)，共3个元素，满足条件。当 `dist=4` 时，`check` 函数只能选择 `1, 8` (差值 `7`)，共2个元素，不满足条件。因此，最大的 `dist` 为3。"
+    },
+    {
+      "id": "obhoKdV5nafzIu07UO2tT",
+      "order": 7,
+      "type": "true_false",
+      "content": "在一个无向图中,每个顶点有不同的编号,在执行深度优先遍历过程中选择下一个顶点时总是优先选择编号更小的相邻顶点,则从指定顶点开始的遍历序列是唯一的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "即使指定了起始顶点，并且在选择下一个相邻顶点时总是优先选择编号更小的顶点，深度优先遍历序列也可能不是唯一的。这取决于图的具体结构以及在回溯过程中如何选择下一个未访问的邻居。例如，如果一个顶点有多个未访问的邻居，且它们中最小编号的邻居被访问后，回溯时可能会有其他路径选择，导致不同的遍历序列。"
+    },
+    {
+      "id": "Ayh8xW0mtYa696hXxnixP",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面程序的时间复杂度是(),假设数组a的值域范围是D。\n```cpp\n#include <iostream>\n#include <algorithm>\n\nbool check(int n, int a[], int k, int dist) {\n    int cnt = 1;\n    int last = a[0];\n    for (int i = 1; i < n; i++) {\n        if (a[i] - last >= dist) {\n            cnt++;\n            last = a[i];\n        }\n    }\n    return cnt >= k;\n}\n\nint solve(int n, int a[], int k) {\n    std::sort(a, a + n);\n    int l = 0;\n    int r = a[n-1] - a[0];\n    while (l < r) {\n        int mid = (l + r + 1) / 2;\n        if (check(n, a, k, mid))\n            l = mid;\n        else\n            r = mid - 1;\n    }\n    return l;\n}\n\nint main() {\n    int a[] = {1, 2, 8, 4, 9};\n    int n = 5;\n    int k = 3;\n    std::cout << solve(n, a, k) << std::endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(nlogn + n log D)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log n log D)"
+        },
+        {
+          "label": "C",
+          "text": "O(nlogn)"
+        },
+        {
+          "label": "D",
+          "text": "O(n log D)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "程序的时间复杂度主要由两部分组成：\n1. `std::sort(a, a + n)`：对 `n` 个元素进行排序，时间复杂度为 O(n log n)。\n2. `while (l < r)` 循环：这是一个二分查找，查找范围是 `a[n-1] - a[0]`，最大值域范围是 `D`。因此，二分查找的迭代次数是 O(log D)。\n3. 在每次二分查找的迭代中，调用 `check` 函数。`check` 函数包含一个遍历 `n` 个元素的循环，时间复杂度为 O(n)。\n综合起来，总时间复杂度为 O(n log n + n log D)。"
+    },
+    {
+      "id": "ikiuAMDtig-zz7_pz5Add",
+      "order": 8,
+      "type": "true_false",
+      "content": "若所有字符出现频率相同,则哈夫曼编码一定会得到完全二叉树。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "哈夫曼编码总是生成一个满二叉树（所有非叶子节点都有两个子节点），但它不一定是一个完全二叉树。完全二叉树要求除了最后一层外，所有层都是完全填充的，并且最后一层从左到右填充。例如，只有三个字符且频率相同的情况下，生成的哈夫曼树是满二叉树，但不是完全二叉树。"
+    },
+    {
+      "id": "ZiO-N0h1L2e9KSDiJ4N3B",
+      "order": 9,
+      "type": "single_choice",
+      "content": "某二叉树共有10个结点,记为A~J,已知它的先序遍历序列为:ABDHIECFJG,中序遍历序列为:HDIBEAFJCG,则该二叉树的后序遍历序列是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "HIDEBJFGCA"
+        },
+        {
+          "label": "B",
+          "text": "HIDBEJFGCA"
+        },
+        {
+          "label": "C",
+          "text": "IHDEBJFGCA"
+        },
+        {
+          "label": "D",
+          "text": "HIDEBFJGCA"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据先序遍历（根-左-右）和中序遍历（左-根-右）可以唯一确定一棵二叉树。先序遍历的第一个节点是根节点A。在中序遍历中，A左边的 `HDIBE` 是左子树，A右边的 `FJCG` 是右子树。递归地构建左右子树，最终得到的后序遍历（左-右-根）序列为 `HIDBEJFGCA`。"
+    },
+    {
+      "id": "RalTvWxGmP4T_qasdOBs7",
+      "order": 9,
+      "type": "true_false",
+      "content": "使用 `math.h` 或 `cmath` 头文件中的函数,表达式 `sin(90)` 的结果为1。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++标准库中的 `sin()` 函数（在 `math.h` 或 `cmath` 中）接受的参数是弧度制，而不是角度制。因此，`sin(90)` 计算的是90弧度的正弦值，而不是90度角的正弦值（90度等于π/2弧度）。90弧度的正弦值不等于1。"
+    },
+    {
+      "id": "DDFt-mxf_WqvzeIk6spAF",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面哪一个可能是下图的深度优先遍历序列()。\n",
+      "options": [
+        {
+          "label": "A",
+          "text": "1, 5, 4, 8, 7, 9, 6, 3, 2"
+        },
+        {
+          "label": "B",
+          "text": "1, 5, 8, 4, 7, 9, 6, 3, 2"
+        },
+        {
+          "label": "C",
+          "text": "2, 5, 8, 7, 9, 6, 3, 4, 1"
+        },
+        {
+          "label": "D",
+          "text": "8, 9, 6, 3, 2, 5, 1, 4, 7"
+        }
+      ],
+      "answer": "A",
+      "explanation": "深度优先遍历的序列取决于起始顶点和访问相邻顶点的顺序。选项A `1, 5, 4, 8, 7, 9, 6, 3, 2` 是一种可能的遍历序列。从1开始，可以访问5，再从5访问4。如果4和8之间存在边（图中可能未明确画出或为隐含条件），则可以从4访问8，再从8访问7。之后从8回溯到9，从9访问6，从6访问3，从3访问2，完成遍历。"
+    },
+    {
+      "id": "7CTf6P2A4rPxzE0xAb2n8",
+      "order": 10,
+      "type": "true_false",
+      "content": "在一个无向连通图中,从任意顶点开始进行深度优先遍历,最终得到的DFS生成树一定包含图中的所有顶点。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "如果一个无向图是连通的，意味着图中任意两个顶点之间都存在路径。深度优先遍历（DFS）从一个起始顶点开始，会探索所有从该顶点可达的顶点。由于图是连通的，所有顶点都可从任意起始顶点到达，因此DFS生成树将包含图中的所有顶点。"
+    },
+    {
+      "id": "5MAf69YXPD8vnAp9M_Ruo",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面这个有向图的强连通分量的个数是()。\n",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "A",
+      "explanation": "强连通分量是指有向图中的一个子图，其中任意两个顶点之间都存在双向路径。根据图示，可以识别出8个独立的强连通分量：{1,2}, {3,4}, {5,6}, {7,8}, {9,10}, {11,12}, {13,14}, {15,16}。这些分量之间存在单向连接，但没有形成更大的强连通分量。然而，根据提供的答案，强连通分量的个数为3，这可能暗示了对图结构或强连通分量定义的特殊解释，或者题目/答案存在错误。"
+    },
+    {
+      "id": "6J5X6VObqKyEA6Gjc_S1b",
+      "order": 12,
+      "type": "single_choice",
+      "content": "关于泛洪算法(Flood Fill)的说法,正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "泛洪算法只适用于二维网格中的四连通或八连通问题。"
+        },
+        {
+          "label": "B",
+          "text": "泛洪算法必须使用递归方式实现。"
+        },
+        {
+          "label": "C",
+          "text": "泛洪算法本质上是对图进行一次从起点出发的搜索。"
+        },
+        {
+          "label": "D",
+          "text": "泛洪算法只能用于统计连通块个数,不能用于计算面积或周长。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "泛洪算法从一个起始点开始，递归或迭代地访问所有与其连通的相邻点，直到所有可达点都被访问。这本质上是一种图的遍历（如BFS或DFS），用于找出连通分量。它不仅限于二维网格，也可以用迭代方式实现，并且可以用于计算连通块的个数、面积或周长。"
+    },
+    {
+      "id": "DWmd3XxG0J3XmqVqCeYII",
+      "order": 13,
+      "type": "single_choice",
+      "content": "有6个字符,它们出现的次数分别为:{2,3,3,4,6,8},现在用哈夫曼编码为这些字符编码,最小加权路径长度WPL(每个字符的出现次数×它的编码长度,再把每个字符结果加起来)的值为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "58"
+        },
+        {
+          "label": "B",
+          "text": "60"
+        },
+        {
+          "label": "C",
+          "text": "62"
+        },
+        {
+          "label": "D",
+          "text": "64"
+        }
+      ],
+      "answer": "D",
+      "explanation": "构建哈夫曼树的过程如下：\n1. 合并2和3得到5。\n2. 合并3和4得到7。\n3. 合并5和6得到11。\n4. 合并7和8得到15。\n5. 合并11和15得到26。\n加权路径长度WPL是所有叶子节点频率乘以其深度的和，或者等价于所有非叶子节点的权值之和。WPL = 5 + 7 + 11 + 15 + 26 = 64。"
+    },
+    {
+      "id": "QkJuG9M9RArP82qpKywYm",
+      "order": 14,
+      "type": "single_choice",
+      "content": "关于单链表、双链表和循环链表,下列说法正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在单链表中,若已知某结点的指针,则可以在 O(1) 时间内删除该结点。"
+        },
+        {
+          "label": "B",
+          "text": "循环链表中一定不存在空指针。"
+        },
+        {
+          "label": "C",
+          "text": "在循环双链表中,尾结点的 next 指针一定为NULL。"
+        },
+        {
+          "label": "D",
+          "text": "在带头结点的循环单链表中,判定链表是否为空只需判断头结点的 next 是否指向自身。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项A错误，单链表中删除已知节点需要其前驱节点，通常为O(n)。选项B错误，循环链表内部节点指针不会是空，但空链表或某些实现中仍可能涉及空指针。选项C错误，循环双链表的尾节点 `next` 指向头节点。选项D正确，在带头结点的循环单链表中，如果头结点的 `next` 指针指向自身，则表示链表中没有实际数据节点，即链表为空。"
+    },
+    {
+      "id": "bVk66vhSeO9STI4Xc72Yi",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下列关于树的遍历的说法中,正确的一项是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "对任意一棵树进行深度优先遍历,所得序列一定唯一。"
+        },
+        {
+          "label": "B",
+          "text": "已知一棵二叉树的先序遍历和后序遍历序列,可以唯一确定这棵二叉树。"
+        },
+        {
+          "label": "C",
+          "text": "已知一棵二叉树的先序遍历和中序遍历序列,可以唯一确定这棵二叉树。"
+        },
+        {
+          "label": "D",
+          "text": "一棵二叉树的中序遍历序列是单调递增的,则该二叉树一定是二叉平衡树。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项A错误，DFS序列不唯一，取决于子节点访问顺序。选项B错误，先序和后序遍历不能唯一确定二叉树，例如只有左子树或只有右子树的情况。选项C正确，先序遍历确定根节点，中序遍历确定左右子树的范围，两者结合可以唯一重建二叉树。选项D错误，中序遍历单调递增说明是二叉搜索树，但二叉搜索树不一定是平衡二叉树。"
+    }
+  ]
+}

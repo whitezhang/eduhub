@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202512",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202512",
+  "title": "GESP C++一级 202512",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2025年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202512"
+  },
+  "questions": [
+    {
+      "id": "ROqpnN13_gptzpDawuOZX",
+      "order": 1,
+      "type": "single_choice",
+      "content": "近日，空中客车公司表示，约6000架空客A320系列飞机需要紧急更换一种易受太阳辐射影响的飞行控制软件。空客表示，在对一起飞行事故分析后的结果显示，强烈的太阳辐射可能会损坏飞行控制系统所需的关键数据，导致判断失误，进而引发飞行异常。那这里的飞行控制系统执行判断的部件最可能是下面的( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "辐射传感器"
+        },
+        {
+          "label": "B",
+          "text": "处理器"
+        },
+        {
+          "label": "C",
+          "text": "内存单元"
+        },
+        {
+          "label": "D",
+          "text": "输出设备"
+        }
+      ],
+      "answer": "B",
+      "explanation": "处理器是计算机系统的“大脑”，负责执行指令、进行计算和做出判断。当飞行控制系统的数据因辐射损坏时，处理器会根据这些错误数据做出错误的判断，从而引发飞行异常。辐射传感器负责收集数据，内存单元用于存储数据，而输出设备则用于显示或执行结果，它们本身不进行判断。"
+    },
+    {
+      "id": "orOfk_zJcCPmqhB2U0ExI",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面的C++代码在某集成开发环境中编译运行时，提示有\"Invalid Character\"（\"无效字符\"）错误。可能的原因是( )：\n\n```cpp\nint a, b;\na=3，b = 4; // L1\ncout << a; // L2\ncout << b; // L3\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "L1行代码中的逗号很可能是中文逗号，应该改为英文逗号。"
+        },
+        {
+          "label": "B",
+          "text": "L1行应该分为两行，分别是 a = 3 和 b = 4 。"
+        },
+        {
+          "label": "C",
+          "text": "代码运行前没有保存到文件。"
+        },
+        {
+          "label": "D",
+          "text": "L2和L3不能分为两行，应合并为一行。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "\"Invalid Character\"错误通常表示代码中存在编译器无法识别的字符。L1行 `a=3，b = 4;` 中的逗号如果使用了中文全角逗号，C++编译器会将其视为无效字符，因为它只识别英文半角逗号。选项B、D描述的代码结构在C++中是合法的，不会引发此错误。选项C未保存文件通常不会导致“无效字符”的编译错误。"
+    },
+    {
+      "id": "aYgKuI6BQYH0R4VKxZyst",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面有关C++变量的说法，正确的是( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "不可以用 for 作为变量名，因为 for 是C++的关键字（保留字）。"
+        },
+        {
+          "label": "B",
+          "text": "_tnt 不可以是变量名，因为变量名的第一个字符必须是英文字母。"
+        },
+        {
+          "label": "C",
+          "text": "_tnt_ 不可以是变量名，因为最后一个字符容易与减号混淆。"
+        },
+        {
+          "label": "D",
+          "text": "可以用 printf 作为变量名，因为 printf 是关键字，但这不是好习惯，因为 printf 有约定的功能与含义。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`for` 是 C++ 的关键字（保留字），不能用作变量名，因此 A 选项正确。变量名可以以下划线 `_` 开头，所以 `_tnt` 是合法的，B 选项错误。变量名可以包含下划线，`_tnt_` 是合法的，不会与减号混淆，C 选项错误。`printf` 不是 C++ 关键字，而是标准库函数名，虽然可以作为变量名，但这会覆盖库函数，是非常不好的习惯，D 选项关于 `printf` 是关键字的说法是错误的。"
+    },
+    {
+      "id": "wsd1asetYoYDaO7EhzrzE",
+      "order": 4,
+      "type": "single_choice",
+      "content": "X 是C++的整型变量，则 `cout << (X=3, X++, ++X);` 执行后的输出是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该语句使用了逗号运算符，它会从左到右依次计算表达式，并返回最右边表达式的值。首先 `X=3` 使 `X` 变为 3。"
+    },
+    {
+      "id": "9OI-gJzqipZz4HAitlzpK",
+      "order": 5,
+      "type": "single_choice",
+      "content": "C++表达式 `2 + 3 * 4 % 5` 的值为( )。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "14"
+        },
+        {
+          "label": "D",
+          "text": "50"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据C++运算符的优先级，乘法 `*` 和取模 `%` 运算符的优先级高于加法 `+`。在 `3 * 4 % 5` 中，`*` 和 `%` 优先级相同，按从左到右的结合性计算：首先 `3 * 4` 得到 `12`，然后 `12 % 5` 得到 `2`（12除以5的余数）。最后，`2 + 2` 得到 `4`。因此，正确答案是B。其他选项的计算结果不符合C++的运算符优先级规则。"
+    },
+    {
+      "id": "oFO_zpQWUJbZaRt9cKEQc",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面的C++代码执行后，其输出是( )。\n\n```cpp\na = 3;\nb = a = 4;\nprintf(\"%d %d\", a, b);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "4 4"
+        },
+        {
+          "label": "B",
+          "text": "3 3"
+        },
+        {
+          "label": "C",
+          "text": "3 4"
+        },
+        {
+          "label": "D",
+          "text": "4 3"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`b = a = 4;` 语句中，赋值运算符是右结合的。它首先执行 `a = 4`，将 `a` 的值更新为 4。`a = 4` 这个表达式的结果是 4，这个值随后被赋给 `b`，所以 `b` 的值也变为 4。因此，最终 `a` 和 `b` 都为 4，输出 `4 4`。其他选项不符合赋值运算符的右结合特性。"
+    },
+    {
+      "id": "R3s6QPw36b3SFCvgNN2_V",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面的C++代码执行时如果先输入 10 回车后输入 20 并回车，其输出是( )。\n\n```cpp\nint N,M;\nprintf(\"第一个数:\");\nscanf(\"%d\", &N);\nprintf(\"第二个数:\");\nscanf(\"%d\", &M);\nprintf(\"%%(N+M)=%d\", N+M, int(N+M));\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "30=30"
+        },
+        {
+          "label": "B",
+          "text": "10+20=30"
+        },
+        {
+          "label": "C",
+          "text": "%(N+M)=30"
+        },
+        {
+          "label": "D",
+          "text": "错误提示"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。在 `printf` 语句中，`%%` 是一个转义序列，会输出一个百分号 `%`。`(N+M)=` 部分会作为字面"
+    },
+    {
+      "id": "MfytmEBZ7Zu69bHYqGBSR",
+      "order": 8,
+      "type": "single_choice",
+      "content": "某个整数很长很长，形如：1232123212321……，其规律是从1开始逐一升高到3然后逐一降低到1，然后又逐一升高到3，一直到很长很长。假设最高位编号为1，要求判断从左边最高位开始的第N位数是几？在横线处应该填入的代码是（ ）。\n\n```cpp\nint N, M;\ncout << \"请输入编号：\";\ncin >> N;\nM = ________________;\nif (M != 0)\n    cout << M;\nelse\n    cout << 2;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N % 4"
+        },
+        {
+          "label": "B",
+          "text": "N / 4"
+        },
+        {
+          "label": "C",
+          "text": "N % 3"
+        },
+        {
+          "label": "D",
+          "text": "N / 3"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该数列的重复规律是“1232”，周期为4。`N % 4` 可以计算出N在周期中的位置：当 `N % 4` 为1、2、3时，结果就是1、2、3；当 `N % 4` 为0时"
+    },
+    {
+      "id": "7aiWlZMFS-CePxLkvNkxx",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint i, tnt = 0;\nfor (i = 0; i < 100; i++)\n    tnt += 1;\ncout << tnt << ' ' << i;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "99 99"
+        },
+        {
+          "label": "B",
+          "text": "100 99"
+        },
+        {
+          "label": "C",
+          "text": "99 100"
+        },
+        {
+          "label": "D",
+          "text": "100 100"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`for` 循环从 `i=0` 开始，当 `i` 的值从 0 递增到 99 时，循环体 `tnt += 1;"
+    },
+    {
+      "id": "jepWHL70Xhgupi0l0RCCT",
+      "order": 10,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法，错误的是（ ）。\n\n```cpp\nint tnt = 0;\nfor (int i = 1; i < 10; i += 2) // L1\n    tnt += i; // L2\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "L1的 i < 10 改为 i < 11 结果相同。"
+        },
+        {
+          "label": "B",
+          "text": "L1的 i = 1 改为 i = 0 结果相同。"
+        },
+        {
+          "label": "C",
+          "text": "tnt += i 与 tnt = tnt + i 效果相同。"
+        },
+        {
+          "label": "D",
+          "text": "tnt += i 与 tnt = i + tnt 效果相同。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "将 `L1` 的 `i = 1` 改为 `i = 0` 会改变循环中 `i` 的初始值，导致 `tnt` 累加的序列"
+    },
+    {
+      "id": "hh_rGrKuTFtgzVEdsARFl",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint i;\nfor (i = 10; i < 100; i += 10){\n    if (i % 10 == 0)\n        continue;\n    printf(\"%d#\",i);\n}\nif(i >= 100)\n    printf(\"%d END\",i);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10#20#30#40#50#60#70#80#90#100 END"
+        },
+        {
+          "label": "B",
+          "text": "100#100 END"
+        },
+        {
+          "label": "C",
+          "text": "100 END"
+        },
+        {
+          "label": "D",
+          "text": "没有输出"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在 `for` 循环中，变量 `i` 初始值为10，每次递增10，因此 `i` 始终是10的倍数。`if"
+    },
+    {
+      "id": "VYM90bbndx5qMD12rf5F9",
+      "order": 12,
+      "type": "single_choice",
+      "content": "两个正整数，只要不相等，就一直进行如下操作：最大数减去最小数得到一个值，该值和两个数的最小数构成新的两个正整数，重复操作，直到两个数相等，此时输出该数。下面的C++代码用于实现该操作，横线处应该填写的代码是（ ）。\n\n```cpp\nint N, M;\ncin >> N >> M;\n\nwhile (N != M){\n    if (N > M)\n        _______________;\n    else\n        _______________;\n}\n\ncout << N;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N = N - M 和 M = M - N"
+        },
+        {
+          "label": "B",
+          "text": "M = M - N 和 N = N - M"
+        },
+        {
+          "label": "C",
+          "text": "M = N - M 和 N = M - N"
+        },
+        {
+          "label": "D",
+          "text": "N, M = M, N 和 M, N = N, M"
+        }
+      ],
+      "answer": "A",
+      "explanation": "根据题目描述，操作是“最大数减去最小数得到一个值，该值和两个数的最小数构成新的两个正整数”。\n1.  **正确答案A的"
+    },
+    {
+      "id": "hXxv4HU2AWi7au7oasgQO",
+      "order": 13,
+      "type": "single_choice",
+      "content": "如果一个正整数能被3整除，或者某一位能被3整除，则称之为\"漂亮数\"。下面的C++代码用于判断正整数N是否为漂亮数，L1行的横线处应该填入的代码是（ ）。\n\n```cpp\nint N, Flag;\ncin >> N;\nFlag = 0; // \"非漂亮数\"\nif (N % 3 == 0)\n    Flag = 1; //\"漂亮数\"\nelse\n    while (N != 0){\n        if (_______________){ // L1\n            Flag = 1;\n            break;\n        }\n        N /= 10;\n    }\ncout << (Flag? \"漂亮数\" : \"非漂亮数\");\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N % 10 == 0"
+        },
+        {
+          "label": "B",
+          "text": "N % 3 % 10 == 0"
+        },
+        {
+          "label": "C",
+          "text": "N % 10 % 3"
+        },
+        {
+          "label": "D",
+          "text": "N % 10 % 3 == 0"
+        }
+      ],
+      "answer": "D",
+      "explanation": "L1行代码的目的是逐位检查数字是否能被3整除。`N % 10` 用于获取当前数字的个位，然后 `(N % 10"
+    },
+    {
+      "id": "YW8sOMsgT5x6cz2MpGytv",
+      "order": 14,
+      "type": "single_choice",
+      "content": "如果正整数N的所有奇因数（即能将N整除的正奇数）的和是27的倍数，则称N是27的神秘数。下面的C++代码用于判断输入的N是否为27的神秘数。如输入53，它有两个奇因数1和53，则将输出 Y 。横线处应该填入的代码是（ ）。\n\n```cpp\nint i, N, cnt = 0;\ncin >> N;\nfor (i=1; i <=N; i++){\n    if (_________________)\n        cnt += i;\n}\nif(cnt % 27 == 0)\n    cout << 'Y';\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "(N % i) && (i % 2)"
+        },
+        {
+          "label": "B",
+          "text": "(N % i == 0) && (i % 2 == 0)"
+        },
+        {
+          "label": "C",
+          "text": "(N % i == 0) && (i % 2)"
+        },
+        {
+          "label": "D",
+          "text": "(N % i) && (i % 2 == 0)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是C。\n\n`N % i == 0` 用于判断 `i` 是否是 `N` 的因数。`i % 2` 在C++中，当 `"
+    },
+    {
+      "id": "vXeEpPpjCxjj8lrPuptag",
+      "order": 15,
+      "type": "single_choice",
+      "content": "执行下面C++代码可以找出千位与个位的和恰好等于中间两位的四位数，横线处应该填入（ ）。\n\n```cpp\nint count = 0;\nint a, bc, d, tmp;\nfor (int i = 1000; i <= 9999; i++) {\n    a = (tmp = i) / 1000;\n    _________________________\n    bc = tmp / 10;\n    d = tmp - bc * 10;\n    if ( a + d == bc) {\n        count++;\n    }\n}\ncout << count;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "tmp = i / 10;"
+        },
+        {
+          "label": "B",
+          "text": "tmp = i % 100;"
+        },
+        {
+          "label": "C",
+          "text": "tmp -= a * 1000;"
+        },
+        {
+          "label": "D",
+          "text": "tmp = i - i%1000;"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C选项正确。在计算出千位 `a` 后，`tmp` 仍然是原始的四位数 `i`。为了提取中间两位 `bc` 和个位 `"
+    },
+    {
+      "id": "4HYxqwn8h-ZEbpQAkpJRV",
+      "order": 16,
+      "type": "true_false",
+      "content": "鸿蒙是华为公司开发的一款操作系统，那么它能够将正确的源程序翻译成目标程序，并运行。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "鸿蒙作为操作系统，主要负责管理计算机资源和调度程序的运行。将源代码（如 C++ 代码）翻译成目标程序（机器码）是**编译器**（Compiler）的工作，而不是操作系统的直接功能。操作系统接收并运行的是已经编译好的目标程序。因此，题目中“操作系统能够将正确的源程序翻译成目标程序”的说法是错误的。"
+    },
+    {
+      "id": "7PDl7l97tuLAlSI_bANgJ",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++表达式 `10 * 4 % 6` 和 `10 * 2 % 3` 的结果相同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中，乘法和取模运算的优先级相同，按从左到右的顺序计算。表达式 `10 * 4 % 6` 的结果是 `40 % 6`，即 `4`。而表达式 `10 * 2 % 3` 的结果是 `20 % 3`，即 `2`。由于 `4` 不等于 `2`，所以题目中的说法是错误的，正确答案为F。"
+    },
+    {
+      "id": "Kg1ks4xkDmA6DHheY2F8z",
+      "order": 18,
+      "type": "true_false",
+      "content": "下面C++代码执行后将输出 0 。\n\n```cpp\nint i;\nfor (i = 0; i < 10; i++)\n    if (i % 3 == 0)\n        continue;\n    else\n        break;\ncout << i;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "代码执行时，当 `i` 为 `0` 时，`0 % 3 == 0` 成立，执行 `continue`，`i` 变为 `1`。接着，当 `i` 为 `1` 时，`1 % 3 == 0` 不成立，执行 `else` 分支中的 `break` 语句，循环立即终止。此时 `i` 的值为 `1`，因此 `cout << i` 将输出 `1`。题目说输出 `0` 是错误的，所以正确答案是 F。"
+    },
+    {
+      "id": "q9fNvjAptE5y2PLrFMZ0_",
+      "order": 19,
+      "type": "true_false",
+      "content": "下面C++代码中的 `i > -10; i--` 改为 `i < 10; i++` 执行结果相同。\n\n```cpp\nint tnt = 0;\nfor (int i = 0; i > -10; i--){\n    if (i < 0)\n        i = -i;\n    tnt += i;\n}\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "原代码中，当 `i` 为 -1 时，`if (i < 0)` 会将 `i` 改为 1，然后循环的 `i--` 又使其变为"
+    },
+    {
+      "id": "2dlBigpqkcEl4E5ztpIA9",
+      "order": 20,
+      "type": "true_false",
+      "content": "下面C++代码执行后将输出 99 ，因为 `i < 100` 不包括100，而是到99。\n\n```cpp\nint cnt = 0;\nfor (int i = 0; i < 100; i++)\n    cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`for` 循环条件 `i < 100` 意味着 `i` 的取值范围是 0 到 99（包括 0 和 99）。这总共有 100 个不同的值，因此循环体 `cnt += 1;` 会被执行 100 次。最终 `cnt` 的值为 100，而不是 99。所以题目描述是错误的，正确答案为 F。"
+    },
+    {
+      "id": "hF3xWt6eEWk2qHqszTEAL",
+      "order": 21,
+      "type": "true_false",
+      "content": "下面的C++代码能用于判断输入的正整数是否为对称数。所谓对称数是指从左到右和从右到左读该数，其值相同，121或414等是对称数，而123不是对称数。\n\n```cpp\nint n, new_number;\ncout << \"请输入正整数:\";\ncin >> n;\nnew_number = 0;\nwhile (n != 0){\n    new_number = new_number * 10 + n % 10;\n    n /= 10;\n}\nif (n == new_number)\n    cout << \"对称数\";\nelse\n    cout << \"非对称数\";\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "正确答案是F。该代码在 `while` 循环中修改了变量 `n` 的值，导致循环结束后 `n` 始终为 `0`。因此，`if (n == new_number)` 语句实际上比较的是 `0` 和 `new_number`，对于任何正整数，`new_number` 都不可能为 `0`，所以判断结果永远是 `false`，代码会错误地输出“非对称数”。选项T错误，因为它无法正确判断对称数。"
+    },
+    {
+      "id": "LH9al3owlqshkvY6b0qtK",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面的C++代码执行后将输出 0 。\n\n```cpp\nint tnt = 0;\nfor (int i = -100; i < 100; i++)\n    tnt += i;\ncout << tnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码计算 `i` 从 `-100` 到 `99` 的累加和。其中，`-99` 到 `99` 的所有整数相加结果为 `0`。因此，`tnt` 的最终值为 `-100 + 0 = -100`。所以，代码实际输出 `-100`，而不是 `0`。原题目描述“输出 0”是错误的，故选 `F`。"
+    },
+    {
+      "id": "D8Fbmkn2pWKs1I961JymT",
+      "order": 23,
+      "type": "true_false",
+      "content": "某同学执行C++代码时 `printf(\"%g\\n\", (3 + 3.1415926535));` 输出 6.14159 而不是 6.1415926535，表明该同学的计算机存在故障需要重新安装C++软件。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`printf` 函数的 `%g` 格式说明符会根据数值大小自动选择输出格式，并会省略尾部的零，同时可能限制显示的有效数字位数。因此，输出 `6.14159` 是 `%g` 的正常行为，而非计算机故障。计算机内部的浮点数精度（`double` 类型）仍然保持着，只是显示时被格式化了。选项 T 认为这是故障是错误的，无需重新安装C++软件。"
+    },
+    {
+      "id": "w1MGNfbjI3h8Ix5kXRx-s",
+      "order": 24,
+      "type": "true_false",
+      "content": "如果 x 是C++代码中的 double 型变量，则对 `cout << ( x? 1227 : 12.27);` 编译时将报错，因为 1227 和 12.27 分别是 int 和 double 类型，导致识别混乱。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 三元运算符 `?:` 会自动进行类型提升。当 `1227` (int) 和 `12.27` (double) 作为其操作数时，`int` 类型的值 `1227` 会被隐式转换为 `double` 类型，以匹配 `12.27`。因此，这行代码会正常编译并执行，不会报错。原题目中“编译时将报错”的说法是错误的，所以正确答案是 F。"
+    },
+    {
+      "id": "YLyOPc34DgvD_aKHdBYFo",
+      "order": 25,
+      "type": "true_false",
+      "content": "在C++代码中，不可以将变量命名为 `keyword` ，因为它是C++语言的关键字。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "F是正确的。`keyword`本身并不是C++语言的关键字，因此可以作为变量名使用。C++的关键字是像`int`、`for`、`class`等具有特殊含义的保留字。所以，题目中说不能将变量命名为`keyword`是错误的，T选项因此不正确。"
+    }
+  ]
+}

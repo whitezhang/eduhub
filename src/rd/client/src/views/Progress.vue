@@ -13,7 +13,7 @@ onMounted(async () => {
     <h1 class="serif">榜单</h1>
     <table class="table desk">
       <thead>
-        <tr><th>学生</th><th>题库（满分/部分/未做）</th><th>最近比赛</th><th>最近提交</th></tr>
+        <tr><th>用户</th><th>题库（满分/部分/未做）</th><th>最近比赛</th><th>最近提交</th></tr>
       </thead>
       <tbody>
         <tr v-for="s in students" :key="s.id">

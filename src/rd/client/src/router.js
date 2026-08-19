@@ -8,14 +8,15 @@ import ProgressUser from "./views/ProgressUser.vue";
 import Studio from "./views/Studio.vue";
 import StudioProblemEdit from "./views/StudioProblemEdit.vue";
 import PaperWorkbook from "./views/PaperWorkbook.vue";
+import { useSession } from "./stores/session.js";
 
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: Home },
     { path: "/problems", component: Problems },
-    { path: "/problems/papers/:id", component: PaperWorkbook },
-    { path: "/problems/:id", component: ProblemSolve },
+    { path: "/problems/papers/:id", component: PaperWorkbook, meta: { requiresAuth: true } },
+    { path: "/problems/:id", component: ProblemSolve, meta: { requiresAuth: true } },
     { path: "/contests", redirect: "/problems" },
     { path: "/contests/:id", redirect: (to) => `/problems/papers/${to.params.id}` },
     { path: "/external", component: External },
@@ -32,3 +33,22 @@ export default createRouter({
     return { top: 0 };
   },
 });
+
+router.beforeEach(async (to) => {
+  if (!to.meta.requiresAuth) return true;
+  const session = useSession();
+  if (!session.ready) {
+    try {
+      await session.refresh();
+    } catch {
+      session.ready = true;
+    }
+  }
+  if (session.user) return true;
+  session.openLogin();
+  const q = {};
+  if (to.query.source) q.source = String(to.query.source);
+  return { path: "/problems", query: q };
+});
+
+export default router;

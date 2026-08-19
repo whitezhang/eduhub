@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-2ji-202406",
+  "url": "https://adacpp.com/practice/gesp-cpp-2ji-202406",
+  "title": "GESP C++二级 202406",
+  "description": "CCF编程能力等级认证 GESP C++ 二级 2024年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 2,
+    "ym": "202406"
+  },
+  "questions": [
+    {
+      "id": "_L9P_2kn_-bGOom-vxJTQ",
+      "order": 1,
+      "type": "single_choice",
+      "content": "小杨父母带他到某培训机构给他报名参加CCF组织的GESP认证考试的第1级，那他可以选择的认证语言有几种？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "GESP认证考试目前支持 `C++`、`Python` 和 `Java` 三种编程语言。小杨在报名GESP第1级时，可以在这三种语言中任选其一，因此他可以选择的认证语言有3种，选项C是正确的。其他选项A、B、D不符合GESP认证语言的实际数量。"
+    },
+    {
+      "id": "9Fom9VqZLvIWtMhipw9WC",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面流程图在yr输入2024时，可以判定yr代表闰年，并输出 2月是29天 ，则图中菱形框中应该填入（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "(yr%400==0) || (yr%4==0)"
+        },
+        {
+          "label": "B",
+          "text": "(yr%400==0) || (yr%4==0 && yr%100!=0)"
+        },
+        {
+          "label": "C",
+          "text": "(yr%400==0) && (yr%4==0)"
+        },
+        {
+          "label": "D",
+          "text": "(yr%400==0) && (yr%4==0 && yr%100!=0)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "闰年的判断规则是：能被400整除，或者能被4整除但不能被100整除。选项 B `(yr%400==0"
+    },
+    {
+      "id": "nVYTresoSG-YOvI59i126",
+      "order": 3,
+      "type": "single_choice",
+      "content": "在C++中，下列不可做变量的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "five-Star"
+        },
+        {
+          "label": "B",
+          "text": "five_star"
+        },
+        {
+          "label": "C",
+          "text": "fiveStar"
+        },
+        {
+          "label": "D",
+          "text": "_fiveStar"
+        }
+      ],
+      "answer": "A",
+      "explanation": "C++变量名只能由字母、数字和下划线组成，并且不能以数字开头。选项A `five-Star` 中包含连字符 `-`，这是一个特殊字符，不符合C++变量的命名规则，因此不能作为变量名。而选项B `five_star`、C `fiveStar` 和 D `_fiveStar` 都符合命名规范，是合法的变量名。"
+    },
+    {
+      "id": "bOJO4QaJqwIJFMGMtCYTq",
+      "order": 4,
+      "type": "single_choice",
+      "content": "在C++中，与 `for(int i=0; i<10; i++)` 效果相同的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "for(int i=0; i<10; i+=1)"
+        },
+        {
+          "label": "B",
+          "text": "for(int i=1; i<=10; i++)"
+        },
+        {
+          "label": "C",
+          "text": "for(int i=10; i>0; i--)"
+        },
+        {
+          "label": "D",
+          "text": "for(int i=10; i<1; i++)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`i++` 等价于 `i+=1`，它们都表示将变量 `i` 的值增加1。因此，选项 A 的 `for(int i=0; i<10; i+=1)` 在起始值、结束条件和每次迭代的增量上都与题目中的循环完全相同，效果一致。选项 B 的循环范围是 `[1,"
+    },
+    {
+      "id": "qacgQAQc7B0FtC-xa1yu9",
+      "order": 5,
+      "type": "single_choice",
+      "content": "在C++中，`cout << (5 % 2 && 5 % 3)` 的输出是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "true"
+        },
+        {
+          "label": "D",
+          "text": "false"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`5 % 2` 的结果是 `1`，`5 % 3` 的结果是 `2`。在C++中，逻辑与运算符 `&&` 会将任何非零值视为 `true`。因此，表达式 `1 && 2` 等价于 `true && true`，其最终布尔结果是 `true`。当 `true` 被 `cout` 输出时，默认情况下会显示为数字 `1`。所以选项 A 正确，而选项 C 错误是因为 `cout` 默认输出数字 `1` 而不是字符串 \"true\"。"
+    },
+    {
+      "id": "VRI_6pWGJYsCkwrmddqFY",
+      "order": 6,
+      "type": "single_choice",
+      "content": "执行下面的C++代码时输入 1 ，则输出是（ ）。\n\n```cpp\nint month;\n\ncin >> month;\n\nswitch(month){\n    case 1:\n        cout << \"Jan \";\n    case 3:\n        cout << \"Mar \";\n        break;\n    default:\n        ;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "Jan"
+        },
+        {
+          "label": "B",
+          "text": "Mar"
+        },
+        {
+          "label": "C",
+          "text": "Jan Mar"
+        },
+        {
+          "label": "D",
+          "text": "以上均不对"
+        }
+      ],
+      "answer": "C",
+      "explanation": "输入 `1` 时，`switch` 语句匹配 `case 1:`。由于 `case 1:` 后面没有 `break` 语句，程序会“穿透”执行 `case 3:` 中的代码，因此会依次输出 \"Jan \" 和 \"Mar \"。`case 3:` 后的 `break` 语句会使程序跳出 `switch` 结构。所以，最终输出是 \"Jan Mar\"，选项 C 正确。选项 A 和 B 均未体现穿透行为，故不正确。"
+    },
+    {
+      "id": "yP4hyGUk54vHe1MI0KfCb",
+      "order": 7,
+      "type": "single_choice",
+      "content": "执行下面C++代码后，有关说法错误的是（ ）。\n\n```cpp\nint a, b;\ncin >> a >> b;\nif (a && b)\n    cout << \"1\";\nelse if (!(a || b))\n    cout << \"2\";\nelse if (a || b)\n    cout << \"3\";\nelse\n    cout << \"4\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果先后输入1和1，则将输出1"
+        },
+        {
+          "label": "B",
+          "text": "如果先后输入0和1或者1和0，则将输出3"
+        },
+        {
+          "label": "C",
+          "text": "如果先后输入0和0，则将输出2"
+        },
+        {
+          "label": "D",
+          "text": "如果先后输入0和0，则将输出4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "当输入 `a=0, b=0` 时，首先 `if (a && b)` (即 `0 && 0`) 为假。接着 `else if (!(a || b"
+    },
+    {
+      "id": "UiTjiElB3UcH-yft0bACr",
+      "order": 8,
+      "type": "single_choice",
+      "content": "某货币由5元，2元和1元组成。输入金额（假设为正整数），计算出最少数量。为实现其功能，横线处应填入代码是（ ）。\n\n```cpp\nint N;\ncin >>N;\n\nint M5,M2,M1;\nM5 = N / 5;\nM2 = ______________;\nM1 = ______________;\nprintf(\"5*%d+2*%d+1*%d\", M5, M2, M1);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "第1横线处应填入：N / 2\n第2横线处应填入：N - M5 - M2"
+        },
+        {
+          "label": "B",
+          "text": "第1横线处应填入：(N - M5 * 5) / 2\n第2横线处应填入：N - M5 * 5 - M2 * 2"
+        },
+        {
+          "label": "C",
+          "text": "第1横线处应填入：N - M5 * 5 / 2\n第2横线处应填入：N - M5 * 5 - M2 * 2"
+        },
+        {
+          "label": "D",
+          "text": "第1横线处应填入：(N - M5 * 5) / 2\n第2横线处应填入：N - M5 - M2"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。为了得到最少数量的硬币，应采用贪心策略，优先使用面值最大的硬币。\n\n1.  **选项B正确的原因：**"
+    },
+    {
+      "id": "asO4Nnlbz5WJIBN_6Rgr5",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint loopCount = 0;\nfor (int i=0; i < 10; i++)\n    for (int j=1; j < i; j++)\n        loopCount += 1;\ncout << loopCount;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "55"
+        },
+        {
+          "label": "B",
+          "text": "45"
+        },
+        {
+          "label": "C",
+          "text": "36"
+        },
+        {
+          "label": "D",
+          "text": "28"
+        }
+      ],
+      "answer": "C",
+      "explanation": "外层循环 `i` 从 0 遍历到 9。内层循环 `for (int j=1; j < i; j++)` 只有当 `i` 大于等于 2 时才会执行。当 `i=2` 时，`j` 循环执行 1 次；当 `i=3` 时，执行 2 次；以此类推，直到 `i=9` 时，执行 8 次。因此 `loopCount` 的最终值是 1 + 2 + 3 + 4 + 5"
+    },
+    {
+      "id": "9GGRBZrWgWXEW8ZM6A0a2",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint loopCount = 0;\nfor (int i=0; i < 10; i++){\n    for (int j=0; j < i; j++)\n        if (i * j % 2)\n            break;\n    loopCount += 1;\n}\ncout << loopCount;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "25"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。外层循环 `for (int i=0; i < 10; i++)` 会执行 10 次（`i` 从 0 到 9）。每次外层循环执行时，`loopCount += 1;` 都会被执行一次。内层循环中的 `break` 语句只会提前结束内层循环，但不会影响外层循环继续执行并累加 `loopCount`。因此，`loopCount` 最终会从 0 累加到 10。选项 A、B、D 的值不符合外层循环的执行次数。"
+    },
+    {
+      "id": "WhWhFubqjWb-WrZIxH_Dm",
+      "order": 11,
+      "type": "single_choice",
+      "content": "假设下面C++代码执行过程中仅输入正负整数或0，有关说法错误的是（ ）。\n\n```cpp\nint N,Sum = 0;\ncin >> N;\nwhile (N){\n    Sum += N;\n    cin >> N;\n}\ncout << Sum;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "执行上面代码如果输入0，将终止循环"
+        },
+        {
+          "label": "B",
+          "text": "执行上面代码能实现所有非0整数的求和"
+        },
+        {
+          "label": "C",
+          "text": "执行上面代码第一次输入0，最后将输出0"
+        },
+        {
+          "label": "D",
+          "text": "执行上面代码将陷入死循环，可将 while (N) 改为 while (N==0)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D 错误。原代码 `while (N)` 会在 `N` 为 0 时终止循环，因此不会陷入死循环。将 `while (N)` 改为 `while"
+    },
+    {
+      "id": "1pJ9ou_sHBUV5EkaXG-Ws",
+      "order": 12,
+      "type": "single_choice",
+      "content": "执行下面的C++代码，有关说法正确的是（ ）【质数是指仅能被1和它本身整除的正整数】。\n\n```cpp\nint N;\ncin >> N;\nbool Flag = true;\nfor ( int i = 2; i < N; i++){\n    if (i * i > N)\n        break;\n    if (N % i == 0){\n        Flag = false;\n        break;\n    }\n}\nif (Flag)\n    cout << N << \"是质数\" << endl;\nelse\n    cout << N << \"不是质数\" << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果输入正整数，上面代码能正确判断N是否为质数"
+        },
+        {
+          "label": "B",
+          "text": "如果输入整数，上面代码能正确判断N是否为质数"
+        },
+        {
+          "label": "C",
+          "text": "如果输入大于等于0的整数，上面代码能正确判断N是否质数"
+        },
+        {
+          "label": "D",
+          "text": "如将 Flag = true 修改为 Flag = N>=2? true:false 则能判断所有整数包括负整数、0、正整数是否为质数"
+        }
+      ],
+      "answer": "D",
+      "explanation": "原代码对 `N=1` 或 `N<=0` 的情况判断错误，因为质数定义为大于1的正整数。选项D将 `Flag = true` 修改为 `"
+    },
+    {
+      "id": "1j9a_-d6NGNd2TAymqOU1",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面C++代码用于实现如下图所示的效果，其有关说法正确的是（ ）。\n\n预期输出效果：\n```\n1\n2 4\n3 6 9\n4 8 12 16\n5 10 15 20 25\n```\n\n```cpp\nfor (int i = 1; i < 6; i++){ // L1\n    for (int j = 1; j < i+1; j++) //L2\n        cout << i*j << \" \";\n    cout << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "当前代码能实现预期效果，无需调整代码"
+        },
+        {
+          "label": "B",
+          "text": "如果 cout << endl; 移到循环L2内部，则可实现预期效果"
+        },
+        {
+          "label": "C",
+          "text": "如果 cout << endl; 移到循环L1外部，则可实现预期效果"
+        },
+        {
+          "label": "D",
+          "text": "删除 cout << endl; 行，则可实现预期效果"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当前代码完全符合预期效果。外层循环 `L1` 控制行数 `i` 从 1 到 5，内层循环 `L2` 控制每行打印"
+    },
+    {
+      "id": "3pnU8lEWjl0dKC4ZISdqd",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面C++代码执行后，输出是（ ）。\n\n```cpp\nint cnt1 = 0, cnt2 = 0;\nfor (int i = 0; i < 10; i++){\n    if (i % 2 == 0)\n        continue;\n    if (i % 2)\n        cnt1 += 1;\n    else if (i % 3 == 0)\n        cnt2 += 1;\n}\ncout << cnt1 << \" \" << cnt2;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 2"
+        },
+        {
+          "label": "B",
+          "text": "5 0"
+        },
+        {
+          "label": "C",
+          "text": "0 2"
+        },
+        {
+          "label": "D",
+          "text": "0 0"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码中，`for` 循环遍历 `i` 从 0 到 9。当 `i` 是偶数时，`if (i % 2 == 0"
+    },
+    {
+      "id": "7eikg7QmCcT4MKrDXlDiT",
+      "order": 15,
+      "type": "single_choice",
+      "content": "在下面的C++代码中，N必须是小于10大于1的整数，M为正整数（大于0）。如果M被N整除则M为幸运数，如果M中含有N且能被N整除，则为超级幸运数，否则不是幸运数。程序用于判断M是否为幸运数或超级幸运数或非幸运数。阅读下面代码，有关说法正确的是（ ）。\n\n```cpp\nint N, M;\ncout << \"请输入幸运数字：\";\ncin >> N;\ncout << \"请输入正整数: \";\ncin >> M;\nbool Lucky;\nif (M % N == 0)\n    Lucky = true;\nelse\n    Lucky = false;\nwhile (M){\n    if (M % 10 == N && Lucky){\n        printf(\"%d是%d的超级幸运数!\", M, N);\n        break;\n    }\n    M /= 10;\n}\nif (M == 0)\n    if (Lucky)\n        printf(\"%d是%d的幸运数!\", M, N);\n    else\n        printf(\"%d非%d的幸运数!\", M, N);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果N输入3，M输入36则将输出：36是3的超级幸运数!"
+        },
+        {
+          "label": "B",
+          "text": "如果N输入7，M输入21则将输出：21是7的幸运数!"
+        },
+        {
+          "label": "C",
+          "text": "如果N输入8，M输入36则将输出：36非8的超级幸运数!"
+        },
+        {
+          "label": "D",
+          "text": "如果N输入3，M输入63则将输出：63是3的超级幸运数!"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该程序首先判断 `M` 是否能被 `N` 整除，设置 `Lucky` 标志。然后循环检查 `M` 的每一位是否等于 `N`。如果找到且"
+    },
+    {
+      "id": "wbQIDAAdPn7DIbeHhF6xv",
+      "order": 16,
+      "type": "true_false",
+      "content": "执行C++代码 `cout << '9'+'1';` 的输出为10。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，单引号 `' '` 包裹的是字符字面量。当字符进行算术运算时，它们会隐式转换为其对应的 ASCII 码值。字符 `'9'` 的 ASCII 码是 57，字符 `'1'` 的 ASCII 码是 49，因此 `cout << '9'+'1';` 实际上是计算 `57 + 49`，结果为 `106`。所以，输出不是 10，而是 106，原题目描述错误。"
+    },
+    {
+      "id": "ghM1gmD98t_vZOLG7hVmF",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++表达式 `-12 % 10` 的值为2。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中，取模运算符 `%` 的结果符号与被除数（第一个操作数）的符号相同。因此，`-12 % 10` 的结果符号应为负。计算 `12 % 10` 得到 2，所以 `-12 % 10` 的实际结果是 `-2`。题目中说结果为 2 是错误的，所以正确答案是 F。"
+    },
+    {
+      "id": "VkDGRmDUpE9dLwWb_GtmI",
+      "order": 18,
+      "type": "true_false",
+      "content": "C++表达式 `int(12.56)` 的值为13。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中的 `int()` 强制类型转换（C-style cast）会将浮点数截断为整数，即直接丢弃小数部分。对于正数 `12.56`，截断后得到的值是 `12`，而不是四舍五入后的 `13`。因此，题目中说 `int(12.56)` 的值为 `13` 是错误的。"
+    },
+    {
+      "id": "Tsy6rf7F1zo-mZwN8KzA3",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++的整型变量N被赋值为10，则语句 `cout << N / 3 << \"-\" << N % 3` 执行后输出是3-1。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中，当整型变量 `N` 为10时，`N / 3` 执行整数除法，结果为 `3` (10除以3的商)。`N % 3` 执行取模运算，结果为 `1` (10除以3的余数)。因此，语句 `cout << N / 3 << \"-\" << N % 3` 的输出是 `3-1`。题目描述与实际输出一致，所以是正确的。"
+    },
+    {
+      "id": "MrX7ByGM_IYgpikuCDGw6",
+      "order": 20,
+      "type": "true_false",
+      "content": "在C++代码中，不可以将变量命名为scanf，因为scanf是C++语言的关键字。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`scanf` 并不是 C++ 语言的关键字，它是一个标准库函数（定义在 `<cstdio>` 头文件中）。因此，从语法上讲，你可以将变量命名为 `scanf`。虽然这样做会与标准库函数 `scanf` 产生名称冲突，导致代码难以理解和维护，但 C++ 编译器并不会因为 `scanf` 是关键字而报错。所以原题的说法是错误的。"
+    },
+    {
+      "id": "BlpS2iXz_I_P4ftULAP3J",
+      "order": 21,
+      "type": "true_false",
+      "content": "下面C++代码执行后将导致死循环。\n\n```cpp\nfor (int i = 0; i < 10; i++)\n    continue;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`continue` 语句会跳过当前循环体中剩余的代码，直接进入下一次循环的条件判断和增量表达式。在这个 `for` 循环中，`i++`（增量表达式）是在 `continue` 执行后、下一次循环条件判断前执行的。因此，`i` 会从0递增到9，循环会正常执行10次并最终终止，不会导致死循环。所以原题目中“将导致死循环”的说法是错误的，选项F正确。"
+    },
+    {
+      "id": "2Q0WAh90z1k9eX8FJhnHy",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面C++代码执行后将输出10。\n\n```cpp\nint cnt = 0;\nfor (int i = 0; i < 10; i++)\n    for (int j = 0; j < i; j++){\n        cnt += 1;\n        break;\n    }\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "内层循环中的 `break` 语句导致 `cnt` 在每次外层循环迭代中（当 `i > 0` 时）最多只增加一次。当 `i` 从 1 遍历到 9 时，`cnt` 会累加 9 次。因此，最终 `cnt` 的值为 9，而不是 10。所以，题目中“输出10”的说法是错误的，选项 F 正确。"
+    },
+    {
+      "id": "neOUu8eDkGvUxAQ6aS2-V",
+      "order": 23,
+      "type": "true_false",
+      "content": "下面C++代码执行后，将输出5。\n\n```cpp\nint cnt = 0;\nfor (int i = 1; i < 5; i++)\n    for (int j = i; j < 5; j +=i)\n        if (i * j % 2 == 0)\n            cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "代码中的两层循环会遍历 `i` 从 1 到 4，`j` 从 `i` 开始以 `i` 为步长递增直到小于 5 的所有组合"
+    },
+    {
+      "id": "UFVgZ5zsEuIqM__2fLk1s",
+      "order": 24,
+      "type": "true_false",
+      "content": "下面C++代码能实现正整数各位数字之和。\n\n```cpp\nint N,Sum = 0;\ncin >> N;\nwhile (N){\n    Sum += N % 10;\n    N /= 10;\n}\ncout << Sum;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码通过 `while (N)` 循环，每次迭代使用 `N % 10` 获取当前 `N` 的个位数字并加到 `Sum` 中。接着，`N /= 10` 将 `N` 进行整数除法，去掉个位数字，使其变为剩余数字。这个过程重复进行，直到 `N` 变为0，所有数字都被提取并累加，因此 `Sum` 最终存储了正整数各位数字之和。所以，选项 T (正确) 是对的，选项 F (错误) 是不对的。"
+    },
+    {
+      "id": "ticxW5ToFPEqsnxfslqdE",
+      "order": 25,
+      "type": "true_false",
+      "content": "GESP测试是对认证者的编程能力进行等级认证，同一级别的能力基本上与编程语言无关。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "GESP考试旨在评估学生的通用编程能力和解决问题的思维，这些核心能力（如算法设计、逻辑推理）是独立于具体编程语言的。因此，达到同一级别的认证，主要体现的是你掌握了这些通用的编程思想，而不是特定语言的语法细节。题目描述符合GESP的认证理念，所以是正确的。选择F则意味着编程能力与语言高度绑定，这与GESP的跨语言认证目标不符。"
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202312",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202312",
+  "title": "GESP C++三级 202312",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2023年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202312"
+  },
+  "questions": [
+    {
+      "id": "4dlDgWXo3Cu8y8CXEORqz",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下面C++数组的定义中，会丢失数据的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "char dict_key[] = {'p','t','o'};"
+        },
+        {
+          "label": "B",
+          "text": "int dict_value[] = {33,22,11};"
+        },
+        {
+          "label": "C",
+          "text": "char dict_name[]={'chen','wang','zhou'};"
+        },
+        {
+          "label": "D",
+          "text": "float dict_value[]={3,2,1};"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。选项 C `char dict_name[]={'chen','wang','zhou'};` 试图将多字符常量（如 `'chen'`）赋值给 `char` 数组的单个元素。在 C++ 中，这种多字符常量会被截断，通常只保留最后一个字符，导致原始字符串数据丢失。\n\n其他选项：\nA. `char dict_key[] = {'p','t','o'};` 正确地用单个字符初始化 `char` 数组，没有数据丢失。\nB. `int dict_value[] = {33,22,11};` 正确地用整数初始化 `int` 数组，没有数据丢失。\nD. `float dict_value[]={3,2,1};` 正确地用整数初始化 `float` 数组，整数会被隐式转换为浮点数，没有数据丢失。"
+    },
+    {
+      "id": "1Ptot0sYnucokOoWT8uXA",
+      "order": 2,
+      "type": "single_choice",
+      "content": "在下列编码中，不能够和二进制\"1101 1101\"相等的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "（221）10进制"
+        },
+        {
+          "label": "B",
+          "text": "（335）8进制"
+        },
+        {
+          "label": "C",
+          "text": "（dd）16进制"
+        },
+        {
+          "label": "D",
+          "text": "（5d）16进制"
+        }
+      ],
+      "answer": "D",
+      "explanation": "将二进制数 `1101 1101` 转换为十进制是 221，转换为八进制是 335，转换为十六进制是 DD。选项 A `(221)10进制`、B `(335)8进制` 和 C `(dd)16进制` 都与此二进制数相等。而选项 D `(5d)16进制` 转换为十进制是 93，不等于 221，因此它不能与二进制 `1101 1101` 相等。"
+    },
+    {
+      "id": "FbhoGxn2LJRoTpWyBHhE0",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面C++代码执行后不能输出\"GESP\"的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "string str(\"GESP\"); cout<<str<<endl;"
+        },
+        {
+          "label": "B",
+          "text": "string str=\"GESP\"; cout<<str<<endl;"
+        },
+        {
+          "label": "C",
+          "text": "string str(\"GESP\"); cout<<str[1]<<str[2]<<str[3]<<str[4]<<endl;"
+        },
+        {
+          "label": "D",
+          "text": "string str{\"GESP\"}; cout<<str<<endl;"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C 中，`std::string` 的字符索引是从 0 开始的，所以 `str(\"GESP\")` 的有效索引是 `str[0]` 到 `str[3]`。尝试访问 `str[4]` 属于越界行为，会导致程序出错或输出不确定内容，因此无法输出 \"GESP\"。而选项 A、B、D 都使用了 `std::string` 合法的"
+    },
+    {
+      "id": "FjrVkXTJzqfmFNb_9HrxI",
+      "order": 4,
+      "type": "single_choice",
+      "content": "执行下面C++代码输出是（ ）。\n\n```cpp\nint temp=0;\nfor(int i=1;i<7;i++)\n{\n    for(int j=1;j<5;j++)\n    {\n        if(i/j==2)\n        {\n            temp++;\n        }\n    }\n}\ncout<<temp<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "C",
+      "explanation": "代码中的 `i/j` 是整数除法。只有当 `(i, j)` 分别为 `(2, 1)`、`(4, 2)`、`(5"
+    },
+    {
+      "id": "aBvl_YHVM2ZgR41rt4_gc",
+      "order": 5,
+      "type": "single_choice",
+      "content": "执行下面C++代码后，输出是（ ）。\n\n```cpp\nstring str=(\"chen\");\nint x=str.length();\nint temp=0;\nfor(int i=0;i<=x;i++)\n{\n    temp++;\n}\ncout<<temp<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`str.length()` 获取字符串 \"chen\" 的长度 `x` 为 4。循环 `for(int i=0;i<=x;i++)` 的条件是 `i<=x`，这意味着 `i` 会从 0 遍历到 4，总共执行 5 次。`temp` 初始为 0，每次循环 `temp++`，因此最终 `temp` 的值为 5。选项 A (4) 是字符串长度，但循环多执行了一次；选项 B 和 D 均不符合循环逻辑。"
+    },
+    {
+      "id": "ZGhIoEa5iRhqFgxDIufpt",
+      "order": 6,
+      "type": "single_choice",
+      "content": "执行下面C++代码后输出的是（ ）。\n\n```cpp\nstring str=(\"chen\");\nint x=str.length();\ncout<<x<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "A",
+      "explanation": "字符串 `str` 被初始化为 \"chen\"。`str.length()` 函数用于获取字符串中字符的数量。字符串 \"chen\" 包含 'c'、'h'、'e'、'n' 共 4 个字符，所以 `x` 的值是 4，并被输出。因此，选项 A 是正确的，其他选项不符合字符串的实际长度。"
+    },
+    {
+      "id": "6XjJ75DbrJf9HmkzQJpDf",
+      "order": 7,
+      "type": "single_choice",
+      "content": "执行下面C++代码后输出的是（ ）。\n\n```cpp\nstring str=(\"chen\");\ncout<<str[5]<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "输出未知的数"
+        },
+        {
+          "label": "B",
+          "text": "输出'n'"
+        },
+        {
+          "label": "C",
+          "text": "输出'\\0'"
+        },
+        {
+          "label": "D",
+          "text": "输出空格"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`string str(\"chen\")` 的长度为4，有效索引为0到3。访问 `str[5]` 属于越界操作，这会导致未定义行为，因此输出的结果是不可预测的，即“未知的数”。选项A正确。选项B、C、D错误，因为越界访问不会保证输出特定的字符，如`'n'`、`'\\0'`或空格。"
+    },
+    {
+      "id": "z5VqOHHbUnciwBPAMiw1k",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nchar ch[10]={'1'};\ncout<<ch[2]<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "输出空格"
+        },
+        {
+          "label": "D",
+          "text": "什么也不输出"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`char ch[10]={'1'};` 声明了一个字符数组，`ch[0]`被初始化为`'1'`，而其余元素（包括`ch[2]`）则被自动初始化为`\\0`（空字符）。`cout`遇到空字符时，不会在屏幕上输出任何可见内容，因此什么也不输出。选项A、B、C错误，因为`ch[2]`既不是数字0、字符1，也不是空格字符。"
+    },
+    {
+      "id": "RnZllSqe9Jb6n_-NELxXQ",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码用于统计每种字符出现的次数，当输出为3时，横线上不能填入的代码是（ ）。\n\n```cpp\nstring str=\"GESP is a good programming test!\";\nint x=0;\nfor(int i=0;i<str.length();i++)\n{\n    if(________)\n    {\n        x++;\n    }\n}\ncout<<x<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "str[i]=='o'"
+        },
+        {
+          "label": "B",
+          "text": "str[i]=='a'+14"
+        },
+        {
+          "label": "C",
+          "text": "str[i]==115"
+        },
+        {
+          "label": "D",
+          "text": "str[i]==111"
+        }
+      ],
+      "answer": "C",
+      "explanation": "这道题考察字符的ASCII码和字符串遍历。代码统计了特定字符在字符串 `str` 中出现的次数，最终输出 `x=3`。我们需要找出哪个选项填"
+    },
+    {
+      "id": "uVPyd3fXvxejzxo4Ill8r",
+      "order": 10,
+      "type": "single_choice",
+      "content": "32位计算机中，C++的整型变量int能够表示的数据范围是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2^31~(2^31)-1"
+        },
+        {
+          "label": "B",
+          "text": "2^32"
+        },
+        {
+          "label": "C",
+          "text": "-2^31~+(2^31)-1"
+        },
+        {
+          "label": "D",
+          "text": "-(2^31)+1~2^31"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C选项正确。在32位系统中，`int`类型占用32位，其中1位用于表示符号（正负），剩余31位表示数值大小。因此，它能表示的范围是从最小的负数`-2^31`到最大的正数`+(2^31)-1`。A选项范围错误，不包含负数；B选项`2^32`是32位能表示的总数值个数，而非范围；D选项的上下限均不符合有符号整数的表示规则。"
+    },
+    {
+      "id": "oEOljMmw5phqI8j868jTo",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面C++程序执行的结果是（ ）。\n\n```cpp\nint cnt=0;\nfor(int i=0;i<=20;i++)\n{\n    if(i%3==0&&i%5==0)\n    {\n        cnt++;\n    }\n}\ncout<<cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该程序统计0到20之间，同时能被3和5整除的数的个数。条件 `i%3==0 && i%5==0` 意味着 `i` 必须是3和5的公倍数，即15的倍数。在 `i` 从0到20的范围内，满足此条件的数只有 `0` 和 `15`。因此，`cnt` 会被累加两次，最终输出 `2`。其他选项不符合正确的计数结果。"
+    },
+    {
+      "id": "ofQmERgTPV_2RU_lK_Vqv",
+      "order": 12,
+      "type": "single_choice",
+      "content": "C++的数据类型转换让人很难琢磨透，下列代码输出的值是（ ）。\n\n```cpp\nint a=3;\nint b=2;\ncout<<a/b*1.0<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1.5"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "1.50"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`a/b` (即 `3/2`) 是整数除法，结果会截断小数部分，得到 `1`。接着，`1 * 1.0` 会将整数 `1` 提升为浮点数 `1.0`，再进行浮点乘法，结果仍是 `1.0`。`cout` 默认输出浮点数 `1.0` 时会显示为 `1`。因此，选项 A、D 错误在于误认为是浮点除法，选项 C 则与计算结果不符。"
+    },
+    {
+      "id": "yMOO0QYo99e9nRhwHRwop",
+      "order": 13,
+      "type": "single_choice",
+      "content": "C++代码用于抽取字符串中的电话号码。约定：电话号码全部是数字，数字之间没有其他符号如连字符或空格等。代码中变量strSrc仅仅是示例，可以包含更多字符。下面有关代码说法，正确的说法是（ ）。\n\n```cpp\nstring strSrc=\"红十字：01084025890火警电话：119急救电话：120紧急求助：110\";\nstring tel=\"\";\nfor(int i=0;i<=strSrc.length();i++)\n{\n    if(strSrc[i]>='0'&&strSrc[i]<='9')\n    {\n        tel=tel+strSrc[i];\n    }\n    else if(tel!=\"\")\n    {\n        cout<<tel<<endl;\n        tel=\"\";\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "代码将换行输出各个含有数字的电话号码。"
+        },
+        {
+          "label": "B",
+          "text": "代码将不换行输出各个含有数字的电话号码，号码中间没有分隔。"
+        },
+        {
+          "label": "C",
+          "text": "代码将不换行输出各个含有数字的电话号码，号码中间有分隔。"
+        },
+        {
+          "label": "D",
+          "text": "不能够输出数字电话号码。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "代码中的 `cout<<tel<<endl;` 语句在每次识别出一个完整的电话号码后，都会输出该号码并紧接着输出一个换行符（`endl`）。因此，每个"
+    },
+    {
+      "id": "-aK8dDIboiKr-DzVGOdYt",
+      "order": 14,
+      "type": "single_choice",
+      "content": "某公司新出了一款无人驾驶的小汽车，通过声控智能驾驶系统，乘客只要告诉汽车目的地，车子就能自动选择一条优化路线，告诉乘客后驶达那里。请问下面哪项不是驾驶系统完成选路所必须的。（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "麦克风"
+        },
+        {
+          "label": "B",
+          "text": "扬声器"
+        },
+        {
+          "label": "C",
+          "text": "油量表"
+        },
+        {
+          "label": "D",
+          "text": "传感器"
+        }
+      ],
+      "answer": "C",
+      "explanation": "油量表主要用于监测汽车的燃油情况，与驾驶系统“选择优化路线”的计算过程并非直接相关。麦克风用于接收乘客的目的地指令，扬声器用于告知乘客选定的路线，而传感器（如GPS）则提供车辆位置"
+    },
+    {
+      "id": "OHoopnvjTXvBWFJ-y1I0q",
+      "order": 15,
+      "type": "single_choice",
+      "content": "现代计算机是指电子计算机，它所基于的是（ ）体系结构。",
+      "options": [
+        {
+          "label": "A",
+          "text": "艾伦·图灵"
+        },
+        {
+          "label": "B",
+          "text": "冯·诺依曼"
+        },
+        {
+          "label": "C",
+          "text": "阿塔纳索夫"
+        },
+        {
+          "label": "D",
+          "text": "埃克特-莫克利"
+        }
+      ],
+      "answer": "B",
+      "explanation": "现代电子计算机普遍基于冯·诺依曼体系结构，其核心思想是程序存储和数据与指令共享内存。艾伦·图灵提出了计算的理论模型，而非实际计算机的体系结构。阿塔纳索夫和埃克特-莫克利是早期电子计算机的先驱，但他们开发的计算机并非现代计算机的通用体系结构基础。"
+    },
+    {
+      "id": "hT23BELG2cfUxXYCqmHmN",
+      "order": 16,
+      "type": "true_false",
+      "content": "执行C++代码 `cout<<(5&&2)<<endl;` 后将输出 1 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，任何非零值在布尔上下文中都被视为 `true`。因此，`5` 被视为 `true`，`2` 也被视为 `true`。逻辑与运算符 `&&` 对 `true && true` 的求值结果是 `true`。当布尔值 `true` 被输出到 `cout` 时，它会被隐式转换为整数 `1`。所以，输出 `1` 是正确的。"
+    },
+    {
+      "id": "1I9xX7EGvbxvBEUqFKVqv",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++程序执行后，输入 chen a dai 输出应该为： chen 。\n\n```cpp\nstring str;\ncin>>str;\ncout<<str;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`cin >> str` 语句默认以空格、制表符或换行符作为分隔符，只会读取并存储第一个非空白字符序列。因此，当输入 `chen a dai` 时，`str` 只会读取到 `chen`。随后的 `cout << str` 便会输出 `chen`，所以判断为正确。选择 F 错误，是因为程序设计就是如此，不会读取并输出 `a dai`。"
+    },
+    {
+      "id": "pEPd3crfBqp-lafx9_Nxj",
+      "order": 18,
+      "type": "true_false",
+      "content": "执行C++代码 `cout<<(5||2);` 后将输出 1 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中，`||` 是逻辑或运算符。在逻辑表达式中，任何非零值（如 `5` 和 `2`）都被视为 `true`。因此，表达式 `(5||2)` 的结果是 `true`。当 `true` 被 `cout` 输出时，它会被隐式转换为整数 `1`。所以，输出 `1` 是正确的。"
+    },
+    {
+      "id": "-oi4RmTQBfuGHZTRnFOBN",
+      "order": 19,
+      "type": "true_false",
+      "content": "执行下面C++代码后将输出\"China\"。\n\n```cpp\nstring a=\"china\";\na.replace(0,1,\"C\");\ncout<<a<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`string a=\"china\";` 将字符串 `a` 初始化为 \"china\"。`a.replace(0, 1, \"C\");` 的作用是从字符串 `a` 的索引 0 位置开始，替换 1 个字符为 \"C\"。这会将原字符串中的小写 'c' 替换为大写 'C'，使 `a` 变为 \"China\"。因此，`cout<<a<<endl;` 将输出 \"China\"，所以选项 T 是正确的。"
+    },
+    {
+      "id": "KHPEsKeSLp2us76NWEaL9",
+      "order": 20,
+      "type": "true_false",
+      "content": "执行C++代码将输出 0 5 ， 5 之后还有一个空格。\n\n```cpp\nint list[10]={1,2,3,4,5,6,7,8,9,10};\nfor(int i=0;i<10;i++)\n{\n    if(i%5==0)\n    {\n        cout<<list[i]<<\" \";\n    }\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "代码中的 `list` 数组初始化为 `{1, 2, 3, ...}`，所以 `list[0]` 的值是 1，`list[5]` 的值是 6。循环 `for(int i=0; i<10; i++)` 中，当 `i` 为 0 时，`i%5==0` 成立，输出 `list[0]` 即 `1`。当 `i` 为 5 时，`i%5==0` 成立，输出 `list[5]` 即 `6`。因此，实际输出是 `1 6 `。题目描述的输出 `0 5 ` 与实际不符，所以选项 F (错误) 是正确的。"
+    },
+    {
+      "id": "dW9DW4gP3OHV1qX4LcQ5I",
+      "order": 21,
+      "type": "true_false",
+      "content": "下面C++代码将输出1。\n\n```cpp\nint list[10]={1};\ncout<<list<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "数组名 `list` 在 `cout` 中会退化为指向其首元素的指针。因此，`cout << list` 会打印出数组 `list` 的内存地址，而不是 `list[0]` 的值 `1`。如果想输出 `1`，应该使用 `cout << list[0] << endl;`。所以，题目中说输出 `1` 是错误的，正确答案为 F。"
+    },
+    {
+      "id": "b52G_s-7ljw0m2zd3dIUD",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面C++程序将输出1。\n\n```cpp\nint arr[10]={1};\ncout<<arr[0]<<endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中，当数组被部分初始化时，未显式初始化的元素会被自动设置为零。语句 `int arr[10]={1};` 将 `arr[0]` 初始化为 `1`，而 `arr[1]` 到 `arr[9]` 则被自动初始化为 `0`。因此，`cout<<arr[0]<<endl;` 会输出 `1`，题目描述是正确的。"
+    },
+    {
+      "id": "zuIpC_2t7gHH-BuieJ8Y4",
+      "order": 23,
+      "type": "true_false",
+      "content": "执行C++代码，将输出 1 3 5 7 9 ， 9 之后还有一个空格。\n\n```cpp\nint list[10]={1,2,3,4,5,6,7,8,9,10};\nfor(int i=0;i<10;i+=2)\n{\n    cout<<list[i]<<\" \";\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "代码初始化数组 `list`。循环 `for(int i=0;i<10;i+=2)` 从 `i=0` 开始，每次 `i` 增加 2，依次访问 `list[0]`、`list[2]`、`list[4]`、`list[6]`、`list[8]`。`cout<<list[i]<<\" \";` 会打印这些元素及其后的空格。因此，程序将输出 1 3 5 7 9 ，并在 9 之后输出一个空格，与题目描述完全一致。所以答案是 T。"
+    },
+    {
+      "id": "eDttmgBmHOZs4OMdXapmy",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨最近在准备考GESP，他用的Dev C++来练习和运行程序，所以Dev C++也是一个小型操作系统。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "Dev C++是一个集成开发环境（IDE），它提供代码编辑、编译、调试等功能，帮助程序员编写C++程序。它本身并不是一个操作系统，而是运行在Windows等操作系统之上的应用程序。操作系统负责管理计算机的硬件和软件资源，而Dev C++只是一个工具软件。因此，题目中的说法是错误的。"
+    },
+    {
+      "id": "Yxoxn2reZTVTfXg56jvHU",
+      "order": 25,
+      "type": "true_false",
+      "content": "任何一个while循环都可以转化为等价的for循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。任何 `while` 循环都可以等价地转化为 `for` 循环。`while` 循环的条件可以直接作为 `for` 循环的条件部分；`while` 循环前的初始化语句可以移到 `for` 循环的初始化部分；循环体内的步进语句可以移到 `for` 循环的步进部分。如果 `while` 循环没有对应的部分，`for` 循环的相应位置可以留空，例如 `for (;;)` 等价于 `while (true)`。因此，选项 F 是错误的。"
+    }
+  ]
+}

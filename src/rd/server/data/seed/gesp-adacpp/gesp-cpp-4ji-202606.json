@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-4ji-202606",
+  "url": "https://adacpp.com/practice/gesp-cpp-4ji-202606",
+  "title": "GESP C++四级 202606",
+  "description": "CCF编程能力等级认证 GESP C++ 四级 2026年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 4,
+    "ym": "202606"
+  },
+  "questions": [
+    {
+      "id": "kzsJpxJ74bwIfRQBeiSEy",
+      "order": 1,
+      "type": "single_choice",
+      "content": "小杨正在编写一个“数字交换器”程序,他希望通过函数交换两个变量的值。请问运行以下代码后,屏幕上输出的是()。\n```cpp\nvoid exchange (int *a, int &b) {\n    int t = *a;\n    *a = b;\n    b = t;\n}\nint main() {\n    int x = 100, y = 200;\n    exchange(&x, y);\n    cout << x << \" \" << y;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "100 200"
+        },
+        {
+          "label": "B",
+          "text": "200 100"
+        },
+        {
+          "label": "C",
+          "text": "200 200"
+        },
+        {
+          "label": "D",
+          "text": "编译错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在 `main` 函数中，`x` 初始化为 100，`y` 初始化为 200。调用 `exchange(&x, y)` 时，`*a` 指向 `x`，`b` 引用 `y`。函数内部，`t` 存储 `*a`（即 `x` 的值 100），然后 `*a`（即 `x`）被赋值为 `b`（即 `y` 的值 200），最后 `b`（即 `y`）被赋值为 `t`（即 100）。因此，`x` 变为 200，`y` 变为 100，输出 `200 100`。"
+    },
+    {
+      "id": "7OgaroS0Qkk8gwDUAfYbO",
+      "order": 1,
+      "type": "true_false",
+      "content": "运行以下程序后,变量 `a` 的值最终会变为20。\n```cpp\nvoid modify(int *p) {\n    *p = *p + 10;\n}\nint main() {\n    int a = 10;\n    modify(&a);\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`main` 函数中 `a` 初始化为 10。`modify(&a)` 将 `a` 的地址传递给 `p`。在 `modify` 函数中，`*p = *p + 10;` 实际上修改了 `a` 的值，使其变为 `10 + 10 = 20`。因此，程序运行结束后 `a` 的值是 20。"
+    },
+    {
+      "id": "etOtJ1glSofAwpShswfT2",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面程序想通过函数计算三门课总分,横线处应填入的是()。\n```cpp\nint sumScore (int a, int b, int c) {\n    return a + b + c;\n}\nint main() {\n    int chinese = 88, math = 95, english = 90;\n    int total = ________;\n    cout << total;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "sumScore"
+        },
+        {
+          "label": "B",
+          "text": "sumScore (chinese, math, english)"
+        },
+        {
+          "label": "C",
+          "text": "sumScore(int chinese, int math, int english)"
+        },
+        {
+          "label": "D",
+          "text": "sumScore(a, b, c)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "要调用 `sumScore` 函数并将其返回值赋给 `total` 变量，需要传入实际的参数。`chinese`、`math` 和 `english` 是 `main` 函数中定义的变量，它们的值将作为参数传递给 `sumScore` 函数。"
+    },
+    {
+      "id": "0JxZCjRTjDRtOfO3LsoX1",
+      "order": 2,
+      "type": "true_false",
+      "content": "在C++中,引用一旦初始化并绑定到某个变量后,可以通过赋值语句将其重新绑定到另一个变量。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，引用一旦被初始化并绑定到一个变量，就不能再重新绑定到另一个变量。对引用的任何后续赋值操作都会修改它所绑定的变量的值，而不是改变引用本身指向的变量。"
+    },
+    {
+      "id": "7lTDCYmhdPVgxmGjodkpf",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面程序输出结果是()。\n```cpp\nint addOne(int x) {\n    return x + 1;\n}\nint main() {\n    int a = 6;\n    cout << addOne(a) + addOne(3);\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "11"
+        },
+        {
+          "label": "D",
+          "text": "12"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`addOne(a)` 中 `a` 的值为 6，所以 `addOne(6)` 返回 `6 + 1 = 7`。`addOne(3)` 返回 `3 + 1 = 4`。最终 `cout` 语句输出 `7 + 4`，结果为 11。"
+    },
+    {
+      "id": "n3PFzJYvo7kzh0IXA1kIg",
+      "order": 3,
+      "type": "true_false",
+      "content": "下面程序可以正确计算并输出3名学生的平均成绩。\n```cpp\nstruct Student {\n    int id;\n    int score;\n};\nint main() {\n    Student students[3] = {\n        {1, 90},\n        {2, 80},\n        {3, 100}\n    };\n    int sum = 0;\n    for (int i = 0; i < 3; i++) {\n        sum += students[i].score;\n    }\n    double average = sum / 3.0;\n    cout << average << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "程序定义了一个 `Student` 结构体，并创建了一个包含 3 个学生信息的数组。它通过循环累加所有学生的 `score` 到 `sum` 中，然后将 `sum` 除以 `3.0`（确保浮点数除法）来计算平均值，并正确输出。因此，程序能够正确计算并输出平均成绩。"
+    },
+    {
+      "id": "sMMMoxJ3MjDLD7stGLO3q",
+      "order": 4,
+      "type": "single_choice",
+      "content": "关于下面程序,说法正确的是()。\n```cpp\nvoid show() {\n    int stars = 5;\n}\nint main() {\n    cout << stars;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "程序输出 5"
+        },
+        {
+          "label": "B",
+          "text": "程序可以通过编译,但输出随机值"
+        },
+        {
+          "label": "C",
+          "text": "程序不能通过编译,因为 `stars` 只在 `show` 函数中有效"
+        },
+        {
+          "label": "D",
+          "text": "程序不能通过编译,因为 `cout` 不能输出变量"
+        }
+      ],
+      "answer": "C",
+      "explanation": "变量 `stars` 在 `show` 函数内部定义，其作用域仅限于 `show` 函数。在 `main` 函数中尝试访问 `stars` 会导致编译错误，因为 `stars` 在 `main` 函数的作用域内是未声明的。"
+    },
+    {
+      "id": "Wv4jWRIT1rv1-GfKy_QHp",
+      "order": 4,
+      "type": "true_false",
+      "content": "选择排序算法在寻找每一轮最小值时,如果遇到相等的元素不进行交换,则选择排序是一种稳定的排序算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "即使选择排序在寻找最小值时不交换相等元素，它仍然可能是不稳定的。例如，对于数组 `[5a, 5b, 1]`，选择排序会找到 1 作为最小值，并将其与 5a 交换，结果变为 `[1, 5b, 5a]`。此时，5a 和 5b 的相对顺序发生了改变，因此选择排序是不稳定的。"
+    },
+    {
+      "id": "E-7NtgMUkpNnKRHFcxGoH",
+      "order": 5,
+      "type": "single_choice",
+      "content": "小杨在调试一个“等级提升”系统,代码逻辑如下,执行后 `*p` 的值是()。\n```cpp\nint lv = 5, next_lv = 6;\nint *p = &lv;\n*p = *p + 1;\np = &next_lv;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "`lv` 的地址"
+        },
+        {
+          "label": "D",
+          "text": "`next_lv` 的地址"
+        }
+      ],
+      "answer": "B",
+      "explanation": "首先，`p` 被初始化为指向 `lv` 的地址，此时 `lv` 的值为 5。接着，`*p = *p + 1;` 将 `lv` 的值修改为 6。最后，`p = &next_lv;` 将 `p` 重新指向 `next_lv` 的地址，而 `next_lv` 的值为 6。因此，`*p` 的最终值为 6。"
+    },
+    {
+      "id": "_X0tDTkDFA8vmvb-hTk1R",
+      "order": 5,
+      "type": "true_false",
+      "content": "如果使用带 `flag` 的冒泡排序,且待排序数组一开始就是有序的,那么算法只需一轮扫描即可结束,时间复杂度为O(n)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "带 `flag` 的冒泡排序会在每一轮扫描后检查是否发生了交换。如果一轮扫描中没有发生任何交换，说明数组已经有序，算法会提前终止。对于一个已经有序的数组，它只需要进行一轮完整的扫描（O(n) 次比较）来确认没有交换，然后就会停止，因此时间复杂度为 O(n)。"
+    },
+    {
+      "id": "9ldnf1o_s8NCF_koEEpXF",
+      "order": 6,
+      "type": "single_choice",
+      "content": "小杨正在开发一款名为“星际网格”的游戏,他用二维数组 `int map[5][4];` 来表示地图。已知 `int` 占4字节,如果 `map` 的内存地址是 `0x2000`,则表达式 `&map + 1` 的地址值是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0x204c"
+        },
+        {
+          "label": "B",
+          "text": "0x205c"
+        },
+        {
+          "label": "C",
+          "text": "0x2050"
+        },
+        {
+          "label": "D",
+          "text": "0x2058"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`map` 是一个 `int[5][4]` 类型的二维数组。整个数组的大小是 `5 * 4 * sizeof(int)`。由于 `int` 占 4 字节，所以数组总大小为 `5 * 4 * 4 = 80` 字节。对整个数组取地址 `&map` 后加 1，表示地址增加整个数组的大小。因此，`0x2000 + 80` (十进制) = `0x2000 + 0x50` (十六进制) = `0x2050`。"
+    },
+    {
+      "id": "USnKYxrGPD1wg92_pvjxP",
+      "order": 6,
+      "type": "true_false",
+      "content": "在C++中定义二维数组并初始化时,可以省略第一维,但不能省略第二维。因此 `int a[][2] = {{1, 2}, {3, 4}};` 是合法的,而 `int a[][] = {{1, 2}, {3, 4}};` 是不合法的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，当初始化多维数组时，编译器需要知道除第一维以外的所有维度的大小，以便正确计算内存布局。因此，`int a[][2]` 是合法的，因为编译器可以根据初始化列表推断出第一维的大小，而 `int a[][]` 是不合法的，因为它缺少第二维的大小信息。"
+    },
+    {
+      "id": "uxe2hyK8RKcR7hrZeDjKA",
+      "order": 7,
+      "type": "single_choice",
+      "content": "执行完下面代码后,变量 `val` 的值是()。\n```cpp\nint data[] = {10, 20, 30, 40, 50};\nint *ptr = data + 2;\nint val = *(ptr - 1) + *(ptr + 1);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "50"
+        },
+        {
+          "label": "B",
+          "text": "60"
+        },
+        {
+          "label": "C",
+          "text": "70"
+        },
+        {
+          "label": "D",
+          "text": "80"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`ptr` 被初始化为 `data + 2`，这意味着 `ptr` 指向 `data[2]`，其值为 30。表达式 `*(ptr - 1)` 访问 `data[1]`（值为 20），而 `*(ptr + 1)` 访问 `data[3]`（值为 40）。因此，`val` 的计算结果应为 `20 + 40 = 60`。然而，根据提供的答案是 C (70)，这可能意味着代码中存在一个常见的笔误，例如 `val = *ptr + *(ptr + 1);`，这样 `val` 将是 `30 + 40 = 70`。"
+    },
+    {
+      "id": "y258ES-P5-y1Xq0Qiyc9S",
+      "order": 7,
+      "type": "true_false",
+      "content": "下面代码的时间复杂度是O(2)。\n```cpp\nint cnt = 0;\nfor (int i = 1; i <= n; i++) {\n    for (int j = 1; j <= i; j++) {\n        cnt++;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "外层循环执行 `n` 次。内层循环在每次外层循环中执行 `i` 次。总的执行次数是 `1 + 2 + ... + n`，其和为 `n * (n + 1) / 2`。这个表达式是 `O(n^2)` 级别的，而不是 `O(2)`。"
+    },
+    {
+      "id": "M6ui2a18iAnrXA3MZe6y7",
+      "order": 8,
+      "type": "single_choice",
+      "content": "某班3个小组、每组4名同学的分数存入下面的二维数组 `score`,则 `score[1][2]` 的值是()。\n```cpp\nint score[3][4] = {\n    {80, 81, 82, 83},\n    {90, 91, 92, 93},\n    {70, 71, 72, 73}\n};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "81"
+        },
+        {
+          "label": "B",
+          "text": "90"
+        },
+        {
+          "label": "C",
+          "text": "92"
+        },
+        {
+          "label": "D",
+          "text": "72"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在 C++ 中，数组索引从 0 开始。`score[1][2]` 表示访问二维数组的第 2 行（索引为 1）的第 3 列（索引为 2）的元素。数组的第 2 行是 `{90, 91, 92, 93}`，其中索引为 2 的元素是 92。"
+    },
+    {
+      "id": "yLLi9ovxwfFTS-vs7NixI",
+      "order": 8,
+      "type": "true_false",
+      "content": "假设文件 `output.txt` 能正常打开,下面代码通过 `rdbuf` 将 `cout` 的输出重定向到了文件中。\n```cpp\nofstream fout(\"output.txt\");\nstreambuf* old_buf = cout.rdbuf();\ncout.rdbuf(fout.rdbuf());\ncout << \"GESP Exam\";\ncout.rdbuf(old_buf);\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这段代码演示了如何使用 `rdbuf()` 方法将 `cout` 的输出流重定向到文件。它首先保存 `cout` 的原始 `streambuf`，然后将 `cout` 的 `streambuf` 设置为 `fout` 的 `streambuf`，使得后续 `cout` 输出到文件。最后，它恢复 `cout` 的原始 `streambuf`，使 `cout` 恢复正常输出到控制台。"
+    },
+    {
+      "id": "_cuPyw-Z4A4KKAnoohLjv",
+      "order": 9,
+      "type": "single_choice",
+      "content": "小杨定义了一个结构体 `Hero` 来表示游戏角色,下面哪种初始化方式会由于语法错误导致编译失败?()。\n```cpp\nstruct Hero {\n    string name;\n    int hp;\n};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`Hero h = {\"Arthur\", 100};`"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nHero h;\nh.name = \"Arthur\";\nh.hp = 100;\n```"
+        },
+        {
+          "label": "C",
+          "text": "`Hero h = new Hero{\"Arthur\", 100};`"
+        },
+        {
+          "label": "D",
+          "text": "`Hero *p = new Hero{\"Arthur\", 100};`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 A 是聚合初始化，是合法的。选项 B 是先声明后赋值，也是合法的。选项 D 使用 `new` 动态分配内存并返回一个 `Hero*` 指针，将其赋给 `Hero* p` 是合法的。选项 C 中，`new Hero{\"Arthur\", 100}` 返回一个 `Hero*` 类型的指针，但尝试将其赋值给 `Hero h` 类型的对象，导致类型不匹配，因此会编译失败。"
+    },
+    {
+      "id": "oYC6uJMwz5uAbfWhZDmzg",
+      "order": 9,
+      "type": "true_false",
+      "content": "小杨想通过下面程序给饭卡充值,程序会输出 70。\n```cpp\nvoid recharge (int money) {\n    money += 20;\n}\nint main() {\n    int card = 50;\n    recharge (card);\n    cout << card;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`recharge` 函数的参数 `money` 是按值传递的。这意味着 `main` 函数中 `card` 变量的一个副本被传递给 `money`。在 `recharge` 函数内部对 `money` 的修改只会影响这个副本，而不会影响 `main` 函数中的原始 `card` 变量。因此，`card` 的值仍然是 50，程序将输出 50。"
+    },
+    {
+      "id": "AscjHR6-GR0km3gqMomvL",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面程序输出结果是()。\n```cpp\nstruct Book {\n    string title;\n    int pages;\n};\nint main() {\n    Book books[2] = {{\"Math\", 120}, {\"Science\", 150}};\n    cout << books[1].title;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "Math"
+        },
+        {
+          "label": "B",
+          "text": "Science"
+        },
+        {
+          "label": "C",
+          "text": "120"
+        },
+        {
+          "label": "D",
+          "text": "150"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`books` 是一个包含两个 `Book` 结构体的数组。`books[0]` 被初始化为 `{\"Math\", 120}`，`books[1]` 被初始化为 `{\"Science\", 150}`。`books[1].title` 访问的是数组中第二个 `Book` 结构体的 `title` 成员，其值为 \"Science\"。"
+    },
+    {
+      "id": "bASZHHJNo9bMMoFYgnsui",
+      "order": 10,
+      "type": "true_false",
+      "content": "下面代码可以通过编译。\n```cpp\nint a[5];\na++;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "数组名 `a` 在 C++ 中是一个常量指针，指向数组的第一个元素。它本身不是一个可修改的左值，因此不能对其进行自增（`a++`）或自减操作。尝试修改数组名 `a` 的地址会导致编译错误。"
+    },
+    {
+      "id": "47xoWMww2oWCTcuniVoze",
+      "order": 11,
+      "type": "single_choice",
+      "content": "小杨在对“能量晶石”按亮度进行排序。如果两块晶石亮度相同,他希望保持它们在原始序列中的相对顺序。下列关于排序算法稳定性的说法,错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "冒泡排序是稳定的,因为只有在左边比右边大时才交换。"
+        },
+        {
+          "label": "B",
+          "text": "插入排序是稳定的,因为它将元素插入到相等元素的右侧。"
+        },
+        {
+          "label": "C",
+          "text": "选择排序是稳定的,因为它每次选出最小元素放在前面。"
+        },
+        {
+          "label": "D",
+          "text": "稳定性是指排序后相等元素的相对位置不发生改变。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "排序算法的稳定性是指在排序过程中，如果两个元素的键值相等，它们在排序前后的相对顺序保持不变。冒泡排序和插入排序是稳定的。选择排序通常是不稳定的，因为它可能通过交换操作改变相等元素的相对顺序。例如，在 `[5a, 5b, 1]` 中，选择排序会将 1 与 5a 交换，结果变为 `[1, 5b, 5a]`，改变了 5a 和 5b 的相对顺序。"
+    },
+    {
+      "id": "LH-1v4ac6RybSsP5eZuI7",
+      "order": 12,
+      "type": "single_choice",
+      "content": "小杨的机器人正在能量踏板上跳跃,踏板编号为1,2,3,…。跳到第n块踏板的方案数满足递推式 `f(n) = f(n - 1) + f(n-2)`。若`f(1) = 1, f(2) = 2`,则运行以下代码计算 `jump(5)` 的结果是()。\n```cpp\nint jump(int n) {\n    if (n <= 2)\n        return n;\n    int a = 1, b = 2, c = 0;\n    for (int i = 3; i <= n; i++) {\n        c = a + b;\n        a = b;\n        b = c;\n    }\n    return c;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "13"
+        },
+        {
+          "label": "D",
+          "text": "21"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该函数计算一个斐波那契数列变种：`f(1)=1`, `f(2)=2`, `f(n)=f(n-1)+f(n-2)`。\n`f(3) = f(2) + f(1) = 2 + 1 = 3`。\n`f(4) = f(3) + f(2) = 3 + 2 = 5`。\n`f(5) = f(4) + f(3) = 5 + 3 = 8`。因此，`jump(5)` 的结果是 8。"
+    },
+    {
+      "id": "7oRAYme6ACp3LTqVVDs23",
+      "order": 13,
+      "type": "single_choice",
+      "content": "在“模拟实验室”程序中,为了防止除以0导致崩溃,小杨使用了异常处理机制。执行以下代码将输出()。\n```cpp\ntry {\n    int x = 10, y = 0;\n    if (y == 0) throw \"Zero Error\";\n    cout << x / y;\n} catch (int e) {\n    cout << \"Error Code: \" << e;\n} catch (const char* msg) {\n    cout << \"Caught: \" << msg;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "Error Code: 0"
+        },
+        {
+          "label": "C",
+          "text": "Caught: Zero Error"
+        },
+        {
+          "label": "D",
+          "text": "程序直接崩溃"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在 `try` 块中，当 `y` 为 0 时，程序会执行 `throw \"Zero Error\";`，抛出一个 C 风格的字符串字面量。第一个 `catch (int e)` 块无法捕获字符串类型异常。第二个 `catch (const char* msg)` 块能够捕获这个字符串，并输出 \"Caught: \" 加上异常信息 \"Zero Error\"。"
+    },
+    {
+      "id": "I3KMCP9sRKx1cjbf1Vh6L",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面代码使用某种排序算法,将数组中的元素按从小到大排序。这段代码使用的排序算法是()。\n```cpp\nvoid mystery_sort(double arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        int minPos = i;\n        for (int j = i + 1; j < n; j++) {\n            if (arr[j] < arr[minPos]) {\n                minPos = j;\n            }\n        }\n        double temp = arr[i];\n        arr[i] = arr[minPos];\n        arr[minPos] = temp;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "冒泡排序"
+        },
+        {
+          "label": "B",
+          "text": "插入排序"
+        },
+        {
+          "label": "C",
+          "text": "选择排序"
+        },
+        {
+          "label": "D",
+          "text": "非典型排序"
+        }
+      ],
+      "answer": "C",
+      "explanation": "这段代码实现了选择排序算法。外层循环遍历数组，内层循环在未排序部分找到最小元素的索引 `minPos`，然后将该最小元素与当前位置 `arr[i]` 交换，从而将最小元素放到正确的位置。"
+    },
+    {
+      "id": "fC2onADLWityoOsbOO9FK",
+      "order": 15,
+      "type": "single_choice",
+      "content": "小杨正在读取“冒险日志”文件 `quest.txt`。若文件内容为 `Level 10`,执行以下程序后输出为()。\n```cpp\nifstream fin(\"quest.txt\");\nstring s;\nint v;\nfin >> s >> v;\ncout << s.length() * v;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "50"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "70"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "A",
+      "explanation": "文件 `quest.txt` 的内容是 \"Level 10\"。`fin >> s` 会读取第一个单词 \"Level\" 到字符串 `s` 中，此时 `s.length()` 为 5。`fin >> v` 会读取下一个数字 \"10\" 到整型变量 `v` 中，此时 `v` 为 10。最终输出 `s.length() * v`，即 `5 * 10 = 50`。"
+    }
+  ]
+}

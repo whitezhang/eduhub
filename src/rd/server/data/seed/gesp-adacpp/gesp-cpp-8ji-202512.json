@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202512",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202512",
+  "title": "GESP C++八级 202512",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2025年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202512"
+  },
+  "questions": [
+    {
+      "id": "9OwVrhRwngTCkxm1PU8m7",
+      "order": 1,
+      "type": "single_choice",
+      "content": "某平台生成“取件码”由6个字符组成：前4位为数字（0–9），后2位为大写字母（A–Z），其中字母不能为 I、O。假设数字和字母均可重复使用，要求整个取件码中恰好有2个数字为奇数。共有多少种不同取件码？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "1,440,000"
+        },
+        {
+          "label": "B",
+          "text": "2,160,000"
+        },
+        {
+          "label": "C",
+          "text": "2,535,000"
+        },
+        {
+          "label": "D",
+          "text": "8,640,000"
+        }
+      ],
+      "answer": "B",
+      "explanation": "首先，从4个数字位中选2个放奇数，有 `C(4, 2) = 6` 种方法。每个奇数位有5种选择"
+    },
+    {
+      "id": "pJpDwsGqb4TjYQZmp-kgz",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下列代码实现了归并排序（Merge Sort）的分治部分。为了正确地将数组 a 的 [left, right] 区间进行排序，横线处应该填入的是（ ）。\n\n```cpp\nvoid merge_sort(int a[], int left, int right) {\n    if (left >= right) return;\n    int mid = (left + right) / 2;\n    merge_sort(a, left, mid);\n    ________; // 在此处填入选项\n    merge(a, left, mid, right); // 合并操作\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`merge_sort(a, mid, right)`"
+        },
+        {
+          "label": "B",
+          "text": "`merge_sort(a, mid + 1, right)`"
+        },
+        {
+          "label": "C",
+          "text": "`merge_sort(a, left, mid + 1)`"
+        },
+        {
+          "label": "D",
+          "text": "`merge_sort(a, mid - 1, right)`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "归并排序的核心思想是将一个大问题分解为两个不重叠的子问题。代码中 `merge_sort(a, left, mid)` 已经处理了左半部分 `["
+    },
+    {
+      "id": "qg0wqrIVBctLifMp9QbmI",
+      "order": 3,
+      "type": "single_choice",
+      "content": "某社团有男生8人、女生7人。现需选出1名队长（性别不限）、1名副队长（性别不限）、2名宣传委员（两人无角色区别，且必须至少1名女生）。假如一人不能兼任多职，共有多少种不同选法？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "12012"
+        },
+        {
+          "label": "B",
+          "text": "11844"
+        },
+        {
+          "label": "C",
+          "text": "12474"
+        },
+        {
+          "label": "D",
+          "text": "11025"
+        }
+      ],
+      "answer": "A",
+      "explanation": "首先，选择队长和副队长。由于职位不同且不能兼任，从15人中选2人并排序，有 P(15, 2) ="
+    },
+    {
+      "id": "jWhbAPfZ8pZJfFJC2wz-u",
+      "order": 4,
+      "type": "single_choice",
+      "content": "二项式 $(2x - y)^8$ 的展开式中 $x^5y^3$ 项的系数为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-7168"
+        },
+        {
+          "label": "B",
+          "text": "7168"
+        },
+        {
+          "label": "C",
+          "text": "-1792"
+        },
+        {
+          "label": "D",
+          "text": "1792"
+        }
+      ],
+      "answer": "C",
+      "explanation": "根据二项式定理，$(A+B)^n$ 展开式的通项公式为 $T_{k+1} = \\binom{n}{k} A^{n-k} B^k$。对于 $(2x - y)^8$，我们有 $A=2x$, $B=-y$, $n=8$。要找到 $x^5y^3$ 项，需要 $n-k=5$ 且 $k=3$。代入公式得到 $T_{3+1} = \\binom{8}{3} (2x)^{8-3} (-y)^3 = \\binom{8}{3} (2x)^5 (-y)^3 = 56 \\cdot (32x^5) \\cdot (-y^3) = -1792x^5y^3$。因此，系数为 -1792。选项 A、B、D 是由于计算错误或符号错误导致的。"
+    },
+    {
+      "id": "tGsihp6NSlcwGbemqBMag",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面是使用邻接矩阵实现的Dijkstra算法的核心片段，用于求单源最短路径。在找到当前距离起点最近的顶点 u 后，需要更新其邻接点 j 的距离。横线处应填入的代码是（ ）。\n\n```cpp\nfor (int j = 1; j <= n; j++) {\n    if (!visited[j] && graph[u][j] < INF) {\n        if (________) { // 在此处填入选项\n            dis[j] = dis[u] + graph[u][j];\n        }\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`dis[j] < dis[u] + graph[u][j]`"
+        },
+        {
+          "label": "B",
+          "text": "`dis[j] > dis[u] + graph[u][j]`"
+        },
+        {
+          "label": "C",
+          "text": "`graph[u][j] > dis[u] + dis[j]`"
+        },
+        {
+          "label": "D",
+          "text": "`dis[j] > graph[u][j]`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n在Dijkstra算法中，当找到从起点到顶点 `u` 的最短路径后，需要尝试通过 `u` 更新其邻接点 `j` 的最短路径。如果从起点经过 `u` 到达 `j` 的路径（即 `dis[u] + graph[u][j]`）比当前已知的从起点到 `j` 的最短路径（即 `dis[j]`）更短，我们就更新 `dis[j]`。因此，条件 `dis[j] > dis[u] + graph[u][j]` 正是判断新路径是否更短。\n\n选项 A 错误，因为它表示当前路径更短，此时不应更新。选项 C 和 D 的比较逻辑不符合最短路径算法的松弛操作原理。"
+    },
+    {
+      "id": "wgn2MinD6lg5r56ILWsdZ",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面程序使用动态规划求两个字符串的最长公共子序列（LCS）长度，横线处应填入的是（ ）。\n\n```cpp\n#include <algorithm>\n#include <string>\n#include <vector>\nusing namespace std;\n\nint lcs_len(const string &a, const string &b) {\n    int n = (int)a.size(), m = (int)b.size();\n    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));\n    for (int i = 1; i <= n; i++)\n        for (int j = 1; j <= m; j++)\n            if (a[i - 1] == b[j - 1])\n                dp[i][j] = dp[i - 1][j - 1] + 1;\n            else\n                ________; // 在此处填入选项\n    return dp[n][m];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`dp[i][j] = dp[i - 1][j] + dp[i][j - 1];`"
+        },
+        {
+          "label": "B",
+          "text": "`dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]);`"
+        },
+        {
+          "label": "C",
+          "text": "`dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);`"
+        },
+        {
+          "label": "D",
+          "text": "`dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + 1;`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "当 `a[i-1]` 和 `b[j-1]` 不相等时，我们不能同时将这两个字符加入最长公共子序列（LCS）。此时，`dp["
+    },
+    {
+      "id": "0uw_n1OS4VdY9RxCst97-",
+      "order": 7,
+      "type": "single_choice",
+      "content": "已知两个点 $A(x_1, y_1)$ 和 $B(x_2, y_2)$ 在平面直角坐标系中的坐标。下列C++表达式中，能正确计算这两点之间直线距离的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`sqrt((x1 - x2) ^ 2 + (y1 - y2) ^ 2)`"
+        },
+        {
+          "label": "B",
+          "text": "`sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2))`"
+        },
+        {
+          "label": "C",
+          "text": "`pow(x1 - x2, 2) + pow(y1 - y2, 2)`"
+        },
+        {
+          "label": "D",
+          "text": "`abs(x1 - x2) + abs(y1 - y2)`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "B选项使用 `sqrt()` 进行开方，`pow(base, exponent)` 进行乘方运算，完全符合两点间直线距离的数学公式。A选项中 `^` 在 C++ 中是位运算符异或，并非乘方。C选项缺少了最终的开平方操作。D选项计算的是曼哈顿距离，而非直线距离。"
+    },
+    {
+      "id": "NVynWU9Seg3rFKUr6vyU7",
+      "order": 8,
+      "type": "single_choice",
+      "content": "已知 `int a = 10;` ，执行 `int &b = a; b = 20;` 后，变量 a 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "20"
+        },
+        {
+          "label": "C",
+          "text": "30"
+        },
+        {
+          "label": "D",
+          "text": "编译错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`int &b = a;` 声明 `b` 是 `a` 的引用，这意味着 `b` 是 `a` 的别名。对 `b` 的任何操作都会直接作用于 `a`。因此，当执行 `b = 20;` 时，实际上是将变量 `a` 的值修改为 20。选项 A 错误是因为 `a` 的值被修改了，选项 C 错误是因为没有进行加法，选项 D 错误是因为这是合法的 C++ 语法。"
+    },
+    {
+      "id": "MRKuBW4QQqxYw7UIMNGAc",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下列代码的时间复杂度（以 $n$ 为自变量，忽略常数与低阶项）是（ ）。\n\n```cpp\nlong long s = 0;\nfor (int i = 1; i <= n; i++) {\n    for (int j = 1; j * j <= i; j++) {\n        s += j;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "$O(n)$"
+        },
+        {
+          "label": "B",
+          "text": "$O(n \\log n)$"
+        },
+        {
+          "label": "C",
+          "text": "$O(n\\sqrt{n})$"
+        },
+        {
+          "label": "D",
+          "text": "$O(n^2)$"
+        }
+      ],
+      "answer": "C",
+      "explanation": "外层循环 `for (int i = 1; i <= n; i++)` 会执行 `n` 次。对于每次外层循环，内层循环 `for (int j = 1; j * j <= i; j++)` 会执行大约 $\\sqrt{i}$ 次。因此，总的操作次数是 $\\sum_{i=1}^{n} \\sqrt{i}$，其"
+    },
+    {
+      "id": "cuCjWXbqRhDDnZHZHGz2G",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下列程序实现了线性筛法（欧拉筛），用于在 $O(n)$ 时间内求出 $1 \\sim n$ 之间的所有质数。为了保证每个合数只被其最小质因子筛掉，横线处应填入的语句是（ ）。\n\n```cpp\nfor (int i = 2; i <= n; i++) {\n    if (!not_prime[i]) primes[++cnt] = i;\n    for (int j = 1; j <= cnt && i * primes[j] <= n; j++) {\n        not_prime[i * primes[j]] = true;\n        if (________) break; // 在此处填入选项\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i + primes[j] == n`"
+        },
+        {
+          "label": "B",
+          "text": "`primes[j] > i`"
+        },
+        {
+          "label": "C",
+          "text": "`i % primes[j] == 0`"
+        },
+        {
+          "label": "D",
+          "text": "`i % primes[j] != 0`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "线性筛法的核心是确保每个合数只被其最小质因子筛掉。当 `i % primes[j] == 0` 时，表示 `primes[j]` 是 `"
+    },
+    {
+      "id": "gG5msFp6wxaGui5Zzm4ku",
+      "order": 11,
+      "type": "single_choice",
+      "content": "在C++语言中，关于类的继承和访问权限，下列说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "派生类可以访问基类的 `private` 成员。"
+        },
+        {
+          "label": "B",
+          "text": "基类的 `protected` 成员在私有继承（private inheritance）后，在派生类中变为 `public` 。"
+        },
+        {
+          "label": "C",
+          "text": "派生类对象在创建时，会先调用基类的构造函数，再调用派生类自己的构造函数。"
+        },
+        {
+          "label": "D",
+          "text": "派生类对象在销毁时，会先调用基类的析构函数，再调用派生类自己的析构函数。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C选项正确，因为派生类对象在创建时，必须先初始化其基类部分，所以会先调用基类的构造函数，然后才调用派生类自己的构造函数。A选项错误，`private` 成员是基类私有的，派生类无法直接访问。B选项错误，私有继承会将基类的 `protected` 成员在派生类中变为 `private`。D选项错误，析构函数的调用顺序与构造函数相反，应先调用派生类自己的析构函数，再调用基类的析构函数。"
+    },
+    {
+      "id": "_yz4PcRDusXXWO11dp60v",
+      "order": 12,
+      "type": "single_choice",
+      "content": "当输入 6 时，下列程序的输出结果为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint f(int n) {\n    if (n <= 3) return n;\n    return f(n - 1) + f(n - 2) + 2 * f(n - 3);\n}\nint main() {\n    int n;\n    cin >> n;\n    cout << f(n) << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "14"
+        },
+        {
+          "label": "B",
+          "text": "27"
+        },
+        {
+          "label": "C",
+          "text": "28"
+        },
+        {
+          "label": "D",
+          "text": "15"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该程序定义了一个递归函数 `f(n)`。当 `n <= 3` 时，`f(n)` 直接返回 `n`。根据递归公式 `f(n)"
+    },
+    {
+      "id": "Ey-uLfN1HU7ddJF2xjvDJ",
+      "order": 13,
+      "type": "single_choice",
+      "content": "从1到999这999个正整数中，十进制表示中数字 5 恰好出现一次的数有多少个？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "243"
+        },
+        {
+          "label": "B",
+          "text": "271"
+        },
+        {
+          "label": "C",
+          "text": "300"
+        },
+        {
+          "label": "D",
+          "text": "333"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。我们将数字按位数分类计算：\n1.  一位数：只有 `5` 一个。\n2.  两位数：`5X` 形式（"
+    },
+    {
+      "id": "aQk38RXzopQt9dRVLWsPd",
+      "order": 14,
+      "type": "single_choice",
+      "content": "当输入 2023 时，下列程序的输出结果为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int x, ans = 0;\n    cin >> x;\n    while (x != 0) {\n        x -= x & -x;\n        ans++;\n    }\n    cout << ans << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "7"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "11"
+        }
+      ],
+      "answer": "C",
+      "explanation": "这个程序的核心在于 `x -= x & -x;` 这一行。`x & -x` 的作用是提取 `x` 的二进制表示中最右边的那个 `"
+    },
+    {
+      "id": "IIWa7uPvEk9VMBJdVwkLt",
+      "order": 15,
+      "type": "single_choice",
+      "content": "对连通无向图执行Kruskal算法。已按边权从小到大依次扫描到某条边 $e = (u, v)$。此时在已经构建的部分MST结构中，$(u, v)$ 已在同一连通块内。关于边 $e$ 的处理，下列说法正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "必须选入MST，否则可能不连通。"
+        },
+        {
+          "label": "B",
+          "text": "一定不能选入MST（在此扫描顺序下）。"
+        },
+        {
+          "label": "C",
+          "text": "若后续出现更大的边权，可以回溯改选 $e$。"
+        },
+        {
+          "label": "D",
+          "text": "只有当 $e$ 是当前最小边时才能舍弃。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Kruskal算法按边权从小到大处理边。当边 `e=(u,v)` 的两端 `u` 和 `v` 已在同一连通块内时，"
+    },
+    {
+      "id": "rOi3fRF6uGIOGxxCFr7jq",
+      "order": 16,
+      "type": "true_false",
+      "content": "若一项任务可用两种互斥方案完成：方案A有 $m$ 种做法，方案B有 $n$ 种做法，则总做法数为 $m + n$。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该题目描述的是组合数学中的**加法原理**。当一个任务可以通过几种**互斥**（即不能同时发生）的方案完成时，总的做法数等于每种方案做法数的总和。因此，方案A有 $m$ 种做法，方案B有 $n$ 种做法，且两者互斥，则总做法数为 $m + n$ 是正确的。选项F错误，因为它否定了加法原理的正确应用。"
+    },
+    {
+      "id": "JZkqzERZeEBWvWkJfxeVu",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++语言中，引用一旦被初始化，就不能再改为引用另一个变量。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++中的引用（reference）一旦被初始化，就成为了它所引用变量的别名，这个绑定关系是永久的。它不能像指针那样在后续代码中被重新赋值以引用另一个变量，任何对引用的赋值操作都会改变它所引用变量的值。因此，题目描述是正确的。"
+    },
+    {
+      "id": "wSQ3V_2vd7TJ3xXxAyxMp",
+      "order": 18,
+      "type": "true_false",
+      "content": "快速排序和归并排序的平均时间复杂度都是 $O(n \\log n)$，但快速排序是不稳定的排序算法，归并排序是稳定的排序算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "快速排序和归并排序的平均时间复杂度确实都是 $O(n \\log n)$。快速排序在分区过程中，可能会将相等元素交换到彼此的另一侧，从而改变它们的相对顺序，因此是不稳定的。而归并排序在合并两个有序子序列时，如果遇到相等的元素，会优先选择左侧子序列的元素，从而保持了相等元素的原始相对顺序，所以是稳定的。因此，题目描述完全正确。"
+    },
+    {
+      "id": "5krT990AttpkaoSUV6QjA",
+      "order": 19,
+      "type": "true_false",
+      "content": "使用 `math.h` 或 `cmath` 头文件中的函数，表达式 `sqrt(4)` 的结果类型为 `double`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`sqrt` 函数（无论来自 `math.h` 还是 `cmath`）的默认重载版本接受 `double` 类型参数并返回 `double` 类型结果。当传入整数 `4` 时，它会隐式转换为 `double` 类型，然后调用 `double sqrt(double)` 重载。因此，表达式 `sqrt(4)` 的结果类型是 `double`，描述正确。"
+    },
+    {
+      "id": "t7Y_Qslv3-ZHLRLItz9bw",
+      "order": 20,
+      "type": "true_false",
+      "content": "在杨辉三角形中，第 $n$ 行（从0开始计数，即第 $n$ 行有 $n + 1$ 个数）的所有数字之和等于 $2^n$。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "杨辉三角形的第 $n$ 行（从0开始计数）的数字之和确实等于 $2^n$。例如，第0行是 `1` (和为 $1 = 2^0$)，第1行是 `1 1` (和为 $2 = 2^1$)，第2行是 `1 2 1` (和为 $4 = 2^2$)。这个规律可以通过二项式定理 $(1+1)^n = \\sum_{k=0}^n \\binom{n}{k}$ 来证明，其中 $\\binom{n}{k}$ 正是杨辉三角形第 $n$ 行的数字。因此，选项 T 是正确的，选项 F 是错误的。"
+    },
+    {
+      "id": "UiO6v8ywMfg66R2HSYweH",
+      "order": 21,
+      "type": "true_false",
+      "content": "使用二叉堆优化的Dijkstra最短路算法，在某些特殊情况下时间复杂度不如朴素实现的 $O(V^2)$。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "朴素Dijkstra算法的时间复杂度是 $O(V^2)$。使用二叉堆优化的Dijkstra算法，其时间复杂度为 $O(E \\log V)$。在某些特殊情况下，例如当图是稠密图时，边数 $E$ 接近于 $V^2$。此时，优化后的算法复杂度会变为 $O(V^2 \\log V)$，这比朴素实现的 $O(V^2)$ 更差。因此，该说法是正确的。"
+    },
+    {
+      "id": "EHillWSZwv62sBLhJ5dvA",
+      "order": 22,
+      "type": "true_false",
+      "content": "$$n$ 个不同元素依次入栈的出栈序列数与将 $n$ 个不同元素划分成若干非空子集的方案数相等。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "将 $n$ 个不同元素依次入栈的出栈序列数是卡特兰数 $C_n$。\n2.  将 $n$ 个不同元素划分成若干非"
+    },
+    {
+      "id": "jtzdWBB37krreCXIGdt_6",
+      "order": 23,
+      "type": "true_false",
+      "content": "快速排序在最坏情况下的时间复杂度为 $O(n \\log n)$，可以通过随机化选择基准值（pivot）的方法完全避免退化。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "快速排序在最坏情况下的时间复杂度是 $O(n^2)$，而不是 $O(n \\log n)$。随机化选择基准值（pivot）能大大降低遇到最坏情况的概率，使其平均时间复杂度达到 $O(n \\log n)$，但并不能“完全避免”退化，理论上仍有极低概率出现最坏情况。因此，题目中关于时间复杂度的描述和“完全避免”的说法都是错误的，所以选项 F 正确。"
+    },
+    {
+      "id": "Bac195niH2Lx9kl_giI5W",
+      "order": 24,
+      "type": "true_false",
+      "content": "在C++语言中，一个类可以拥有多个构造函数，也可以拥有多个析构函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "一个C++类可以拥有多个构造函数，因为构造函数可以根据参数列表的不同进行重载。但是，一个类只能拥有一个析构函数，析构函数没有参数，也不能被重载，其名称固定为 `~类名`。因此，题目中“也可以拥有多个析构函数”的说法是错误的。"
+    },
+    {
+      "id": "xa_HPiCQt4EsneEXaYaMF",
+      "order": 25,
+      "type": "true_false",
+      "content": "求两个序列的最长公共子序列（LCS）时，使用滚动数组优化空间后，仍然可以还原出具体的LCS序列。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "使用滚动数组优化LCS空间时，通常只保留当前行和前一行的信息。还原LCS需要完整的DP表来追踪路径（即每个状态是从哪个方向推导而来），但滚动数组会丢弃大部分中间状态，导致无法回溯路径来还原具体的LCS序列。因此，选项T（正确）是错误的，F（错误）才是正确的。"
+    }
+  ]
+}

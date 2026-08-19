@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202512",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202512",
+  "title": "GESP C++三级 202512",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2025年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202512"
+  },
+  "questions": [
+    {
+      "id": "Z6X2k6hooWsLmNEtgzLEL",
+      "order": 1,
+      "type": "single_choice",
+      "content": "请将二进制数 $(1101.101)_2$，转换为等值的10进制数（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "14.25"
+        },
+        {
+          "label": "B",
+          "text": "13.625"
+        },
+        {
+          "label": "C",
+          "text": "13.5"
+        },
+        {
+          "label": "D",
+          "text": "14.5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "将二进制数转换为十进制数，需要将每个位上的数字乘以其对应的2的幂次再求和。整数部分 $1101_2 = 1 \\cdot 2^3 + 1 \\cdot 2^2 + 0 \\cdot 2^1 + 1 \\cdot 2^0 = 8 + 4 + 0 + 1 = 13$。小数部分 $0.101_2 = 1 \\cdot 2^{-1} + 0 \\cdot 2^{-2} + 1 \\cdot 2^{-3} = 0.5 + 0"
+    },
+    {
+      "id": "eag_U9zmIUHa8t_hgKoZW",
+      "order": 2,
+      "type": "single_choice",
+      "content": "以下关于标准 C++ 一维数组的描述，哪一项是错误的？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "数组的下标从0开始"
+        },
+        {
+          "label": "B",
+          "text": "数组在内存中是连续存放的"
+        },
+        {
+          "label": "C",
+          "text": "数组的长度只能在运行时才能确定"
+        },
+        {
+          "label": "D",
+          "text": "可以在程序中修改数组某个元素的值"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C++标准数组的长度可以在编译时确定（例如 `int arr[10];`），也可以在运行时通过动态内存分配确定，因此选项C“数组的长度只能在运行时才能确定”是错误的。选项A、B、D的描述都是正确的：C++数组的下标从0开始，数组元素在内存中是连续存放的，并且可以在程序中修改数组某个元素的值。"
+    },
+    {
+      "id": "tIQgWNjHvhPz-6O38Gs6G",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下列代码段执行后，变量 `sum` 的值是（ ）\n\n```cpp\n{\n    int sum = 0;\n    for (int i = 1; i <= 10; i++) {\n        if (i % 3 == 8>>2)\n            continue;\n        sum += i;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "12"
+        },
+        {
+          "label": "B",
+          "text": "17"
+        },
+        {
+          "label": "C",
+          "text": "33"
+        },
+        {
+          "label": "D",
+          "text": "40"
+        }
+      ],
+      "answer": "D",
+      "explanation": "首先，`8>>2` 的结果是 2。因此，当 `i % 3 == 2` 时，`continue` 语句会跳过当前循环的 `sum += i`。在 `i` 从 1 到 10 的范围内，`i` 为 2、5、8 时满足条件，这些值不会被加到 `sum` 中。所以 `sum` 最终等于 `(1+3+4+6+7+9+10)`"
+    },
+    {
+      "id": "UxGTiRHDcZNFIZOyITEOg",
+      "order": 4,
+      "type": "single_choice",
+      "content": "执行以下程序段，输出值是（ ）\n\n```cpp\nint x = 5;\nif (x == 3 >> 2) x = 8 >> 3;\ncout << x << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "120"
+        },
+        {
+          "label": "D",
+          "text": "1"
+        }
+      ],
+      "answer": "B",
+      "explanation": "程序首先将 `x` 初始化为 5。接着，在 `if` 语句的条件判断 `x == 3 >> 2` 中，`3 >> 2` 表示将十进制数 3（二进制为 `00000011`）右移 2 位，结果是 0。因此，条件变为 `5 == 0`，此条件为假。`if` 语句块内的代码 `x = 8 >> 3;` 不会被执行，`x` 的值保持不变，仍为 5。所以最终输出 `5`。选项 A、C、D 均不符合计算结果。"
+    },
+    {
+      "id": "r3al_vkx3abz3fIglP1LC",
+      "order": 5,
+      "type": "single_choice",
+      "content": "已知字符串 `s = \"C++ Programming\"`，下列程序运行的结果是（ ）\n\n```cpp\ncout << (int)(s.length() | 3) << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "14"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "16"
+        },
+        {
+          "label": "D",
+          "text": "17"
+        }
+      ],
+      "answer": "B",
+      "explanation": "字符串 `s = \"C++ Programming\"` 的长度 `s.length()` 是 15。接着进行位或运算 `15 | 3`。15 的二进制是 `1111`，3 的二进制是 `0011`，它们的位或结果 `1111 | 0011` 仍是 `1111`，转换为十进制即 15。因此，程序输出 15，选项 B 正确。其他选项均不符合计算结果。"
+    },
+    {
+      "id": "oI_QvuTFbI-upu2_2QLQg",
+      "order": 6,
+      "type": "single_choice",
+      "content": "以下代码是一个程序的部分代码，能够正确执行，输出的结果是（ ）\n\n```cpp\nint arr[5] = {1, 2, 3, 4, 5};\nint p = arr[1];\ncout << (p + 2) << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "数组 `arr` 的第二个元素（索引为1）的值是2，所以 `int p = arr[1];` 将 `p` 赋值为2。接着，`cout << (p + 2) << endl;` 会计算 `(2 + 2)`，结果为4。因此，输出是4，选项D正确。其他选项不符合代码的计算结果。"
+    },
+    {
+      "id": "Afgf9WJTyEjvchBhssSdx",
+      "order": 7,
+      "type": "single_choice",
+      "content": "以下关于 C++ 求最小值函数 `min()` 的描述，不正确的是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "函数必须返回一个值"
+        },
+        {
+          "label": "B",
+          "text": "该函数可以嵌套调用"
+        },
+        {
+          "label": "C",
+          "text": "调用 `min(5)` 是错误的，不能通过编译"
+        },
+        {
+          "label": "D",
+          "text": "调用 `min()`（不传任何参数）可以通过编译，结果为 0"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D 错误，`min()` 函数至少需要两个参数才能调用，不传任何参数会导致编译错误，无法通过编译，更不会返回 0。选项 A 正确，`min()` 函数总是返回比较后的最小值。选项 B 正确，`min()` 可以像其他函数一样嵌套调用，例如 `min(a, min(b, c))`。选项 C 正确，`min(5)` 只传一个参数，不符合函数签名，会引发编译错误。"
+    },
+    {
+      "id": "YqXpt7JY_fQcyhK8S3swH",
+      "order": 8,
+      "type": "single_choice",
+      "content": "在一个特定的计算机系统中，假如 `unsigned int` 类型需要占用2个字节的存储空间（每个字节有8位），则 `unsigned int` 可以表示的数据范围是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "0 ~ 65535"
+        },
+        {
+          "label": "B",
+          "text": "0 ~ 65536"
+        },
+        {
+          "label": "C",
+          "text": "-65536 ~ 65535"
+        },
+        {
+          "label": "D",
+          "text": "0 ~ 32767"
+        }
+      ],
+      "answer": "A",
+      "explanation": "`unsigned int` 占用2个字节，每个字节8位，所以总共有16位。由于是无符号类型，它从0开始计数，可以表示 `2^16` 个不同的值。因此，其数据范围是 `0` 到 `2^16 - 1`，即 `0` 到 `65535`，所以A是正确的。选项B的上限多1；选项C是带符号整数的范围，不符合 `unsigned` 类型；选项D是16位带符号整数的正数范围，均不符合题意。"
+    },
+    {
+      "id": "7trJNCaQg83NveKzlk38x",
+      "order": 9,
+      "type": "single_choice",
+      "content": "以下代码执行后，数组 `arr` 的内容是（ ）\n\n```cpp\nint arr[6] = {1, 2, 3, 4, 5, 6};\nfor (int i = 0; i < 6; i += 2) {\n    arr[i] = arr[i] + arr[i+1];\n    arr[i+1] = arr[i] - arr[i+1];\n    arr[i] = arr[i] - arr[i+1];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "{2,1,4,3,6,5}"
+        },
+        {
+          "label": "B",
+          "text": "{1,2,3,4,5,6}"
+        },
+        {
+          "label": "C",
+          "text": "{3,1,4,2,5,3}"
+        },
+        {
+          "label": "D",
+          "text": "{1,3,2,5,4,6}"
+        }
+      ],
+      "answer": "A",
+      "explanation": "这段代码实现了一个不使用额外变量交换两个数值的经典算法。循环以步长 `2` 遍历数组，每次迭代都会交换 `arr[i]` 和 `arr["
+    },
+    {
+      "id": "92GeENQXsT2aAPqq0dF88",
+      "order": 10,
+      "type": "single_choice",
+      "content": "`a & b | (c ^ d)`，其中 `a = 3, b = 7, c = 15, d = 4`，计算结果是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "十进制11"
+        },
+        {
+          "label": "B",
+          "text": "二进制11"
+        },
+        {
+          "label": "C",
+          "text": "八进制11"
+        },
+        {
+          "label": "D",
+          "text": "十六进制11"
+        }
+      ],
+      "answer": "A",
+      "explanation": "首先将所有数字转换为二进制：`a=3(0011)`, `b=7(0111)`, `c=15(1111)`, `d="
+    },
+    {
+      "id": "SfUYm7w1XBbKWMdMuu6-B",
+      "order": 11,
+      "type": "single_choice",
+      "content": "整型变量 `x` 的初始值为 10，以下代码的输出结果是（ ）\n\n```cpp\nint t = x--;\nt -= x;\ncout << t << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "-1"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "死循环"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`int t = x--;` 语句中，`x--` 是后置自减运算符，它会先将 `x` 的当前值（10）赋给 `t`，然后 `x` 再自减变为 9。此时 `t` 为 10，`x` 为 9。接着 `t -= x;` 等价于 `t = t - x;`，即 `t = 10 - 9`，所以 `t` 的最终值为 1。因此输出 1。选项 A、B 的数值不符合计算结果，选项 D 的死循环不适用于此顺序执行的代码。"
+    },
+    {
+      "id": "TdRiq7BIzVIHSWfxzCu7D",
+      "order": 12,
+      "type": "single_choice",
+      "content": "根据下面的流程图，如果成绩 `score` 输入 60，输出的结果是（ ）\n\n流程图描述：开始 -> 输入成绩score -> 判断 score >= 90？若是，输出\"优秀\"；若否，判断 score >= 60？若是，输出\"及格\"；若否，输出\"不及格\" -> 结束",
+      "options": [
+        {
+          "label": "A",
+          "text": "优秀"
+        },
+        {
+          "label": "B",
+          "text": "及格"
+        },
+        {
+          "label": "C",
+          "text": "不及格"
+        },
+        {
+          "label": "D",
+          "text": "没有输出"
+        }
+      ],
+      "answer": "B",
+      "explanation": "当 `score` 输入 60 时，首先判断 `score >= 90`，结果为假。接着判断 `score >= 60`，结果为真，因此输出\"及格\"。选项 A 错误，因为 60 不大于等于 90。选项 C 错误，因为 60 满足及格条件，不会进入不及格分支。选项 D 错误，因为流程图保证了在任何情况下都会有输出。"
+    },
+    {
+      "id": "B2vJtN8mA8oKXx3GuoaYX",
+      "order": 13,
+      "type": "single_choice",
+      "content": "以下代码运行后，`sum` 的结果是（ ）\n\n```cpp\nint arr[5] = {2, 4, 6, 8, 10};\nint sum = 0;\nfor (int i = 0; i < 5; i++) {\n    switch (arr[i] % (1|2)) {\n        case 0: sum += 1; break;\n        case 1: sum += 2; break;\n        case 2: sum += 3; break;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "11"
+        },
+        {
+          "label": "C",
+          "text": "14"
+        },
+        {
+          "label": "D",
+          "text": "15"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码中 `1|2` 是位或运算，其结果为 `3`。因此，循环体内的判断条件是 `arr[i] % 3`。\n循环过程如下"
+    },
+    {
+      "id": "smRGWR2aQYTkh1Qyn-jSY",
+      "order": 14,
+      "type": "single_choice",
+      "content": "以下关于 C++ 中 `abs()` 函数的描述，正确的是（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`abs()` 函数可用于计算 `int` 类型整数的绝对值，头文件为 `<cmath>` 或 `<cstdlib>`"
+        },
+        {
+          "label": "B",
+          "text": "调用 `abs(3.14)` 可以四舍五入得到 3"
+        },
+        {
+          "label": "C",
+          "text": "`abs(-1, -2)` 的返回值是 1"
+        },
+        {
+          "label": "D",
+          "text": "若传入负数浮点数，`abs()` 会自动截断小数部分后返回整数绝对值"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项 A 正确，`abs()` 函数用于计算整数绝对值，其 `int` 类型的版本定义在 `<cstdlib>` 中，而 `<cmath>` 提供了 `std::abs` 的重载版本，可处理包括 `int` 在内的多种数值类型。选项 B 错误，`abs(3.14)` 的返回值是 `3.14`，它只计算绝对值，不进行四舍五入。选项 C 错误，`abs"
+    },
+    {
+      "id": "kg4uh3wgCkm13bDWeKwXj",
+      "order": 15,
+      "type": "single_choice",
+      "content": "如果字符串 `s` 的值是 `GESP`，以下代码 `s` 的最后结果是（ ）\n\n```cpp\nfor (int i = 0; i < s.length(); i++) {\n    s[i] = toupper(s[i] + i);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "GESP"
+        },
+        {
+          "label": "B",
+          "text": "HFTR"
+        },
+        {
+          "label": "C",
+          "text": "hesp"
+        },
+        {
+          "label": "D",
+          "text": "GFUS"
+        }
+      ],
+      "answer": "D",
+      "explanation": "代码循环遍历字符串 `s` 的每个字符。在每次迭代中，它将当前字符的 ASCII 值加上索引 `i`，然后使用 `toupper()` 函数将其转换为大写字母，再赋值回原位置。\n初始 `s = \"GESP\"`：\n- 当 `i=0` 时，`s[0]` ('G') + 0 = 'G'，`toupper('G')` 仍是 'G'。\n- 当 `i=1` 时，`s[1]` ('E') + 1 = 'F'，`toupper('F')` 仍是 'F'。\n- 当 `i=2` 时，`s[2]` ('S') + 2 = 'U'，`toupper('U')` 仍是 'U'。\n- 当 `i=3` 时，`s[3]` ('P') + 3 = 'S'，`toupper('S')` 仍是 'S'。\n因此，最终字符串变为 `GFUS`。选项 A 错误，因为字符被修改；选项 B 和 C 错误，因为计算结果不符且 `toupper()` 确保了大写。"
+    },
+    {
+      "id": "Nv3r0Uo7xNAD4RApIJPnN",
+      "order": 16,
+      "type": "true_false",
+      "content": "在 C++ 中，数组名不能改变，数组名不能被赋值。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，数组名代表数组在内存中的起始地址，这个地址是固定不变的。你不能像普通变量那样改变数组名所代表的地址，也不能直接将一个数组的内容通过赋值操作符赋给另一个数组名，例如 `arr1 = arr2;` 是不允许的。因此，题目描述是正确的，选项 T 正确。"
+    },
+    {
+      "id": "xWVF6MDHN-G0g5cowZCma",
+      "order": 17,
+      "type": "true_false",
+      "content": "整型变量 `a` 的值为 3，浮点数变量 `b` 的值为 3.5，在 C++ 编译环境下，经过 `a *= b` 计算后，`a` 的值变为 10.5，此时如果输出 `a`，将输出 10.5。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该语句是错误的。在 C++ 中，当 `int` 类型的变量 `a` 与 `double` 类型的变量 `b` 进行 `a *= b` 运算时，`a * b` 的结果 `10.5` 是 `double` 类型。但由于 `a` 是 `int` 类型，将 `10.5` 赋值给 `a` 时会发生隐式类型转换，小数部分会被截断。因此，`a` 的最终值为 `10`，而不是 `10.5`。"
+    },
+    {
+      "id": "bze1IiKA0YoJMJAf8IZM0",
+      "order": 18,
+      "type": "true_false",
+      "content": "`strcmp(str1, str2)` 返回 0 表示 `str1` 大于 `str2`，返回正数表示两者相等。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`strcmp(str1, str2)` 返回 0 表示 `str1` 和 `str2` 完全相等。返回正数表示 `str1` 字典序大于 `str2`，返回负数表示 `str1` 字典序小于 `str2`。题目描述与 `strcmp` 函数的实际行为相反，因此是错误的。"
+    },
+    {
+      "id": "0laYiLoeu8XeeEUYq640V",
+      "order": 19,
+      "type": "true_false",
+      "content": "以下代码输出结果为 8。\n\n```cpp\nint a = 5, b = 3;\nint c = a++ + ++b;\ncout << c << endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`a++` 是后置递增，它会先使用 `a` 的当前值 5 进行计算，然后 `a` 再自增变为 6。`++b` 是前置递增，它会先将 `b` 自增变为 4，然后使用 `b` 的新值 4 进行计算。因此，表达式 `c = a++ + ++b` 的结果是 `c = 5 + 4 = 9`。代码最终输出 9，而不是 8，所以原题目描述“输出结果为 8”是错误的，选项 F 正确。"
+    },
+    {
+      "id": "b0yvaN8_wKD03MKWW6N5v",
+      "order": 20,
+      "type": "true_false",
+      "content": "位运算符 `&`、`|`、`^`、`~` 的优先级高于算术运算符 `+`、`-`、`*`、`/`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该题目描述是错误的。在 C++ 中，算术运算符 `*`、`/` 和 `+`、`-` 的优先级普遍高于位运算符 `&`、`^`、`|`。例如，表达式 `a + b & c` 会先计算 `a + b`。虽然位运算符 `~`（按位取反）的优先级很高，但由于 `&`、`^`、`|` 的优先级较低，因此原陈述“位运算符优先级高于算术运算符”是错误的。"
+    },
+    {
+      "id": "DyUjrfq21ehCNkWS4v4js",
+      "order": 21,
+      "type": "true_false",
+      "content": "在 C++ 中，`int a[] = {1, 2, 3, 4, 5};` 可以定义一个包含 5 个元素的整型数组。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，当使用 `{}` 对数组进行初始化时，如果省略了数组的长度，编译器会自动根据初始化列表中元素的数量来确定数组的大小。题目中的 `int a[] = {1, 2, 3, 4, 5};` 提供了 5 个初始化值，因此数组 `a` 会被定义为包含 5 个整型元素的数组。所以，该说法是正确的。"
+    },
+    {
+      "id": "DYpHrQIKTYHaF_DNYZVpL",
+      "order": 22,
+      "type": "true_false",
+      "content": "C++ 表达式 `z = a > b ? x : y` 等同于：\n\n```cpp\nif (a > b) {\n    z = x;\n} else {\n    z = y;\n}\n```\n\n以下代码执行后，输出将会是 2。\n\n```cpp\nint main() {\n    int arr[5] = {1, 2, 3, 4, 5};\n    cout << arr[3 > 2 ? 1 : 2] << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "选项 T 正确。代码中的 `3 > 2 ? 1 : 2` 是一个三元表达式，由于 `3 > 2` 为真，表达式的结果是 `"
+    },
+    {
+      "id": "2yYXEZgraEIqIOoZVt7C2",
+      "order": 23,
+      "type": "true_false",
+      "content": "在 C++ 中，`++` 和 `--` 运算符只能用于整型变量，不能用于浮点数变量。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中的 `++` 和 `--` 运算符不仅可以用于整型变量，也可以用于浮点数变量。例如，`double x = 1.5; x++;` 是完全合法的操作，会将 `x` 的值变为 `2.5`。因此，题目中“只能用于整型变量，不能用于浮点数变量”的说法是错误的，所以选择 F。"
+    },
+    {
+      "id": "HY0MaC-rQpxJfqv14Qpns",
+      "order": 24,
+      "type": "true_false",
+      "content": "给定一个正整数 `a`，当需要计算 `-a` 的补码时，有这样一个计算技巧：将 `a` 的二进制形式从右往左扫描，遇到第一个 1 之后，将找到的第一个 1 左边的所有位都取反，能得到 `-a` 的补码。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这个技巧是计算负数补码的有效方法。计算 `-a` 的补码，标准方法是先将 `a` 的所有位取反（得到 `~a`），然后"
+    },
+    {
+      "id": "Uc9YRH2FjASN0k-7cab50",
+      "order": 25,
+      "type": "true_false",
+      "content": "以下代码中，`Hello` 将被输出5次。\n\n```cpp\nfor (int i = 0; i < 5; i++);\n{\n    cout << \"Hello\" << endl;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "F是正确答案。`for` 循环后的分号 `;` 使循环体为空语句，导致循环体什么都不做，只执行5次空操作。紧接着的 `{ cout << \"Hello\" << endl; }` 语句块在循环结束后只执行一次。因此，`Hello` 只会被输出1次，而不是5次，所以T（正确）是错误的。"
+    }
+  ]
+}

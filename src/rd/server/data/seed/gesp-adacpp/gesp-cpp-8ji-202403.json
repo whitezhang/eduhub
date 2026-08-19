@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202403",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202403",
+  "title": "GESP C++八级 202403",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2024年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202403"
+  },
+  "questions": [
+    {
+      "id": "uBUMlSMJ-ils36J1qNEOX",
+      "order": 1,
+      "type": "single_choice",
+      "content": "为丰富食堂菜谱，炒菜部进行头脑风暴。肉类有鸡肉、牛肉、羊肉、猪肉4种，切法有肉排、肉块、肉末3种，配菜有圆白菜、油菜、豆腐3种，辣度有麻辣、微辣、不辣3种。不考虑口感的情况下，选1种肉、1种切法、1种配菜、1种辣度产生一道菜（例如：麻辣牛肉片炒豆腐），这样能产生多少道菜？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "13"
+        },
+        {
+          "label": "B",
+          "text": "42"
+        },
+        {
+          "label": "C",
+          "text": "63"
+        },
+        {
+          "label": "D",
+          "text": "108"
+        }
+      ],
+      "answer": "D",
+      "explanation": "根据乘法原理，要计算总的菜品种类，只需将每种选择的数量相乘。肉类有4种选择，切法有3种，配菜有3种，辣度有3种。因此，总的菜品数量为 4 × 3 × 3 × 3 = 108 道，所以D是正确答案。其他选项是错误的，因为它们没有正确应用组合计数的乘法原理，例如将选择数相加或遗漏了某些因子。"
+    },
+    {
+      "id": "h7Nz9hyzRUeNC2nlPlBZ9",
+      "order": 2,
+      "type": "single_choice",
+      "content": "已知袋中有2个相同的红球、3个相同的绿球、5个相同的黄球。每次取出一个不放回，全部取出。可能产生多少种序列？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "1440"
+        },
+        {
+          "label": "C",
+          "text": "2520"
+        },
+        {
+          "label": "D",
+          "text": "3628800"
+        }
+      ],
+      "answer": "C",
+      "explanation": "这是一个多重集排列问题。总共有 10 个球（2红+3绿+5黄），其中有相同颜色的球。因此，不同序列的数量为总球数的阶乘除以每种颜色球数阶乘的乘积，即 `10! / (2! * 3! * 5!) = 3628800 / (2 * 6 * 120) = 3628800 / 1440 = 2520`，所以选 C。选项 D 是所有球都不同时的排列数 `10!`，选项 B 是 `2! * 3! * 5!` 的结果。"
+    },
+    {
+      "id": "EWrRfPNsSXP691U4dlcwd",
+      "order": 3,
+      "type": "single_choice",
+      "content": "以下二维数组的初始化，哪个是符合语法的？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "int a[][] = {{1, 2}, {3, 4}};"
+        },
+        {
+          "label": "B",
+          "text": "int a[][2] = {};"
+        },
+        {
+          "label": "C",
+          "text": "int a[2][2] = {{1, 2, 3}, {4, 5, 6}};"
+        },
+        {
+          "label": "D",
+          "text": "int a[2][] = {{1, 2, 3}, {4, 5, 6}};"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案B (`int a[][2] = {};`) 是合法的。在C++中，初始化二维数组时，可以省略第一维的大小，但必须指定第二维的大小，且空初始化列表 `{}` 表示对数组进行零初始化"
+    },
+    {
+      "id": "frKWrwNSBwHw0Iskj-9jh",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面有关C++拷贝构造函数的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "必须实现拷贝构造函数，否则一定会出现编译错误。"
+        },
+        {
+          "label": "B",
+          "text": "对象作为函数参数、以值传递方式传入函数时，会自动调用拷贝构造函数。"
+        },
+        {
+          "label": "C",
+          "text": "对象作为函数返回值、以值传递方式从函数返回时，会自动调用拷贝构造函数。"
+        },
+        {
+          "label": "D",
+          "text": "使用一个对象初始化另一个对象时，会自动调用拷贝构造函数。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项A错误，因为C++编译器在没有用户定义时，会自动生成一个默认的拷贝构造函数，所以不手动实现通常不会导致编译错误。选项B、C、D的描述都是正确的：对象以值传递作为函数参数或返回值时，以及使用一个对象初始化另一个对象（如 `MyClass obj2 = obj1;`）时，都会自动调用拷贝构造函数来创建副本。"
+    },
+    {
+      "id": "80FwN4NTY-H5MLDs-YfAA",
+      "order": 5,
+      "type": "single_choice",
+      "content": "使用邻接表表达一个无向简单图，图中包含 v 个顶点、 e 条边，则该表中边节点的个数为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "v × (v - 1)"
+        },
+        {
+          "label": "B",
+          "text": "v × v"
+        },
+        {
+          "label": "C",
+          "text": "2 × e"
+        },
+        {
+          "label": "D",
+          "text": "e"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在邻接表中表示无向图时，每条无向边 (u, v) 会被记录两次：一次在顶点 u 的邻接列表中添加 v，另一次在顶点 v 的邻接列表中添加 u。因此，对于图中包含的 e 条边，总共会有 2 × e 个边节点。选项 A 和 B 描述的是完全图的边数或邻接矩阵的大小，与实际边节点数无关。选项 D (e) 只适用于有向图或只统计一次边的情况，不符合无向图邻接表的表示方式。"
+    },
+    {
+      "id": "sfaDzei5pMETpNcpT6o6s",
+      "order": 6,
+      "type": "single_choice",
+      "content": "关于生成树的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "一个无向连通图可以有多个生成树。"
+        },
+        {
+          "label": "B",
+          "text": "一个无向图，只要连通，就一定有生成树。"
+        },
+        {
+          "label": "C",
+          "text": "n 个顶点的无向完全图，有 n^(n-2) 棵生成树。"
+        },
+        {
+          "label": "D",
+          "text": "n 个顶点的无向图，生成树包含 n-1 条边。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D 错误，因为生成树只存在于**连通**无向图中。如果一个 n 个顶点的无向图不连通，它就没有生成树，因此不能笼统地说其生成树包含 n-1 条边。选项 A、B、C 的说法都是正确的：一个连通图可以有多个生成树；只要连通就一定有生成树；n 个顶点的无向完全图的生成树数量由凯莱公式 `n^(n-2)` 给出。"
+    },
+    {
+      "id": "Iok_iro-ZXz3G_UYKtkHy",
+      "order": 7,
+      "type": "single_choice",
+      "content": "已知三个 double 类型的变量 a 、 b 和 theta 分别表示一个三角形的两条边长及二者的夹角（弧度），则下列哪个表达式可以计算这个三角形的周长？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a * b * sin(theta) / 2"
+        },
+        {
+          "label": "B",
+          "text": "a + b + (a + b) * sin(theta) / 2"
+        },
+        {
+          "label": "C",
+          "text": "a * b * cos(theta) / 2"
+        },
+        {
+          "label": "D",
+          "text": "a + b + sqrt(a * a + b * b - 2 * a * b * cos(theta))"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D 正确。它利用余弦定理 `c = sqrt(a * a + b * b - 2 * a * b * cos(theta))` 计算出三角形的第三条边长，然后将三条边长 `a + b + c` 相加得到周长。选项 A 是三角形的面积公式。选项 B 和 C 的表达式不符合任何三角形的周长或边长计算公式。"
+    },
+    {
+      "id": "6yF0D0H5WHrqcUTYdhPyZ",
+      "order": 8,
+      "type": "single_choice",
+      "content": "在有 n 个元素的二叉排序树中进行查找，其最好、最差时间复杂度分别为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)、O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(1)、O(log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(log n)、O(log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(log n)、O(n)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。最好情况下，如果查找的元素恰好是二叉排序树的根节点，只需一次比较即可找到，时间复杂度为 `O(1)`。最差情况下，如果二叉排序树退化成一个链表（例如，所有元素都是有序插入的），查找可能需要遍历所有 `n` 个节点，时间复杂度为 `O(n)`。选项 B、C、D 中的 `O(log n)` 通常指平衡二叉树的查找效率，或普通二叉排序树的平均效率，不代表其绝对的最好或最差情况。"
+    },
+    {
+      "id": "w52lNQJF9Bi4hqyUaULam",
+      "order": 9,
+      "type": "single_choice",
+      "content": "如下图所示，半径为 r 、圆心角为 t （弧度）的扇形，下面哪个表达式能够求出顶部阴影部分的面积？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "r * r * sin(t) / 2"
+        },
+        {
+          "label": "B",
+          "text": "r * r * t / 2"
+        },
+        {
+          "label": "C",
+          "text": "r * r * (t - sin(t))"
+        },
+        {
+          "label": "D",
+          "text": "r * r * (t - sin(t)) / 2"
+        }
+      ],
+      "answer": "D",
+      "explanation": "阴影部分的面积等于扇形面积减去三角形面积。扇形面积公式为 `r * r * t / 2`，而由两条半径和弦组成的三角形面积公式为 `r * r * sin(t) / 2`。将两者相减并提取公因数 `r * r / 2`，即可得到 `r * r * (t - sin(t)) / 2`，所以 D 是正确的。选项 A 是三角形面积，选项 B 是整个扇形面积，选项 C 缺少了除以 2，因此它们都是错误的。"
+    },
+    {
+      "id": "WLvT-kMaevPBswx_3cNDM",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面程序的时间复杂度为（ ）。\n\n```cpp\nint fib(int n) {\n    if (n <= 1)\n        return 1;\n    return fib(n - 1) + fib(n - 2);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(2^n)"
+        },
+        {
+          "label": "B",
+          "text": "O(φ^n)，其中φ = (√5+1)/2"
+        },
+        {
+          "label": "C",
+          "text": "O(n)"
+        },
+        {
+          "label": "D",
+          "text": "O(1)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该 `fib(n)` 函数是一个典型的双递归实现，每次调用 `fib(n)` 都会产生两个子调用，形成一个指数增长的递归树。其时间复杂度与斐波那契数列本身的增长率一致，精确地为 O(φ^n)，其中 φ 是黄金分割比。选项 A (O(2^n)) 是一个较宽松的上界，但不如 O(φ^n) 精确。选项 C (O(n)) 和 D (O(1)) 分别代表线性和常数时间，这对于这种指数级增长的递归是错误的。"
+    },
+    {
+      "id": "zT1xqDir0lx2Zots4DBgx",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面程序的时间复杂度为（ ）。\n\n```cpp\nint choose(int n, int m) {\n    if (m == 0 || m == n)\n        return 1;\n    return choose(n - 1, m - 1) + choose(n - 1, m);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(2^n)"
+        },
+        {
+          "label": "B",
+          "text": "O(2^m × (n - m))"
+        },
+        {
+          "label": "C",
+          "text": "O(C(n, m))"
+        },
+        {
+          "label": "D",
+          "text": "O(m × (n - m))"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该程序通过递归计算组合数 C(n, m)。每次函数调用，如果不是基准情况，就会产生两次新的递归调用。这个递归调用的结构与组合数的帕斯卡"
+    },
+    {
+      "id": "pGGCye6O3bPdVfOrxuyNg",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面程序的时间复杂度为（ ）。\n\n```cpp\nint primes[MAXP], num = 0;\nbool isPrime[MAXN] = {false};\nvoid sieve() {\n    for (int n = 2; n <= MAXN; n++) {\n        if (!isPrime[n])\n            primes[num++] = n;\n        for (int i = 0; i < num && n * primes[i] <= MAXN; i++) {\n            isPrime[n * primes[i]] = true;\n            if (n % primes[i] == 0)\n                break;\n        }\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n × log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n × log log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n²)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "这是一个线性筛（欧拉筛）的实现。该算法的关键在于 `if (n % primes[i] == 0) break;` 这一条件，它确保了每个合数 `n * primes[i]` 只会被其最小质因子 `primes[i]` 标记一次。外层循环 `n` 遍历 `MAXN` 次，而内层循环的每次操作都使得每个数被处理的次数为常数，因此总时间复杂度为 `O(MAXN)`，即 `O(n)`。`O(n × log n)` 是普通埃拉托斯特尼筛法的复杂度，线性筛效率更高；其他选项则不符合该算法的实际效率。"
+    },
+    {
+      "id": "JianPpQc3SR3jNHCpDC1T",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint a[10][10];\nint main() {\n    int m = 5, n = 4;\n    for (int x = 0; x <= m; x++)\n        a[x][0] = 1;\n    for (int y = 1; y <= n; y++)\n        a[0][y] = 1;\n    for (int x = 1; x <= m; x++)\n        for (int y = 1; y <= n; y++)\n            a[x][y] = a[x - 1][y] + a[x][y - 1];\n    cout << a[m][n] << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "126"
+        },
+        {
+          "label": "D",
+          "text": "3024"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该程序通过动态规划计算网格路径数。`a[x][0]` 和 `a[0][y]` 被初始化为 1，表示到达边界的路径只有一条。"
+    },
+    {
+      "id": "NSs7sFB6QmmfO7V4Md9UM",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int cnt = 0;\n    for (int x = 0; x <= 10; x++)\n        for (int y = 0; y <= 10; y++)\n            for (int z = 0; z <= 10; z++)\n                if (x + y + z == 15)\n                    cnt++;\n    cout << cnt << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "90"
+        },
+        {
+          "label": "B",
+          "text": "91"
+        },
+        {
+          "label": "C",
+          "text": "96"
+        },
+        {
+          "label": "D",
+          "text": "100"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该程序使用三重循环遍历 `x`, `y`, `z` 所有从 0 到 10 的组合。`if (x + y + z == 15)`"
+    },
+    {
+      "id": "BXgZ0MwVl6sRuRzkO8Qj-",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面的程序使用邻接矩阵表达的带权无向图，则从顶点0到顶点3的最短距离为（ ）。\n\n```cpp\nint weight[4][4] = {\n    { 0,  1,   7, 100},\n    { 1,  0,   5,  15},\n    { 7,  5,   0,   6},\n    {100, 15,  6,   0}};\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "100"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "12"
+        },
+        {
+          "label": "D",
+          "text": "13"
+        }
+      ],
+      "answer": "C",
+      "explanation": "从顶点0到顶点3的最短路径是 `0 -> 1 -> 2 -> 3`。这条路径的总距离为 `weight[0][1]` + `weight[1]["
+    },
+    {
+      "id": "ZA0SCCu-72TCyemmLHwPk",
+      "order": 16,
+      "type": "true_false",
+      "content": "已知 int 类型的变量 a 和 b ，则执行语句 a, b = b, a; 后，变量 a 和 b 的值会互换。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，逗号运算符 `,` 的优先级低于赋值运算符 `=`。因此，`a, b = b, a;` 这条语句会被解析为 `a; ("
+    },
+    {
+      "id": "DHW-PU2AiWnKusQHzdk5b",
+      "order": 17,
+      "type": "true_false",
+      "content": "一个袋子中有3个完全相同的红色小球、2个完全相同的蓝色小球。每次从中取出1个，再放回袋子，这样进行3次后，可能的颜色顺序有7种。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "每次取球都有红色或蓝色两种可能。由于每次取球后都放回，三次取球是独立的事件，因此可能的颜色顺序总共有 `2 * 2 * 2 = 8` 种。题目中声称有7种，与实际计算结果不符，所以是错误的。"
+    },
+    {
+      "id": "znetg18bIUcoUcoPQBizq",
+      "order": 18,
+      "type": "true_false",
+      "content": "孙子定理是求解一次同余方程组的方法，最早见于中国南北朝时期（公元5世纪）的数学著作《孙子算经》。又称中国余数定理，是中国数学史上的一项伟大成就。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "题目描述完全符合孙子定理（又称中国余数定理）的历史背景和数学定义。它确实是求解一次同余方程组的方法，最早见于《孙子算经》，并被公认为中国数学史上的伟大成就。因此，选项T（正确）是符合题意的。选项F（错误）则不符合事实。"
+    },
+    {
+      "id": "aUid8QymoGwx0gVoQHtJs",
+      "order": 19,
+      "type": "true_false",
+      "content": "N 个顶点的无向完全图有 N × (N - 1) 条边。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "一个N个顶点的无向完全图，每个顶点都与其他N-1个顶点相连。如果直接用 N × (N - 1) 计算，每条边会被计算两次（例如，顶点A到B的边和顶点B到A的边被视为两条）。因此，无向完全图的边数应为 N × (N - 1) / 2。题目中缺少除以2，所以该陈述是错误的。"
+    },
+    {
+      "id": "6PaZs9qoSfdzz2UnP8TXF",
+      "order": 20,
+      "type": "true_false",
+      "content": "为解决哈希函数冲突，在哈希表项内设置链表存储该项内的所有冲突元素，则该哈希表内查找元素的最差时间复杂度为 O(1)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "当所有元素都哈希到同一个链表时，查找操作需要遍历整个链表。此时，链表的长度可能达到哈希表中元素总数 `n`，因此最差时间复杂度为 O(n)，而非 O(1)。O(1) 通常是哈希表查找的平均时间复杂度，而不是最差情况。"
+    },
+    {
+      "id": "35OM3dHL5eiWVTc-GUQqi",
+      "order": 21,
+      "type": "true_false",
+      "content": "求一个包含 v 个顶点、 e 条边的带权连通无向图的最小生成树，Prim算法的时间复杂度为 O(v × e)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "Prim算法的时间复杂度取决于其内部使用的优先队列数据结构。如果使用邻接矩阵实现，时间复杂度为 O(v^2)；如果使用邻接表和二叉堆（优先队列），时间复杂度为 O(e log v)。题目中给出的 O(v × e) 并非Prim算法的常见或最优时间复杂度，因此是错误的。选项T认为 O(v × e) 是正确的，与Prim算法的实际复杂度不符。"
+    },
+    {
+      "id": "05e3AJKidXTtHbLrM3mFQ",
+      "order": 22,
+      "type": "true_false",
+      "content": "已知 int 类型的变量 a 、 b 和 c 中分别存储着一个三角形的三条边长，则这个三角形的面积可以通过表达式 sqrt((a + b + c) * (b + c - a) * (a + c - b) * (a + b - c)) / 4 求得。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这个表达式是著名的海伦公式，用于计算已知三边长 `a`、`b`、`c` 的三角形面积。公式 `sqrt((a + b + c) * (b + c - a) * (a + c - b) * (a + b - c)) / 4` 是海伦公式的正确形式，因此该陈述是正确的。选择 F 则表示该公式不正确，与数学事实不符。"
+    },
+    {
+      "id": "lIQxVf4q0WTRSModC8VOQ",
+      "order": 23,
+      "type": "true_false",
+      "content": "可以使用深度优先搜索算法判断图的连通性。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "深度优先搜索（DFS）可以有效判断图的连通性。从图中的任意一个节点开始进行DFS遍历，如果DFS能够访问到图中的所有节点，则说明图是连通的。反之，如果DFS结束后仍有未访问到的节点，则图不连通，因为这些未访问节点属于不同的连通分量。因此，选项T是正确的，F是错误的。"
+    },
+    {
+      "id": "XBrU7d8eLg7OKOqcRSQuf",
+      "order": 24,
+      "type": "true_false",
+      "content": "在 N 个元素的二叉排序树中查找一个元素，平均情况的时间复杂度是 O(logN)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在二叉排序树中查找元素，每次比较都会将搜索范围缩小一半，这与二分查找类似。因此，在平均情况下（即树结构相对平衡时），查找一个元素的时间复杂度是 O(logN)。选项 F 错误，因为它否定了这一基本特性。"
+    },
+    {
+      "id": "386it0xtoimt9nqnBKf_7",
+      "order": 25,
+      "type": "true_false",
+      "content": "给定 double 类型的变量 x ，且其值大于等于1，我们可以通过二分法求出 log x 的近似值。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "二分法适用于在单调函数上查找特定值。函数 `f(y) = e^y`（即 `exp(y)`）是一个严格单调递增函数，我们可以通过二分法来寻找一个 `y` 值，使得 `e^y` 尽可能接近给定的 `x`。这个 `y` 值就是 `log x` 的近似值。因此，选项 T 是正确的，F 是错误的。"
+    }
+  ]
+}

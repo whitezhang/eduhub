@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-5ji-202403",
+  "url": "https://adacpp.com/practice/gesp-cpp-5ji-202403",
+  "title": "GESP C++五级 202403",
+  "description": "CCF编程能力等级认证 GESP C++ 五级 2024年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 5,
+    "ym": "202403"
+  },
+  "questions": [
+    {
+      "id": "UV_OTyKbpZBEaSMjAxGD8",
+      "order": 1,
+      "type": "single_choice",
+      "content": "唯一分解定理描述的内容是（ ）？",
+      "options": [
+        {
+          "label": "A",
+          "text": "任意整数都可以分解为素数的乘积"
+        },
+        {
+          "label": "B",
+          "text": "每个合数都可以唯一分解为一系列素数的乘积"
+        },
+        {
+          "label": "C",
+          "text": "两个不同的整数可以分解为相同的素数乘积"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "唯一分解定理（也称算术基本定理）指出，任何一个大于1的合数都可以被唯一地表示为若干个素数的乘积，不考虑这些素数因子的顺序，因此B是正确的。选项A错误，因为0、1和负数不符合素数乘积的定义，该定理通常针对大于1的正整数。选项C错误，因为“唯一”分解意味着不同整数的素数乘积必然不同，否则就不是唯一的了。"
+    },
+    {
+      "id": "y5hASb77oNO_I9SUA_YRH",
+      "order": 2,
+      "type": "single_choice",
+      "content": "贪心算法的核心思想是（ ）？",
+      "options": [
+        {
+          "label": "A",
+          "text": "在每一步选择中都做当前状态下的最优选择"
+        },
+        {
+          "label": "B",
+          "text": "在每一步选择中都选择局部最优解"
+        },
+        {
+          "label": "C",
+          "text": "在每一步选择中都选择全局最优解"
+        },
+        {
+          "label": "D",
+          "text": "以上都对"
+        }
+      ],
+      "answer": "A",
+      "explanation": "贪心算法的核心思想是在每一步选择中都做出当前状态下看起来最优的决策，不考虑对后续步骤可能产生的影响，希望通过一系列局部最优选择最终能达到全局最优。因此，选项A准确描述了这一特点。选项B与A类似，但A的表述更强调基于当前信息的即时决策。选项C错误，贪心算法并不能保证每一步都能选择全局最优解，它只是希望通过局部最优解来逼近全局最优。因此，D也不正确。"
+    },
+    {
+      "id": "Y4aaM7oIns6XPjTnGRC5I",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面的C++代码片段用于计算阶乘。请在横线处填入（ ），实现正确的阶乘计算。\n\n```cpp\nint factorial(int n) {\n    if (n == 0 || n == 1) {\n        return 1;\n    } else {\n        _________________________________ // 在此处填入代码\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "return n * factorial(n - 1);"
+        },
+        {
+          "label": "B",
+          "text": "return factorial(n - 1) / n;"
+        },
+        {
+          "label": "C",
+          "text": "return n * factorial(n);"
+        },
+        {
+          "label": "D",
+          "text": "return factorial(n / 2) * factorial(n / 2);"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项 A `return n * factorial(n - 1);` 正确实现了阶乘的递归定义 `n! = n * (n-1)!`。当 `n` 大于 1 时，函数将 `n` 乘以 `n-1` 的阶乘。选项 B 运算错误，不符合阶乘定义。选项 C `return n * factorial(n);` 会导致无限递归（栈溢出），因为 `n` 的值没有改变。选项 D `return factorial(n / 2) * factorial(n / 2);` 不符合阶乘的数学定义。"
+    },
+    {
+      "id": "2Sk4LG4QYGHtyXVgdLJdh",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面的代码片段用于在双向链表中删除一个节点。请在横线处填入（ ），使其能正确实现相应功能。\n\n```cpp\nvoid deleteNode(DoublyListNode*& head, int value) {\n    DoublyListNode* current = head;\n    while (current != nullptr && current->val != value) {\n        current = current->next;\n    }\n    if (current != nullptr) {\n        if (current->prev != nullptr) {\n            __________________________________ // 在此处填入代码\n        } else {\n            head = current->next;\n        }\n        if (current->next != nullptr) {\n            current->next->prev = current->prev;\n        }\n        delete current;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "if (current->next != nullptr) current->next->prev = current->prev;"
+        },
+        {
+          "label": "B",
+          "text": "current->prev->next = current->next;"
+        },
+        {
+          "label": "C",
+          "text": "delete current->next;"
+        },
+        {
+          "label": "D",
+          "text": "current->prev = current->next;"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B `current->prev->next = current->next;` 是正确的。当要删除的节点 `current` 不是头节点时，需要将 `current` 的前一个节点 (`current"
+    },
+    {
+      "id": "VmqGqLaCUCZMMh0bi6Thw",
+      "order": 5,
+      "type": "single_choice",
+      "content": "辗转相除法也被称为（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "高斯消元法"
+        },
+        {
+          "label": "B",
+          "text": "费马定理"
+        },
+        {
+          "label": "C",
+          "text": "欧几里德算法"
+        },
+        {
+          "label": "D",
+          "text": "牛顿迭代法"
+        }
+      ],
+      "answer": "C",
+      "explanation": "辗转相除法是求两个正整数最大公约数（GCD）的经典算法，最早由古希腊数学家欧几里德提出，因此也被称为 `欧几里德算法`。高斯消元法用于解线性方程组，费马定理是数论中的一个定理，牛顿迭代法用于求函数根的近似值，它们都与辗转相除法的功能和原理不同。"
+    },
+    {
+      "id": "-MFjy8xoehlWFiETM58bN",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面的代码片段用于计算斐波那契数列。该代码的时间复杂度是（ ）？\n\n```cpp\nint fibonacci(int n) {\n    if (n <= 1) {\n        return n;\n    } else {\n        return fibonacci(n - 1) + fibonacci(n - 2);\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(n)"
+        },
+        {
+          "label": "C",
+          "text": "O(2^n)"
+        },
+        {
+          "label": "D",
+          "text": "O(log n)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`fibonacci(n)` 函数通过 `fibonacci(n - 1) + fibonacci(n - 2)` 进行双重递归调用。这种结构导致大量的重复计算，每次调用都会产生两个子调用，形成一个近似于二叉树的调用结构，其节点数量随 `n` 呈指数级增长，因此时间复杂度是 O(2^n)。O(1)、O(n) 和 O(log n) 都远低于实际的计算量，不符合这种指数级增长的特性。"
+    },
+    {
+      "id": "4PDiLwCG8N-s6btabyVlI",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面的代码片段用于将两个高精度整数进行相加。请在横线处填入（ ），使其能正确实现相应功能。\n\n```cpp\nstring add(string num1, string num2) {\n    string result;\n    int carry = 0;\n    int i = num1.size() - 1, j = num2.size() - 1;\n    while (i >= 0 || j >= 0 || carry) {\n        int x = (i >= 0) ? num1[i--] - '0' : 0;\n        int y = (j >= 0) ? num2[j--] - '0' : 0;\n        int sum = x + y + carry;\n        carry = sum / 10;\n        _______________________________________\n    }\n    return result;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "result = to_string(sum % 10) + result;"
+        },
+        {
+          "label": "B",
+          "text": "result = to_string(carry % 10) + result;"
+        },
+        {
+          "label": "C",
+          "text": "result = to_string(sum / 10) + result;"
+        },
+        {
+          "label": "D",
+          "text": "result = to_string(sum % 10 + carry) + result;"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。`sum % 10` 能够得到当前位计算结果的个位数，即当前位应放入结果的数字。将其转换为字符串后，通过 `+ result` 操作将其添加到 `result` 字符串的最前面，因为"
+    },
+    {
+      "id": "jbtwvJLARyM22HbTK68Pf",
+      "order": 8,
+      "type": "single_choice",
+      "content": "给定序列：1，3，6，9，17，31，39，52，61，79，81，90，96。使用以下代码进行二分查找查找元素82时，需要循环多少次，即最后输出的times值为（ ）。\n\n```cpp\nint binarySearch(const std::vector<int>& arr, int target) {\n    int left = 0;\n    int right = arr.size() - 1;\n    int times = 0;\n    while (left <= right) {\n        times ++;\n        int mid = left + (right - left) / 2;\n        if (arr[mid] == target) {\n            cout << times << endl;\n            return mid;\n        } else if (arr[mid] < target) {\n            left = mid + 1;\n        } else {\n            right = mid - 1;\n        }\n    }\n    cout << times << endl;\n    return -1;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "5"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "D",
+      "explanation": "根据二分查找算法，初始 `left=0`, `right=12`。\n1. 第一次循环，`mid=6` (`arr[6]=39`)，`"
+    },
+    {
+      "id": "nAbXy0gMJaHVRTjyQrnoA",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面的代码片段用于判断一个正整数是否为素数。请对以下代码进行修改，使其能正确实现相应功能。（ ）\n\n```cpp\nbool isPrime(int num) {\n    if (num < 2) {\n        return false;\n    }\n    for (int i = 2; i * i < num; ++i) {\n        if (num % i == 0) {\n            return false;\n        }\n    }\n    return true;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "num < 2 应该改为 num <= 2"
+        },
+        {
+          "label": "B",
+          "text": "循环条件 i * i < num 应该改为 i * i <= num"
+        },
+        {
+          "label": "C",
+          "text": "循环条件应该是 i <= num"
+        },
+        {
+          "label": "D",
+          "text": "循环体中应该是 if (num % i != 0)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "循环条件 `i * i < num` 无法检测到 `num` 是某个数的平方的情况，例如当 `num` 为 4 时，`i=2` 导致 `i"
+    },
+    {
+      "id": "bamZBOr5RHSGxjIQPzdB8",
+      "order": 10,
+      "type": "single_choice",
+      "content": "在埃拉托斯特尼筛法中，要筛选出不大于n的所有素数，最外层循环应该遍历什么范围（ ）？\n\n```cpp\nvector<int> sieveOfEratosthenes(int n) {\n    std::vector<bool> isPrime(n + 1, true);\n    std::vector<int> primes;\n    _______________________ {\n        if (isPrime[i]) {\n            primes.push_back(i);\n            for (int j = i * i; j <= n; j += i) {\n                isPrime[j] = false;\n            }\n        }\n    }\n    for (int i = sqrt(n) + 1; i <= n; ++i) {\n        if (isPrime[i]) {\n            primes.push_back(i);\n        }\n    }\n    return primes;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "for (int i = 2; i <= n; ++i)"
+        },
+        {
+          "label": "B",
+          "text": "for (int i = 1; i < n; ++i)"
+        },
+        {
+          "label": "C",
+          "text": "for (int i = 2; i <= sqrt(n); ++i)"
+        },
+        {
+          "label": "D",
+          "text": "for (int i = 1; i <= sqrt(n); ++i)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n在埃拉托斯特尼筛法中，我们只需要遍历到 `sqrt(n)`。因为如果一个合数 `x` 小于等于 `n"
+    },
+    {
+      "id": "GlrjMHn9dHbmxPAFAuaNw",
+      "order": 11,
+      "type": "single_choice",
+      "content": "素数的线性筛法时间复杂度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n log log n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n log n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n^2)"
+        }
+      ],
+      "answer": "A",
+      "explanation": "线性筛法（欧拉筛）的核心思想是确保每个合数只被其最小质因子筛除一次，避免了重复标记。这意味着每个数字最多被访问和处理常数次，因此其时间复杂度为 `O(n)`。选项 B (`O(n log log n)`) 是埃拉托斯特尼筛法的时间复杂度，它会重复标记合数。选项 C 和 D 的复杂度更高，不符合高效筛法的特性。"
+    },
+    {
+      "id": "8rU5LDDN1xbmyPAZqW6eZ",
+      "order": 12,
+      "type": "single_choice",
+      "content": "归并排序的基本思想是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "动态规划"
+        },
+        {
+          "label": "B",
+          "text": "分治"
+        },
+        {
+          "label": "C",
+          "text": "贪心算法"
+        },
+        {
+          "label": "D",
+          "text": "回溯算法"
+        }
+      ],
+      "answer": "B",
+      "explanation": "归并排序采用**分治**策略，它将一个大问题分解成若干个小问题（分解），递归地解决这些小问题（解决），然后将小问题的解合并成大问题的解（合并）。动态规划、贪心算法和回溯算法是解决不同类型问题的算法范式，不符合归并排序的这种分解、解决、合并模式。"
+    },
+    {
+      "id": "xnC2n-KoPaO9w8OAz6g56",
+      "order": 13,
+      "type": "single_choice",
+      "content": "在快速排序中，选择的主元素（pivot）会影响算法的（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "不影响"
+        },
+        {
+          "label": "B",
+          "text": "时间复杂度"
+        },
+        {
+          "label": "C",
+          "text": "空间复杂度"
+        },
+        {
+          "label": "D",
+          "text": "时间复杂度和空间复杂度"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选择的主元素（pivot）直接决定了快速排序每次划分的平衡性。\n1.  **正确答案 B (时间复杂度):** 如果主元素选择得好（例如接近中位数"
+    },
+    {
+      "id": "G1vnimD5SnH9Xb9IWcKRJ",
+      "order": 14,
+      "type": "single_choice",
+      "content": "递归函数在调用自身时，必须满足（ ），以避免无限递归？",
+      "options": [
+        {
+          "label": "A",
+          "text": "有终止条件"
+        },
+        {
+          "label": "B",
+          "text": "函数参数递减（或递增）"
+        },
+        {
+          "label": "C",
+          "text": "函数返回值固定"
+        },
+        {
+          "label": "D",
+          "text": "以上都对"
+        }
+      ],
+      "answer": "A",
+      "explanation": "递归函数必须有**终止条件**（或称基本情况），这是停止递归调用的唯一机制。当满足终止条件时，函数会停止调用自身并开始返回结果，否则将导致无限递归，最终造成栈溢出。函数参数递减（或递增）通常是为了让递归调用**趋近**终止条件，但它本身不是终止条件；函数返回值固定与避免无限递归无关。因此，只有终止条件是避免无限递归的必需项。"
+    },
+    {
+      "id": "RoDeCu9aE7gnCmc9iAIFv",
+      "order": 15,
+      "type": "single_choice",
+      "content": "假设给定链表为: 1 -> 3 -> 5 -> 7 -> nullptr，若调用 searchValue(head, 5)，函数返回值为（ ）。\n\n```cpp\nint searchValue(ListNode* head, int target) {\n    while (head != nullptr) {\n        if (head->val == target) {\n            return 1;\n        }\n        head = head->next;\n    }\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "返回 1"
+        },
+        {
+          "label": "B",
+          "text": "返回 0"
+        },
+        {
+          "label": "C",
+          "text": "死循环，无法返回"
+        },
+        {
+          "label": "D",
+          "text": "返回 -1"
+        }
+      ],
+      "answer": "A",
+      "explanation": "函数 `searchValue` 会从链表头部开始遍历。当 `head` 指针指向值为 `5` 的节点时，`head->val == target` 条件（即 `5"
+    },
+    {
+      "id": "ynk0R3uW1Mm9vZU49Vnvm",
+      "order": 16,
+      "type": "true_false",
+      "content": "辗转相除法用于求两个整数的最大公约数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "辗转相除法（欧几里得算法）是求两个整数最大公约数（GCD）的经典且高效的算法。它的核心原理是两个数的最大公约数等于其中较小的数与两数相除余数的最大公约数。因此，题目描述完全正确，选项 T 为正解。选项 F 错误，因为它否定了辗转相除法的基本用途。"
+    },
+    {
+      "id": "GEMdPtJjQNEFnxoKp-hcA",
+      "order": 17,
+      "type": "true_false",
+      "content": "插入排序的时间复杂度是O(N log N)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "插入排序的平均时间复杂度是 O(N^2)，最坏情况下也是 O(N^2)。只有在数据基本有序的最佳情况下，它的时间复杂度才是 O(N)。因此，题目中说的 O(N log N) 是错误的，O(N log N) 通常是更高效的排序算法（如归并排序、堆排序）的时间复杂度。"
+    },
+    {
+      "id": "Fros0yfJW2F7_PEqT4yle",
+      "order": 18,
+      "type": "true_false",
+      "content": "二分查找要求被搜索的序列是有序的，否则无法保证正确性。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "二分查找（Binary Search）的核心原理是每次将搜索区间缩小一半。它通过比较目标值与中间元素，来判断目标值是在中间元素的左侧还是右侧。这个判断的前提是序列必须有序，这样才能保证左侧元素都小于等于中间元素，右侧元素都大于等于中间元素。如果序列无序，这个判断就会失效，可能导致算法错过正确的结果，因此选项T是正确的，选项F是错误的。"
+    },
+    {
+      "id": "bdQF3VtmbdNpnCrMLwB60",
+      "order": 19,
+      "type": "true_false",
+      "content": "使用贪心算法解决问题时，每一步的局部最优解一定会导致全局最优解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "贪心算法在每一步都选择当前看起来最好的局部最优解，但这并不保证最终结果是全局最优解。很多问题中，局部的最优选择可能会错过通向全局最优解的路径。因此，只有当问题满足特定条件（如贪心选择性质和最优子结构性质）时，贪心算法才能得到全局最优解。所以，题目中“一定会”的说法是错误的。"
+    },
+    {
+      "id": "FdKaXjcCz6RnGmT_rIJeB",
+      "order": 20,
+      "type": "true_false",
+      "content": "分治算法的核心思想是将一个大问题分解成多个相同或相似的子问题进行解决，最后合并得到原问题的解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "分治算法的核心思想正是将一个大问题分解为多个相同或相似的子问题，独立解决这些子问题，然后将子问题的解合并起来得到原问题的解。这与题目描述完全一致，例如归并排序和快速排序都是典型的分治算法。因此，题目描述是正确的，选择T。"
+    },
+    {
+      "id": "fCKxl3vKNCRPKMZn4vgVn",
+      "order": 21,
+      "type": "true_false",
+      "content": "分治算法的典型应用之一是归并排序，其时间复杂度为O(N log N)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "归并排序（Merge Sort）确实是分治算法的典型应用，它通过将数组递归地分成两半，分别排序后再合并来实现。其时间复杂度在所有情况下都稳定为 O(N log N)，效率较高。因此，题目描述完全正确，选项 T 是正确的。选项 F 错误，因为它否定了一个准确的描述。"
+    },
+    {
+      "id": "bmmciCOAH9uLvf0ZdVyEJ",
+      "order": 22,
+      "type": "true_false",
+      "content": "素数表的埃氏筛法和线性筛法的时间复杂度都是O(N log log N)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "线性筛法的时间复杂度是 O(N)，因为它保证每个合数只被其最小质因数筛除一次。而埃氏筛法的时间复杂度确实是 O(N log log N)。因此，题目中“埃氏筛法和线性筛法的时间复杂度都是 O(N log log N)”的说法是错误的，因为线性筛法更快。"
+    },
+    {
+      "id": "UJO77BUmmGLP-JVdijV6j",
+      "order": 23,
+      "type": "true_false",
+      "content": "贪心算法是一种可以应用于所有问题的通用解决方案。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "贪心算法在每一步选择中都采取当前看起来最好的局部最优解，但这种策略并非对所有问题都有效。对于许多问题，局部最优的选择可能无法导致全局最优解，因此贪心算法有其特定的适用范围。题目中“可以应用于所有问题的通用解决方案”的说法是错误的，所以选择F。"
+    },
+    {
+      "id": "pKTMuYWjlO6SigGrzU778",
+      "order": 24,
+      "type": "true_false",
+      "content": "单链表和双链表都可以在常数时间内实现在链表头部插入或删除节点的操作。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。无论是单链表还是双链表，在链表头部插入或删除节点都只需要修改少数几个指针（如 `head` 指针和新/旧节点的 `next` 或 `prev` 指针）。这些操作的执行时间不依赖于链表的长度，因此都属于常数时间复杂度 O(1)。"
+    },
+    {
+      "id": "ceZoO3RZpXJChJl8YQxLY",
+      "order": 25,
+      "type": "true_false",
+      "content": "在C语言中，递归的实现方式通常会占用更多的栈空间，可能导致栈溢出。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "递归函数每次调用自身时，都会在程序的调用栈上创建一个新的栈帧，用于存储本次调用的局部变量、参数和返回地址。当递归深度过大时，这些栈帧会不断累积，迅速消耗栈空间。一旦栈空间耗尽，就会发生栈溢出错误，因此题目描述是正确的。"
+    }
+  ]
+}

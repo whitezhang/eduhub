@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202312",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202312",
+  "title": "GESP C++八级 202312",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2023年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202312"
+  },
+  "questions": [
+    {
+      "id": "F25LsU5WneAnueOGkRggq",
+      "order": 1,
+      "type": "single_choice",
+      "content": "小杨要从A城到B城，又想顺路游览一番。他有两个选项：1、坐高铁路到C城游览，再坐高铁或飞机到B城；2、坐船到D城游览，再坐船、高铁或飞机到B城。请问小杨从A城到B城共有几种交通方案可以选择？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "C",
+      "explanation": "小杨从A城到B城有两种主要方案：\n1.  **方案一：** A城到C城（1种方式：高铁），C城到B城有2种方式（高铁或飞机），共 1 × 2 = 2 种方案。\n2.  **方案二：** A城到D城（1种方式：船），D城到B城有3种方式（船、高铁或飞机），共 1 × 3 = 3 种方案。\n因此，小杨总共有 2 + 3 = 5 种交通方案可以选择，所以C是正确答案。其他选项未能正确计算所有可能的组合。"
+    },
+    {
+      "id": "vWR8Zs-u4JlDrnxtgIZgw",
+      "order": 2,
+      "type": "single_choice",
+      "content": "以下哪个函数声明是符合语法的，且在调用时可以将二维数组的名字作为实际参数传递给形式参数 a ？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "void QuickSort(int a[][10], int n);"
+        },
+        {
+          "label": "B",
+          "text": "void QuickSort(int a[5][], int m);"
+        },
+        {
+          "label": "C",
+          "text": "void QuickSort(int a[][], int n, int m);"
+        },
+        {
+          "label": "D",
+          "text": "void QuickSort(int ** a, int n, int m);"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A. `void QuickSort(int a[][10], int n);` 是正确的。在 C++ 中，当将二维数组作为参数传递时，除了第一维可以省略外，后续所有维度（列数）都必须明确指定，以便编译器进行正确的内存地址计算。\n\nB. `void QuickSort(int a[5][], int m);` 是错误的，因为列数 `[]` 未指定。\nC. `void QuickSort(int a[][], int n, int m);` 也是错误的，因为列数 `[]` 未指定。\nD. `void QuickSort(int ** a, int n, int m);` 是错误的。`int **a` 是一个指向指针的指针，与静态声明的二维数组 `int arr[N][M]` 的类型"
+    },
+    {
+      "id": "g_ItZqvwT52zXdDA7VcXj",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面有关C++类和对象的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "对象的生命周期开始时，会执行构造函数。"
+        },
+        {
+          "label": "B",
+          "text": "对象的生命周期结束时，会执行析构函数。"
+        },
+        {
+          "label": "C",
+          "text": "类的析构函数可以为虚函数。"
+        },
+        {
+          "label": "D",
+          "text": "类的构造函数可以为虚函数。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "构造函数不能是虚函数，因为虚函数机制依赖于对象已经构造完成并拥有虚函数表（vtable），而构造函数的作用正是创建对象本身，因此在对象创建之前无法使用虚函数机制。选项A和B正确描述了构造函数和析构函数在对象生命周期中的作用。选项C也是正确的，析构函数可以声明为虚函数（`virtual ~ClassName();`），这在多态场景下非常关键，以确保通过基类指针删除派生类对象时能正确调用派生类的析构函数。"
+    },
+    {
+      "id": "O-WD1uJsPGU2KLgzB9p1f",
+      "order": 4,
+      "type": "single_choice",
+      "content": "使用邻接矩阵表达 n 个顶点的有向图，则该矩阵的大小为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "n × (n + 1)"
+        },
+        {
+          "label": "B",
+          "text": "n × n"
+        },
+        {
+          "label": "C",
+          "text": "n × (n - 1)"
+        },
+        {
+          "label": "D",
+          "text": "n × (n - 1) / 2"
+        }
+      ],
+      "answer": "B",
+      "explanation": "邻接矩阵是一个 `n` 行 `n` 列的二维数组，其中 `A[i][j]` 表示从顶点 `i` 到顶点 `j` 是否存在边。因此，表达 `n` 个顶点的有向图，该矩阵的大小为 `n × n`。选项 A、C、D 描述的矩阵大小不符合邻接矩阵的定义，特别是 `n × (n - 1) / 2` 通常与无向图的边数相关，而非矩阵本身的大小。"
+    },
+    {
+      "id": "o0DUJQoD10VHeL5SVyQku",
+      "order": 5,
+      "type": "single_choice",
+      "content": "5 位同学排队，其中一位同学不能排在第一，则共有多少种可能的排队方式？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "24"
+        },
+        {
+          "label": "C",
+          "text": "96"
+        },
+        {
+          "label": "D",
+          "text": "120"
+        }
+      ],
+      "answer": "C",
+      "explanation": "总共有 5 位同学，全排列有 5! = 120 种方式。其中一位同学不能排在第一位，我们可以计算他排在第一位的情况：此时第一位固定，剩下 4 位同学有 4! = 24 种排法。因此，该同学不能排在第一位的排队方式为总数减去他排在第一位的情况，即 120 - 24 = 96 种，所以 C 是正确答案。选项 D (120) 是没有任何限制的总排列数，选项 B (24) 是该同学必须排第一位的情况。选项 A (5) 显然不正确。"
+    },
+    {
+      "id": "JLCm0L48y52ngH68Wv5A2",
+      "order": 6,
+      "type": "single_choice",
+      "content": "一个无向图包含 n 个顶点，则其最小生成树包含多少条边？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "n - 1"
+        },
+        {
+          "label": "B",
+          "text": "n"
+        },
+        {
+          "label": "C",
+          "text": "n + 1"
+        },
+        {
+          "label": "D",
+          "text": "最小生成树可能不存在。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "一个无向图的最小生成树只存在于连通图。如果图不连通，则无法构建一个包含所有顶点的生成树，因此最小生成树可能不存在，选项 D 正确。选项 A、B、C 错误，因为它们假设最小生成树总是存在，并给出了固定的边数；只有当图是连通时，最小生成树才存在且边数为 `n-1` 条。"
+    },
+    {
+      "id": "X0EgtBgQRR9AHPOvfI7z_",
+      "order": 7,
+      "type": "single_choice",
+      "content": "已知三个 double 类型的变量 a 、 b 和 theta 分别表示一个三角形的两条边长及二者的夹角（弧度），则下列哪个表达式可以计算这个三角形的面积？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a * b * sin(theta) / 2"
+        },
+        {
+          "label": "B",
+          "text": "(a + b) * sin(theta) / 2"
+        },
+        {
+          "label": "C",
+          "text": "a * b * cos(theta) / 2"
+        },
+        {
+          "label": "D",
+          "text": "sqrt(a * a + b * b - 2 * a * b * cos(theta))"
+        }
+      ],
+      "answer": "A",
+      "explanation": "三角形的面积公式之一是“两边及其夹角正弦值乘积的一半”，即 `1/2 * a * b * sin(theta)`。因此，选项 A `a * b * sin(theta) / 2` 是正确的。选项 B 错误地使用了边长之和；选项 C 错误地使用了夹角的余弦值 `cos(theta)`；选项 D 是余弦定理，用于计算第三边长度，而非面积。"
+    },
+    {
+      "id": "jzCWF9ecrgaqyZIPQ6gEX",
+      "order": 8,
+      "type": "single_choice",
+      "content": "对有 n 个元素的二叉排序树进行中序遍历，其时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(log(n))"
+        },
+        {
+          "label": "C",
+          "text": "O(n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n²)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "中序遍历二叉排序树需要访问树中的每一个节点，无论树的结构如何，每个节点都只会被访问一次。因此，对于一个有 `n` 个元素的树，总共需要执行 `n` 次访问操作，其时间复杂度是 O(n)。选项 A (O(1)) 表示常数时间，不正确；选项 B (O(log(n))) 通常是平衡二叉树的查找、插入等操作，不适用于遍历所有节点；选项 D (O(n²)) 表示操作次数与 `n` 的平方成正比，远高于实际遍历所需。"
+    },
+    {
+      "id": "ACpTzxkda66HDBimhv80G",
+      "order": 9,
+      "type": "single_choice",
+      "content": "假设输入参数 m 和 n 满足 m ≤ n，则下面程序的最差情况的时间复杂度为（ ）。\n\n```cpp\nint gcd(int m, int n) {\n    while (m > 0) {\n        int t = m;\n        m = n % m;\n        n = t;\n    }\n    return n;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(log(n))"
+        },
+        {
+          "label": "B",
+          "text": "O(n)"
+        },
+        {
+          "label": "C",
+          "text": "O(n × m)"
+        },
+        {
+          "label": "D",
+          "text": "O(m × log(n))"
+        }
+      ],
+      "answer": "A",
+      "explanation": "这个 `gcd` 函数实现了欧几里得算法（辗转相除法）。在 `while (m > 0)` 循环中，`m` 的值会通过 `n % m` 显著减小，每次迭代至少减半，因此循环次数是输入参数的对数级别。最坏情况下的时间复杂度为 `O(log(n))`。选项 B、C、D 表示的复杂度过高，不符合欧几里得算法的高效率。"
+    },
+    {
+      "id": "BZXoqY0zzz1EefJlDssIw",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面程序的时间复杂度为（ ）。\n\n```cpp\nlong long power_mod(long long a, long long n, long long mod) {\n    if (n == 0)\n        return 1;\n    a = a % mod;\n    if (n == 1)\n        return a;\n    long long pw = power_mod(a, n / 2, mod);\n    long long pw2 = pw * pw % mod;\n    if (n % 2 == 0)\n        return pw2;\n    return pw2 * a % mod;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(a^n)"
+        },
+        {
+          "label": "C",
+          "text": "O(log(n))"
+        },
+        {
+          "label": "D",
+          "text": "O(log(n) × a)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该 `power_mod` 函数实现了快速幂（或二分幂）算法，每次递归都将指数 `n` 除以 2，使得问题规模减半。这意味着函数会执行大约 `log(n)` 次递归调用，每次调用内部操作都是常数时间。因此，其时间复杂度为 `O(log(n))`。选项 A 和 B 分别是线性复杂度和指数复杂度，远高于实际效率；选项 D 中的 `a` 不影响操作次数，故不正确。"
+    },
+    {
+      "id": "Cm8v4jn6NUprmvFioKOIP",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面程序的时间复杂度为（ ）。\n\n```cpp\nint record_choose[MAXN][MAXM];\nint choose(int n, int m) {\n    if (m == 0 || m == n)\n        return 1;\n    if (record_choose[n][m] == 0)\n        record_choose[n][m] = choose(n - 1, m - 1) + choose(n - 1, m);\n    return record_choose[n][m];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(2^n)"
+        },
+        {
+          "label": "B",
+          "text": "O(2^m × (n - m))"
+        },
+        {
+          "label": "C",
+          "text": "O(C(n, m))"
+        },
+        {
+          "label": "D",
+          "text": "O(m × (n - m))"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该程序使用动态规划（记忆化搜索）计算组合数 C(n, m)。由于 `record_choose[n][m]` 数组存储了每个 `(n,"
+    },
+    {
+      "id": "sGroSwCU0GIPvvm1dYXmj",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面的程序使用出边的邻接表表达有向图，则下列选项中哪个是它表达的图？（ ）。\n\n```cpp\n#include <iostream>\n\nstruct Edge {\n    int e;\n    Edge * next;\n};\nstruct Node {\n    Edge * first;\n};\n\nint main() {\n    Edge e[5] = {{1, nullptr}, {2, &e[2]},\n                 {3, nullptr}, {3, nullptr}, {0, nullptr}};\n    Node n[4] = {&e[0], &e[1], &e[3], &e[4]};\n    ; // 其他处理\n    return 0;\n}\n```\n\nA. 0→1, 0→3, 1→2, 1→3, 2→1, 3→2\nB. 0→1, 1→2, 1→3, 2→3, 3→0\nC. 0→1, 1→3, 1→2, 2→3, 3→0\nD. 0→1, 1→2, 1→3, 2→3, 3→0（双向箭头）",
+      "options": [
+        {
+          "label": "A",
+          "text": "图A：0→1, 0→3, 1→2, 1→3, 2→1, 3→2"
+        },
+        {
+          "label": "B",
+          "text": "图B：0→1, 1→2, 1→3, 2→3, 3→0"
+        },
+        {
+          "label": "C",
+          "text": "图C：0→1, 1→3, 1→2, 2→3, 3→0"
+        },
+        {
+          "label": "D",
+          "text": "图D：0→1, 1→2, 1→3, 2→3, 3→0（含双向边）"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该程序使用邻接表表示有向图。`Node n[4]` 定义了 4 个顶点（0到3），`n[i].first` 指向顶点 `i"
+    },
+    {
+      "id": "BaoGWLkqLMshXFXP5_smU",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int cnt = 0;\n    for (int a = 1; a <= 10; a++)\n        for (int b = 1; b <= 10; b++)\n            for (int h = 1; h <= 10; h++)\n                if ((a + b) * h == 20)\n                    cnt++;\n    cout << cnt << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "12"
+        },
+        {
+          "label": "B",
+          "text": "18"
+        },
+        {
+          "label": "C",
+          "text": "36"
+        },
+        {
+          "label": "D",
+          "text": "42"
+        }
+      ],
+      "answer": "B",
+      "explanation": "程序通过三层嵌套循环遍历 `a`, `b`, `h` 从 1 到 10 的所有组合。当 `(a + b) * h == 20"
+    },
+    {
+      "id": "37UJSiavKmLnuMOtSisyF",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    const int N = 30;\n    int cnt = 0;\n    for (int a = 1; a <= N; a++)\n        for (int b = a; a + b <= N; b++)\n            for (int c = b; a + b + c <= N; c++)\n                if (a * a + b * b == c * c)\n                    cnt++;\n    cout << cnt << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "11"
+        },
+        {
+          "label": "D",
+          "text": "22"
+        }
+      ],
+      "answer": "A",
+      "explanation": "程序寻找满足 `a*a + b*b == c*c` 且 `a <= b <= c` 以及 `a + b + c <= 30` 的整数三"
+    },
+    {
+      "id": "dKWXtHfnRtx2mX2PU63H3",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面的程序中，二维数组 h 和 v 分别代表如下图所示的网格中的水平边的时间消耗和垂直边的时间消耗。程序使用动态规划计算从左下角到右上角的最小时间消耗，则横线处应该填写下列哪个选项的代码？（ ）。\n\n```cpp\nint dis[MAXY][MAXX];\nint shortest_path(int x, int y) {\n    dis[0][0] = 0;\n    for (int i = 0; i < y; i++)\n        dis[i + 1][0] = dis[i][0] + v[i][0];\n    for (int j = 0; j < x; j++)\n        dis[0][j + 1] = dis[0][j] + h[0][j];\n    for (int i = 0; i < y; i++)\n        for (int j = 0; j < x; j++)\n            ________; // 在此处填写代码\n    return dis[y][x];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "dis[i][j] = min(dis[i - 1][j] + v[i - 1][j], dis[i][j - 1] + h[i][j - 1]);"
+        },
+        {
+          "label": "B",
+          "text": "dis[i][j] = min(dis[i - 1][j] + h[i - 1][j], dis[i][j - 1] + v[i][j - 1]);"
+        },
+        {
+          "label": "C",
+          "text": "dis[i + 1][j + 1] = min(dis[i][j + 1] + v[i][j + 1], dis[i + 1][j] + h[i + 1][j]);"
+        },
+        {
+          "label": "D",
+          "text": "dis[i + 1][j + 1] = min(dis[i][j + 1] + h[i][j + 1], dis[i + 1][j] + v[i + 1][j]);"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题使用动态规划计算从左下角到右上角的最小路径。`dis[i][j]` 表示到达网格点 `(i, j)` 的最小时间消耗。"
+    },
+    {
+      "id": "Jyvb7G0QJjmMXctj4JVA7",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++语言非常强大，可以用来求解方程的解。例如，如果变量 x 为 double 类型的变量，则执行语句 x * 2 - 4 = 0; 后，变量 x 的值会变为 2.0 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，`x * 2 - 4 = 0;` 语句的 `=` 是赋值运算符，而不是数学上的等号。赋值运算符的左侧必须是一个可修改的左值（例如变量），而 `x * 2 - 4` 是一个表达式的结果，不能作为赋值的目标。因此，这条语句会导致编译错误，根本无法执行，更不会改变变量 `x` 的值。所以，选项 F（错误）是正确的。"
+    },
+    {
+      "id": "KfGSa4ojUXQjHGJvghrhn",
+      "order": 17,
+      "type": "true_false",
+      "content": "一个袋子中有3个完全相同的红色小球、2个完全相同的蓝色小球。每次从中取出1个，且不放回袋子，这样进行3次后，将取出的小球依次排列，则可能的颜色顺序有7种。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "袋中共有3红2蓝。取出3个小球的可能组合有三种：\n1.  **3红0蓝 (RRR)**：只有1种顺序 (RRR)。\n2.  **2红1蓝 (RRB)**：有3种顺序 (RRB, RBR, BRR)。\n3.  **1红2蓝 (RBB)**：有3种顺序 (RBB, BRB, BBR)。\n将所有可能顺序相加：1 + 3 + 3 = 7种。因此，题目描述正确。"
+    },
+    {
+      "id": "akRhfjkjKkPwNVqksYz2z",
+      "order": 18,
+      "type": "true_false",
+      "content": "杨辉三角，是二项式系数的一种三角形排列，在中国南宋数学家杨辉1261年所著的《详解九章算法》一书中出现，是中国数学史上的一项伟大成就。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "题目描述完全符合杨辉三角（也称帕斯卡三角）的定义、历史背景及其在中国数学史上的地位。杨辉三角确实是二项式系数的一种三角形排列，并由南宋数学家杨辉在1261年的著作中提及。因此，题目陈述是正确的，选项T正确。选项F错误，因为它与历史事实不符。"
+    },
+    {
+      "id": "GW3WffghSoxFS-eOFya5x",
+      "order": 19,
+      "type": "true_false",
+      "content": "N 个顶点的有向完全图（不带自环）有 N × (N - 1) / 2 条边。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "有向完全图（不带自环）中，任意两个不同顶点 `u` 和 `v` 之间，存在 `u` 到 `v` 和 `v` 到 `u` 两条方向相反的边。因此，总边数应为 `N × (N - 1)`。题目中"
+    },
+    {
+      "id": "S0P3RP_tLlvOZdUhIfrxy",
+      "order": 20,
+      "type": "true_false",
+      "content": "如果待查找的元素确定，只要哈希表的大小不小于查找元素的个数，就一定存在不会产生冲突的哈希函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "当待查找的元素是确定的，并且哈希表的大小不小于元素的个数时，我们可以为每个元素设计一个唯一的映射规则，使其映射到哈希表中的不同位置。这种哈希函数被称为完美哈希函数，它能确保所有元素都不会产生冲突。因此，理论上一定存在这样的哈希函数。"
+    },
+    {
+      "id": "rrvXm-qKB7P0Xz9moetos",
+      "order": 21,
+      "type": "true_false",
+      "content": "动态规划算法的时间复杂度一般为：必要状态的数量，乘以计算一次状态转移方程的时间复杂度。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "动态规划算法的核心思想是每个“状态”只计算一次并存储结果。因此，总的时间复杂度就是所有需要计算的“状态”数量，乘以计算每一个“状态”所花费的时间（即状态转移方程的复杂度）。题目中的描述准确概括了这一计算原则，所以是正确的。"
+    },
+    {
+      "id": "aN8y17SnLXMo-MYt5dcvh",
+      "order": 22,
+      "type": "true_false",
+      "content": "已知 int 类型的变量 a 、 b 和 h 中分别存储着一个梯形的顶边长、底边长和高，则这个梯形的面积可以通过表达式 (a + b) * h / 2 求得。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "正确答案是F。这是因为在C++中，当所有操作数都是 `int` 类型时，表达式 `(a + b) * h / 2` 会执行整数除法。如果 `(a + b) * h` 的结果是奇数，整数除法 `/ 2` 会直接截断小数部分，导致计算结果不准确。例如，对于 `a=1, b=2, h=1` 的梯形，实际面积为 `1.5`，但表达式会计算出 `1`。因此，该表达式不总是能求得正确的"
+    },
+    {
+      "id": "IKTdr7MjZzv_CtCW86qn4",
+      "order": 23,
+      "type": "true_false",
+      "content": "判断图是否连通只能用广度优先搜索算法实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "判断图是否连通不仅可以使用广度优先搜索（`BFS`），也可以使用深度优先搜索（`DFS`）。两种算法都能从图中的任意一个节点开始遍历，如果能访问到所有其他节点，则图是连通的。因此，题目中“只能用”的说法是错误的，选项F（错误）是正确的。"
+    },
+    {
+      "id": "Qf9cX1hzUFkCqehmDkeX7",
+      "order": 24,
+      "type": "true_false",
+      "content": "在 N 个元素的二叉排序树中查找一个元素，最好情况的时间复杂度是 O(logN)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在二叉排序树中查找一个元素，最好情况是待查找的元素恰好是树的根节点。此时，只需要进行一次比较就能找到，时间复杂度为 O(1)。题目中说最好情况是 O(logN) 是错误的，O(logN) 通常是平衡二叉树的平均或最坏情况时间复杂度。因此，选项 F（错误）是正确的。"
+    },
+    {
+      "id": "CGMJemgdVyjQXB2yWdT2J",
+      "order": 25,
+      "type": "true_false",
+      "content": "给定 double 类型的变量 x ，且其值大于等于0，我们可以通过二分法求出 √x 的近似值。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。二分法适用于在单调有序的区间内查找目标值。求 √x 实际上是在查找一个数 `y`，使得 `y * y` 等于 `x`。由于当 `y >= 0` 时，函数 `f(y) = y * y` 是单调递增的，我们可以在一个合适的区间（例如 `[0, max(1, x)]`）内使用二分法来逼近 √x 的值。因此，通过二分法求 √x 的近似值是可行的。"
+    }
+  ]
+}

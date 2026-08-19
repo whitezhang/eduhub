@@ -271,6 +271,10 @@ export async function handleApi(req, res, pathname, query) {
 
   const problemMatch = pathname.match(/^\/api\/problems\/(\d+)$/);
   if (method === "GET" && problemMatch) {
+    if (!me) {
+      sendJson(res, 401, { error: "请先登录后再做题" });
+      return true;
+    }
     const p = db.prepare("SELECT * FROM problems WHERE id = ?").get(Number(problemMatch[1]));
     if (!studentCanSeeProblem(db, p, me)) {
       sendJson(res, 404, { error: "题目不存在" });
@@ -471,6 +475,10 @@ export async function handleApi(req, res, pathname, query) {
 
   const workbookMatch = pathname.match(/^\/api\/contests\/(\d+)\/workbook$/);
   if (method === "GET" && workbookMatch) {
+    if (!me) {
+      sendJson(res, 401, { error: "请先登录后再做题" });
+      return true;
+    }
     const c = db.prepare("SELECT * FROM contests WHERE id = ?").get(Number(workbookMatch[1]));
     if (!c || (c.published !== 1 && me?.role !== "coach")) {
       sendJson(res, 404, { error: "试卷不存在" });
@@ -683,7 +691,7 @@ export async function handleApi(req, res, pathname, query) {
   if (method === "GET" && progMatch) {
     const s = db.prepare("SELECT id, username, display_name FROM users WHERE id = ? AND role = 'student'").get(Number(progMatch[1]));
     if (!s) {
-      sendJson(res, 404, { error: "没有这位学生" });
+      sendJson(res, 404, { error: "没有这位用户" });
       return true;
     }
     const problems = db

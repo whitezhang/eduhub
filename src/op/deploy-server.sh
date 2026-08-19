@@ -25,6 +25,9 @@ fi
 if [[ -d "$EDUHUB_SRC/src/rd/server/data/seed/gesp" ]]; then
   $PY src/op/gesp_import.py --skip-crawl
 fi
+if [[ -d "$EDUHUB_SRC/src/rd/server/data/seed/gesp-adacpp" ]]; then
+  $PY src/op/gesp_adacpp_import.py
+fi
 if [[ -d "$EDUHUB_SRC/src/rd/server/data/seed/csp-j" ]]; then
   $PY src/op/cspj_adacpp_import.py --skip-crawl
 fi

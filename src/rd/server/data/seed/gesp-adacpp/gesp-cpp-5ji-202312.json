@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-5ji-202312",
+  "url": "https://adacpp.com/practice/gesp-cpp-5ji-202312",
+  "title": "GESP C++五级 202312",
+  "description": "CCF编程能力等级认证 GESP C++ 五级 2023年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 5,
+    "ym": "202312"
+  },
+  "questions": [
+    {
+      "id": "ZQiggxAYNOMXP_LpM9Fh1",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下面C++代码用于求斐波那契数列，该数列第1、2项为1，以后各项均是前两项之和。下面有关说法错误的是（ ）。\n\n```cpp\nint fiboA(int N)\n{\n    if (N == 1 || N == 2)\n        return 1;\n    return fiboA(N - 1) + fiboA(N - 2);\n}\nint fiboB(int N)\n{\n    if (N == 1 || N == 2)\n        return 1;\n    int last2 = 1, last1 = 1;\n    int nowVal = 0;\n    for (int i = 2; i < N; i++)\n    {\n        nowVal = last1 + last2;\n        last2 = last1;\n        last1 = nowVal;\n    }\n    return nowVal;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "fiboA( ) 用递归方式，fiboB() 循环方式"
+        },
+        {
+          "label": "B",
+          "text": "fiboA( ) 更加符合斐波那契数列的数学定义，直观易于理解，而 fiboB() 需要将数学定义转换为计算机程序实现"
+        },
+        {
+          "label": "C",
+          "text": "fiboA( ) 不仅仅更加符合数学定义，直观易于理解，且因代码量较少执行效率更高"
+        },
+        {
+          "label": "D",
+          "text": "fiboB( ) 虽然代码量有所增加，但其执行效率更高"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n1.  **解释为什么正确答案是对的：**\n    选项 C 的后半句“且因代码量较少执行效率更高”是错误的。"
+    },
+    {
+      "id": "_bQDvXvg1oFmYyT8AeZp0",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面C++代码以递归方式实现合并排序，并假设 merge (int T[], int R[], int s, int m, int t) 函数将有序（同样排序规则）的T[s..m]和T[m+1..t]归并到R[s..t]中。横线处应填上代码是（ ）。\n\n```cpp\nvoid mergeSort(int SList[], int TList[], int s, int t, int len)\n{\n    if (s == t){\n        TList[s] = SList[s];\n        return;\n    }\n    int *T2 = new int[len]; // 保存中间结果\n    int m = (s + t) / 2;\n\n    ______________________________________________________;\n    merge(T2, SList, s, m, t);\n    delete T2;\n    return ;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "mergeSort(SList, T2, s, m,len), mergeSort(SList, T2, m,t,len)"
+        },
+        {
+          "label": "B",
+          "text": "mergeSort(SList, T2, s, m-1,len), mergeSort(SList, T2, m+1,t,len)"
+        },
+        {
+          "label": "C",
+          "text": "mergeSort(SList, T2, s, m,len), mergeSort(SList, T2, m+1,t,len)"
+        },
+        {
+          "label": "D",
+          "text": "mergeSort(SList, T2, s, m-1,len), mergeSort(SList, T2, m-1,t,len)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n1.  **解释为什么 C 是对的：**\n    合并排序的核心是将数组分成两半并分别排序。`m = (s + t)"
+    },
+    {
+      "id": "msFpCkM_uHHKJ-NZu_bco",
+      "order": 3,
+      "type": "single_choice",
+      "content": "阅读下面的C++代码，执行后其输出是（ ）。\n\n```cpp\nint stepCount = 0;\nint fracA(int N)\n{\n    stepCount += 1;\n    cout << stepCount << \"->\";\n    int rtn = 1;\n    for (int i = 1; i <= N; i++)\n        rtn *= i;\n    return rtn;\n}\nint fracB(int N)\n{\n    stepCount += 1;\n    cout << stepCount << \"->\";\n    if (N == 1)\n        return 1;\n    return N * fracB(N - 1);\n}\nint main()\n{\n    cout << fracA(5);\n    cout << \"<===>\";\n    cout << fracB(5);\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1->120<===>2->120"
+        },
+        {
+          "label": "B",
+          "text": "1->120<===>1->120"
+        },
+        {
+          "label": "C",
+          "text": "1->120<===>1->2->3->4->5->120"
+        },
+        {
+          "label": "D",
+          "text": "1->120<===>2->3->4->5->6->120"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`fracA(5)` 首次执行，全局变量 `stepCount` 变为 1，打印 \"1->\"，并计算 5! 得到 120。接着打印"
+    },
+    {
+      "id": "oRjuSk55tyL6m9A_eK10-",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面的C++用于对 lstA 排序，使得偶数在前奇数在后，横线处应填入（ ）。\n\n```cpp\nbool isEven(int N)\n{\n    return N % 2 == 0;\n}\n\nvoid swap(int &a, int &b)\n{\n    int t;\n    t=a,a=b,b=t;\n    return;\n}\n\nvoid sortA(int lstA[], int n)\n{\n    int i,j,t;\n    for (i = n-1; i > 0; i--)\n        for(j = 0; j < i; j++)\n            if(______________________________)\n                swap(lstA[j], lstA[j+1]);\n    return;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "!isEven(lstA[j]) && isEven(lstA[j+1])"
+        },
+        {
+          "label": "B",
+          "text": "isEven(lstA[j]) && !isEven(lstA[j+1])"
+        },
+        {
+          "label": "C",
+          "text": "lstA[j] > lstA[j+1]"
+        },
+        {
+          "label": "D",
+          "text": "lstA[j] < lstA[j+1]"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。该排序算法的目标是让偶数在前，奇数在后。当 `!isEven(lstA[j]) && isEven(lstA[j+1])` 为真时，表示 `lstA[j]` 是奇数而 `lstA[j+1]` 是偶数，此时它们处于“错误”的顺序，需要通过 `swap` 函数将偶数 `lstA[j+1]` 移到前面，奇数 `lstA[j]` 移到后面，从而逐步实现偶数在前、奇数在后的排序。\n\n选项 B 会将偶数和奇数交换，导致奇数在前、偶数在后，与题目要求相反。选项 C 和 D 仅根据数值大小进行排序，不考虑奇偶性，无法达到题目要求。"
+    },
+    {
+      "id": "ArpGjf-osdEQADKEuc7vZ",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面的C++代码用于将字符串保存到带头节点的双向链表中，并对重复的串计数，然后将最新访问的串的节点放在链头便于查找。横线处应填入代码是（ ）。\n\n```cpp\ntypedef struct Node{\n    string str;\n    int ref;\n    struct Node *next, *prev;\n}Node;\nNode * Insert(Node *pHead, string s)\n{\n    Node *p = pHead->next;\n    Node *q;\n    while(p){\n        if(p->str == s){\n            p->ref++;\n            p->next->prev = p->prev;\n            p->prev->next = p->next;\n            break;\n        }\n        p=p->next;\n    }\n    if(!p) {\n        p = new Node;\n        p->str = s;\n        p->ref=0;\n        p->next = p->prev = NULL;\n    }\n    ______________________________________________________\n    pHead->next = p, p->prev = pHead;\n    return pHead;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "if(pHead) {p->next = pHead->next, pHead->next->prev = p;}"
+        },
+        {
+          "label": "B",
+          "text": "if(pHead->next) {p->next = pHead->next, pHead->next->prev = p;}"
+        },
+        {
+          "label": "C",
+          "text": "p->next = pHead->next, pHead->next->prev = p;"
+        },
+        {
+          "label": "D",
+          "text": "触发异常，不能对空指针进行操作。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在将节点 `p` 移动到链表头部（`pHead` 之后）时，需要处理两种情况：链表为空或不为空。\n\n1.  **正确答案"
+    },
+    {
+      "id": "Cfdgbk7zKE9Hx4TKt4khS",
+      "order": 6,
+      "type": "single_choice",
+      "content": "有关下面C++代码说法正确的是（ ）。\n\n```cpp\nint rc;\nint foo(int x, int y)\n{\n    int r;\n    if(y == 0)\n        r = x;\n    else{\n        r = foo(y, x % y);\n        rc++;\n    }\n    return r;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果 x 小于10，rc 值也不会超过20"
+        },
+        {
+          "label": "B",
+          "text": "foo 可能无限递归"
+        },
+        {
+          "label": "C",
+          "text": "foo 可以求出 x 和 y 的最大公共质因子"
+        },
+        {
+          "label": "D",
+          "text": "foo 能够求出 x 和 y 的最小公倍数"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该函数 `foo(x, y)` 实现了欧几里得算法（辗转相除法），用于计算 `x` 和 `y` 的最大公约数（"
+    },
+    {
+      "id": "KJnety_iy1V367DfLjCSr",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面的C++代码实现对list的快速排序，有关说法，错误的是（ ）。\n\n```cpp\nvector<int> operator +(vector<int>lA,vector<int>lB)\n{\n    vector<int>lst;\n\n    for (int i = 1; i < lA.size(); i++)\n        lst.push_back(lA[i]);\n    for (int i = 1; i < lB.size(); i++)\n        lst.push_back(lB[i]);\n\n    return lst;\n}\n\nvector<int>qSort(vector<int>lst)\n{\n    if (lst.size() < 2)\n        return lst;\n    int pivot = lst[0];\n    vector<int>less, greater;\n    for (int i = 1; i < lst.size(); i++)\n        if (lst[i] <= pivot) less.push_back(lst[i]);\n        else greater.push_back(lst[i]);\n    for (int i = 1; i < lst.size(); i++)\n        if (lst[i] <= pivot) less.push_back(lst[i]);\n        else greater.push_back(lst[i]);\n\n    return ______________________________________;\n}\n```\n\n横线处应填入代码，以下说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "qSort(less) + qSort(greater) + (vector<int>)pivot"
+        },
+        {
+          "label": "B",
+          "text": "(vector<int>)pivot + (qSort(less) + qSort(greater))"
+        },
+        {
+          "label": "C",
+          "text": "(qSort(less) + (vector<int>)pivot + qSort(greater))"
+        },
+        {
+          "label": "D",
+          "text": "qSort(less) + pivot + qSort(greater)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "本题考察快速排序的实现细节以及C++ `vector` 和 `operator+` 的使用。\n\n1.  **分析 `operator+` 函数：**\n    ```cpp"
+    },
+    {
+      "id": "QrmDDvT3P4_abgYHNS48n",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码中的 isPrimeA() 和 isPrimeB() 都用于判断参数N是否素数，有关其时间复杂度的正确说法是（ ）。\n\n```cpp\nbool isPrimeA(int N)\n{\n    if (N < 2)\n        return false;\n    for (int i = 2; i <= N / 2 ; i++)\n        if (N % i == 0)\n            return false;\n    return true;\n}\nbool isPrimeB(int N)\n{\n    if (N < 2)\n        return false;\n    for (int i = 2; i <= sqrt(N); i++)\n        if (N % i == 0)\n            return false;\n    return true;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "isPrimeA( ) 的最坏时间复杂度是O(N/2)，isPrimeB( ) 的最坏时间复杂度是O(logN)，isPrimeA() 优于 isPrimeB()"
+        },
+        {
+          "label": "B",
+          "text": "isPrimeA() 的最坏时间复杂度是O(N/2)，isPrimeB( ) 的最坏时间复杂度是O(N^(1/2))，isPrimeB() 绝大多数情况下优于 isPrimeA()"
+        },
+        {
+          "label": "C",
+          "text": "isPrimeA() 的最坏时间复杂度是O(N^(1/2))，isPrimeB( ) 的最坏时间复杂度是O(N)，isPrimeA( ) 优于 isPrimeB( )"
+        },
+        {
+          "label": "D",
+          "text": "isPrimeA() 的最坏时间复杂度是O(logN)，isPrimeB( ) 的最坏时间复杂度是O(N)，isPrimeA() 优于 isPrimeB( )"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`isPrimeA()` 的循环从 `i = 2` 运行到 `N / 2`，最坏情况下（N是素数）会执行大约 `N/2` 次操作，因此其时间复杂度为 O(N/2)，简化为 O(N)。`isPrimeB()` 的循环从 `i = 2` 运行到 `sqrt(N)`，最坏情况下会执行大约 `sqrt(N)` 次操作，因此其时间复杂度为 O(N^(1/2))。由于 O(N^(1/2)) 远小于 O(N)，`isPrimeB()` 在绝大多数情况下性能优于 `isPrimeA()`。因此，选项 B 的描述是正确的。其他选项对两种函数的时间复杂度或其优劣判断有误。"
+    },
+    {
+      "id": "-E87rs_G_M_KYrpS3qfTB",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码用于有序 list 的二分查找，有关说法错误的是（ ）。\n\n```cpp\nint _binarySearch(vector<int>lst, int Low, int High,int Target)\n{\n    if (Low > High)\n        return -1;\n    int Mid = (Low + High) / 2;\n    if (Target == lst[Mid])\n        return Mid;\n    else if (Target < lst[Mid])\n        return _binarySearch(lst, Low, Mid - 1, Target);\n    else\n        return _binarySearch(lst, Mid + 1, High, Target);\n}\nint bSearch(vector<int>lst, int Val)\n{\n    return _binarySearch(lst, 0, lst.size(), Val);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "代码采用二分法实现有序 list 的查找"
+        },
+        {
+          "label": "B",
+          "text": "代码采用分治算法实现有序 list 的查找"
+        },
+        {
+          "label": "C",
+          "text": "代码采用递归方式实现有序 list 的查找"
+        },
+        {
+          "label": "D",
+          "text": "代码采用动态规划算法实现有序 list 的查找"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误，因为动态规划（Dynamic Programming）通过存储子问题结果来避免重复计算，而二分查找没有此特点。相反，代码通过将查找范围一分为二（二分法），每次只处理其中一半（分治算法），并反复调用自身（递归方式）来查找目标值，因此A、B、C的说法都是正确的。"
+    },
+    {
+      "id": "tcN2zhbcZS_6TrcJ1qy5Y",
+      "order": 10,
+      "type": "single_choice",
+      "content": "在上题的 _binarySearch 算法中，如果 lst 中有 N 个元素，其时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(N)"
+        },
+        {
+          "label": "B",
+          "text": "O(logN)"
+        },
+        {
+          "label": "C",
+          "text": "O(NlogN)"
+        },
+        {
+          "label": "D",
+          "text": "O(N²)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "二分查找（`binarySearch`）的核心思想是每次将搜索区间减半。这意味着每一步都会排除掉一半的元素，因此查找次数与元素总数 N 的对数成正比，时间复杂度为 O(logN)。O(N) 是线性查找的复杂度，而 O(NlogN) 和 O(N²) 则表示更慢的算法，不符合二分查找的高效特性。"
+    },
+    {
+      "id": "R0dYM17fLsQqmc2b66RUO",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面的C++代码使用数组模拟整数加法，可以处理超出大整数范围的加法运算。横线处应填入代码是（ ）。\n\n```cpp\nvector<int> operator +(vector<int> a, vector<int> b)\n{\n    vector<int> c;\n    int t = 0;\n\n    for(int i = 0; i < a.size() || i < b.size(); i ++ )\n    {\n        if(i < a.size()) t = t + a[i];\n        if(i < b.size()) t = t + b[i];\n\n        ______________________________\n    }\n\n    if(t) c.push_back(t);\n\n    return c;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "c.push_back(t % 10), t = t % 10;"
+        },
+        {
+          "label": "B",
+          "text": "c.push_back(t / 10), t = t % 10;"
+        },
+        {
+          "label": "C",
+          "text": "c.push_back(t / 10), t = t / 10;"
+        },
+        {
+          "label": "D",
+          "text": "c.push_back(t % 10), t = t / 10;"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案D：在模拟加法中，`t` 存储当前位的和与进位。`c.push_back(t % 10)` 将当前位的个位数（"
+    },
+    {
+      "id": "VImPZKbjWYv6lCOiLKyP-",
+      "order": 12,
+      "type": "single_choice",
+      "content": "有关下面C++代码的说法正确的是（ ）。\n\n```cpp\nclass Node\n{\npublic:\n    int Value;\n    Node* Prev;\n    Node* Next;\n    Node(int Val, Node* Prv = NULL, Node* Nxt = NULL);\n};\n\nNode::Node(int Val,Node*Prv,Node* Nxt)\n{\n    this->Value = Val;\n    this->Prev = Prv;\n    this->Next = Nxt;\n}\n\nint main()\n{\n    Node firstNode = Node(10);\n    firstNode.Next = new Node(100, &firstNode);\n    firstNode.Next->Next = new Node(111, firstNode.Next);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "上述代码构成单向链表"
+        },
+        {
+          "label": "B",
+          "text": "上述代码构成双向链表"
+        },
+        {
+          "label": "C",
+          "text": "上述代码构成循环链表"
+        },
+        {
+          "label": "D",
+          "text": "上述代码构成指针链表"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该 `Node` 类包含 `Prev` 和 `Next` 两个指针，允许节点向前和向后遍历。代码中创建节点时，`Prev` 指针也被正确设置，例如 `new Node(100, &firstNode)` 将 `"
+    },
+    {
+      "id": "ogendfcDrjyMXH-b8auWf",
+      "order": 13,
+      "type": "single_choice",
+      "content": "通讯卫星在通信网络系统中主要起到（ ）的作用。",
+      "options": [
+        {
+          "label": "A",
+          "text": "信息过滤"
+        },
+        {
+          "label": "B",
+          "text": "信号中继"
+        },
+        {
+          "label": "C",
+          "text": "避免攻击"
+        },
+        {
+          "label": "D",
+          "text": "数据加密"
+        }
+      ],
+      "answer": "B",
+      "explanation": "通讯卫星的主要作用是接收地面站发出的信号，然后将其放大并转发到另一个地面站，实现远距离通信，因此是信号中继。选项A（信息过滤）、C（避免攻击）和D（数据加密）都不是通讯卫星在通信网络系统中的核心功能，这些通常由网络中的其他设备或安全机制完成。"
+    },
+    {
+      "id": "c_pGSWjdrJ6kTcHAo4-Z1",
+      "order": 14,
+      "type": "single_choice",
+      "content": "小杨想编写一个判断任意输入的整数N是否为素数的程序，下面哪个方法不合适？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "埃氏筛法"
+        },
+        {
+          "label": "B",
+          "text": "线性筛法"
+        },
+        {
+          "label": "C",
+          "text": "二分答案"
+        },
+        {
+          "label": "D",
+          "text": "枚举法"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C. 二分答案不适用于判断一个数是否为素数。二分查找通常用于在有序数据中查找特定值或优化满足单调性的问题，而判断素"
+    },
+    {
+      "id": "w_dJf_btoWjccmCExxB2E",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面的排序算法都要处理多趟数据，哪种排序算法不能保证在下一趟处理时从待处理数据中选出最大或最小的数据？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "选择排序"
+        },
+        {
+          "label": "B",
+          "text": "快速排序"
+        },
+        {
+          "label": "C",
+          "text": "堆排序"
+        },
+        {
+          "label": "D",
+          "text": "冒泡排序"
+        }
+      ],
+      "answer": "B",
+      "explanation": "快速排序（B）通过选择基准元素进行分区，但它不保证在每一趟处理后，能从待处理数据中确定并选出当前的最大或最小元素放到其最终位置。而选择排序（A）、堆排序（C）和冒泡排序（D）都明确地在每一趟处理中找到当前未排序部分的最大或最小元素，并将其放置到最终的排序位置。"
+    },
+    {
+      "id": "VyfEOzp5k3RuyVqWHAWEI",
+      "order": 16,
+      "type": "true_false",
+      "content": "归并排序的时间复杂度是O(NlogN)。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "归并排序采用分治策略，将数组递归地分成两半，直到每个子数组只有一个元素，这个分解过程有 `logN` 层。然后，它将这些子数组两两合并，每次合并操作都需要遍历所有元素，时间复杂度为 `O(N)`。因此，总的时间复杂度是 `O(N)` 乘以 `logN`，即 `O(NlogN)`。所以题目描述是正确的。"
+    },
+    {
+      "id": "TFbT3MoQEq-MBA7ne0e9X",
+      "order": 17,
+      "type": "true_false",
+      "content": "小杨在生日聚会时拿一块H*W的巧克力招待来的K个小朋友，保证每位小朋友至少能获得一块相同大小的巧克力。那么小杨想分出来最大边长的巧克力可以使用二分法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该问题描述中，小杨想分出“最大边长的巧克力”。如果这里的“边长”指的是正方形巧克力的边长，或者是在固定另一边长的情况下最大化其中"
+    },
+    {
+      "id": "fy0FqWSneJVDswlsCgkbt",
+      "order": 18,
+      "type": "true_false",
+      "content": "以下C++代码能以递归方式实现斐波那契数列，该数列第1、2项为1，以后各项均是前两项之和。\n\n```cpp\nint Fibo(int N)\n{\n    if (N == 1 || N == 2)\n        return 1;\n    else\n    {\n        int m = fiboA(N - 1);\n        int n = fiboB(N - 2);\n        return m + n;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码中，在 `else` 分支里递归调用了 `fiboA(N - 1)` 和 `fiboB(N - 2)`，而不是函数自身 `Fibo(N - 1)` 和 `Fibo(N - 2)`。由于 `fiboA` 和 `fiboB` 这两个函数没有定义，这段代码无法编译或正确运行，因此是错误的。正确实现应将 `fiboA` 和 `fiboB` 改为 `Fibo`。"
+    },
+    {
+      "id": "PA7hE-ZSonz2Wxh-1yWKM",
+      "order": 19,
+      "type": "true_false",
+      "content": "贪心算法可以达到局部最优，但可能不是全局最优解。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "贪心算法在每一步都选择当前局部最优的解，即当下看起来最好的选择。然而，这种只顾眼前的决策可能无法考虑到后续步骤的影响，从而导致最终得到的整体解并非全局最优解。因此，题目准确描述了贪心算法的特性，是正确的。"
+    },
+    {
+      "id": "nfq6EIU89x_SoopNRlnmA",
+      "order": 20,
+      "type": "true_false",
+      "content": "小杨设计了一个拆数程序，它能够将任意的非质数自然数N转换成若干个质数的乘积，这个程序是可以设计出来的。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这个描述符合**算术基本定理**，即任何大于1的自然数（包括非质数）都可以唯一地分解成有限个质数的乘积。由于N是非质数自然数，它必然是合数，因此一定能分解为质数的乘积。实现这个分解的程序（如 `试除法`）是常见的算法，完全可以设计出来，所以T是正确的。F选项与数学事实不符。"
+    },
+    {
+      "id": "3TmMASdOowe9y8EceGSTp",
+      "order": 21,
+      "type": "true_false",
+      "content": "插入排序有时比快速排序时间复杂度更低。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "插入排序在处理基本有序的数组时，时间复杂度可以达到最佳的 O(n)。而快速排序的平均时间复杂度是 O(n log n)，即使在最佳情况下"
+    },
+    {
+      "id": "IGB6QLjuIvc2zl82S4kKm",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面的C++代码能实现十进制正整数N转换为八进制并输出。\n\n```cpp\nchar s[10];\nint main()\n{\n    int N;\n    cin >> N;\n    string rst = \"\";\n    while (N != 0)\n    {\n        s[0]=N % 8 + '0';\n        rst += string(s);\n        N /= 8;\n    }\n    cout << rst << endl;\n\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "正确答案是F。代码中，`char s[10];` 数组在 `s[0]=N % 8 + '0';` 赋值后，没有添加"
+    },
+    {
+      "id": "ak1r4wR5MQg2zG-gHqPpU",
+      "order": 23,
+      "type": "true_false",
+      "content": "对数组 int arr[] = {2, 6, 3, 5, 4, 8, 1, 0, 9, 10} 执行 sort(arr, arr+10)，则执行后 arr 中的数据调整为 {0, 1, 2, 3, 4, 5, 6, 8, 9, 10}。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`std::sort(arr, arr+10)` 函数默认会将数组 `arr` 中的元素按升序排列。原始数组 `{2, 6, 3, 5, 4, 8, 1, 0, 9, 10}` 经过升序排序后，其元素顺序确实会调整为 `{0, 1, 2, 3, 4, 5, 6, 8, 9, 10}`。因此，题目描述是正确的。选择 F 错误是因为该语句的描述与 `std::sort` 的实际行为和结果相符。"
+    },
+    {
+      "id": "L3Qp8Z5pp18dUspJYbsdM",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨想写一个程序来算出正整数N有多少个因数，经过思考他写出了一个重复没有超过N/2次的循环就能够算出来了。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这个说法是正确的。要找出正整数 `N` 的所有因数，我们可以遍历从 `1` 到 `N/2` 的所有整数 `i`。如果 `N %"
+    },
+    {
+      "id": "uwbfVijyF4NamEDqGDp4k",
+      "order": 25,
+      "type": "true_false",
+      "content": "同样的整数序列分别保存在单链表和双向链中，这两种链表上的简单冒泡排序的复杂度相同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "冒泡排序的复杂度主要由比较次数和交换次数决定，对于N个元素，这都是O(N^2)。在单链表和双向链表中，访问相邻元素（"
+    }
+  ]
+}

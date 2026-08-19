@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-6ji-202412",
+  "url": "https://adacpp.com/practice/gesp-cpp-6ji-202412",
+  "title": "GESP C++六级 202412",
+  "description": "CCF编程能力等级认证 GESP C++ 六级 2024年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 6,
+    "ym": "202412"
+  },
+  "questions": [
+    {
+      "id": "40T3iDfIxnA_qU0chMG0g",
+      "order": 1,
+      "type": "single_choice",
+      "content": "面向对象编程(OOP)是一种特殊的程序设计方法。下面（ ）不是重要的OOP特性。",
+      "options": [
+        {
+          "label": "A",
+          "text": "抽象"
+        },
+        {
+          "label": "B",
+          "text": "封装"
+        },
+        {
+          "label": "C",
+          "text": "继承"
+        },
+        {
+          "label": "D",
+          "text": "模块化"
+        }
+      ],
+      "answer": "D",
+      "explanation": "模块化是一种通用的软件设计原则，旨在将系统分解为独立、可管理的部分，它适用于多种编程范式，不专属于面向对象编程。面向对象编程（OOP）的四大核心特性是抽象、封装、继承和多态。因此，A（抽象）、B（封装）和C（继承）都是OOP的重要特性，而模块化不是其独有的核心特性。"
+    },
+    {
+      "id": "0fXi7JMmdfO70E72dir2r",
+      "order": 2,
+      "type": "single_choice",
+      "content": "以下关于C++中类的说法，哪一项是正确的？",
+      "options": [
+        {
+          "label": "A",
+          "text": "类中定义的所有成员变量和成员函数默认是 public 访问权限。"
+        },
+        {
+          "label": "B",
+          "text": "类的构造函数必须显式声明返回类型为 void 。"
+        },
+        {
+          "label": "C",
+          "text": "在C++中，类的数据一般设置为私有，其公有成员函数提供访问私有数据的唯一途径。"
+        },
+        {
+          "label": "D",
+          "text": "同一个类的实例有各自的成员数据和成员函数。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "C是正确的。C++中，为了实现封装和数据保护，类的成员数据通常设置为 `private`，而 `public` 成员函数则作为访问这些私有数据的接口。A错误，`class` 关键字定义的类成员默认是 `private` 访问权限。B错误，构造函数没有返回类型，连 `void` 也不需要声明。D错误，同一个类的实例拥有各自独立的成员数据，但它们共享同一份成员函数的代码。"
+    },
+    {
+      "id": "pnBo1v9NIZ-8aa7Kt32cg",
+      "order": 3,
+      "type": "single_choice",
+      "content": "以下C++代码段中存在语法错误或逻辑错误，（ ）是正确的。\n\n```cpp\n#include <iostream>\nusing namespace std;\nclass MyClass {\npublic:\n    MyClass() {\n        cout << \"Constructor called!\" << endl;\n    }\n    void display() {\n        cout << \"Display function called!\" << endl;\n    }\n};\nint main() {\n    MyClass* obj = NULL;\n    obj->display();\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "NULL 在C++中无法用于指针初始化，应使用 nullptr 。"
+        },
+        {
+          "label": "B",
+          "text": "obj 的定义应该是 MyClass obj; 而不是指针类型。"
+        },
+        {
+          "label": "C",
+          "text": "obj->display() 语句存在空指针访问错误，obj 应该初始化为一个有效的对象。"
+        },
+        {
+          "label": "D",
+          "text": "obj->display() 语句会调用 display() 函数，但它没有输出任何内容。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`obj` 被初始化为 `NULL`，在 `obj->display()` 语句中，试图通过一个空指针调用成员函数，这会导致空指针访问错误（运行时崩溃），因此选项"
+    },
+    {
+      "id": "E7yp-lVgclVNI_8_MfsQA",
+      "order": 4,
+      "type": "single_choice",
+      "content": "阅读以下代码，下面哪一项是正确的？\n\n```cpp\nvoid processData() {\n    stack<int> s;\n    queue<int> q;\n    for (int i = 1; i <= 5; ++i) {\n        s.push(i);\n        q.push(i);\n    }\n    while (!s.empty()) {\n        cout << \"Stack pop: \" << s.top() << endl;\n        s.pop();\n    }\n    while (!q.empty()) {\n        cout << \"Queue pop: \" << q.front() << endl;\n        q.pop();\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "栈 s 的输出顺序是 1 2 3 4 5 ，队列 q 的输出顺序是 5 4 3 2 1 。"
+        },
+        {
+          "label": "B",
+          "text": "栈 s 的输出顺序是 5 4 3 2 1 ，队列 q 的输出顺序是 1 2 3 4 5 。"
+        },
+        {
+          "label": "C",
+          "text": "栈 s 的输出顺序是 1 2 3 4 5 ，队列 q 的输出顺序是 1 2 3 4 5 。"
+        },
+        {
+          "label": "D",
+          "text": "栈 s 的输出顺序是 1 2 3 4 5 ，队列 q 的输出顺序是 1 2 3 4 5 ，程序不会正常执行。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`std::stack` 遵循“后进先出”（LIFO）原则，元素 1 到 5 依次入栈后，出栈顺序是 5 4 3 2 1。`std::queue` 遵循“先进先出”（FIFO）原则，元素 1 到 5 依次入队后，出队顺序是 1 2 3 4 5。因此，选项 B 正确。其他选项的输出顺序与 `stack` 或 `queue` 的工作原理不符，选项 D 声称程序不会正常执行也是错误的。"
+    },
+    {
+      "id": "52mEtyMfvKQJ6YI8FsJg2",
+      "order": 5,
+      "type": "single_choice",
+      "content": "N个节点的双向循环链表，在其中查找某个节点的平均时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(N)"
+        },
+        {
+          "label": "C",
+          "text": "O(log N)"
+        },
+        {
+          "label": "D",
+          "text": "O(N^3)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "查找双向循环链表中的节点，需要从某个起始点开始，逐个节点遍历直到找到目标。平均情况下，需要遍历大约N/2个节点才能找到目标，因此时间复杂度是O(N)。O(1)表示常数时间，通常用于直接访问；O(log N)通常用于二分查找等分治算法，链表不支持；O(N^3)则远高于查找操作的实际复杂度。"
+    },
+    {
+      "id": "g3xJQg5Gom2iLUPjTFxhw",
+      "order": 6,
+      "type": "single_choice",
+      "content": "以下关于树的说法，（ ）是正确的。",
+      "options": [
+        {
+          "label": "A",
+          "text": "在一棵二叉树中，叶子结点的度一定是2。"
+        },
+        {
+          "label": "B",
+          "text": "满二叉树中每一层的结点数等于O(2^(层数-1))。"
+        },
+        {
+          "label": "C",
+          "text": "在一棵树中，所有结点的度之和等于所有叶子结点的度之和。"
+        },
+        {
+          "label": "D",
+          "text": "一棵二叉树的先序遍历结果和中序遍历结果一定相同。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "B选项正确。在满二叉树中，第 `k` 层（根节点为第1层）的结点数确实是 `2^(k-1)`，因此 `"
+    },
+    {
+      "id": "DvUuJZsP1I3cQpc4thVY3",
+      "order": 7,
+      "type": "single_choice",
+      "content": "已知字符集 {A, B, C, D} 的出现频率如下表所示：\n\n| 字符 | 频率 |\n|------|------|\n| A | 8 |\n| B | 3 |\n| C | 1 |\n| D | 6 |\n\n根据哈夫曼编码法，下面（ ）是正确的哈夫曼树。",
+      "options": [
+        {
+          "label": "A",
+          "text": "ABCD -> A + BCD -> D + BC -> B + C"
+        },
+        {
+          "label": "B",
+          "text": "ABCD -> A + BCD -> B + CD -> C + D"
+        },
+        {
+          "label": "C",
+          "text": "ABCD -> D + ABC -> A + BC -> B + C"
+        },
+        {
+          "label": "D",
+          "text": "ABCD -> C + ABC -> B + AD -> A + D"
+        }
+      ],
+      "answer": "A",
+      "explanation": "哈夫曼编码的核心原则是每次选择当前频率最小的两个节点进行合并。\n\n1.  **A选项正确：**\n    *   首先合并频率最小的 `C"
+    },
+    {
+      "id": "yfxAnInfrAnSNnmYJJA_8",
+      "order": 8,
+      "type": "single_choice",
+      "content": "上一题中各字符的哈夫曼编码是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "A: 0, B: 10, C: 110, D: 111"
+        },
+        {
+          "label": "B",
+          "text": "A: 0, B: 10, C: 11, D: 10"
+        },
+        {
+          "label": "C",
+          "text": "A: 0, B: 101, C: 100, D: 11"
+        },
+        {
+          "label": "D",
+          "text": "A: 11, B: 10, C: 01, D: 00"
+        }
+      ],
+      "answer": "C",
+      "explanation": "哈夫曼编码的核心是为字符构建前缀码，即任何一个字符的编码都不是其他字符编码的前缀。同时，频率越高的字符，其编码通常越短。"
+    },
+    {
+      "id": "Nt6JhT8Lt9U8ei1f05gis",
+      "order": 9,
+      "type": "single_choice",
+      "content": "（ ）是3位格雷编码。",
+      "options": [
+        {
+          "label": "A",
+          "text": "000 001 011 010 110 111 101 100"
+        },
+        {
+          "label": "B",
+          "text": "000 001 010 011 100 101 110 111"
+        },
+        {
+          "label": "C",
+          "text": "000 001 100 101 011 010 111 110"
+        },
+        {
+          "label": "D",
+          "text": "000 010 001 011 100 110 101 111"
+        }
+      ],
+      "answer": "A",
+      "explanation": "格雷编码（Gray Code）的特点是任意两个相邻的码字之间只有一位二进制数不同。选项 A 中的序列 `000` 到 `001`、`001` 到 `011` 等，每个相邻的码字都只改变了其中一位，符合格雷编码的定义。其他选项中，相邻码字之间至少有两位不同，例如选项 B 的 `001` 到 `010` 改变了两位，因此它们不是格雷编码。"
+    },
+    {
+      "id": "ywkaiIXleIqoi2fSIZn6N",
+      "order": 10,
+      "type": "single_choice",
+      "content": "根据下面二叉树和给定的代码，\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nstruct TreeNode {\n    int val;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n};\n\nTreeNode* search(TreeNode* root, int val) {\n    cout << root->val << \" \";\n    if (root == NULL || root->val == val) return root;\n    if (val < root->val)\n        return search(root->left, val);\n    else\n        return search(root->right, val);\n}\n```\n\n给定以下二叉搜索树，调用函数 search(root,7) 时，输出的结果是（ ）。\n\n```\n        5\n       / \\\n      3   7\n     / \\ / \\\n    2  4 6  8\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 3 7"
+        },
+        {
+          "label": "B",
+          "text": "5 7"
+        },
+        {
+          "label": "C",
+          "text": "2 3 4 5 6 7"
+        },
+        {
+          "label": "D",
+          "text": "8 7"
+        }
+      ],
+      "answer": "B",
+      "explanation": "函数 `search(root, 7)` 从根节点 5 开始，首先输出 `root->val` 即 `5`。由于目标值 7 大于 5，"
+    },
+    {
+      "id": "OuRMFjNz4xmzX5VdnAPMt",
+      "order": 11,
+      "type": "single_choice",
+      "content": "阅读以下二叉树的深度优先搜索算法，横线上应填写（ ）。\n\n```cpp\nvoid dfs(TreeNode* root) {\n    if (root == nullptr)\n        return;\n\n    stack<TreeNode*> s;\n    s.push(root);\n    while (!s.empty()) {\n        ________________________ // 在此处填入代码\n        cout << node->value << \" \";\n\n        if (node->right) s.push(node->right);\n        if (node->left) s.push(node->left);\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "TreeNode* node = s.top();"
+        },
+        {
+          "label": "B",
+          "text": "TreeNode* node = s.top(); s.pop();"
+        },
+        {
+          "label": "C",
+          "text": "TreeNode* node = s.front();"
+        },
+        {
+          "label": "D",
+          "text": "TreeNode* node = s.front(); s.pop();"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是 B。\n\n`std::stack` 是后进先出（LIFO）的数据结构。在循环中，我们需要取出栈顶元素进行处理，并将其从栈中移除。选项 B `TreeNode* node = s.top(); s.pop();` 正确地完成了这两步操作：先通过 `s.top()` 获取栈顶元素，再通过 `s.pop()` 将其移除。\n\n选项 A `TreeNode* node = s.top();` 仅获取栈顶元素但未将其移除，会导致无限循环。选项 C 和 D 使用了 `s.front()`，但 `std::stack` 没有 `front()` 方法，该方法属于 `std::queue` 等容器，因此会导致编译错误。"
+    },
+    {
+      "id": "K1fw5oUwnRwvYXKxALYX8",
+      "order": 12,
+      "type": "single_choice",
+      "content": "阅读以下二叉树的广度优先搜索的代码，横线上应填写（ ）。\n\n```cpp\n#include <queue>\nvoid bfs(TreeNode* root) {\n    if (root == NULL) return;\n\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        ________________________ // 在此处填入代码\n        cout << node->val << \" \";\n        if (node->left) {\n            q.push(node->left);\n        }\n        if (node->right) {\n            q.push(node->right);\n        }\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "TreeNode* node = q.top();"
+        },
+        {
+          "label": "B",
+          "text": "TreeNode* node = q.top(); q.pop();"
+        },
+        {
+          "label": "C",
+          "text": "TreeNode* node = q.front();"
+        },
+        {
+          "label": "D",
+          "text": "TreeNode* node = q.front(); q.pop();"
+        }
+      ],
+      "answer": "D",
+      "explanation": "在广度优先搜索（BFS）中，我们每次需要从队列头部取出当前节点进行处理，并将其从队列中移除。`std::queue` 使用 `front()` 获取队头元素，并使用 `pop()` 将其移除，因此 `D` 是正确的。选项 `A` 和 `B` 中的 `q.top()` 是 `std::stack` 或 `std::priority_queue` 的方法，`std::queue` 没有 `top()`。选项 `C` 仅使用 `q.front()` 获取节点，但没有调用 `q.pop()` 将其从队列中移除，会导致无限循环。"
+    },
+    {
+      "id": "qi8qonvOFkdTTKx2-09uA",
+      "order": 13,
+      "type": "single_choice",
+      "content": "使用上题中的宽度优先搜索算法遍历以下这棵树，可能的输出是（ ）。\n\n```\n        1\n       / \\\n      2   3\n     / \\   \\\n    8   9   6\n   / \\     \\\n  4   5     7\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 2 8 9 4 5 3 6 7"
+        },
+        {
+          "label": "B",
+          "text": "1 2 3 4 5 6 6 8 9"
+        },
+        {
+          "label": "C",
+          "text": "1 2 3 8 9 6 4 5 7"
+        },
+        {
+          "label": "D",
+          "text": "8 4 5 9 2 1 3 6 7"
+        }
+      ],
+      "answer": "C",
+      "explanation": "宽度优先搜索（BFS）按层级遍历树。从根节点 `1` 开始，首先访问第一层节点 `1`，然后是第二层节点 `2` 和 `3`，接着是第三层节点 `8`、`9` 和 `6`，最后是第四层节点 `4`、`5` 和 `7`。因此，正确的遍历顺序是 `1 2 3 8 9 6 4 5 7`，与选项 C 完全一致。选项 A 错误，因为它在访问 `2` 后立即深入其子节点，不符合 BFS 的层级遍历原则。选项 B 包含重复节点且顺序混乱。选项 D 错误，因为它没有从根节点 `1` 开始遍历。"
+    },
+    {
+      "id": "tfa9dV0CC3oTXH6ouCxDK",
+      "order": 14,
+      "type": "single_choice",
+      "content": "以下关于动态规划的描述，（ ）是正确的。",
+      "options": [
+        {
+          "label": "A",
+          "text": "动态规划适用于没有重叠子问题的优化问题。"
+        },
+        {
+          "label": "B",
+          "text": "动态规划要求问题具有最优子结构和无后效性。"
+        },
+        {
+          "label": "C",
+          "text": "动态规划通常通过递归来实现。"
+        },
+        {
+          "label": "D",
+          "text": "动态规划与贪心算法不同，贪心算法不适用于有重叠子问题的问题。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。动态规划要求问题具有**最优子结构**（问题的最优解包含其子问题的最优解）和**无后效性**（状态一旦确定，就不受后续决策的影响，保证子问题解的独立性）。A错误，动态规划正是通过解决**有**重叠子问题来提高效率的。C错误，动态规划通常通过迭代（自底向上）实现，递归（带记忆化搜索）也是一种实现方式，但并非“通常”。D错误，贪心算法与动态规划的主要区别在于决策方式，贪心算法不一定能得到全局最优解，而动态规划通过考虑所有子问题来构建全局最优解，与重叠子问题并非直接的适用性区别。"
+    },
+    {
+      "id": "KZSVm0ULRlcBHn_u0huxm",
+      "order": 15,
+      "type": "single_choice",
+      "content": "假设背包的最大容量 W = 8kg，共有有4个物品可供选择，4个物品的重量分别为 weights = [2, 3, 5, 7]，对应的价值分别为 values = [30, 40, 60, 80]，则该0/1背包问题中，背包的最大价值为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "70"
+        },
+        {
+          "label": "B",
+          "text": "90"
+        },
+        {
+          "label": "C",
+          "text": "100"
+        },
+        {
+          "label": "D",
+          "text": "120"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是C。在0/1背包问题中，我们需要选择物品使总价值最大且总重量不超过8kg。选择重量为3kg（价值40）和5kg（价值60）的物品，总重量恰好是8kg，总价值为40 +"
+    },
+    {
+      "id": "qSEPdqx30HUeB6mWcl8er",
+      "order": 16,
+      "type": "true_false",
+      "content": "构造函数是一种特殊的类成员函数，构造函数的名称和类名相同。但通过函数重载，可以创建多个同名的构造函数，条件是每个构造函数的参数列表不同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "构造函数是特殊的类成员函数，其名称必须与类名相同。C++ 支持函数重载，这意味着可以定义多个同名函数，只要它们的参数列表（参数的类型、数量或顺序）不同即可。构造函数也遵循这一规则，可以有多个重载的构造函数，例如 `MyClass()` 和 `MyClass(int value)`。因此，题目描述完全正确。"
+    },
+    {
+      "id": "0RdUB0uREVd7cZ_WRvNhz",
+      "order": 17,
+      "type": "true_false",
+      "content": "类的静态成员函数既能访问类的静态数据成员，也能访问非静态数据成员。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "类的静态成员函数不与任何特定的对象实例绑定，因此它没有 `this` 指针。这意味着它无法知道要访问哪个对象的非静态（实例）数据成员。静态成员函数只能访问类的静态数据成员和其他静态成员函数。所以，题目中“也能访问非静态数据成员”的说法是错误的，因此选择F。"
+    },
+    {
+      "id": "e19XID4CxFMCiVuMYFChk",
+      "order": 18,
+      "type": "true_false",
+      "content": "栈中元素的插入和删除操作都在栈的顶端进行，所以方便用单向链表实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "栈的插入（`push`）和删除（`pop`）操作都只在栈的顶端进行，这与单向链表在头部进行操作的特性高度吻合。将链表的头部作为栈顶，无论是添加新元素（新节点成为新的头部）还是移除元素（将头部节点的下一个节点设为新的头部），都只需要修改少数指针，操作效率非常高，时间复杂度为 O(1)。因此，单向链表是实现栈的一种非常方便且高效的方式。"
+    },
+    {
+      "id": "Hy-StWVYPmAQRxDK6U2-0",
+      "order": 19,
+      "type": "true_false",
+      "content": "下面代码构建的树一定是完全二叉树：\n\n```cpp\nstruct TreeNode {\n    int value;\n    TreeNode* left;\n    TreeNode* right;\n};\n\nTreeNode* buildCompleteBinaryTree() {\n    TreeNode* root = new TreeNode{1};\n    root->left = new TreeNode{2};\n    root->right = new TreeNode{3};\n    root->left->left = new TreeNode{4};\n    root->left->right = new TreeNode{5};\n    root->right->left = new TreeNode{6};\n    return root;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "完全二叉树的定义是：除了最后一层外，所有层都被完全填满，并且最后一层的节点都尽可能地靠左排列。代码构建的树，第一层（节点"
+    },
+    {
+      "id": "IXQ1ZCDMRmu03WLm13Cdh",
+      "order": 20,
+      "type": "true_false",
+      "content": "在二叉排序树中，左子树所有节点的值都大于根节点的值，右子树所有节点的值都小于根节点的值。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "二叉排序树（BST）的定义是：左子树中所有节点的值都**小于**根节点的值，右子树中所有节点的值都**大于**根节点的值。题目描述将左右子树的节点值大小关系颠倒了，因此是错误的。正确答案是F。"
+    },
+    {
+      "id": "zsG5Eeg6v4q-4a0TGx-Lq",
+      "order": 21,
+      "type": "true_false",
+      "content": "在生成一个派生类的对象时，只调用派生类的构造函数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "创建派生类对象时，会首先调用基类的构造函数来初始化基类部分，然后才调用派生类的构造函数来初始化派生类特有的成员。这是C++继承机制中对象构造的固定顺序，确保了对象的所有部分都能被正确初始化。因此，只调用派生类构造函数的说法是错误的。"
+    },
+    {
+      "id": "Ali6qW_udtL2dCIjyWcEq",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面的代码实现了二叉树的前序遍历，它通过递归方法访问每个节点并打印节点值。\n\n```cpp\nvoid preorder(TreeNode* root) {\n    if (root == NULL) return;\n    cout << root->val << \" \";\n    preorder(root->left);\n    preorder(root->right);\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码实现了二叉树前序遍历的正确逻辑。它首先检查 `root` 是否为空作为递归终止条件；然后访问并打印当前节点的值 (`cout << root->val`)，这对应前序遍历中的“根”；接着递归遍历左子树 (`preorder(root->left)`)，对应“左”；最后递归遍历右子树 (`preorder(root->right)`)，对应“右”。这个“根-左-右”的访问顺序完全符合前序遍历的定义，因此是正确的。"
+    },
+    {
+      "id": "IDev55GasuCFWt1a3CKYk",
+      "order": 23,
+      "type": "true_false",
+      "content": "宽度优先搜索算法（BFS）保证了每个节点在最短路径的情况下被访问。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "宽度优先搜索（BFS）从起始节点开始，逐层向外扩展。它总是先访问距离起始节点更近的节点，再访问更远的节点。因此，当BFS第一次访问到一个节点时，它所经过的路径就是从起始节点到该节点的最短路径（按边数计算）。选项F与此原理相悖，故为错误。"
+    },
+    {
+      "id": "1WETgCQ4J1xgo6TaA-ExA",
+      "order": 24,
+      "type": "true_false",
+      "content": "在解决简单背包问题时，动态规划的状态转移方程如下：\n\n```cpp\ndp[i][w] = max(dp[i-1][w], dp[i-1][w - weights[i-1]] + values[i-1]);\n```\n\n该方程表示：在考虑第 i 个物品时，当前背包容量为 w ，如果不放物品 i ，则最大价值是 dp[i-1][w] ；如果放入物品 i ，则最大价值是 dp[i-1][w - weights[i-1]] + values[i-1] ，其中数组 weights 和 values 分别表示所有物品的重量和价值，数组下标从 0 开始。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该方程正确描述了0/1背包问题的状态转移。`dp[i][w]` 表示在前 `i` 个物品中选择，背包容量为 `w` 时的最大价值。`dp[i-1][w]` 对应不放入第 `i` 个物品的情况；`dp[i-1][w - weights[i-1]] + values[i-1]` 对应放入第 `i` 个物品的情况，此时需从剩余容量中计算前 `i-1` 个物品的最大价值，并加上当前物品的价值。由于 `dp` 数组的 `i` 表示第 `i` 个物品（1-based），而 `weights` 和 `values` 数组是 0-based，因此 `weights[i-1]` 和 `values[i-1]` 正确引用了第 `i` 个物品的属性。因此，该方程是标准且正确的。"
+    },
+    {
+      "id": "15ASL-UHeR_8sRxfK4qbi",
+      "order": 25,
+      "type": "true_false",
+      "content": "栈中元素的插入和删除操作都在栈的顶端进行，所以方便用双向链表比单向链表更合适来实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "栈的插入（`push`）和删除（`pop`）操作都只在栈的顶端进行。使用单向链表时，只需操作链表的头部节点即可高效实现这些操作，时间复杂度为O(1)。双向链表虽然也能实现，但其额外的 `prev` 指针对于栈的这些基本操作来说是冗余的，并不能提供额外的便利或性能优势，反而增加了内存开销。因此，单向链表更适合实现栈，原说法错误。"
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-2ji-202403",
+  "url": "https://adacpp.com/practice/gesp-cpp-2ji-202403",
+  "title": "GESP C++二级 202403",
+  "description": "CCF编程能力等级认证 GESP C++ 二级 2024年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 2,
+    "ym": "202403"
+  },
+  "questions": [
+    {
+      "id": "KjC4w8rGbpoYr2H9eGo5r",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下列流程图的输出结果是？（ ）\n\n流程图描述：开始 -> cj=75 -> 判断cj>=60，YES -> 判断cj>=90，YES -> 成绩优秀；NO -> 良好；cj>=60为NO -> 不及格 -> 结束",
+      "options": [
+        {
+          "label": "A",
+          "text": "优秀"
+        },
+        {
+          "label": "B",
+          "text": "良好"
+        },
+        {
+          "label": "C",
+          "text": "不及格"
+        },
+        {
+          "label": "D",
+          "text": "没有输出"
+        }
+      ],
+      "answer": "B",
+      "explanation": "流程开始，`cj` 被赋值为 75。首先判断 `cj >= 60` (75 >= 60) 为真，流程进入下一判断。接着判断 `cj >= 90` (75 >= 90) 为假，因此输出结果是“良好”。选项 A (优秀) 需要 `cj >= 90` 为真，选项 C (不及格) 需要 `cj < 60` 为真，选项 D (没有输出) 不符合流程图逻辑，故正确答案为 B。"
+    },
+    {
+      "id": "obi_ZDbgJ6Q9vN__2mhQq",
+      "order": 2,
+      "type": "single_choice",
+      "content": "以下选项中不符合C++变量命名规则的是？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`student`"
+        },
+        {
+          "label": "B",
+          "text": "`2_from`"
+        },
+        {
+          "label": "C",
+          "text": "`_to`"
+        },
+        {
+          "label": "D",
+          "text": "`Text`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "C++变量名必须以字母（a-z, A-Z）或下划线（`_`）开头，不能以数字开头。选项 `B. 2_from` 以数字 `2` 开头，因此不符合C++变量命名规则。选项 `A. student`、`C. _to` 和 `D. Text` 都符合规则，它们分别以字母或下划线开头。"
+    },
+    {
+      "id": "725hzh6x-UnX8wpNywYVN",
+      "order": 3,
+      "type": "single_choice",
+      "content": "以下选项中，不能用于表示分支结构的C++保留字是？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`switch`"
+        },
+        {
+          "label": "B",
+          "text": "`return`"
+        },
+        {
+          "label": "C",
+          "text": "`else`"
+        },
+        {
+          "label": "D",
+          "text": "`if`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`return` 用于结束函数的执行并返回一个值，它不是用来表示条件分支结构的。而 `if`、`else` 和 `switch` 都是 C++ 中用于实现条件判断和分支控制的保留字，它们明确地表示了程序执行路径的分支。"
+    },
+    {
+      "id": "7YbKIft_qNc7STsn9KFWF",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下列说法错误的是？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`while`循环满足循环条件时不断地运行，直到指定的条件不满足为止"
+        },
+        {
+          "label": "B",
+          "text": "`if`语句通常用于执行条件判断"
+        },
+        {
+          "label": "C",
+          "text": "在C++中可以使用`foreach`循环"
+        },
+        {
+          "label": "D",
+          "text": "`break`和`continue`语句都可以用在`for`循环和`while`循环中"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项C错误。C++标准库中没有名为`foreach`的关键字，但从C++11开始引入了功能类似的“基于范围的`for`循环”（range-based for loop），其语法是`for (type var : collection)`。选项A、B、D的描述都是正确的：`while`循环在条件满足时重复执行，`if`语句用于条件判断，而`break`和`continue`是通用的循环控制语句，可在`for`和`while`循环中使用。"
+    },
+    {
+      "id": "dxAwzF9YNePFMoI3C9x2Z",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下列4个表达式中，答案不是整数8的是？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`abs(-8)`"
+        },
+        {
+          "label": "B",
+          "text": "`min(max(8, 9), 10)`"
+        },
+        {
+          "label": "C",
+          "text": "`int(8.88)`"
+        },
+        {
+          "label": "D",
+          "text": "`sqrt(64)`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B 中，`max(8, 9)` 的结果是 9，然后 `min(9, 10)` 的结果是 9，因此不是 8。选项 A `abs(-8)` 返回 8。选项 C `int(8.88)` 将浮点数截断为整数 8。选项 D `sqrt(64)` 返回 8.0，其数值为 8。因此，只有 B 的结果不是 8。"
+    },
+    {
+      "id": "gGQIO7E_bx50nkl-qfRD3",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是？（ ）\n\n```cpp\nint n,a,m,i;\n\nn=3, a = 5;\nm = (a - 1) * 2;\nfor (i=0; i<n-1; i++)\n    m = (m - 1) * 2;\n\ncout << m;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "8"
+        },
+        {
+          "label": "B",
+          "text": "14"
+        },
+        {
+          "label": "C",
+          "text": "26"
+        },
+        {
+          "label": "D",
+          "text": "50"
+        }
+      ],
+      "answer": "C",
+      "explanation": "代码首先计算 `m = (a - 1) * 2`，即 `m = (5 - 1) * 2 = 8`。接着，`for` 循环 `i` 从 0 遍历到 `n-2`（即 `i < 2`），共执行 2 次。第一次循环后，`m` 变为 `(8 - 1) * 2 = 14`；第二次循环后，`m` 变为 `(14 - 1) * 2 = 26`。因此，最终输出为 26。选项 A 和 B 是循环中的中间值，选项 D 不符合计算过程。"
+    },
+    {
+      "id": "VVlKjc1hkSPumXSWj0x3e",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是？（ ）\n\n```cpp\nint n,i,result;\n\nn = 81;\ni = 1, result = 1;\nwhile (i * i <= n){\n    if (n % (i * i) == 0)\n        result = i * i;\n    i += 1;\n}\n\ncout << result;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "16"
+        },
+        {
+          "label": "B",
+          "text": "36"
+        },
+        {
+          "label": "C",
+          "text": "49"
+        },
+        {
+          "label": "D",
+          "text": "81"
+        }
+      ],
+      "answer": "D",
+      "explanation": "代码遍历 `i` 从 1 开始，只要 `i * i` 不超过 `n`（即 81）。在每次循环中，如果 `n` 能被 `i"
+    },
+    {
+      "id": "g6mxgcwi8b0T1fx7jAskZ",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是？（ ）\n\n```cpp\nint s,t,ans;\ns = 2, t = 10;\nans = 0;\nwhile (s != t){\n    if (t % 2 == 0 && t / 2 >= s)\n        t /= 2;\n    else\n        t -= 1;\n    ans += 1;\n}\ncout << ans;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "explanation": "代码模拟了 `t` 从 `10` 逐步减小或减半直到等于 `s` (`2`) 的过程，并用 `ans` 记录操作次数。\n1. 初始 `s=2, t=10, ans=0`。\n2. 第一次循环：`t` 是偶数且 `t/2 (5)` 大于等于 `s (2)`，所以 `t` 变为 `5`，`ans` 变为 `1`。\n3. 第二次循环：`t (5)` 是奇数，所以 `t` 变为 `4`，`ans` 变为 `2`。\n4. 第三次循环：`t (4)` 是偶数且 `t/2 (2)` 大于等于 `s (2)`，"
+    },
+    {
+      "id": "lo5_bmSR_RQUPYBmeUfuS",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是？（ ）\n\n```cpp\nint n, masks, days,cur;\nn = 17, masks = 10, days = 0;\ncur = 2;\nwhile (masks != n){\n    if (cur == 0 || cur == 1)\n        masks += 7;\n    masks -= 1;\n    days += 1;\n    cur = (cur + 1) % 7;\n}\ncout << days;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "C",
+      "explanation": "代码通过 `while` 循环模拟了 `masks` 值的变化过程，直到 `masks` 等于 `n` (17)。初始 `masks` 为 10，`"
+    },
+    {
+      "id": "uyALT6-nzF6_3smMwSwIv",
+      "order": 10,
+      "type": "single_choice",
+      "content": "以下C++代码判断一个正整数N的各个数位是否都是偶数。如果都是，则输出\"是\"，否则输出\"否\"。例如N=2024时输出\"是\"。则横线处应填入（ ）。\n\n```cpp\nint N,Flag;\ncin >> N;\nFlag = true;\nwhile (N != 0){\n    if (N %2 != 0){\n        Flag = false;\n        _____________\n    }\n    else\n        N /= 10;\n}\nif(Flag == true)\n    cout << \"是\";\nelse\n    cout << \"否\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`break`"
+        },
+        {
+          "label": "B",
+          "text": "`continue`"
+        },
+        {
+          "label": "C",
+          "text": "`N = N / 10`"
+        },
+        {
+          "label": "D",
+          "text": "`N = N % 10`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当代码发现一个数位不是偶数时（即 `N % 2 != 0` 成立，虽然这里检查的是整个 `N` 的奇偶性，但根据"
+    },
+    {
+      "id": "MfIadoFDFds-Vg9cgCrpc",
+      "order": 11,
+      "type": "single_choice",
+      "content": "有句俗话叫\"三天打渔，两天晒网\"。如果小杨前三天打渔，后两天晒网，一直重复这个过程，以下程序代码用于判断，第n天小杨是在打鱼还是晒网，横线处应填写？（ ）\n\n```cpp\nint n,i;\ncin >> n;\ni = n % 5;\nif (__________________) // 在此处填写代码\n    cout << \"晒网\";\nelse\n    cout << \"打鱼\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`i == 0`"
+        },
+        {
+          "label": "B",
+          "text": "`i == 4`"
+        },
+        {
+          "label": "C",
+          "text": "`i == 0 && i == 4`"
+        },
+        {
+          "label": "D",
+          "text": "`i == 0 || i == 4`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "周期为5天，其中第4天和第5天是晒网。`i = n % 5` 计算的是天数在5天周期内的余数，余数范围是0到4。当 `n` 是第4天时，`i` 为 `4`；当 `n` 是第5"
+    },
+    {
+      "id": "ZNwPDavLtrS2OlkdGDW_m",
+      "order": 12,
+      "type": "single_choice",
+      "content": "一个数的所有数字倒序排列后这个数的大小保持不变，这个数就是回文数，比如101与6886都是回文数，而100不是回文数。以下程序代码用于判断一个数是否为回文数，横线处应填写？（ ）\n\n```cpp\nint n,a,k;\ncin >> n;\na = 0;\nk = n;\nwhile (n > 0){\n    a = __________; // 在此处填写代码\n    n /= 10;\n}\nif (a == k)\n    cout << \"是回文数\";\nelse\n    cout << \"不是回文数\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`10 * a + n % 10`"
+        },
+        {
+          "label": "B",
+          "text": "`a + n % 10`"
+        },
+        {
+          "label": "C",
+          "text": "`10 * a + n / 10`"
+        },
+        {
+          "label": "D",
+          "text": "`a + n / 10`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项A `10 * a + n % 10` 是正确的。在循环中，`n % 10` 提取当前 `n` 的个位数字，`10 * a` 将 `a` 中已构建的逆序数左移一位，然后加上新提取的个位数字，从而逐步构建出 `n` 的逆序数。选项B `a + n % 10` 仅将数字累加，无法实现倒序。选项C和D中的 `"
+    },
+    {
+      "id": "qCJWRu1XpAjQsrgcQIwOn",
+      "order": 13,
+      "type": "single_choice",
+      "content": "给定两个整数n与k，打印出一个栅栏图形，这个栅栏应该分成n段，段与段之间的间隔为`+`，段内的填充为k个`-`。形如n=5，k=6时，图形如下：\n\n```\n+------+------+------+------+------+\n```\n\n以下程序代码用于绘制该图形，横线处应填写？（ ）\n\n```cpp\nint n, k, i, j;\nn = 5, k = 6;\nfor (i = 0; i < n; i++){\n    __________ // 在此处填写代码\n    for (j = 1; j < k; j++)\n        cout << '-' ;\n}\ncout << '+';\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`cout << '+' << endl;`"
+        },
+        {
+          "label": "B",
+          "text": "`cout << '+' << ' ' << endl;`"
+        },
+        {
+          "label": "C",
+          "text": "`cout << '+';`"
+        },
+        {
+          "label": "D",
+          "text": "`cout << '+' << ' ';`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "该程序的目标是打印 `n` 个由 `k` 个 `-` 组成的段，段之间用 `+` 分隔，并且开头和结尾也都有 `+`"
+    },
+    {
+      "id": "hmaJ8C0wC7N2vGDTZNhfD",
+      "order": 14,
+      "type": "single_choice",
+      "content": "小杨的父母最近刚刚给他买了一块华为手表，他说手表上跑的是鸿蒙，这个鸿蒙是。（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "小程序"
+        },
+        {
+          "label": "B",
+          "text": "计时器"
+        },
+        {
+          "label": "C",
+          "text": "操作系统"
+        },
+        {
+          "label": "D",
+          "text": "神话人物"
+        }
+      ],
+      "answer": "C",
+      "explanation": "HarmonyOS（鸿蒙）是华为自主研发的**操作系统**，它为手表等各类智能设备提供基础运行环境和功能支持，因此C是正确的。小程序和计时器是运行在操作系统之上的应用程序或功能，而不是操作系统本身。神话人物与技术概念无关。"
+    },
+    {
+      "id": "4M-ok61F49G3G4Xktv99H",
+      "order": 15,
+      "type": "single_choice",
+      "content": "中国计算机学会（CCF）在2024年1月27日的颁奖典礼上颁布了王选奖，王选先生的重大贡献是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "制造自动驾驶汽车"
+        },
+        {
+          "label": "B",
+          "text": "创立培训学校"
+        },
+        {
+          "label": "C",
+          "text": "发明汉字激光照排系统"
+        },
+        {
+          "label": "D",
+          "text": "成立方正公司"
+        }
+      ],
+      "answer": "C",
+      "explanation": "王选先生的重大贡献是**发明汉字激光照排系统**，这项技术彻底改变了中文出版印刷行业，使汉字信息处理进入了光电时代。选项A制造自动驾驶汽车与王选先生的研究领域无关。选项B创立培训学校不是他的主要贡献。选项D成立方正公司是其技术成果的产业化，但核心贡献是技术发明本身。"
+    },
+    {
+      "id": "q06ljc0CSIaq4DXgqD9t4",
+      "order": 16,
+      "type": "true_false",
+      "content": "如果有以下C++代码：\n\n```cpp\ndouble s;\nint t;\ns = 18.5;\nt = int(s) + 10;\n```\n\n那么`cout << t`的结果为28.5。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`int(s)` 会将浮点数 `18.5` 截断为整数 `18`，而不是四舍五入。因此，`t` 的"
+    },
+    {
+      "id": "IvXmntH9XCQjgN-B7fk2R",
+      "order": 17,
+      "type": "true_false",
+      "content": "`Xyz`，`xYz`，`xyZ`是三个不同的变量。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++ 语言是严格区分大小写的。这意味着 `Xyz`、`xYz` 和 `xyZ` 虽然字母相同，但由于它们的大小写组合不同，在 C++ 编译器看来是三个完全独立的标识符，可以作为不同的变量名使用。因此，认为它们是三个不同的变量是正确的。选择 F 错误，因为它忽略了 C++ 的大小写敏感特性。"
+    },
+    {
+      "id": "-K35CaZTLCfB0zZp-e2mB",
+      "order": 18,
+      "type": "true_false",
+      "content": "`cout << (8< 9< 10)`的输出结果为`true`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中，比较运算符遵循从左到右的结合性。表达式 `8 < 9 < 10` 会先计算 `8 < 9`，结果为 `true`"
+    },
+    {
+      "id": "VlU7f9wsEr1VQkHSPaOv9",
+      "order": 19,
+      "type": "true_false",
+      "content": "`for (i = 0; i < 100; i+=2) ;`语句中变量i的取值范围是0到99。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该循环中，变量 `i` 从0开始，每次递增2。当 `i` 的值为98时，条件 `i < 100` 仍为真"
+    },
+    {
+      "id": "2hIjsoJBctrutJMGrBIht",
+      "order": 20,
+      "type": "true_false",
+      "content": "C++中`cout << float(2022)`与`cout << float('2022')`运行后的输出结果均为2022。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。\n\n1.  `cout << float(2022)`：整数 `2022` 被显式转换为浮点数 `2022.0f`"
+    },
+    {
+      "id": "8kIA9naOhup-_zPcVgP_N",
+      "order": 21,
+      "type": "true_false",
+      "content": "已知A的ASCII码值为65，表达式`int('C')+abs(-5.8)`的值为72.8。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该表达式的计算过程如下：\n1.  `int('C')`：字符'C'的ASCII码值是67（因为'A'是65）。\n2"
+    },
+    {
+      "id": "04dGPTOKHxq66IPXgDeVg",
+      "order": 22,
+      "type": "true_false",
+      "content": "`bool()`函数用于将给定参数或表达式转换为布尔类型。语句`bool(-1)`返回的是`false`值。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "在 C++ 中，任何非零数值（包括负数）在转换为布尔类型时都会被视为 `true`。因此，`bool(-1)` 的结果是 `true`，而不是 `false`。题目中的语句声称 `bool(-1)` 返回 `false`，这是不正确的，所以选择 F。"
+    },
+    {
+      "id": "QGUnYCPZbFJLJ9ZReDbwW",
+      "order": 23,
+      "type": "true_false",
+      "content": "如果变量a的值使得C++表达式`sqrt(a)==abs(a)`，则a的值为0。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `sqrt(a)` 要求 `a >= 0`。在此条件下，`abs(a)` 等价于 `a`，所以原表达式变为 `sqrt(a) == a`。解这个方程，我们得到 `a = 0` 或 `a = 1`。因此，除了 `a` 为 0，当 `a` 为 1 时表达式 `sqrt(a)==abs(a)` 也成立。原题目断言 `a` 的值“为0”，排除了 `a` 为 1 的情况，所以是错误的。"
+    },
+    {
+      "id": "HLSX_5P-I0pZQuGl5WOTE",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨今年春节回奶奶家了，奶奶家的数字电视要设置ip地址并接入到WIFI盒子才能收看节目，那这个WIFI盒子具有路由器的功能。（ ）",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "“Wi-Fi盒子”通常集成了无线接入点（AP）和路由器功能。它能为连接的设备（如数字电视）分配IP地址，并管理这些设备与外部网络之间的数据传输，这正是路由器的核心功能。因此，题目描述是正确的。选项F错误，因为它忽略了Wi-Fi盒子所具备的路由功能。"
+    },
+    {
+      "id": "v-4QyqULRrugK3HvVqqXV",
+      "order": 25,
+      "type": "true_false",
+      "content": "任何一个`for`循环都可以转化为等价的`while`循环（ ）。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "任何 `for` 循环都包含初始化、循环条件和每次迭代后的操作这三个部分。我们可以将 `for` 循环的初始化语句放在 `while` 循环之前，将循环条件作为 `while` 循环的判断条件，并将每次迭代后的操作放在 `while` 循环体内部的末尾。例如，`for (init; cond; update)` 可以等价于 `init; while (cond) { // 循环体 ... update; }`。因此，`for` 循环的功能总能通过 `while` 循环实现，答案是正确的。"
+    }
+  ]
+}

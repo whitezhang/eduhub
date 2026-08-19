@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-3ji-202606",
+  "url": "https://adacpp.com/practice/gesp-cpp-3ji-202606",
+  "title": "GESP C++三级 202606",
+  "description": "CCF编程能力等级认证 GESP C++ 三级 2026年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 3,
+    "ym": "202606"
+  },
+  "questions": [
+    {
+      "id": "Ql7cQZRoJ5ygI-oBTVVvu",
+      "order": 1,
+      "type": "single_choice",
+      "content": "关于计算机的数据编码,下面说法正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "机器数 1000 1101B 的真值可能是-13(如果它是原码)或141 (如果它是无符号数)等数,这取决于我们如何解释它。"
+        },
+        {
+          "label": "B",
+          "text": "计算机中,所有数据最终都以二进制、八进制、十六进制的形式存储和运算。"
+        },
+        {
+          "label": "C",
+          "text": "字节(Byte)是计算机中最小的数据单位。位(bit)是计算机中最小的存储单位。"
+        },
+        {
+          "label": "D",
+          "text": "计算机中,1k 字节是 1000 字节的意思。"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项A正确，机器数的真值取决于其编码方式（如原码、补码）和是否有符号。选项B错误，计算机内部数据以二进制形式存储和运算。选项C错误，位(bit)是最小的数据单位，字节(Byte)通常是8位。选项D错误，在计算机领域，1KB通常指1024字节，而非1000字节。"
+    },
+    {
+      "id": "LK05o3VR7rvt23SSOAD5y",
+      "order": 1,
+      "type": "true_false",
+      "content": "反码运算时,产生的进位需要循环进位,即最高位产生的进位要加回到结果的最低位。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这是反码（一补码）运算的特性，当最高位产生进位时，需要将其加回到最低位，称为循环进位或端回进位。"
+    },
+    {
+      "id": "4lEW3t8jTk5BQ2G6fXs-f",
+      "order": 2,
+      "type": "single_choice",
+      "content": "计算机厂商为了计算方便,一般采用1000 进制。如果我们买的厂商标注的是 1 TB 的硬盘,它实际的存储容量是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "1000 × 1000 × 1000 × 1000÷1024 1024 1024b931Gb"
+        },
+        {
+          "label": "B",
+          "text": "1000 × 1000 × 1000 × 1000÷1024 1024 1024B = 931GB"
+        },
+        {
+          "label": "C",
+          "text": "1024 x 1024 × 1024 × 10241000÷1000÷1024B = 1049GB"
+        },
+        {
+          "label": "D",
+          "text": "1000 x 1024 × 1024 × 1024 1024 1024 1024b977Gb"
+        }
+      ],
+      "answer": "B",
+      "explanation": "厂商标注的1TB通常是1000的四次方字节（1000^4 Bytes）。实际存储容量需要转换为以1024为基数的单位，即除以1024的三次方才能得到GB。因此，实际容量为 (1000^4) / (1024^3) GB ≈ 931GB。"
+    },
+    {
+      "id": "V5kdKtWJrH_QH29Pc5UNW",
+      "order": 2,
+      "type": "true_false",
+      "content": "-11 的补码的一种计算方式是从右往左扫描正数的二进制形式,遇到第一个 1 之后,左边的所有位都取反。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这是计算负数补码的常用快捷方法。首先找到对应正数的二进制表示，然后从右向左找到第一个1，该1及其右侧的位保持不变，该1左侧的所有位取反。"
+    },
+    {
+      "id": "E_D05hYtEQC5nslkGw0dI",
+      "order": 3,
+      "type": "single_choice",
+      "content": "低4位、高4位压缩技术,适用于数据仅使用字节的一部分(如仅用低4位)的场景。字节结构:一个字节为8位,分为高4位(高位)和低4位(低位)。当数据是十六进制数(0~15,即 0x0 到 0xF),每个值仅需4位表示,高4位全为0。将两个相邻的4位值合并为一个字节。四个数据 0x1、0x2、0x3、0x4 采用上述压缩技术压缩以后是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "12D、34D"
+        },
+        {
+          "label": "B",
+          "text": "120、34Q"
+        },
+        {
+          "label": "C",
+          "text": "12H、34H"
+        },
+        {
+          "label": "D",
+          "text": "00010011B、00110101B"
+        }
+      ],
+      "answer": "C",
+      "explanation": "将0x1 (0001B) 和 0x2 (0010B) 合并，高4位是0x1，低4位是0x2，得到0x12。将0x3 (0011B) 和 0x4 (0100B) 合并，高4位是0x3，低4位是0x4，得到0x34。因此，压缩后的结果是0x12和0x34，表示为十六进制是12H、34H。"
+    },
+    {
+      "id": "63pJMTOsnI2YoIBqL5EO5",
+      "order": 3,
+      "type": "true_false",
+      "content": "一个8位的二进制数补码,最大的表示范围是从-127到+127。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "对于n位二进制补码，其表示范围是 `[-2^(n-1), 2^(n-1) - 1]`。对于8位补码，范围是 `[-2^7, 2^7 - 1]`，即 `[-128, 127]`。因此，题目中给出的范围是错误的。"
+    },
+    {
+      "id": "jYj6d92AD4bLX6KFNGNCB",
+      "order": 4,
+      "type": "single_choice",
+      "content": "关于计算机编码中反码和补码,下面说法错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "负数的补码,一个快速方法是从右往左扫描正数的二进制形式,遇到第一个 1 之后,左边的所有位都取反。"
+        },
+        {
+          "label": "B",
+          "text": "对于一个n位的二进制数:最大表示范围:[-(2n-1) - 1, +(2n-1 — 1)]。"
+        },
+        {
+          "label": "C",
+          "text": "反码减法可以统一为加法。符号位可以直接参与运算。"
+        },
+        {
+          "label": "D",
+          "text": "反码表示中,0的表示不唯一: 0000 0000B 和 1111 1111B。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项A正确，这是求补码的常用方法。选项B错误，n位二进制补码的表示范围是 `[-2^(n-1), 2^(n-1) - 1]`。选项C正确，补码使得减法可以转换为加法，且符号位参与运算。选项D正确，反码（一补码）中存在 `+0` 和 `-0` 两种表示。"
+    },
+    {
+      "id": "Zifdrfvy3Hl08tEK1IYNe",
+      "order": 4,
+      "type": "true_false",
+      "content": "判断某个数是否是质数,枚举范围可适当缩小(遍历到√i而非i),提升效率。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "判断一个数 `n` 是否为质数时，只需要测试从2到 `sqrt(n)` 之间的因子。如果 `n` 有大于 `sqrt(n)` 的因子，那么它必然也有一个小于 `sqrt(n)` 的因子。这种优化可以显著提高效率。"
+    },
+    {
+      "id": "Xltm1jcy3oIGRHcqloZSP",
+      "order": 5,
+      "type": "single_choice",
+      "content": "一种加密方式是字符数组与密钥 KEY、运算方式分开传输,比如字符数组 `char text[4] = {'G', 'E', 'S', 'P'};` 由一种传输方式发送,密钥 `KEY = 2026` 通过另一种发送方式发送,运算方式 `char function[4] = {'|', '-', '^', '+'};` 又是另一种发送方式发送。三种数据都到达目的地以后,分别进行例如 'G' | 6、'E' - 2、'S' ^ 0、'P' + 2 等计算,来得到相应的真实内容,上述 GESP 通过这种加密方式,加密以后最终的内容是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "GCSR"
+        },
+        {
+          "label": "B",
+          "text": "RSCG"
+        },
+        {
+          "label": "C",
+          "text": "GCSA"
+        },
+        {
+          "label": "D",
+          "text": "BCSR"
+        }
+      ],
+      "answer": "A",
+      "explanation": "根据ASCII码进行计算：'G' (71) | 6 (0110B) = 71 (01000111B) | 6 (00000110B) = 71 (01000111B) = 'G'；'E' (69) - 2 = 67 = 'C'；'S' (83) ^ 0 = 83 = 'S'；'P' (80) + 2 = 82 = 'R'。组合起来得到 'GCSR'。"
+    },
+    {
+      "id": "5DhNXdMAmBGteETIgI7h3",
+      "order": 5,
+      "type": "true_false",
+      "content": "如果 `a` 为 `int` 类型的变量,且表达式 `((a & 1) == 1)` 的值为 `true`,则说明 `a` 是奇数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "位运算 `a & 1` 用于检查整数 `a` 的最低位。如果最低位是1，则 `a` 是奇数；如果最低位是0，则 `a` 是偶数。因此，表达式 `(a & 1) == 1` 为 `true` 确实说明 `a` 是奇数。"
+    },
+    {
+      "id": "1knIAxOXZhXQG8SRRS4Gf",
+      "order": 6,
+      "type": "single_choice",
+      "content": "关于位运算,下列说法错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "找唯一数:数组中唯一出现一次的数,其余出现两次,全部异或结果即为该数。例如:数组[5,7,9,7,5](唯一数是9)。"
+        },
+        {
+          "label": "B",
+          "text": "交换两个数: a ^= b; b ^= a; a ^= b;(无需临时变量)。"
+        },
+        {
+          "label": "C",
+          "text": "将二进制位整体左移n位,高位溢出舍弃,低位补 0;等价于 num 乘以2ⁿ。"
+        },
+        {
+          "label": "D",
+          "text": "对每一个二进制位取反,包括符号位,简单运算规则是 ~n = -n - 1。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项A正确，异或运算的性质使得重复出现的数相互抵消，留下唯一数。选项B正确，这是经典的异或交换算法。选项C错误，左移 `num << n` 等价于 `num * 2^n` 仅在不发生溢出的情况下成立，如果高位溢出舍弃，结果将不符合乘法规律。选项D正确，按位取反 `~n` 的结果是 `-(n+1)`。"
+    },
+    {
+      "id": "NH16R5VxDcv--cF-w7ipZ",
+      "order": 6,
+      "type": "true_false",
+      "content": "十六进制数 `CCF` 对应的二进制数、八进制数、十进制数分别是: `110011001111`、`6317`、`3269`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "将十六进制数 `CCF` 转换为十进制：`C` (12) * 16^2 + `C` (12) * 16^1 + `F` (15) * 16^0 = 12 * 256 + 12 * 16 + 15 * 1 = 3072 + 192 + 15 = 3279。题目中给出的十进制数是 `3269`，因此该说法错误。"
+    },
+    {
+      "id": "oU3C39a3CgL5slbDkdtDu",
+      "order": 7,
+      "type": "single_choice",
+      "content": "关于字符串和字符数组,下列说法正确的是()。\nA.\n```cpp\n1 char str[] = \"GESP\";\n2 int len1 = sizeof(str);\n3 int len2 = strlen(str);\n```\n上面程序能够正确执行, len1 与 len2 相等。\nB.\n```cpp\n1 char str1[4] = \"GESP\";\n2 char str2[4] = {'G', 'E', 'S', 'P'};\n```\n这段程序将能够正确执行。\nC.\n```cpp\n1 char str2[4] = {'G', 'E', 'S', 'P'};\n2 strcpy(str2, \"HELLO, GESP\");\n3 cout << str2 << endl;\n```\n这段程序即使能够运行,但是存在覆盖数组以外的内存空间的行为,可能会引起严重错误。\nD.\n```cpp\n1 char dest[4] = {'G', 'E', 'S', 'P'};\n2 char src[] = \"HELLO\";\n3 strcat(dest, src);\n4 cout << dest << endl;\n```\n这段程序能够正确执行,不存在数组越界行为。",
+      "options": [
+        {
+          "label": "A",
+          "text": "上面程序能够正确执行, len1 与 len2 相等。"
+        },
+        {
+          "label": "B",
+          "text": "这段程序将能够正确执行。"
+        },
+        {
+          "label": "C",
+          "text": "这段程序即使能够运行,但是存在覆盖数组以外的内存空间的行为,可能会引起严重错误。"
+        },
+        {
+          "label": "D",
+          "text": "这段程序能够正确执行,不存在数组越界行为。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项A错误，`sizeof(str)`为5（包含空字符），`strlen(str)`为4，两者不相等。选项B错误，`char str1[4] = \"GESP\";`会溢出，因为\"GESP\"需要5个字节（含空字符）。选项C正确，`strcpy(str2, \"HELLO, GESP\");`会将一个长字符串复制到只有4个字节的 `str2` 中，导致缓冲区溢出，可能引发严重错误。选项D错误，`dest`未空终止，`strcat`会从`dest`的末尾开始寻找空字符，并写入`src`，导致严重的数组越界。"
+    },
+    {
+      "id": "w19TaF1wykNmpbHtAl5-2",
+      "order": 7,
+      "type": "true_false",
+      "content": "下列程序如果能够正确执行,那么输出的结果是 GESP。\n```cpp\n1 int main() {\n2   string name = \"GESP\";\n3   cout << name[false] << name[true] << name[1 << 1] << name[7 >> 1] << endl;\n4 }\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "程序中 `name[false]` 对应 `name[0]` ('G')，`name[true]` 对应 `name[1]` ('E')，`name[1 << 1]` 对应 `name[2]` ('S')，`name[7 >> 1]` 对应 `name[3]` ('P')。所以输出的字符序列是 `GESP`。然而，`endl` 会在输出末尾添加一个换行符。因此，实际输出是 `GESP\\n`，而不是严格意义上的 `GESP`。"
+    },
+    {
+      "id": "-Pz0BZAiDhz0wFK9iW_8-",
+      "order": 8,
+      "type": "single_choice",
+      "content": "计算机中的 2 KB 等于多少 bit ()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "16384"
+        },
+        {
+          "label": "B",
+          "text": "20000"
+        },
+        {
+          "label": "C",
+          "text": "2000"
+        },
+        {
+          "label": "D",
+          "text": "2048"
+        }
+      ],
+      "answer": "A",
+      "explanation": "1 KB = 1024 Bytes，1 Byte = 8 bits。所以 2 KB = 2 * 1024 Bytes = 2 * 1024 * 8 bits = 2048 * 8 bits = 16384 bits。"
+    },
+    {
+      "id": "CX_8MkG3BFBQgb4Eh6V40",
+      "order": 8,
+      "type": "true_false",
+      "content": "某个初学C++的学生,在对照参考程序写了一个程序以后,信心满满地进行编译,他敲进编译器的全部代码如下,这个程序能够正常编译运行。\n```cpp\n1 #include<bits/stdc++.h>\n2 using namespace std;\n3 int main() {\n4   cout << \"Hello world!\" << endl;\n5   return 0;\n6 }\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这段代码是一个标准的C++ \"Hello world!\" 程序。它使用了常见的头文件和命名空间，`main` 函数结构完整，输出语句和返回语句都符合C++语法。因此，该程序能够正常编译和运行。"
+    },
+    {
+      "id": "SnjPzANsvoAjnWSVgfCSm",
+      "order": 9,
+      "type": "single_choice",
+      "content": "在C++中,对于32位有符号整数 `int` 类型数据 `n`,关于按位取反运算符 `~`,下列说法正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "~6的结果是5。"
+        },
+        {
+          "label": "B",
+          "text": "按位取反满足公式 ~n = -n - 1。"
+        },
+        {
+          "label": "C",
+          "text": "~0 的结果是1。"
+        },
+        {
+          "label": "D",
+          "text": "~(-2)的结果是-1。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项A错误，`~6` 的结果是 `-(6+1) = -7`。选项B正确，按位取反 `~n` 的结果在补码表示中确实是 `-(n+1)`。选项C错误，`~0` 的结果是 `-(0+1) = -1`。选项D错误，`~(-2)` 的结果是 `-(-2+1) = -(-1) = 1`。"
+    },
+    {
+      "id": "cbVU1zFtX51f11iAYlFSr",
+      "order": 9,
+      "type": "true_false",
+      "content": "代码逐行复刻手工运算步骤,中间不能增加任何判断逻辑,否则就不属于模拟算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "模拟算法的核心是模仿某个过程或系统的行为，但并不意味着不能包含任何判断逻辑。在模拟过程中，根据不同的条件或状态进行分支判断是常见的，甚至必不可少的。"
+    },
+    {
+      "id": "iRIhKa5F3KtIOoamyazpz",
+      "order": 10,
+      "type": "single_choice",
+      "content": "关于计算机中的二进制编码表示,下列说法错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "原码是最直观的一种有符号数表示方法。最高位(最左边的位)为符号位: 0 表示正数,1 表示负数,其余位为数值位(真值的绝对值)。"
+        },
+        {
+          "label": "B",
+          "text": "补码完美解决了原码和反码的缺陷,是现代计算机中表示有符号整数的标准方式。正数的补码与其原码、反码相同;负数的补码是将其对应正数的原码按位取反(得到反码),然后加 1。"
+        },
+        {
+          "label": "C",
+          "text": "计算补码的一个更快的技巧:从右往左扫描正数的二进制形式,遇到第一个 1 之后,左边的所有位都取反。"
+        },
+        {
+          "label": "D",
+          "text": "对于一个n位的二进制数,补码最大表示范围为[-2ⁿ⁻¹, +2ⁿ⁻¹]。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项A正确，原码的定义符合描述。选项B正确，补码是现代计算机的标准，其计算方式也正确。选项C正确，这是求补码的快捷方法。选项D错误，n位二进制补码的表示范围是 `[-2^(n-1), 2^(n-1) - 1]`，而不是 `[-2^(n-1), +2^(n-1)]`。"
+    },
+    {
+      "id": "NrLmrmFKDoq6vD6Cwa_ft",
+      "order": 10,
+      "type": "true_false",
+      "content": "判断一个 `int` 型数字 `s[i]` 是不是在0和9之间(可以是0和9),判断条件可以写为 `if(s[i] >= '0' && s[i] <= '9')`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，字符类型的值是其对应的ASCII码。数字字符 '0' 到 '9' 的ASCII码是连续的。因此，`s[i] >= '0' && s[i] <= '9'` 是判断一个字符是否为数字的正确且常用方法。"
+    },
+    {
+      "id": "QOgQp6De-uccxqwLXH00B",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面选项中提到的变量都是正整数,关于位运算,下面说法错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "num & 1,结果为 1 则奇数,0 则偶数(仅看最低位)。"
+        },
+        {
+          "label": "B",
+          "text": "num & 0xFF 保留低8位。"
+        },
+        {
+          "label": "C",
+          "text": "num & b 的结果一定小于等于 num。"
+        },
+        {
+          "label": "D",
+          "text": "若 num 左移导致高位溢出(如超过整型范围),结果符合乘法规律。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项A正确，`num & 1` 用于判断奇偶性。选项B正确，`num & 0xFF` 会提取 `num` 的最低8位。选项C正确，位与运算的结果不会超过原数。选项D错误，如果 `num` 左移导致高位溢出，结果将不再符合乘法规律 `num * 2^n`。"
+    },
+    {
+      "id": "eAJidgF3Ak58red3bM1vE",
+      "order": 12,
+      "type": "single_choice",
+      "content": "`a=7, b=3, c=14, d=15, e=8`, 对于运算表达式 `!a << b & c ^ d | e` 的结果是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "14"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据运算符优先级（`!` > `<<` > `&` > `^` > `|`）计算：\n1. `!a` 即 `!7`，结果为 `0`。\n2. `0 << b` 即 `0 << 3`，结果为 `0`。\n3. `0 & c` 即 `0 & 14`，结果为 `0`。\n4. `0 ^ d` 即 `0 ^ 15`，结果为 `15`。\n5. `15 | e` 即 `15 | 8`，二进制为 `1111 | 1000 = 1111`，结果为 `15`。"
+    },
+    {
+      "id": "dxNmZZibOUkEap4NNxG-8",
+      "order": 13,
+      "type": "single_choice",
+      "content": "关于 `string` 的成员函数,下面说法错误的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "size():返回字符串长度(字符个数,不含 '\\0')。"
+        },
+        {
+          "label": "B",
+          "text": "length()与 size()功能完全一致,返回字符串长度。"
+        },
+        {
+          "label": "C",
+          "text": "empty(): 判断字符串是否为空(非空返回 true,空返回 false)。"
+        },
+        {
+          "label": "D",
+          "text": "s.append(s2,0,3);从 s2 下标 0 开始,截取3个字符。"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项A正确，`size()`返回字符串的字符数，不包含空终止符。选项B正确，`length()`和`size()`对于`std::string`功能相同。选项C错误，`empty()`函数在字符串为空时返回 `true`，非空时返回 `false`，与描述相反。选项D正确，`s.append(s2, 0, 3)`表示从`s2`的索引0开始，追加3个字符到`s`。"
+    },
+    {
+      "id": "mDL9DzoSfblH-aDKLeGIU",
+      "order": 14,
+      "type": "single_choice",
+      "content": "以下数组定义,符合C++语法的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "int [10] a;"
+        },
+        {
+          "label": "B",
+          "text": "int b['&'];"
+        },
+        {
+          "label": "C",
+          "text": "int c[*];"
+        },
+        {
+          "label": "D",
+          "text": "double d[10.0];"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项A错误，数组定义应为 `int a[10];`。选项B正确，字符字面量（如`'&'`）在C++中具有整数值（其ASCII码），可以作为数组的大小，只要它是正的常量表达式。选项C错误，`*`不能直接作为数组大小。选项D错误，数组大小必须是整数常量表达式，不能是浮点数。"
+    },
+    {
+      "id": "WzEIANfAHP3IP9EHpRtXf",
+      "order": 15,
+      "type": "single_choice",
+      "content": "现在有一个数,请你分别判断它们是否可能是二进制、八进制、十进制、十六进制。例如,6AFF 就只可能是十六进制,而 1011 则是四种进制皆有可能。输入N(保证1≤ N ≤1000),表示有 N 个数让你进行判断,接下来输入 N个字符串(保证所有字符串长度不超过 10),判断可能是四个进制当中的哪个进制数。输出 N 行,每行4个数,用空格隔开,分别表示给定的字符串是否可能表示一个二进制数、八进制数、十进制数、十六进制数。使用1表示可能,使用0 表示不可能。下面程序横线处可以满足这个要求的是()。\n```cpp\n1 #include <iostream>\n2 using namespace std;\n3 int main() {\n4   int n = 0;\n5   cin >> n;\n6   for (int i = 0; i < n; i++) {\n7     char str[11];\n8     cin >> str;\n9     char max = '0';\n10    for (int i = 0; str[i] != '\\0'; i++)\n11      if (str[i] > max)\n12        max = str[i];\n13    // 横线处\n14  }\n15  return 0;\n16 }\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "cout << (max >= '1') << \" \" << (max >= '7') << \" \" << (max >= '9') << \" \" << (max >= 'F') << endl;"
+        },
+        {
+          "label": "B",
+          "text": "cout << (max <= '1') << \" \" << (max <= '7') << \" \" << (max <= '9') << \" \" << (max <= 'F') << endl;"
+        },
+        {
+          "label": "C",
+          "text": "cout << (max == '1') << \" \" << (max == '7') << \" \" << (max == '9') << \" \" << (max == 'F') << endl;"
+        },
+        {
+          "label": "D",
+          "text": "cout << (max < '1') << \" \" << (max < '7') << \" \" << (max < '9') << \" \" << (max < 'F') << endl;"
+        }
+      ],
+      "answer": "B",
+      "explanation": "要判断一个字符串是否能表示某种进制的数，只需检查其最大字符是否在该进制允许的字符范围内。二进制只允许'0'、'1'，所以 `max <= '1'`。八进制只允许'0'到'7'，所以 `max <= '7'`。十进制只允许'0'到'9'，所以 `max <= '9'`。十六进制允许'0'到'9'和'A'到'F'，所以 `max <= 'F'`。选项B的判断条件完全符合这些要求。"
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-4ji-202406",
+  "url": "https://adacpp.com/practice/gesp-cpp-4ji-202406",
+  "title": "GESP C++四级 202406",
+  "description": "CCF编程能力等级认证 GESP C++ 四级 2024年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 4,
+    "ym": "202406"
+  },
+  "questions": [
+    {
+      "id": "E0211p_SXg_S_2Pn74-hI",
+      "order": 1,
+      "type": "single_choice",
+      "content": "下列代码中，输出结果是（ ）\n\n```cpp\n#include<iostream>\nusing namespace std;\nint func(int x,int y)\n{\n    int a=x,b=y;\n    int t;\n    t=a;\n    a=b;\n    b=t;\n    cout<<a<<\" \"<<b<<\" \";\n}\nint main()\n{\n    int c,d;\n    c=12;\n    d=24;\n    func(12,24);\n    cout<<c<<\" \"<<d<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "12 24 24 12"
+        },
+        {
+          "label": "B",
+          "text": "24 12 12 24"
+        },
+        {
+          "label": "C",
+          "text": "12 12 24 24"
+        },
+        {
+          "label": "D",
+          "text": "24 24 12 12"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`func` 函数内部，`a` 和 `b` 分别被初始化为传入的 `x` 和 `y` 的值（12 和 24），然后 `a` 和 `b` 的值被交换，因此 `cout<<a<<\" \"<<b<<\" \";` 会输出 `24 12 `。由于 C++ 函数参数默认是值传递，`func` 函数对局部变量 `a` 和 `b` 的修改不会影响 `main` 函数中 `c` 和 `d` 的原始值。所以 `main` 函数中的 `cout<<c<<\" \"<<d<<endl;` 会输出 `12 24`。将两次输出拼接起来，结果是 `24 12 12 24`。因此，选项 B 是正确的。其他选项错误是因为它们没有正确反映函数内部的交换操作或函数参数的值传递机制。"
+    },
+    {
+      "id": "nIR0IpXg_t_KObhATEfhv",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面函数不能正常执行的是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\n#include<iostream>\nusing namespace std;\nint func()\n{\n    //...\n}\nint main()\n{\n    //...\n}\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\n#include<iostream>\nusing namespace std;\nint main()\n{\n    func();\n}\nint func()\n{\n    //...\n}\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\n#include<iostream>\nusing namespace std;\nint func()\n{\n    //...\n}\nint main()\n{\n    func();\n}\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\n#include<iostream>\nusing namespace std;\nint func();\nint main()\n{\n    func();\n}\nint func()\n{\n    //...\n}\n```"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在选项 B 中，`main()` 函数调用 `func()` 时，`func()` 既没有被定义也没有被声明，导致编译器无法识别 `func()`，从而产生编译错误，无法正常执行。其他选项中，`func()` 要么在 `main()` 之前被定义（A、C），要么在 `"
+    },
+    {
+      "id": "F8aF59JKlY6ajd-21yYrS",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面程序输出的是（）\n\n```cpp\n#include<iostream>\nusing namespace std;\nint func();\nint main()\n{\n    int i=2;\n    cout<<i<<endl;\n    for(int x=0;x<1;x++)\n    {\n        int i=10;\n        cout<<i<<endl;\n    }\n    i=i+1;\n    cout<<i<<endl;\n    {\n        i=i*i;\n        cout<<i<<endl;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 2 3 9"
+        },
+        {
+          "label": "B",
+          "text": "2 10 3 9"
+        },
+        {
+          "label": "C",
+          "text": "2 10 11 121"
+        },
+        {
+          "label": "D",
+          "text": "2 10 3 100"
+        }
+      ],
+      "answer": "B",
+      "explanation": "程序中的变量 `i` 存在不同的作用域。首先输出 `main` 函数作用域的 `i` (2)。接着，`for` 循环内部声明了一个新的局部变量 `i` (10)，它会隐藏外部的 `i`，因此输出 10。循环结束后，内部的 `i` 被销毁，程序继续使用 `main` 函数作用域的 `i`，将其加 1 变为 3，并输出。最后，在代码块中将 `i` 乘以自身，变为 9，并输出。因此，正确输出是 `2 10 3 9`。选项 A、C、D 错误在于未能正确理解变量作用域和隐藏规则。"
+    },
+    {
+      "id": "Tyoso_JvcGw8UPXYWwTNR",
+      "order": 4,
+      "type": "single_choice",
+      "content": "假设变量a的地址是0x6ffe14，下面程序的输出是（ ）。\n\n```cpp\n#include<iostream>\nusing namespace std;\nint main()\n{\n    int *p;\n    int a=10;\n    p=&a;\n    p++;\n    cout<<p<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "0x6ffe14"
+        },
+        {
+          "label": "C",
+          "text": "0x6ffe15"
+        },
+        {
+          "label": "D",
+          "text": "0x6ffe18"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`p=&a;` 将变量 `a` 的地址 `0x6ffe14` 赋给指针 `p`。`p++;` 对 `int*` 类型的指针进行算术运算，会使其地址增加 `sizeof(int)` 字节。在大多数系统中，`int` 类型占用 4 字节，因此 `p` 的值变为 `0x6ffe14 + 4 = 0x6ffe18`。`cout<<p<<endl;` 会输出 `p` 的新地址，即 `0x6ffe18`。选项 A 错误，因为 `10` 是 `a` 的值而非地址；选项 B 错误，因为 `0x6ffe14` 是 `p` 递增前的值；选项 C 错误，因为指针递增不是简单地加 1 字节，而是增加其指向类型的大小。"
+    },
+    {
+      "id": "3zG60l3WXpP_J6SzQBzSB",
+      "order": 5,
+      "type": "single_choice",
+      "content": "如果下列程序输出的地址是 0x6ffe00 ，则 `cout<<a+1<<endl;` 输出的是（）\n\n```cpp\n#include<iostream>\nusing namespace std;\nint main()\n{\n    int a[2][3]={0};\n    cout<<a<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0x6ffe04"
+        },
+        {
+          "label": "B",
+          "text": "0x6ffe0C"
+        },
+        {
+          "label": "C",
+          "text": "0x6ffe08"
+        },
+        {
+          "label": "D",
+          "text": "0x6ffe00"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在 C++ 中，二维数组名 `a` 在表达式中会衰退（decay）为一个指向其第一个元素的指针。对于 `int a[2][3]`，`a`"
+    },
+    {
+      "id": "G4PcEGjhNhv6waNU6G4oS",
+      "order": 6,
+      "type": "single_choice",
+      "content": "C++中，关于文件路径说法错误的是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "\"GESP.txt\"：指定与当前工作目录中的程序文件相同目录中的 GESP.txt 文件"
+        },
+        {
+          "label": "B",
+          "text": "\"../data/GESP.txt\"：指定与当前工作目录中的程序文件上一级目录下的 data 目录中的 GESP.txt 文件"
+        },
+        {
+          "label": "C",
+          "text": "\"./data/GESP.txt\"：指定与当前工作目录中的程序文件同级目录下的 data 目录中的 GESP.txt 文件"
+        },
+        {
+          "label": "D",
+          "text": "\"GESP.txt\"是绝对路径"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项D错误，因为`\"GESP.txt\"`是一个相对路径，它表示当前工作目录下的文件，而不是从根目录开始的绝对路径。选项A、B、C都正确描述了各自相对路径的含义：`\"GESP.txt\"`指当前工作目录；`\"../data/GESP.txt\"`指上一级目录下的`data`文件夹；`\"./data/GESP.txt\"`指当前目录下的`data`文件夹。"
+    },
+    {
+      "id": "_kAxZ6BJBjC3F1j_QiSnT",
+      "order": 7,
+      "type": "single_choice",
+      "content": "关于直接插入排序，下列说法错误的是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "插入排序的最好情况是数组已经有序，此时只需要进行n-1次比较，时间复杂度为O(n)"
+        },
+        {
+          "label": "B",
+          "text": "最坏情况是数组逆序排序，此时需要进行n(n-1)/2次比较以及n-1次赋值操作（插入）"
+        },
+        {
+          "label": "C",
+          "text": "平均来说插入排序算法的复杂度为O(n^2)"
+        },
+        {
+          "label": "D",
+          "text": "空间复杂度上，直接插入法是就地排序，空间复杂度为O(n)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "直接插入排序属于就地排序算法，它只需要一个额外的临时变量来存储待插入的元素，因此其空间复杂度为O(1)，而不是O(n)。\n\nA、B"
+    },
+    {
+      "id": "JKanQwFjYtU6Jg4kjtcrg",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下列程序横线处，应该输入的是（ ）。\n\n```cpp\n#include<iostream>\nusing namespace std;\nint n,a[10001];\nvoid swap(int &a,int &b)\n{\n    int t=a;\n    a=b;\n    b=t;\n}\nint main()\n{\n    cin>>n;\n    for(int i=1;i<=n;i++)\n        cin>>a[i];\n    for(int i=n;i>1;i--)\n        for(int j=1;j<i;j++)\n            if(a[j]>a[j+1])\n                __________;\n    for(int i=1;i<=n;i++)\n        cout<<a[i]<<\" \";\n    cout<<endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "swap(a[j],a[j+1])"
+        },
+        {
+          "label": "B",
+          "text": "swap(a[j-1],a[j])"
+        },
+        {
+          "label": "C",
+          "text": "swap(a[j-1],a[j+1])"
+        },
+        {
+          "label": "D",
+          "text": "swap(&a[j-1],&a[j+1])"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该程序实现的是冒泡排序算法。当 `if(a[j]>a[j+1])` 条件成立时，表示 `a[j]` 和 `a[j"
+    },
+    {
+      "id": "QE7pe9zLup3ND9a1j6Wis",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面关于递推的说法不正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "递推表现为自己调用自己"
+        },
+        {
+          "label": "B",
+          "text": "递推是从简单问题出发，一步步的向前发展，最终求得问题。是正向的"
+        },
+        {
+          "label": "C",
+          "text": "递推中，问题的n要求是在计算中确定，不要求计算前就知道n"
+        },
+        {
+          "label": "D",
+          "text": "斐波那契数列可以用递推实现求解"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A选项描述的是“递归”的特点，即函数自己调用自己，而“递推”通常通过循环结构实现，不涉及函数自身的调用，因此A的说法不正确。B、C、D选项都正确描述了递推的特点：递推是从已知或简单问题出发，逐步推导出复杂问题的解，是正向的求解过程；在递推中，问题的规模n可以在计算过程中确定；斐波那契数列就是递推的经典应用，可以通过循环高效求解。"
+    },
+    {
+      "id": "7aElKHWPQKzajP3Qi3a_7",
+      "order": 10,
+      "type": "single_choice",
+      "content": "关于几种排序算法的说法，下面说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "选择排序不是一个稳定的排序算法"
+        },
+        {
+          "label": "B",
+          "text": "冒泡排序算法不是一种稳定的排序算法"
+        },
+        {
+          "label": "C",
+          "text": "插入排序是一种稳定的排序算法"
+        },
+        {
+          "label": "D",
+          "text": "如果排序前2个相等的数在序列中的前后位置顺序和排序后它们2个的前后位置顺序相同，则称为一种稳定的排序算法"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项D是稳定排序算法的定义，即如果排序前相等元素的相对顺序在排序后保持不变，则称该算法是稳定的。冒泡排序在比较相邻元素时，如果它们"
+    },
+    {
+      "id": "ai-11x5wtB3IdfLasdunS",
+      "order": 11,
+      "type": "single_choice",
+      "content": "数组{45,66,23,1,10,97,52,88,5,33}进行从小到大冒泡排序过程中，第一遍冒泡过后的序列是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "{45,23,1,10,66,52,88,5,33,97}"
+        },
+        {
+          "label": "B",
+          "text": "{45,66,1,23,10,97,52,88,5,33}"
+        },
+        {
+          "label": "C",
+          "text": "{45,66,23,1,10,52,88,5,33,97}"
+        },
+        {
+          "label": "D",
+          "text": "{45,66,23,1,10,97,52,88,33,5}"
+        }
+      ],
+      "answer": "A",
+      "explanation": "冒泡排序的第一遍会从头到尾比较相邻元素，如果前一个比后一个大，就交换它们。这样，原数组中最大的元素97会通过一系列交换"
+    },
+    {
+      "id": "3K767fl70DhRtRCjr4e4E",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面的排序算法程序中，横线处应该填入的是（ ）。\n\n```cpp\nint a[8]={ 2,3, 4, 5, 6,2,3,1};\nfor (int i=1;i<8;i++)\n{\n\n    int key = a[i];\n    int j=i-1;\n    while(a[j]>key && j>=0)\n    {\n        ________;\n        j -= 1;\n    }\n    a[j + 1]= key;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "a[j]=a[j-1]"
+        },
+        {
+          "label": "B",
+          "text": "a[j]=a[j+1]"
+        },
+        {
+          "label": "C",
+          "text": "a[j+1]=a[j-1]"
+        },
+        {
+          "label": "D",
+          "text": "a[j+1]=a[j]"
+        }
+      ],
+      "answer": "D",
+      "explanation": "这段代码实现的是插入排序。在 `while` 循环中，当 `a[j]` 大于 `key` 时，需要将 `a[j]` 向右移动一位，为 `key` 腾出位置，因此正确的操作是 `a[j+1]=a[j]`。选项 D 正好实现了这一逻辑。其他选项的赋值方式不符合插入排序中元素右移的逻辑，会导致排序错误。"
+    },
+    {
+      "id": "kfwuKOWINW9nH9wJ1UHVv",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面的程序中，如果输入 10 0 ，会输出（ ）。\n\n```cpp\n#include<iostream>\nusing namespace std;\n\ndouble Division(int a, int b)\n{\n\n    if (b == 0)\n        throw \"Division by zero condition!\";\n\n    else\n        return ((double)a / (double)b);\n}\n\nvoid func()\n{\n    int len, time;\n    cin >> len >> time;\n    cout << Division(len, time) << endl;\n}\n\nint main()\n{\n    try {\n        func();\n    }\n    catch (const char* errmsg)\n    {\n        cout << errmsg << endl;\n    }\n    catch (const int errmsg)\n    {\n        cout << errmsg << endl;\n    }\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "Division by zero condition!"
+        },
+        {
+          "label": "B",
+          "text": "0"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "100"
+        }
+      ],
+      "answer": "A",
+      "explanation": "当输入 `10 0` 时，`func` 函数会调用 `Division(10, 0)`。在 `Division` 函数中，由于 `b` 为 0，程序会执行 `throw \"Division by zero condition!\";` 抛出一个字符串类型的异常。这个异常会被 `main` 函数中的 `catch (const char* errmsg)` 捕获，并输出 `errmsg` 的内容。因此，程序会输出 `Division by zero condition!`。其他选项不正确，因为程序在捕获异常后直接输出异常信息，不会进行正常的除法运算或输出其他值。"
+    },
+    {
+      "id": "MALCDzJ033oePvRc88XGe",
+      "order": 14,
+      "type": "single_choice",
+      "content": "10条直线，最多可以把平面分为多少个区域（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "55"
+        },
+        {
+          "label": "B",
+          "text": "56"
+        },
+        {
+          "label": "C",
+          "text": "54"
+        },
+        {
+          "label": "D",
+          "text": "58"
+        }
+      ],
+      "answer": "B",
+      "explanation": "10条直线最多可以把平面分为 `1 + n * (n + 1) / 2` 个区域，其中 `n` 是直线的数量。当 `n=10` 时，计算结果为 `1 + 10 * (10 + 1) / 2 = 1 + 10 * 11 / 2 = 1 + 55 = 56`。因此，正确答案是B。其他选项不符合这个正确的计算结果。"
+    },
+    {
+      "id": "HNv57D3p3TuEAQM_NBbvy",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面程序中，如果语句 `cout<<p<<endl;` 输出的是 0x6ffe00 ，则 `cout<<++p<<endl;` 输出的是（）\n\n```cpp\nint x[10][10][10]={{0}};\nint *p;\np=&x[0][0][0];\ncout<<p<<endl;\ncout<<++p<<endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0x6ffe0c"
+        },
+        {
+          "label": "B",
+          "text": "0x6ffe09"
+        },
+        {
+          "label": "C",
+          "text": "0x6ffe06"
+        },
+        {
+          "label": "D",
+          "text": "0x6ffe04"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`p` 是一个 `int*` 类型的指针。`++p` 操作会使指针 `p` 向前移动一个 `int` 类型的大小。在大多数系统中，`int` 类型占用 4 字节。因此，`p` 的地址会从 `0x6ffe00` 增加 4 字节，变为 `0x6ffe04`。选项 A、B、C 对应的地址增量不符合 `int` 类型的大小，故不正确。"
+    },
+    {
+      "id": "-P7EOTVfpG3WG_htMYImm",
+      "order": 16,
+      "type": "true_false",
+      "content": "`int& a` 和 `&a` 是一样的，都是取 a 的地址。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`int& a` 是声明一个 `int` 类型的引用变量 `a`，这里的 `&` 是类型修饰符，表示 `a` 是一个引用。而 `&a` 是取地址运算符，用于获取已存在变量 `a` 的内存地址。两者在语法和语义上完全不同，因此题目描述是错误的。"
+    },
+    {
+      "id": "OIAhsiBwVeCvKh3QcOE24",
+      "order": 17,
+      "type": "true_false",
+      "content": "以下代码不能够正确执行。\n\n```cpp\n#include<iostream>\nusing namespace std;\nint main()\n{\n    int a=20;\n    int& ra;\n    ra=&a;\n    cout<<ra<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码不能正确执行，因为 `int& ra;` 声明了一个未初始化的引用。在 C++ 中，引用必须在声明时立即初始化，不能单独声明后再赋值。因此，这段代码会在编译阶段报错，无法运行。所以，题目中“代码不能够正确执行”的说法是正确的（T）。"
+    },
+    {
+      "id": "e6ji5UQMHz3R8V4GSxTMP",
+      "order": 18,
+      "type": "true_false",
+      "content": "引用是一个指针常量。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "引用在初始化后，会一直指向同一个对象，不能被重新绑定到其他对象。这种“一旦绑定，永不改变”的特性，与 `int* const p;` 这种指针常量（即指针本身的值不能改变，始终指向同一个地址）的行为非常相似。因此，将引用理解为一种特殊的指针常量是正确的。选项 F 错误，因为它不符合引用一旦绑定就不能更改指向的特性。"
+    },
+    {
+      "id": "b6WY-9rRxqnOBNsHqU0H9",
+      "order": 19,
+      "type": "true_false",
+      "content": "下面程序两个输出结果是一样的。\n\n```cpp\n#include<iostream>\nusing namespace std;\nint main()\n{\n    int a[2][3]={0};\n    cout<<a<<endl;\n    cout<<&a[0][0]<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，当二维数组名 `a` 单独用于 `cout` 等表达式时，它会“衰退”为指向其第一个元素（即 `a[0][0]`）的地址。`&a[0][0]` 则是明确地获取第一个元素的地址。因此，`cout << a` 和 `cout << &a[0][0]` 都会输出数组 `a` 的起始地址，即 `a[0][0]` 的内存地址，所以结果是一样的，选项 T 正确。"
+    },
+    {
+      "id": "_d0vpjhp_PvWI5Urv5lJm",
+      "order": 20,
+      "type": "true_false",
+      "content": "函数不可以调用自己。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "函数可以调用自己，这种编程技巧称为“递归”（Recursion）。递归是C++等许多编程语言中一个强大且常用的特性，常用于解决可以分解为相同子问题的问题，例如计算阶乘或遍历树形结构。因此，题目中“函数不可以调用自己”的说法是错误的。"
+    },
+    {
+      "id": "p2n2opLl2fRIr5rRDyd7r",
+      "order": 21,
+      "type": "true_false",
+      "content": "函数参数传递过程中，如果传常量值、常量引用和常量指针都是不能被修改的，它们可以防止函数对实参的值或地址进行修改。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。`const` 关键字用于声明一个变量或参数是常量，意味着它的值不能被修改。当函数参数使用 `const` 修饰时：\n1.  **"
+    },
+    {
+      "id": "mJhzMDANV5yq07dYyu43a",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面代码输出的值等于0。\n\n```cpp\n#include<iostream>\nusing namespace std;\nint main()\n{\n    int *p=NULL;\n    cout<<p<<endl;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，`NULL` 是一个宏，通常被定义为整数 `0` 或 `(void*)0`。当一个空指针 `p`（被赋值为 `NULL`）通过 `cout` 输出时，它会被转换为整数 `0` 并打印出来。因此，代码 `cout<<p<<endl;` 的输出确实是 `0`，所以原题目描述是正确的。"
+    },
+    {
+      "id": "aCbeb8L5wnRsW3Gye4jr3",
+      "order": 23,
+      "type": "true_false",
+      "content": "在下面这个程序里，`a[i][j]` 和一个普通的整型变量一样使用。\n\n```cpp\n#include<iostream>\nusing namespace std;\nint main()\n{\n    int a[10][10]={0};\n    for(int i=0;i<10;i++)\n    {\n        for(int j=0;j<10;j++)\n        {\n            if(i==j)\n            {\n                a[i][j]=1;\n            }\n        }\n    }\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "程序中 `int a[10][10]={0};` 定义了一个二维整型数组。`a[i][j]` 表示数组中的一个特定元素，它的类型是 `int`。在 `if(i==j)` 条件下，`a[i][j]=1;` 这行代码将整数值 `1` 赋给了这个 `int` 类型的元素，这与操作一个普通的整型变量（如 `int x = 1;`）的方式是完全一致的。因此，题目描述是正确的，选项 T 是对的，F 是错的。"
+    },
+    {
+      "id": "gjxrUaovtiou7S8yLcA33",
+      "order": 24,
+      "type": "true_false",
+      "content": "一个一维数组，至少含有一个自然数N，是一个合法的数列。可以在一维数组末尾加入一个自然数M，M不能超过一维数组末尾元素的一半，形成一个新的合法的一维数组，如果N=6，那么可以有6个不同的合法数组。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "当 `N=6` 时，我们可以列出所有合法的数组：\n1.  `[6]`\n2.  `[6, 1]` (因为 `1 <= 6/2`)\n3.  `[6, 2]` (因为 `2 <= 6/2`)\n4.  `[6, 2, 1]` (因为 `1 <= 2/2`)\n5.  `[6, 3]` (因为 `3 <= 6/2`)\n6.  `[6, 3, 1]` (因为 `1 <= 3/2`)\n总共有 6 个不同的合法数组，因此原陈述是正确的。"
+    },
+    {
+      "id": "4Uz203czLfMHb59hddU7r",
+      "order": 25,
+      "type": "true_false",
+      "content": "插入排序算法中，平均时间复杂度是O(n^2)，最坏的情况逆序情况下，达到最大时间复杂度。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "插入排序在平均情况下，每个元素都需要与已排序部分进行比较和移动，导致时间复杂度为O(n^2)。当数组是逆序时，每个元素都需要移动到最前面，每次插入操作都需要遍历已排序部分的所有元素，因此达到最坏情况的O(n^2)时间复杂度。故此描述是正确的。"
+    }
+  ]
+}

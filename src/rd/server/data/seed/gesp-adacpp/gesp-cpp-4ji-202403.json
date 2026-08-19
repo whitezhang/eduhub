@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-4ji-202403",
+  "url": "https://adacpp.com/practice/gesp-cpp-4ji-202403",
+  "title": "GESP C++四级 202403",
+  "description": "CCF编程能力等级认证 GESP C++ 四级 2024年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 4,
+    "ym": "202403"
+  },
+  "questions": [
+    {
+      "id": "eIY0mH133OHF-pyV5LJDq",
+      "order": 1,
+      "type": "single_choice",
+      "content": "若函数声明为 `int f(int &x){ x+=3; return x; }` ，则对声明的变量 `int a=3` ，下面哪个调用能够改变 `a` 的值（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`f(&a);`"
+        },
+        {
+          "label": "B",
+          "text": "`f(*a);`"
+        },
+        {
+          "label": "C",
+          "text": "`f(a);`"
+        },
+        {
+          "label": "D",
+          "text": "`f(a-3);`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C `f(a)` 正确，因为函数 `f` 的参数 `int &x` 是一个引用，当传入变量 `a` 时，`x` 成为 `a` 的别名。因此，函数内部对 `x` 的修改（`x+=3`）会直接改变外部变量 `a` 的值。选项 A `f(&a)` 传递的是 `a` 的地址，类型与 `int &` 不匹配；选项 B `f(*a)` 试图解引用非指针变量 `a`，是语法错误；选项 D `f(a-3)` 传递的是一个临时值（右值），非 `const` 引用不能绑定到"
+    },
+    {
+      "id": "qTTu6f628-bNMpQopFLdu",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面C++代码执行后，输出的是（ ）。\n\n```cpp\nint main()\n{\n    int x[]={2, 0, 2, 4};\n    char geSP[]=\"Grade Examination of SP\";\n\n    cout << geSP[sizeof(x)] << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "G"
+        },
+        {
+          "label": "B",
+          "text": "e"
+        },
+        {
+          "label": "C",
+          "text": "n"
+        },
+        {
+          "label": "D",
+          "text": "P"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`sizeof(x)` 计算的是数组 `x` 的总字节数。由于 `x` 包含 4 个 `int` 类型的元素，且在大多数系统中 `int`"
+    },
+    {
+      "id": "BI5-rG71izuJ41l4CBhY0",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint foo(float *f)\n{\n    return int(*f*2);\n}\n\nint main()\n{\n    float fnum[10]={1.1};\n    fnum[1]=foo(fnum);\n    cout << fnum[0]+fnum[1] << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "1.1"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "3.1"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`fnum[0]` 初始化为 `1.1`。`foo` 函数接收 `fnum[0]` 的地址，将其值 `1.1` 乘以 `2`"
+    },
+    {
+      "id": "IBIDN3zi9EuLtmaOY0arI",
+      "order": 4,
+      "type": "single_choice",
+      "content": "对二维数组 `int arr[3][16];` ，则 `arr[1]` 占用内存的大小为（ ）字节。",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "48"
+        },
+        {
+          "label": "D",
+          "text": "64"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`arr[1]` 代表二维数组的第二行，它是一个包含 16 个 `int` 类型元素的数组。由于一个 `int` 类型通常占用 4 字节内存，所以 `arr[1]` 占用的内存大小为 `16 * 4 = 64` 字节。选项 A 是一个 `int` 的大小，选项 B 是元素个数，选项 C 的计算方式不符合题意，因此不正确。"
+    },
+    {
+      "id": "TkpaaYIpsUG4nNfvMmLDQ",
+      "order": 5,
+      "type": "single_choice",
+      "content": "对二维数组 `int arr[3][16];` ，若 `arr` 的地址是 `0x28cbc0` ，则 `arr[1]` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`0x28cbc4`"
+        },
+        {
+          "label": "B",
+          "text": "`0x28cbd0`"
+        },
+        {
+          "label": "C",
+          "text": "`0x28cc00`"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`arr[1]` 代表二维数组的第二行（索引为1）的起始地址。由于每个 `int` 类型通常占用 4 字节，且每行有 16 个 `int` 元素，所以每行的大小是 `16 * 4 = 64` 字节。`arr[1]` 的地址等于 `arr` 的起始地址 `0x28"
+    },
+    {
+      "id": "4ecZwe0GXGMmLhh96zIGq",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint main()\n{\n    char *p=\"I love GESP!\";\n    cout << p+5 << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "e"
+        },
+        {
+          "label": "B",
+          "text": "I lov"
+        },
+        {
+          "label": "C",
+          "text": "e GESP!"
+        },
+        {
+          "label": "D",
+          "text": "GESP!"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`p` 是一个指向字符串 \"I love GESP!\" 开头的指针。表达式 `p+5` 执行指针算术，将指针向后移动5个 `char` 的位置，使其指向字符 'e'。当 `cout` 输出 `char*` 类型的指针时，它会从该指针指向的位置开始，一直输出字符直到遇到字符串结束符 `\\0`。因此，输出是 \"e GESP!\"。选项 A、B、D 不符合指针算术和 `cout` 输出 `char*` 的行为。"
+    },
+    {
+      "id": "19UXvQl329cA3ylfWotvG",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面C++代码执行以后输出的是（ ）。\n\n```cpp\nint rc=5;\nint main()\n{\n    int rc;\n    cout << ++rc << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`main` 函数中的局部变量 `int rc;` 被声明但未初始化。在 C++ 中，访问未初始化的局部变量会导致未定义行为。因此，`cout << ++rc << endl;` 的输出结果是不确定的。选项 A、B、C 给出的是确定值，与未定义行为的特性不符。"
+    },
+    {
+      "id": "ZePKK8rudLg4kRHnyL8Zu",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++函数中采用的算法是（ ）。\n\n```cpp\nint fib(int n)\n{\n    int i, f[n]={0, 1};\n\n    for(int i=2; i<=n; i++)\n        f[i]=f[i-1]+f[i-2];\n\n    return f[n];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "递推"
+        },
+        {
+          "label": "B",
+          "text": "递归"
+        },
+        {
+          "label": "C",
+          "text": "迭代"
+        },
+        {
+          "label": "D",
+          "text": "循环"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该函数通过 `f[i]=f[i-1]+f[i-2]` 的方式，利用数组中前面已计算出的值来推导出当前值，这正是递推算法的特点。递推算法从已知的基础项开始，逐步计算出后续项。选项B递归是指函数调用自身，而此函数使用循环没有自调用。选项C迭代和D循环描述的是代码的执行方式（使用了 `for` 循环），而不是算法的核心思想，递推更准确地概括了这种基于前项计算后项的策略。"
+    },
+    {
+      "id": "VNd7rlRe55Y32phhFcn0p",
+      "order": 9,
+      "type": "single_choice",
+      "content": "插入排序在最好情况下的时间复杂度是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(1)"
+        },
+        {
+          "label": "B",
+          "text": "O(N/2)"
+        },
+        {
+          "label": "C",
+          "text": "O(N)"
+        },
+        {
+          "label": "D",
+          "text": "O(N^2)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "插入排序在最好情况下，即当数组已经有序时，每个元素只需要与前一个元素进行一次比较，而不需要进行任何移动操作。因此，总共需要进行 N-1 次比较，时间复杂度为 O(N)。O(1) 表示常数时间，不可能处理 N 个元素。O(N/2) 简化后仍是 O(N)，但 O(N) 是更标准的表示。O(N^2) 是插入排序的最坏情况和平均情况时间复杂度。"
+    },
+    {
+      "id": "lpX73cUVdEyAKY7DvW5MI",
+      "order": 10,
+      "type": "single_choice",
+      "content": "在如下的C++代码执行后，设第11和12行的输出地址值分别为 X 和 Y ，则下面正确的是（ ）。\n\n```cpp\nstruct pass{\n    int no;\n    char name[20];\n    int level;\n};\n\nint main()\n{\n    struct pass XiaoYang;\n\n    cout << \"&XiaoYang=\" << &XiaoYang << endl;   //第11行\n    cout << \"&(XiaoYang.no)=\" << &(XiaoYang.no) << endl; //第12行\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "X>Y"
+        },
+        {
+          "label": "B",
+          "text": "X==Y"
+        },
+        {
+          "label": "C",
+          "text": "X<Y"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`XiaoYang` 是 `struct pass` 的一个实例，而 `XiaoYang.no` 是它的第一个成员。在 C++ 中，一个结构体实例的地址就是其第一个成员的地址，因为结构体在内存中是连续存放的，第一个成员从结构体的起始位置开始。因此，`&XiaoYang` 和 `&(XiaoYang.no)` 的值是相同的，所以 `X == Y`，选项 B 正确。其他选项错误，因为这是 C++ 内存布局的确定行为。"
+    },
+    {
+      "id": "xhXDP44i3HLpa_DRh8z_t",
+      "order": 11,
+      "type": "single_choice",
+      "content": "如果文件 `1.txt` 中的内容如下，则执行下面C++代码时，注释了 `####` 那行代码所输出的 `x` 的值为（ ）。\n\n文件 `1.txt` 内容：\n```\n50 2024 3.16 I\nlove\nGESP!\n```\n\n```cpp\nint main()\n{\n    ifstream fin;\n    string line;\n    int x;\n    fin.open(\"1.txt\",ios::in);\n\n    for (int i=0; i< 2; i++){\n        fin >> line;\n        cout << line << endl;\n    }\n    fin>>x;\n    cout << x << endl; //####\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "2024"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "C",
+      "explanation": "代码首先将文件中的 \"50\" 和 \"2024\" 分别读取到 `line` 字符串中。接着，`fin >> x;` 尝试从文件当前位置读取一个整数到 `x`。此时文件指针位于 \"3.16\" 的开头，`operator>>` 读取到 '3' 后遇到小数点 '.'，它不是数字，所以停止读取，将整数 `3` 赋值给 `x`。因此，输出 `x` 的值为 `3`。选项 A 和 B 是在循环中作为字符串读取的，选项 D 不符合读取逻辑。"
+    },
+    {
+      "id": "YXoikCV9t1obT6wE9wZpo",
+      "order": 12,
+      "type": "single_choice",
+      "content": "执行下列C++代码时输出中的第2行是（ ）。\n\n```cpp\nint main()\n{\n    char *s[]={(char*)\"2024\",(char*)\"3.16\",(char*)\"GESP\"};\n\n    for (int i=0; i< 2; i++){\n        cout << *s+i << endl;\n    }\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "2024"
+        },
+        {
+          "label": "B",
+          "text": "3.16"
+        },
+        {
+          "label": "C",
+          "text": "024"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。`*s` 等价于 `s[0]`，它指向字符串 `\"2024\"` 的起始地址。当 `i=1` 时，表达式 `*s+i` 变为 `s[0]+1`，表示将指针 `s[0]` 向后移动一个字符，"
+    },
+    {
+      "id": "BkfeVVQGo4R_aqFu92Pu_",
+      "order": 13,
+      "type": "single_choice",
+      "content": "C++语言中下面哪个关键字能够限定对象的作用域（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`extern`"
+        },
+        {
+          "label": "B",
+          "text": "`static`"
+        },
+        {
+          "label": "C",
+          "text": "`inline`"
+        },
+        {
+          "label": "D",
+          "text": "`public`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "`static` 关键字可以限定对象的作用域。对于全局变量或函数，`static` 限制其链接性为内部链接，使其仅在当前编译单元内可见。对于局部变量，它使其生命周期延长至程序结束，但可见性仍局限于函数内部。`extern` 用于声明外部变量，扩展可见性；`inline` 用于函数内联优化；`public` 是类成员访问修饰符，这些都与限定对象作用域无关。"
+    },
+    {
+      "id": "btEOTVZGveNVlBQPWBpNP",
+      "order": 14,
+      "type": "single_choice",
+      "content": "小杨的父母最近刚刚给他买了一块华为手表，他说手表上跑的是鸿蒙，这个鸿蒙是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "小程序"
+        },
+        {
+          "label": "B",
+          "text": "计时器"
+        },
+        {
+          "label": "C",
+          "text": "操作系统"
+        },
+        {
+          "label": "D",
+          "text": "神话人物"
+        }
+      ],
+      "answer": "C",
+      "explanation": "HarmonyOS（鸿蒙）是华为公司自主研发的操作系统，它负责管理智能手表的所有硬件和软件资源，并提供运行环境。因此，选项 C 是正确的。小程序和计时器都是运行在操作系统上的应用或功能，而不是操作系统本身；神话人物则与技术无关。"
+    },
+    {
+      "id": "gzPAqpdIXYLg3vfaX06gP",
+      "order": 15,
+      "type": "single_choice",
+      "content": "中国计算机学会（CCF）在2024年1月27日的颁奖典礼上颁布了王选奖，王选先生的重大贡献是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "制造自动驾驶汽车"
+        },
+        {
+          "label": "B",
+          "text": "创立培训学校"
+        },
+        {
+          "label": "C",
+          "text": "发明汉字激光照排系统"
+        },
+        {
+          "label": "D",
+          "text": "成立方正公司"
+        }
+      ],
+      "answer": "C",
+      "explanation": "王选先生的重大贡献是发明了汉字激光照排系统，这项技术彻底改变了中文印刷出版行业，因此C是正确答案。自动驾驶汽车与王选先生的研究领域无关（A），创立培训学校并非其最重大的贡献（B），而方正公司是为推广其发明而成立的，核心贡献是技术发明本身而非成立公司（D）。"
+    },
+    {
+      "id": "nCgXZezJECA3MG700rfJR",
+      "order": 16,
+      "type": "true_false",
+      "content": "对 `int a[]={2,0,2,4,3,1,6}` ，执行第一趟选择排序处理后 `a` 中数据变为 `{0,2,2,4,3,1,6}` 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "选择排序的第一趟会遍历整个数组找到最小元素，并将其与数组的第一个元素交换。对于 `int a[]={2,0,2,4,3,1,6}`，最小元素是 `0`，它位于索引 1。将 `a[0]` (2) 与 `a[1]` (0) 交换后，数组变为 `{0,2,2,4,3,1,6}`，这与题目描述的结果完全一致，因此该说法是正确的。"
+    },
+    {
+      "id": "URvbgniy0eqkWnIjzLAJM",
+      "order": 17,
+      "type": "true_false",
+      "content": "如果待排序数据不能都装进内存，需要使用外排序算法。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "当待排序的数据量非常大，无法一次性全部加载到计算机内存（RAM）中时，就需要使用外排序算法。外排序算法通过将数据分块读入内存排序，然后写回磁盘，再进行合并等操作来完成排序。因此，题目描述是正确的，选择T。"
+    },
+    {
+      "id": "IgzmMCqj7Ql34qc0ZEEUP",
+      "order": 18,
+      "type": "true_false",
+      "content": "定义变量 `int a=5` ，则 `cout << &++a` 会输出 `6` 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`++a` 会将变量 `a` 的值变为 `6`，但 `&` 运算符用于获取变量的内存地址。因此，`&++a` 的结果是变量 `a` 的内存地址，而不是 `a` 的值 `6`。`cout << &++a` 会输出这个内存地址（通常是十六进制），而不是数字 `6`，所以原说法是错误的。"
+    },
+    {
+      "id": "4R6AdGFzw-tgvaYpA8all",
+      "order": 19,
+      "type": "true_false",
+      "content": "两个函数之间可以使用全局变量来传递数据。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "全局变量在所有函数外部定义，因此在程序中的任何函数内都可以直接访问和修改它们。这使得全局变量成为函数之间传递数据的一种有效方式。因此，题目描述是正确的。"
+    },
+    {
+      "id": "iNWP8LbPZye9iDUNKd9hg",
+      "order": 20,
+      "type": "true_false",
+      "content": "定义数组 `int a[2024][3][16]={2,0,2,4,3,1,6}` ，则 `cout << a[2023][2][15]` 的结果不确定。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "根据 C++ 数组初始化规则，如果初始化列表的元素数量少于数组的总容量，则未被显式初始化的所有剩余元素都会被自动设置为0。因此，`int a[2024][3][16]={2,0,2,4,3,1,6}` 定义后，`a[2023][2][15]` 的值是确定的0。题目中说结果不确定是错误的，所以选择 F。"
+    },
+    {
+      "id": "uC0Vp_tAOfmFzcZmewjOG",
+      "order": 21,
+      "type": "true_false",
+      "content": "在C++语言中，函数的参数为指针时，可以在函数内部修改该参数的值。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "当函数的参数是指针时，函数内部接收的是该指针的一个**副本**。如果在函数内部修改这个指针副本的值（即让它指向另一个地址，例如 `ptr = &new_"
+    },
+    {
+      "id": "TFKfDMhQGiPyzKEDbsbwu",
+      "order": 22,
+      "type": "true_false",
+      "content": "在C++语言中 `try` 子句里抛出的结构体等类型的异常无法被 `catch` 捕获。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 的 `catch` 块可以捕获任何类型的异常，包括基本数据类型、类类型（`struct` 也是一种类）以及用户自定义类型。只要 `catch` 块的参数类型与抛出的异常类型匹配或兼容，就能成功捕获。因此，题目中说 `struct` 等类型的异常无法被捕获是错误的。"
+    },
+    {
+      "id": "XRK3iSBtrNh7j92RtXGbp",
+      "order": 23,
+      "type": "true_false",
+      "content": "C++语言中 `cout << 9^2 << endl;` 会输出81。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中的 `^` 运算符表示按位异或（bitwise XOR），而不是数学上的乘方运算。`9` 的二进制是 `1001`，`2` 的二进制是 `0010`，进行按位异或 `9 ^ 2` 的结果是 `1011`，转换为十进制是 `11`。因此，`cout << 9^2 << endl;` 会输出 `11`，而不是 `81`。所以原题目描述是错误的，选项 F 正确。"
+    },
+    {
+      "id": "w3jjKIExKvtVr0wesfxy3",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨今年春节回奶奶家了，奶奶家的数字电视要设置ip地址并接入到WIFI盒子才能收看节目，那这个WIFI盒子具有路由器的功能。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "题目描述中，数字电视需要设置IP地址并接入WIFI盒子才能收看节目，这表明WIFI盒子能够为连接设备分配IP地址并管理网络连接。分配IP地址（通常通过DHCP服务）是路由器的核心功能之一，它负责在局域网内进行数据转发和网络地址转换（NAT）。因此，这个WIFI盒子具备路由器的功能，选项T是正确的。选项F错误，因为它忽略了WIFI盒子为电视分配IP地址这一关键信息，这超出了普通无线接入点或交换机的功能范围。"
+    },
+    {
+      "id": "Klfg30x-GPzPdsJ8utYJ1",
+      "order": 25,
+      "type": "true_false",
+      "content": "任何一个 `for` 循环都可以转化为等价的 `while` 循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "任何 `for` 循环都包含初始化、循环条件和迭代步进三个部分。这些部分可以完全等价地映射到 `while` 循环的结构：初始化语句放在 `while` 循环前，循环条件作为 `while` 的判断条件，而迭代步进则放在 `while` 循环体内部的末尾。例如，`for (int i = 0; i < 5; ++i)` 可以转换为 `int i = 0; while (i < 5) { /* 循环体 */; ++i; }`。因此，选项 T 正确，任何 `for` 循环都能转化为等价的 `while` 循环。"
+    }
+  ]
+}

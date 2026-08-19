@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202603",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202603",
+  "title": "GESP C++八级 202603",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2026年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202603"
+  },
+  "questions": [
+    {
+      "id": "qjtW2brbElSjwVyUx8AOs",
+      "order": 1,
+      "type": "single_choice",
+      "content": "某班级有8名男生和6名女生,现要选出3人组成学习小组,要求小组中至少有1名男生和1名女生,则不同的选法共有()种。",
+      "options": [
+        {
+          "label": "A",
+          "text": "112"
+        },
+        {
+          "label": "B",
+          "text": "168"
+        },
+        {
+          "label": "C",
+          "text": "224"
+        },
+        {
+          "label": "D",
+          "text": "288"
+        }
+      ],
+      "answer": "D",
+      "explanation": "总人数为 8 + 6 = 14 人。选出3人的总选法是 C(14, 3) = 364 种。不符合要求的选法是：3人全是男生 (C(8, 3) = 56 种) 或 3人全是女生 (C(6, 3) = 20 种)。因此，至少包含1名男生和1名女生的选法为 364 - 56 - 20 = 288 种。"
+    },
+    {
+      "id": "NHeldFw9Ru62zLVk1LPJH",
+      "order": 1,
+      "type": "true_false",
+      "content": "在C++中,若结构体中包含一个 static 成员变量,则该变量的存储空间属于结构体对象的一部分。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`static` 成员变量属于类本身，而不是任何特定的对象实例。它的存储空间在程序启动时分配，并且所有对象共享同一个副本，因此不属于结构体对象的一部分。"
+    },
+    {
+      "id": "ICNoKLgJXhO6nKUzzDEko",
+      "order": 2,
+      "type": "single_choice",
+      "content": "在杨辉三角中,从第0行开始计数,第10行的所有数之和为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "512"
+        },
+        {
+          "label": "B",
+          "text": "1024"
+        },
+        {
+          "label": "C",
+          "text": "2048"
+        },
+        {
+          "label": "D",
+          "text": "4096"
+        }
+      ],
+      "answer": "B",
+      "explanation": "杨辉三角的第n行（从第0行开始计数）的所有数之和是 2^n。因此，第10行的所有数之和是 2^10 = 1024。"
+    },
+    {
+      "id": "U_VDIvFWlj0aLU9YsjxVm",
+      "order": 2,
+      "type": "true_false",
+      "content": "对于任意正整数n,二项式(a + b)”展开式中各项的二项式系数之和等于2”。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "根据二项式定理，当 `a=1` 且 `b=1` 时，`(1+1)^n = 2^n`，同时展开式中各项的系数之和就是 `C(n,0) + C(n,1) + ... + C(n,n)`，所以系数之和等于 `2^n`。"
+    },
+    {
+      "id": "fOL0ZIeYFjVx3kOALKyKG",
+      "order": 3,
+      "type": "single_choice",
+      "content": "```cpp\nlong long fastPow(long long b, long long e, long long mod) {\n    long long result = 1;\n    while (e > 0) {\n        if (e & 1)\n            result = result * b % mod;\n        b = b * b % mod;\n        e >>= 1;\n    }\n    return result;\n}\n```\n下列代码实现了快速幂算法,其时间复杂度为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(log b)"
+        },
+        {
+          "label": "B",
+          "text": "O(log e)"
+        },
+        {
+          "label": "C",
+          "text": "O(log mod)"
+        },
+        {
+          "label": "D",
+          "text": "O(e)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "快速幂算法通过每次将指数 `e` 右移一位（即除以2），将指数的计算次数从 `e` 降到 `log e`。循环的次数与指数 `e` 的二进制位数成正比，因此时间复杂度为 O(log e)。"
+    },
+    {
+      "id": "R6WEmhE-hyfjLa24HKIRi",
+      "order": 3,
+      "type": "true_false",
+      "content": "在C++中,若函数参数类型为 const int &,则该参数既可以绑定左值,也可以绑定右值。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`const T&` (常量左值引用) 类型的参数可以绑定到左值（具名变量）和右值（临时对象或字面量），这是C++的一个特性，允许函数接受多种参数类型而不会进行不必要的拷贝，同时保证不修改传入的值。"
+    },
+    {
+      "id": "WJsXy-Q3S86ZaL_wB_Ymp",
+      "order": 4,
+      "type": "single_choice",
+      "content": "从5本不同的数学书和4本不同的物理书中选取3本书,要求至少包含1本数学书,则不同的选法有()种。",
+      "options": [
+        {
+          "label": "A",
+          "text": "60"
+        },
+        {
+          "label": "B",
+          "text": "74"
+        },
+        {
+          "label": "C",
+          "text": "80"
+        },
+        {
+          "label": "D",
+          "text": "84"
+        }
+      ],
+      "answer": "C",
+      "explanation": "总共有 5 + 4 = 9 本书。选取3本书的总选法是 C(9, 3) = 84 种。不符合要求的选法是3本书都不包含数学书，即3本书都选自物理书，有 C(4, 3) = 4 种。因此，至少包含1本数学书的选法为 84 - 4 = 80 种。"
+    },
+    {
+      "id": "wLe7IjxwbS4fwBuXOGmRz",
+      "order": 4,
+      "type": "true_false",
+      "content": "若一个无向图的最小生成树唯一,则图中所有边权必定各不相同。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "如果图中所有边权都各不相同，则最小生成树是唯一的。但反之不成立，即最小生成树唯一不意味着所有边权都各不相同。例如，一个由两条权值为1的边组成的路径图，其最小生成树是唯一的，但边权有相同的。"
+    },
+    {
+      "id": "fwnqj1Cs970R5jMW1Cv32",
+      "order": 5,
+      "type": "single_choice",
+      "content": "在二叉搜索树(BST)中,若中序遍历的序列为{1, 2, 3, 4, 5},且先序遍历的第一个序列元素为3,则下列说法正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "该树一定是一棵完全二叉树"
+        },
+        {
+          "label": "B",
+          "text": "元素4和5不可能是兄弟节点"
+        },
+        {
+          "label": "C",
+          "text": "元素1所在节点的深度可能大于3(根节点深度为1)"
+        },
+        {
+          "label": "D",
+          "text": "元素2一定是元素1的父节点"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据中序遍历和先序遍历的第一个元素，根节点是3。3的左子树节点是{1, 2}，右子树节点是{4, 5}。如果4和5是兄弟节点，它们必须有一个共同的父节点P，且P在它们的中序遍历序列之间。但4和5在中序遍历中相邻，没有中间节点作为它们的父节点，所以B正确。选项D不正确，因为左子树{1,2}可以是1作为根，2作为1的右孩子，此时1是2的父节点。"
+    },
+    {
+      "id": "QJCNHRpo0j1fnsfhhdgww",
+      "order": 5,
+      "type": "true_false",
+      "content": "使用快速排序对n个元素进行排序时,无论最好、最坏还是平均情况,时间复杂度均为O(nlogn)。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "快速排序的平均时间复杂度是 O(n log n)，最好情况也是 O(n log n)。但最坏情况的时间复杂度是 O(n²)，例如当输入数组已经有序或逆序时。"
+    },
+    {
+      "id": "XDN5wX2MC9uUvshttt2ud",
+      "order": 6,
+      "type": "single_choice",
+      "content": "在一个有向带权图中,使用Dijkstra算法求单源最短路时,若使用优先队列(小根堆)优化,其时间复杂度为()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(V²)"
+        },
+        {
+          "label": "B",
+          "text": "O(V·E)"
+        },
+        {
+          "label": "C",
+          "text": "O((V+E) log V)"
+        },
+        {
+          "label": "D",
+          "text": "O(V² log V)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Dijkstra算法使用优先队列优化后，每个顶点最多入队出队一次，每次操作 O(log V)；每条边最多松弛一次，每次操作 O(log V)。因此，总时间复杂度为 O(V log V + E log V) = O((V+E) log V)。"
+    },
+    {
+      "id": "ps0BkQo2z5eF1jIjHzPjp",
+      "order": 6,
+      "type": "true_false",
+      "content": "若一个图中所有顶点的度数为偶数,则一定存在欧拉回路。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "一个无向图存在欧拉回路的充要条件是：图中所有顶点的度数都是偶数，并且图是连通的（除了孤立顶点）。如果图不连通，即使所有顶点度数都是偶数，也不存在欧拉回路。"
+    },
+    {
+      "id": "N7aMc5zHsw8ipdyJL8XX6",
+      "order": 7,
+      "type": "single_choice",
+      "content": "对于含n个顶点(n≥2)的连通加权有向图,若图中不存在负权环,则任意两点之间的最短路径(简单路径)最多包含()条边。",
+      "options": [
+        {
+          "label": "A",
+          "text": "n"
+        },
+        {
+          "label": "B",
+          "text": "n-1"
+        },
+        {
+          "label": "C",
+          "text": "n + 1"
+        },
+        {
+          "label": "D",
+          "text": "无法确定,取决于图的具体边数"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在不含负权环的图中，最短路径一定是简单路径，不会重复经过顶点。一条简单路径最多可以经过所有 n 个顶点，此时它包含 n-1 条边。"
+    },
+    {
+      "id": "m8zNSKvUYsWn_xkxRP8tP",
+      "order": 7,
+      "type": "true_false",
+      "content": "使用倍增法预处理区间最值问题时,预处理的时间复杂度为O(nlogn),查询的时间复杂度为O(1)。( )",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "倍增法（稀疏表）预处理区间最值问题时，需要计算 `log n` 层，每层 `n` 个元素，因此预处理时间复杂度为 O(n log n)。查询时，通过两个预处理区间的组合，可以在 O(1) 时间内完成。"
+    },
+    {
+      "id": "i-c1p3ot6PUMrbW2sn_L2",
+      "order": 8,
+      "type": "single_choice",
+      "content": "在使用Floyd算法求任意两点间最短路径时,时间复杂度为 O(V³)。若在某次算法执行前,已经用 Dijkstra 算法正确求出了所有点对的最短路并存入了 dist 数组。如果此时继续对该 dist 数组执行一次完整的Floyd 算法过程(无任何提前终止),执行完毕后 dist 数组内的值()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "会发生改变,因为Floyd又做了一次松弛"
+        },
+        {
+          "label": "B",
+          "text": "不会发生改变"
+        },
+        {
+          "label": "C",
+          "text": "可能变大,因为未针对已有最短路优化"
+        },
+        {
+          "label": "D",
+          "text": "可能在某些负权图中陷入死循环"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Floyd算法和Dijkstra算法都能正确计算所有点对之间的最短路径（在无负权环的情况下）。如果 `dist` 数组已经包含了正确的最短路径，Floyd算法的松弛操作将不会找到更短的路径，因为 `dist[i][k] + dist[k][j]` 不会小于 `dist[i][j]`。因此，`dist` 数组的值不会发生改变。"
+    },
+    {
+      "id": "mTbO6vpfWRjgQ2dOmDfkd",
+      "order": 8,
+      "type": "true_false",
+      "content": "如果将一个连通无向图G1中所有边的权值都统一增加同一个正整数常数C,形成图G2。则G1的最小生成树中每条边在G2中对应的边组成的树,一定是G2的最小生成树。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "最小生成树算法（如Kruskal或Prim）是基于边的相对权值大小来选择边的。当所有边的权值都统一增加一个正整数常数C时，任意两条边之间的相对大小关系不会改变，因此最小生成树的结构保持不变。"
+    },
+    {
+      "id": "GpsqrwYFwsi7Q8ksIkPsA",
+      "order": 9,
+      "type": "single_choice",
+      "content": "关于图论中的最短路径算法,下列说法中严格正确的是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dijkstra 算法能够高效处理包含负权边的有向图。"
+        },
+        {
+          "label": "B",
+          "text": "Floyd 算法可以求出任意两点间的最短路径,且允许图中存在负权边(但不能有负权环)。"
+        },
+        {
+          "label": "C",
+          "text": "单源最短路径算法无法用于无向图,无向图只能通过BFS 求解。"
+        },
+        {
+          "label": "D",
+          "text": "Dijkstra 算法的每一步必定从当前未访问的节点中,选取距离起始点最远的节点进行松弛操作。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Dijkstra算法不能处理负权边，Bellman-Ford或SPFA可以。Floyd算法可以处理负权边但不能有负权环。单源最短路径算法可以用于无向图，无向图可视为每条边都有两个方向的有向图。Dijkstra算法选取的是距离起始点“最近”的节点进行松弛。"
+    },
+    {
+      "id": "JnviiT9qYwlb0uR32uqNQ",
+      "order": 9,
+      "type": "true_false",
+      "content": "在图论算法中,Kruskal算法和Prim算法都可以用来求解最小生成树,且这两者的贪心策略无论在任何连通无向图上求得的最小生成树总边权和必定相同。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "Kruskal算法和Prim算法都是正确的最小生成树算法，它们都基于贪心策略。对于任何给定的连通无向图，其最小生成树的总边权和是唯一的，因此这两种算法求得的结果必定相同。"
+    },
+    {
+      "id": "kJTUj-WxnojexDxEXH-0z",
+      "order": 10,
+      "type": "single_choice",
+      "content": "有6个人排成一排照相,其中甲、乙两人必须相邻,且丙不能站在排头的不同排法有()种。",
+      "options": [
+        {
+          "label": "A",
+          "text": "120"
+        },
+        {
+          "label": "B",
+          "text": "144"
+        },
+        {
+          "label": "C",
+          "text": "192"
+        },
+        {
+          "label": "D",
+          "text": "240"
+        }
+      ],
+      "answer": "C",
+      "explanation": "将甲乙视为一个整体 (甲乙)，则有5个元素进行全排列，即 5! = 120 种。甲乙可以互换位置，所以甲乙相邻的总排法是 2 * 120 = 240 种。现在考虑丙站在排头的情况：如果丙在排头，剩下4个位置，包含 (甲乙) 整体和另外3个人，有 4! = 24 种排法。甲乙互换位置，所以丙在排头且甲乙相邻的排法是 2 * 24 = 48 种。因此，满足条件的排法是 240 - 48 = 192 种。"
+    },
+    {
+      "id": "5x7R60FmLk-ymCKpXnGo7",
+      "order": 10,
+      "type": "true_false",
+      "content": "在动态规划问题中,“状态转移方程+递推”和“递归+记忆化搜索”通常是解决同一问题的两种不同实现方式,它们的时间复杂度总是相同的。()",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "虽然“状态转移方程+递推”和“递归+记忆化搜索”在渐进时间复杂度（大O表示法）上通常是相同的，但并非“总是”相同。在状态空间非常稀疏或存在大量不可达状态时，记忆化搜索可能只计算实际需要的子问题，而递推可能遍历整个状态空间，导致实际运行时间上的差异。"
+    },
+    {
+      "id": "7vwuzp2L8SCBiWrBNfyqV",
+      "order": 11,
+      "type": "single_choice",
+      "content": "```cpp\nvoid floyd(int n, int dist[][MAXN]) {\n    for (int k = 0; k < n; k++)\n        for (int i = 0; i < n; i++)\n            for (int j = 0; j < n; j++)\n                if (___________) // 在此处填入选项\n                    dist[i][j] = dist[i][k] + dist[k][j];\n}\n```\n下列代码试图实现Floyd算法求所有点对之间的最短路径,横线处应填入()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "dist[i][k] + dist[k][j] < dist[i][j]"
+        },
+        {
+          "label": "B",
+          "text": "dist[i][k] != INF && dist[k][j] != INF"
+        },
+        {
+          "label": "C",
+          "text": "dist[i][k] != INF && dist[k][j] != INF && dist[i][k] + dist[k][j] < dist[i][j]"
+        },
+        {
+          "label": "D",
+          "text": "dist[i][j] == INF"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Floyd算法通过中间节点 `k` 更新 `i` 到 `j` 的最短路径。更新条件是：如果经过 `k` 的路径 `dist[i][k] + dist[k][j]` 比当前 `dist[i][j]` 更短，则更新。同时，为了避免使用无穷大值进行计算，需要确保 `dist[i][k]` 和 `dist[k][j]` 都不是无穷大。因此，完整的条件是 `dist[i][k] != INF && dist[k][j] != INF && dist[i][k] + dist[k][j] < dist[i][j]`。"
+    },
+    {
+      "id": "GGIBSKFGSxhWqlsnifznK",
+      "order": 12,
+      "type": "single_choice",
+      "content": "用数字0、1、2、3、4组成无重复数字的五位偶数,共有()个。",
+      "options": [
+        {
+          "label": "A",
+          "text": "48"
+        },
+        {
+          "label": "B",
+          "text": "60"
+        },
+        {
+          "label": "C",
+          "text": "72"
+        },
+        {
+          "label": "D",
+          "text": "96"
+        }
+      ],
+      "answer": "B",
+      "explanation": "分两种情况：1. 个位是0：个位1种选择，首位不能是0，剩下4个数字，所以首位4种选择，其余3位全排列 3! = 6 种。共 1 * 4 * 3 * 2 * 1 = 24 种。2. 个位是2或4：个位2种选择。首位不能是0且不能是已选的个位数字，剩下3种选择。其余3位全排列 3! = 6 种。共 2 * 3 * 3 * 2 * 1 = 36 种。总数为 24 + 36 = 60 种。"
+    },
+    {
+      "id": "o1GUfTPCig1Sp8YeigJYd",
+      "order": 13,
+      "type": "single_choice",
+      "content": "```cpp\nint prim (vector<vector<int>>& graph, int n) {\n    vector<bool> inMST(n, false);\n    vector<int> minEdge (n, INT_MAX);\n    minEdge [0] = 0;\n    int result = 0;\n    for (int i = 0; i < n; i++) {\n        int u = -1;\n        for (int j = 0; j < n; j++)\n            if (!inMST[j] && (u == -1 || minEdge [j] < minEdge [u]))\n                u = j;\n        inMST[u] = true;\n        result += minEdge[u];\n        for (int v = 0; v < n; v++)\n            if (__________) // 在此处填入选项\n                minEdge [v] = graph[u] [v];\n    }\n    return result;\n}\n```\n在一个无向带权图中,若使用 Prim 算法从顶点0开始构造最小生成树(边权均为正整数,且graph[u][v] == 0表示无边),下列代码中横线处应填入()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "graph [u] [v] && !inMST[v] && graph[u] [v] < minEdge [v]"
+        },
+        {
+          "label": "B",
+          "text": "!inMST[v] && graph [u] [v] < minEdge [v]"
+        },
+        {
+          "label": "C",
+          "text": "graph [u] [v] > 0 && !inMST[v]"
+        },
+        {
+          "label": "D",
+          "text": "!inMST[v] && minEdge [v] > 0"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Prim算法在选择顶点 `u` 加入MST后，需要更新所有与 `u` 相邻且未加入MST的顶点 `v` 的 `minEdge[v]` 值。更新条件是：1. 顶点 `v` 未在MST中 (`!inMST[v]`)。2. `u` 和 `v` 之间存在边 (`graph[u][v]` 非0，即 `graph[u][v] > 0`)。3. 通过 `u` 到 `v` 的边 (`graph[u][v]`) 比当前 `minEdge[v]` 更小。选项A完整包含了这些条件。"
+    },
+    {
+      "id": "-WAeBtjG0nzxXMOj4T4zq",
+      "order": 14,
+      "type": "single_choice",
+      "content": "已知三个点A(x1, y1), B(x2, y2), C(x3,y3) 在平面直角坐标系中的坐标。下列 C++ 表达式中,在精度误差范围1e-8内能正确计算判断这三个点是三点共线的表达式是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "(x2-x1)/(y2-y1) == (x3-x1)/(y3-y1)"
+        },
+        {
+          "label": "B",
+          "text": "(x2-x1)*(y3-y1)-(x3-x1)*(y2-y1) == 0"
+        },
+        {
+          "label": "C",
+          "text": "fabs((x2-x1)*(y3-y1)-(x3-x1)*(y2-y1)) < 1e-8"
+        },
+        {
+          "label": "D",
+          "text": "fabs((x2-x1)/(y2-y1)-(x3-x1)/(y3-y1)) < 1e-8"
+        }
+      ],
+      "answer": "C",
+      "explanation": "三点共线通常通过向量叉积为0来判断：向量 AB = (x2-x1, y2-y1)，向量 AC = (x3-x1, y3-y1)。它们的叉积为 (x2-x1)*(y3-y1) - (x3-x1)*(y2-y1)。由于浮点数计算存在精度误差，不能直接用 `== 0` 判断，而应判断其绝对值是否小于一个很小的误差范围，即 `fabs(叉积) < 1e-8`。选项A和D涉及除法，可能导致除零错误或引入更多误差。"
+    },
+    {
+      "id": "K7j7-zLKcDgKtx-t-YOn4",
+      "order": 15,
+      "type": "single_choice",
+      "content": "```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int a[4] = {1, 2, 3, 4};\n    int (*p)[4] = &a;\n    int *q = a;\n\n    cout << sizeof(a) << \"; \";\n    cout << sizeof(p) << \"; \";\n    cout << sizeof(p + 1) << \"; \";\n    cout << sizeof(q + 1) << \"; \";\n    cout << (p + 1) - p << \"; \";\n    cout << (q + 1) - q << endl;\n}\n```\n在64位操作系统下(LP64/LLP64 模型),下面代码的输出结果是()。",
+      "options": [
+        {
+          "label": "A",
+          "text": "16 8 8 8 1 1"
+        },
+        {
+          "label": "B",
+          "text": "16 8 16 8 1 1"
+        },
+        {
+          "label": "C",
+          "text": "16 8 8 4 4 1"
+        },
+        {
+          "label": "D",
+          "text": "16 8 8 8 4 1"
+        }
+      ],
+      "answer": "A",
+      "explanation": "在64位系统下，`sizeof(int)` 为4字节，`sizeof(pointer)` 为8字节。`sizeof(a)` 是 `4 * sizeof(int) = 16`。`p` 和 `q` 都是指针，`sizeof(p)` 和 `sizeof(q)` 都是8。`p+1` 和 `q+1` 仍是指针，`sizeof(p+1)` 和 `sizeof(q+1)` 都是8。指针相减得到的是它们之间相隔的元素个数，`(p+1)-p` 是1，`(q+1)-q` 也是1。所以输出是 `16 8 8 8 1 1`。"
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202503",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202503",
+  "title": "GESP C++一级 202503",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2025年3月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202503"
+  },
+  "questions": [
+    {
+      "id": "ZOBu6y6LH8hj2EuZFoZHn",
+      "order": 1,
+      "type": "single_choice",
+      "content": "2025年春节有两件轰动全球的事件，一个是DeepSeek横空出世，另一个是贺岁片《哪吒2》票房惊人，入了全球票房榜。下面关于DeepSeek与《哪吒2》的描述成立的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "《哪吒2》是一款新型操作系统"
+        },
+        {
+          "label": "B",
+          "text": "DeepSeek是深海钻探软件"
+        },
+        {
+          "label": "C",
+          "text": "《哪吒2》可以生成新的软件"
+        },
+        {
+          "label": "D",
+          "text": "DeepSeek可以根据《哪吒2》的场景生成剧情脚本"
+        }
+      ],
+      "answer": "D",
+      "explanation": "DeepSeek是一款大型语言模型（AI），能够根据电影场景等输入信息生成剧情脚本，因此选项D正确。选项A和C错误，因为《哪吒2》是一部电影，并非操作系统，也无法生成新的软件。选项B错误，DeepSeek是人工智能模型，而非深海钻探软件。"
+    },
+    {
+      "id": "zrOjTInwclzPonxtLLq-x",
+      "order": 2,
+      "type": "single_choice",
+      "content": "在某集成开发环境中编辑一个源代码文件时不可以执行下面（ ）操作。",
+      "options": [
+        {
+          "label": "A",
+          "text": "修改变量定义"
+        },
+        {
+          "label": "B",
+          "text": "保存代码修改"
+        },
+        {
+          "label": "C",
+          "text": "撤销代码修改"
+        },
+        {
+          "label": "D",
+          "text": "插入执行截图"
+        }
+      ],
+      "answer": "D",
+      "explanation": "在集成开发环境（IDE）中编辑源代码文件，主要任务是编写、修改和管理代码。选项D“插入执行截图”不是在源代码文件中直接进行的操作，这通常是文档编辑或报告工具的功能。而修改变量定义（如将 `int x;` 改为 `double x;`）、保存代码修改和撤销代码修改都是IDE进行代码编辑和管理的基本且常用功能。"
+    },
+    {
+      "id": "KeGIEu2AkOqU-tsednl7Y",
+      "order": 3,
+      "type": "single_choice",
+      "content": "在C++中，下列可以做变量的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`Var-1`"
+        },
+        {
+          "label": "B",
+          "text": "`$1`"
+        },
+        {
+          "label": "C",
+          "text": "`%%1`"
+        },
+        {
+          "label": "D",
+          "text": "`_Var_1`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++变量名必须以字母（a-z, A-Z）或下划线（`_`）开头，后续可包含字母、数字（0-9）或下划线。选项D `_Var_1` 符合这些规则，因此是有效的。选项A `Var-1` 包含非法字符 `-`，选项B `$1` 以非法字符 `$` 开头，选项C `%%1` 包含非法字符 `%%`，这些都不是C++标准允许的变量名字符。"
+    },
+    {
+      "id": "NUjvUic5E1_n1Db2eamtT",
+      "order": 4,
+      "type": "single_choice",
+      "content": "以下哪个是C++语言的关键字？（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "`abs`"
+        },
+        {
+          "label": "B",
+          "text": "`cin`"
+        },
+        {
+          "label": "C",
+          "text": "`do`"
+        },
+        {
+          "label": "D",
+          "text": "`endl`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`do` 是 C++ 语言的关键字，用于构成 `do-while` 循环语句。而 `abs` 是一个数学函数，`cin` 是标准输入流对象，`endl` 是一个输出操纵符。它们虽然在 C++ 编程中非常常用，但都不是 C++ 语言本身定义的关键字。"
+    },
+    {
+      "id": "EdPJFmUoOM0lBHrsbwAO6",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面的框架在L1和L2标记的两行处分别填写选项中的代码，哪组不能通过编译（ ）。\n\n```cpp\nint main() {\n    int i = 0;\n    ______________ // L1\n        break;\n    ______________ // L2\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "L1: `do {` L2: `} while (i != 0);`"
+        },
+        {
+          "label": "B",
+          "text": "L1: `for (; i < 10; i++) {` L2: `}`"
+        },
+        {
+          "label": "C",
+          "text": "L1: `if (i == 0) {` L2: `}`"
+        },
+        {
+          "label": "D",
+          "text": "L1: `switch (i) {` L2: `}`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。`break` 语句只能用于循环（如 `for`, `while`, `do-while`）或 `switch` 语句中，用于跳出当前循环或"
+    },
+    {
+      "id": "T5mCoKdiPQoq_kqhVzmMt",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面C++语句（ ）执行后的输出是 `__ 0322$$` 。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`printf(\"__ %2d%02d$$\", 3, 22)`"
+        },
+        {
+          "label": "B",
+          "text": "`printf(\"__ %02d%2d$$\", 3, 22)`"
+        },
+        {
+          "label": "C",
+          "text": "`printf(\"__ %02d%02d$$$$\", 3, 22)`"
+        },
+        {
+          "label": "D",
+          "text": "`printf(\"____ %02d%02d$$$$\", 3, 22)`"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B `printf(\"__ %02d%2d$$\", 3, 22)` 是正确的。其中，`%02d` 会将整数 `3` 格式化"
+    },
+    {
+      "id": "E0N2t6YUsSI4Mab-IFXN7",
+      "order": 7,
+      "type": "single_choice",
+      "content": "有关下列C++代码的说法，错误的是（ ）。\n\n```cpp\nprintf(\"我爱码代码！\");\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "配对双引号内的汉字改为英文 `Hello` ，C++代码能正确执行"
+        },
+        {
+          "label": "B",
+          "text": "配对双引号内的汉字改为 `Hello代码！` ，C++代码能正确执行"
+        },
+        {
+          "label": "C",
+          "text": "代码中的每个双引号，都可以改为两个单引号"
+        },
+        {
+          "label": "D",
+          "text": "代码中的每个双引号，都可以改为三个双引号"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C 错误。在 C++ 中，双引号 `\"\"` 用于定义字符串字面量，而单引号 `''` 用于定义字符字面量。`'我爱码代码"
+    },
+    {
+      "id": "3VOxnUPzc0_ZlM-7pp9Ns",
+      "order": 8,
+      "type": "single_choice",
+      "content": "C++表达式 `16 / 4 % 2` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "8"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++中，除法 (`/`) 和取模 (`%`) 运算符具有相同的优先级，并且遵循从左到右的结合性。表达式 `16 / 4 % 2` 首先计算 `16 / 4`，结果是 `4`。接着计算 `4 % 2`，即 `4` 除以 `2` 的余数，结果是 `0`。因此，选项 D 是正确的。其他选项不符合运算符的优先级和结合性规则。"
+    },
+    {
+      "id": "qA_f_b5r-OOh5PFvOD25H",
+      "order": 9,
+      "type": "single_choice",
+      "content": "N是C++的正整数，值为12，则 `cout << (N % 3 + N / 5)` 的输出是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6.4"
+        },
+        {
+          "label": "B",
+          "text": "2.4"
+        },
+        {
+          "label": "C",
+          "text": "6"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "D",
+      "explanation": "C++中，`N % 3` 表示12除以3的余数，结果是0。`N / 5` 进行的是整数除法，12除以5的整数商是2（小数部分被截断）。所以，`0 + 2` 的结果是2。选项A、B、C错误是因为它们没有正确理解C++中整数除法会截断小数部分。"
+    },
+    {
+      "id": "0flsKKTgQWPDERODWy-ud",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nint N = 10;\nprintf(\"{N}*{N}={%d*%d}\", N, N, N * N);\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`10*10={10*10}`"
+        },
+        {
+          "label": "B",
+          "text": "`100=10`"
+        },
+        {
+          "label": "C",
+          "text": "`N*N=100`"
+        },
+        {
+          "label": "D",
+          "text": "`{N}*{N}={10*10}`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`printf` 函数会原样输出格式字符串中的非格式化部分 `{N}*{N}=`。它会用后续参数依次替换格式字符串中的 `%d`。代码提供了"
+    },
+    {
+      "id": "OYnglWyg8RtPJqBfRjb9Y",
+      "order": 11,
+      "type": "single_choice",
+      "content": "执行下面的C++代码，在键盘上先后输入100和200，输出是（ ）。\n\n```cpp\nint first,second;\ncout << \"请输入第1个正整数：\";\ncin >> first;\ncout << \"请输入第2个正整数：\";\ncin >> second;\ncout << (first / second * second) << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "200"
+        },
+        {
+          "label": "B",
+          "text": "100"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "D",
+      "explanation": "在C++中，`first / second` 是整数除法。当 `first` 为 `100`，`second` 为 `200` 时，`100 / 200` 的结果是 `0`（小数部分被截断）。接着，`0 * second`（即 `0 * 200`）的计算结果就是 `0`。因此，选项 D 是正确的。其他选项 A、B、C 都不符合整数除法的运算规则。"
+    },
+    {
+      "id": "O79dMgfJ79IN3ev-GBuOL",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下面C++代码执行后，将输出能被2整除且除以7余数为2的数。下列选项不能实现的是（ ）。\n\n```cpp\nfor (int i = 0; i < 100; i++)\n    if _______________________\n        cout << i << \" \";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`((i % 2 == 0) && (i % 7 == 2))`"
+        },
+        {
+          "label": "B",
+          "text": "`((!(i % 2)) && (i % 7 == 2))`"
+        },
+        {
+          "label": "C",
+          "text": "`((!(i % 2)) && (!(i % 7)))`"
+        },
+        {
+          "label": "D",
+          "text": "`((i % 2 != 1) && (i % 7 == 2))`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "选项 C `((!(i % 2)) && (!(i % 7)))` 判断的是 `i` 能被2整除 *且* 能被7整除（即"
+    },
+    {
+      "id": "Rr0G26C4ErPwuQZUfofQb",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出是（ ）。\n\n```cpp\nint tnt = 0;\nfor (int i = -1000; i < 1000; i++)\n    tnt += i;\ncout << tnt << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1000"
+        },
+        {
+          "label": "B",
+          "text": "0"
+        },
+        {
+          "label": "C",
+          "text": "999"
+        },
+        {
+          "label": "D",
+          "text": "1000"
+        }
+      ],
+      "answer": "A",
+      "explanation": "循环 `for (int i = -1000; i < 1000; i++)` 会将 `i` 从 `-1000` 累加到 `999`。其中，从 `-999` 到 `999` 的所有整数相加结果为 `0`（例如 `-1` 和 `1` 抵消）。因此，`tnt` 的最终值是初始值 `0` 加上循环中第一个数 `-1000`，即 `-1000`。选项 A 正确，其他选项均不符合累加结果。"
+    },
+    {
+      "id": "iZRRirDZJWHV2G2Gw9KQl",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出的是（ ）。\n\n```cpp\nint i;\nfor (i = 1; i < 100; i += 5)\n    continue;\ncout << i << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "101"
+        },
+        {
+          "label": "B",
+          "text": "100"
+        },
+        {
+          "label": "C",
+          "text": "99"
+        },
+        {
+          "label": "D",
+          "text": "96"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该 `for` 循环的条件是 `i < 100`，每次迭代 `i` 增加 5。当 `i` 的值为 96 时，条件 `96 < 100` 仍为真，执行 `continue` 后 `i` 更新为 `96 + 5 = 101`。此时，循环条件 `101 < 100` 不再满足，循环终止，因此输出 `i` 的最终值 101。其他选项不正确，因为循环是在 `i` 更新到 101 后才终止的。"
+    },
+    {
+      "id": "Kw31wh4JO4a2XUc5aLf3A",
+      "order": 15,
+      "type": "single_choice",
+      "content": "下面C++代码执行后输出的是（ ）。\n\n```cpp\nint tnt = 0;\nfor (int i = 5; i < 100; i += 5){\n    if (i % 2 == 0)\n        continue;\n    tnt += 1;\n    if (i % 3 == 0 && i % 7 == 0)\n        break;\n}\ncout << tnt << endl;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "500"
+        },
+        {
+          "label": "B",
+          "text": "450"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "循环从 `i = 5` 开始，每次增加 5。`if (i % 2 == 0) continue;` 跳过所有偶数 `i`，所以只有"
+    },
+    {
+      "id": "tT75sa_3aGOEjzRtPp6ms",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++、Python都是高级编程语言，它们的每条语句最终都要通过机器指令来完成。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "C++和Python都是高级编程语言，它们是为了方便人类编写和理解代码而设计的。但计算机硬件（CPU）只能直接执行机器指令（一种低级语言）。因此，无论代码是经过编译（如C++）还是解释/即时编译（如Python），其高级语句最终都必须被翻译成机器指令，CPU才能执行。所以，原题描述是正确的。"
+    },
+    {
+      "id": "X67yDtE34TPEJmRLlg-Jf",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++中表达式 `N * 2 % N` 中如果 `N` 的值为正整数，则其值为2。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `N * 2 % N` 中，`N * 2` 的结果是 `2N`。接着计算 `2N % N`，即 `2N` 除以 `N` 的余数。由于 `2N` 是 `N` 的整数倍，所以余数总是0，而不是2。因此，原题目中“其值为2”的说法是错误的，故选F。"
+    },
+    {
+      "id": "jV4juN7HSgOJhdHgtLvqC",
+      "order": 18,
+      "type": "true_false",
+      "content": "执行如下C++代码如果在键盘上输入10，执行后将输出20。\n\n```cpp\nchar N;\nprintf(\"请输入正整数：\");\ncin >> N;\nprintf(\"%d\\n\", N * 2);\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该代码将 `N` 定义为 `char` 类型。当输入 `10` 时，`cin >> N;` 只会读取第一个字符 '1' 存入 `N`。字符 '1' 的 ASCII 值为 49，所以 `N * 2` 的结果是 `49 * 2 = 98`。因此，程序将输出 98，而不是 20，原说法错误。"
+    },
+    {
+      "id": "907Zlxv4WAI7sDQgqskgK",
+      "order": 19,
+      "type": "true_false",
+      "content": "删除下面C++代码中的`continue`不影响程序的执行效果。\n\n```cpp\nfor (int i = 0; i < 100; i++){\n    if (i % 2 == 0){\n        printf(\"偶数\");\n        continue;\n    }\n    else\n        printf(\"奇数\");\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确答案是T。\n\n当`i`为偶数时，`printf(\"偶数\");`执行后，`continue`语句会立即跳到下一次循环。即使删除`continue`，由于`if-else`结构，`else`分支也不会被执行，程序也会自然地结束当前循环体，进入下一次循环。因此，`continue`在这里是多余的，不影响程序的执行效果。"
+    },
+    {
+      "id": "uFvJ6ncBpitY8I5oS14yR",
+      "order": 20,
+      "type": "true_false",
+      "content": "下面C++代码执行时将报错，因为 `_` 所在位置应该是变量名，而 `_` 不可以做变量名。\n\n```cpp\nfor (int _ = 0; _ < 100; _++)\n    cout << \"*\" << endl;\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "题目中的说法是错误的。在 C++ 中，下划线 `_` 是一个合法的标识符字符，可以作为变量名使用。因此，代码 `for (int _ = 0; _ < 100; _++)` 会正常执行，不会报错。选项 T 认为 `_` 不能做变量名，与 C++ 语法规则不符，所以是错误的。"
+    },
+    {
+      "id": "WqOD9-b91wPa4gHVJi4-M",
+      "order": 21,
+      "type": "true_false",
+      "content": "下面C++代码被执行后，将先后输出3和5。\n\n```cpp\nfor (int i = 3; i < 5; i += 2)\n    printf(\"%d \", i);\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "循环开始时 `i` 为 3，满足条件 `i < 5`，输出 `3`。接着 `i` 增加 2 变为 5。此时条件 `i < 5` 不再满足，循环立即终止。因此，代码实际只输出 `3 `，而不是 `3 5`。所以题目描述是错误的。"
+    },
+    {
+      "id": "PkuSk29tKmm-xTRurxmEi",
+      "order": 22,
+      "type": "true_false",
+      "content": "下面的C++代码执行后将先后输出7个 `true` 。\n\n```cpp\nfor (int i = 0; i < 10; i++)\n    cout << (i * 2 < i * i) << \" \";\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "代码中的循环 `for (int i = 0; i < 10; i++)` 会使 `i` 从 0 遍历到 9。条件 `i * 2"
+    },
+    {
+      "id": "IMjBFaueI8WzlUM0JpF1-",
+      "order": 23,
+      "type": "true_false",
+      "content": "在C++代码中，`user_Name`、`_userName`、`user-Name`、`userName_` 都是合法的变量名。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++变量名只能由字母、数字和下划线组成，且不能以数字开头。其中，`user-Name` 包含了非法的连字符 `-`，因此它不是一个合法的C++变量名。而 `user_Name`、`_userName` 和 `userName_` 都符合C++的命名规则。所以，题目中“都是合法的变量名”的说法是错误的。"
+    },
+    {
+      "id": "KbdI6xknE0omJze0fOC4n",
+      "order": 24,
+      "type": "true_false",
+      "content": "C++语言中 `continue` 语句可以来提前结束循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`continue` 语句的作用是跳过当前循环中剩余的代码，直接进入下一次循环的判断或执行。它并不会提前“结束”整个循环，而是跳过当前迭代。提前结束整个循环的语句是 `break`。因此，题目描述是错误的。"
+    },
+    {
+      "id": "78AteEbfGXjRB0JRPbcO8",
+      "order": 25,
+      "type": "true_false",
+      "content": "C++中定义整型变量N，执行语句 `scanf(\"%d\", &N); cout << N / 3 * 5;` 时输入 `3.6` ，则输出是6。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "当 `scanf(\"%d\", &N);` 读取输入 `3.6` 时，`%d` 格式符只会读取整数部分，因此 `N` 的值为 `3`。接着执行 `cout << N / 3 * 5;`，即 `3 / 3 * 5`。在C++中，整数除法 `3 / 3` 的结果是 `1`，然后 `1 * 5` 的结果是 `5`。所以实际输出是 `5`，而不是 `6`。因此，题目中的描述是错误的。"
+    }
+  ]
+}

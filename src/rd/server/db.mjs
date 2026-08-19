@@ -281,19 +281,6 @@ function seedIfEmpty(database) {
       role: "coach",
       language: "cpp",
     });
-  database
-    .prepare(
-      `INSERT INTO users (username, password_hash, display_name, role, grade, language)
-       VALUES (@username, @password_hash, @display_name, @role, @grade, @language)`,
-    )
-    .run({
-      username: "student",
-      password_hash: hash,
-      display_name: "示例学生",
-      role: "student",
-      grade: "初二",
-      language: "cpp",
-    });
 
   database
     .prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)")
@@ -362,6 +349,33 @@ function seedIfEmpty(database) {
   ext.run("11–12 月", "NOIP", "具备省资格者", "提高组水平", "https://www.noi.cn/", "前往 NOI 官网", "noip", 4);
 }
 
+function removeDemoStudent(database) {
+  const rows = database
+    .prepare(
+      `SELECT id FROM users
+       WHERE role = 'student' AND (username = 'student' OR display_name = '示例学生')`,
+    )
+    .all();
+  if (!rows.length) return;
+  database.exec("BEGIN");
+  try {
+    for (const u of rows) {
+      database.prepare("DELETE FROM sessions WHERE user_id = ?").run(u.id);
+      database.prepare("DELETE FROM submissions WHERE user_id = ?").run(u.id);
+      database.prepare("DELETE FROM paper_drafts WHERE user_id = ?").run(u.id);
+      database.prepare("DELETE FROM paper_cursors WHERE user_id = ?").run(u.id);
+      if (tableExists(database, "contest_registrations")) {
+        database.prepare("DELETE FROM contest_registrations WHERE user_id = ?").run(u.id);
+      }
+      database.prepare("DELETE FROM users WHERE id = ?").run(u.id);
+    }
+    database.exec("COMMIT");
+  } catch (err) {
+    database.exec("ROLLBACK");
+    throw err;
+  }
+}
+
 export function getDb() {
   if (db) return db;
   ensureDirs();
@@ -372,6 +386,7 @@ export function getDb() {
   migrate(db);
   seedIfEmpty(db);
   removeHomemadeProblems(db);
+  removeDemoStudent(db);
   return db;
 }
 

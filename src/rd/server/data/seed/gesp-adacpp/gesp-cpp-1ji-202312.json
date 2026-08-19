@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-1ji-202312",
+  "url": "https://adacpp.com/practice/gesp-cpp-1ji-202312",
+  "title": "GESP C++一级 202312",
+  "description": "CCF编程能力等级认证 GESP C++ 一级 2023年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 1,
+    "ym": "202312"
+  },
+  "questions": [
+    {
+      "id": "miifBBUTbS2CljZgVX3cl",
+      "order": 1,
+      "type": "single_choice",
+      "content": "以下C++不可以作为变量的名称的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "CCF GESP"
+        },
+        {
+          "label": "B",
+          "text": "ccfGESP"
+        },
+        {
+          "label": "C",
+          "text": "CCFgesp"
+        },
+        {
+          "label": "D",
+          "text": "CCF_GESP"
+        }
+      ],
+      "answer": "A",
+      "explanation": "C++变量名不能包含空格。选项A `CCF GESP` 中包含空格，因此不能作为变量名。而选项B `ccfGESP`、C `CCFgesp` 和D `CCF_GESP` 都符合C++变量命名规则，它们只包含字母和下划线，可以作为变量名。"
+    },
+    {
+      "id": "8EsDhk0ErR9saAn822_9V",
+      "order": 2,
+      "type": "single_choice",
+      "content": "C++表达式 `10 - 3 * (2 + 1) % 10` 的值是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "B",
+      "explanation": "根据C++运算符优先级，首先计算括号内的 `2 + 1` 得到 `3`。表达式变为 `10 - 3 * 3 % 10`。接着，乘法和取模运算优先级相同，从左到右计算：`3 * 3` 得到 `9`，表达式变为 `10 - 9 % 10`。然后 `9 % 10` 得到 `9`。最后，计算减法 `10 - 9`，结果为 `1`。因此，正确答案是B。其他选项不符合正确的运算顺序。"
+    },
+    {
+      "id": "LgJ2MfsUZE5YEHcSmJHN4",
+      "order": 3,
+      "type": "single_choice",
+      "content": "假设现在是上午十点，求出N小时（正整数）后是第几天几时，如输入20小时则为第2天6点，如N输入4则为今天14点。为实现相应功能，应在横线处填写代码是（ ）。\n\n```cpp\nint N, dayX, hourX;\n\ncin >> N;\n\ndayX = ________, hourX = ________;\nif (dayX == 0)\n    cout << \"今天\" << hourX << \"点\";\nelse\n    cout << \"第\" << (dayX + 1) << \"天\" << hourX << \"点\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "(10 + N) % 24 , (10 + N) / 24"
+        },
+        {
+          "label": "B",
+          "text": "(10 + N) / 24 , (10 + N) % 24"
+        },
+        {
+          "label": "C",
+          "text": "N % 24 , N / 24"
+        },
+        {
+          "label": "D",
+          "text": "10 / 24 , 10 % 24"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案是B。\n\n1.  **正确性解释：** 我们需要计算从当前上午十点开始，经过 `N` 小时后的总小时数，即 `10 +"
+    },
+    {
+      "id": "L0zoHQCmHPCuYjn7Cpi_y",
+      "order": 4,
+      "type": "single_choice",
+      "content": "下面的程序用于判断N是否为偶数，横线处应填写代码是（ ）。\n\n```cpp\ncin >> N;\nif (________)\n    cout << \"偶数\";\nelse\n    cout << \"奇数\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "N % 2 == 0"
+        },
+        {
+          "label": "B",
+          "text": "N % 2 = 0"
+        },
+        {
+          "label": "C",
+          "text": "N % 2"
+        },
+        {
+          "label": "D",
+          "text": "N % 2 != 0"
+        }
+      ],
+      "answer": "A",
+      "explanation": "正确答案是 A。`N % 2 == 0` 使用取模运算符 `%` 计算 N 除以 2 的余数，并用 `==` 判断余数是否等于 0。偶数的定义就是能被 2 整除（余数为 0）。\n\n选项 B `N % 2 = 0` 使用的是赋值运算符 `=`，而非比较运算符，会导致语法错误或逻辑错误。选项 C `N % 2` 会将偶数判断为假（0），奇数判断为真（1），与题目要求相反。选项 D `N % 2 != 0` 判断的是 N 是否为奇数，与题目要求判断偶数相反。"
+    },
+    {
+      "id": "h5jG1LkxfOn7qjoFWtgjD",
+      "order": 5,
+      "type": "single_choice",
+      "content": "下面对C++代码执行后输出的描述，正确的是（ ）。\n\n```cpp\ncin >> N;\ncnt = 0;\nfor(int i = 1; i < N; i++)\n    cnt += 1;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "如果输入的N是小于等于2整数，第5行将输出0。"
+        },
+        {
+          "label": "B",
+          "text": "如果输入的N是大于等于2整数，第5行将输出N-1。"
+        },
+        {
+          "label": "C",
+          "text": "如果输入的N是大于等于2整数，第5行将输出N。"
+        },
+        {
+          "label": "D",
+          "text": "以上说法均不正确。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "循环 `for(int i = 1; i < N; i++)` 从 `i=1` 开始，当 `i` 小于 `N` 时执行。这意味着当"
+    },
+    {
+      "id": "cP5S-W6v0yop8FqDTKwXr",
+      "order": 6,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\ncnt = 0;\nfor(int i = 1; i < 10; i++){\n    cnt += 1;\n    i += 2;\n}\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "9"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "1"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是C。循环变量`i`在每次循环体内执行`i += 2;`后，还会执行`i++`。因此，`i`的实际变化是"
+    },
+    {
+      "id": "fTjAy9-QfaVmAmZMQFt0O",
+      "order": 7,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\ncnt = 0;\nfor(int i = 1; i < 20; i++){\n    if(i%2)\n        continue;\n    else if(i%3==0 && i%5==0)\n        break;\n    cnt += i;\n}\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "90"
+        },
+        {
+          "label": "B",
+          "text": "44"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "A",
+      "explanation": "循环遍历 `i` 从 1 到 19。当 `i` 为奇数时，`if (i%2)` 为真，执行 `continue` 跳过本次循环"
+    },
+    {
+      "id": "yd-uR3XkXE9qc1BxAzU9V",
+      "order": 8,
+      "type": "single_choice",
+      "content": "下面C++代码执行后的输出是（ ）。\n\n```cpp\nN = 10;\ncnt = 0;\nwhile(1){\n    if(N == 0) break;\n    cnt += 1;\n    N -= 2;\n}\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "11"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "C",
+      "explanation": "`N` 初始值为 10，每次循环 `N` 减 2 (`N -= 2`)，`cnt` 加 1 (`cnt += 1`)。循环在 `N` 变为 0 时终止。从 10 减到 0 需要进行 10 / 2 = 5 次循环，所以 `cnt` 最终值为 5。因此，选项 C 是正确的。选项 A、B、D 不正确，因为循环执行了 5 次，而不是 10、11 或 4 次。"
+    },
+    {
+      "id": "2q9Xq5YpokaxckmfnVvR9",
+      "order": 9,
+      "type": "single_choice",
+      "content": "下面C++代码用于判断一个数是否为质数（素数），在横线处应填入代码是（ ）。\n\n```cpp\ncin >> N;\ncnt = 0;\nfor (int i = 1; i < N + 1; i++)\n    if (N % i == 0)\n        ________;\nif (cnt == 2)\n    cout << N << \"是质数。\";\nelse\n    cout << N << \"不是质数。\";\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "cnt = 1"
+        },
+        {
+          "label": "B",
+          "text": "cnt = 2"
+        },
+        {
+          "label": "C",
+          "text": "cnt =+ 1"
+        },
+        {
+          "label": "D",
+          "text": "cnt += 1"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。`cnt += 1` 是 `cnt = cnt + 1` 的简写，用于在找到一个因数时将计数器 `cnt` 增加1，从而统计 `N` 的因数个数。质数定义为只有1和它本身两个因数的数，因此需要准确累加因数。选项 A 和 B 会将 `cnt` 直接赋值为1或2，而不是累加；选项 C `cnt =+ 1` 是一个语法错误，C++中没有 `=+` 运算符。"
+    },
+    {
+      "id": "bORmjiuxCudJhpMqOt6hk",
+      "order": 10,
+      "type": "single_choice",
+      "content": "对下面的代码，描述正确的是（ ）。\n\n```cpp\n#include <stdlib.h>\n\nusing namespace std;\n\nint main(){\n    int arr[] = {2,6,3,5,4,8,1,0,9,10};\n    for(int i = 0;i < 10;i++)\n        cout << arr[i] << \" \";\n    cout << i << endl;\n\n    cout << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "输出 2 6 3 5 4 8 1 0 9 10 10"
+        },
+        {
+          "label": "B",
+          "text": "输出 2 6 3 5 4 8 1 0 9 9"
+        },
+        {
+          "label": "C",
+          "text": "输出 2 6 3 5 4 8 1 0 9 10"
+        },
+        {
+          "label": "D",
+          "text": "提示有编译错误"
+        }
+      ],
+      "answer": "D",
+      "explanation": "变量 `i` 在 `for` 循环的初始化语句中声明 (`for(int i = 0; ...)`)，因此它的作用域仅限于该 `for` 循环内部。当循环结束后，`i` 变量就不再存在，尝试在循环外部使用 `cout << i << endl;` 会导致编译错误。因此，选项 D 是正确的。选项 A、B、C 描述了程序成功运行后的输出，与实际情况不符。"
+    },
+    {
+      "id": "lRX-OeK5ZcaxH5hTS01rg",
+      "order": 11,
+      "type": "single_choice",
+      "content": "执行下面C++代码后输出是（ ）。\n\n```cpp\ncnt = 0;\nfor (i = 10; i > 3; i -= 3)\n    cnt = cnt + i;\ncout << cnt;\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "21"
+        },
+        {
+          "label": "C",
+          "text": "27"
+        },
+        {
+          "label": "D",
+          "text": "49"
+        }
+      ],
+      "answer": "B",
+      "explanation": "循环开始时 `cnt` 为 0。第一次循环，`i` 为 10，`cnt` 变为 0 + 10 = 10，`i` 变为 7。第二次循环，`i` 为 7，`cnt` 变为 10 + 7 = 17，`i` 变为 4。第三次循环，`i` 为 4，`cnt` 变为 17 + 4 = 21，`i` 变为 1。此时 `i` (1) 不再大于 3，循环结束，输出 `cnt` 的最终值 21。因此 B 是正确答案，其他选项是由于对循环条件或累加过程理解错误导致的。"
+    },
+    {
+      "id": "yID_G1dVwv4a-Mc1eSGfg",
+      "order": 12,
+      "type": "single_choice",
+      "content": "定义变量 `char c`，下面对 `c` 赋值的语句，不符合语法的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "c = (char)66;"
+        },
+        {
+          "label": "B",
+          "text": "c = (char)(66);"
+        },
+        {
+          "label": "C",
+          "text": "c = char(66);"
+        },
+        {
+          "label": "D",
+          "text": "c = char 66;"
+        }
+      ],
+      "answer": "D",
+      "explanation": "选项 D `c = char 66;` 的语法是错误的，C++ 中没有 `类型 值` 这种直接的类型转换写法。选项 A `c = (char)66;` 和 B `c = (char)(66);` 都是 C 风格的强制类型转换，将整数 `66` 转换为 `char` 类型。选项 C `c = char(66);` 是 C++ 风格的函数式类型转换，同样将整数 `66` 转换为 `char` 类型，它们都是符合语法的。"
+    },
+    {
+      "id": "ECnFgk_jV9O3AiXODZjIl",
+      "order": 13,
+      "type": "single_choice",
+      "content": "下图所示C++代码对大写字母 `'A'` 到 `'Z'` 分组，对每个字母输出所属的组号，那么输入 `'C'` 时将输出的组号是？（ ）。\n\n```cpp\nchar c;\nwhile(1){\n    cin >> c;\n    if(c=='Q') break;\n    switch(c){\n        case 'A': cout << \"1 \"; break;\n        case 'B': cout << \"3 \";\n        case 'C': cout << \"3 \";\n        case 'D': cout << \"5 \"; break;\n        case 'E': cout << \"5 \"; break;\n        default: cout << \"9 \";\n    }\n    cout << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "3 5"
+        },
+        {
+          "label": "C",
+          "text": "3 5 9"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "explanation": "当输入 `'C'` 时，程序进入 `switch` 语句。`case 'C':` 被匹配，输出 \"3 \"。由于 `case 'C':` 后面没有 `break;` 语句，程序会“穿透”到下一个 `case`，即 `case 'D':`，继续执行并输出 \"5 \"。此时遇到 `break;` 语句，`switch` 结束。因此，最终输出是 \"3 5 \"。选项 A 错误在于忽略了穿透行为，选项 C 错误在于 `case 'D':` 后有 `break;`，不会继续穿透到 `default`。"
+    },
+    {
+      "id": "2KLpXGCDqtybyeC8cqFzQ",
+      "order": 14,
+      "type": "single_choice",
+      "content": "某公司新出了一款无人驾驶的小汽车，通过声控智能驾驶系统，乘客只要告诉汽车目的地，车子就能自动选择一条优化路线，告诉乘客后驶达那里。请问下面哪项不是驾驶系统完成选路所必须的。（ ）",
+      "options": [
+        {
+          "label": "A",
+          "text": "麦克风"
+        },
+        {
+          "label": "B",
+          "text": "扬声器"
+        },
+        {
+          "label": "C",
+          "text": "油量表"
+        },
+        {
+          "label": "D",
+          "text": "传感器"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案是 C。\n\n1.  **为什么 C 是对的：** 油量表主要用于显示汽车的燃油量，是驾驶员获取信息的一种方式。虽然无人驾驶系统"
+    },
+    {
+      "id": "iN2_w4n_3eGzdAUJ8X2XM",
+      "order": 15,
+      "type": "single_choice",
+      "content": "现代计算机是指电子计算机，它所基于的是（ ）体系结构。",
+      "options": [
+        {
+          "label": "A",
+          "text": "艾伦·图灵"
+        },
+        {
+          "label": "B",
+          "text": "冯·诺依曼"
+        },
+        {
+          "label": "C",
+          "text": "阿塔纳索夫"
+        },
+        {
+          "label": "D",
+          "text": "埃克特-莫克利"
+        }
+      ],
+      "answer": "B",
+      "explanation": "现代电子计算机普遍基于冯·诺依曼体系结构，其核心思想是“存储程序”和“程序控制”，将指令和数据统一存储在内存中。艾伦·图灵是计算机科学理论的奠基人，提出了图灵机概念。阿塔纳索夫和埃克特-莫克利是早期电子计算机的开发者，但他们并非现代通用计算机体系结构的提出者。"
+    },
+    {
+      "id": "3s7HiW98xj2K8VjNeEw6n",
+      "order": 16,
+      "type": "true_false",
+      "content": "C++表达式 `int(3.14)` 的值为3。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`int(3.14)` 是 C++ 中的一种类型转换（C-style cast）。它将浮点数 `3.14` 转换为整数类型 `int`。在将浮点数转换为整数时，C++ 会直接截断小数部分（向零取整），而不是进行四舍五入。因此，`3.14` 截断后变为 `3`，所以表达式的值为 `3`，原题目描述正确。"
+    },
+    {
+      "id": "UnRDouE-5x2mZqDcwZy4L",
+      "order": 17,
+      "type": "true_false",
+      "content": "C++语句 `cout << (2 * 3, 3 % 10, 2+3)` 的输出为 `6,3,5` 。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该语句使用了C++的逗号运算符。逗号运算符从左到右依次计算表达式，但整个逗号表达式的最终结果是**最右边**表达式的值。因此，`(2 * 3, 3 % 10, 2+3)` 的计算结果为 `2+3` 的值，即 `5`。所以 `cout << (2 * 3, 3 % 10, 2+3)` 实际会输出 `5`，而不是 `6,3,5`。因此，题目描述是错误的。"
+    },
+    {
+      "id": "O38VCv9-t0Pgj9SFerVfQ",
+      "order": 18,
+      "type": "true_false",
+      "content": "`for(int i = 1; i < 10; i += 3;)` ; 表示i从1开始到10结束间隔为3，相当于1、4、7、10。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该 `for` 循环的条件是 `i < 10`，这意味着当 `i` 的值达到 10 时，循环将停止执行。因此，`i` 在循环体中实际取到的值是 1、4、7。当 `i` 变为 10 时，条件 `10 < 10` 为假，循环终止，所以 10 不会被包含在内。题目中说包含 10 是错误的，所以答案为 F。"
+    },
+    {
+      "id": "lmDctQWrWy9bG2c6eZq2E",
+      "order": 19,
+      "type": "true_false",
+      "content": "C++表达式 `010+100+001` 的值为111。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++中以 `0` 开头的数字是八进制数。因此，`010` 是八进制的 10，转换为十进制是 8；`001` 是八进制的 1，转换为十进制是 1。而 `100` 是十进制数。所以，表达式 `010+100+001` 的实际计算结果是 `8 + 100 + 1 = 109`。题目说值为 111 是错误的，故选 F。"
+    },
+    {
+      "id": "vuG_xbDNR7HpVa1l0EzzM",
+      "order": 20,
+      "type": "true_false",
+      "content": "`if` 语句中的条件表达式的结果可以为 `int` 类型。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在 C++ 中，`if` 语句的条件表达式不仅接受 `bool` 类型，也接受其他算术类型（如 `int`）。当条件表达式的结果为 `int` 类型时，C++ 会将其隐式转换为 `bool` 类型：任何非零值都被视为 `true`，而零值被视为 `false`。例如，`if (1)` 会执行其内部代码，而 `if (0)` 则不会。因此，题目描述是正确的。"
+    },
+    {
+      "id": "pLcaZ1lciQUcMRXgbUBMD",
+      "order": 21,
+      "type": "true_false",
+      "content": "在下面的C++代码 `while(1) continue;` 中，由于循环中的 `continue` 是无条件被执行，因此将导致死循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "`while(1)` 创建了一个永真循环。循环体内的 `continue` 语句会立即结束当前迭代，并跳转到下一次循环条件的判断。由于 `continue` 是循环体内唯一的语句且无条件执行，程序将不断地进入新的循环迭代，永远无法跳出循环，因此会形成死循环。所以，选项 T 是正确的，选项 F 是错误的。"
+    },
+    {
+      "id": "2kNI6y5RGC1lMbUL1ytFI",
+      "order": 22,
+      "type": "true_false",
+      "content": "C++表达式 `('1'+'1'=='2'? flag=1:flag=2)` 的结果值和表达式 `(flag==2)` 的相同。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "表达式 `('1'+'1')` 会将字符 `'1'` 的ASCII值（49）相加，结果为 `49 + 49 = 98`。接着，`98 == '2'`（字符 `'2'` 的ASCII值为50）的比较结果是 `false`。因此，三元运算符执行 `flag=2`，整个表达式的结果值是 `2`。而 `(flag==2)` 在 `flag` 被赋值为 `2` 后，其结果是 `true`（布尔值，通常转换为整数 `1`）。由于 `2"
+    },
+    {
+      "id": "0Mc3yMjuEgLfsvza_MI28",
+      "order": 23,
+      "type": "true_false",
+      "content": "在C++的程序中，不能用 `scanf` 作为变量名。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`scanf` 在 C++ 中是一个标准库函数名，但它**不是** C++ 的关键字。因此，你可以将 `scanf` 用作变量名，尽管这样做会隐藏标准库函数，导致程序行为异常且极不推荐。题目声称“不能用 `scanf` 作为变量名”是错误的，所以正确答案是 F。"
+    },
+    {
+      "id": "MWX60Y218rCUosbb_qVKy",
+      "order": 24,
+      "type": "true_false",
+      "content": "小杨最近在准备考GESP，他用的Dev C++来练习和运行程序，所以Dev C++也是一个小型操作系统。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "Dev C++是一个集成开发环境（IDE），它提供代码编辑、编译、调试等功能，帮助程序员编写和运行C++程序。它本身并不是一个操作系统，而是运行在Windows等操作系统之上的应用程序。操作系统负责管理计算机的硬件和软件资源，而Dev C++只是一个工具软件。因此，题目描述是错误的。"
+    },
+    {
+      "id": "bsvoVyJsOp-owubyv9ZBf",
+      "order": 25,
+      "type": "true_false",
+      "content": "任何一个 `while` 循环都可以转化为等价的 `for` 循环。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。`for` 循环的三个部分（初始化、条件、更新）都是可选的。任何 `while (条件)` 循环都可以直接转化为 `for (; 条件; )` 的"
+    }
+  ]
+}

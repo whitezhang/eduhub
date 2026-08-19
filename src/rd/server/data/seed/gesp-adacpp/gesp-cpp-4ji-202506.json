@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-4ji-202506",
+  "url": "https://adacpp.com/practice/gesp-cpp-4ji-202506",
+  "title": "GESP C++四级 202506",
+  "description": "CCF编程能力等级认证 GESP C++ 四级 2025年6月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 4,
+    "ym": "202506"
+  },
+  "questions": [
+    {
+      "id": "Qj0CLXwZkCLUZ3_V8MJyV",
+      "order": 1,
+      "type": "single_choice",
+      "content": "在C++中，声明一个指向整型变量的指针的正确语法是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "int* ptr;"
+        },
+        {
+          "label": "B",
+          "text": "*int ptr;"
+        },
+        {
+          "label": "C",
+          "text": "int ptr*;"
+        },
+        {
+          "label": "D",
+          "text": "ptr int;"
+        }
+      ],
+      "answer": "A",
+      "explanation": "选项A `int* ptr;` 是正确的，它声明了一个名为 `ptr` 的指针，该指针指向一个 `int` 类型的变量。在C++中，`*` 符号用于声明指针，它通常放在类型名之后或变量名前。选项B `*int ptr;`、C `int ptr*;` 和 D `ptr int;` 的语法都不符合C++声明指针的规则。"
+    },
+    {
+      "id": "if_nf6mpWsJg14ySUBulY",
+      "order": 2,
+      "type": "single_choice",
+      "content": "下面的函数接收一个3行4列的二维数组并输出其中元素，则横线上不能填写（ ）。\n\n```cpp\nvoid printArray(________) {\n    for (int i = 0; i < 3; ++i)\n        for (int j = 0; j < 4; ++j)\n            std::cout << arr[i][j] << \" \";\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "int arr[3][4]"
+        },
+        {
+          "label": "B",
+          "text": "int arr[][4]"
+        },
+        {
+          "label": "C",
+          "text": "int (*arr)[4]"
+        },
+        {
+          "label": "D",
+          "text": "int** arr"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`int** arr` 是一个指向指针的指针，它通常用于处理动态分配的二维数组（即指针数组），而不是像 `int arr[3][4]` 这样在内存中连续存储的静态二维数组。函数体内的 `arr[i][j]` 访问方式需要编译器知道数组的列数（本例中是4）来正确计算内存地址，而 `int** arr` 无法提供这个关键的列数信息。选项 A、B、C 都能正确地作为参数接收静态二维数组，因为它们都明确或隐含地指定了列数 `4`，使得 `arr[i][j]` 的访问能够正确计算内存地址。"
+    },
+    {
+      "id": "PprcwCFxDfpUtcxfP4b4w",
+      "order": 3,
+      "type": "single_choice",
+      "content": "在C++中，`int arr[3][4]` 和 `int* arr = new int[12]` 均可模拟一个3行4列的二维数组。关于这两种方式，下面说法错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "int arr[3][4] 在栈上分配空间，适合数组较小的情况；"
+        },
+        {
+          "label": "B",
+          "text": "int* arr = new int[12] 在堆上分配空间，数组较大时也适用；"
+        },
+        {
+          "label": "C",
+          "text": "这两种方式申请的内存空间都是连续的。"
+        },
+        {
+          "label": "D",
+          "text": "这两种方式申请的内存都能自动释放。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "D选项错误。`int arr[3][4]` 是在栈上分配的，其内存会在作用域结束时自动释放。然而，`int* arr = new int[12]` 是在堆上动态分配的，需要程序员手动使用 `delete[] arr` 来释放内存，否则会造成内存泄漏。A、B、C选项的说法都是正确的：`int arr[3][4]` 在栈上分配，适合小数组；`new` 在堆上分配，适合大数组；且这两种方式申请的内存空间都是连续的。"
+    },
+    {
+      "id": "b12Ij3d-xTToj6kzH0SfU",
+      "order": 4,
+      "type": "single_choice",
+      "content": "关于以下C++代码，说法正确的是（ ）。\n\n```cpp\nint main() {\n    greet();\n    return 0;\n}\n\nvoid greet() {\n    cout << \"Hello!\" << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确编译并输出 Hello!"
+        },
+        {
+          "label": "B",
+          "text": "编译错误：找不到函数 greet()"
+        },
+        {
+          "label": "C",
+          "text": "编译警告但可以运行"
+        },
+        {
+          "label": "D",
+          "text": "链接错误"
+        }
+      ],
+      "answer": "B",
+      "explanation": "在 C++ 中，函数必须在使用前进行声明或定义。代码中 `main` 函数调用 `greet()` 时，`greet()` 函数的定义在 `main` 之后，导致编译器在处理 `main` 时找不到 `greet()` 的声明，从而引发编译错误。因此，选项 B 是正确的，程序无法正确编译和运行，也不会是链接错误或仅仅是警告。"
+    },
+    {
+      "id": "bryO481rNalH6K5HImFBP",
+      "order": 5,
+      "type": "single_choice",
+      "content": "在C++中，如果希望通过函数修改传入的结构体对象的内容，应该使用哪种参数传递方式？",
+      "options": [
+        {
+          "label": "A",
+          "text": "值传递或引用传递"
+        },
+        {
+          "label": "B",
+          "text": "值传递或指针传递"
+        },
+        {
+          "label": "C",
+          "text": "引用传递或指针传递"
+        },
+        {
+          "label": "D",
+          "text": "仅指针传递"
+        }
+      ],
+      "answer": "C",
+      "explanation": "引用传递 (`MyStruct& obj`) 和指针传递 (`MyStruct* obj`) 都能让函数直接访问并修改传入结构体对象的原始内存，从而实现内容的修改。值传递 (`MyStruct obj`) 会创建结构体对象的副本，函数内对副本的修改不会影响原始对象。因此，选项 A 和 B 包含值传递，是错误的。选项 D 错误在于“仅”字，因为引用传递同样有效，所以 C 是最全面的正确答案。"
+    },
+    {
+      "id": "FyqShRcZMbqykr0vrRxXE",
+      "order": 6,
+      "type": "single_choice",
+      "content": "以下哪个选项正确描述了C++中形参和实参的区别？",
+      "options": [
+        {
+          "label": "A",
+          "text": "形参是函数调用时传递给函数的具体值，实参是函数定义中声明的变量。"
+        },
+        {
+          "label": "B",
+          "text": "形参是函数定义中声明的变量，实参是函数调用时传递给函数的具体值。"
+        },
+        {
+          "label": "C",
+          "text": "形参和实参在函数调用时是完全相同的。"
+        },
+        {
+          "label": "D",
+          "text": "形参只在函数内部可见，实参在函数外部可见。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项B正确。形参（形式参数）是在函数定义时声明的变量，例如 `void func(int x)` 中的 `x`，它是一个占位符，用于接收外部传入的数据。实参（实际参数）是函数调用时传递给函数的具体值或变量，例如 `func(10)` 中的 `10`。选项A将形参和实参的定义混淆了。选项C不正确，形参是定义时的占位符，实参是调用时的具体数据，它们在概念和作用上是不同的。选项D描述不准确，形参的作用域确实只在函数内部，但实参是传递的值，其“可见性”的说法不准确，且这不是区分形参和实参的主要方式。"
+    },
+    {
+      "id": "dSA30YRtDt0oAthCEygEY",
+      "order": 7,
+      "type": "single_choice",
+      "content": "运行如下代码会输出（ ）。\n\n```cpp\nint value = 100;\n\nvoid print1() {\n    int value = 50;\n    cout << value << \" \";\n    cout << ::value << \" \";\n}\n\nvoid print2() {\n    cout << value << \" \";\n}\n\nprint1();\nprint2();\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "100 100 100"
+        },
+        {
+          "label": "B",
+          "text": "50 50 50"
+        },
+        {
+          "label": "C",
+          "text": "50 100 100"
+        },
+        {
+          "label": "D",
+          "text": "50 50 100"
+        }
+      ],
+      "answer": "C",
+      "explanation": "在 `print1()` 函数中，`int value = 50;` 声明了一个局部变量，它会遮蔽全局变量，所以第一个 `cout << value` 输出 50。`::value` 使用作用域解析运算符明确访问全局 `value`，因此输出 100。`print2()` 函数中没有局部变量 `value`，所以 `cout << value` 直接访问并输出全局变量 100。最终输出结果是 50 100 100。其他选项没有正确理解局部变量遮蔽和全局变量访问的区别。"
+    },
+    {
+      "id": "QEw_sYeUQPMkzaevfGaeF",
+      "order": 8,
+      "type": "single_choice",
+      "content": "小杨在整理一副扑克牌的所有红心扑克牌，使其从小到大排列。他的做法是：最开始抓到第1张扑克牌被认为已经排好序；然后抓第2张扑克牌，将其插入至有序部分的正确位置；不断循环步骤，每次将新抓到扑克牌插入至有序部分，直至抓完所有扑克牌，这样抓牌结束时就完成了扑克牌的排序。小杨这种整理扑克牌的方式与（ ）排序的方式最接近。",
+      "options": [
+        {
+          "label": "A",
+          "text": "冒泡排序"
+        },
+        {
+          "label": "B",
+          "text": "插入排序"
+        },
+        {
+          "label": "C",
+          "text": "选择排序"
+        },
+        {
+          "label": "D",
+          "text": "直接排序"
+        }
+      ],
+      "answer": "B",
+      "explanation": "小杨的整理方式完全符合**插入排序**的原理：从一个已排序的子序列（最开始只有一张牌）开始，每次取一个新元素并将其插入到已排序部分的正确位置。冒泡排序通过相邻元素比较和交换来排序，选择排序是每次找到最小元素放到正确位置，两者均与题目描述不符。直接排序不是一个标准的排序算法名称。"
+    },
+    {
+      "id": "qIUTJ63FQGemrn2Qi4uT-",
+      "order": 9,
+      "type": "single_choice",
+      "content": "以下哪种情况是使用插入排序的合适场景？",
+      "options": [
+        {
+          "label": "A",
+          "text": "数据量非常大，且乱序严重"
+        },
+        {
+          "label": "B",
+          "text": "希望获得稳定排序，但不要求实时性"
+        },
+        {
+          "label": "C",
+          "text": "数据几乎有序，只需少量调整"
+        },
+        {
+          "label": "D",
+          "text": "想在交换次数最少的前提下排好大数组"
+        }
+      ],
+      "answer": "C",
+      "explanation": "插入排序在数据几乎有序时表现极佳，因为它只需进行少量调整，时间复杂度接近 O(n)，因此 C 是最合适的场景。对于数据量大且乱序严重的情况（A），插入排序的 O(n^2) 复杂度效率低下。虽然插入排序是稳定的（B），但其平均性能不如其他 O(n log n) 算法。它也不以最少交换次数为特点（D），选择排序才更符合这一点。"
+    },
+    {
+      "id": "0_WifHh20vMYAMW-u3QUe",
+      "order": 10,
+      "type": "single_choice",
+      "content": "以下关于递推算法基本思想的描述，正确的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "递推算法通过将问题分解为相互独立的子问题来解决。"
+        },
+        {
+          "label": "B",
+          "text": "递推算法从已知的基础情况出发，通过某种关系逐步推导出更大规模问题的解。"
+        },
+        {
+          "label": "C",
+          "text": "递推算法通常用于穷举所有可能的解决方案。"
+        },
+        {
+          "label": "D",
+          "text": "递推算法适用于在每一步做出局部最优选择以达到全局最优。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "正确答案B准确描述了递推算法的基本思想：从一个或几个已知的最简单情况（基础情况）出发，利用一个固定的数学关系式（递推关系）一步步地计算出更大、更复杂问题的解。选项A描述的是分治算法，它将问题分解为相互独立的子问题。选项C描述的是暴力枚举或回溯算法，递推算法通常是为了高效地找到特定解。选项D描述的是贪心算法，它在每一步做出局部最优选择以期望达到全局最优。"
+    },
+    {
+      "id": "TxPQ1uDzW6BvPZzXgDUbR",
+      "order": 11,
+      "type": "single_choice",
+      "content": "给定如下算法，其时间复杂度为（ ）。\n\n```cpp\nbool f(int arr[], int n, int target) {\n    for (int i = 0; i < n; i++) {\n        int sum = 0;\n        for (int j = 0; j < n; j++) {\n            if (i & (1 << j)) {\n                sum += arr[j];\n            }\n        }\n        if (sum == target) return true;\n    }\n    return false;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n^2)"
+        },
+        {
+          "label": "C",
+          "text": "O(n^3)"
+        },
+        {
+          "label": "D",
+          "text": "O(2^n)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "该算法包含两层嵌套循环。外层循环 `for (int i = 0; i < n; i++)` 执行 `n` 次，内层循环 `for (int"
+    },
+    {
+      "id": "HAnoPglzSrzyazLO4nZlq",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下述斐波那契数列计算的时间复杂度是（ ）。\n\n```cpp\nint fibonacci(int n) {\n    if (n == 0) return 0;\n    if (n == 1) return 1;\n    return fibonacci(n - 1) + fibonacci(n - 2);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n^2)"
+        },
+        {
+          "label": "C",
+          "text": "O(n^3)"
+        },
+        {
+          "label": "D",
+          "text": "O(2^n)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "该递归函数 `fibonacci(n)` 在计算时会产生大量的重复计算。每次调用 `fibonacci(n)` 都会递归调用 `fibonacci(n-1)` 和 `fibonacci(n-2)`，形成一个二叉树状的调用结构，其深度为 `n`。因此，函数调用的总次数呈指数级增长，时间复杂度为 O(2^n)。选项 A、B、C 分别代表线性、平方和立方复杂度，它们都远低于指数级增长，不符合该递归的特性。"
+    },
+    {
+      "id": "kxrnm6r95KCG0QFBdh-WL",
+      "order": 13,
+      "type": "single_choice",
+      "content": "关于下面C++程序的描述，（ ）最准确。\n\n```cpp\nifstream in(\"data.txt\");\nstring line;\nwhile (getline(in, line)) {\n    cout << line << endl;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "将从标准输入读取每行，并输出到屏幕"
+        },
+        {
+          "label": "B",
+          "text": "程序无法运行，因为 getline 只能读取 cin"
+        },
+        {
+          "label": "C",
+          "text": "将 data.txt 中的每一行读取并输出到屏幕"
+        },
+        {
+          "label": "D",
+          "text": "程序将创建 data.txt 并写入默认文本"
+        }
+      ],
+      "answer": "C",
+      "explanation": "程序通过 `ifstream in(\"data.txt\");` 打开名为 `data.txt` 的文件进行读取。`while (getline(in, line))` 循环从该文件流中逐行读取内容，并使用 `cout << line << endl;` 将其输出到屏幕。因此，选项 C 正确。选项 A 错误，因为程序是从文件读取，而非标准输入。选项 B 错误，`getline` 可以从任何输入流（包括 `ifstream`）读取。选项 D 错误，`ifstream` 用于读取文件，而非创建和写入文件。"
+    },
+    {
+      "id": "hkya692fPt9M7fHmM3dst",
+      "order": 14,
+      "type": "single_choice",
+      "content": "在C++中，异常处理机制（try-catch块）的主要目的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "提高程序的运行速度。"
+        },
+        {
+          "label": "B",
+          "text": "在程序发生运行时错误时，提供一种结构化的错误处理方式。"
+        },
+        {
+          "label": "C",
+          "text": "确保程序在编译时没有错误。"
+        },
+        {
+          "label": "D",
+          "text": "减少程序的内存占用。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "C++的异常处理机制（`try-catch`）主要目的是在程序运行时遇到错误（如除以零、文件打不开等）时，提供一种结构化的方式来捕获并处理这些错误，避免程序直接崩溃，因此B选项正确。A、D选项错误，因为异常处理通常会带来性能和内存开销，而不是提高速度或减少内存。C选项错误，编译时错误由编译器检查，与运行时异常处理无关。"
+    },
+    {
+      "id": "of3ADPfZmj-YWYSzLA0_z",
+      "order": 15,
+      "type": "single_choice",
+      "content": "为了提高冒泡排序的效率，如果某轮\"冒泡\"中没有执行任何交换操作，说明数组已经完成排序，可直接返回结果，则两条横线上分别应该填写（ ）。\n\n```cpp\nvoid bubbleSortWithFlag(vector<int> &nums) {\n    for (int i = nums.size() - 1; i > 0; i--) {\n        bool flag;\n        ________________ // 在此处填入代码\n\n        for (int j = 0; j < i; j++) {\n            if (nums[j] > nums[j + 1]) {\n                swap(nums[j], nums[j + 1]);\n                ___________________________ // 在此处填入代码\n            }\n        }\n        if (!flag)\n            break;\n    }\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "flag = false; 和 flag = false;"
+        },
+        {
+          "label": "B",
+          "text": "flag = false; 和 flag = true;"
+        },
+        {
+          "label": "C",
+          "text": "flag = true; 和 flag = false;"
+        },
+        {
+          "label": "D",
+          "text": "flag = true; 和 flag = true;"
+        }
+      ],
+      "answer": "B",
+      "explanation": "为了实现优化，我们需要在每轮“冒泡”开始时，假设本轮不会发生任何交换。因此，第一条横线处应将 `flag` 初始化为 `false"
+    },
+    {
+      "id": "whNd8MGD19yv8GSrbP6-L",
+      "order": 16,
+      "type": "true_false",
+      "content": "下面C++代码正确声明了一个返回 int 类型、接受两个 int 参数的函数。\n\n```cpp\nint add(int, int);\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这个声明是正确的。`int` 指定了函数 `add` 的返回类型，表示它会返回一个整数。括号内的 `int, int` 指定了函数接受两个 `int` 类型的参数。在函数声明（原型）中，参数名是可选的，只需要指定类型即可，因此 `int add(int, int);` 是一个完全合法的函数原型。选项 F 错误，因为它完全符合 C++ 语法规则。"
+    },
+    {
+      "id": "YJX3akB65GhyRY991UFwr",
+      "order": 17,
+      "type": "true_false",
+      "content": "下面C++代码的输出是 15 。\n\n```cpp\nvoid foo(int x) {\n    x += 5;\n}\n\nint main() {\n    int a = 10;\n    foo(a);\n    cout << a << endl;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "函数 `foo` 中的参数 `x` 是按值传递的，这意味着 `x` 是 `main` 函数中变量 `a` 的一个副本。在 `foo` 函数内部对 `x` 进行的修改（`x += 5;`）只会影响这个副本，而不会改变原始变量 `a` 的值。因此，`a` 在调用 `foo` 后仍然是 10，程序输出 10。所以题目说输出 15 是错误的，正确答案是 F。"
+    },
+    {
+      "id": "h9kLJIPhQBHiR5P5gpclA",
+      "order": 18,
+      "type": "true_false",
+      "content": "下面C++代码在一个结构体中又定义了别的结构体。这种结构嵌套定义的方式语法不正确。\n\n```cpp\n#include <string>\n#include <vector>\n\nusing namespace std;\n\nstruct Library {\n    struct Book {\n        struct Author {\n            string name;\n            int birthYear;\n        };\n\n        string title;\n        int year;\n        Author author;\n    };\n\n    string name;\n    vector<Book> books;\n};\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 语法完全支持在结构体内部定义其他结构体，这被称为嵌套结构体（Nested Structs）。题目中给出的代码示例 `Library` 嵌套 `Book`，`Book` 又嵌套 `Author`，是完全合法且常用的 C++ 语法。因此，题目中“这种结构嵌套定义的方式语法不正确”的说法是错误的，故选 F。选项 T 不对，因为题目中的断言与 C++ 语法事实不符。"
+    },
+    {
+      "id": "E4iC-Opq6Sm7z0O1oiz9l",
+      "order": 19,
+      "type": "true_false",
+      "content": "在C++中，相比于值传递，使用引用传递的优点可以直接操作和修改原始变量，避免数据拷贝，提高效率。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "引用传递（如 `int&`）是原始变量的别名，可以直接对其进行操作和修改，任何通过引用进行的修改都会直接反映在原始变量上。与值传递不同，引用传递不会创建变量的完整副本，从而避免了数据拷贝的开销，节省了内存和CPU时间。因此，使用引用传递确实能提高程序效率，尤其是在处理大型数据时。选项F错误，因为它否定了引用传递的这些核心优点。"
+    },
+    {
+      "id": "3qIl6cqMuutj8sTcIlVqm",
+      "order": 20,
+      "type": "true_false",
+      "content": "下面这段代码不合法，因为每一行都必须显式初始化3个元素。\n\n```cpp\nint arr[2][3] = {{1, 2}, {3}};\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "这段代码是合法的。C++ 允许对多维数组进行部分初始化，未显式初始化的元素会自动被零初始化。因此，`arr[0][2]` 和 `arr[1][1]`、`arr[1][2]` 将被初始化为0。题目中认为每一行都必须显式初始化3个元素的说法是错误的，所以选项T不正确。"
+    },
+    {
+      "id": "btE0vChxnjn3DubG9wFP2",
+      "order": 21,
+      "type": "true_false",
+      "content": "以下程序中使用了递推方式计算阶乘（n! = 1 x 2 ... x n），计算结果正确。\n\n```cpp\nint factorial(int n) {\n    int res = 1;\n    for (int i = 0; i < n; ++i) {\n        res *= i;\n    }\n    return res;\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该程序中，`for` 循环从 `i = 0` 开始。当 `i` 的值为 `0` 时，`res *= i;` 会导致 `res` 变为 `0`。此后，无论 `i` 的值是多少，`res` 乘以任何数都将保持为 `0`。因此，对于 `n > 0` 的情况，函数 `factorial` 总是返回 `0`，而不是正确的阶乘结果。所以，题目中“计算结果正确”的说法是错误的，选项 F 正确。"
+    },
+    {
+      "id": "QrD4Zs37_MsTJutBauFJs",
+      "order": 22,
+      "type": "true_false",
+      "content": "无论初始数组是否有序，选择排序都执行O(n^2)次比较。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "选择排序的核心思想是每次从未排序部分找到最小（或最大）元素，然后放到已排序部分的末尾。这个过程需要一个外层循环遍历 `n-1` 次，每次内层循环都要扫描剩余的 `n-i` 个元素来寻找最小值。因此，无论数组初始是否有序，它总是执行大约 `n(n-1)/2` 次比较，这个数量级是 O(n^2)。所以，选项 T 是正确的。"
+    },
+    {
+      "id": "dU3t4hL40cEMQeNqwmh9Q",
+      "order": 23,
+      "type": "true_false",
+      "content": "以下C++代码，尝试对有 n 个整数的数组 arr 进行排序。这个代码实现了选择排序算法。\n\n```cpp\nfor (int i = 0; i < n - 1; ++i) {\n    int minIndex = i;\n    for (int j = i + 1; j < n; ++j) {\n        if (arr[j] < arr[minIndex])\n            minIndex = j;\n    }\n    if (minIndex != i)\n        swap(arr[i], arr[minIndex]);\n}\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该代码完整且正确地实现了选择排序算法。外层循环 `for (int i = 0; i < n - 1; ++i)` 依次确定每个位置的元素，内层循环 `for (int j = i + 1; j < n; ++j)` 在未排序部分寻找最小元素的索引 `minIndex`。找到最小元素后，通过 `swap(arr[i], arr[minIndex])` 将其放置到当前位置 `i`。由于代码逻辑完全符合选择排序的定义，因此选项 T 正确，选项 F 错误。"
+    },
+    {
+      "id": "zxN586o2qDPKDuUif8tHs",
+      "order": 24,
+      "type": "true_false",
+      "content": "如果一个异常在 try 块中抛出但没有任何 catch 匹配，它将在编译时报错。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "当一个异常在 `try` 块中抛出但没有任何 `catch` 块匹配时，程序会在**运行时**终止（通常调用 `std::terminate`），而不是在编译时报错。编译器无法预知程序运行时会抛出何种异常，因此不会在编译阶段检查所有可能的异常匹配情况。所以，代码可以正常编译通过，错误发生在程序执行过程中。"
+    },
+    {
+      "id": "WgldpprB1BulN2Ygt_EM3",
+      "order": 25,
+      "type": "true_false",
+      "content": "下面C++代码实现将 Hello 写入 data.txt 。\n\n```cpp\nofstream out(\"data.txt\");\nout << \"Hello\";\nout.close();\n```",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "这段C++代码是正确的。`ofstream out(\"data.txt\");` 创建一个输出文件流对象 `out` 并打开 `data.txt` 文件（如果不存在则创建，如果存在则清空）。`out << \"Hello\";` 将字符串 \"Hello\" 写入该文件。最后，`out.close();` 关闭文件流，确保所有数据都被写入文件并释放资源。因此，代码成功实现了将 \"Hello\" 写入 `data.txt` 的目标，选项 F 是错误的。"
+    }
+  ]
+}

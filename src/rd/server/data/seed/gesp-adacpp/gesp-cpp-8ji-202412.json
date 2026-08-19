@@ -1,0 +1,585 @@
+{
+  "slug": "gesp-cpp-8ji-202412",
+  "url": "https://adacpp.com/practice/gesp-cpp-8ji-202412",
+  "title": "GESP C++八级 202412",
+  "description": "CCF编程能力等级认证 GESP C++ 八级 2024年12月真题（选择题+判断题）",
+  "source": "gesp",
+  "origin": "adacpp.com/practice",
+  "meta": {
+    "lang": "cpp",
+    "level": 8,
+    "ym": "202412"
+  },
+  "questions": [
+    {
+      "id": "leM5OgHnI68wf3vGXD9Yp",
+      "order": 1,
+      "type": "single_choice",
+      "content": "小杨家响应国家\"以旧换新\"政策，将自家的汽油车置换为新能源汽车，正在准备自编车牌。自编车牌包括5位数字或英文字母，要求第5位必须是数字，前4位中可以有最多1位英文字母。英文字母必须是大写，而且不能是O或I（因为容易与数字0或1混淆）。请问自编车牌共有多少种可能性？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "100,000"
+        },
+        {
+          "label": "B",
+          "text": "1,060,000"
+        },
+        {
+          "label": "C",
+          "text": "1,360,000"
+        },
+        {
+          "label": "D",
+          "text": "1,460,000"
+        }
+      ],
+      "answer": "B",
+      "explanation": "车牌共5位。\n1.  **第5位：** 必须是数字（0-9），有10种选择。\n2.  **前4位"
+    },
+    {
+      "id": "I4ahQjvwYw9Y2z1jpnEmw",
+      "order": 2,
+      "type": "single_choice",
+      "content": "新年到，四家人在一起聚会。其中两家有三口人，另外两家有两口人。现在要安排大家在一张十人圆桌坐下，要求一家人必须相邻就座。由于有\"主座\"的习俗，每个座位都被认为是不同的。请问共有多少种就座方案？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "8640"
+        },
+        {
+          "label": "B",
+          "text": "6912"
+        },
+        {
+          "label": "C",
+          "text": "144"
+        },
+        {
+          "label": "D",
+          "text": "60"
+        }
+      ],
+      "answer": "A",
+      "explanation": "这道题是一个组合排列问题，关键在于理解“每个座位都被认为是不同的”和“一家人必须相邻就座”这两个条件。\n\n1.  **将家庭视为整体进行"
+    },
+    {
+      "id": "yZeV8DGfdY7sw70rtbW0h",
+      "order": 3,
+      "type": "single_choice",
+      "content": "下面关于C++类继承的说法，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "一个类可以继承多个类。"
+        },
+        {
+          "label": "B",
+          "text": "一个类可以被多个类继承。"
+        },
+        {
+          "label": "C",
+          "text": "一个类可以继承另一个类的子类。"
+        },
+        {
+          "label": "D",
+          "text": "抽象类必须被至少一个类继承，否则会编译错误。"
+        }
+      ],
+      "answer": "D",
+      "explanation": "正确答案是 D。抽象类即使不被任何类继承，也不会导致编译错误，它只是不能直接创建对象。选项 A 描述的是多重继承，C++ 允许一个类继承多个基类。选项 B 描述的是一个基类可以有多个派生类，这是合法的。选项 C 描述的是多级继承，一个类可以继承另一个类的子类，例如 `class C : public B` 且 `class B : public A`，这是允许的。"
+    },
+    {
+      "id": "VAZWStDzmo8A8lSqjsFG-",
+      "order": 4,
+      "type": "single_choice",
+      "content": "使用邻接表表达一个简单有向图，图中包含 `v` 个顶点、`e` 条边，则该出边表中边节点的个数为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "v * (v - 1)"
+        },
+        {
+          "label": "B",
+          "text": "v * v"
+        },
+        {
+          "label": "C",
+          "text": "2 * e"
+        },
+        {
+          "label": "D",
+          "text": "e"
+        }
+      ],
+      "answer": "D",
+      "explanation": "邻接表表示有向图时，每条有向边 `u -> v` 只会在顶点 `u` 的邻接链表中存储一次，即对应一个边节点。"
+    },
+    {
+      "id": "hiTbL2wDzjYG6MpNfgDBo",
+      "order": 5,
+      "type": "single_choice",
+      "content": "以下将二维数组作为参数的函数声明，哪个是符合语法的？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`void Bubble(int a[10][], int m);`"
+        },
+        {
+          "label": "B",
+          "text": "`void Bubble(int a[][], int n, int m);`"
+        },
+        {
+          "label": "C",
+          "text": "`void Bubble(int (*a)[20], int n);`"
+        },
+        {
+          "label": "D",
+          "text": "`void Bubble(int * a[20], int n);`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "正确答案 C 是对的，因为 `int (*a)[20]` 表示 `a` 是一个指向包含 20 个整数的数组的指针，这是 C++ 中传递二维数组的正确方式之一，它明确了每一行的列数。选项 A 和 B 是错误的，因为在函数参数中，除了第一维，二维数组的其他维度的长度必须明确指定，编译器才能计算内存偏移。选项 D `int * a[20]` 表示 `a` 是一个包含 20 个 `int` 指针的数组，而不是一个二维数组，因此类型不匹配。"
+    },
+    {
+      "id": "Rdm0X5bh6BlOWJdTBvYjZ",
+      "order": 6,
+      "type": "single_choice",
+      "content": "已知两个点 A、B 在平面直角坐标系下的坐标分别为(xa, ya)和(xb, yb)，并分别定义变量 `double xa, ya, xb, yb;` 存储坐标。假设直线 AB 的斜率存在，下列哪个表达式可以用来表达它？（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "`(xa - xb) / (ya - yb)`"
+        },
+        {
+          "label": "B",
+          "text": "`(xa - xb) / (yb - ya)`"
+        },
+        {
+          "label": "C",
+          "text": "`(ya - yb) / (xa - xb)`"
+        },
+        {
+          "label": "D",
+          "text": "`(ya - yb) / (xb - xa)`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "直线的斜率定义为“y坐标的变化量除以x坐标的变化量”。对于点A(xa, ya)和B(xb, yb)，斜率可以表示为 `(ya - yb) / (xa - xb)` 或 `(yb - ya) / (xb - xa)`。选项C `(ya - yb) / (xa - xb)` 正确地表达了这一概念。其他选项的分子分母颠倒或符号不一致，不符合斜率的定义。"
+    },
+    {
+      "id": "nKytSIAtc_4WdPZyODbTS",
+      "order": 7,
+      "type": "single_choice",
+      "content": "二项式(x + y)^6的展开式中x^3 * y^3项的系数是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "120"
+        }
+      ],
+      "answer": "C",
+      "explanation": "根据二项式定理，$(x + y)^n$ 展开式中 $x^{n-k}y^k$ 项的系数是组合数 $C(n, k)$。对于 $(x + y)^6$ 中的 $x^3y^3$ 项，我们有 $n=6$ 且 $k=3$。因此，系数为 $C(6, 3) = \\frac{6!}{3!(6-3)!} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$。选项 A (6) 是 $n$ 的值，选项 B (15) 是 $C(6,2)$ 或 $C(6,4)$，选项 D (120) 是 $6!$，它们都不是正确答案。"
+    },
+    {
+      "id": "NabSERco0OEiRhRVUFkKZ",
+      "order": 8,
+      "type": "single_choice",
+      "content": "以下关于动态规划的说法中，错误的是（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "动态规划方法有递推和递归两种实现形式。"
+        },
+        {
+          "label": "B",
+          "text": "递归实现动态规划方法的时间复杂度总是不低于递推实现。"
+        },
+        {
+          "label": "C",
+          "text": "动态规划方法将原问题分解为一个或多个相似的子问题。"
+        },
+        {
+          "label": "D",
+          "text": "动态规划方法通常能够列出递推公式。"
+        }
+      ],
+      "answer": "B",
+      "explanation": "选项 B 错误。动态规划的递推（迭代）和递归（记忆化搜索）两种实现形式，在渐进时间复杂度上通常是相同的，因为它们都确保每个子问题"
+    },
+    {
+      "id": "zrx3feogB4IBv5Q47rdQd",
+      "order": 9,
+      "type": "single_choice",
+      "content": "在下面的程序中，使用整数表示一种组合。整数二进制表示的某一位为1，表示该位对应的数被选中，反之为0表示未选中。例如，从 0 - 5 这 6 个数中选出 3 个，则 `0b111000` 代表选中 3, 4, 5 三个数，`0b011001` 代表选中 0, 3, 4 三个数。`zuhe_next` 函数按组合对应的整数由大到小的顺序，求出组合 `c` 的下一个组合。横线处可以填入的是（ ）。\n\n```cpp\nint intlow2(int c) {\n    return ________; // 在此处填入选项\n}\nint zuhe_next_incur(int c, int n, int l) {\n    if (n == 1) return c;\n    if ((c & (1 << l)) == 0) {\n        int d = intlow2(c);\n        c = (c & ~d);\n        c = (c | (d >> 1));\n    } else {\n        c = (c & ~(1 << l));\n        c = zuhe_next_incur(c, n - 1, l + 1);\n        int d = intlow2(c);\n        c = (c | (d >> 1));\n    }\n    return c;\n}\n// 从n个数中选m个，当前组合为c\nint zuhe_next(int c, int n, int m) {\n    return zuhe_next_incur(c, n, 0);\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`((c - 1) ^ c)`"
+        },
+        {
+          "label": "B",
+          "text": "`(((c - 1) ^ c) + 1)`"
+        },
+        {
+          "label": "C",
+          "text": "`(((c - 1) ^ c) >> 1)`"
+        },
+        {
+          "label": "D",
+          "text": "`((((c - 1) ^ c) + 1) >> 1)`"
+        }
+      ],
+      "answer": "D",
+      "explanation": "`\n`intlow2(int c)` 函数的目的是找到 `c` 中最低位的 1 所对应的数值，并且将它右移一位。\n\n1.  **正确答案"
+    },
+    {
+      "id": "PuSlbIImZvZDlctPeRl3C",
+      "order": 10,
+      "type": "single_choice",
+      "content": "下面程序的输出为（ ）。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int N = 15, cnt = 0;\n    for (int x = 0; x + x + x <= N; x++)\n        for (int y = x; x + y + y <= N; y++)\n            for (int z = y; x + y + z <= N; z++)\n                cnt++;\n    cout << cnt << endl;\n    return 0;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "174"
+        },
+        {
+          "label": "B",
+          "text": "447"
+        },
+        {
+          "label": "C",
+          "text": "816"
+        },
+        {
+          "label": "D",
+          "text": "4096"
+        }
+      ],
+      "answer": "A",
+      "explanation": "该程序计算满足 `0 <= x <= y <= z` 且 `x + y + z <= 15` 的整数三元组 `(x, y, z)`"
+    },
+    {
+      "id": "yGS3OC5A50ZIwLlqVP9it",
+      "order": 11,
+      "type": "single_choice",
+      "content": "下面最长公共子序列程序中，横线处应该填入的是（ ）。\n\n```cpp\n#define MAX(A, B) (((A) > (B)) ? (A) : (B))\n#define MIN(A, B) (((A) < (B)) ? (A) : (B))\nint dp[MAX_L + 1][MAX_L + 1];\nint LCS(char str1[], char str2[]) {\n    int len1 = strlen(str1);\n    int len2 = strlen(str2);\n    for (int i = 0; i < len1; i++)\n        for(int j = 0; j < len2; j++)\n            if (str1[i] == str2[j])\n                dp[i + 1][j + 1] = dp[i][j] + 1;\n            else\n                ________; // 在此处填入选项\n    return dp[len1][len2];\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "`dp[i + 1][j + 1] = dp[i][j + 1] + dp[i + 1][j]`"
+        },
+        {
+          "label": "B",
+          "text": "`dp[i + 1][j + 1] = MIN(dp[i][j + 1], dp[i + 1][j])`"
+        },
+        {
+          "label": "C",
+          "text": "`dp[i + 1][j + 1] = MAX(dp[i][j + 1], dp[i + 1][j])`"
+        },
+        {
+          "label": "D",
+          "text": "`dp[i + 1][j + 1] = MAX(dp[i][j + 1], dp[i + 1][j]) + 1`"
+        }
+      ],
+      "answer": "C",
+      "explanation": "当 `str1[i]` 不等于 `str2[j]` 时，当前位置的最长公共子序列长度，等于 `str1` 的前 `i` 个字符与 `str2` 的前 `j+1` 个字符的最长公共子序列长度，或者 `str1` 的前 `i+1` 个字符与 `str2` 的前 `j` 个字符的最长公共子序列长度，取两者中的较大值。因此，`dp[i + 1][j + 1] = MAX(dp[i][j + 1], dp[i + 1][j])` 符合 LCS 的动态规划转移方程，选项 C 正确。\n\nA 选项 `dp[i + 1][j + 1] = dp[i][j + 1] + dp[i + 1][j]` 错误地将两个子问题的长度相加。B 选项 `dp[i + 1][j + 1] = MIN(dp[i][j + 1], dp[i + 1][j])` 会找到最短而不是最长公共子序列。D 选项 `dp[i + 1][j + 1] = MAX("
+    },
+    {
+      "id": "tx5QTVUt0IN3S5KGJ053a",
+      "order": 12,
+      "type": "single_choice",
+      "content": "下列Dijkstra算法中，横线处应该填入的是（ ）。\n\n```cpp\ntypedef struct Edge {\n    int in, out;    // 从下标in顶点到下标out顶点的边\n    int len;        // 边长度\n    struct Edge * next;\n} Edge;\n// v：顶点个数，graph：出边邻接表，start：起点下标，dis：输出每个顶点的最短距离\nvoid dijkstra(int v, Edge * graph[], int start, int * dis) {\n    const int MAX_DIS = 0x7fffff;\n    for (int i = 0; i < v; i++)\n        dis[i] = MAX_DIS;\n    dis[start] = 0;\n    int * visited = new int[v];\n    for (int i = 0; i < v; i++)\n        visited[i] = 0;\n    visited[start] = 1;\n    for (int t = 0; ; t++) {\n        int min = MAX_DIS, minv = -1;\n        for (int i = 0; i < v; i++) {\n            if (visited[i] == 0 && min > dis[i]) {\n                min = dis[i];\n                minv = i;\n            }\n        }\n        if (minv < 0)\n            break;\n        visited[minv] = 1;\n        for (Edge * e = graph[minv]; e != NULL; e = e->next) {\n            ________; // 在此处填入选项\n        }\n    }\n    delete[] visited;\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "```cpp\nif (dis[e->out] > e->len)\n    dis[e->out] = e->len;\n```"
+        },
+        {
+          "label": "B",
+          "text": "```cpp\nif (dis[e->out] > min + e->len)\n    dis[e->out] = min + e->len;\n```"
+        },
+        {
+          "label": "C",
+          "text": "```cpp\nif (dis[e->in] > e->len)\n    dis[e->in] = e->len;\n```"
+        },
+        {
+          "label": "D",
+          "text": "```cpp\nif (dis[e->in] > min + e->len)\n    dis[e->in] = min + e->len;\n```"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Dijkstra算法的核心是“松弛”操作。当从已确定的最短路径顶点 `minv` 扩展到其邻居 `e->out` 时，需要检查通过 `"
+    },
+    {
+      "id": "I_Qd1uUMmk7nU1eXl_K5i",
+      "order": 13,
+      "type": "single_choice",
+      "content": "假设图graph中顶点数v、边数e，上题Dijkstra算法程序的时间复杂度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(e)"
+        },
+        {
+          "label": "B",
+          "text": "O(v^2)"
+        },
+        {
+          "label": "C",
+          "text": "O(v log v + e)"
+        },
+        {
+          "label": "D",
+          "text": "O((v + e) log v)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Dijkstra算法在不使用优先队列优化时，通常采用数组记录距离。它需要重复 `v` 次从所有未访问顶点中找到距离最小的顶点，每次查找"
+    },
+    {
+      "id": "hTCxtEe0eYOKPDUzqziXW",
+      "order": 14,
+      "type": "single_choice",
+      "content": "下面的快速排序程序中，两处横线处分别应填入的是（ ）。\n\n```cpp\nvoid quick_sort(int a[], int n) {\n    if (n <= 1)\n        return;\n    int pivot = 0, l = 0, r = n - 1;\n    while (________) { // 在此处填入选项\n        while (r > pivot && a[r] >= a[pivot])\n            r--;\n        if (r > pivot) {\n            int temp = a[pivot];\n            a[pivot] = a[r];\n            a[r] = temp;\n            pivot = r;\n        }\n        while (l < pivot && a[l] <= a[pivot])\n            l++;\n        if (l < pivot) {\n            int temp = a[pivot];\n            a[pivot] = a[l];\n            a[l] = temp;\n            pivot = l;\n        }\n    }\n    quick_sort(a, pivot);\n    quick_sort(________); // 在此处填入选项\n}\n```",
+      "options": [
+        {
+          "label": "A",
+          "text": "第一处：`l < r`\n第二处：`a + pivot + 1, n - pivot - 1`"
+        },
+        {
+          "label": "B",
+          "text": "第一处：`l < r`\n第二处：`a + pivot + 1, n - pivot`"
+        },
+        {
+          "label": "C",
+          "text": "第一处：`l <= r`\n第二处：`a + pivot + 1, n - pivot - 1`"
+        },
+        {
+          "label": "D",
+          "text": "第一处：`l <= r`\n第二处：`a + pivot + 1, n - pivot`"
+        }
+      ],
+      "answer": "A",
+      "explanation": "第一处 `while` 循环的条件应为 `l < r`。当 `l` 和 `r` 相遇（即 `l == r`）时，表示"
+    },
+    {
+      "id": "WX_kmqcmDO8K38Bb-v-c0",
+      "order": 15,
+      "type": "single_choice",
+      "content": "上题快速排序程序的时间复杂度为（ ）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "O(n)"
+        },
+        {
+          "label": "B",
+          "text": "O(n^2)"
+        },
+        {
+          "label": "C",
+          "text": "O(2^n)"
+        },
+        {
+          "label": "D",
+          "text": "O(n log n)"
+        }
+      ],
+      "answer": "D",
+      "explanation": "快速排序在平均情况下的时间复杂度是 O(n log n)。它通过分治策略，每次划分操作需要 O(n) 时间，而递归深度为 log n。O(n^2) 是快速排序在最坏情况下的时间复杂度，而 O(n) 和 O(2^n) 不符合排序算法的典型复杂度。"
+    },
+    {
+      "id": "f0gvsNku_Sj2mYZtzorG4",
+      "order": 16,
+      "type": "true_false",
+      "content": "表达式 `'3' + '5'` 的结果为 `'8'`，类型为 `char`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "题目错误。在 C++ 中，字符字面量 `'3'` 和 `'5'` 参与算术运算时，会先被提升为它们的 ASCII 整数值。`'3'` 的 ASCII 值是 51，`'5'` 的 ASCII 值是 53。因此，表达式 `'3' + '5'` 的结果是 `51 + 53 = 104`，其类型为 `int`，而不是字符 `'8'`。"
+    },
+    {
+      "id": "jWWLyCGQM3mCORVH7KRhE",
+      "order": 17,
+      "type": "true_false",
+      "content": "在C++语言中，可以在函数内定义结构体，但该结构体类型只能在该函数内使用。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "在C++中，当结构体在函数内部定义时，它的作用域确实仅限于该函数。这意味着你只能在该函数内部声明该结构体类型的变量或使用该类型，一旦函数执行完毕，该结构体类型就不可访问了。因此，题目描述是正确的，选项T是正确的。选项F错误，因为它与C++的局部作用域规则不符。"
+    },
+    {
+      "id": "_cDsC-FVaLAgwkqBgaFUy",
+      "order": 18,
+      "type": "true_false",
+      "content": "对n个元素的数组进行排序，快速排序和归并排序的平均时间复杂度都为O(n log n)。但快速排序存在退化情况，使得时间复杂度升高至O(n^2)；归并排序需要额外的空间开销。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该描述完全正确。快速排序和归并排序的平均时间复杂度确实都是O(n log n)。快速排序在最坏情况下（例如，枢轴选择不当导致分区极度不平衡）会退化到O(n^2)。而归并排序在合并子数组时，通常需要一个大小为O(n)的额外辅助空间来存储临时数据。"
+    },
+    {
+      "id": "PU6JMwLnDFv_hjV7mRlhD",
+      "order": 19,
+      "type": "true_false",
+      "content": "二维数组的最后一维在内存中一定是连续的，但第一维在内存中可能不连续。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "C++ 中的二维数组在内存中是按行主序（row-major）连续存储的。这意味着不仅同一行的元素是连续的，而且不同行之间也是紧密相连、连续存放的。因此，整个二维数组在内存中是一个完整的连续块，不存在第一维不连续的情况。原题目中“第一维在内存中可能不连续”的说法是错误的，所以正确答案是F。"
+    },
+    {
+      "id": "-v2HP2FzVNAfWCqOUkBU8",
+      "order": 20,
+      "type": "true_false",
+      "content": "使用 `math.h` 或 `cmath` 头文件中的函数，表达式 `log(1000)` 的结果类型为 `double`、值约为 `3`。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "`log`函数在C++中计算的是自然对数（以e为底），而不是以10为底。因此，`log(1000)` 的值约为 `ln(1000) ≈ 6.90775`，而非题目所说的 `3`。如果想计算以10为底的对数，应使用 `log10(1000)`，其结果才是 `3`。所以题目描述错误，正确答案为F。"
+    },
+    {
+      "id": "9wmw1UVDCpBLiPRrYMzFR",
+      "order": 21,
+      "type": "true_false",
+      "content": "你有三种硬币，分别面值2元、5元和7元，每种硬币都有足够多。买一本书需要27元，则有8种硬币组合（组合与顺序无关，\"1个2元+1个5元+1个2元\"与\"1个5元+2个2元\"认为是同样的组合）可以正好付清，且不需要对方找钱。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "该题目考察组合计数。我们需要找出所有满足 `2x + 5y + 7z = 27` 的非负整数 `(x, y, z)` 组合。"
+    },
+    {
+      "id": "IPsfCjIJAQ04Ptt3Jf2nx",
+      "order": 22,
+      "type": "true_false",
+      "content": "使用哈希函数 `f(x) = x % p` 建立键值为 `int` 类型的哈希表，只要 `p` 取小于等于哈希表大小的素数，可保证不发生碰撞。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该说法错误。即使哈希函数 `f(x) = x % p` 中的 `p` 是素数，且小于等于哈希表大小，也无法保证不发生碰撞。例如，当 `p=5` 时，键值 `1` 和 `6` 都会通过 `f(x)` 映射到索引 `1`，导致碰撞。哈希函数的作用是计算存储位置，而不是防止不同键值映射到同一位置，因此碰撞是哈希表设计中需要考虑的常见问题。选项 T 错误在于它声称“可保证不发生碰撞”，这与哈希表的本质相悖。"
+    },
+    {
+      "id": "3U4tMkCQismS2NEn_zsqP",
+      "order": 23,
+      "type": "true_false",
+      "content": "杨辉三角中的第n行、第m项，即为将二项式(a + b)^n展开后a^(n-m) * b^m项的系数。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "杨辉三角的行和项通常从0开始索引。如果第n行指0-indexed的第n行，第m项指0-indexed的第m项，那么它对应"
+    },
+    {
+      "id": "ixbuMkPsHIJCv3mgMxmgx",
+      "order": 24,
+      "type": "true_false",
+      "content": "判断图是否连通，可以通过广度优先搜索实现。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "T",
+      "explanation": "正确。判断图是否连通，可以通过从图中任意一个节点开始进行广度优先搜索（`BFS`）。如果`BFS`遍历结束后，访问了图中所有的节点，则图是连通的；否则，如果还有未访问的节点，则图是不连通的。因此，`BFS`是判断图连通性的一种有效方法。错误选项F与此原理相悖。"
+    },
+    {
+      "id": "QPViIuBys2q8eoU5IYXHz",
+      "order": 25,
+      "type": "true_false",
+      "content": "要求解一元二次方程 x^2 + ax + b = 0，需要先判断表达式 `a ^ 2 - b * 4 >= 0` 是否为真。",
+      "options": [
+        {
+          "label": "T",
+          "text": "正确"
+        },
+        {
+          "label": "F",
+          "text": "错误"
+        }
+      ],
+      "answer": "F",
+      "explanation": "该表达式是错误的。在 C++ 中，`^` 运算符表示按位异或（bitwise XOR），而不是数学上的乘方（平方）。正确计算 `a` 的平方应使用 `a * a` 或 `pow(a, 2)`。因此，题目中的 `a ^ 2 - b * 4` 无法正确判断一元二次方程 `x^2 + ax + b = 0` 的判别式 `a^2 - 4b` 是否为真。"
+    }
+  ]
+}
