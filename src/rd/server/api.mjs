@@ -209,11 +209,16 @@ export async function handleApi(req, res, pathname, query) {
     const rows = db.prepare("SELECT key, body FROM cms_blocks").all();
     const cms = {};
     for (const r of rows) {
-      if (r.key === "syllabus" || r.key === "timeline") {
+      if (r.key === "syllabus" || r.key === "timeline" || r.key === "syllabus_meta") {
         try {
-          cms[r.key] = JSON.parse(r.body);
+          const parsed = JSON.parse(r.body);
+          if (r.key === "syllabus_meta") {
+            if (parsed.csp_compare) cms.csp_compare = parsed.csp_compare;
+          } else {
+            cms[r.key] = parsed;
+          }
         } catch {
-          cms[r.key] = [];
+          if (r.key !== "syllabus_meta") cms[r.key] = [];
         }
       } else cms[r.key] = r.body;
     }

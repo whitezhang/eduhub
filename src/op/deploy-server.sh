@@ -13,6 +13,9 @@ npm ci --omit=dev
 echo "==> [server] apply catalog"
 node src/op/apply-catalog.mjs
 
+echo "==> [server] apply cms (syllabus / timeline)"
+node src/op/apply-cms.mjs
+
 echo "==> [server] import seed (gesp / csp-j)"
 if command -v python3 >/dev/null 2>&1; then
   PY=python3

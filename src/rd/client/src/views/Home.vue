@@ -26,17 +26,22 @@ onMounted(async () => {
       </section>
       <section class="chapter">
         <div class="chapter-head"><span class="chapter-num">二</span><h2>教学大纲</h2></div>
+        <p class="muted">按赛道查看知识体系、初复赛说明与备考要点。</p>
+        <p class="filter-row">
+          <router-link to="/syllabus">大纲总览</router-link>
+          <router-link to="/syllabus/guide">知识点详解</router-link>
+        </p>
         <router-link
           v-for="item in cms.syllabus"
           :key="item.slug"
-          class="syll-row"
-          :to="{ path: '/problems', query: { source: item.slug } }"
+          class="syll-row syll-row-home"
+          :to="{ path: '/syllabus', query: { track: item.slug } }"
         >
           <span>
             <strong>{{ item.title }}</strong>
             <div class="muted">{{ item.blurb }}</div>
           </span>
-          <span class="muted">进入题单 →</span>
+          <span class="muted">查看 →</span>
         </router-link>
       </section>
       <section class="chapter">

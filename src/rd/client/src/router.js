@@ -8,12 +8,16 @@ import ProgressUser from "./views/ProgressUser.vue";
 import Studio from "./views/Studio.vue";
 import StudioProblemEdit from "./views/StudioProblemEdit.vue";
 import PaperWorkbook from "./views/PaperWorkbook.vue";
+import SyllabusOverview from "./views/syllabus/SyllabusOverview.vue";
+import SyllabusGuide from "./views/syllabus/SyllabusGuide.vue";
 import { useSession } from "./stores/session.js";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: Home },
+    { path: "/syllabus", component: SyllabusOverview },
+    { path: "/syllabus/guide", component: SyllabusGuide },
     { path: "/problems", component: Problems },
     { path: "/problems/papers/:id", component: PaperWorkbook, meta: { requiresAuth: true } },
     { path: "/problems/:id", component: ProblemSolve, meta: { requiresAuth: true } },

@@ -303,8 +303,8 @@ async function toggleProblem(p) {
       <label class="field">学习信息学的好处
         <textarea v-model="cms.benefits" rows="8"></textarea>
       </label>
-      <label class="field">教学大纲（JSON）
-        <textarea v-model="cms.syllabus" rows="10" class="mono"></textarea>
+      <label class="field">教学大纲（JSON：slug/title/blurb/rounds/topics/guides）
+        <textarea v-model="cms.syllabus" rows="16" class="mono"></textarea>
       </label>
       <label class="field">时间节点（JSON）
         <textarea v-model="cms.timeline" rows="10" class="mono"></textarea>

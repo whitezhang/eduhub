@@ -290,42 +290,26 @@ function seedIfEmpty(database) {
 
 对准备 GESP、CSP-J/S、NOIP、NOI 的学生，这是一条可核对的能力阶梯，而不是零散刷题。本站只提供训练与模拟，官方报名与证书以中国计算机学会网站为准。`,
     );
-  const syllabus = JSON.stringify([
-    {
-      slug: "gesp",
-      title: "GESP 1–8 级",
-      blurb: "语法、简单算法与上机习惯。图形化本期不做。",
-    },
-    {
-      slug: "csp-j",
-      title: "CSP-J",
-      blurb: "入门级：第一轮客观题，第二轮四道编程题。",
-    },
-    {
-      slug: "csp-s",
-      title: "CSP-S",
-      blurb: "提高级，与 CSP-J 互相独立。",
-    },
-    {
-      slug: "noip",
-      title: "NOIP",
-      blurb: "提高组水平，通常一天四题。",
-    },
-    {
-      slug: "noi",
-      title: "NOI 入门",
-      blurb: "全国决赛风格的题型与部分分。",
-    },
-  ]);
+  const cmsPath = path.join(SEED_DIR, "cms.json");
+  let syllabus;
+  let timeline;
+  let syllabusMeta = null;
+  if (fs.existsSync(cmsPath)) {
+    const cms = JSON.parse(fs.readFileSync(cmsPath, "utf8"));
+    syllabus = JSON.stringify(cms.syllabus || []);
+    timeline = JSON.stringify(cms.timeline || []);
+    if (Array.isArray(cms.csp_compare)) {
+      syllabusMeta = JSON.stringify({ csp_compare: cms.csp_compare });
+    }
+  } else {
+    syllabus = "[]";
+    timeline = "[]";
+  }
   database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("syllabus", syllabus);
-  const timeline = JSON.stringify([
-    { month_label: "3 / 6 / 9 / 12 月", title: "GESP 认证", prep: "按级别刷对应题单，考前两周做混合卷。" },
-    { month_label: "9 月", title: "CSP-J/S 第一轮", prep: "客观题：计基、语法、阅读程序。" },
-    { month_label: "10–11 月", title: "CSP-J/S 第二轮", prep: "四道编程题；用 OI 赛制模拟。" },
-    { month_label: "11–12 月", title: "NOIP", prep: "CSP-S 第二轮后按省资格准备。" },
-    { month_label: "次年 7 月前后", title: "NOI", prep: "省选之后。本站仅提供风格相近的训练题。" },
-  ]);
   database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("timeline", timeline);
+  if (syllabusMeta) {
+    database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("syllabus_meta", syllabusMeta);
+  }
 
   const lists = [
     ["gesp", "GESP 1–8 级", "gesp", "语法与简单算法"],
@@ -344,8 +328,8 @@ function seedIfEmpty(database) {
      VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
   );
   ext.run("3 / 6 / 9 / 12 月", "GESP", "中小学", "按级别准备", "https://gesp.ccf.org.cn/", "前往 GESP 官网", "gesp", 1);
-  ext.run("9 月", "CSP-J/S 第一轮", "12 周岁以上", "客观题", "https://www.noi.cn/", "前往 NOI 官网", "csp-j", 2);
-  ext.run("10–11 月", "CSP-J/S 第二轮", "第一轮通过者", "四道编程题，OI 赛制", "https://www.noi.cn/", "前往 NOI 官网", "csp-j", 3);
+  ext.run("9 月", "CSP-J/S 第一轮（初赛）", "12 周岁以上", "笔试：选择/阅读程序/完善程序（S 含多选）", "https://www.noi.cn/", "前往 NOI 官网", "csp-j", 2);
+  ext.run("10–11 月", "CSP-J/S 第二轮（复赛）", "第一轮通过者", "机试 4 道编程题，OI 赛制", "https://www.noi.cn/", "前往 NOI 官网", "csp-j", 3);
   ext.run("11–12 月", "NOIP", "具备省资格者", "提高组水平", "https://www.noi.cn/", "前往 NOI 官网", "noip", 4);
 }
 
