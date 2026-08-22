@@ -9,8 +9,9 @@ import Studio from "./views/Studio.vue";
 import StudioProblemEdit from "./views/StudioProblemEdit.vue";
 import PaperWorkbook from "./views/PaperWorkbook.vue";
 import SyllabusOverview from "./views/syllabus/SyllabusOverview.vue";
-import About from "./views/About.vue";
 import { useSession } from "./stores/session.js";
+
+const ABOUT_URL = "https://about.jsoner.cn/";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -29,7 +30,7 @@ const router = createRouter({
     { path: "/progress/:id", component: ProgressUser },
     { path: "/studio", component: Studio },
     { path: "/studio/problems/:id", component: StudioProblemEdit },
-    { path: "/about", component: About },
+    { path: "/about", beforeEnter: () => { window.location.assign(ABOUT_URL); return false; } },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {

@@ -58,7 +58,7 @@ onMounted(async () => {
       </p>
       <p class="home-hero-cred muted">
         讲师
-        <router-link to="/about">whitezhang</router-link>
+        <a href="https://about.jsoner.cn/" target="_blank" rel="noopener noreferrer">whitezhang</a>
         · 百度 / 京东架构师（P8）· 本站开放大纲、题库与榜单，先拿再决定要不要练
       </p>
       <nav class="home-hero-cta" aria-label="开始">
@@ -218,7 +218,7 @@ onMounted(async () => {
         <div class="home-sec-body home-close-actions">
           <router-link class="btn" to="/syllabus">选定赛道大纲</router-link>
           <router-link class="btn-ghost" to="/problems">打开题库</router-link>
-          <router-link class="btn-ghost" to="/about">关于讲师</router-link>
+          <a class="btn-ghost" href="https://about.jsoner.cn/" target="_blank" rel="noopener noreferrer">关于讲师</a>
         </div>
       </section>
     </template>
