@@ -13,21 +13,23 @@ import { useSession } from "./stores/session.js";
 
 const ABOUT_URL = "https://about.jsoner.cn/";
 
+const authMeta = { requiresAuth: true };
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: Home },
-    { path: "/syllabus", component: SyllabusOverview },
+    { path: "/syllabus", component: SyllabusOverview, meta: { ...authMeta, sectionTitle: "大纲" } },
     { path: "/syllabus/guide", redirect: (to) => ({ path: "/syllabus", query: to.query }) },
     { path: "/syllabus/topic/:id", redirect: (to) => ({ path: "/syllabus", query: to.query }) },
-    { path: "/problems", component: Problems },
-    { path: "/problems/papers/:id", component: PaperWorkbook, meta: { requiresAuth: true } },
-    { path: "/problems/:id", component: ProblemSolve, meta: { requiresAuth: true } },
+    { path: "/problems", component: Problems, meta: { ...authMeta, sectionTitle: "题库" } },
+    { path: "/problems/papers/:id", component: PaperWorkbook, meta: { ...authMeta, sectionTitle: "题库" } },
+    { path: "/problems/:id", component: ProblemSolve, meta: { ...authMeta, sectionTitle: "题库" } },
     { path: "/contests", redirect: "/problems" },
     { path: "/contests/:id", redirect: (to) => `/problems/papers/${to.params.id}` },
-    { path: "/external", component: External },
-    { path: "/progress", component: Progress },
-    { path: "/progress/:id", component: ProgressUser },
+    { path: "/external", component: External, meta: { ...authMeta, sectionTitle: "外部资料" } },
+    { path: "/progress", component: Progress, meta: { ...authMeta, sectionTitle: "榜单" } },
+    { path: "/progress/:id", component: ProgressUser, meta: { ...authMeta, sectionTitle: "榜单" } },
     { path: "/studio", component: Studio },
     { path: "/studio/problems/:id", component: StudioProblemEdit },
     { path: "/about", beforeEnter: () => { window.location.assign(ABOUT_URL); return false; } },
@@ -52,10 +54,8 @@ router.beforeEach(async (to) => {
     }
   }
   if (session.user) return true;
-  session.openLogin();
-  const q = {};
-  if (to.query.source) q.source = String(to.query.source);
-  return { path: "/problems", query: q };
+  session.openLogin(to.fullPath);
+  return true;
 });
 
 export default router;

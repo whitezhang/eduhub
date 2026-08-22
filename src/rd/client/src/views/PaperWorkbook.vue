@@ -4,6 +4,8 @@ import { useRoute, useRouter } from "vue-router";
 import { api } from "../api.js";
 import { localDraft, readLocalPaper, setMarked, writeLocalProgress } from "../paper-save.js";
 import { useSession } from "../stores/session.js";
+import { useProtectedLoad } from "../composables/useAuthWall.js";
+import AuthWallSkeleton from "../components/AuthWallSkeleton.vue";
 import CodeEditor from "./CodeEditor.vue";
 import StatementView from "./StatementView.vue";
 import { formatOptionText } from "../statement.js";
@@ -208,6 +210,8 @@ async function load() {
   }
 }
 
+const { locked } = useProtectedLoad(load);
+
 function jumpTo(p) {
   activeId.value = p.id;
   const el = document.getElementById(`q-${p.id}`);
@@ -375,11 +379,13 @@ function onWindowScroll() {
 }
 
 onMounted(() => {
-  load();
   window.addEventListener("scroll", onWindowScroll, { passive: true });
   onWindowScroll();
 });
-watch(() => route.params.id, load);
+watch(() => route.params.id, () => {
+  if (!session.user) return;
+  load();
+});
 watch(() => session.user?.id, () => {
   if (paper.value) loadMarks();
 });
@@ -391,7 +397,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="full">
+  <AuthWallSkeleton v-if="locked" variant="problems" />
+  <div v-else class="full">
     <div class="wide workbook-top">
       <p class="muted">
         <a href="#" @click.prevent="backToBank">← 题库</a>

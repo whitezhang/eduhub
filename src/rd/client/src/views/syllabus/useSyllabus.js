@@ -1,10 +1,12 @@
 import { computed, onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { api } from "../../api.js";
+import { useSession } from "../../stores/session.js";
 
 export function useSyllabus() {
   const route = useRoute();
   const router = useRouter();
+  const session = useSession();
   const cms = ref(null);
   const err = ref("");
   const loading = ref(true);
@@ -30,7 +32,12 @@ export function useSyllabus() {
     router.push({ path: route.path, query: { ...route.query, track: slug } });
   }
 
-  onMounted(load);
+  onMounted(() => {
+    if (session.user) load();
+  });
+  watch(() => session.user, (u) => {
+    if (u) load();
+  });
   watch(
     () => [cms.value, track.value],
     () => {

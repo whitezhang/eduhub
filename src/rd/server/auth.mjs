@@ -1,5 +1,6 @@
 import crypto from "node:crypto";
 import bcrypt from "bcryptjs";
+import { getConfig } from "../../op/conf/load-config.mjs";
 import { getDb, publicUser } from "./db.mjs";
 import { parseCookies } from "./http-util.mjs";
 
@@ -7,7 +8,7 @@ const COOKIE = "eduhub_sso";
 const TTL_SEC = 60 * 60 * 24 * 30;
 
 function secret() {
-  return process.env.SSO_SECRET || "eduhub-dev-change-me";
+  return process.env.SSO_SECRET || getConfig().secrets?.ssoSecret || "eduhub-dev-change-me";
 }
 
 function b64url(buf) {

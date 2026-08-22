@@ -2,10 +2,13 @@
 import { computed, ref, watch } from "vue";
 import SyllabusNav from "./SyllabusNav.vue";
 import { useSyllabus, importanceStars, examFlag } from "./useSyllabus.js";
+import { useAuthWall } from "../../composables/useAuthWall.js";
+import AuthWallSkeleton from "../../components/AuthWallSkeleton.vue";
 
 const PAGE_SIZE = 8;
 
 const { cms, err, loading, track, item, tracks, setTrack } = useSyllabus();
+const { locked } = useAuthWall();
 const topicPage = ref(1);
 
 const topics = computed(() => item.value?.topics || []);
@@ -32,7 +35,8 @@ watch(topicPages, (n) => {
 </script>
 
 <template>
-  <article class="read wide syll-page">
+  <AuthWallSkeleton v-if="locked" variant="syllabus" />
+  <article v-else class="read wide syll-page">
     <p v-if="err" class="err">{{ err }}</p>
     <p v-if="loading" class="muted">载入中</p>
     <template v-else-if="cms && item">

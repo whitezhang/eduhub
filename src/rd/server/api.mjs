@@ -1,6 +1,13 @@
 import { getDb } from "./db.mjs";
 import { sendJson, readJsonBody } from "./http-util.mjs";
 import { userFromRequest, login, createStudent, updateDisplayName, deleteStudent, logout, cookieHeader, clearCookieHeader, requireCoach, requireUser } from "./auth.mjs";
+import {
+  handleChallengeRoutes,
+  guardListAccess,
+  guardProtectedAccess,
+  guardRequireLogin,
+  guardAuthAccess,
+} from "./guard.mjs";
 import { enqueue, queueStatus } from "./judge.mjs";
 import {
   applyCatalog,
@@ -164,6 +171,10 @@ export async function handleApi(req, res, pathname, query) {
     return true;
   }
 
+  if (await handleChallengeRoutes(req, res, method, pathname)) {
+    return true;
+  }
+
   if (method === "GET" && pathname === "/api/session") {
     sendJson(res, 200, { user: me });
     return true;
@@ -186,6 +197,7 @@ export async function handleApi(req, res, pathname, query) {
   }
 
   if (method === "POST" && pathname === "/api/login") {
+    if (!guardAuthAccess(req, res)) return true;
     const body = await readJsonBody(req);
     const got = login(body.username, body.password);
     if (!got) {
@@ -220,12 +232,28 @@ export async function handleApi(req, res, pathname, query) {
         }
       } else cms[r.key] = r.body;
     }
+    if (query.scope === "home") {
+      if (!guardListAccess(req, res, me)) return true;
+      const syllabus = Array.isArray(cms.syllabus)
+        ? cms.syllabus.map((s) => ({ slug: s.slug, title: s.title, blurb: s.blurb }))
+        : [];
+      sendJson(res, 200, {
+        benefits: cms.benefits,
+        timeline: cms.timeline,
+        gesp_csp_bridge: cms.gesp_csp_bridge,
+        csp_compare: cms.csp_compare,
+        syllabus,
+      });
+      return true;
+    }
+    if (!guardProtectedAccess(req, res, me)) return true;
     sendJson(res, 200, cms);
     return true;
   }
 
   const knowledgeMatch = pathname.match(/^\/api\/knowledge\/([a-z0-9-]+)$/i);
   if (method === "GET" && knowledgeMatch) {
+    if (!guardProtectedAccess(req, res, me)) return true;
     const row = db.prepare("SELECT body FROM cms_blocks WHERE key = 'knowledge_topics'").get();
     if (!row) {
       sendJson(res, 404, { error: "知识点库未导入" });
@@ -247,11 +275,13 @@ export async function handleApi(req, res, pathname, query) {
   }
 
   if (method === "GET" && pathname === "/api/problem-lists") {
+    if (!guardProtectedAccess(req, res, me)) return true;
     sendJson(res, 200, { lists: db.prepare("SELECT * FROM problem_lists ORDER BY id").all() });
     return true;
   }
 
   if (method === "GET" && pathname === "/api/problems") {
+    if (!guardProtectedAccess(req, res, me)) return true;
     const source = query.source || "";
     const q = String(query.q || "").trim();
     let sql = `SELECT id, code, title, source, difficulty, full_score, type,
@@ -299,10 +329,7 @@ export async function handleApi(req, res, pathname, query) {
 
   const problemMatch = pathname.match(/^\/api\/problems\/(\d+)$/);
   if (method === "GET" && problemMatch) {
-    if (!me) {
-      sendJson(res, 401, { error: "请先登录后再做题" });
-      return true;
-    }
+    if (!guardProtectedAccess(req, res, me)) return true;
     const p = db.prepare("SELECT * FROM problems WHERE id = ?").get(Number(problemMatch[1]));
     if (!studentCanSeeProblem(db, p, me)) {
       sendJson(res, 404, { error: "题目不存在" });
@@ -463,6 +490,7 @@ export async function handleApi(req, res, pathname, query) {
   }
 
   if (method === "GET" && pathname === "/api/contests") {
+    if (!guardProtectedAccess(req, res, me)) return true;
     const source = String(query.source || "").trim();
     const q = String(query.q || "").trim().toLowerCase();
     const rows = db.prepare("SELECT * FROM contests WHERE published = 1 ORDER BY start_at DESC").all();
@@ -511,10 +539,7 @@ export async function handleApi(req, res, pathname, query) {
 
   const workbookMatch = pathname.match(/^\/api\/contests\/(\d+)\/workbook$/);
   if (method === "GET" && workbookMatch) {
-    if (!me) {
-      sendJson(res, 401, { error: "请先登录后再做题" });
-      return true;
-    }
+    if (!guardProtectedAccess(req, res, me)) return true;
     const c = db.prepare("SELECT * FROM contests WHERE id = ?").get(Number(workbookMatch[1]));
     if (!c || (c.published !== 1 && me?.role !== "coach")) {
       sendJson(res, 404, { error: "试卷不存在" });
@@ -586,6 +611,7 @@ export async function handleApi(req, res, pathname, query) {
 
   const contestMatch = pathname.match(/^\/api\/contests\/(\d+)$/);
   if (method === "GET" && contestMatch) {
+    if (!guardProtectedAccess(req, res, me)) return true;
     const c = db.prepare("SELECT * FROM contests WHERE id = ?").get(Number(contestMatch[1]));
     if (!c || (c.published !== 1 && me?.role !== "coach")) {
       sendJson(res, 404, { error: "比赛不存在" });
@@ -673,11 +699,13 @@ export async function handleApi(req, res, pathname, query) {
   }
 
   if (method === "GET" && pathname === "/api/external") {
+    if (!guardProtectedAccess(req, res, me)) return true;
     sendJson(res, 200, { events: db.prepare("SELECT * FROM external_events ORDER BY seq").all() });
     return true;
   }
 
   if (method === "GET" && pathname === "/api/progress") {
+    if (!guardProtectedAccess(req, res, me)) return true;
     const students = db.prepare("SELECT id, username, display_name FROM users WHERE role = 'student'").all();
     const totalP = db
       .prepare(`SELECT COUNT(*) AS c FROM problems WHERE published = 1 AND type = 'traditional' AND ${hasAnswerSql()}`)
@@ -725,6 +753,7 @@ export async function handleApi(req, res, pathname, query) {
 
   const progMatch = pathname.match(/^\/api\/progress\/(\d+)$/);
   if (method === "GET" && progMatch) {
+    if (!guardProtectedAccess(req, res, me)) return true;
     const s = db.prepare("SELECT id, username, display_name FROM users WHERE id = ? AND role = 'student'").get(Number(progMatch[1]));
     if (!s) {
       sendJson(res, 404, { error: "没有这位用户" });

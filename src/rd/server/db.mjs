@@ -196,6 +196,13 @@ function schema(database) {
       problem_list_slug TEXT,
       seq INTEGER NOT NULL DEFAULT 0
     );
+    CREATE TABLE IF NOT EXISTS guest_usage (
+      day TEXT NOT NULL,
+      ip_hash TEXT NOT NULL,
+      units INTEGER NOT NULL DEFAULT 0,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+      PRIMARY KEY (day, ip_hash)
+    );
   `);
 }
 

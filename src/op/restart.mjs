@@ -100,7 +100,7 @@ console.log("restart dev");
 const child = spawn(process.execPath, [path.join(root, "src/op/dev.mjs")], {
   cwd: root,
   stdio: "inherit",
-  env: process.env,
+  env: { ...process.env, EDUHUB_ENV: process.env.EDUHUB_ENV || "test" },
 });
 child.on("exit", (code, signal) => {
   if (signal) process.exit(1);

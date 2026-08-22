@@ -1,13 +1,34 @@
 <script setup>
-import { reactive, ref, watch } from "vue";
+import { computed, onMounted, onUnmounted, reactive, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useSession } from "../stores/session.js";
+import { authSectionHint } from "../composables/useAuthWall.js";
 
 const route = useRoute();
 const session = useSession();
 const menuOpen = ref(false);
 const form = reactive({ username: "", password: "", error: "" });
 const profile = reactive({ display_name: "", error: "" });
+
+const showAuthWall = computed(() => Boolean(route.meta.requiresAuth && !session.user));
+const loginHint = computed(() => {
+  if (route.meta.sectionTitle) return `登录后查看${route.meta.sectionTitle}`;
+  return authSectionHint(route.path);
+});
+
+function onLoginBackdropClick() {
+  if (showAuthWall.value) return;
+  session.closeLogin();
+}
+
+function onKeydown(e) {
+  if (e.key === "Escape" && session.loginOpen && !showAuthWall.value) {
+    session.closeLogin();
+  }
+}
+
+onMounted(() => window.addEventListener("keydown", onKeydown));
+onUnmounted(() => window.removeEventListener("keydown", onKeydown));
 
 watch(
   () => session.loginOpen,
@@ -69,15 +90,23 @@ async function saveProfile() {
         <button v-else class="btn-ghost" type="button" @click="session.openLogin()">登录</button>
       </div>
     </header>
-    <main class="main">
-      <slot />
-    </main>
-    <footer class="foot">
-      非中国计算机学会官方站点。训练与模拟用。GESP / NOI 报名请走官网。
-    </footer>
-    <div v-if="session.loginOpen" class="modal-bg" @click.self="session.closeLogin()">
-      <div class="modal" role="dialog" aria-labelledby="login-title">
+    <div class="shell-body" :class="{ 'shell-body--auth-wall': showAuthWall }">
+      <main class="main" :aria-hidden="showAuthWall && session.loginOpen ? 'true' : undefined">
+        <slot />
+      </main>
+      <footer class="foot">
+        非中国计算机学会官方站点。训练与模拟用。GESP / NOI 报名请走官网。
+      </footer>
+    </div>
+    <div
+      v-if="session.loginOpen"
+      class="modal-bg"
+      role="presentation"
+      @click.self="onLoginBackdropClick"
+    >
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
         <h2 id="login-title" class="serif">登录</h2>
+        <p v-if="showAuthWall" class="muted login-hint">{{ loginHint }}</p>
         <form @submit.prevent="submit">
           <label class="field">用户名
             <input v-model="form.username" autocomplete="username" required />
@@ -88,7 +117,7 @@ async function saveProfile() {
           <p v-if="form.error" class="err">{{ form.error }}</p>
           <button class="btn" type="submit">登录</button>
         </form>
-        <p class="muted" style="margin-top:1rem">做题需登录。账号由管理员添加。</p>
+        <p class="muted" style="margin-top:1rem">账号由管理员添加。</p>
       </div>
     </div>
     <div v-if="session.profileOpen" class="modal-bg" @click.self="session.closeProfile()">

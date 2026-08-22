@@ -8,6 +8,7 @@ WorkingDirectory=/root/deploy/eduhub
 # 与 blog 的 jsoner-api（8080）同机，必须错开
 Environment=PORT=8081
 Environment=NODE_ENV=production
+Environment=EDUHUB_ENV=prod
 # Environment=SSO_SECRET=change-me
 ExecStart=/usr/bin/node src/rd/server/index.mjs
 Restart=on-failure

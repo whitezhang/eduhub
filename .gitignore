@@ -22,6 +22,7 @@ __pycache__/
 *.pyc
 .env
 .env.*
+src/op/conf/*.local.json
 *.log
 .DS_Store
 Thumbs.db

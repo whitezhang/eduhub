@@ -1,8 +1,10 @@
 <script setup>
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { api } from "../api.js";
 import { useSession } from "../stores/session.js";
+import { useProtectedLoad } from "../composables/useAuthWall.js";
+import AuthWallSkeleton from "../components/AuthWallSkeleton.vue";
 
 const PAGE_SIZE = 12;
 
@@ -88,6 +90,8 @@ async function load() {
   }
 }
 
+const { locked } = useProtectedLoad(load);
+
 function goSource(slug) {
   q.value = "";
   page.value = 1;
@@ -111,16 +115,18 @@ function clampPage() {
   if (page.value < 1) page.value = 1;
 }
 
-onMounted(load);
 watch(
   () => route.query.source,
   () => {
+    if (!session.user) return;
     q.value = "";
     page.value = 1;
     load();
   },
 );
-watch(() => session.user?.role, load);
+watch(() => session.user?.role, () => {
+  if (session.user) load();
+});
 watch(q, () => {
   page.value = 1;
 });
@@ -128,7 +134,8 @@ watch(totalPages, clampPage);
 </script>
 
 <template>
-  <div class="wide problems-page">
+  <AuthWallSkeleton v-if="locked" variant="problems" />
+  <div v-else class="wide problems-page">
     <div class="problems-head">
       <h1 class="serif">题库</h1>
       <p v-if="sourceNote" class="muted problems-note">{{ sourceNote }}</p>

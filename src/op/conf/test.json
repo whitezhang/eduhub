@@ -1,0 +1,16 @@
+{
+  "guard": {
+    "challengeDifficulty": 2,
+    "clearanceTtlSec": 7200,
+    "challengeTtlSec": 300,
+    "rateLimit": {
+      "contentPerMin": 30,
+      "listPerMin": 90,
+      "challengeVerifyPerMin": 20,
+      "authPerMin": 15
+    }
+  },
+  "secrets": {
+    "ssoSecret": "eduhub-dev-change-me"
+  }
+}

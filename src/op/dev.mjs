@@ -9,7 +9,7 @@ function run(cmd, args) {
   const child = spawn(cmd, args, {
     cwd: root,
     stdio: "inherit",
-    env: process.env,
+    env: { ...process.env, EDUHUB_ENV: process.env.EDUHUB_ENV || "test" },
   });
   children.push(child);
   return child;

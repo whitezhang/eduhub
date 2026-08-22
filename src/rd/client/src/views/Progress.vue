@@ -1,6 +1,8 @@
 <script setup>
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { api } from "../api.js";
+import { useProtectedLoad } from "../composables/useAuthWall.js";
+import AuthWallSkeleton from "../components/AuthWallSkeleton.vue";
 
 const PAGE_SIZE = 12;
 
@@ -9,6 +11,21 @@ const q = ref("");
 const page = ref(1);
 const loading = ref(true);
 const err = ref("");
+
+async function load() {
+  loading.value = true;
+  err.value = "";
+  try {
+    students.value = (await api("/api/progress")).students || [];
+  } catch (e) {
+    err.value = e.message;
+    students.value = [];
+  } finally {
+    loading.value = false;
+  }
+}
+
+const { locked } = useProtectedLoad(load);
 
 const filtered = computed(() => {
   const needle = q.value.trim().toLowerCase();
@@ -29,19 +46,6 @@ function clearSearch() {
   q.value = "";
 }
 
-onMounted(async () => {
-  loading.value = true;
-  err.value = "";
-  try {
-    students.value = (await api("/api/progress")).students || [];
-  } catch (e) {
-    err.value = e.message;
-    students.value = [];
-  } finally {
-    loading.value = false;
-  }
-});
-
 watch(q, () => {
   page.value = 1;
 });
@@ -52,7 +56,8 @@ watch(totalPages, (n) => {
 </script>
 
 <template>
-  <div class="wide progress-page">
+  <AuthWallSkeleton v-if="locked" variant="progress" />
+  <div v-else class="wide progress-page">
     <header class="page-head">
       <h1 class="serif">榜单</h1>
       <p v-if="!loading && filtered.length" class="muted page-sum">
@@ -64,41 +69,41 @@ watch(totalPages, (n) => {
     <p v-if="err" class="err">{{ err }}</p>
     <div class="page-toolbar">
       <div class="search-wrap">
-        <input v-model="q" class="search search-fill" placeholder="搜索用户或最近比赛" type="search" autocomplete="off" />
+        <input v-model="q" class="search search-fill" placeholder="搜索姓名或用户名" type="search" autocomplete="off" />
         <button v-if="q" class="search-clear" type="button" aria-label="清除" @click="clearSearch">×</button>
       </div>
     </div>
     <p v-if="loading" class="muted">载入中</p>
-    <template v-else-if="paged.length">
-      <table class="table desk progress-table">
-        <thead>
-          <tr><th>用户</th><th>题库（满分/部分/未做）</th><th>最近比赛</th><th>最近提交</th></tr>
-        </thead>
-        <tbody>
-          <tr v-for="s in paged" :key="s.id">
-            <td><router-link :to="`/progress/${s.id}`">{{ s.display_name }}</router-link></td>
-            <td>{{ s.full }} / {{ s.part }} / {{ s.untouched }}</td>
-            <td>{{ s.last_contest }}</td>
-            <td>{{ s.last_submit || "—" }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="mobile">
-        <router-link v-for="s in paged" :key="s.id" class="progress-card" :to="`/progress/${s.id}`">
-          <div>{{ s.display_name }}</div>
-          <div class="muted">满分 {{ s.full }} · 部分 {{ s.part }} · 未做 {{ s.untouched }}</div>
-          <div class="muted">{{ s.last_contest }}</div>
-        </router-link>
-      </div>
-      <p v-if="totalPages > 1" class="page-pager">
-        <button class="btn-ghost" type="button" :disabled="page <= 1" @click="page -= 1">上一页</button>
-        <span class="muted">{{ page }} / {{ totalPages }}</span>
-        <button class="btn-ghost" type="button" :disabled="page >= totalPages" @click="page += 1">下一页</button>
-      </p>
-    </template>
+    <table v-else-if="paged.length" class="table desk">
+      <thead>
+        <tr>
+          <th>学生</th>
+          <th>满分</th>
+          <th>部分</th>
+          <th>未做</th>
+          <th>最近提交</th>
+          <th>最近比赛</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="s in paged" :key="s.id">
+          <td><router-link :to="`/progress/${s.id}`">{{ s.display_name }}</router-link></td>
+          <td class="mono">{{ s.full }}</td>
+          <td class="mono">{{ s.part }}</td>
+          <td class="mono">{{ s.untouched }}</td>
+          <td class="muted mono">{{ s.last_submit || "—" }}</td>
+          <td class="muted">{{ s.last_contest }}</td>
+        </tr>
+      </tbody>
+    </table>
     <p v-else class="muted">
-      <template v-if="q.trim() && students.length">没有匹配「{{ q.trim() }}」的用户。</template>
-      <template v-else>暂无榜单数据。</template>
+      <template v-if="q.trim() && students.length">没有匹配的学生。</template>
+      <template v-else>暂无学生数据。</template>
+    </p>
+    <p v-if="!loading && totalPages > 1" class="page-pager">
+      <button class="btn-ghost" type="button" :disabled="page <= 1" @click="page -= 1">上一页</button>
+      <span class="muted">{{ page }} / {{ totalPages }}</span>
+      <button class="btn-ghost" type="button" :disabled="page >= totalPages" @click="page += 1">下一页</button>
     </p>
   </div>
 </template>

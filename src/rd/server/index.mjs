@@ -3,6 +3,7 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadConfig } from "../../op/conf/load-config.mjs";
 import { getDb } from "./db.mjs";
 import { parsePath, sendJson } from "./http-util.mjs";
 import { handleApi } from "./api.mjs";
@@ -13,6 +14,7 @@ const DIST = path.join(ROOT, "output");
 const PORT = Number(process.env.PORT || 8081);
 const production = process.env.NODE_ENV === "production";
 
+loadConfig();
 getDb();
 
 const TYPES = {

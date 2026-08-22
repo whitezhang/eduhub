@@ -1,6 +1,8 @@
 <script setup>
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { api } from "../api.js";
+import { useProtectedLoad } from "../composables/useAuthWall.js";
+import AuthWallSkeleton from "../components/AuthWallSkeleton.vue";
 
 const PAGE_SIZE = 8;
 
@@ -9,6 +11,21 @@ const q = ref("");
 const page = ref(1);
 const loading = ref(true);
 const err = ref("");
+
+async function load() {
+  loading.value = true;
+  err.value = "";
+  try {
+    events.value = (await api("/api/external")).events || [];
+  } catch (e) {
+    err.value = e.message;
+    events.value = [];
+  } finally {
+    loading.value = false;
+  }
+}
+
+const { locked } = useProtectedLoad(load);
 
 const filtered = computed(() => {
   const needle = q.value.trim().toLowerCase();
@@ -29,19 +46,6 @@ function clearSearch() {
   q.value = "";
 }
 
-onMounted(async () => {
-  loading.value = true;
-  err.value = "";
-  try {
-    events.value = (await api("/api/external")).events || [];
-  } catch (e) {
-    err.value = e.message;
-    events.value = [];
-  } finally {
-    loading.value = false;
-  }
-});
-
 watch(q, () => {
   page.value = 1;
 });
@@ -52,7 +56,8 @@ watch(totalPages, (n) => {
 </script>
 
 <template>
-  <div class="read external-page">
+  <AuthWallSkeleton v-if="locked" variant="external" />
+  <div v-else class="read external-page">
     <header class="page-head">
       <h1 class="serif">外部资料</h1>
       <p v-if="!loading && filtered.length" class="muted page-sum">

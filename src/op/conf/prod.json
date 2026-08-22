@@ -1,0 +1,16 @@
+{
+  "guard": {
+    "challengeDifficulty": 3,
+    "clearanceTtlSec": 7200,
+    "challengeTtlSec": 300,
+    "rateLimit": {
+      "contentPerMin": 20,
+      "listPerMin": 60,
+      "challengeVerifyPerMin": 10,
+      "authPerMin": 10
+    }
+  },
+  "secrets": {
+    "ssoSecret": "change-me-on-server"
+  }
+}

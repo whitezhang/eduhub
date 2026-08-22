@@ -39,7 +39,7 @@ function shortTrackTitle(title) {
 
 onMounted(async () => {
   try {
-    cms.value = await api("/api/cms");
+    cms.value = await api("/api/cms?scope=home");
   } catch (e) {
     err.value = e.message;
   }

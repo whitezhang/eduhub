@@ -4,6 +4,8 @@ import { useRoute, useRouter } from "vue-router";
 import { api } from "../api.js";
 import { localDraft, writeLocalProgress } from "../paper-save.js";
 import { useSession } from "../stores/session.js";
+import { useAuthWall } from "../composables/useAuthWall.js";
+import AuthWallSkeleton from "../components/AuthWallSkeleton.vue";
 import CodeEditor from "./CodeEditor.vue";
 import StatementView from "./StatementView.vue";
 import { formatOptionText } from "../statement.js";
@@ -12,6 +14,7 @@ import { formatOptionText } from "../statement.js";
 const route = useRoute();
 const router = useRouter();
 const session = useSession();
+const { locked } = useAuthWall();
 const problem = ref(null);
 const err = ref("");
 const lang = ref("cpp");
@@ -283,8 +286,9 @@ async function loadProblem() {
 }
 
 watch(
-  () => [route.params.id, route.query.contest],
+  () => [route.params.id, route.query.contest, session.user],
   () => {
+    if (!session.user) return;
     loadProblem();
   },
   { immediate: true },
@@ -410,6 +414,8 @@ function optionBody(opt) {
 </script>
 
 <template>
+  <AuthWallSkeleton v-if="locked" variant="problems" />
+  <template v-else>
   <div v-if="err && !problem" class="wide err">{{ err }}</div>
   <div v-else-if="problem" class="full">
     <div class="wide" style="margin-bottom:0.75rem">
@@ -520,4 +526,5 @@ function optionBody(opt) {
       </div>
     </div>
   </div>
+  </template>
 </template>
