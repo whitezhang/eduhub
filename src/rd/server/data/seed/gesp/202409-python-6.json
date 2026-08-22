@@ -3,32 +3,32 @@
     "ym": "202409",
     "lang": "python",
     "level": 6,
-    "title": "GESP 9月认证 Python 六级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10166.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1644703000821792.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202409-python-6.pdf"
+    "title": "202409-python-6",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202409-python-6.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "以下(   )没有涉及 Python 语言的面向对象特性支持。",
+      "stem": "以下(  )没有涉及Python语言的面向对象特性支持。",
       "options": [
         {
           "key": "A",
-          "text": "Python 中构造一个 class"
+          "text": "Python中构造一个 class"
         },
         {
           "key": "B",
-          "text": "Python 中调用 printf 函数"
+          "text": "Python中调用 printf 函数"
         },
         {
           "key": "C",
-          "text": "Python 中调用用户定义的类成员函数"
+          "text": "Python中调用用户定义的类成员函数"
         },
         {
           "key": "D",
-          "text": "Python 中构造来源于同一基类的多个派生类"
+          "text": "Python中构造来源于同一基类的多个派生类"
         }
       ],
       "answer": "B"
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "关于 Python 中面向对象的类的继承,下面说法错误的是(  )",
+      "stem": "关于Python中面向对象的类的继承,下面说法错误的是( )",
       "options": [
         {
           "key": "A",
@@ -52,7 +52,7 @@
         },
         {
           "key": "D",
-          "text": "python 中支持多继承"
+          "text": "python中支持多继承"
         }
       ],
       "answer": "A"
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "有 6 个元素,按照  6,5,4,3,2,1 的顺序进入栈 S ,下列(   )的出栈序列是不能出现的(  )。",
+      "stem": "有6个元素,按照 6,5,4,3,2,1 的顺序进入栈S,下列(  )的出栈序列是不能出现的( )。",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "采用如下代码实现检查输入的字符串括号是否匹配,横线上应填入的代码为(  )。\nclass Stack:\n    def __init__(self):\n        self.items = []\n    def is_empty(self):\n        return not self.items\n    def push(self, item):\n        self.items.append(item)\n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
+      "stem": "采用如下代码实现检查输入的字符串括号是否匹配,横线上应填入的代码为( )。\nclass Stack:\n    def __init__(self):\n1\n2\n        self.items = []\n    def is_empty(self):\n        return not self.items\n    def push(self, item):\n        self.items.append(item)\n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n3\n4\n5\n6\n7\n8\n9\n10\n        def peek(self):\n        if not self.is_empty():\n            return self.items[-1]\n     def size(self):\n        return len(self.items)\n def paren_match(expr):\n11\n12\n13\n14\n15\n16\n    s = Stack()\n    balanced = True\n    index = 0\n    while index < len(expr) and balanced:\n        symbol = expr[index]\n        if symbol in '([{':\n            ________________\n        else:\n            if s.is_empty():\n                balanced = False\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n            else:\n                top = s.pop()\n                if not matches(top, symbol):\n                    balanced = False\n        index += 1\n\n    if balanced and s.is_empty():\n        return True\n    else:\n        return False\ndef matches(opening, closing):\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n    opens = '([{'\n    closers = ')]}'\n    return opening in opens and closers.index(closing) == opens.index(opening)\n38\n39\n40",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面代码判断队列的第一个元素是否等于 ,并删除该元素,横向上应填写(    )。",
+      "stem": "下面代码判断队列的第一个元素是否等于,并删除该元素,横向上应填写(   )。\nimport queue\nq = queue.Queue()\na = 'a'\nif ________________________________________\n1\n2\n3\n4\n    q.get()\n    print('元素 {} 是队列的第一个元素,并已被移除。'.format(a))\nelse:\n    print('队列的第一个元素不是 {}.'.format(a))\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -120,7 +120,7 @@
         },
         {
           "key": "C",
-          "text": "q.empty() and q.queue[0] == a: def peek(self): if not self.is_empty(): return self.items[-1] def size(self): return len(self.items) def paren_match(expr): s = Stack() balanced = True index = 0 while index < len(expr) and balanced: symbol = expr[index] if symbol in '([{': ________________ else: if s.is_empty(): balanced = False else: top = s.pop() if not matches(top, symbol): balanced = False index += 1 if balanced and s.is_empty(): return True else: return False def matches(opening, closing): opens = '([{' closers = ')]}' return opening in opens and closers.index(closing) == opens.index(opening) import queue q = queue.Queue() a = 'a' if ________________________________________ q.get() print(' 元素 {} 是队列的第一个元素,并已被移除。 '.format(a)) else: print(' 队列的第一个元素不是 {}.'.format(a))"
+          "text": "q.empty() and q.queue[0] == a:"
         },
         {
           "key": "D",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "假设字母表{a,b,c,d,e}在字符串出现的频率分别为  10% , 15% , 30% , 16% , 29% 。若使用哈夫曼编码方\n式对字母进行二进制编码,则字符abcdef分别对应的一组哈夫曼编码的长度分别为(   )。",
+      "stem": "假设字母表{a,b,c,d,e} 在字符串出现的频率分别为 10%,15%,30%,16%,29%。若使用哈夫曼编码方\n式对字母进行二进制编码,则字符abcdef 分别对应的一组哈夫曼编码的长度分别为(  )。",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "以下 Python 代码实现 位的格雷码,则横线上应填写(   )。",
+      "stem": "以下Python代码实现位的格雷码,则横线上应填写(  )。\ndef generate_gray_code(n):\n1\n    if n <= 0:\n        return []\n    if n == 1:\n        return [0, 1]\n\n    gray_code = generate_gray_code(n - 1)\n    ————————————————————————————————————————\n    for x in gray_code]\n    return gray_code + inverted_gray_code\n2\n3\n4\n5\n6\n7\n8\n9\n10",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "给定一棵二叉树,其前序遍历结果为: ABDECFG, 中序遍历结果为: DEBACFG ,则这棵树的正确后序遍历\n结果是(  )。",
+      "stem": "给定一棵二叉树,其前序遍历结果为:ABDECFG,中序遍历结果为:DEBACFG,则这棵树的正确后序遍历\n结果是( )。",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "一棵有 个结点的完全二叉树用数组进行存储与表示,已知根结点存储在数组的第 个位置。若存储在数组第\n个位置的结点存在兄弟结点和两个子结点,则它的兄弟结点和右子结点的位置分别是(  )。",
+      "stem": "一棵有个结点的完全二叉树用数组进行存储与表示,已知根结点存储在数组的第个位置。若存储在数组第\n个位置的结点存在兄弟结点和两个子结点,则它的兄弟结点和右子结点的位置分别是( )。",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "二叉树的深度定义为从根结点到叶结点的最长路径上的结点数,则以下基于二叉树的深度优先搜索实现的\n深度计算函数中横线上应填写(   )。\ndef generate_gray_code(n):\n    if n <= 0:\n        return []\n    if n == 1:\n        return [0, 1]\n\n    gray_code = generate_gray_code(n - 1)\n    ————————————————————————————————————————\n    for x in gray_code]\n    return gray_code + inverted_gray_code\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
+      "stem": "二叉树的深度定义为从根结点到叶结点的最长路径上的结点数,则以下基于二叉树的深度优先搜索实现的\n深度计算函数中横线上应填写(  )。\nclass Node:\n1\n2\n3\n4\n5\n6\n def __init__(self, data):\n self.data = data\n self.left = None\n self.right = None\ndef max_depth(root_node):\n7\n8\n9\n10\n11\n12\n13\n if root_node is None:\n   return 0\n else:\n left_depth = max_depth(root_node.left)\n right_depth = max_depth(root_node.right)\n _______________________________________",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "以下基于二叉树的搜索实现的深度计算函数中横线上应填写(  )。",
+      "stem": "以下基于二叉树的搜索实现的深度计算函数中横线上应填写(  )。\nclass Node:\n1\n2\n3\n4\n5\n def __init__(self, data):\n self.data = data\n self.left = None\n self.right = None\n6\n7\n8\n9\n10\n11\n12\n13\ndef height(root):\n if root is None:\n   return 0\n else:\n left_height = height(root.left)\n right_height = height(root.right)\n _________________________________",
       "options": [
         {
           "key": "A",
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "二叉搜索树中的每个结点,其左子树的所有结点值都小于该结点值,右子树的所有结点值都大于该结点\n值。以下代码对给定的整数数组(假设数组中没有数值相等的元素),构造一个对应的二叉搜索树,横线上应填写(\n):\nclass Node:\n def __init__(self, data):\n self.data = data\n self.left = None\n self.right = None\ndef max_depth(root_node):\n if root_node is None:\n   return 0\n else:\n left_depth = max_depth(root_node.left)\n right_depth = max_depth(root_node.right)\n _______________________________________\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nclass Node:\n def __init__(self, data):\n self.data = data\n self.left = None\n self.right = None\ndef height(root):\n if root is None:\n   return 0\n else:\n left_height = height(root.left)\n right_height = height(root.right)\n _________________________________\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nclass TreeNode:\n def __init__(self, x):\n self.val = x\n self.left = None\n self.right = None\n1\n2\n3\n4\n5",
+      "stem": "二叉搜索树中的每个结点,其左子树的所有结点值都小于该结点值,右子树的所有结点值都大于该结点\n值。以下代码对给定的整数数组(假设数组中没有数值相等的元素),构造一个对应的二叉搜索树,横线上应填写(\n):\nclass TreeNode:\n1\n2\n3\n4\n5\n def __init__(self, x):\n self.val = x\n self.left = None\n self.right = None\n\nclass Solution:\n    def isValidBST(self, root: TreeNode) -> bool:\n        def helper(node, min_val, max_val):\n            if not node:\n                return True\n6\n7\n8\n9\n10\n11\n            ————————————————————————————————————————————————\n                return False\n            return helper(node.left, min_val, node.val) and helper(node.right,\nnode.val, max_val)\n\n        return helper(root, float('-inf'), float('inf'))\n12\n13\n14\n15\n16",
       "options": [
         {
           "key": "A",
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "对上题中的二叉搜素树,当输入数组为 时,构建二叉搜索树,并采用如下代码实现的遍历方\n式,得到的输出是(    )。",
+      "stem": "对上题中的二叉搜素树,当输入数组为\n时,构建二叉搜索树,并采用如下代码实现的遍历方\n式,得到的输出是(   )。\ndef traversal(tree_node* root) :\n    if (root == nullptr) {\n        return\n    }\n1\n2\n3\n4\n5\n6\ntraversal(root->left)\nprint(root->val)\nprint(\" \")\ntraversal(root->right)\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -316,7 +316,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "动态规划通常用于解决(   )。",
+      "stem": "动态规划通常用于解决(  )。",
       "options": [
         {
           "key": "A",
@@ -340,7 +340,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "阅读以下用动态规划解决的 0-1 背包问题的函数,假设背包的容量 是 10kg ,假设输入 4 个物品的重量\n分别为 (单位为 kg ),每个物品对应的价值 分别为 ,则函数的输出为(   )。\n\nclass Solution:\n    def isValidBST(self, root: TreeNode) -> bool:\n        def helper(node, min_val, max_val):\n            if not node:\n                return True\n            ————————————————————————————————————————————————\n                return False\n            return helper(node.left, min_val, node.val) and helper(node.right,\nnode.val, max_val)\n\n        return helper(root, float('-inf'), float('inf'))\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\ndef traversal(tree_node* root) :\n    if (root == nullptr) {\n        return\n    }\ntraversal(root->left)\nprint(root->val)\nprint(\" \")\ntraversal(root->right)\n1\n2\n3\n4\n5\n6\n7\n8\n9\ndef knapsack(capacity, weights, values):\n    dp = [[0 for _ in range(capacity + 1)] for _ in range(len(weights) + 1)]\n1\n2\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "阅读以下用动态规划解决的0-1背包问题的函数,假设背包的容量\n是10kg,假设输入4个物品的重量\n分别为\n(单位为kg),每个物品对应的价值\n分别为\n,则函数的输出为(  )。\ndef knapsack(capacity, weights, values):\n    dp = [[0 for _ in range(capacity + 1)] for _ in range(len(weights) + 1)]\n1\n2\n    for i in range(1, len(weights) + 1):\n        for j in range(1, capacity + 1):\n            if weights[i - 1] <= j:\n                     dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weights[i - 1]] +\nvalues[i - 1])\n            else:\n3\n4\n5\n6\n7\n                dp[i][j] = dp[i - 1][j]\n    return dp[-1][-1]\n\nweights = [1, 3, 4,6]\nvalues = [20,30,50,60]\ncapacity = 10\nprint(knapsack(capacity, weights, values))\n8\n9\n10\n11\n12\n13\n14",
       "options": [
         {
           "key": "A",
@@ -366,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "C++ 、 Python 和 JAVA 等都是面向对象的编程语言。",
+      "stem": "C++、Python和JAVA等都是面向对象的编程语言。",
       "options": [
         {
           "key": "T",
@@ -377,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在 python 中,类的静态成员变量只能被该类对象的成员函数访问。",
+      "stem": "在python中,类的静态成员变量只能被该类对象的成员函数访问。",
       "options": [
         {
           "key": "T",
@@ -393,7 +393,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
@@ -409,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "运行以下 python 代码,屏幕将输出 “derived class” 。",
+      "stem": "运行以下python代码,屏幕将输出“derived class”。\nclass BaseClass:\n    def my_method(self):\n        print(\"base class\")\n\n\n\n\n\n\n\n\n\n\nclass DerivedClass(BaseClass):\n    def my_method(self):\n        print(\"derived class\")\nderived_instance = DerivedClass()\nderived_instance.my_method()",
       "options": [
         {
           "key": "T",
@@ -425,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "如下列代码所示的基类( base )及其派生类( derived ),则生成一个派生类的对象时,只调用派生类的构造\n函数。\n    for i in range(1, len(weights) + 1):\n        for j in range(1, capacity + 1):\n            if weights[i - 1] <= j:\n                     dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weights[i - 1]] +\nvalues[i - 1])\n            else:\n                dp[i][j] = dp[i - 1][j]\n    return dp[-1][-1]\n\nweights = [1, 3, 4,6]\nvalues = [20,30,50,60]\ncapacity = 10\nprint(knapsack(capacity, weights, values))\n\n\n\n\n\n\n\n\n\n\n\n\nclass BaseClass:\n    def my_method(self):\n        print(\"base class\")\nclass DerivedClass(BaseClass):\n    def my_method(self):\n        print(\"derived class\")\nderived_instance = DerivedClass()\nderived_instance.my_method()\n\n\n\n\n\n\n\n\n\n\n子任务编号 数据点占比\n1 20%\n2 40%\n3 40%",
+      "stem": "如下列代码所示的基类(base)及其派生类(derived),则生成一个派生类的对象时,只调用派生类的构造\n函数。\nclass Base:\n    def __init__(self):\n        print(\"Base.__init__ called\")\n\n\n\n\n\n\nclass Derived(Base):\n    def __init__(self):\n        print(\"Derived.__init__ called\")\n        super().__init__()\nd = Derived()",
       "options": [
         {
           "key": "T",
@@ -441,7 +441,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
@@ -457,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "如果根结点的深度记为 ,则一棵恰有 个叶结点的二叉树的深度最少是 。",
+      "stem": "如果根结点的深度记为,则一棵恰有\n个叶结点的二叉树的深度最少是\n。",
       "options": [
         {
           "key": "T",
@@ -473,7 +473,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
@@ -489,7 +489,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
@@ -505,7 +505,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
@@ -521,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -529,27 +529,35 @@
       "seq": 1,
       "kind": "traditional",
       "title": "小杨和整数拆分",
-      "statement": "时间限制: 20.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有一个正整数  ,小杨想将它拆分成若干完全平方数的和,同时小杨希望拆分的数量越少越好。\n小杨请你编写程序计算出总和为   的完全平方数的最少数量。\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,含义如题面所示。\n3.1.3 输出格式\n输出一个整数,代表总和为   的完全平方数的最少数量。\n3.1.4 样例 1\n,其中最少需要   个完全平方数。\nclass Base:\n    def __init__(self):\n        print(\"Base.__init__ called\")\nclass Derived(Base):\n    def __init__(self):\n        print(\"Derived.__init__ called\")\n        super().__init__()\nd = Derived()\n\n对于全部数据,保证有  。\n3.1.5",
+      "statement": "时间限制:20.0 s\n内存限制:512.0 MB\n3.1.1\n题面描述\n小杨有一个正整数 ,小杨想将它拆分成若干完全平方数的和,同时小杨希望拆分的数量越少越好。\n小杨请你编写程序计算出总和为  的完全平方数的最少数量。\n3.1.2\n\n输入格式\n第一行包含一个正整数 ,含义如题面所示。\n3.1.3\n输出格式\n输出一个整数,代表总和为  的完全平方数的最少数量。\n3.1.4\n样例1\n\n,其中最少需要  个完全平方数。\n子任务编号\n数据点占比\n\n20%\n\n40%\n\n40%\n对于全部数据,保证有\n。\n3.1.5",
       "time_ms": 20000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "18\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "import math\nN = int(1e5) + 10\ndp = [0] * N\nn = int(input())\nfor i in range(1, n + 1):\n    dp[i] = i\n    for j in range(1, int(math.sqrt(i)) + 1):\n        dp[i] = min(dp[i - j * j] + 1, dp[i])\nprint(dp[n])"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "算法学习",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨计划学习   种算法,为此他找了   道题目来帮助自己学习,每道题目至多学习一次。\n小杨对于   种算法的初始掌握程度均为  。第   道题目有对应的知识点  ,即学习第   道题目可以令小杨对第   种\n算法的掌握程度提高  。小杨的学习目标是对   种算法的掌握程度均至少为  。\n小杨认为连续学习两道相同知识点的题目是不好的,小杨想请你编写程序帮他计算出他最少需要学习多少道题目才\n能使得他在完成学习目标的同时避免连续学习两道相同知识点的题目。\n3.2.2\n\n输入格式\n第一行三个正整数  ,代表算法种类数,题目数和目标掌握程度。\n第二行   个正整数  ,代表每道题目的知识点。\n第二行   个正整数  ,代表每道题目提升的掌握程度。\n3.2.3 输出格式\n输出一个整数,代表小杨最少需要学习题目的数量,如果不存在满足条件的方案,输出  -1 。\n3.2.4 样例 1\nimport math\nN = int(1e5) + 10\ndp = [0] * N\nn = int(input())\nfor i in range(1, n + 1):\n    dp[i] = i\n    for j in range(1, int(math.sqrt(i)) + 1):\n        dp[i] = min(dp[i - j * j] + 1, dp[i])\nprint(dp[n])\n\n3 5 10\n1 1 2 3 3\n9 1 10 10 1\n\n子任务编号 数据点占比\n1 30%\n2 30%\n3 40%\n3.2.5 样例 2\n对于样例 1 ,一种最优学习顺序为第一道题,第三道题,第四道题,第二道题。\n对于全部数据,保证有  。\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题面描述\n小杨计划学习\n 种算法,为此他找了  道题目来帮助自己学习,每道题目至多学习一次。\n小杨对于\n 种算法的初始掌握程度均为 。第  道题目有对应的知识点\n,即学习第  道题目可以令小杨对第\n 种\n算法的掌握程度提高 。小杨的学习目标是对\n 种算法的掌握程度均至少为 。\n小杨认为连续学习两道相同知识点的题目是不好的,小杨想请你编写程序帮他计算出他最少需要学习多少道题目才\n能使得他在完成学习目标的同时避免连续学习两道相同知识点的题目。\n3.2.2\n\n输入格式\n第一行三个正整数\n,代表算法种类数,题目数和目标掌握程度。\n第二行  个正整数\n,代表每道题目的知识点。\n第二行  个正整数\n,代表每道题目提升的掌握程度。\n3.2.3\n输出格式\n输出一个整数,代表小杨最少需要学习题目的数量,如果不存在满足条件的方案,输出 -1。\n3.2.4\n样例1\n3 5 10\n1 1 2 3 3\n9 1 10 10 1\n\n3.2.5\n样例2\n2 4 10\n1 1 1 2\n1 2 7 10\n\n-1\n\n对于样例1,一种最优学习顺序为第一道题,第三道题,第四道题,第二道题。\n子任务编号\n数据点占比\n\n30%\n\n30%\n\n40%\n对于全部数据,保证有\n。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "11\n12\n13\n",
-          "out": "4\n",
-          "suspect": true
+          "in": "3\n4\n1\n",
+          "out": "-1\n",
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "N = int(1e5) + 5\ndef cmp(i, j):\n    return i > j\nm,n, k = map(int, input().split())\nscore = [[] for _ in range(m + 2)]\na = [0] * n\nb = [0] * n\ns = input().split()\nfor i in range(n):\n    a[i] = int(s[i])\n\ns = input().split()\nfor i in range(n):\n    b[i] = int(s[i])\n    score[a[i]].append(b[i])\nneed = [0] * (m + 2)\nans = 0\nmx_meed = 0\nmx_need_i = -1\nfor i in range(1, m + 1):\n    score[i].sort(reverse=True)\n    sum_vals = 0\n    for j in range(len(score[i])):\n        sum_vals += score[i][j]\n        if sum_vals >= k:\n            need[i] = j + 1\n            break\n\n    if sum_vals < k:\n        print(\"-1\")\n        exit(0)\n    ans += need[i]\n    if need[i] > mx_meed:\n        mx_meed = need[i]\n        mx_need_i = i\nif mx_meed - 1 <= ans - mx_meed:\n    print(ans)\nelse:\n    last = 0\n    for i in range(1, m + 1):\n        if i != mx_need_i:\n            last += len(score[i]) - need[i]\n\n    print(2 * mx_meed - 1 if mx_meed - 1 <= ans - mx_meed + last else -1)"
     }
   ],
   "answer_rows": [
@@ -570,8 +578,6 @@
       "B",
       "C"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

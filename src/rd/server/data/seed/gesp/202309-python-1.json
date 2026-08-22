@@ -3,16 +3,16 @@
     "ym": "202309",
     "lang": "python",
     "level": 1,
-    "title": "GESP 9月认证 Python一级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10105.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1570611771998240.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202309-python-1.pdf"
+    "title": "202309-python-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202309-python-1.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "我们通常说的 “ 内存 ” 属于计算机中的  ( ) 。",
+      "stem": "我们通常说的“内存”属于计算机中的 ( )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "以下 Python 不可以作为变量的名称的是  ( ) 。",
+      "stem": "以下Python不可以作为变量的名称的是 ( )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "Python 表达式2 - 1 ** 0 % 10的值是  ( ) 。",
+      "stem": "Python表达式2 - 1 ** 0 % 10 的值是 ( )。",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是  ( ) 。",
+      "stem": "下面Python代码执行后的输出是 ( )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是  ( ) 。",
+      "stem": "下面Python代码执行后的输出是 ( )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是  ( ) 。",
+      "stem": "下面Python代码执行后的输出是 ( )。",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是  ( ) 。",
+      "stem": "下面Python代码执行后的输出是 ( )。",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是  ( ) 。",
+      "stem": "下面Python代码执行后的输出是 ( )。",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是  ( ) 。",
+      "stem": "下面Python代码执行后的输出是 ( )。",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码用于输出所有能整除的数,如 10 输出成 1 、 2 、 5 和 10 , 12 输出为 1 、 2 、 3 、 4 、 6 和 12 , 17 则\n输出 1 和 17 。在横线处应填入代码是  ( ) 。",
+      "stem": "下面Python代码用于输出所有能整除的数,如10输出成1、2、5和10,12输出为1、2、3、4、6和12,17则\n输出1和17。在横线处应填入代码是 ( )。",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出的正确图形是  ( ) 。",
+      "stem": "下面Python代码执行后输出的正确图形是 ( )。",
       "options": [
         {
           "key": "A",
@@ -268,7 +268,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "为输出下面的图形,应在下面 Python 代码横线处填入代码是  ( ) 。",
+      "stem": "为输出下面的图形,应在下面Python代码横线处填入代码是 ( )。",
       "options": [
         {
           "key": "A",
@@ -292,7 +292,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出的正确图形是  ( ) 。",
+      "stem": "下面Python代码执行后输出的正确图形是 ( )。",
       "options": [
         {
           "key": "A",
@@ -308,7 +308,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出的正确图形是   ( ) 。",
+      "stem": "下面Python代码执行后输出的正确图形是  ( )。",
       "options": [
         {
           "key": "A",
@@ -324,7 +324,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出的图形是   ( ) 。\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "下面Python代码执行后输出的图形是  ( )。",
       "options": [
         {
           "key": "A",
@@ -353,12 +353,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "神威 · 太湖之光超级计算机是中国自主研制的超级计算机,在全球超级计算机 TOP500 排行榜中多次荣膺榜\n首。",
+      "stem": "神威·太湖之光超级计算机是中国自主研制的超级计算机,在全球超级计算机TOP500排行榜中多次荣膺榜\n首。",
       "options": [
         {
           "key": "T",
@@ -369,12 +369,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "Python 表达式int(\"3.14\")的值为 3 。",
+      "stem": "Python表达式int(\"3.14\") 的值为3。",
       "options": [
         {
           "key": "T",
@@ -385,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "Python 语句print(2,3,\"23\")的输出为 2,3,23 。",
+      "stem": "Python语句print(2,3,\"23\") 的输出为2,3,23。",
       "options": [
         {
           "key": "T",
@@ -401,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "Python 内置函数 range(10,2) 表示从 0 开始到 10 结束但不包含 10 ,间隔为 2 。",
+      "stem": "Python内置函数range(10,2)表示从0开始到10结束但不包含10,间隔为2。",
       "options": [
         {
           "key": "T",
@@ -417,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "Python 表达式\"10\"*2+\"10\"的值为 '101010' 。",
+      "stem": "Python表达式\"10\"*2+\"10\" 的值为'101010'。",
       "options": [
         {
           "key": "T",
@@ -433,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "在 Python 中, for-in 循环不可能导致死循环,而 while 有可能。",
+      "stem": "在Python中,for-in循环不可能导致死循环,而while有可能。",
       "options": [
         {
           "key": "T",
@@ -449,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在下面的 Python 代码中,由于循环中的 continue 是无条件被执行,因此将导致死循环。",
+      "stem": "在下面的Python代码中,由于循环中的continue是无条件被执行,因此将导致死循环。",
       "options": [
         {
           "key": "T",
@@ -465,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在 Python 代码中, turtle.home() 清除画面,海龟回到原点,朝向置为默认方向。",
+      "stem": "在Python代码中,turtle.home()清除画面,海龟回到原点,朝向置为默认方向。",
       "options": [
         {
           "key": "T",
@@ -481,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "在 Python 代码中,可以用 turtle.circle() 绘制正多边形。",
+      "stem": "在Python代码中,可以用turtle.circle()绘制正多边形。",
       "options": [
         {
           "key": "T",
@@ -497,7 +497,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -505,12 +505,17 @@
       "seq": 1,
       "kind": "traditional",
       "title": "买文具",
-      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n开学了,小明来到文具店选购文具。签字笔 2 元一支,他需要支;记事本 5 元一本,他需要本;直尺 3 元一把,他\n需要把。小明手里有元钱。请你通过编程帮小明算算,他手里的钱是否够买他需要的文具。\n3.1.2 输入描述\n输入 4 行。\n第一行包含一个正整数,是小明购买签字笔的数量。约定 。\n第二行包含一个正整数,是小明购买记事本的数量。约定 。\n第三行包含一个正整数,是小明购买直尺的数量。约定 。\n第四行包含一个正整数,是小明手里的钱数(单位:元)。\n3.1.3 输出描述\n输出 2 行。如果小明手里的钱够买他需要的文具,则第一行输出 \"Yes\" ,第二行输出小明会剩下的钱数(单位:元);\n否则,第一行输出 \"No\" ,第二行输出小明缺少的钱数(单位:元)。\n3.1.4 样例输入 1\n3.1.5 样例输出 1\n3.1.6 样例输入 2\n\nYes\n\n3.1.7 样例输出 2\n3.1.8",
+      "statement": "时间限制:1.0 s\n内存限制:128.0 MB\n3.1.1\n问题描述\n开学了,小明来到文具店选购文具。签字笔2元一支,他需要\n支;记事本5元一本,他需要本;直尺3元一把,他\n需要把。小明手里有\n元钱。请你通过编程帮小明算算,他手里的钱是否够买他需要的文具。\n3.1.2\n输入描述\n输入4行。\n第一行包含一个正整数\n,是小明购买签字笔的数量。约定\n。\n第二行包含一个正整数,是小明购买记事本的数量。约定\n。\n第三行包含一个正整数,是小明购买直尺的数量。约定\n。\n第四行包含一个正整数\n,是小明手里的钱数(单位:元)。\n3.1.3\n输出描述\n输出2行。如果小明手里的钱够买他需要的文具,则第一行输出\"Yes\",第二行输出小明会剩下的钱数(单位:元);\n否则,第一行输出\"No\",第二行输出小明缺少的钱数(单位:元)。\n3.1.4\n样例输入1\n\n3.1.5\n样例输出1\n\nYes\n\n3.1.6\n样例输入2\n\n3.1.7\n样例输出2\n\nNo\n\n3.1.8",
       "time_ms": 1000,
       "memory_mb": 128,
       "samples": [
         {
-          "in": "1\n1\n1\n20\n",
+          "in": "3\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n20\n",
           "out": "10\n",
           "suspect": false
         },
@@ -520,33 +525,35 @@
           "suspect": false
         },
         {
-          "in": "1\n5\n",
-          "out": "3\n",
+          "in": "4\n",
+          "out": "5\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "X = int(input())\nY = int(input())\nZ = int(input())\nQ = int(input())\nMoney = 2 * X + 5 * Y + 3 * Z\nif  Money <= Q:\n    print(\"Yes\")\n    print(Q-Money)\nelse:\n    print(\"No\")\n    print(Money-Q)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "小明的幸运数",
-      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n所有个位数为的正整数,以及所有的倍数,都被小明称为 “幸运数 ” 。小明想知道正整数和之间(包括和)\n所有幸运数的和,你能帮帮他吗?\n3.2.2 输入描述\n输入 3 行。第一行包含一个正整数,第二行包含一个正整数,第三行包含一个正整数。约定 ,\n。\n3.2.3 输出描述\n输出 1 行,符合题意的幸运数之和。\n3.2.4 样例输入 1\n3.2.5 样例输出 1\nNo\n\nX = int(input())\nY = int(input())\nZ = int(input())\nQ = int(input())\nMoney = 2 * X + 5 * Y + 3 * Z\nif  Money <= Q:\n    print(\"Yes\")\n    print(Q-Money)\nelse:\n    print(\"No\")\n    print(Money-Q)\n\n3.2.6 样例解释 1\n1和 10 之间共有 1 个 7 幸运数: 7 。因为 7 既是 7 的倍数,个位数又为 7 。因此,结果为 7 。\n3.2.7 样例输入 2\n3.2.8 样例输出 2\n3.2.9 样例解释 2\n10 和 20 之间共有 2 个 7 幸运数: 14 和 17 。 14 是 7 的倍数, 17 的个位数为 7 。因此,结果为 31 。\n3.2.10",
+      "statement": "时间限制:1.0 s\n内存限制:128.0 MB\n3.2.1\n问题描述\n所有个位数为的正整数,以及所有的倍数,都被小明称为“ 幸运数”。小明想知道正整数和之间(包括和)\n所有幸运数的和,你能帮帮他吗?\n3.2.2\n输入描述\n输入3行。第一行包含一个正整数,第二行包含一个正整数,第三行包含一个正整数。约定\n,\n。\n3.2.3\n输出描述\n输出1行,符合题意的幸运数之和。\n3.2.4\n样例输入1\n\n3.2.5\n样例输出1\n\n3.2.6\n样例解释1\n1和10之间共有1个7幸运数:7。因为7既是7的倍数,个位数又为7。因此,结果为7。\n3.2.7\n样例输入2\n\n3.2.8\n样例输出2\n\n3.2.9\n样例解释2\n10和20之间共有2个7幸运数:14和17。14是7的倍数,17的个位数为7。因此,结果为31。\n3.2.10",
       "time_ms": 1000,
       "memory_mb": 128,
       "samples": [
         {
-          "in": "5\n",
-          "out": "2\n",
+          "in": "7\n",
+          "out": "10\n",
           "suspect": false
         },
         {
           "in": "7\n",
-          "out": "10\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "luckyNum =  int(input())\nleftNum = int(input())\nrightNum = int(input())\nluckySum = 0\nfor i in range(leftNum,rightNum + 1):\n    if i % luckyNum == 0 or i % 10 == luckyNum:\n        luckySum += i\nprint(luckySum)"
     }
   ],
   "answer_rows": [
@@ -567,8 +574,6 @@
       "B",
       "C"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

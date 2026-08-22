@@ -6,14 +6,22 @@ import { useSession } from "../stores/session.js";
 const route = useRoute();
 const session = useSession();
 const menuOpen = ref(false);
-const form = reactive({ username: "", password: "", display_name: "", mode: "login", error: "" });
+const form = reactive({ username: "", password: "", error: "" });
+const profile = reactive({ display_name: "", error: "" });
 
 watch(
   () => session.loginOpen,
   (open) => {
+    if (open) form.error = "";
+  },
+);
+
+watch(
+  () => session.profileOpen,
+  (open) => {
     if (open) {
-      form.mode = "login";
-      form.error = "";
+      profile.display_name = session.user?.display_name || "";
+      profile.error = "";
     }
   },
 );
@@ -21,10 +29,18 @@ watch(
 async function submit() {
   form.error = "";
   try {
-    if (form.mode === "login") await session.login(form.username, form.password);
-    else await session.register(form.username, form.password, form.display_name);
+    await session.login(form.username, form.password);
   } catch (e) {
     form.error = e.message;
+  }
+}
+
+async function saveProfile() {
+  profile.error = "";
+  try {
+    await session.updateDisplayName(profile.display_name);
+  } catch (e) {
+    profile.error = e.message;
   }
 }
 </script>
@@ -41,10 +57,13 @@ async function submit() {
         <router-link to="/external">外部资料</router-link>
         <router-link to="/progress">榜单</router-link>
         <router-link v-if="session.user?.role === 'coach'" to="/studio">管理</router-link>
+        <a href="https://about.jsoner.cn/" target="_blank" rel="noopener noreferrer">关于</a>
       </nav>
       <div class="top-right">
         <template v-if="session.user">
-          <span class="muted">{{ session.user.display_name }}</span>
+          <button class="btn-ghost" type="button" @click="session.openProfile()">
+            {{ session.user.display_name }}
+          </button>
           <button class="btn-ghost" type="button" @click="session.logout()">退出</button>
         </template>
         <button v-else class="btn-ghost" type="button" @click="session.openLogin()">登录</button>
@@ -58,24 +77,31 @@ async function submit() {
     </footer>
     <div v-if="session.loginOpen" class="modal-bg" @click.self="session.closeLogin()">
       <div class="modal" role="dialog" aria-labelledby="login-title">
-        <h2 id="login-title" class="serif">{{ form.mode === "login" ? "登录" : "注册" }}</h2>
+        <h2 id="login-title" class="serif">登录</h2>
         <form @submit.prevent="submit">
           <label class="field">用户名
             <input v-model="form.username" autocomplete="username" required />
-          </label>
-          <label v-if="form.mode === 'register'" class="field">显示名
-            <input v-model="form.display_name" />
           </label>
           <label class="field">密码
             <input v-model="form.password" type="password" autocomplete="current-password" required />
           </label>
           <p v-if="form.error" class="err">{{ form.error }}</p>
-          <button class="btn" type="submit">{{ form.mode === "login" ? "登录" : "注册" }}</button>
-          <button class="btn-ghost" type="button" style="margin-left:0.5rem" @click="form.mode = form.mode === 'login' ? 'register' : 'login'">
-            {{ form.mode === "login" ? "没有账号，去注册" : "已有账号，去登录" }}
-          </button>
+          <button class="btn" type="submit">登录</button>
         </form>
-        <p class="muted" style="margin-top:1rem">做题需登录。</p>
+        <p class="muted" style="margin-top:1rem">做题需登录。账号由管理员添加。</p>
+      </div>
+    </div>
+    <div v-if="session.profileOpen" class="modal-bg" @click.self="session.closeProfile()">
+      <div class="modal" role="dialog" aria-labelledby="profile-title">
+        <h2 id="profile-title" class="serif">修改显示名</h2>
+        <p class="muted">用户名：{{ session.user?.username }}（不可改）</p>
+        <form @submit.prevent="saveProfile">
+          <label class="field">显示名
+            <input v-model="profile.display_name" maxlength="40" required />
+          </label>
+          <p v-if="profile.error" class="err">{{ profile.error }}</p>
+          <button class="btn" type="submit">保存</button>
+        </form>
       </div>
     </div>
   </div>

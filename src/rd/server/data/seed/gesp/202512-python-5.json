@@ -3,24 +3,32 @@
     "ym": "202512",
     "lang": "python",
     "level": 5,
-    "title": "CCF GESP 2025年12月认证 Python 5级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10242.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1723013152112672.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202512-python-5.pdf"
+    "title": "202512-python-5",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202512-python-5.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "对如下定义的循环单链表,横线处填写(    )。",
+      "stem": "对如下定义的循环单链表,横线处填写(   )。\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\ndef create_list(value):\n    head = Node(value)\n    head.next = head\n    return head\ndef insert_tail(head, value):\n    p = head\n    while p.next != head:\n        p = p.next\n    node = Node(value)\n    node.next = head\n    p.next = node\ndef print_list(head):\n    _______________________________\n    while True:\n        print(p.data, end=\" \")\n        p = p.next\n        if p == head:\n            break\n    print()",
       "options": [
         {
           "key": "A",
-          "text": "B. class Node: def __init__(self, data): self.data = data self.next = None def create_list(value): head = Node(value) head.next = head return head def insert_tail(head, value): p = head while p.next != head: p = p.next node = Node(value) node.next = head p.next = node def print_list(head): _______________________________ while True: print(p.data, end=\" \") p = p.next if p == head: break print() if head is None: return p.next = head if head is None: return p = head.next 第 1 页 / 共 13 页"
+          "text": "if head is None: return p.next = head"
+        },
+        {
+          "key": "B",
+          "text": "if head is None: return p = head.next 第 1 页 / 共 13 页"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "if head is None: return p = head"
+        },
+        {
+          "key": "D",
+          "text": "if head.next is None: return p = head"
         }
       ],
       "answer": "C"
@@ -28,15 +36,23 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "区块链技术是比特币的基础。在区块链中,每个区块指向前一个区块,构成链式列表,新区块只能接在链\n尾,不允许在中间插入或删除。下面代码实现插入区块添加函数,则横线处填写(    )。",
+      "stem": "区块链技术是比特币的基础。在区块链中,每个区块指向前一个区块,构成链式列表,新区块只能接在链\n尾,不允许在中间插入或删除。下面代码实现插入区块添加函数,则横线处填写(   )。\nclass Block:\n    def __init__(self, idx, data, prev_block):\n        self.index = idx\n        self.data = data\n        self.prev = prev_block\nclass Blockchain:\n    def __init__(self):\n        self.tail = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n    def init(self):\n        genesis_block = Block(0, \"Genesis Block\", None)\n        self.tail = genesis_block\n    def add_block(self, data):\n        ____________________________________\n    def clear(self):\n        cur = self.tail\n        while cur is not None:\n            prev_block = cur.prev\n            cur.prev = None\n            cur = prev_block\n        self.tail = None\n    def print_chain(self):\n        cur = self.tail\n        chain = []\n        while cur is not None:\n            chain.append(f\"Block {cur.index}: {cur.data}\")\n            cur = cur.prev\n        for block_info in reversed(chain):\n            print(block_info)",
       "options": [
         {
           "key": "A",
-          "text": "B. if head is None: return p = head if head.next is None: return p = head class Block: def __init__(self, idx, data, prev_block): self.index = idx self.data = data self.prev = prev_block class Blockchain: def __init__(self): self.tail = None def init(self): genesis_block = Block(0, \"Genesis Block\", None) self.tail = genesis_block def add_block(self, data): ____________________________________ def clear(self): cur = self.tail while cur is not None: prev_block = cur.prev cur.prev = None cur = prev_block self.tail = None def print_chain(self): cur = self.tail chain = [] while cur is not None: chain.append(f\"Block {cur.index}: {cur.data}\") cur = cur.prev for block_info in reversed(chain): print(block_info) new_block = Block(self.tail.index, data, self.data) new_block = Block(self.tail.index + 1, data, self.tail) self.tail = new_block 第 2 页 / 共 13 页"
+          "text": "new_block = Block(self.tail.index, data, self.data)"
+        },
+        {
+          "key": "B",
+          "text": "new_block = Block(self.tail.index + 1, data, self.tail) self.tail = new_block 第 2 页 / 共 13 页"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "new_block = Block(self.tail.index, data+1, self.data) self.tail = new_block"
+        },
+        {
+          "key": "D",
+          "text": "new_block = Block(self.tail.index, data, self.tail) self.tail.data = new_block"
         }
       ],
       "answer": "B"
@@ -44,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面关于单链表和双链表的描述中,正确的是(    )。",
+      "stem": "下面关于单链表和双链表的描述中,正确的是(   )。\nclass DNode:\n    def __init__(self, data):\n        self.data = data\n        self.prev = None\n        self.next = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\ndef delete_dnode(node):\n    if node.prev:\n        node.prev.next = node.next\n    if node.next:\n        node.next.prev = node.prev\n    node.prev = None\n    node.next = None\nclass SNode:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\ndef delete_snode(head, node):\n    if head is None or node is None:\n        return\n    prev = head\n    while prev.next != node:\n        prev = prev.next\n    prev.next = node.next\n    node.next = None",
       "options": [
         {
           "key": "A",
@@ -68,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "假设我们有两个数   和  ,它们对模   同余,即 。以下哪个值不可能是  ?",
+      "stem": "假设我们有两个数\n 和\n,它们对模\n 同余,即\n。以下哪个值不可能是\n?",
       "options": [
         {
           "key": "A",
@@ -92,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面代码实现了欧几里得算法,下面有关说法,错误的是(    )。\nnew_block = Block(self.tail.index, data+1, self.data)\n        self.tail = new_block\n1\n2\n3\n4\nnew_block = Block(self.tail.index, data, self.tail)\n        self.tail.data = new_block\n1\n2\n3\n4\nclass DNode:\n    def __init__(self, data):\n        self.data = data\n        self.prev = None\n        self.next = None\ndef delete_dnode(node):\n    if node.prev:\n        node.prev.next = node.next\n    if node.next:\n        node.next.prev = node.prev\n    node.prev = None\n    node.next = None\nclass SNode:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\ndef delete_snode(head, node):\n    if head is None or node is None:\n        return\n    prev = head\n    while prev.next != node:\n        prev = prev.next\n    prev.next = node.next\n    node.next = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n第  3 页  / 共  13 页",
+      "stem": "下面代码实现了欧几里得算法,下面有关说法,错误的是(   )。\n第 3 页 / 共 13 页\ndef gcd1(a: int, b: int) -> int:\n    return a if b == 0 else gcd1(b, a % b)\n1\n2\n3\n4\n5\n6\n7\n8\n9\ndef gcd2(a: int, b: int) -> int:\n    while b != 0:\n        temp = b\n        b = a % b\n        a = temp\n    return a",
       "options": [
         {
           "key": "A",
@@ -116,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "唯一分解定理描述的内容是(    )。",
+      "stem": "唯一分解定理描述的内容是(   )。",
       "options": [
         {
           "key": "A",
@@ -124,7 +140,7 @@
         },
         {
           "key": "B",
-          "text": "任何大于 1 的合数都可以唯一分解为有限个质数的乘积。"
+          "text": "任何大于1的合数都可以唯一分解为有限个质数的乘积。"
         },
         {
           "key": "C",
@@ -140,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下述代码实现素数表的线性筛法,筛选出所有小于等于   的素数,则横线上应填的代码是 (  ) 。",
+      "stem": "下述代码实现素数表的线性筛法,筛选出所有小于等于  的素数,则横线上应填的代码是(  )。\ndef linear_sieve(n):\n    if n < 2:\n        return []\n    is_prime = [True] * (n + 1)\n    is_prime[0] = is_prime[1] = False\n    primes = []\n\n    for i in range(2, n + 1):\n        if is_prime[i]:\n            primes.append(i)\n        for j in range(len(primes)):\n            p = primes[j]\n            if i * p > n:\n                break\n            ——————————————————————————\n            if i % p == 0:\n                break\n\n    return primes\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19",
       "options": [
         {
           "key": "A",
@@ -164,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下列关于排序的说法,正确的是 (   ) 。",
+      "stem": "下列关于排序的说法,正确的是(   )。",
       "options": [
         {
           "key": "A",
@@ -176,7 +192,7 @@
         },
         {
           "key": "C",
-          "text": "插入排序是不稳定排序 def gcd1(a: int, b: int) -> int: return a if b == 0 else gcd1(b, a % b) def gcd2(a: int, b: int) -> int: while b != 0: temp = b b = a % b a = temp return a def linear_sieve(n): if n < 2: return [] is_prime = [True] * (n + 1) is_prime[0] = is_prime[1] = False primes = [] for i in range(2, n + 1): if is_prime[i]: primes.append(i) for j in range(len(primes)): p = primes[j] if i * p > n: break —————————————————————————— if i % p == 0: break return primes 第 4 页 / 共 13 页"
+          "text": "插入排序是不稳定排序 第 4 页 / 共 13 页"
         },
         {
           "key": "D",
@@ -188,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面代码实现了归并排序。下述关于归并排序的说法中,不正确的是(   )。",
+      "stem": "下面代码实现了归并排序。下述关于归并排序的说法中,不正确的是(  )。\ndef merge(arr, temp, l, mid, r):\n    i = l\n    j = mid + 1\n    k = l\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n    while i <= mid and j <= r:\n        if arr[i] <= arr[j]:\n            temp[k] = arr[i]\n            i += 1\n        else:\n            temp[k] = arr[j]\n            j += 1\n        k += 1\n    while i <= mid:\n        temp[k] = arr[i]\n        i += 1\n        k += 1\n    while j <= r:\n        temp[k] = arr[j]\n        j += 1\n        k += 1\n    for p in range(l, r + 1):\n        arr[p] = temp[p]\ndef merge_sort(arr, temp, l, r):\n    if l >= r:\n        return\n    mid = l + (r - l) // 2\n    merge_sort(arr, temp, l, mid)\n    merge_sort(arr, temp, mid + 1, r)\n    merge(arr, temp, l, mid, r)\ndef merge_sort_wrapper(arr):\n    if not arr:\n        return []\n    temp = [0] * len(arr)\n    merge_sort(arr, temp, 0, len(arr) - 1)\n    return arr",
       "options": [
         {
           "key": "A",
@@ -212,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下述 python 代码实现了快速排序算法,最差情况时间复杂度是(    )。\ndef merge(arr, temp, l, mid, r):\n    i = l\n    j = mid + 1\n    k = l\n    while i <= mid and j <= r:\n        if arr[i] <= arr[j]:\n            temp[k] = arr[i]\n            i += 1\n        else:\n            temp[k] = arr[j]\n            j += 1\n        k += 1\n    while i <= mid:\n        temp[k] = arr[i]\n        i += 1\n        k += 1\n    while j <= r:\n        temp[k] = arr[j]\n        j += 1\n        k += 1\n    for p in range(l, r + 1):\n        arr[p] = temp[p]\ndef merge_sort(arr, temp, l, r):\n    if l >= r:\n        return\n    mid = l + (r - l) // 2\n    merge_sort(arr, temp, l, mid)\n    merge_sort(arr, temp, mid + 1, r)\n    merge(arr, temp, l, mid, r)\ndef merge_sort_wrapper(arr):\n    if not arr:\n        return []\n    temp = [0] * len(arr)\n    merge_sort(arr, temp, 0, len(arr) - 1)\n    return arr\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n第  5 页  / 共  13 页",
+      "stem": "下述python代码实现了快速排序算法,最差情况时间复杂度是(   )。\n第 5 页 / 共 13 页\ndef partition(arr, low, high):\n    i = low\n    j = high\n    pivot = arr[low]\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n    while i < j:\n        while i < j and arr[j] >= pivot:\n            j -= 1\n        while i < j and arr[i] <= pivot:\n            i += 1\n        if i < j:\n            arr[i], arr[j] = arr[j], arr[i]\n\n    arr[i], arr[low] = arr[low], arr[i]\n    return i\ndef quick_sort(arr, low, high):\n    if low >= high:\n        return\n\n    p = partition(arr, low, high)\n    quick_sort(arr, low, p - 1)\n    quick_sort(arr, p + 1, high)\ndef quick_sort_wrapper(arr):\n    if not arr:\n        return []\n    quick_sort(arr, 0, len(arr) - 1)\n    return arr",
       "options": [
         {
           "key": "A",
@@ -228,7 +244,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面代码尝试在有序数组中查找第一个大于等于  x 的元素位置。如果没有大于等于  x 的元素,返回\narr.size()。以下说法正确的是(   )。",
+      "stem": "下面代码尝试在有序数组中查找第一个大于等于 x 的元素位置。如果没有大于等于 x 的元素,返回\narr.size() 。以下说法正确的是(  )。\ndef lower_bound(arr, x):\n    l = 0\n    r = len(arr)\n    while l < r:\n        mid = l + (r - l) // 2\n        if arr[mid] >= x:\n            r = mid\n        else:\n            l = mid + 1\n    return l\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
       "options": [
         {
           "key": "A",
@@ -252,15 +268,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "小杨要把一根长度为  L 的木头切成  K 段,使得每段长度小于等于  x。已知每切一刀只能把一段木头分成\n两段,他用二分法找到满足条件的最小  x(x 为正整数),则横线处应填写(   )。\ndef partition(arr, low, high):\n    i = low\n    j = high\n    pivot = arr[low]\n    while i < j:\n        while i < j and arr[j] >= pivot:\n            j -= 1\n        while i < j and arr[i] <= pivot:\n            i += 1\n        if i < j:\n            arr[i], arr[j] = arr[j], arr[i]\n\n    arr[i], arr[low] = arr[low], arr[i]\n    return i\ndef quick_sort(arr, low, high):\n    if low >= high:\n        return\n\n    p = partition(arr, low, high)\n    quick_sort(arr, low, p - 1)\n    quick_sort(arr, p + 1, high)\ndef quick_sort_wrapper(arr):\n    if not arr:\n        return []\n    quick_sort(arr, 0, len(arr) - 1)\n    return arr\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\ndef lower_bound(arr, x):\n    l = 0\n    r = len(arr)\n    while l < r:\n        mid = l + (r - l) // 2\n        if arr[mid] >= x:\n            r = mid\n        else:\n            l = mid + 1\n    return l\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n第  6 页  / 共  13 页",
+      "stem": "小杨要把一根长度为 L 的木头切成 K 段,使得每段长度小于等于 x 。已知每切一刀只能把一段木头分成\n两段,他用二分法找到满足条件的最小 x (x 为正整数),则横线处应填写(  )。\n第 6 页 / 共 13 页\ndef check(L, K, x):\n    cuts = (L - 1) // x\n    return cuts <= K\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\ndef binary_cut(L, K):\n    l = 1\n    r = L\n    while l < r:\n        ___________________\n    return l\nif __name__ == \"__main__\":\n    L = 10\n    K = 2\n    result = binary_cut(L, K)\n    print(result)",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "mid = l + (r - l) // 2 if check(L, K, mid): r = mid else: l = mid + 1"
+        },
+        {
+          "key": "B",
+          "text": "mid = l + (r) // 2 if check(L, K, mid+1): r = mid else: l = mid + 1"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "mid = l + (r - l) // 2 if check(L+1, K, mid): r = mid else: l = mid + 1"
+        },
+        {
+          "key": "D",
+          "text": "mid = l + (r - l) // 2 if check(L+1, K, mid): r = mid else: l = mid"
         }
       ],
       "answer": "A"
@@ -268,7 +292,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "根据下面代码,以下说法正确的是(    )。\ndef check(L, K, x):\n    cuts = (L - 1) // x\n    return cuts <= K\ndef binary_cut(L, K):\n    l = 1\n    r = L\n    while l < r:\n        ___________________\n    return l\nif __name__ == \"__main__\":\n    L = 10\n    K = 2\n    result = binary_cut(L, K)\n    print(result)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\nmid = l + (r - l) // 2\nif check(L, K, mid):\n   r = mid\nelse:\n   l = mid + 1\n1\n2\n3\n4\n5\nmid = l + (r) // 2\nif check(L, K, mid+1):\n   r = mid\nelse:\n   l = mid + 1\n1\n2\n3\n4\n5\nmid = l + (r - l) // 2\nif check(L+1, K, mid):\n   r = mid\nelse:\n   l = mid + 1\n1\n2\n3\n4\n5\n6\nmid = l + (r - l) // 2\nif check(L+1, K, mid):\n   r = mid\nelse:\n   l = mid\n1\n2\n3\n4\n5\ndef factorial1(n):\n    if n <= 1:\n        return 1\n    return n * factorial1(n - 1)\ndef factorial2(n):\n    result = 1\n    while n > 1:\n        result *= n\n        n -= 1\n    return result\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n第  7 页  / 共  13 页",
+      "stem": "根据下面代码,以下说法正确的是(   )。\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\ndef factorial1(n):\n    if n <= 1:\n        return 1\n    return n * factorial1(n - 1)\ndef factorial2(n):\n    result = 1\n    while n > 1:\n        result *= n\n        n -= 1\n    return result\n第 7 页 / 共 13 页",
       "options": [
         {
           "key": "A",
@@ -292,15 +316,23 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "给定有   个任务,每个任务有截止时间和利润,每个任务耗时  1 个时间单位、必须在截止时间前完成,且\n每个时间槽最多做  1 个任务。为了在规定时间内获得最大利润,可以采用贪心策略,即按利润从高到低排序,尽量\n安排,则横线处应填写(   )。",
+      "stem": "给定有  个任务,每个任务有截止时间和利润,每个任务耗时 1 个时间单位、必须在截止时间前完成,且\n每个时间槽最多做 1 个任务。为了在规定时间内获得最大利润,可以采用贪心策略,即按利润从高到低排序,尽量\n安排,则横线处应填写(  )。\nclass Task:\n    def __init__(self, deadline, profit):\n        self.deadline = deadline\n        self.profit = profit\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\ndef sort_by_profit(tasks):\n    tasks.sort(key=lambda x: x.profit, reverse=True)\ndef max_profit(tasks):\n    sort_by_profit(tasks)\n    max_time = 0\n    for task in tasks:\n        if task.deadline > max_time:\n            max_time = task.deadline\n\n    slot = [False] * (max_time + 1)\n    total_profit = 0\n\n    for task in tasks:\n        t = task.deadline\n        while t >= 1:\n            if not slot[t]:\n                ———————————————————————————\n            t -= 1\n\n    return total_profit",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "slot[t] = True total_profit += task.profit break"
+        },
+        {
+          "key": "B",
+          "text": "slot[t] = True total_profit += task.profit"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "slot[t] = False total_profit += task.profit break"
+        },
+        {
+          "key": "D",
+          "text": "slot[t] = True total_profit -= task.profit"
         }
       ],
       "answer": "A"
@@ -308,15 +340,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面代码实现了对两个数组表示的正整数的高精度加法(数组低位在前),则横线上应填写(    )。\nclass Task:\n    def __init__(self, deadline, profit):\n        self.deadline = deadline\n        self.profit = profit\ndef sort_by_profit(tasks):\n    tasks.sort(key=lambda x: x.profit, reverse=True)\ndef max_profit(tasks):\n    sort_by_profit(tasks)\n    max_time = 0\n    for task in tasks:\n        if task.deadline > max_time:\n            max_time = task.deadline\n\n    slot = [False] * (max_time + 1)\n    total_profit = 0\n\n    for task in tasks:\n        t = task.deadline\n        while t >= 1:\n            if not slot[t]:\n                ———————————————————————————\n            t -= 1\n\n    return total_profit\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nslot[t] = True\ntotal_profit += task.profit\nbreak\n1\n2\n3\nslot[t] = True\ntotal_profit += task.profit\n1\n2\nslot[t] = False\ntotal_profit += task.profit\nbreak\n1\n2\n3\nslot[t] = True\ntotal_profit -= task.profit\n1\n2\n第  8 页  / 共  13 页\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "下面代码实现了对两个数组表示的正整数的高精度加法(数组低位在前),则横线上应填写(   )。\n第 8 页 / 共 13 页\ndef add(a, b):\n    c = []\n    carry = 0\n\n    i = 0\n    while i < len(a) or i < len(b):\n        if i < len(a):\n            carry += a[i]\n        if i < len(b):\n            carry += b[i]\n\n        ____________________\n\n        i += 1\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n    if carry:\n        c.append(carry)\n\n    return c",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "c.append(carry % 10)"
+        },
+        {
+          "key": "B",
+          "text": "c.append(carry % 10) carry = carry // 10"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "carry = carry // 10"
+        },
+        {
+          "key": "D",
+          "text": "c.append(carry // 10) carry = carry % 10"
         }
       ],
       "answer": "B"
@@ -337,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "假设函数  gcd() 函数能正确求两个正整数的最大公约数,则下面的  lcm(a , b) 函数能正确找到两个正整\n数  a 和  b 的最小公倍数。",
+      "stem": "假设函数 gcd() 函数能正确求两个正整数的最大公约数,则下面的 lcm(a,b) 函数能正确找到两个正整\n数 a 和 b 的最小公倍数。\nimport math\n\n\n\n\n\n\ndef lcm(a, b):\n    if a == 0 or b == 0:\n        return 0\n    return abs(a) // math.gcd(abs(a), abs(b)) * abs(b)",
       "options": [
         {
           "key": "T",
@@ -353,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在  Python 实现的单链表中,已知引用  p 指向要删除的节点(该节点不是尾节点),若想在   时间复杂\n度内删除这个节点,可行的做法是:用  p 的后继节点  p.next 的值覆盖  p 自身的值,再用  p 的后继节点的\nnext 引用覆盖  p 的  next 引用,最后断开  p 的后继节点的引用以辅助垃圾回收()\ndef add(a, b):\n    c = []\n    carry = 0\n\n    i = 0\n    while i < len(a) or i < len(b):\n        if i < len(a):\n            carry += a[i]\n        if i < len(b):\n            carry += b[i]\n\n        ____________________\n\n        i += 1\n    if carry:\n        c.append(carry)\n\n    return c\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nc.append(carry % 10)1\nc.append(carry % 10)\ncarry = carry // 10\n\n\ncarry = carry // 101\nc.append(carry // 10)\ncarry = carry % 10\n\n\nimport math\ndef lcm(a, b):\n    if a == 0 or b == 0:\n        return 0\n    return abs(a) // math.gcd(abs(a), abs(b)) * abs(b)\n\n\n\n\n\n\n第  9 页  / 共  13 页",
+      "stem": "在 Python 实现的单链表中,已知引用 p 指向要删除的节点(该节点不是尾节点),若想在\n 时间复杂\n度内删除这个节点,可行的做法是:用 p 的后继节点 p.next 的值覆盖 p 自身的值,再用 p 的后继节点的\nnext 引用覆盖 p 的 next 引用,最后断开 p 的后继节点的引用以辅助垃圾回收()\n第 9 页 / 共 13 页",
       "options": [
         {
           "key": "T",
@@ -369,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "在求解所有不大于   的素数时,线性筛法(欧拉筛)都应当优先于埃氏筛法使用,因为线性筛法的时间复杂\n度为  ,低于埃氏筛法的  。",
+      "stem": "在求解所有不大于  的素数时,线性筛法(欧拉筛)都应当优先于埃氏筛法使用,因为线性筛法的时间复杂\n度为\n,低于埃氏筛法的\n。",
       "options": [
         {
           "key": "T",
@@ -385,7 +425,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
@@ -401,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "通过在数组的第一个、最中间和最后一个这 3 个数据中选择中间值作为枢轴(比较基准),快速排序算法可\n降低落入最坏情况的概率。",
+      "stem": "通过在数组的第一个、最中间和最后一个这3个数据中选择中间值作为枢轴(比较基准),快速排序算法可\n降低落入最坏情况的概率。",
       "options": [
         {
           "key": "T",
@@ -417,7 +457,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
@@ -433,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "以下  fib 函数计算第  n 项斐波那契数(fib(0)=0, fib(1)=1),其时间复杂度为  。",
+      "stem": "以下 fib 函数计算第 n 项斐波那契数(fib(0)=0 , fib(1)=1 ),其时间复杂度为\n。\ndef fib(n):\n    if n <= 1:\n        return n\n    return fib(n - 1) + fib(n - 2)",
       "options": [
         {
           "key": "T",
@@ -449,7 +489,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
@@ -465,7 +505,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
@@ -481,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -489,17 +529,24 @@
       "seq": 1,
       "kind": "traditional",
       "title": "数字移动",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小  A 有一个包含   个正整数的序列  ,序列   恰好包含   对不同的正整数。形式化地,对于\n任意  ,存在唯一一个   满足  。\n小  A 希望每对相同的数字在序列中相邻,为了实现这一目的,小  A 每次操作会选择任意   ( ) ,将当前序列\n的第   个数字移动到任意位置,并花费对应数字的体力。\n例如,假设序列  ,小  A 可以选择  ,将   移动到   的后面,此时序列变为\n,耗费   点体力。小  A 也可以选择  ,将   移动到   的前面,此时序列变为\n,花费   点体力。\n小  A 可以执行任意次操作,但他希望自己每次花费的体力尽可能小。小  A 希望你能帮他计算出一个最小的  ,使得\n他能够在每次花费的体力均不超过   的情况下令每对相同的数字在序列中相邻。\n3.1.2\n\n输入格式\n第一行一个正整数  ,代表序列长度,保证   为偶数。\n第二行包含   个正整数  ,代表序列  。且对于任意  ,存在唯一一个   满足\n。\n数据保证小  A 至少需要执行一次操作。\ndef fib(n):\n    if n <= 1:\n        return n\n    return fib(n - 1) + fib(n - 2)\n\n第  10 页  / 共  13 页\n3.1.3 输出格式\n输出一行,代表满足要求的   的最小值。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.5 数据范围\n对于 40% 的测试点,保证  。\n对于所有测试点,保证  。\n3.1.6",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小 A 有一个包含\n 个正整数的序列\n,序列  恰好包含\n 对不同的正整数。形式化地,对于\n任意\n,存在唯一一个  满足\n。\n小 A 希望每对相同的数字在序列中相邻,为了实现这一目的,小 A 每次操作会选择任意  (\n),将当前序列\n的第  个数字移动到任意位置,并花费对应数字的体力。\n例如,假设序列\n,小 A 可以选择\n,将\n 移动到\n 的后面,此时序列变为\n,耗费  点体力。小 A 也可以选择\n,将\n 移动到\n 的前面,此时序列变为\n,花费  点体力。\n小 A 可以执行任意次操作,但他希望自己每次花费的体力尽可能小。小 A 希望你能帮他计算出一个最小的 ,使得\n他能够在每次花费的体力均不超过  的情况下令每对相同的数字在序列中相邻。\n3.1.2\n\n输入格式\n第一行一个正整数\n,代表序列长度,保证\n 为偶数。\n第二行包含\n 个正整数\n,代表序列 。且对于任意\n,存在唯一一个  满足\n。\n数据保证小 A 至少需要执行一次操作。\n第 10 页 / 共 13 页\n3.1.3\n输出格式\n输出一行,代表满足要求的  的最小值。\n3.1.4\n样例\n3.1.4.1\n输入样例\n\n1 2 1 3 2 3\n\n3.1.4.2\n输出样例\n\n3.1.5\n数据范围\n对于40%的测试点,保证\n。\n对于所有测试点,保证\n。\n3.1.6",
       "time_ms": 3000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "6\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "# 输入n和a数组\nn = int(input())\na = []\nwhile len(a) < n:\n    a.extend(map(int, input().split()))\n# 答案的上下界\nleft, right = 0, 1000000\nans = 1000000\n# 二分搜索\nwhile left <= right:\n    # 考虑mid的力气能否完成任务\n    mid = (left + right) // 2\n    # 筛选出所有大于mid的数字\n    b = [x for x in a if x > mid]\n    # 先假设能够完成任务\n    possible = True\n    for i in range(0, len(b), 2):\n        # 如果两个相同且大于mid的数字,中间还有其它的大于mid的数字,则本任务无法完成\n        # 以(1 2 1 3 2 3)为例,两个3之间存在一个2。假设最大只能挪动1,则不论如何两个3之间的2不会被挪动,\n最终无法完成任务\n        if b[i] != b[i+1]:\n            possible = False\n            break\n    # 如果能够成功,则尝试更小的mid\n    if possible:\n        ans = mid\n        right = mid - 1\n    else:\n        left = mid + 1\nprint(ans)\n第 11 页 / 共 13 页"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "相等序列",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小  A 有一个包含   个正整数的序列  。小  A 每次可以花费  1 个金币执行以下任意一种操作:\n选择序列中一个正整数  ( ),将   变为  ,  为任意质数;\n选择序列中一个正整数  ( ),将   变为  ,  为任意质数,要求   能整除  。\n小  A 想请你帮他计算出令序列中所有整数都相同,最少需要花费多少金币。\n3.2.2\n\n输入格式\n第一行一个正整数  ,含义如题面所示。\n第二行包含   个正整数  ,代表序列  。\n3.2.3 输出格式\n输出一行,代表最少需要花费的金币数量。\n3.2.4 样例\n3.2.4.1 输入样例\n3.2.4.2 输出样例\n3.2.5 数据范围\n对于 60% 的测试点,保证  。\n对于所有测试点,保证  。\n\n10 6 35 105 42\n\n第  12 页  / 共  13 页\n3.2.6",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n小 A 有一个包含\n 个正整数的序列\n。小 A 每次可以花费 1 个金币执行以下任意一种操作:\n选择序列中一个正整数\n(\n),将\n 变为\n, 为任意质数;\n选择序列中一个正整数\n(\n),将\n 变为\n, 为任意质数,要求\n 能整除 。\n小 A 想请你帮他计算出令序列中所有整数都相同,最少需要花费多少金币。\n3.2.2\n\n输入格式\n第一行一个正整数\n,含义如题面所示。\n第二行包含\n 个正整数\n,代表序列 。\n3.2.3\n输出格式\n输出一行,代表最少需要花费的金币数量。\n3.2.4\n样例\n3.2.4.1\n输入样例\n\n10 6 35 105 42\n\n3.2.4.2\n输出样例\n\n3.2.5\n数据范围\n对于60%的测试点,保证\n。\n对于所有测试点,保证\n。\n第 12 页 / 共 13 页\n3.2.6",
       "time_ms": 3000,
       "memory_mb": 512,
       "samples": [
@@ -509,7 +556,8 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "tokens = []\ndef get_val():\n    while not tokens:\n        tokens.extend(input().split())\n    return int(tokens.pop(0))\n# 一共有多少数\nn = get_val()\n# key:质数\n# value:一个列表,num[2][3]表示有多少数质因数分解后可以包含2^3\n# 因为一个数最大就到10^5,相当于是10w,所以列表最多包含20个数肯定够用,即2^20\nnum = {}\nfor _ in range(n):\n    # 统计一下各个输入数字有多少质因数\n    x = get_val()\n    d = 2\n    # 质因数必定小于根号x\n    while d * d <= x:\n        # 如果找到了一个数是x的因数\n        if x % d == 0:\n            cnt = 0\n            # 那就一直除以这个数,并且更新x的质因数数目\n            # 这样一来剩下能够整除x的必定是质数\n            while x % d == 0:\n                x //= d\n                cnt += 1\n            if d not in num: num[d] = [0] * 20\n            # 数字x包含d^cnt,更新状态\n            num[d][cnt] += 1\n        d += 1\n    # 如果x是质数,则x的值为1,也更新状态\n    if x > 1:\n        if x not in num: num[x] = [0] * 20\n        num[x][1] += 1\nans = 0\nfor p in num:\n    counts = num[p]\n    # 计算有多少数字不包含这个质因数\n    counts[0] = n - sum(counts)\n\n    # 寻找中位数指数\n    # 也就是寻找一个d^n,使得一半的数字包含超过n次方的d,另一半不包含\n    # 如果让所有的数都统一到d^(n+1)那么将有超过一半的数字需要多乘以一个d,小于一半的数字可以少除以一个d,\n成本一定比现在大;反之亦然\n    pos = 0\n    median_exponent = 0\n    for j in range(20):\n        pos += counts[j]\n        if pos * 2 >= n:\n            median_exponent = j\n            break\n\n    # 计算代价\n    for j in range(20):\n        if counts[j]:\n            ans += counts[j] * abs(j - median_exponent)\nprint(ans)\n第 13 页 / 共 13 页"
     }
   ],
   "answer_rows": [
@@ -530,8 +578,6 @@
       "A",
       "B"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

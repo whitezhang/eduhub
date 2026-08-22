@@ -4,6 +4,8 @@ import { useRoute, useRouter } from "vue-router";
 import { api } from "../api.js";
 import { useSession } from "../stores/session.js";
 
+const PAGE_SIZE = 12;
+
 const route = useRoute();
 const router = useRouter();
 const session = useSession();
@@ -13,14 +15,47 @@ const q = ref("");
 const err = ref("");
 const noAnswerCount = ref(0);
 const loading = ref(false);
+const page = ref(1);
 let loadSeq = 0;
 
 const source = computed(() => String(route.query.source || ""));
 
+const sourceNote = computed(() => {
+  if (source.value === "gesp") {
+    return "GESP 选择/判断来自 AdaCpp；编程题来自 CCF 官方 PDF。";
+  }
+  if (source.value === "csp-j") {
+    return "CSP-J 专题练习来自 AdaCpp。";
+  }
+  return "";
+});
+
+function parsePaperQuery(raw) {
+  const needle = raw.trim().toLowerCase();
+  const wantNoAnswer = needle.includes("无答案");
+  const titlePart = needle.replace(/无答案/g, "").trim();
+  return { wantNoAnswer, titlePart };
+}
+
+const parsedPaperQuery = computed(() => parsePaperQuery(q.value));
+
 const filteredPapers = computed(() => {
-  const needle = q.value.trim().toLowerCase();
-  if (!needle) return papers.value;
-  return papers.value.filter((c) => String(c.title || "").toLowerCase().includes(needle));
+  const { wantNoAnswer, titlePart } = parsedPaperQuery.value;
+  if (!wantNoAnswer && !titlePart) return papers.value;
+  return papers.value.filter((c) => {
+    if (wantNoAnswer) {
+      if (session.user?.role !== "coach" || !(c.missing_answer_count > 0)) return false;
+    }
+    if (titlePart && !String(c.title || "").toLowerCase().includes(titlePart)) return false;
+    return true;
+  });
+});
+
+const totalPages = computed(() => Math.max(1, Math.ceil(filteredPapers.value.length / PAGE_SIZE)));
+
+const pagedPapers = computed(() => {
+  const start = (page.value - 1) * PAGE_SIZE;
+  return filteredPapers.value.slice(start, start + PAGE_SIZE);
 });
 
 async function load() {
@@ -29,6 +64,7 @@ async function load() {
   err.value = "";
   loading.value = true;
   papers.value = [];
+  page.value = 1;
   try {
     const [l, c] = await Promise.all([
       api("/api/problem-lists"),
@@ -54,6 +90,7 @@ async function load() {
 
 function goSource(slug) {
   q.value = "";
+  page.value = 1;
   router.push({ path: "/problems", query: slug ? { source: slug } : {} });
 }
 
@@ -69,25 +106,38 @@ function scoreHint(c) {
   return `${n} 题`;
 }
 
+function clampPage() {
+  if (page.value > totalPages.value) page.value = totalPages.value;
+  if (page.value < 1) page.value = 1;
+}
+
 onMounted(load);
 watch(
   () => route.query.source,
   () => {
     q.value = "";
+    page.value = 1;
     load();
   },
 );
 watch(() => session.user?.role, load);
+watch(q, () => {
+  page.value = 1;
+});
+watch(totalPages, clampPage);
 </script>
 
 <template>
-  <div class="wide">
-    <h1 class="serif">题库</h1>
-    <p v-if="noAnswerCount" class="muted">
-      另有 {{ noAnswerCount }} 道题目没有标准答案（学生可见，不评分）。
-      <router-link to="/studio">去管理查看</router-link>
-    </p>
-    <p v-if="err" class="err">{{ err }}</p>
+  <div class="wide problems-page">
+    <div class="problems-head">
+      <h1 class="serif">题库</h1>
+      <p v-if="sourceNote" class="muted problems-note">{{ sourceNote }}</p>
+      <p v-if="noAnswerCount" class="muted problems-note">
+        另有 {{ noAnswerCount }} 道无标准答案
+        <router-link to="/studio">去管理</router-link>
+      </p>
+      <p v-if="err" class="err">{{ err }}</p>
+    </div>
     <div class="chips">
       <a href="#" :class="{ on: !source }" @click.prevent="goSource('')">全部</a>
       <a
@@ -109,17 +159,20 @@ watch(() => session.user?.role, load);
           @click.prevent="goSource(l.source)"
         >{{ l.title }}</a>
       </aside>
-      <div>
-        <div class="search-wrap">
-          <input v-model="q" class="search search-fill" placeholder="搜索试卷名" type="search" autocomplete="off" />
-          <button v-if="q" class="search-clear" type="button" aria-label="清除" @click="clearSearch">×</button>
+      <div class="problems-main">
+        <div class="problems-toolbar">
+          <div class="search-wrap">
+            <input v-model="q" class="search search-fill" placeholder="搜索试卷名，或输入「无答案」" type="search" autocomplete="off" />
+            <button v-if="q" class="search-clear" type="button" aria-label="清除" @click="clearSearch">×</button>
+          </div>
+          <p v-if="loading" class="muted problem-bank-sum">载入中</p>
+          <p v-else-if="filteredPapers.length" class="muted problem-bank-sum">
+            <template v-if="q.trim()">筛选 {{ filteredPapers.length }} / {{ papers.length }} 套</template>
+            <template v-else>共 {{ papers.length }} 套</template>
+            <template v-if="totalPages > 1"> · {{ page }}/{{ totalPages }}</template>
+          </p>
         </div>
-        <p v-if="loading" class="muted problem-bank-sum">载入中</p>
-        <p v-else-if="filteredPapers.length" class="muted problem-bank-sum">
-          <template v-if="q.trim()">筛选 {{ filteredPapers.length }} / {{ papers.length }} 套</template>
-          <template v-else>共 {{ papers.length }} 套试卷</template>
-        </p>
-        <table v-if="filteredPapers.length" class="table desk">
+        <table v-if="pagedPapers.length" class="table desk problems-table">
           <thead>
             <tr>
               <th>试卷</th>
@@ -129,7 +182,7 @@ watch(() => session.user?.role, load);
             </tr>
           </thead>
           <tbody>
-            <tr v-for="c in filteredPapers" :key="c.id">
+            <tr v-for="c in pagedPapers" :key="c.id">
               <td>
                 {{ c.title }}
                 <span v-if="session.user?.role === 'coach' && c.missing_answer_count" class="tag-warn">无答案 {{ c.missing_answer_count }}</span>
@@ -143,12 +196,16 @@ watch(() => session.user?.role, load);
           </tbody>
         </table>
         <p v-else-if="!loading" class="muted">
-          <template v-if="q.trim() && papers.length">没有名称含「{{ q.trim() }}」的试卷。</template>
+          <template v-if="parsedPaperQuery.wantNoAnswer && !parsedPaperQuery.titlePart && papers.length">
+            <template v-if="session.user?.role === 'coach'">没有缺答案的试卷。</template>
+            <template v-else>「无答案」筛选仅教练可见。</template>
+          </template>
+          <template v-else-if="q.trim() && papers.length">没有符合筛选条件的试卷。</template>
           <template v-else>本题单暂无试卷。</template>
         </p>
         <div class="mobile">
           <router-link
-            v-for="c in filteredPapers"
+            v-for="c in pagedPapers"
             :key="c.id"
             class="problem-card"
             :to="{ path: `/problems/papers/${c.id}`, query: source ? { source } : {} }"
@@ -161,6 +218,11 @@ watch(() => session.user?.role, load);
             <span class="muted">{{ scoreHint(c) }}</span>
           </router-link>
         </div>
+        <p v-if="totalPages > 1" class="problems-pager">
+          <button class="btn-ghost" type="button" :disabled="page <= 1" @click="page -= 1">上一页</button>
+          <span class="muted">{{ page }} / {{ totalPages }}</span>
+          <button class="btn-ghost" type="button" :disabled="page >= totalPages" @click="page += 1">下一页</button>
+        </p>
       </div>
     </div>
   </div>

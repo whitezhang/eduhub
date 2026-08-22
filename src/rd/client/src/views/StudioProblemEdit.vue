@@ -25,6 +25,7 @@ const form = reactive({
   full_score: 100,
   published: true,
   review_note: "",
+  solution_code: "",
   statement: "",
   sample_in: "",
   sample_out: "",
@@ -54,6 +55,7 @@ function fill(p) {
   form.full_score = p.full_score ?? 100;
   form.published = Boolean(p.published);
   form.review_note = p.review_note || "";
+  form.solution_code = p.solution_code || "";
   form.statement = p.statement || "";
   form.sample_in = p.sample_in || "";
   form.sample_out = p.sample_out || "";
@@ -130,6 +132,7 @@ function buildBody() {
     full_score: Number(form.full_score) || 100,
     published: form.published ? 1 : 0,
     review_note: form.review_note,
+    solution_code: form.solution_code,
     statement: form.statement,
     sample_in: form.sample_in,
     sample_out: form.sample_out,
@@ -240,6 +243,12 @@ onMounted(load);
             <label class="field">样例输入 <textarea v-model="form.sample_in" rows="4" class="mono"></textarea></label>
             <label class="field">样例输出 <textarea v-model="form.sample_out" rows="4" class="mono"></textarea></label>
             <label class="field">样例说明 <textarea v-model="form.sample_note" rows="2"></textarea></label>
+
+            <h2 class="serif">满分程序</h2>
+            <p class="muted">编程题须填写参考程序才算「有答案」。</p>
+            <label class="field">
+              <textarea v-model="form.solution_code" rows="14" class="mono"></textarea>
+            </label>
 
             <h2 class="serif">测试点</h2>
             <p class="muted">is_sample 勾选表示样例测例。保存时会重写 runtime 测例文件。</p>

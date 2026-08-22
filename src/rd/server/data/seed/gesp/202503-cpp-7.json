@@ -3,16 +3,16 @@
     "ym": "202503",
     "lang": "cpp",
     "level": 7,
-    "title": "CCF GESP 2025年3月认证 C++ 7级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1669256997503008.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202503-cpp-7.pdf"
+    "title": "202503-cpp-7",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202503-cpp-7.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "下列哪个选项是 C++ 中的关键字?",
+      "stem": "下列哪个选项是C++中的关键字?",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面代码输出的是()",
+      "stem": "下面代码输出的是()\nint main() {\n    int a = 5, b = 2;\n    cout << (a >> b) << endl;\n}\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "以下代码的输出是什么?",
+      "stem": "以下代码的输出是什么?\nint main() {\n    int a = 10;\n    int *p = &a;\n    int *&q = p;\n    *q = 20;\n    cout << a << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -72,7 +72,7 @@
         },
         {
           "key": "C",
-          "text": "地址值 int main() { int a = 5, b = 2; cout << (a >> b) << endl; } int main() { int a = 10; int *p = &a; int *&q = p; *q = 20; cout << a << endl; return 0; }"
+          "text": "地址值"
         },
         {
           "key": "D",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面代码输出的是()",
+      "stem": "下面代码输出的是()\nint main() {\n    int arr[5] = {1, 2, 3, 4, 5};\n    int *p = arr + 2;\n1\n2\n3\n    cout << *p << endl;\n    return 0;\n}\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下列关于排序的说法,正确的是 (  ) 。",
+      "stem": "下列关于排序的说法,正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面关于 C++ 类构造和析构函数的说法,错误的是(   )。",
+      "stem": "下面关于C++类构造和析构函数的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -144,11 +144,11 @@
         },
         {
           "key": "C",
-          "text": "类的默认构造函数可以被声明为 private 。"
+          "text": "类的默认构造函数可以被声明为private。"
         },
         {
           "key": "D",
-          "text": "类的析构函数可以被声明为 private 。"
+          "text": "类的析构函数可以被声明为private。"
         }
       ],
       "answer": "B"
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下列关于树和图的说法,错误的是(   )。",
+      "stem": "下列关于树和图的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -180,15 +180,23 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "是个神奇的数字,因为它是由两个数 和 拼接而成,而且 。小杨决定写个程序找找\n小于 的正整数中共有多少这样神奇的数字。下面程序横线处应填入的是(   )。\nint main() {\n    int arr[5] = {1, 2, 3, 4, 5};\n    int *p = arr + 2;\n    cout << *p << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n#include <string>\nint count_miracle(int N) {\n    int cnt = 0;\n    for (int n = 1; n * n < N; n++) {\n        int n2 = n * n;\n        std::string s = std::to_string(n2);\n        for (int i = 1; i < s.length(); i++)\n1\n2\n3\n4\n5\n6\n7",
+      "stem": "是个神奇的数字,因为它是由两个数\n和\n拼接而成,而且\n。小杨决定写个程序找找\n小于\n的正整数中共有多少这样神奇的数字。下面程序横线处应填入的是(  )。\n#include <string>\nint count_miracle(int N) {\n    int cnt = 0;\n    for (int n = 1; n * n < N; n++) {\n        int n2 = n * n;\n        std::string s = std::to_string(n2);\n        for (int i = 1; i < s.length(); i++)\n1\n2\n3\n4\n5\n6\n7\n            if (s[i] != '0') {\n                std::string sl = s.substr(0, i);\n                std::string sr = s.substr(i);\n                int nl = std::stoi(sl);\n                int nr = std::stoi(sr);\n                if (_________) // 在此处填入选项\n8\n9\n10\n11\n12\n13\n                    cnt++;\n            }\n    }\n    return cnt;\n}\n14\n15\n16\n17\n18",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "nl + nr == n"
+        },
+        {
+          "key": "B",
+          "text": "nl + nr == n2"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "(nl + nr) * (nl + nr) == n"
+        },
+        {
+          "key": "D",
+          "text": "(nl + nr) ^ 2 == n2"
         }
       ],
       "answer": "A"
@@ -196,15 +204,23 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "给定一个无向图,图的节点编号从  0 到  n-1 ,图的边以邻接表的形式给出。下面的程序使用深度优先搜索\n( DFS )遍历该图,并输出遍历的节点顺序。横线处应该填入的是()\n            if (s[i] != '0') {\n                std::string sl = s.substr(0, i);\n                std::string sr = s.substr(i);\n                int nl = std::stoi(sl);\n                int nr = std::stoi(sr);\n                if (_________) // 在此处填入选项\n                    cnt++;\n            }\n    }\n    return cnt;\n}\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nnl + nr == n1\nnl + nr == n21\n(nl + nr) * (nl + nr) == n1\n(nl + nr) ^ 2 == n21\n#include <iostream>\n#include <vector>\n#include <stack>\nusing namespace std;\nvoid DFS(int start, vector<vector<int>>& graph, vector<bool>& visited) {\n    stack<int> s;\n    s.push(start);\n    visited[start] = true;\n    while (!s.empty()) {\n        int node = s.top();\n        s.pop();\n        cout << node << \" \"; // 输出当前节点\n        // 遍历邻接节点\n        for (int neighbor : graph[node]) {\n            if (!visited[neighbor]) {\n                __________________\n                __________________\n            }\n        }\n    }\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24",
+      "stem": "给定一个无向图,图的节点编号从 0 到 n-1,图的边以邻接表的形式给出。下面的程序使用深度优先搜索\n(DFS)遍历该图,并输出遍历的节点顺序。横线处应该填入的是()\n#include <iostream>\n#include <vector>\n#include <stack>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\nvoid DFS(int start, vector<vector<int>>& graph, vector<bool>& visited) {\n    stack<int> s;\n    s.push(start);\n    visited[start] = true;\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n    while (!s.empty()) {\n        int node = s.top();\n        s.pop();\n        cout << node << \" \"; // 输出当前节点\n        // 遍历邻接节点\n        for (int neighbor : graph[node]) {\n            if (!visited[neighbor]) {\n                __________________\n                __________________\n19\n20\n21\n22\n23\n24\n            }\n        }\n    }\n}\n25\n26\n27\n28\n29\n30\nint main() {\n    int n, m;\n    cin >> n >> m;\n    vector<vector<int>> graph(n);\n    for (int i = 0; i < m; i++) {\n        int u, v;\n        cin >> u >> v;\n        graph[u].push_back(v);\n        graph[v].push_back(u);\n    }\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n\n    vector<bool> visited(n, false);\n41\n42\n43\n44\n45\n46\n    // 从节点 0 开始DFS遍历\n    DFS(0, graph, visited);\n    return 0;\n}",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "visited[neighbor] = true; s.push(neighbor-1);"
+        },
+        {
+          "key": "B",
+          "text": "visited[neighbor] = true; s.push(neighbor+1);"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "visited[neighbor] = false; s.push(neighbor);"
+        },
+        {
+          "key": "D",
+          "text": "visited[neighbor] = true; s.push(neighbor);"
         }
       ],
       "answer": "D"
@@ -212,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "给定一个整数数组  nums ,找到其中最长的严格上升子序列的长度。\n子序列是指从原数组中删除一些元素(或不删除)后,剩余元素保持原有顺序的序列。\n下面的程序横线处应该填入的是()\n}\nint main() {\n    int n, m;\n    cin >> n >> m;\n    vector<vector<int>> graph(n);\n    for (int i = 0; i < m; i++) {\n        int u, v;\n        cin >> u >> v;\n        graph[u].push_back(v);\n        graph[v].push_back(u);\n    }\n\n    vector<bool> visited(n, false);\n    // 从节点  0 开始 DFS 遍历\n    DFS(0, graph, visited);\n    return 0;\n}\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\nvisited[neighbor] = true;\ns.push(neighbor-1);\n1\n2\nvisited[neighbor] = true;\ns.push(neighbor+1);\n1\n2\nvisited[neighbor] = false;\ns.push(neighbor);\n1\n2\nvisited[neighbor] = true;\ns.push(neighbor);\n1\n2\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\nint lengthOfLIS(vector<int>& nums) {\n    int n = nums.size();\n1\n2\n3\n4\n5\n6\n7",
+      "stem": "给定一个整数数组 nums,找到其中最长的严格上升子序列的长度。\n子序列是指从原数组中删除一些元素(或不删除)后,剩余元素保持原有顺序的序列。\n下面的程序横线处应该填入的是()\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\nint lengthOfLIS(vector<int>& nums) {\n    int n = nums.size();\n    if (n == 0) return 0;\n    vector<int> dp(n, 1);\n8\n9\n10\n11\n12\n13\n    for (int i = 1; i < n; i++) {\n        for (int j = 0; j < i; j++) {\n            if (nums[i] > nums[j]) {\n                _________________________\n            }\n        }\n    }\n    return *max_element(dp.begin(), dp.end());\n}\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\nint main() {\n    int n;\n    cin >> n;\n    vector<int> nums(n);\n    for (int i = 0; i < n; i++) {\n        cin >> nums[i];\n    }\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n    int result = lengthOfLIS(nums);\n    cout << result << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -236,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "给定一个整数数组  nums ,找到其中最长的严格上升子序列的长度。\n子序列是指从原数组中删除一些元素(或不删除)后,剩余元素保持原有顺序的序列。\n该程序的时间复杂度为()\n    if (n == 0) return 0;\n    vector<int> dp(n, 1);\n    for (int i = 1; i < n; i++) {\n        for (int j = 0; j < i; j++) {\n            if (nums[i] > nums[j]) {\n                _________________________\n            }\n        }\n    }\n    return *max_element(dp.begin(), dp.end());\n}\nint main() {\n    int n;\n    cin >> n;\n    vector<int> nums(n);\n    for (int i = 0; i < n; i++) {\n        cin >> nums[i];\n    }\n    int result = lengthOfLIS(nums);\n    cout << result << endl;\n    return 0;\n}\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\nint lengthOfLIS(vector<int>& nums) {\n    int n = nums.size();\n    if (n == 0) return 0;\n    vector<int> dp(n, 1);\n    for (int i = 1; i < n; i++) {\n        for (int j = 0; j < i; j++) {\n            if (nums[i] > nums[j]) {\n                _________________________\n            }\n        }\n    }\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17",
+      "stem": "给定一个整数数组 nums,找到其中最长的严格上升子序列的长度。\n子序列是指从原数组中删除一些元素(或不删除)后,剩余元素保持原有顺序的序列。\n该程序的时间复杂度为()\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\nint lengthOfLIS(vector<int>& nums) {\n    int n = nums.size();\n    if (n == 0) return 0;\n    vector<int> dp(n, 1);\n9\n10\n11\n12\n13\n14\n15\n16\n17\n    for (int i = 1; i < n; i++) {\n        for (int j = 0; j < i; j++) {\n            if (nums[i] > nums[j]) {\n                _________________________\n            }\n        }\n    }\n    return *max_element(dp.begin(), dp.end());\n}\n18\n19\n20\n21\n22\n23\nint main() {\n    int n;\n    cin >> n;\n    vector<int> nums(n);\n    for (int i = 0; i < n; i++) {\n        cin >> nums[i];\n    }\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n    int result = lengthOfLIS(nums);\n    cout << result << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -252,7 +268,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "给定两个无向图\nG1 和  G2 ,判断它们是否同构。图的同构是指两个图的节点可以通过某种重新编号的方式完全匹配,且边的连接关\n系一致。\n为了简化问题,假设图的节点编号从  0 到  n-1 ,并且图的边以邻接表的形式给出。下面程序中横线处应该给出的是\n()\n    return *max_element(dp.begin(), dp.end());\n}\nint main() {\n    int n;\n    cin >> n;\n    vector<int> nums(n);\n    for (int i = 0; i < n; i++) {\n        cin >> nums[i];\n    }\n    int result = lengthOfLIS(nums);\n    cout << result << endl;\n    return 0;\n}\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n#include <iostream>\n#include <vector>\n#include <map>\n#include <algorithm>\nusing namespace std;\nstring graphHash(vector<vector<int>>& graph) {\n    vector<string> nodeHashes(graph.size());\n    for (int i = 0; i < graph.size(); i++) {\n        vector<int> neighbors = graph[i];\n        sort(neighbors.begin(), neighbors.end());\n        string hash;\n        for (int neighbor : neighbors) {\n            ——————————————————————————\n        }\n        nodeHashes[i] = hash;\n    }\n    sort(nodeHashes.begin(), nodeHashes.end());\n    string finalHash;\n    for (string h : nodeHashes) {\n        finalHash += h + \";\";\n    }\n    return finalHash;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25",
+      "stem": "给定两个无向图\nG1和 G2 ,判断它们是否同构。图的同构是指两个图的节点可以通过某种重新编号的方式完全匹配,且边的连接关\n系一致。\n为了简化问题,假设图的节点编号从 0 到 n-1,并且图的边以邻接表的形式给出。下面程序中横线处应该给出的是\n()\n#include <iostream>\n#include <vector>\n#include <map>\n#include <algorithm>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\nstring graphHash(vector<vector<int>>& graph) {\n    vector<string> nodeHashes(graph.size());\n    for (int i = 0; i < graph.size(); i++) {\n        vector<int> neighbors = graph[i];\n        sort(neighbors.begin(), neighbors.end());\n        string hash;\n        for (int neighbor : neighbors) {\n            ——————————————————————————\n        }\n        nodeHashes[i] = hash;\n    }\n    sort(nodeHashes.begin(), nodeHashes.end());\n    string finalHash;\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n    for (string h : nodeHashes) {\n        finalHash += h + \";\";\n    }\n    return finalHash;\n}\n20\n21\n22\n23\n24\n25\nint main() {\n    int n;\n    cin >> n;\n26\n27\n28\n29\n30\n31\n    vector<vector<int>> G1(n);\n    for (int i = 0; i < n; i++) {\n        int k;\n        while (cin >> k) {\n            G1[i].push_back(k);\n            if (cin.get() == '\\n') break;\n        }\n    }\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n    vector<vector<int>> G2(n);\n    for (int i = 0; i < n; i++) {\n        int k;\n        while (cin >> k) {\n            G2[i].push_back(k);\n            if (cin.get() == '\\n') break;\n        }\n    }\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n    string hash1 = graphHash(G1);\n    string hash2 = graphHash(G2);\n    if (hash1 == hash2) {\n        cout << \"YES\" << endl;\n    } else {\n        cout << \"NO\" << endl;\n    }\n53\n54\n55\n56\n57\n58\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -276,7 +292,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "给定一个  m×n 的二维网格  grid ,每个格子中有一个非负整数。请找出一条从左上角  (0, 0) 到右下角  (m-1, n-\n1) 的路径,使得路径上的数字总和最小。每次只能向右或向下移动。横线处应该填入的是()\nint main() {\n    int n;\n    cin >> n;\n    vector<vector<int>> G1(n);\n    for (int i = 0; i < n; i++) {\n        int k;\n        while (cin >> k) {\n            G1[i].push_back(k);\n            if (cin.get() == '\\n') break;\n        }\n    }\n    vector<vector<int>> G2(n);\n    for (int i = 0; i < n; i++) {\n        int k;\n        while (cin >> k) {\n            G2[i].push_back(k);\n            if (cin.get() == '\\n') break;\n        }\n    }\n    string hash1 = graphHash(G1);\n    string hash2 = graphHash(G2);\n    if (hash1 == hash2) {\n        cout << \"YES\" << endl;\n    } else {\n        cout << \"NO\" << endl;\n    }\n    return 0;\n}\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\nint minPathSum(vector<vector<int>>& grid) {\n    int m = grid.size();\n    int n = grid[0].size();\n    vector<vector<int>> dp(m, vector<int>(n, 0));\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
+      "stem": "给定一个 m×n的二维网格 grid,每个格子中有一个非负整数。请找出一条从左上角 (0, 0) 到右下角 (m-1, n-\n1) 的路径,使得路径上的数字总和最小。每次只能向右或向下移动。横线处应该填入的是()\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n1\n2\n3\n4\n5\n6\nint minPathSum(vector<vector<int>>& grid) {\n    int m = grid.size();\n    int n = grid[0].size();\n7\n8\n9\n10\n11\n    vector<vector<int>> dp(m, vector<int>(n, 0));\n    dp[0][0] = grid[0][0];\n    for (int j = 1; j < n; j++) {\n        dp[0][j] = dp[0][j - 1] + grid[0][j];\n    }\n    for (int i = 1; i < m; i++) {\n        dp[i][0] = dp[i - 1][0] + grid[i][0];\n12\n13\n14\n15\n16\n17\n    }\n    for (int i = 1; i < m; i++) {\n        for (int j = 1; j < n; j++) {\n            ————————————————————————————————\n        }\n    }\n    return dp[m - 1][n - 1];\n}\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\nint main() {\n    int m, n;\n    cin >> m >> n;\n    vector<vector<int>> grid(m, vector<int>(n));\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            cin >> grid[i][j];\n        }\n    }\n    int result = minPathSum(grid);\n    cout << result << endl;\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n    return 0;\n}\n39\n40",
       "options": [
         {
           "key": "A",
@@ -300,7 +316,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "给定一个整数数组  nums ,找到一个具有最大和的连续子数组(子数组最少包含一个元素),返回其最大\n和。下面横线处应该填入的是()\n    dp[0][0] = grid[0][0];\n    for (int j = 1; j < n; j++) {\n        dp[0][j] = dp[0][j - 1] + grid[0][j];\n    }\n    for (int i = 1; i < m; i++) {\n        dp[i][0] = dp[i - 1][0] + grid[i][0];\n    }\n    for (int i = 1; i < m; i++) {\n        for (int j = 1; j < n; j++) {\n            ————————————————————————————————\n        }\n    }\n    return dp[m - 1][n - 1];\n}\nint main() {\n    int m, n;\n    cin >> m >> n;\n    vector<vector<int>> grid(m, vector<int>(n));\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            cin >> grid[i][j];\n        }\n    }\n    int result = minPathSum(grid);\n    cout << result << endl;\n    return 0;\n}\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\nint maxSubArray(vector<int>& nums) {\n    int n = nums.size();\n    if (n == 0) return 0;\n    vector<int> dp(n, 0);\n    dp[0] = nums[0];\n    int maxSum = dp[0];\n    for (int i = 1; i < n; i++) {\n        _____________________________________\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "给定一个整数数组 nums,找到一个具有最大和的连续子数组(子数组最少包含一个元素),返回其最大\n和。下面横线处应该填入的是()\n#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint maxSubArray(vector<int>& nums) {\n    int n = nums.size();\n    if (n == 0) return 0;\n    vector<int> dp(n, 0);\n    dp[0] = nums[0];\n    int maxSum = dp[0];\n11\n12\n13\n14\n15\n    for (int i = 1; i < n; i++) {\n        _____________________________________\n        maxSum = max(maxSum, dp[i]);\n    }\n16\n17\n18\n19\n20\n21\n    return maxSum;\n}\nint main() {\n    int n;\n    cin >> n;\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n    vector<int> nums(n);\n    for (int i = 0; i < n; i++) {\n        cin >> nums[i];\n    }\n    int result = maxSubArray(nums);\n    cout << result << endl;\n32\n33\n34\n35\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -324,23 +340,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "在哈希表的实现中,冲突解决是一个重要的问题。以下哪种方法  不是  常见的哈希表冲突解决策略?",
+      "stem": "在哈希表的实现中,冲突解决是一个重要的问题。以下哪种方法 不是 常见的哈希表冲突解决策略?",
       "options": [
         {
           "key": "A",
-          "text": "链地址法( Chaining )"
+          "text": "链地址法(Chaining)"
         },
         {
           "key": "B",
-          "text": "开放地址法( Open Addressing )"
+          "text": "开放地址法(Open Addressing)"
         },
         {
           "key": "C",
-          "text": "二次哈希法( Double Hashing )"
+          "text": "二次哈希法(Double Hashing)"
         },
         {
           "key": "D",
-          "text": "二分查找法( Binary Search )"
+          "text": "二分查找法(Binary Search)"
         }
       ],
       "answer": "D"
@@ -350,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "在 C++ 语法中,表达式1e6、1000000和10^6的值是相同的。",
+      "stem": "在C++语法中,表达式1e6 、1000000 和10^6 的值是相同的。",
       "options": [
         {
           "key": "T",
@@ -361,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在 C++ 语言中,函数调用前必须有函数声明或定义。",
+      "stem": "在C++语言中,函数调用前必须有函数声明或定义。",
       "options": [
         {
           "key": "T",
@@ -377,7 +393,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
@@ -393,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "long long类型能表达的数都能使用double类型精确表达。",
+      "stem": "long long 类型能表达的数都能使用double 类型精确表达。",
       "options": [
         {
           "key": "T",
@@ -409,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "使用math.h或cmath头文件中的函数,表达式cos(60)的结果类型为double、值约为0.5。",
+      "stem": "使用math.h 或cmath 头文件中的函数,表达式cos(60) 的结果类型为double 、值约为0.5 。",
       "options": [
         {
           "key": "T",
@@ -425,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "一颗 层的满二叉树,一定有 个结点。",
+      "stem": "一颗\n层的满二叉树,一定有\n个结点。",
       "options": [
         {
           "key": "T",
@@ -441,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "邻接表和邻接矩阵都是图的存储形式。为了操作时间复杂度考虑,同一个图可以同时维护两种存储形式。\n        maxSum = max(maxSum, dp[i]);\n    }\n    return maxSum;\n}\nint main() {\n    int n;\n    cin >> n;\n    vector<int> nums(n);\n    for (int i = 0; i < n; i++) {\n        cin >> nums[i];\n    }\n    int result = maxSubArray(nums);\n    cout << result << endl;\n    return 0;\n}",
+      "stem": "邻接表和邻接矩阵都是图的存储形式。为了操作时间复杂度考虑,同一个图可以同时维护两种存储形式。",
       "options": [
         {
           "key": "T",
@@ -457,7 +473,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
@@ -473,7 +489,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
@@ -489,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "按照下面的规则生成一棵二叉树:以一个人为根节点,其父亲为左子节点,母亲为右子节点。对其父亲、\n母亲分别用同样规则生成左子树和右子树。以此类推,记录 30 代的直系家谱,则这是一棵满二叉树。",
+      "stem": "按照下面的规则生成一棵二叉树:以一个人为根节点,其父亲为左子节点,母亲为右子节点。对其父亲、\n母亲分别用同样规则生成左子树和右子树。以此类推,记录30代的直系家谱,则这是一棵满二叉树。",
       "options": [
         {
           "key": "T",
@@ -505,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -513,7 +529,7 @@
       "seq": 1,
       "kind": "traditional",
       "title": "编程题 1",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 图上移动\n3.1.2 题目描述\n小  A 有一张包含   个结点与   条边的无向图,结点以   标号。小  A 会从图上选择一个结点作为起点,每一\n步移动到某个与当前小  A 所在结点相邻的结点。对于每个结点  ( ),小  A 想知道从结点   出发恰好移动\n 步之后,小  A 可能位于哪些结点。由于满足条件的结点可能有很多,你只需要求出这些结点的数量。\n3.1.3\n\n输入格式\n第一行,三个正整数  ,分别表示无向图的结点数与边数,最多移动的步数。\n接下来   行,每行两个正整数  ,表示图中的一条连接结点   与   的无向边。\n3.1.4 输出格式\n共   行,第   行( )包含   个整数,第   个整数( )表示从结点   出发恰好移动   步之后可能位\n于的结点数量。\n3.1.5 样例\n3.1.5.1 输入样例  1\n3.1.5.2 输出样例  1\n4 4 3\n1 2\n1 3\n2 3\n3 4\n\n2 4 4\n2 4 4\n3 3 4\n1 3 3\n\n3.1.6 数据范围\n对于  % 的测试点,保证  。\n对于另外  % 的测试点,保证  , 。\n对于所有测试点,保证  , , , 。\n3.1.7",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n图上移动\n3.1.2\n题目描述\n小 A 有一张包含  个结点与\n 条边的无向图,结点以\n 标号。小 A 会从图上选择一个结点作为起点,每一\n步移动到某个与当前小 A 所在结点相邻的结点。对于每个结点 (\n),小 A 想知道从结点  出发恰好移动\n 步之后,小 A 可能位于哪些结点。由于满足条件的结点可能有很多,你只需要求出这些结点的数量。\n3.1.3\n\n输入格式\n第一行,三个正整数\n,分别表示无向图的结点数与边数,最多移动的步数。\n接下来\n 行,每行两个正整数\n,表示图中的一条连接结点\n 与\n 的无向边。\n3.1.4\n输出格式\n共  行,第  行(\n)包含  个整数,第  个整数(\n)表示从结点  出发恰好移动  步之后可能位\n于的结点数量。\n3.1.5\n样例\n3.1.5.1\n输入样例 1\n4 4 3\n1 2\n1 3\n2 3\n3 4\n\n3.1.5.2\n输出样例 1\n2 4 4\n2 4 4\n3 3 4\n1 3 3\n\n3.1.6\n数据范围\n对于\n% 的测试点,保证\n。\n对于另外\n% 的测试点,保证\n,\n。\n对于所有测试点,保证\n,\n,\n,\n。\n3.1.7",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -523,13 +539,14 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\nusing namespace std;\nconst int K = 25;\nconst int N = 505;\nconst int E = N << 1;\nint n, m, k;\nint h[N], to[E], nx[E], et;\nint f[K][N][N];\nvoid ae(int u, int v) {\n    et++;\n    to[et] = v;\n    nx[et] = h[u];\n    h[u] = et;\n}\nint main() {\n    scanf(\"%d%d%d\", &n, &m, &k);\n    for (int i = 1; i <= m; i++) {\n        int u, v;\n        scanf(\"%d%d\", &u, &v);\n        ae(u, v);\n        ae(v, u);\n    }\n    for (int i = 1; i <= n; i++)\n        f[0][i][i] = 1;\n    for (int t = 1; t <= k; t++)\n        for (int x = 1; x <= n; x++)\n            for (int y = 1; y <= n; y++)\n                if (f[t - 1][x][y])\n                    for (int i = h[y]; i; i = nx[i])\n                        f[t][x][to[i]] = 1;\n    for (int i = 1; i <= n; i++) {\n        for (int t = 1; t <= k; t++) {\n            int ans = 0;\n            for (int j = 1; j <= n; j++)\n                ans += f[t][i][j];\n            printf(\"%d%c\", ans, \" \\n\"[t == k]);\n        }\n    }\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "编程题 2",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.8 等价消除\n3.2.9 题目描述\n小  A 有一个仅包含小写英文字母的字符串  。\n对于一个字符串,如果能通过每次删去其中两个相同字符的方式,将这个字符串变为空串,那么称这个字符串是可\n以被等价消除的。\n小  A 想知道   有多少子串是可以被等价消除的。\n一个字符串   是   的子串,当且仅当删去   的某个可以为空的前缀和某个可以为空的后缀之后,可以得到  。\n3.2.10\n\n输入格式\n第一行,一个正整数  ,表示字符串   的长度。\n第二行,一个仅包含小写英文字母的字符串  。\n3.2.11 输出格式\n一行,一个整数,表示答案。\n3.2.12 样例\n3.2.12.3 输入样例  1\n3.2.12.4 输出样例  1\n3.2.12.5 输入样例  2\n3.2.12.6 输出样例  2\n3.2.13 数据范围\n对于  % 的测试点,保证   中仅包含  a 和  b 两种字符。\n对于另外  % 的测试点,保证  。\n对于所有测试点,保证  。\n\naaaaabb\n\nbabacabab\n\n3.2.14",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.8\n等价消除\n3.2.9\n题目描述\n小 A 有一个仅包含小写英文字母的字符串 。\n对于一个字符串,如果能通过每次删去其中两个相同字符的方式,将这个字符串变为空串,那么称这个字符串是可\n以被等价消除的。\n小 A 想知道  有多少子串是可以被等价消除的。\n一个字符串\n 是  的子串,当且仅当删去  的某个可以为空的前缀和某个可以为空的后缀之后,可以得到\n。\n3.2.10\n\n输入格式\n第一行,一个正整数\n,表示字符串  的长度。\n第二行,一个仅包含小写英文字母的字符串 。\n3.2.11\n输出格式\n一行,一个整数,表示答案。\n3.2.12\n样例\n3.2.12.3\n输入样例 1\n\naaaaabb\n\n3.2.12.4\n输出样例 1\n\n3.2.12.5\n输入样例 2\n\nbabacabab\n\n3.2.12.6\n输出样例 2\n\n3.2.13\n数据范围\n对于\n% 的测试点,保证  中仅包含 a 和 b 两种字符。\n对于另外\n% 的测试点,保证\n。\n对于所有测试点,保证\n。\n3.2.14",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -539,12 +556,13 @@
           "suspect": false
         },
         {
-          "in": "91\n9\n",
-          "out": "2\n",
-          "suspect": true
+          "in": "9\n",
+          "out": "9\n",
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <map>\nusing namespace std;\nconst int N = 2e5 + 5;\nint n;\nchar s[N];\nmap <int, int> m;\nlong long ans;\nint main() {\n    scanf(\"%d\", &n);\n    scanf(\"%s\", s + 1);\n    int v = 0;\n    m[v]++;\n    for (int i = 1; i <= n; i++) {\n        v ^= 1 << (s[i] - 'a');\n        ans += m[v];\n        m[v]++;\n    }\n    printf(\"%lld\\n\", ans);\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -563,11 +581,8 @@
       "C",
       "B",
       "B",
-      "D",
-      "C"
+      "D"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

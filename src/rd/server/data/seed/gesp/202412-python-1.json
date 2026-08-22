@@ -3,16 +3,15 @@
     "ym": "202412",
     "lang": "python",
     "level": 1,
-    "title": "GESP 2024年12月认证 Python 1级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10178.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1652740826595360.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202412-python-1.pdf"
+    "title": "202412-python-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202412-python-1.pdf"
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2024年10月8日 ,诺贝尔物理学奖“意外地”颁给了两位计算机科学家约翰·霍普菲尔德(JohnJ. Hopfield)和杰\n弗里·辛顿(Geoffrey E. Hinton) 。这两位科学家的主要研究方向是( )。\n口 A. 天体物理\n口 B. 流体力学\n口 C. 人工智能\n口 D. 量子理论",
+      "stem": "2024年10月8日,诺贝尔物理学奖“意外地”颁给了两位计算机科学家约翰·霍普菲尔德(John J. Hopfield)和杰\n弗里·辛顿(Geoffrey E. Hinton)。这两位科学家的主要研究方向是(\n)。\n口A. 天体物理\n口B. 流体力学\n口C. 人工智能\n口D. 量子理论",
       "options": [
         {
           "key": "A",
@@ -31,12 +30,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下列软件中是操作系统的是( )。\n口 A. 高德地图\n口 B. 腾讯会议\n口 C. 纯血鸿蒙\n口 D. 金山永中",
+      "stem": "下列软件中是操作系统的是(\n)。\n口A. 高德地图\n口B. 腾讯会议\n口C. 纯血鸿蒙\n口D. 金山永中",
       "options": [
         {
           "key": "A",
@@ -55,12 +54,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "有关下列Python代码的说法 ,错误的是( )。\n1\n print(\"Hello,GESP!\")\n口 A. 配对双引号内 ,不可以有汉字\n口 B. 配对双引号可以相应改变为英文单引号\n口 C. 配对双引号可以相应改变为三个连续英文单引号\n口 D. 配对双引号可以相应改变为三个连续英文双引号",
+      "stem": "有关下列Python代码的说法,错误的是(\n)。\n1\nprint(\"Hello,GESP!\")\n口A. 配对双引号内,不可以有汉字\n口B. 配对双引号可以相应改变为英文单引号\n口C. 配对双引号可以相应改变为三个连续英文单引号\n口D. 配对双引号可以相应改变为三个连续英文双引号",
       "options": [
         {
           "key": "A",
@@ -79,12 +78,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "A"
     },
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "Python表达式 20 - 3 * 2 ** 2 的值是( )。\n口 A. -16\n口 B. 8\n口 C. 68\n口 D. 196",
+      "stem": "Python表达式20 - 3 * 2 ** 2 的值是( )。\n口A. -16\n口B. 8\n口C. 68\n口D. 196",
       "options": [
         {
           "key": "A",
@@ -103,12 +102,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "在Python中 ,假设N为正整数2 ,则 print(N // 3 + N % 3) 将输出( )。\n口 A. 0\n口 B. 2\n口 C. 3\n口 D. 4",
+      "stem": "在Python中,假设N为正整数2 ,则print(N // 3 + N % 3) 将输出(\n)。\n口A. 0\n口B. 2\n口C. 3\n口D. 4",
       "options": [
         {
           "key": "A",
@@ -127,12 +126,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "Python语句 print(7%3,\"7%3\",f\"7%3={7%3}\") 执行后的输出是( )。\n口 A. 1 7%3 7%3={7%3}\n口 B. 17%3 1=1\nw C. 1 1 1=1\no D. 17%3 7%3=1",
+      "stem": "Python语句print(7%3,\"7%3\",f\"7%3={7%3}\") 执行后的输出是(\n)。\n口A. 1 7%3 7%3={7%3}\n口B. 1 7%3 1=1\nw C. 1 1 1=1\no D. 1 7%3 7%3=1",
       "options": [
         {
           "key": "A",
@@ -151,12 +150,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "D"
     },
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "执行下面的Python代码 ,在键盘上输入123并回车 ,输出是( )。\n1\n2\na = input(\"请输入正整数: \")\nprint(a + \"123\")\n口 A. 246\n口 B. 123123\n口 C. 123 123\n口 D. 语句执行将报错, 因为a是正整数不能和字符串相加",
+      "stem": "执行下面的Python代码,在键盘上输入123并回车,输出是(\n)。\n1\n2\na = input(\"请输入正整数:\")\nprint(a + \"123\")\n口A. 246\n口B. 123123\n口C. 123 123\n口D. 语句执行将报错,因为a是正整数不能和字符串相加",
       "options": [
         {
           "key": "A",
@@ -175,24 +174,24 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "有关下列Python代码的说法 ,错误的是( )。\n1\n2\nN = int(input())\nprint(N % 2)\n口 A. input()函数不能放在int()函数之中\n口 B. 执行代码并在键盘上输入3.14后回车 ,将报错",
+      "stem": "有关下列Python代码的说法,错误的是(\n)。\nN = int(input())\nprint(N % 2)\n1\n2\n口A. input()函数不能放在int()函数之中\n口B. 执行代码并在键盘上输入3. 14后回车,将报错",
       "options": [
         {
           "key": "C",
-          "text": "执行代码并在键盘上输入偶数 ,不管是负偶数还是正偶数 ,输出都是0 口 D. 在Python中 ,input()函数内可以没有提示信息, 因此上述代码没有语法错误"
+          "text": "执行代码并在键盘上输入偶数,不管是负偶数还是正偶数,输出都是0 口D. 在Python中,input()函数内可以没有提示信息,因此上述代码没有语法错误"
         }
       ],
-      "answer": ""
+      "answer": "A"
     },
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面Python代码执行后 ,求出几天后星期几 。如果星期日则输出“星期天”否则输出形如“星期1” 。横线上应填\n入的代码是( )。\n1\n2\n3\n4\n5\n6\n7\n8\n9\nnowDay = int(input(\"今天星期几? \"))\nafterDays = int(input(\"求几天后星期几? \"))\nN = nowDay+afterDays\nif :\nprint(\"星期天\")\nelse:\nprint(f\"星期{N%7}\")\n口 B. 9\n口 A. N% 7 != 0\n口 B. N% 7 == 0\no C. N == 0\n口 D. N % 7",
+      "stem": "下面Python代码执行后,求出几天后星期几。如果星期日则输出“星期天”否则输出形如“星期1” 。横线上应填\n入的代码是(\n)。\nnowDay = int(input(\"今天星期几?\"))\n1\n2\n3\n4\nafterDays = int(input(\"求几天后星期几?\"))\nN = nowDay+afterDays\n5\n6\n7\n8\n9\nif\n:\nprint(\"星期天\")\nelse:\nprint(f\"星期{N%7}\")\n口A. N % 7 != 0\n口B. N % 7 == 0\no C. N == 0\n口D. N % 7",
       "options": [
         {
           "key": "A",
@@ -211,12 +210,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面Python代码执行后输出是( )。\n1\n2\n3\n4\nN = 0\nfor i in range(1, 10):\nN += 1\nprint(N + i)\n口 A. 54\n口 B. 20\n口 C. 19\n口 D. 18",
+      "stem": "下面Python代码执行后输出是(\n)。\nN = 0\nfor i in range(1, 10):\n1\n2\n3\n4\nN += 1\nprint(N + i)\n口A. 54\n口B. 20\n口C. 19\n口D. 18",
       "options": [
         {
           "key": "A",
@@ -235,36 +234,24 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "D"
     },
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面Python代码执行后输出的是( )。\n1\n2\n3\n4\ntnt = 0\nfor i in range(0, 100):\ntnt += i % 10\nprint(tnt)\n口 A. 4950\n口 B. 5050\n口 C. 450\n口 D. 100",
+      "stem": "下面Python代码执行后输出的是(\n)。\ntnt = 0\nfor i in range(0, 100):\n1\n2\n3\n4\ntnt += i % 10\nprint(tnt)\n口A. 4950\n口B. 5050\n口",
       "options": [
         {
-          "key": "A",
-          "text": "A"
-        },
-        {
-          "key": "B",
-          "text": "B"
-        },
-        {
           "key": "C",
-          "text": "C"
-        },
-        {
-          "key": "D",
-          "text": "D"
+          "text": "口D. 100"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面Python代码执行后输出的是( )。\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\ntnt = 0\nfor i in range(5, 100, 5):\nif i % 2 == 0:\ncontinue\ntnt += 1\nif i >= 50:\nbreak\nprint(tnt)\n口 A. 10\n口 C. 6\n口 D. 5",
+      "stem": "下面Python代码执行后输出的是(\n)。\ntnt = 0\nfor i in range(5, 100, 5):\n1\n2\n3\n4\nif i % 2 == 0:\ncontinue\n5\n6\n7\n8\n9\n10\n11\n12\ntnt += 1\nif i >= 50:\nbreak\nprint(tnt)\n口A. 10\n口B. 9\n口C. 6\n口D. 5",
       "options": [
         {
           "key": "A",
@@ -283,12 +270,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "为在PythonTurtle中输出如下图形 ,代码横线处应填入( )。\n1\n2\n3\n4\nimport turtle\nfor i in range( ):\nturtle.right(45)\nturtle.forward(50 )\n口 A. 1, 8\n口 B. 9\n口 C. 1,9\n口 D. 10",
+      "stem": "为在Python Turtle中输出如下图形,代码横线处应填入(\n)。\nimport turtle\nfor i in range(\n):\nturtle.right(45)\nturtle.forward(50)\n1\n2\n3\n4\n口A. 1, 8\n口B. 9\n口C. 1, 9\n口D. 10",
       "options": [
         {
           "key": "A",
@@ -307,12 +294,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "为在PythonTurtle中输出如下图形 ,代码横线处应填入( )。\n1\n2\n3\n4\nimport turtle\nfor i in range( ):\nturtle.right(60)\nturtle.forward(50 )\n口 A. 6\n口 B. 7\n口 C. 11\n口 D. 12",
+      "stem": "为在Python Turtle中输出如下图形,代码横线处应填入(\n)。\nimport turtle\n1\nfor i in range(\n):\nturtle.right(60)\nturtle.forward(50)\n2\n3\n4\n口A. 6\n口B. 7\n口C. 11\n口D. 12",
       "options": [
         {
           "key": "A",
@@ -331,12 +318,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "为在PythonTurtle中输出如下图形 ,代码横线处应填入( )。\n\n1\n2\n3\n4\n5\n6\n7\n8\nimport turtle\nfor i in range( ):\nturtle.right(120)\nturtle.forward(50 )\nif i % 3 == 0:\nturtle. penup()\nturtle.forward(50 )\nturtle. pendown( )\n口 A. 18\n口 B. 1, 19\n口 C. 19\n口 D. 20\n2",
+      "stem": "为在Python Turtle中输出如下图形,代码横线处应填入(\n)。\nimport turtle\nfor i in range(\n):\nturtle.right(120)\nturtle.forward(50)\nif i % 3 == 0:\n1\n2\n3\n4\n5\n6\nturtle.penup()\nturtle.forward(50)\nturtle.pendown()\n7\n8\n口A. 18\n口B. 1, 19\n口C. 19\n口D. 20\n2",
       "options": [
         {
           "key": "A",
@@ -355,7 +342,7 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     }
   ],
   "tf": [
@@ -378,7 +365,7 @@
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在Python中 ,表达式 8//3 和 8%3 的值相同 。( )",
+      "stem": "在Python中,表达式8//3 和8%3 的值相同。(\n)",
       "options": [
         {
           "key": "T",
@@ -394,7 +381,7 @@
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "Python语句 print(input()) 能接收键盘输入并原样输出 。 ( )",
+      "stem": "Python语句print(input()) 能接收键盘输入并原样输出。(\n)",
       "options": [
         {
           "key": "T",
@@ -410,7 +397,7 @@
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "下面Python代码执行后将输出10 。 ( )\n\n\n\n\n\nN = 0\nfor i in range(10):\ncontinue\nN += 1\nprint(N)",
+      "stem": "下面Python代码执行后将输出10 。(\n)\nN = 0\nfor i in range(10):\n\n\n\n\n\ncontinue\nN += 1\nprint(N)",
       "options": [
         {
           "key": "T",
@@ -426,7 +413,7 @@
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下面Python代码执行后将输出99 。 ( )\n\n\n\nfor i in range(100):\ncontinue\nprint(i)",
+      "stem": "下面Python代码执行后将输出99 。(\n)\nfor i in range(100):\n\n\n\ncontinue\nprint(i)",
       "options": [
         {
           "key": "T",
@@ -442,7 +429,7 @@
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "下面Python代码被执行时 ,将执行一次输出(即第二行将被执行一次) 。 ( )\n\n\nfor i in range(10,3):\nprint(i)",
+      "stem": "下面Python代码被执行时,将执行一次输出(即第二行将被执行一次)。(\n)\nfor i in range(10,3):\n\n\nprint(i)",
       "options": [
         {
           "key": "T",
@@ -458,7 +445,7 @@
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "Python语句 print(3,2) 执行后 ,将输出3和2 ,且3和2之间有空格间隔 。 ( )",
+      "stem": "Python语句print(3,2) 执行后,将输出3和2 ,且3和2之间有空格间隔。( )",
       "options": [
         {
           "key": "T",
@@ -474,7 +461,7 @@
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在Python代码中 ,studentName 、student_name以及sStudentName都是合法的变量名称 。 ( )",
+      "stem": "在Python代码中,studentName、student_name以及sStudentName都是合法的变量名称。(\n)",
       "options": [
         {
           "key": "T",
@@ -490,7 +477,7 @@
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "Python的turtle中 ,turtle.right()参数必须为正数 。 ( )",
+      "stem": "Python的turtle中,turtle.right()参数必须为正数。(\n)",
       "options": [
         {
           "key": "T",
@@ -506,7 +493,7 @@
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面的Python代码被执行后将绘制3个间隔为50 、边长也为50的正方形 。 ( )\n\n\n\n\n\n\n\n\n\n\nimport turtle\nfor i in range(3):\nturtle. penup()\nturtle.forward(100 )\nturtle. pendown( )\nfor j in range(4):\nturtle.forward(50 )\nturtle.right(90 )",
+      "stem": "下面的Python代码被执行后将绘制3个间隔为50 、边长也为50的正方形。(\n)\nimport turtle\nfor i in range(3):\n\n\nturtle.penup()\nturtle.forward(100)\nturtle.pendown()\n\n\n\n\nfor j in range(4):\n\n\n\nturtle.forward(50)\nturtle.right(90)",
       "options": [
         {
           "key": "T",
@@ -525,28 +512,60 @@
       "seq": 1,
       "kind": "traditional",
       "title": "温度转换",
-      "statement": ". 时间限制:1.0s\n. 内存限制:512.0 MB\n3.1.1 题目描述\n小杨最近学习了开尔文温度、摄氏温度和华氏温度的转换 。令符号 K 表示开尔文温度 ,符号 C 表示摄氏温度 ,符号\nF 表示华氏温度 ,这三者的转换公示如下:\nC\n K 273.15\nF = C X 1.8 + 32\n现在小杨想编写一个程序计算某一开尔文温度对应的摄氏温度和华氏温度 ,你能帮帮他吗?\n3.1.2\n\n输入格式\n一行 ,一个实数K ,表示开尔文温度。\n3.1.3 输出格式\n一行 ,若输入开尔文温度对应的华氏温度高于 212 ,输出 Temperature is too high! ;\n否则 ,输出两个由空格分隔的实数 C 和 F ,分别表示摄氏温度和华氏度 ,保留两位小数\n。\n3.1.4\n3.1.5\n\n 412.00\n3.1.6 输出样例 1\n\n Temperature is too high!\n3.1.7 输入样例 2\n\n 173.56\n样例\n输入样例 1\n3.1.8 输出样例 2\n\n -99.59 -147.26\n3.1.9 数据范围\n0 < K < 105\n3.1.10",
+      "statement": ".\n时间限制:1.0 s\n.\n内存限制:512.0 MB\n3.1.1\n题目描述\n小杨最近学习了开尔文温度、摄氏温度和华氏温度的转换。令符号K 表示开尔文温度,符号C 表示摄氏温度,符号\nF 表示华氏温度,这三者的转换公示如下:\nC\nK\n273. 15\n现在小杨想编写一个程序计算某一开尔文温度对应的摄氏温度和华氏温度,你能帮帮他吗?\n3.1.2\n\n输入格式\n一行,一个实数K ,表示开尔文温度。\n3.1.3\n输出格式\n一行,若输入开尔文温度对应的华氏温度高于212 ,输出Temperature is too high! ;\n否则,输出两个由空格分隔的实数C 和F ,分别表示摄氏温度和华氏度,保留两位小数\n。\n样例\n3.1.4\n3.1.5\n输入样例1\n\n412.00\n3.1.6\n输出样例1\n\nTemperature is too high!\n3.1.7\n输入样例2\n\n173.56\n3.1.8\n输出样例2\n\n-99.59 -147.26\n3.1.9\n数据范围\n0 < K < 105\n3.1.10",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "412.00\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "K = float(input())\nC = K - 273.15\nF = 32 + C * 1.8\nif F >= 212:\nprint(\"Temperature is too high!\")\nelse:\nprint(\"%.2f %.2f\" % (C, F))"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "奇数和偶数",
-      "statement": ". 时间限制:1.0s\n. 内存限制:512.0 MB\n3.2.1 题面描述\n小杨有 n 个正整数 ,他想知道其中的奇数有多少个 ,偶数有多少个。\n3.2.2\n\n输入格式\n第一行包含一个正整数 n ,代表正整数个数。\n之后 n 行 ,每行包含一个正整数。\n3.2.3 输出格式\n输出两个正整数(用英文空格间隔) ,代表奇数的个数和偶数的个数 。如奇数或偶数的个数为0 ,则对应输出0。\n3.2.4 样例\n\n 3 2\n对于全部数据 ,保证有 1 ≤ n ≤ 105 且正整数大小不超过 105 。\n3.2.5",
+      "statement": ".\n时间限制:1.0 s\n.\n内存限制:512.0 MB\n3.2.1\n题面描述\n小杨有n 个正整数,他想知道其中的奇数有多少个,偶数有多少个。\n3.2.2\n\n输入格式\n第一行包含一个正整数n ,代表正整数个数。\n之后n 行,每行包含一个正整数。\n3.2.3\n输出格式\n输出两个正整数(用英文空格间隔),代表奇数的个数和偶数的个数。如奇数或偶数的个数为0 ,则对应输出0。\n3.2.4\n样例\n\n3 2\n对于全部数据,保证有1 ≤n ≤105 且正整数大小不超过105。\n3.2.5",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "3\n4\n5\n6\n5\n",
-          "out": "1\n",
+          "in": "5\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n",
+          "out": "2\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "n = int(input())\na = 0\nb = 0\nfor i in range(0,n):\nx = int(input())\nif x%2 !=0:\na+=1\nelse:\nb+=1\nprint(a,end= ' ')\nprint(b)"
     }
   ],
-  "answer_rows": []
+  "answer_rows": [
+    [
+      "C",
+      "C",
+      "A",
+      "B",
+      "B",
+      "D",
+      "B",
+      "A",
+      "B",
+      "D",
+      "C",
+      "C",
+      "C",
+      "B",
+      "B"
+    ],
+    []
+  ]
 }

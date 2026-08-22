@@ -55,21 +55,69 @@ export function login(username, password) {
   return { sid, user: publicUser(user) };
 }
 
-export function register(username, password, displayName) {
+function randomChars(len, alphabet = "abcdefghijkmnpqrstuvwxyz23456789") {
+  const bytes = crypto.randomBytes(len);
+  let out = "";
+  for (let i = 0; i < len; i++) out += alphabet[bytes[i] % alphabet.length];
+  return out;
+}
+
+/** Coach-only: create a student with random username + password. Returns plaintext password once. */
+export function createStudent() {
   const db = getDb();
-  const name = String(username || "").trim();
-  const pass = String(password || "");
-  if (!/^[a-zA-Z0-9_]{3,20}$/.test(name)) {
-    return { error: "用户名为 3–20 位字母数字或下划线" };
+  let name = "";
+  for (let i = 0; i < 8; i++) {
+    name = `s${randomChars(7)}`;
+    if (!db.prepare("SELECT id FROM users WHERE username = ?").get(name)) break;
+    name = "";
   }
-  if (pass.length < 4) return { error: "密码至少 4 位" };
-  const exists = db.prepare("SELECT id FROM users WHERE username = ?").get(name);
-  if (exists) return { error: "用户名已存在" };
-  db.prepare(
-    `INSERT INTO users (username, password_hash, display_name, role, language)
-     VALUES (?, ?, ?, 'student', 'cpp')`,
-  ).run(name, bcrypt.hashSync(pass, 10), String(displayName || name).slice(0, 40));
-  return login(name, pass);
+  if (!name) return { error: "无法生成唯一用户名，请重试" };
+  const pass = randomChars(8);
+  const info = db
+    .prepare(
+      `INSERT INTO users (username, password_hash, password_plain, display_name, role, language)
+       VALUES (?, ?, ?, ?, 'student', 'cpp')`,
+    )
+    .run(name, bcrypt.hashSync(pass, 10), pass, name);
+  const row = db.prepare("SELECT * FROM users WHERE id = ?").get(info.lastInsertRowid);
+  return { user: publicUser(row), password: pass };
+}
+
+/** Logged-in user updates own display name. */
+export function updateDisplayName(userId, displayName) {
+  const name = String(displayName || "").trim().slice(0, 40);
+  if (!name) return { error: "显示名不能为空" };
+  if (name.length < 1 || name.length > 40) return { error: "显示名最多 40 字" };
+  const db = getDb();
+  db.prepare("UPDATE users SET display_name = ? WHERE id = ?").run(name, userId);
+  const row = db.prepare("SELECT * FROM users WHERE id = ?").get(userId);
+  return { user: publicUser(row) };
+}
+
+/** Coach-only: delete a student and related data. Cannot delete coaches. */
+export function deleteStudent(userId) {
+  const db = getDb();
+  const id = Number(userId);
+  if (!Number.isFinite(id) || id <= 0) return { error: "无效用户" };
+  const row = db.prepare("SELECT id, role, username FROM users WHERE id = ?").get(id);
+  if (!row) return { error: "用户不存在" };
+  if (row.role !== "student") return { error: "只能删除学生账号" };
+  const tables = db.prepare("SELECT name FROM sqlite_master WHERE type='table'").all().map((t) => t.name);
+  const has = (n) => tables.includes(n);
+  db.exec("BEGIN");
+  try {
+    if (has("sessions")) db.prepare("DELETE FROM sessions WHERE user_id = ?").run(id);
+    if (has("submissions")) db.prepare("DELETE FROM submissions WHERE user_id = ?").run(id);
+    if (has("paper_drafts")) db.prepare("DELETE FROM paper_drafts WHERE user_id = ?").run(id);
+    if (has("paper_cursors")) db.prepare("DELETE FROM paper_cursors WHERE user_id = ?").run(id);
+    if (has("contest_registrations")) db.prepare("DELETE FROM contest_registrations WHERE user_id = ?").run(id);
+    db.prepare("DELETE FROM users WHERE id = ?").run(id);
+    db.exec("COMMIT");
+  } catch (err) {
+    db.exec("ROLLBACK");
+    throw err;
+  }
+  return { ok: true, username: row.username };
 }
 
 export function userFromRequest(req) {

@@ -3,24 +3,32 @@
     "ym": "202512",
     "lang": "cpp",
     "level": 4,
-    "title": "CCF GESP 2025年12月认证 C++ 4级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10242.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1723012925620256.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202512-cpp-4.pdf"
+    "title": "202512-cpp-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202512-cpp-4.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "小杨想让指针  p 指向整数变量  x,正确写法是(   )。",
+      "stem": "小杨想让指针 p 指向整数变量 x ,正确写法是(  )。\n\n```\nint p = &x;\nint *p = x;\nint *p = &x;\n```",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
         },
         {
           "key": "C",
-          "text": "D."
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "p = *x;"
         }
       ],
       "answer": "C"
@@ -28,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "小杨写了如下的指针接力程序,程序执行完后变量  a、*p1和*p2的值分别是(   )。",
+      "stem": "小杨写了如下的指针接力程序,程序执行完后变量 a 、*p1 和*p2 的值分别是(  )。\nint a = 5;\nint* p1 = &a;\nint* p2 = p1;\n*p2 = 10;\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -52,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "小杨用一个二维数组表示棋盘,其中  1 表示有棋子, 0 表示没有棋子。他想知道第  2 行  第  3 列有没有棋子,\n可采用的代码是:(   )。\n\n```\ncout << a[1, 2] << endl; int p = &x;1 int *p = x;1 int *p = &x;1 p = *x;1 int a = 5; int* p1 = &a; int* p2 = p1; *p2 = 10; int a[3][4] = { {1, 0, 1, 0}, {0, 1, 0, 1}, {1, 1, 0, 0} }; 第 1 页 / 共 12 页\ncout << a[1][2] << endl;\ncout << a(1, 2) << endl;\ncout << a{1}{2} << endl;\n```",
+      "stem": "小杨用一个二维数组表示棋盘,其中 1 表示有棋子,0 表示没有棋子。他想知道第 2 行 第 3 列有没有棋子,\n可采用的代码是:(  )。\nint a[3][4] = {\n    {1, 0, 1, 0},\n    {0, 1, 0, 1},\n    {1, 1, 0, 0}\n};\n1\n2\n3\n4\n5\n\n```\ncout << a[1, 2] << endl; 第 1 页 / 共 12 页\ncout << a[1][2] << endl;\ncout << a(1, 2) << endl;\ncout << a{1}{2} << endl;\n```",
       "options": [
         {
           "key": "A",
@@ -76,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "执行完下面的代码后,*(p + 5) 和  arr[1][1]的值分别是(   )。",
+      "stem": "执行完下面的代码后,*(p + 5) 和 arr[1][1] 的值分别是(  )。\nint arr[3][4] = {{1,2,3,4}, {5,6,7,8}, {9,10,11,12}};\nint* p = &arr[0][0];\n1\n2",
       "options": [
         {
           "key": "A",
@@ -100,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "执行完下面的代码后,sum 的值是(   )。",
+      "stem": "执行完下面的代码后,sum 的值是(  )。\nint arr[2][3][2] = {\n        {{1,2}, {3,4}, {5,6}},\n        {{7,8}, {9,10}, {11,12}}\n    };\nint sum = 0;\nfor(int i = 0; i < 2; i++)\n    for(int j = 0; j < 3; j++)\n        for(int k = 0; k < 2; k++)\n            if((i+j+k) % 2 == 0)\n                sum += arr[i][j][k];\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
       "options": [
         {
           "key": "A",
@@ -124,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "执行完下面的代码后,输出是(   )。",
+      "stem": "执行完下面的代码后,输出是(  )。\nint a = 1;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\nvoid test() {\n    int a = 2;\n    {\n        int a = 3;\n        a++;\n    }\n    a++;\n    cout << a << \" \";\n}\nint main() {\n    test();\n    cout << a;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -136,7 +144,7 @@
         },
         {
           "key": "C",
-          "text": "3 2 int arr[3][4] = {{1,2,3,4}, {5,6,7,8}, {9,10,11,12}}; int* p = &arr[0][0]; int arr[2][3][2] = { {{1,2}, {3,4}, {5,6}}, {{7,8}, {9,10}, {11,12}} }; int sum = 0; for(int i = 0; i < 2; i++) for(int j = 0; j < 3; j++) for(int k = 0; k < 2; k++) if((i+j+k) % 2 == 0) sum += arr[i][j][k]; int a = 1; void test() { int a = 2; { int a = 3; a++; } a++; cout << a << \" \"; } int main() { test(); cout << a; return 0; } 第 2 页 / 共 12 页"
+          "text": "3 2 第 2 页 / 共 12 页"
         },
         {
           "key": "D",
@@ -148,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "执行完下面的代码后,a 、b 和  c 的值分别是(    )。",
+      "stem": "执行完下面的代码后,a 、b 和 c 的值分别是(   )。\nvoid byValue(int x) { x = 100; }\nvoid byRef(int& x) { x = 200; }\nvoid byPointer(int* x) { *x = 300; }\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nint main() {\n    int a = 1, b = 2, c = 3;\n    byValue(a);\n    byRef(b);\n    byPointer(&c);\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -172,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "运行如下代码会输出(   )。",
+      "stem": "运行如下代码会输出(  )。\nstruct Point {\n    int x, y;\n};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\nstruct Rectangle {\n    Point topLeft;\n    Point bottomRight;\n};\nint main() {\n    Rectangle rect = {{10, 10}, {20, 20}};\n    rect.topLeft.x = 5;\n    Point* p = &rect.bottomRight;\n    p->y = 5;\n    cout << rect.topLeft.x + rect.bottomRight.y;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -196,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "给定函数  climbStairs(int n) 的定义如下,则  climbStairs(5) 的返回的值是(   )。\nvoid byValue(int x) { x = 100; }\nvoid byRef(int& x) { x = 200; }\nvoid byPointer(int* x) { *x = 300; }\nint main() {\n    int a = 1, b = 2, c = 3;\n    byValue(a);\n    byRef(b);\n    byPointer(&c);\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nstruct Point {\n    int x, y;\n};\nstruct Rectangle {\n    Point topLeft;\n    Point bottomRight;\n};\nint main() {\n    Rectangle rect = {{10, 10}, {20, 20}};\n    rect.topLeft.x = 5;\n    Point* p = &rect.bottomRight;\n    p->y = 5;\n    cout << rect.topLeft.x + rect.bottomRight.y;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n第  3 页  / 共  12 页",
+      "stem": "给定函数 climbStairs(int n) 的定义如下,则 climbStairs(5) 的返回的值是(  )。\n第 3 页 / 共 12 页\nint climbStairs(int n) {\n    if(n <= 2) return n;\n    int a = 1, b = 2;\n    for(int i = 3; i <= n; i++) {\n        int temp = a + b;\n        a = b;\n        b = temp;\n    }\n    return b;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
       "options": [
         {
           "key": "A",
@@ -220,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "对如下 4 个扑克牌进行排序,\n使用某排序算法按 value 排序后,结果为 : {3,'D'}, {3,'B'}, {5,'A'}, {5,'C'},则这个排序算法是稳定的吗?",
+      "stem": "对如下4个扑克牌进行排序,\nstruct Card {\n    int value;\n    char suit;  // 花色\n};\n1\n2\n3\n4\n5\n6\nCard cards[4] = {{5,'A'}, {3,'B'}, {5,'C'}, {3,'D'}};\n使用某排序算法按value排序后,结果为: {3,'D'}, {3,'B'}, {5,'A'}, {5,'C'} ,则这个排序算法是稳定的吗?",
       "options": [
         {
           "key": "A",
@@ -244,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面的函数  selectTopK() 实现从  n 个学生中选出前  k 名成绩最好的学生颁发奖学金(不需要对所有\n学生完全排序,只需要找出前  k 名),则横线上应填写(    )。\nint climbStairs(int n) {\n    if(n <= 2) return n;\n    int a = 1, b = 2;\n    for(int i = 3; i <= n; i++) {\n        int temp = a + b;\n        a = b;\n        b = temp;\n    }\n    return b;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nstruct Card {\n    int value;\n    char suit;  // 花色\n};\nCard cards[4] = {{5,'A'}, {3,'B'}, {5,'C'}, {3,'D'}};\n1\n2\n3\n4\n5\n6\nstruct Student {\n    string name;\n    int score;\n};\nvoid selectTopK(Student students[], int n, int k) {\n    for (int i = 0; i < k; i++) {\n        int maxIdx = i;\n        for (____________________) {    // 在此处填入代码\n            if (students[j].score > students[maxIdx].score) {\n                maxIdx = j;\n            }\n        }\n        if (maxIdx != i) {\n            Student temp = students[i];\n            students[i] = students[maxIdx];\n            students[maxIdx] = temp;\n        }\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n第  4 页  / 共  12 页\n\n```\nint j = 0; j < n; j++\nint j = i + 1; j < n; j++\nint j = i; j < n; j++\nint j = 1; j <= n; j++\n```",
+      "stem": "下面的函数 selectTopK() 实现从 n 个学生中选出前 k 名成绩最好的学生颁发奖学金(不需要对所有\n学生完全排序,只需要找出前 k 名),则横线上应填写(   )。\nstruct Student {\n    string name;\n    int score;\n};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\nvoid selectTopK(Student students[], int n, int k) {\n    for (int i = 0; i < k; i++) {\n        int maxIdx = i;\n        for (____________________) {    // 在此处填入代码\n            if (students[j].score > students[maxIdx].score) {\n                maxIdx = j;\n            }\n        }\n        if (maxIdx != i) {\n            Student temp = students[i];\n            students[i] = students[maxIdx];\n            students[maxIdx] = temp;\n        }\n    }\n}\n第 4 页 / 共 12 页\n\n```\nint j = 0; j < n; j++\nint j = i + 1; j < n; j++\nint j = i; j < n; j++\nint j = 1; j <= n; j++\n```",
       "options": [
         {
           "key": "A",
@@ -268,15 +276,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "某游戏的排行榜系统需要实时更新玩家分数。每次只有一个玩家的分数发生变化,排行榜已经是按分数降\n序排列的。现在需要将更新后的玩家调整到正确位置。下面的函数  updateRanking() 要实现上述功能,则两处横\n线上应分别填写(    )。",
+      "stem": "某游戏的排行榜系统需要实时更新玩家分数。每次只有一个玩家的分数发生变化,排行榜已经是按分数降\n序排列的。现在需要将更新后的玩家调整到正确位置。下面的函数 updateRanking() 要实现上述功能,则两处横\n线上应分别填写(   )。\nstruct Player {\n    string name;\n    int score;\n};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n// 玩家索引playerIdx的分数刚刚更新,需要调整位置\nvoid updateRanking(Player players[], int size, int playerIdx) {\n    Player updatedPlayer = players[playerIdx];\n    if (playerIdx > 0 && updatedPlayer.score > players[playerIdx - 1].score) {\n        int i = playerIdx;\n        while (____________________) {  // 在此处填入代码\n            players[i] = players[i - 1];\n            i--;\n        }\n        players[i] = updatedPlayer;\n    }\n    else if (playerIdx < size - 1 && updatedPlayer.score < players[playerIdx + 1].score) {\n        int i = playerIdx;\n        while (____________________) {  // 在此处填入代码\n            players[i] = players[i + 1];\n            i++;\n        }\n        players[i] = updatedPlayer;\n    }\n}",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "i > 0 && updatedPlayer.score > players[i - 1].score i < size - 1 && updatedPlayer.score < players[i + 1].score"
+        },
+        {
+          "key": "B",
+          "text": "i < size - 1 && updatedPlayer.score < players[i + 1].score i > 0 && updatedPlayer.score > players[i - 1].score"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "i > 0 && updatedPlayer.score < players[i - 1].score i < size - 1 && updatedPlayer.score < players[i + 1].score"
+        },
+        {
+          "key": "D",
+          "text": "i > 0 && updatedPlayer.score < players[i - 1].score i < size - 1 && updatedPlayer.score > players[i + 1].score"
         }
       ],
       "answer": "A"
@@ -284,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "给定如下算法,其时间复杂度为(   )。\nstruct Player {\n    string name;\n    int score;\n};\n// 玩家索引 playerIdx 的分数刚刚更新,需要调整位置\nvoid updateRanking(Player players[], int size, int playerIdx) {\n    Player updatedPlayer = players[playerIdx];\n    if (playerIdx > 0 && updatedPlayer.score > players[playerIdx - 1].score) {\n        int i = playerIdx;\n        while (____________________) {  // 在此处填入代码\n            players[i] = players[i - 1];\n            i--;\n        }\n        players[i] = updatedPlayer;\n    }\n    else if (playerIdx < size - 1 && updatedPlayer.score < players[playerIdx + 1].score) {\n        int i = playerIdx;\n        while (____________________) {  // 在此处填入代码\n            players[i] = players[i + 1];\n            i++;\n        }\n        players[i] = updatedPlayer;\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\ni > 0 && updatedPlayer.score > players[i - 1].score\ni < size - 1 && updatedPlayer.score < players[i + 1].score\n1\n2\ni < size - 1 && updatedPlayer.score < players[i + 1].score\ni > 0 && updatedPlayer.score > players[i - 1].score\n1\n2\ni > 0 && updatedPlayer.score < players[i - 1].score\ni < size - 1 && updatedPlayer.score < players[i + 1].score\n1\n2\ni > 0 && updatedPlayer.score < players[i - 1].score\ni < size - 1 && updatedPlayer.score > players[i + 1].score\n1\n2\n第  5 页  / 共  12 页",
+      "stem": "给定如下算法,其时间复杂度为(  )。\n第 5 页 / 共 12 页\nbool f(int arr[], int n, int target) {\n    for (int i = 0; i < n; i++) {\n        int sum = 0;\n        for (int j = 0; j < n; j++) {\n            if (i & (1 << j)) {\n                sum += arr[j];\n            }\n        }\n        if (sum == target) return true;\n    }\n    return false;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
       "options": [
         {
           "key": "A",
@@ -300,7 +316,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "执行下面  C++ 程序,会输出(     )。",
+      "stem": "执行下面 C++ 程序,会输出(    )。\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nint main() {\n    ofstream fout(\"test.txt\");\n    fout << \"Happy\" << endl;\n    fout << \"New Year\";\n    fout.close();\n    ifstream fin(\"test.txt\");\n    string s1, s2;\n    fin >> s1;\n    getline(fin, s2);\n    fin.close();\n    cout << s1 << \"|\" << s2;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -324,7 +340,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "执行下面 C++ 代码,会输出 (  ) 。\nbool f(int arr[], int n, int target) {\n    for (int i = 0; i < n; i++) {\n        int sum = 0;\n        for (int j = 0; j < n; j++) {\n            if (i & (1 << j)) {\n                sum += arr[j];\n            }\n        }\n        if (sum == target) return true;\n    }\n    return false;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nint main() {\n    ofstream fout(\"test.txt\");\n    fout << \"Happy\" << endl;\n    fout << \"New Year\";\n    fout.close();\n    ifstream fin(\"test.txt\");\n    string s1, s2;\n    fin >> s1;\n    getline(fin, s2);\n    fin.close();\n    cout << s1 << \"|\" << s2;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n第  6 页  / 共  12 页\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "执行下面C++代码,会输出(  )。\n第 6 页 / 共 12 页\nint divide(int a, int b) {\n    if(b == 0) throw \"Division by zero\";\n    return a / b;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nint main() {\n    int result = 0;\n    try {\n        result = divide(10, 0);\n        cout << \"A\";\n    }\n    catch(const char* msg) {\n        cout << \"B\";\n        result = -1;\n    }\n    cout << result;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -350,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "小杨正在调试他的温度传感器程序,其中变量  x 保存当前温度。下面这段代码运行后,变量  x 的值变成\n了  8。",
+      "stem": "小杨正在调试他的温度传感器程序,其中变量 x 保存当前温度。下面这段代码运行后,变量 x 的值变成\n了 8 。\nint x = 5;\nint *p = &x;\n*p = *p + 3;",
       "options": [
         {
           "key": "T",
@@ -361,7 +377,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
@@ -377,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在  C++ 中,定义如下二维数组:int a[3][4];,数组  a 在内存中是按行优先连续存放的,即  a[0]\n[0]、a[0][1]、a[0][2]、a[0][3] 在内存中是连续的。",
+      "stem": "在 C++ 中,定义如下二维数组:int a[3][4]; ,数组 a 在内存中是按行优先连续存放的,即 a[0]\n[0] 、a[0][1] 、a[0][2] 、a[0][3] 在内存中是连续的。",
       "options": [
         {
           "key": "T",
@@ -393,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "执行下面程序后,变量  a 的值会变成  15。",
+      "stem": "执行下面程序后,变量 a 的值会变成 15 。\nvoid add(int &x){\n    x += 10;\n}\n\n\n\n\n\n\nint a = 5;\nadd(a);",
       "options": [
         {
           "key": "T",
@@ -409,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "执行下面的 C++ 代码,会输出  8,因为两个指针地址相差  8 个字节(假设  int 占  4 字节)。\nint divide(int a, int b) {\n    if(b == 0) throw \"Division by zero\";\n    return a / b;\n}\nint main() {\n    int result = 0;\n    try {\n        result = divide(10, 0);\n        cout << \"A\";\n    }\n    catch(const char* msg) {\n        cout << \"B\";\n        result = -1;\n    }\n    cout << result;\n    return 0;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint x = 5;\nint *p = &x;\n*p = *p + 3;\n\n\n\nvoid add(int &x){\n    x += 10;\n}\nint a = 5;\nadd(a);\n\n\n\n\n\n\nint arr[5] = {1, 2, 3, 4, 5};\nint* p1 = arr;\nint* p2 = arr + 2;\ncout << p2 - p1;  // 输出结果\n\n\n\n\n\n第  7 页  / 共  12 页",
+      "stem": "执行下面的C++代码,会输出 8 ,因为两个指针地址相差 8 个字节(假设 int 占 4 字节)。\nint arr[5] = {1, 2, 3, 4, 5};\nint* p1 = arr;\nint* p2 = arr + 2;\n\n\n\n\n\ncout << p2 - p1;  // 输出结果\n第 7 页 / 共 12 页",
       "options": [
         {
           "key": "T",
@@ -425,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "考虑用如下递推方式计算斐波那契数列,时间复杂度是  。",
+      "stem": "考虑用如下递推方式计算斐波那契数列,时间复杂度是\n。\nint n = 10;\nint f[20];\nf[0] = 0;\nf[1] = 1;\nfor (int i = 2; i <= n; i++)\n    f[i] = f[i - 1] + f[i - 2];",
       "options": [
         {
           "key": "T",
@@ -441,7 +457,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
@@ -457,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下面这段代码实现了选择排序算法。",
+      "stem": "下面这段代码实现了选择排序算法。\nvoid sort(int a[], int n) {\n    for (int i = 1; i < n; i++) {\n        int x = a[i];\n        int j = i - 1;\n        while (j >= 0 && a[j] > x) {\n            a[j + 1] = a[j];\n            j--;\n        }\n        a[j + 1] = x;\n    }\n}",
       "options": [
         {
           "key": "T",
@@ -473,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下面代码可以正常编译并输出  10。",
+      "stem": "下面代码可以正常编译并输出 10 。\n#include <iostream>\nusing namespace std;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint calculate(int x, int y = 10);\nint main() {\n    cout << calculate(5);  // 调用1\n    return 0;\n}\nint calculate(int x, int y) {\n    return x * y;\n}\nint calculate(int x) {  // 重载函数\n    return x * 2;\n}",
       "options": [
         {
           "key": "T",
@@ -489,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "执行下面代码会输出  100。\nint n = 10;\nint f[20];\nf[0] = 0;\nf[1] = 1;\nfor (int i = 2; i <= n; i++)\n    f[i] = f[i - 1] + f[i - 2];\n\n\n\n\n\n\nvoid sort(int a[], int n) {\n    for (int i = 1; i < n; i++) {\n        int x = a[i];\n        int j = i - 1;\n        while (j >= 0 && a[j] > x) {\n            a[j + 1] = a[j];\n            j--;\n        }\n        a[j + 1] = x;\n    }\n}\n\n\n\n\n\n\n\n\n\n\n\n#include <iostream>\nusing namespace std;\nint calculate(int x, int y = 10);\nint main() {\n    cout << calculate(5);  // 调用 1\n    return 0;\n}\nint calculate(int x, int y) {\n    return x * y;\n}\nint calculate(int x) {  // 重载函数\n    return x * 2;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint main() {\n    ofstream fout(\"data.txt\");\n    fout << 10 << \" \" << 20 << endl;\n    fout << 30 << \" \" << 40;\n    fout.close();\n    ifstream fin(\"data.txt\");\n    int a, b, c, d;\n    fin >> a >> b >> c >> d;\n    fin.close();\n    cout << a + b + c + d;\n    return 0;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n第  8 页  / 共  12 页",
+      "stem": "执行下面代码会输出 100 。\nint main() {\n    ofstream fout(\"data.txt\");\n    fout << 10 << \" \" << 20 << endl;\n    fout << 30 << \" \" << 40;\n    fout.close();\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ifstream fin(\"data.txt\");\n    int a, b, c, d;\n    fin >> a >> b >> c >> d;\n    fin.close();\n    cout << a + b + c + d;\n    return 0;\n}\n第 8 页 / 共 12 页",
       "options": [
         {
           "key": "T",
@@ -505,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -513,17 +529,18 @@
       "seq": 1,
       "kind": "traditional",
       "title": "建造",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小  A 有一张   行   列的地形图,其中第   行第   列的数字   代表坐标  ( ) 的海拔高度。\n停机坪为一个   的区域且内部所有   个点的最大高度和最小高度之差不超过  。\n小  A 想请你计算出,在所有适合建造停机坪的区域中,区域内部   个点海拔之和最大是多少。\n3.1.2\n\n输入格式\n第一行三个正整数  ,含义如题面所示。\n之后   行,第   行包含   个整数  ,代表坐标  ( ) 的高度。\n数据保证总存在一个适合建造停机坪的区域。\n3.1.3 输出格式\n输出一行,代表最大的海拔之和。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.5 数据范围\n对于所有测试点,保证  。\n5 5 3\n5 5 5 5 5\n5 1 5 1 5\n5 5 5 5 5\n5 2 5 2 5\n3 5 5 5 2\n\n第  9 页  / 共  12 页\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小 A 有一张\n 行\n 列的地形图,其中第  行第  列的数字\n 代表坐标 (\n) 的海拔高度。\n停机坪为一个\n 的区域且内部所有  个点的最大高度和最小高度之差不超过\n。\n小 A 想请你计算出,在所有适合建造停机坪的区域中,区域内部  个点海拔之和最大是多少。\n3.1.2\n\n输入格式\n第一行三个正整数\n,含义如题面所示。\n之后\n 行,第  行包含\n 个整数\n,代表坐标 (\n) 的高度。\n数据保证总存在一个适合建造停机坪的区域。\n3.1.3\n输出格式\n输出一行,代表最大的海拔之和。\n3.1.4\n样例\n3.1.4.1\n输入样例\n5 5 3\n5 5 5 5 5\n5 1 5 1 5\n5 5 5 5 5\n5 2 5 2 5\n3 5 5 5 2\n\n3.1.4.2\n输出样例\n\n3.1.5\n数据范围\n对于所有测试点,保证\n。\n第 9 页 / 共 12 页\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <iostream>\nusing namespace std;\nint a[1010][1010];\nint main(){\n    int M, N, H;\n    cin >> M >> N >> H;\n    for (int i = 1; i <= M; ++i) {\n        for (int j = 1; j <= N; ++j) {\n            cin >> a[i][j];\n        }\n    }\n    int max_sum = 0;\n    for (int i = 1; i <= M - 2; ++i) {\n        for (int j = 1; j <= N - 2; ++j) {\n            int local_max = a[i][j], local_min = a[i][j], local_sum = 0;\n            for (int x = 0; x < 3; ++x) {\n                for (int y = 0; y < 3; ++y) {\n                    int height = a[i + x][j + y];\n                    local_sum += height;\n                    if (height > local_max) local_max = height;\n                    if (height < local_min) local_min = height;\n                }\n            }\n            if (local_max - local_min <= H) {\n                if (local_sum > max_sum) {\n                    max_sum = local_sum;\n                }\n            }\n        }\n    }\n    cout << max_sum;\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "优先购买",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小  A 有   元预算。商店有   个商品,每个商品有商品名  、价格   和优先级   三种属性,其中   为正整数,且\n 越小代表商品的优先级越高。\n小  A 的购物策略为:\n总是优先买优先级最高的东西;\n如果有多个最高优先级商品,购买价格最低的;\n如果有多个优先级最高且价格最低的商品,购买商品名字典序最小的。\n小  A 想知道能购买哪些商品。",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n小 A 有\n 元预算。商店有\n 个商品,每个商品有商品名 、价格  和优先级  三种属性,其中  为正整数,且\n 越小代表商品的优先级越高。\n小 A 的购物策略为:\n总是优先买优先级最高的东西;\n如果有多个最高优先级商品,购买价格最低的;\n如果有多个优先级最高且价格最低的商品,购买商品名字典序最小的。\n小 A 想知道能购买哪些商品。\n第 10 页 / 共 12 页\n3.2.2\n\n输入格式\n第一行两个正整数\n,代表预算和商品数。\n之后\n 行,每行一个商品,依次为\n\n,代表第  个商品的商品名、价格、优先级。\n数据保证不存在两个名字相同的商品。\n3.2.3\n输出格式\n按照字典序从小到大的顺序,输出所有购买商品的商品名。\n3.2.4\n样例\n3.2.4.1\n输入样例\n20 4\napple 6 8\nbus 15 1\ncab 1 10\nwater 4 8\n\n3.2.4.2\n输出样例\nbus\ncab\nwater\n\n3.2.5\n数据范围\n对于所有测试点,保证\n。商品名仅由小写字母组成且不存\n在两个相同的商品名。\n第 11 页 / 共 12 页\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -533,7 +550,8 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <iostream>\n#include <algorithm>\n#include <string>\n#include <map>\n#include <assert.h>\nusing namespace std;\nstruct Item {\n    string name;\n    int price;\n    int priority;\n};\nbool cmp(const Item &a, const Item &b) {\n    if (a.priority != b.priority) return a.priority < b.priority;\n    if(a.price != b.price) return a.price < b.price;\n    return a.name < b.name;\n}\nstring s[1005];\nstd::map<string, int> mp;\nint main(){\n    int M, N;\n    cin >> M >> N;\n    Item items[N];\n    for (int i = 0; i < N; ++i) {\n        cin >> items[i].name >> items[i].price >> items[i].priority;\n        assert(mp.find(items[i].name) == mp.end());\n        mp[items[i].name] = items[i].priority;\n    }\n    sort(items, items + N, cmp);\n    int budget = M;\n    int count = 0;\n    for (int i = 0; i < N; ++i) {\n        if (items[i].price <= budget) {\n            budget -= items[i].price;\n            s[count++] = items[i].name;\n        }\n    }\n    sort(s, s + count);\n    for (int i = 0; i < count; ++i) {\n        cout << s[i] << endl;\n    }\n    return 0;\n}\n第 12 页 / 共 12 页"
     }
   ],
   "answer_rows": [
@@ -552,11 +570,8 @@
       "A",
       "B",
       "D",
-      "B",
-      "C"
+      "B"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

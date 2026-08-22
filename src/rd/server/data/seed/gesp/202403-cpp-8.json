@@ -3,16 +3,16 @@
     "ym": "202403",
     "lang": "cpp",
     "level": 8,
-    "title": "GESP 3月认证C++八级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10134.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1602047270977568.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202403-cpp-8.pdf"
+    "title": "202403-cpp-8",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202403-cpp-8.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "为丰富食堂菜谱,炒菜部进行头脑风暴。肉类有鸡肉、牛肉、羊肉、猪肉 4 种,切法有肉排、肉块、肉末 3\n种,配菜有圆白菜、油菜、豆腐 3 种,辣度有麻辣、微辣、不辣 3 种。不考虑口感的情况下,选 1 种肉、 1 种切法、 1 种\n配菜、 1 种辣度产生一道菜(例如:麻辣牛肉片炒豆腐),这样能产生多少道菜?(   )。",
+      "stem": "为丰富食堂菜谱,炒菜部进行头脑风暴。肉类有鸡肉、牛肉、羊肉、猪肉4种,切法有肉排、肉块、肉末3\n种,配菜有圆白菜、油菜、豆腐3种,辣度有麻辣、微辣、不辣3种。不考虑口感的情况下,选1种肉、1种切法、1种\n配菜、1种辣度产生一道菜(例如:麻辣牛肉片炒豆腐),这样能产生多少道菜?(  )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "已知袋中有 2 个相同的红球、 3 个相同的绿球、 5 个相同的黄球。每次取出一个不放回,全部取出。可能产生\n多少种序列?(   )。",
+      "stem": "已知袋中有2个相同的红球、3个相同的绿球、5个相同的黄球。每次取出一个不放回,全部取出。可能产生\n多少种序列?(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "以下二维数组的初始化,哪个是符合语法的?(   )。\n\n```\nint a[][] = {{1, 2}, {3, 4}};\nint a[][2] = {};\nint a[2][2] = {{1, 2, 3}, {4, 5, 6}};\nint a[2][] = {{1, 2, 3}, {4, 5, 6}};\n```",
+      "stem": "以下二维数组的初始化,哪个是符合语法的?(  )。\n\n```\nint a[][] = {{1, 2}, {3, 4}};\nint a[][2] = {};\nint a[2][2] = {{1, 2, 3}, {4, 5, 6}};\nint a[2][] = {{1, 2, 3}, {4, 5, 6}};\n```",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面有关 C++ 拷贝构造函数的说法,错误的是(   )。",
+      "stem": "下面有关C++拷贝构造函数的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "使用邻接表表达一个无向简单图,图中包含v个顶点、e条边,则该表中边节点的个数为(   )。",
+      "stem": "使用邻接表表达一个无向简单图,图中包含v 个顶点、e 条边,则该表中边节点的个数为(  )。",
       "options": [
         {
           "key": "A",
@@ -124,7 +124,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "关于生成树的说法,错误的是(   )。",
+      "stem": "关于生成树的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -136,11 +136,11 @@
         },
         {
           "key": "C",
-          "text": "n个顶点的无向完全图,有 棵生成树。"
+          "text": "n 个顶点的无向完全图,有 棵生成树。"
         },
         {
           "key": "D",
-          "text": "n个顶点的无向图,生成树包含n-1条边。"
+          "text": "n 个顶点的无向图,生成树包含n-1 条边。"
         }
       ],
       "answer": "D"
@@ -148,7 +148,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "已知三个double类型的变量a、b和theta分别表示一个三角形的两条边长及二者的夹角(弧度),则\n下列哪个表达式可以计算这个三角形的周长?(   )。",
+      "stem": "已知三个double 类型的变量a 、b 和theta 分别表示一个三角形的两条边长及二者的夹角(弧度),则\n下列哪个表达式可以计算这个三角形的周长?(  )。",
       "options": [
         {
           "key": "A",
@@ -172,7 +172,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "在有n个元素的二叉排序树中进行查找,其最好、最差时间复杂度分别为(   )。",
+      "stem": "在有n 个元素的二叉排序树中进行查找,其最好、最差时间复杂度分别为(  )。",
       "options": [
         {
           "key": "A",
@@ -196,7 +196,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "如下图所示,半径为r、圆心角为t(弧度)的扇形,下面哪个表达式能够求出顶部阴影部分的面积?(\n)。",
+      "stem": "如下图所示,半径为r 、圆心角为t (弧度)的扇形,下面哪个表达式能够求出顶部阴影部分的面积?(\n)。",
       "options": [
         {
           "key": "A",
@@ -220,7 +220,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面程序的时间复杂度为(   )。",
+      "stem": "下面程序的时间复杂度为(  )。\nint fib(int n) {\n    if (n <= 1)\n        return 1;\n    return fib(n - 1) + fib(n - 2);\n}\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -236,7 +236,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面程序的时间复杂度为(   )。",
+      "stem": "下面程序的时间复杂度为(  )。\nint choose(int n, int m) {\n    if (m == 0 || m == n)\n        return 1;\n    return choose(n - 1, m - 1) + choose(n - 1, m);\n}\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -252,19 +252,15 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面程序的时间复杂度为(   )。\n\n```\nint fib(int n) { if (n <= 1) return 1; return fib(n - 1) + fib(n - 2); } int choose(int n, int m) { if (m == 0 || m == n) return 1; return choose(n - 1, m - 1) + choose(n - 1, m); } int primes[MAXP], num = 0; bool isPrime[MAXN] = {false}; void sieve() { for (int n = 2; n <= MAXN; n++) { if (!isPrime[n]) primes[num++] = n; for (int i = 0; i < num && n * primes[i] <= MAXN; i++) { isPrime[n * primes[i]] = true; if (n % primes[i] == 0) break; } } }\n```",
+      "stem": "下面程序的时间复杂度为(  )。\nint primes[MAXP], num = 0;\nbool isPrime[MAXN] = {false};\n1\n2\nvoid sieve() {\n    for (int n = 2; n <= MAXN; n++) {\n        if (!isPrime[n])\n            primes[num++] = n;\n        for (int i = 0; i < num && n * primes[i] <= MAXN; i++) {\n            isPrime[n * primes[i]] = true;\n            if (n % primes[i] == 0)\n                break;\n        }\n    }\n}\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
-          "text": ""
+          "text": "B."
         },
         {
-          "key": "B",
-          "text": "C."
-        },
-        {
-          "key": "D",
-          "text": ""
+          "key": "C",
+          "text": "D."
         }
       ],
       "answer": "A"
@@ -272,7 +268,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面程序的输出为(   )。",
+      "stem": "下面程序的输出为(  )。\n#include <iostream>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint a[10][10];\nint main() {\n    int m = 5, n = 4;\n    for (int x = 0; x <= m; x++)\n        a[x][0] = 1;\n    for (int y = 1; y <= n; y++)\n        a[0][y] = 1;\n    for (int x = 1; x <= m; x++)\n        for (int y = 1; y <= n; y++)\n            a[x][y] = a[x - 1][y] + a[x][y - 1];\n    cout << a[m][n] << endl;\n    return 0;\n}\n11\n12\n13\n14\n15\n16",
       "options": [
         {
           "key": "A",
@@ -296,7 +292,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面程序的输出为(   )。\n\n```\n#include <iostream> using namespace std; int a[10][10]; int main() { int m = 5, n = 4; for (int x = 0; x <= m; x++) a[x][0] = 1; for (int y = 1; y <= n; y++) a[0][y] = 1; for (int x = 1; x <= m; x++) for (int y = 1; y <= n; y++) a[x][y] = a[x - 1][y] + a[x][y - 1]; cout << a[m][n] << endl; return 0; } #include <iostream> using namespace std; int main() { int cnt = 0; for (int x = 0; x <= 10; x++) for (int y = 0; y <= 10; y++) for (int z = 0; z <= 10; z++) if (x + y + z == 15) cnt++; cout << cnt << endl; return 0; } 题号 1 2 3 4 5 6 7 8 9 10 答案\n```",
+      "stem": "下面程序的输出为(  )。\n#include <iostream>\n1\nusing namespace std;\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nint main() {\n    int cnt = 0;\n    for (int x = 0; x <= 10; x++)\n        for (int y = 0; y <= 10; y++)\n            for (int z = 0; z <= 10; z++)\n                if (x + y + z == 15)\n                    cnt++;\n    cout << cnt << endl;\n    return 0;\n}\n13",
       "options": [
         {
           "key": "A",
@@ -320,7 +316,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面的程序使用邻接矩阵表达的带权无向图,则从顶点 0 到顶点 3 的最短距离为(   )。",
+      "stem": "下面的程序使用邻接矩阵表达的带权无向图,则从顶点0到顶点3的最短距离为(  )。\nint weight[4][4] = {\n    {  0,   1,   7, 100},\n    {  1,   0,   5,  15},\n    {  7,   5,   0,   6},\n1\n2\n3\n4\n    {100,  15,   6,   0}};\n5",
       "options": [
         {
           "key": "A",
@@ -346,7 +342,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "已知int类型的变量a和b,则执行语句a, b = b, a;后,变量a和b的值会互换。",
+      "stem": "已知int 类型的变量a 和b ,则执行语句a, b = b, a; 后,变量a 和b 的值会互换。",
       "options": [
         {
           "key": "T",
@@ -357,12 +353,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "一个袋子中有 3 个完全相同的红色小球、 2 个完全相同的蓝色小球。每次从中取出 1 个,再放回袋子,这样进\n行 3 次后,可能的颜色顺序有 7 种。",
+      "stem": "一个袋子中有3个完全相同的红色小球、2个完全相同的蓝色小球。每次从中取出1个,再放回袋子,这样进\n行3次后,可能的颜色顺序有7种。",
       "options": [
         {
           "key": "T",
@@ -373,12 +369,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "孙子定理是求解一次同余方程组的方法,最早见于中国南北朝时期(公元 5 世纪)的数学著作《孙子算\n经》。又称中国余数定理,是中国数学史上的一项伟大成就。",
+      "stem": "孙子定理是求解一次同余方程组的方法,最早见于中国南北朝时期(公元5世纪)的数学著作《孙子算\n经》。又称中国余数定理,是中国数学史上的一项伟大成就。",
       "options": [
         {
           "key": "T",
@@ -389,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "个顶点的无向完全图有 条边。",
+      "stem": "个顶点的无向完全图有\n条边。",
       "options": [
         {
           "key": "T",
@@ -405,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "为解决哈希函数冲突,在哈希表项内设置链表存储该项内的所有冲突元素,则该哈希表内查找元素的最差时\n间复杂度为 。",
+      "stem": "为解决哈希函数冲突,在哈希表项内设置链表存储该项内的所有冲突元素,则该哈希表内查找元素的最差时\n间复杂度为\n。",
       "options": [
         {
           "key": "T",
@@ -421,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "求一个包含v个顶点、e条边的带权连通无向图的最小生成树, Prim 算法的时间复杂度为 。",
+      "stem": "求一个包含v 个顶点、e 条边的带权连通无向图的最小生成树,Prim算法的时间复杂度为\n。",
       "options": [
         {
           "key": "T",
@@ -437,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "已知int类型的变量a、b和c中分别存储着一个三角形的三条边长,则这个三角形的面积可以通过表达\n式sqrt((a + b + c) * (b + c - a) * (a + c - b) * (a + b - c)) / 4求得。",
+      "stem": "已知int 类型的变量a 、b 和c 中分别存储着一个三角形的三条边长,则这个三角形的面积可以通过表达\n式sqrt((a + b + c) * (b + c - a) * (a + c - b) * (a + b - c)) / 4 求得。",
       "options": [
         {
           "key": "T",
@@ -453,7 +449,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
@@ -469,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在 个元素的二叉排序树中查找一个元素,平均情况的时间复杂度是 。",
+      "stem": "在\n个元素的二叉排序树中查找一个元素,平均情况的时间复杂度是\n。",
       "options": [
         {
           "key": "T",
@@ -485,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "给定double类型的变量x,且其值大于等于 ,我们可以通过二分法求出 的近似值。",
+      "stem": "给定double 类型的变量x ,且其值大于等于,我们可以通过二分法求出\n的近似值。",
       "options": [
         {
           "key": "T",
@@ -501,7 +497,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -509,21 +505,45 @@
       "seq": 1,
       "kind": "traditional",
       "title": "公倍数问题",
-      "statement": "int weight[4][4] = {\n    {  0,   1,   7, 100},\n    {  1,   0,   5,  15},\n    {  7,   5,   0,   6},\n    {100,  15,   6,   0}};\n\n3.1.1 问题描述\n小  A 写了一个   的矩阵  ,我们看不到这个矩阵,但我们可以知道,其中第   行第   列的元素   是   和   的\n公倍数( , )。现在有   个小朋友,其中第   个小朋友想知道,矩阵   中最多有多少个元\n素可以是  ( )。请你帮助这些小朋友求解。\n注意:每位小朋友的答案互不相关,例如,有些位置既可能是  ,又可能是  ,则它同可以时满足   两名小朋友的\n要求。\n方便起见,你只需要输出   即可,其中   表示第   名小朋友感兴趣的答案。\n3.1.2 输入描述\n第一行三个正整数  。\n3.1.3 输出描述\n输出一行,即  。\n请注意,这个数可能很大,使用  C++ 语言的选手请酌情使用  long long 等数据类型存储答案。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7 样例解释  1\n只有   可以是  ,其余都不行。\n 都可以是  ,而其余不行。\n因此答案是  。\n3.1.8 样例输入  2\n3.1.9 样例输出  2\n3.1.10 数据规模\n对于   的测试点,保证  ;\n对于   的测试点,保证  ;\n对于   的测试点,保证  , 。\n2 5 21\n\n100 100 1001\n\n3.1.11",
+      "statement": "3.1.1\n问题描述\n小 A 写了一个\n 的矩阵 ,我们看不到这个矩阵,但我们可以知道,其中第  行第  列的元素\n 是  和  的\n公倍数(\n,\n)。现在有\n 个小朋友,其中第  个小朋友想知道,矩阵  中最多有多少个元\n素可以是 (\n)。请你帮助这些小朋友求解。\n注意:每位小朋友的答案互不相关,例如,有些位置既可能是 ,又可能是 ,则它同可以时满足\n 两名小朋友的\n要求。\n方便起见,你只需要输出\n 即可,其中\n 表示第  名小朋友感兴趣的答案。\n3.1.2\n输入描述\n第一行三个正整数\n。\n3.1.3\n输出描述\n输出一行,即\n。\n请注意,这个数可能很大,使用 C++ 语言的选手请酌情使用 long long 等数据类型存储答案。\n3.1.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5\n样例输入 1\n2 5 2\n\n3.1.6\n样例输出 1\n\n3.1.7\n样例解释 1\n只有\n 可以是 ,其余都不行。\n 都可以是 ,而其余不行。\n因此答案是\n。\n3.1.8\n样例输入 2\n100 100 100\n\n3.1.9\n样例输出 2\n\n3.1.10\n数据规模\n对于\n 的测试点,保证\n;\n对于\n 的测试点,保证\n;\n对于\n 的测试点,保证\n,\n。\n3.1.11",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "9\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <iostream>\n#include <vector>\nusing namespace std;\nvector<int> count_divisors(int limit, int num) {\n    vector<int> s(num + 1, 0);\n    for (int i = 1; i <= limit; ++i) {\n        for (int j = i; j <= num; j += i) {\n            s[j] += 1;\n        }\n    }\n    return s;\n}\nint main() {\n    int N, M, K;\n    cin >> N >> M >> K;\n    vector<int> s_N = count_divisors(N, 1000000);\n    vector<int> s_M = count_divisors(M, 1000000);\n    long long result = 0;\n    for (int k = 1; k <= K; ++k) {\n        result += (long long)k * s_N[k] * s_M[k];\n    }\n    cout << result << endl;\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "接竹竿",
-      "statement": "3.2.1 题面描述\n小杨同学想用卡牌玩一种叫做 “ 接竹竿 ” 的游戏。\n游戏规则是:每张牌上有一个点数  ,将给定的牌依次放入一列牌的末端。若放入之前这列牌中已有与这张牌点数相\n同的牌,则小杨同学会将这张牌和点数相同的牌之间的所有牌全部取出队列(包括这两张牌本身)。\n小杨同学现在有一个长度为   的卡牌序列  ,其中每张牌的点数为  ( )。小杨同学有   次询问。第   次\n( )询问时,小杨同学会给出  ,小杨同学想知道如果用下标在  的所有卡牌按照下标顺序玩 “ 接竹\n竿 ” 的游戏,最后队列中剩余的牌数。\n3.2.2\n\n输入格式\n第一行包含一个正整数  ,表示测试数据组数。\n对于每组测试数据,第一行包含一个正整数  ,表示卡牌序列   的长度。\n第二行包含   个正整数  ,表示卡牌的点数  。\n第三行包含一个正整数  ,表示询问次数。",
+      "statement": "3.2.1\n题面描述\n小杨同学想用卡牌玩一种叫做“接竹竿”的游戏。\n游戏规则是:每张牌上有一个点数 ,将给定的牌依次放入一列牌的末端。若放入之前这列牌中已有与这张牌点数相\n同的牌,则小杨同学会将这张牌和点数相同的牌之间的所有牌全部取出队列(包括这两张牌本身)。\n小杨同学现在有一个长度为  的卡牌序列 ,其中每张牌的点数为\n(\n)。小杨同学有  次询问。第  次\n(\n)询问时,小杨同学会给出\n,小杨同学想知道如果用下标在\n的所有卡牌按照下标顺序玩“接竹\n竿”的游戏,最后队列中剩余的牌数。\n3.2.2\n\n输入格式\n第一行包含一个正整数 ,表示测试数据组数。\n对于每组测试数据,第一行包含一个正整数 ,表示卡牌序列  的长度。\n第二行包含  个正整数\n,表示卡牌的点数 。\n第三行包含一个正整数 ,表示询问次数。\n接下来  行,每行两个正整数\n,表示一组询问。\n3.2.3\n输出格式\n对于每组数据,输出  行。第  行(\n)输出一个非负整数,表示第  次询问的答案。\n3.2.4\n样例1\n\n1 2 2 3 1 3\n\n1 3\n1 6\n1 5\n5 6\n\n3.2.5\n样例解释\n对于第一次询问,小杨同学会按照\n 的顺序放置卡牌,在放置最后一张卡牌时,两张点数为  的卡牌会被收\n走,因此最后队列中只剩余一张点数为  的卡牌。\n对于第二次询问,队列变化情况为:\n。因此最后队列中只剩余一张点数为  的卡\n牌。\n3.2.6\n数据范围\n子任务编号\n数据点占比\n特殊条件\n\n所有询问的右端点等于\n\n对于全部数据,保证有\n,\n,\n。\n,\n3.2.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "8\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "0\n2\n",
+          "out": "3\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include<bits/stdc++.h>\nusing namespace std;\n#define ll long long\nconst int N = 1e5+10;\nint a[N];\nint nxt[N][30],pos[20];\nint main(){\n    int t;\n    cin>>t;\n    while(t--){\n    int n;\n    cin>>n;\n    memset(pos,0,sizeof pos);\n    for(int i=1;i<=n;i++){\n        cin>>a[i];\n        for(int j=0;j<=20;j++)nxt[i][j]=n+1;\n    }\n    for(int i=n;i>=1;i--){\n        if(!pos[a[i]]){\n            nxt[a[i]][0]=n+1;\n            pos[a[i]]=i;\n        }else{\n            nxt[i][0]=pos[a[i]];\n            pos[a[i]]=i;\n        }\n    }\n    for(int i=n;i>=1;i--){\n        for(int j=1;j<=20;j++){\n            if(nxt[i][j-1]+1<=n)\n            nxt[i][j]=nxt[nxt[i][j-1]+1][j-1];\n        }\n    }\n    int q;\n    cin>>q;\n    while(q--){\n        int l,r;\n        cin>>l>>r;\n        int ii=l;\n        int ans=0;\n        while(ii<=r){\n            while(ii<=r&&nxt[ii][0]>r){\n                ii++;\n                ans++;\n            }\n            if(ii>r)break;\n            for(int j=20;j>=0;j--){\n                if(nxt[ii][j]<=r){\n                    ii=nxt[ii][j];\n                    break;\n                }\n            }\n            ii++;\n        }\n        cout<<ans<<\"\\n\";\n    }\n    }\n}"
     }
   ],
   "answer_rows": [
@@ -542,8 +562,8 @@
       "A",
       "C",
       "B",
-      "C",
       "C"
-    ]
+    ],
+    []
   ]
 }

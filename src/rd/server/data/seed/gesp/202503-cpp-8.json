@@ -3,16 +3,16 @@
     "ym": "202503",
     "lang": "cpp",
     "level": 8,
-    "title": "CCF GESP 2025年3月认证 C++ 8级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1669257026863136.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202503-cpp-8.pdf"
+    "title": "202503-cpp-8",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202503-cpp-8.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "国家 “ 以旧换新 ” 政策仍在继续,小杨家决定在家里旧的冰箱、电视、洗衣机、微波炉中选两种换新。其中,\n冰箱有 4 种型号可选,电视有 6 种型号可选,洗衣机有 3 种型号可选,微波炉有 5 种型号可选。请问小杨家共有多少种\n换新的方案?(   )。",
+      "stem": "国家“以旧换新”政策仍在继续,小杨家决定在家里旧的冰箱、电视、洗衣机、微波炉中选两种换新。其中,\n冰箱有4种型号可选,电视有6种型号可选,洗衣机有3种型号可选,微波炉有5种型号可选。请问小杨家共有多少种\n换新的方案?(  )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "小杨和 3 位朋友约好一起去看电影 “ 哪吒 2” 。打开购票软件,他们发现,已经没有同一排连续的四个座位了\n(图中每个方框代表一个座位,红色方框代表已经售出)。朋友们商量了一下,决定分为两组,每组两人在同一排\n的相邻两个座位,且两组之间至少有一对座位是前后相邻的。请问共有多少种购票方案?(   )。",
+      "stem": "小杨和3位朋友约好一起去看电影“哪吒2”。打开购票软件,他们发现,已经没有同一排连续的四个座位了\n(图中每个方框代表一个座位,红色方框代表已经售出)。朋友们商量了一下,决定分为两组,每组两人在同一排\n的相邻两个座位,且两组之间至少有一对座位是前后相邻的。请问共有多少种购票方案?(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面关于 C++ 类构造和析构函数的说法,错误的是(   )。",
+      "stem": "下面关于C++类构造和析构函数的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -72,11 +72,11 @@
         },
         {
           "key": "C",
-          "text": "类的默认构造函数可以被声明为 private 。"
+          "text": "类的默认构造函数可以被声明为private。"
         },
         {
           "key": "D",
-          "text": "类的析构函数可以被声明为 private 。"
+          "text": "类的析构函数可以被声明为private。"
         }
       ],
       "answer": "B"
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下列关于树和图的说法,错误的是(   )。",
+      "stem": "下列关于树和图的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "从 1 到 2025 这 2025 个数中,包含数字 5 的个数(   )。",
+      "stem": "从1到2025这2025个数中,包含数字5的个数(  )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "已定义double类型的变量r和theta,分别表示图中圆半径和圆心角。下列表达式中可以求出弦长s的\n是(   )。",
+      "stem": "已定义double 类型的变量r 和theta ,分别表示图中圆半径和圆心角。下列表达式中可以求出弦长s 的\n是(  )。",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "个节点的平衡二叉树的高为(   )。",
+      "stem": "个节点的平衡二叉树的高为(  )。",
       "options": [
         {
           "key": "A",
@@ -172,7 +172,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下列关于算法的说法,错误的是(   )。",
+      "stem": "下列关于算法的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -196,15 +196,23 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "是个神奇的数字,因为它是由两个数 和 拼接而成,而且 。小杨决定写个程序找找\n小于 的正整数中共有多少这样神奇的数字。下面程序横线处应填入的是(   )。\n#include <string>\nint count_miracle(int N) {\n1\n2",
+      "stem": "是个神奇的数字,因为它是由两个数\n和\n拼接而成,而且\n。小杨决定写个程序找找\n小于\n的正整数中共有多少这样神奇的数字。下面程序横线处应填入的是(  )。\n#include <string>\nint count_miracle(int N) {\n1\n2\n    int cnt = 0;\n    for (int n = 1; n * n < N; n++) {\n        int n2 = n * n;\n        std::string s = std::to_string(n2);\n        for (int i = 1; i < s.length(); i++)\n            if (s[i] != '0') {\n3\n4\n5\n6\n7\n8\n                std::string sl = s.substr(0, i);\n                std::string sr = s.substr(i);\n                int nl = std::stoi(sl);\n                int nr = std::stoi(sr);\n                if (_________) // 在此处填入选项\n                    cnt++;\n            }\n    }\n    return cnt;\n}\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "nl + nr == n"
+        },
+        {
+          "key": "B",
+          "text": "nl + nr == n2"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "(nl + nr) * (nl + nr) == n"
+        },
+        {
+          "key": "D",
+          "text": "(nl + nr) ^ 2 == n2"
         }
       ],
       "answer": "A"
@@ -212,7 +220,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "是个神奇的数字,因为它是由两个数 和 拼接而成,而且 。小杨决定写个程序找\n找小于 的正整数中共有多少这样神奇的数字。该函数的时间复杂度为(   )。\n    int cnt = 0;\n    for (int n = 1; n * n < N; n++) {\n        int n2 = n * n;\n        std::string s = std::to_string(n2);\n        for (int i = 1; i < s.length(); i++)\n            if (s[i] != '0') {\n                std::string sl = s.substr(0, i);\n                std::string sr = s.substr(i);\n                int nl = std::stoi(sl);\n                int nr = std::stoi(sr);\n                if (_________) // 在此处填入选项\n                    cnt++;\n            }\n    }\n    return cnt;\n}\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nnl + nr == n1\nnl + nr == n21\n(nl + nr) * (nl + nr) == n1\n(nl + nr) ^ 2 == n21\n#include <string>\nint count_miracle(int N) {\n    int cnt = 0;\n    for (int n = 1; n * n < N; n++) {\n        int n2 = n * n;\n        std::string s = std::to_string(n2);\n        for (int i = 1; i < s.length(); i++)\n            if (s[i] != '0') {\n                std::string sl = s.substr(0, i);\n                std::string sr = s.substr(i);\n                int nl = std::stoi(sl);\n                int nr = std::stoi(sr);\n                if (_________) // 在此处填入选项\n                    cnt++;\n            }\n    }\n    return cnt;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18",
+      "stem": "是个神奇的数字,因为它是由两个数\n和\n拼接而成,而且\n。小杨决定写个程序找\n找小于\n的正整数中共有多少这样神奇的数字。该函数的时间复杂度为(  )。\n#include <string>\nint count_miracle(int N) {\n1\n2\n    int cnt = 0;\n    for (int n = 1; n * n < N; n++) {\n        int n2 = n * n;\n        std::string s = std::to_string(n2);\n        for (int i = 1; i < s.length(); i++)\n            if (s[i] != '0') {\n                std::string sl = s.substr(0, i);\n                std::string sr = s.substr(i);\n                int nl = std::stoi(sl);\n                int nr = std::stoi(sr);\n                if (_________) // 在此处填入选项\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n                    cnt++;\n            }\n    }\n    return cnt;\n}\n14\n15\n16\n17\n18",
       "options": [
         {
           "key": "A",
@@ -228,15 +236,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面的欧氏筛法程序中,两个横线处应填入的分别是(   )。",
+      "stem": "下面的欧氏筛法程序中,两个横线处应填入的分别是(  )。\nint primes[MAXP], num = 0;\nbool isPrime[MAXN + 1] = {false};\nvoid sieve() {\n    for (int n = 2; n <= MAXN; n++) {\n        if (!isPrime[n])\n            primes[num++] = n;\n        for (int i = 0; i < num && ________; i++) { // 在此处填入选项\n            isPrime[n * primes[i]] = true;\n            if (________) // 在此处填入选项\n1\n2\n3\n4\n5\n6\n7\n8\n9\n                break;\n        }\n    }\n}\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "n * primes[i] < MAXN n % primes[i] == 0"
+        },
+        {
+          "key": "B",
+          "text": "n * primes[i] < MAXN primes[i] > n"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "n * primes[i] <= MAXN n % primes[i] == 0"
+        },
+        {
+          "key": "D",
+          "text": "n * primes[i] <= MAXN primes[i] > n"
         }
       ],
       "answer": "C"
@@ -244,15 +260,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面 Floyd 算法中,横线处应该填入的是(   )。\nint primes[MAXP], num = 0;\nbool isPrime[MAXN + 1] = {false};\nvoid sieve() {\n    for (int n = 2; n <= MAXN; n++) {\n        if (!isPrime[n])\n            primes[num++] = n;\n        for (int i = 0; i < num && ________; i++) { // 在此处填入选项\n            isPrime[n * primes[i]] = true;\n            if (________) // 在此处填入选项\n                break;\n        }\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nn * primes[i] < MAXN\nn % primes[i] == 0\n1\n2\nn * primes[i] < MAXN\nprimes[i] > n\n1\n2\nn * primes[i] <= MAXN\nn % primes[i] == 0\n1\n2\nn * primes[i] <= MAXN\nprimes[i] > n\n1\n2\n#include <iostream>\nusing namespace std;\n#define N 21\n#define INF 99999999\nint map[N][N];\nint main() {\n    int n, m, t1, t2, t3;\n    cin >> n >> m;\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+      "stem": "下面Floyd算法中,横线处应该填入的是(  )。\n#include <iostream>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n#define N 21\n#define INF 99999999\nint map[N][N];\nint main() {\n    int n, m, t1, t2, t3;\n    cin >> n >> m;\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            if (i == j)\n                map[i][j] = 0;\n            else\n                map[i][j] = INF;\n10\n11\n12\n13\n14\n15\n        }\n    }\n    for (int i = 1; i <= m; i++) {\n        cin >> t1 >> t2 >> t3;\n        map[t1][t2] = t3;\n    }\n    for (int k = 1; k <= n; k++)\n        for (int i = 1; i <= n; i++)\n            for (int j = 1; j <= n; j++)\n                if (map[i][j] > map[i][k] + map[k][j])\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n                    ________; // 在此处填入选项\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            cout.width(4);\n            cout << map[i][j];\n        }\n        cout << endl;\n    }\n}\n26\n27\n28\n29\n30\n31\n32\n33\n34",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "map[i][j] = map[i][k] + map[k][j]"
+        },
+        {
+          "key": "B",
+          "text": "map[i][k] = map[i][j] - map[k][j]"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "map[i][j] = map[i][k] - map[k][j]"
+        },
+        {
+          "key": "D",
+          "text": "map[k][j] = map[i][j] - map[i][k]"
         }
       ],
       "answer": "A"
@@ -260,7 +284,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面 Floyd 算法程序的时间复杂度为(   )。\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            if (i == j)\n                map[i][j] = 0;\n            else\n                map[i][j] = INF;\n        }\n    }\n    for (int i = 1; i <= m; i++) {\n        cin >> t1 >> t2 >> t3;\n        map[t1][t2] = t3;\n    }\n    for (int k = 1; k <= n; k++)\n        for (int i = 1; i <= n; i++)\n            for (int j = 1; j <= n; j++)\n                if (map[i][j] > map[i][k] + map[k][j])\n                    ________; // 在此处填入选项\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            cout.width(4);\n            cout << map[i][j];\n        }\n        cout << endl;\n    }\n}\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\nmap[i][j] = map[i][k] + map[k][j]1\nmap[i][k] = map[i][j] - map[k][j]1\nmap[i][j] = map[i][k] - map[k][j]1\nmap[k][j] = map[i][j] - map[i][k]1\n#include <iostream>\nusing namespace std;\n#define N 21\n#define INF 99999999\nint map[N][N];\nint main() {\n    int n, m, t1, t2, t3;\n    cin >> n >> m;\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
+      "stem": "下面Floyd算法程序的时间复杂度为(  )。\n#include <iostream>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n#define N 21\n#define INF 99999999\nint map[N][N];\nint main() {\n    int n, m, t1, t2, t3;\n    cin >> n >> m;\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n10\n11\n            if (i == j)\n                map[i][j] = 0;\n            else\n                map[i][j] = INF;\n        }\n    }\n12\n13\n14\n15\n16\n17\n    for (int i = 1; i <= m; i++) {\n        cin >> t1 >> t2 >> t3;\n        map[t1][t2] = t3;\n    }\n    for (int k = 1; k <= n; k++)\n        for (int i = 1; i <= n; i++)\n            for (int j = 1; j <= n; j++)\n                if (map[i][j] > map[i][k] + map[k][j])\n                    ________; // 在此处填入选项\n    for (int i = 1; i <= n; i++) {\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n        for (int j = 1; j <= n; j++) {\n            cout.width(4);\n            cout << map[i][j];\n        }\n        cout << endl;\n    }\n}\n28\n29\n30\n31\n32\n33\n34",
       "options": [
         {
           "key": "A",
@@ -276,19 +300,23 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下列程序实现了输出杨辉三角形,代码中横线部分应该填入的是(   )。",
+      "stem": "下列程序实现了输出杨辉三角形,代码中横线部分应该填入的是(  )。\n#include <iostream>\nusing namespace std;\n#define N 35\nint a[N];\nint main() {\n    int n;\n    cin >> n;\n    for (int i = 0; i < n; i++) {\n        a[i] = 1;\n        for (int j = i - 1; j > 0; j--)\n            ________; // 在此处填入选项\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n        for (int j = 0; j <= i; j++)\n            cout << a[j] << \" \";\n        cout << endl;\n    }\n    return 0;\n}\n12\n13\n14\n15\n16\n17",
       "options": [
         {
           "key": "A",
-          "text": "if (i == j) map[i][j] = 0; else map[i][j] = INF; } } for (int i = 1; i <= m; i++) { cin >> t1 >> t2 >> t3; map[t1][t2] = t3; } for (int k = 1; k <= n; k++) for (int i = 1; i <= n; i++) for (int j = 1; j <= n; j++) if (map[i][j] > map[i][k] + map[k][j]) ________; // 在此处填入选项 for (int i = 1; i <= n; i++) { for (int j = 1; j <= n; j++) { cout.width(4); cout << map[i][j]; } cout << endl; } } #include <iostream> using namespace std; #define N 35 int a[N]; int main() { int n; cin >> n; for (int i = 0; i < n; i++) { a[i] = 1; for (int j = i - 1; j > 0; j--) ________; // 在此处填入选项 for (int j = 0; j <= i; j++) cout << a[j] << \" \"; cout << endl; } return 0; } a[j] += a[j + 1]1 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "a[j] += a[j + 1]"
         },
         {
           "key": "B",
-          "text": "C."
+          "text": "a[j] += a[j - 1]"
+        },
+        {
+          "key": "C",
+          "text": "a[j - 1] += a[j]"
         },
         {
           "key": "D",
-          "text": ""
+          "text": "a[j + 1] += a[j]"
         }
       ],
       "answer": "B"
@@ -296,7 +324,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下列程序实现了输出杨辉三角形,其时间复杂度为(   )。",
+      "stem": "下列程序实现了输出杨辉三角形,其时间复杂度为(  )。\n#include <iostream>\nusing namespace std;\n#define N 35\nint a[N];\nint main() {\n    int n;\n    cin >> n;\n    for (int i = 0; i < n; i++) {\n1\n2\n3\n4\n5\n6\n7\n8\n        a[i] = 1;\n        for (int j = i - 1; j > 0; j--)\n            ________; // 在此处填入选项\n        for (int j = 0; j <= i; j++)\n            cout << a[j] << \" \";\n        cout << endl;\n    }\n    return 0;\n}\n9\n10\n11\n12\n13\n14\n15\n16\n17",
       "options": [
         {
           "key": "A",
@@ -314,7 +342,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "表达式'5' - 3.0的结果为2.0,类型为double。",
+      "stem": "表达式'5' - 3.0 的结果为2.0 ,类型为double 。",
       "options": [
         {
           "key": "T",
@@ -325,12 +353,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在 C++ 语言中,如果想要在一个函数内调用一个类的私有方法,可以在该类中将该函数声明为友元函数。",
+      "stem": "在C++语言中,如果想要在一个函数内调用一个类的私有方法,可以在该类中将该函数声明为友元函数。",
       "options": [
         {
           "key": "T",
@@ -341,7 +369,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
@@ -357,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "5 个相同的红球和 4 个相同的蓝球排成一排,要求蓝球不能相邻,则一共有 15 种排列方案。",
+      "stem": "5个相同的红球和4个相同的蓝球排成一排,要求蓝球不能相邻,则一共有15种排列方案。",
       "options": [
         {
           "key": "T",
@@ -373,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "使用math.h或cmath头文件中的函数,表达式pow(2, 5)的结果类型为int、值为32。\na[j] += a[j - 1]1\na[j - 1] += a[j]1\na[j + 1] += a[j]1\n#include <iostream>\nusing namespace std;\n#define N 35\nint a[N];\nint main() {\n    int n;\n    cin >> n;\n    for (int i = 0; i < n; i++) {\n        a[i] = 1;\n        for (int j = i - 1; j > 0; j--)\n            ________; // 在此处填入选项\n        for (int j = 0; j <= i; j++)\n            cout << a[j] << \" \";\n        cout << endl;\n    }\n    return 0;\n}",
+      "stem": "使用math.h 或cmath 头文件中的函数,表达式pow(2, 5) 的结果类型为int 、值为32 。",
       "options": [
         {
           "key": "T",
@@ -389,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "C++ 是一种面向对象编程语言, C 则不是。多态是面向对象三大特性之一,虚函数是动态多态的代表特性。\n因此,使用 C 语言无法实现虚函数。",
+      "stem": "C++是一种面向对象编程语言,C则不是。多态是面向对象三大特性之一,虚函数是动态多态的代表特性。\n因此,使用C语言无法实现虚函数。",
       "options": [
         {
           "key": "T",
@@ -405,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "在 个节点的平衡二叉树中查找指定元素的最差时间复杂度为 。",
+      "stem": "在\n个节点的平衡二叉树中查找指定元素的最差时间复杂度为\n。",
       "options": [
         {
           "key": "T",
@@ -421,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "定义int类型的变量a和b,求二次函数 取最小值时 x 的值,可以通过表达式-a / 2.0求\n得。",
+      "stem": "定义int 类型的变量a 和b ,求二次函数\n取最小值时x的值,可以通过表达式-a / 2.0 求\n得。",
       "options": [
         {
           "key": "T",
@@ -437,7 +465,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
@@ -453,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "从 32 名学生中选出 4 人分别担任班长、副班长、学习委员和组织委员,共有 种不同的选法。",
+      "stem": "从32名学生中选出4人分别担任班长、副班长、学习委员和组织委员,共有\n种不同的选法。",
       "options": [
         {
           "key": "T",
@@ -469,7 +497,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -477,11 +505,18 @@
       "seq": 1,
       "kind": "traditional",
       "title": "割裂",
-      "statement": "时间限制: 4.0 s\n内存限制: 512.0 MB\n3.2.8 题面描述\n小杨有一棵包含   个节点的树,其中节点的编号从   到  。\n小杨设置了   个好点对 和   个坏点对  。一个节点能够被删除,当\n且仅当:\n删除该节点后对于所有的  ( ) ,好点对   和   仍然连通;\n删除该节点后坏点对   和   不连通。\n如果点对中的任意一个节点被删除,其视为不连通。\n小杨想知道,有多少个节点能够被删除。\n3.2.9\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n之后   行,每行包含两个正整数  ,代表存在一条连接节点   和   的边。\n之后   行,每行包含两个正整数  ,代表一个好点对  。\n最后一行包含两个正整数  ,代表坏点对  。\n3.2.10 输出格式\n输出一个正整数,代表能够删除的节点个数。\n        int u = p.second;\n        if (vis[u])\n            continue;\n        vis[u] = 1;\n        for (int i = h[u]; i; i = nx[i])\n            if (d[u] + wt[i] < d[to[i]]) {\n                d[to[i]] = d[u] + wt[i];\n                pq.push({-d[to[i]], to[i]});\n            }\n    }\n    while (q--) {\n        int p;\n        scanf(\"%d\", &p);\n        printf(\"%lld\\n\", d[p]);\n    }\n    return 0;\n}\n\n子任务编号 分值\n1 20%\n2 20%\n3 60%\n3.2.11 样例\n3.2.12 输入样例\n3.2.13 输出样例\n3.2.14 数据范围\n对于全部数据,保证有  。\n3.2.15",
+      "statement": "时间限制:4.0 s\n内存限制:512.0 MB\n3.2.8\n题面描述\n小杨有一棵包含  个节点的树,其中节点的编号从  到 。\n小杨设置了  个好点对\n和  个坏点对\n。一个节点能够被删除,当\n且仅当:\n删除该节点后对于所有的 (\n),好点对\n 和\n 仍然连通;\n删除该节点后坏点对\n 和\n 不连通。\n如果点对中的任意一个节点被删除,其视为不连通。\n小杨想知道,有多少个节点能够被删除。\n3.2.9\n\n输入格式\n第一行包含两个正整数\n,含义如题面所示。\n之后\n 行,每行包含两个正整数\n,代表存在一条连接节点\n 和\n 的边。\n之后  行,每行包含两个正整数\n,代表一个好点对\n。\n最后一行包含两个正整数\n,代表坏点对\n。\n3.2.10\n输出格式\n输出一个正整数,代表能够删除的节点个数。\n3.2.11\n样例\n3.2.12\n输入样例\n6 2\n1 3\n1 5\n3 6\n3 2\n5 4\n5 4\n5 3\n2 6\n\n3.2.13\n输出样例\n\n3.2.14\n数据范围\n子任务编号\n分值\n\n20%\n\n20%\n\n60%\n对于全部数据,保证有\n。\n3.2.15",
       "time_ms": 4000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "2\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <bits/stdc++.h>\nusing namespace std;\nconst int N = 1e6+10;\nint n, k;\nvector<int> e[N];\nint f[N][25], dep[N], g[N], h[N];\nvoid dfs(int u, int fa){\n    dep[u] = dep[fa] + 1;\n    f[u][0] = fa;\n    for(int i = 1; i <= 20; i++){\n        f[u][i] = f[f[u][i - 1]][i - 1];\n    }\n    for(auto v: e[u]){\n        if(v == fa) continue;\n        dfs(v, u);\n    }\n}\nint lca(int u, int v){\n    if(dep[u] < dep[v]) swap(u, v);\n    int t = dep[u] - dep[v];\n    for(int i = 0; i <= 20; i++){\n        if(t & (1 << i)) u = f[u][i];\n    }\n    for(int i = 20; i >= 0; i--){\n        if(f[u][i] != f[v][i])\n            u = f[u][i], v = f[v][i];\n    }\n    if(u == v) return u;\n    return f[u][0];\n}\nint ans;\nvoid dfs2(int u, int fa){\n    for(auto v: e[u]){\n        if(v == fa) continue;\n        dfs2(v, u);\n        g[u] += g[v];\n        h[u] += h[v];\n    }\n    if(!g[u] && h[u]) {\n        ans++;\n    }\n}\nvoid solve(){\n    cin >> n >> k;\n    for(int i = 1; i < n; i++){\n        int u, v;\n        cin >> u >> v;\n        e[u].push_back(v);\n        e[v].push_back(u);\n    }\n    dfs(1, 0);\n    for(int i = 1; i <= k; i++){\n        int u, v;\n        cin >> u >> v;\n        int lc = lca(u, v);\n        g[u]++, g[v]++, g[lc]--, g[f[lc][0]]--;\n    }\n    int u, v;\n    cin >> u >> v;\n    int lc = lca(u, v);\n    h[u]++, h[v]++, h[lc]--, h[f[lc][0]]--;\n    dfs2(1, 0);\n    cout << ans << '\\n';\n}\nint main(){\n    solve();\n}"
     }
   ],
   "answer_rows": [
@@ -500,11 +535,8 @@
       "A",
       "C",
       "B",
-      "C",
       "C"
     ],
-    [
-      "B"
-    ]
+    []
   ]
 }

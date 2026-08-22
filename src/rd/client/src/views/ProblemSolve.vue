@@ -490,7 +490,9 @@ function optionBody(opt) {
             <button class="btn-ghost" type="button" :disabled="!problem.sample_in" @click="send('sample')">运行样例</button>
           </div>
         </template>
-        <p v-if="!problem.has_answer" class="muted">本题还没有标准答案。作答会记下，但不评分。</p>
+        <p v-if="!problem.has_answer" class="muted">
+          {{ problem.type === 'traditional' ? '本题还没有满分程序。作答会记下，但不评分。' : '本题还没有标准答案。作答会记下，但不评分。' }}
+        </p>
         <p v-if="err" class="err">{{ err }}</p>
         <p v-if="waiting" class="muted">{{ waiting }}</p>
         <p v-if="unofficial" class="muted">非正式分。仅跑了公开样例。</p>

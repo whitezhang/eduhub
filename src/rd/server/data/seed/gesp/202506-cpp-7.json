@@ -3,16 +3,16 @@
     "ym": "202506",
     "lang": "cpp",
     "level": 7,
-    "title": "CCF GESP 2025年6月认证 C++ 7级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1687196062973984.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202506-cpp-7.pdf"
+    "title": "202506-cpp-7",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202506-cpp-7.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "已知小写字母b 的 ASCII 码为 98 ,下列 C++ 代码的输出结果是(   )。",
+      "stem": "已知小写字母b 的ASCII码为98,下列C++代码的输出结果是(  )。\n#include <iostream>\nusing namespace std;\nint main() {\n    char a = 'b' ^ 4;\n    cout << a;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "已知a 为int 类型变量,p 为int * 类型变量,下列赋值语句不符合语法的是(   )。",
+      "stem": "已知a 为int 类型变量,p 为int * 类型变量,下列赋值语句不符合语法的是(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下列关于 C++ 类的说法,错误的是 (  ) 。",
+      "stem": "下列关于C++类的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下列 C++ 代码的输出是(   )。\n#include <iostream>\nusing namespace std;\nint main() {\n    char a = 'b' ^ 4;\n    cout << a;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7",
+      "stem": "下列C++代码的输出是(  )。\n#include <iostream>\nusing namespace std;\nint main() {\n    int arr[5] = {2, 4, 6, 8, 10};\n    int * p = arr + 2;\n    cout << p[3] << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "假定只有一个根节点的树的深度为 ,则一棵有 个节点的完全二叉树,则树的深度为(  )。",
+      "stem": "假定只有一个根节点的树的深度为,则一棵有\n个节点的完全二叉树,则树的深度为(  )。",
       "options": [
         {
           "key": "A",
@@ -132,19 +132,19 @@
       "options": [
         {
           "key": "A",
-          "text": "先序遍历是 ABDEC 。"
+          "text": "先序遍历是ABDEC 。"
         },
         {
           "key": "B",
-          "text": "中序遍历是 BDACE 。"
+          "text": "中序遍历是BDACE 。"
         },
         {
           "key": "C",
-          "text": "后序遍历是 DBCEA 。"
+          "text": "后序遍历是DBCEA 。"
         },
         {
           "key": "D",
-          "text": "广度优先遍历是 ABCDE 。"
+          "text": "广度优先遍历是ABCDE 。"
         }
       ],
       "answer": "D"
@@ -164,7 +164,7 @@
         },
         {
           "key": "C",
-          "text": "使用邻接矩阵存储一个包含 个顶点的有向图,统计其边数的时间复杂度为 。"
+          "text": "使用邻接矩阵存储一个包含个顶点的有向图,统计其边数的时间复杂度为 。"
         },
         {
           "key": "D",
@@ -176,7 +176,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "一个连通的简单有向图,共有28条边,则该图至少有(  )个顶点。\n\n```\n#include <iostream> using namespace std; int main() { int arr[5] = {2, 4, 6, 8, 10}; int * p = arr + 2; cout << p[3] << endl; return 0; }\n```",
+      "stem": "一个连通的简单有向图,共有28条边,则该图至少有(  )个顶点。",
       "options": [
         {
           "key": "A",
@@ -248,7 +248,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面程序的输出为(  )。",
+      "stem": "下面程序的输出为(  )。\n#include <iostream>\nusing namespace std;\nint rec_fib[100];\nint fib(int n) {\n    if (n <= 1)\n        return n;\n    if (rec_fib[n] == 0)\n        rec_fib[n] = fib(n - 1) + fib(n - 2);\n    return rec_fib[n];\n}\nint main() {\n    cout << fib(6) << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14",
       "options": [
         {
           "key": "A",
@@ -272,7 +272,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面程序的时间复杂度为(  )。\n#include <iostream>\nusing namespace std;\nint rec_fib[100];\nint fib(int n) {\n    if (n <= 1)\n        return n;\n    if (rec_fib[n] == 0)\n        rec_fib[n] = fib(n - 1) + fib(n - 2);\n    return rec_fib[n];\n}\nint main() {\n    cout << fib(6) << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nint rec_fib[MAX_N];\nint fib(int n) {\n    if (n <= 1)\n        return n;\n    if (rec_fib[n] == 0)\n        rec_fib[n] = fib(n - 1) + fib(n - 2);\n    return rec_fib[n];\n}\n1\n2\n3\n4\n5\n6\n7\n8",
+      "stem": "下面程序的时间复杂度为(  )。\nint rec_fib[MAX_N];\nint fib(int n) {\n    if (n <= 1)\n        return n;\n    if (rec_fib[n] == 0)\n        rec_fib[n] = fib(n - 1) + fib(n - 2);\n    return rec_fib[n];\n}\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -288,7 +288,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面search 函数的平均时间复杂度为 (  ) 。",
+      "stem": "下面search 函数的平均时间复杂度为(  )。\nint search(int n, int * p, int target) {\n    int low = 0, high = n;\n    while (low < high) {\n        int middle = (low + high) / 2;\n        if (target == p[middle]) {\n            return middle;\n        } else if (target > p[middle]) {\n            low = middle + 1;\n        } else {\n            high = middle;\n        }\n    }\n    return -1;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14",
       "options": [
         {
           "key": "A",
@@ -304,7 +304,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面程序的时间复杂度为(   )。",
+      "stem": "下面程序的时间复杂度为(  )。\nint primes[MAXP], num = 0;\nbool isPrime[MAXN] = {false};\nvoid sieve() {\n    for (int n = 2; n <= MAXN; n++) {\n        if (!isPrime[n])\n            primes[num++] = n;\n        for (int i = 0; i < num && n * primes[i] <= MAXN; i++) {\n            isPrime[n * primes[i]] = true;\n            if (n % primes[i] == 0)\n                break;\n        }\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
@@ -320,7 +320,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下列选项中,哪个不可能是下图的广度优先遍历序列(   )。\nint search(int n, int * p, int target) {\n    int low = 0, high = n;\n    while (low < high) {\n        int middle = (low + high) / 2;\n        if (target == p[middle]) {\n            return middle;\n        } else if (target > p[middle]) {\n            low = middle + 1;\n        } else {\n            high = middle;\n        }\n    }\n    return -1;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nint primes[MAXP], num = 0;\nbool isPrime[MAXN] = {false};\nvoid sieve() {\n    for (int n = 2; n <= MAXN; n++) {\n        if (!isPrime[n])\n            primes[num++] = n;\n        for (int i = 0; i < num && n * primes[i] <= MAXN; i++) {\n            isPrime[n * primes[i]] = true;\n            if (n % primes[i] == 0)\n                break;\n        }\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "下列选项中,哪个不可能是下图的广度优先遍历序列(  )。",
       "options": [
         {
           "key": "A",
@@ -346,7 +346,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "C++ 语言中,表达式9 & 12 的结果类型为int 、值为8 。",
+      "stem": "C++语言中,表达式9 & 12 的结果类型为int 、值为8 。",
       "options": [
         {
           "key": "T",
@@ -357,12 +357,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "C++ 语言中,指针变量指向的内存地址不一定都能够合法访问。",
+      "stem": "C++语言中,指针变量指向的内存地址不一定都能够合法访问。",
       "options": [
         {
           "key": "T",
@@ -373,12 +373,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "对 个元素的数组进行快速排序,最差情况的时间复杂度为 。",
+      "stem": "对个元素的数组进行快速排序,最差情况的时间复杂度为\n。",
       "options": [
         {
           "key": "T",
@@ -389,7 +389,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
@@ -405,7 +405,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
@@ -421,7 +421,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
@@ -437,7 +437,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
@@ -453,12 +453,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在 C++ 语言中,类的构造函数和析构函数均可以声明为虚函数。",
+      "stem": "在C++语言中,类的构造函数和析构函数均可以声明为虚函数。",
       "options": [
         {
           "key": "T",
@@ -469,7 +469,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
@@ -485,7 +485,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
@@ -501,7 +501,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -509,27 +509,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "线图",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n给定由   个结点与   条边构成的简单无向图  ,结点依次以   编号。简单无向图意味着   中不包含重边与\n自环。  的线图  通过以下方式构建:\n初始时线图   为空。\n\n对于无向图   中的一条边,在线图   中加入与之对应的一个结点。\n对于无向图   中两条不同的边  ,若存在   中的结点同时连接这两条边(即   之一与\n之一相同),则在线图   中加入一条无向边,连接   在线图中对应的结点。\n请你求出线图   中所包含的无向边的数量。\n3.1.2\n\n输入格式\n第一行,两个正整数  ,分别表示无向图   中的结点数与边数。\n接下来   行,每行两个正整数  ,表示   中连接   的一条无向边。\n3.1.3 输出格式\n输出共一行,一个整数,表示线图   中所包含的无向边的数量。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n3.1.4.5 样例解释  1\n5 4\n1 2\n2 3\n3 1\n4 5\n\n5 10\n1 2\n1 3\n1 4\n1 5\n2 3\n2 4\n2 5\n3 4\n3 5\n4 5\n\n3.1.5 数据范围\n对于  % 的测试点,保证  , 。\n对于所有测试点,保证  , 。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n给定由  个结点与\n 条边构成的简单无向图 ,结点依次以\n 编号。简单无向图意味着  中不包含重边与\n自环。 的线图\n 通过以下方式构建:\n初始时线图\n 为空。\n对于无向图  中的一条边,在线图\n 中加入与之对应的一个结点。\n对于无向图  中两条不同的边\n,若存在  中的结点同时连接这两条边(即\n 之一与\n之一相同),则在线图\n 中加入一条无向边,连接\n 在线图中对应的结点。\n请你求出线图\n 中所包含的无向边的数量。\n3.1.2\n\n输入格式\n第一行,两个正整数\n,分别表示无向图  中的结点数与边数。\n接下来\n 行,每行两个正整数\n,表示  中连接\n 的一条无向边。\n3.1.3\n输出格式\n输出共一行,一个整数,表示线图\n 中所包含的无向边的数量。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n5 4\n1 2\n2 3\n3 1\n4 5\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n5 10\n1 2\n1 3\n1 4\n1 5\n2 3\n2 4\n2 5\n3 4\n3 5\n4 5\n\n3.1.4.4\n输出样例 2\n\n3.1.4.5\n样例解释 1\n3.1.5\n数据范围\n对于\n% 的测试点,保证\n,\n。\n对于所有测试点,保证\n,\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "1\n2\n3\n4\n5\n31\n",
-          "out": "7\n",
+          "in": "1\n2\n3\n4\n5\n3\n1\n",
+          "out": "8\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\nusing namespace std;\nconst int N = 1e5 + 5;\nint n, m, deg[N];\nlong long ans;\nint main() {\n    scanf(\"%d%d\", &n, &m);\n    while (m--) {\n        int u, v;\n        scanf(\"%d%d\", &u, &v);\n        deg[u]++;\n        deg[v]++;\n    }\n    for (int i = 1; i <= n; i++)\n        ans += 1ll * deg[i] * (deg[i] - 1) / 2;\n    printf(\"%lld\\n\", ans);\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "调味平衡",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小  A 准备了   种食材用来制作料理,这些食材依次以   编号,第   种食材的酸度为  ,甜度为  。对于每\n种食材,小  A 可以选择将其放入料理,或者不放入料理。料理的酸度   为放入食材的酸度之和,甜度   为放入食材\n的甜度之和。如果料理的酸度与甜度相等,那么料理的调味是平衡的。\n过于清淡的料理并不好吃,因此小  A 想在满足料理调味平衡的前提下,合理选择食材,最大化料理的酸度与甜度之\n和。你能帮他求出在调味平衡的前提下,料理酸度与甜度之和的最大值吗?\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示食材种类数量。\n接下来   行,每行两个正整数  ,表示食材的酸度与甜度。\n3.2.3 输出格式\n输出共一行,一个整数,表示在调味平衡的前提下,料理酸度与甜度之和的最大值。",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n小 A 准备了  种食材用来制作料理,这些食材依次以\n 编号,第  种食材的酸度为\n,甜度为 。对于每\n种食材,小 A 可以选择将其放入料理,或者不放入料理。料理的酸度  为放入食材的酸度之和,甜度  为放入食材\n的甜度之和。如果料理的酸度与甜度相等,那么料理的调味是平衡的。\n过于清淡的料理并不好吃,因此小 A 想在满足料理调味平衡的前提下,合理选择食材,最大化料理的酸度与甜度之\n和。你能帮他求出在调味平衡的前提下,料理酸度与甜度之和的最大值吗?\n3.2.2\n\n输入格式\n第一行,一个正整数 ,表示食材种类数量。\n接下来  行,每行两个正整数\n,表示食材的酸度与甜度。\n3.2.3\n输出格式\n输出共一行,一个整数,表示在调味平衡的前提下,料理酸度与甜度之和的最大值。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n\n1 2\n2 4\n3 2\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n\n1 1\n2 3\n6 1\n8 2\n5 7\n\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于\n% 的测试点,保证\n,\n。\n对于另外\n% 的测试点,保证\n,\n。\n对于所有测试点,保证\n,\n。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "3\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n4\n8\n1\n5\n",
+          "out": "6\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\nusing namespace std;\nconst int N = 105;\nconst int C = 505;\nconst int D = N * C * 2;\nint n;\nint f[D];\nint main() {\n    scanf(\"%d\", &n);\n    for (int i = 0; i < D; i++)\n        f[i] = -1e9;\n    f[N * C] = 0;\n    while (n--) {\n        int a, b;\n        scanf(\"%d%d\", &a, &b);\n        int x = a + b, y = a - b;\n        if (y <= 0) {\n            for (int i = -y; i < D; i++)\n                f[i + y] = max(f[i + y], f[i] + x);\n        } else {\n            for (int i = D - y - 1; i; i--)\n                f[i + y] = max(f[i + y], f[i] + x);\n        }\n    }\n    printf(\"%d\\n\", f[N * C]);\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -548,11 +561,8 @@
       "D",
       "C",
       "A",
-      "B",
-      "C"
+      "B"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

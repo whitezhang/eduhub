@@ -73,6 +73,7 @@ export function problemToCatalogDoc(p, testcases) {
     full_score: Number(p.full_score) || 100,
     published: p.published ? 1 : 0,
     review_note: p.review_note || "",
+    solution_code: p.solution_code || "",
     testcases: (testcases || []).map((t) => ({
       seq: Number(t.seq),
       score: Number(t.score) || 0,
@@ -175,6 +176,7 @@ function normalizeBody(body) {
     full_score: Number(body.full_score) || 100,
     published: body.published ? 1 : 0,
     review_note: String(body.review_note ?? ""),
+    solution_code: String(body.solution_code ?? ""),
     testcases: Array.isArray(body.testcases) ? body.testcases : [],
   };
 }
@@ -197,7 +199,7 @@ export function saveProblemFromBody(db, problemId, body) {
     `UPDATE problems SET
       code=?, title=?, source=?, difficulty=?, time_ms=?, memory_mb=?, io_mode=?,
       languages=?, type=?, statement=?, sample_in=?, sample_out=?, sample_note=?,
-      choice_json=?, full_score=?, published=?, review_note=?
+      choice_json=?, full_score=?, published=?, review_note=?, solution_code=?
      WHERE id=?`,
   ).run(
     n.code,
@@ -217,6 +219,7 @@ export function saveProblemFromBody(db, problemId, body) {
     n.full_score,
     n.published,
     n.review_note,
+    n.solution_code,
     problemId,
   );
 
@@ -248,7 +251,7 @@ export function applyCatalogDoc(db, doc) {
       `UPDATE problems SET
         title=?, source=?, difficulty=?, time_ms=?, memory_mb=?, io_mode=?,
         languages=?, type=?, statement=?, sample_in=?, sample_out=?, sample_note=?,
-        choice_json=?, full_score=?, published=?, review_note=?
+        choice_json=?, full_score=?, published=?, review_note=?, solution_code=?
        WHERE id=?`,
     ).run(
       n.title,
@@ -267,6 +270,7 @@ export function applyCatalogDoc(db, doc) {
       n.full_score,
       n.published,
       n.review_note,
+      n.solution_code,
       pid,
     );
   } else {
@@ -275,8 +279,8 @@ export function applyCatalogDoc(db, doc) {
         `INSERT INTO problems (
           code, title, source, difficulty, time_ms, memory_mb, io_mode,
           languages, type, statement, sample_in, sample_out, sample_note,
-          choice_json, full_score, published, review_note
-        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+          choice_json, full_score, published, review_note, solution_code
+        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
       )
       .run(
         n.code,
@@ -296,6 +300,7 @@ export function applyCatalogDoc(db, doc) {
         n.full_score,
         n.published,
         n.review_note,
+        n.solution_code,
       );
     pid = Number(info.lastInsertRowid);
   }

@@ -3,16 +3,16 @@
     "ym": "202403",
     "lang": "cpp",
     "level": 7,
-    "title": "GESP 3月认证C++七级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10134.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1602047231131680.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202403-cpp-7.pdf"
+    "title": "202403-cpp-7",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202403-cpp-7.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "下列关于排序的说法,正确的是 (  ) 。",
+      "stem": "下列关于排序的说法,正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面的程序属于哪种算法 (  ) 。",
+      "stem": "下面的程序属于哪种算法(  )。\nint pos[8];\nvoid queen(int n) {\n    for (int i = 0; i < 8; i++) {\n        pos[n] = i;\n        bool attacked = false;\n        for (int j = 0; j < n; j++)\n1\n2\n3\n4\n5\n6\n            if (pos[n] == pos[j] || pos[n] + n == pos[j] + j || pos[n] - n == pos[j]\n- j) {\n                attacked = true;\n                break;\n            }\n        if (attacked)\n            continue;\n        if (n == 7) {\n            return;\n        } else {\n            queen(n + 1);\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n        }\n    }\n}\n17\n18\n19",
       "options": [
         {
           "key": "A",
@@ -52,7 +52,7 @@
         },
         {
           "key": "D",
-          "text": "广度优先搜索 int pos[8]; void queen(int n) { for (int i = 0; i < 8; i++) { pos[n] = i; bool attacked = false; for (int j = 0; j < n; j++) if (pos[n] == pos[j] || pos[n] + n == pos[j] + j || pos[n] - n == pos[j] - j) { attacked = true; break; } if (attacked) continue; if (n == 7) { return; } else { queen(n + 1); } } }"
+          "text": "广度优先搜索"
         }
       ],
       "answer": "C"
@@ -60,23 +60,23 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面有关 C++ 类的说法,错误的是(   )。",
+      "stem": "下面有关C++类的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
-          "text": "C++ 类对象销毁时,会执行析构函数。"
+          "text": "C++类对象销毁时,会执行析构函数。"
         },
         {
           "key": "B",
-          "text": "C++ 类可以通过定义构造函数实现自动类型转换。"
+          "text": "C++类可以通过定义构造函数实现自动类型转换。"
         },
         {
           "key": "C",
-          "text": "C++ 类可以通过重载[]运算符实现通过给定下标访问数组成员的元素。"
+          "text": "C++类可以通过重载[] 运算符实现通过给定下标访问数组成员的元素。"
         },
         {
           "key": "D",
-          "text": "C++ 类可以包含任意类型的成员变量。"
+          "text": "C++类可以包含任意类型的成员变量。"
         }
       ],
       "answer": "D"
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "一个连通的简单无向图,共有 28 条边,则该图至少有 (  ) 个顶点。",
+      "stem": "一个连通的简单无向图,共有28条边,则该图至少有(  )个顶点。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "以下哪个方案不能合理解决或缓解哈希表冲突(   )。",
+      "stem": "以下哪个方案不能合理解决或缓解哈希表冲突(  )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "已知一颗二叉树的中序遍历序列为: {C F B A E D G} ,后序遍历序列为: {F C B E G D A} ,则下列说法中正\n确的是 (  ) 。",
+      "stem": "已知一颗二叉树的中序遍历序列为:{C F B A E D G},后序遍历序列为:{F C B E G D A},则下列说法中正\n确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -140,11 +140,11 @@
         },
         {
           "key": "B",
-          "text": "该树的高为 4 。"
+          "text": "该树的高为4。"
         },
         {
           "key": "C",
-          "text": "该树有 4 个叶节点。"
+          "text": "该树有4个叶节点。"
         },
         {
           "key": "D",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "以下关于二叉排序树的说法,正确的是(   )。",
+      "stem": "以下关于二叉排序树的说法,正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -164,7 +164,7 @@
         },
         {
           "key": "B",
-          "text": "在含n个节点的二叉排序树中查找元素,最差情况的时间复杂度为 。"
+          "text": "在含n 个节点的二叉排序树中查找元素,最差情况的时间复杂度为 。"
         },
         {
           "key": "C",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "已知x为double类型的变量,且值大于 0 ,则下列表达式的值一定大于 0 的是 (  ) 。",
+      "stem": "已知x 为double 类型的变量,且值大于0,则下列表达式的值一定大于0的是(  )。",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "一个简单有向图有 10 个结点、 30 条边。再增加多少条边可以成为完全图。(   )",
+      "stem": "一个简单有向图有10个结点、30条边。再增加多少条边可以成为完全图。(  )",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下列选项中,哪个可能是下图的深度优先遍历序列(   )。",
+      "stem": "下列选项中,哪个可能是下图的深度优先遍历序列(  )。",
       "options": [
         {
           "key": "A",
@@ -236,7 +236,7 @@
         },
         {
           "key": "B",
-          "text": "7, 8, 6, 4, 2, 1, 5, 3, 12, 9, 11, 10 。"
+          "text": "7, 8, 6, 4, 2, 1, 5, 3, 12, 9, 11, 10。"
         },
         {
           "key": "C",
@@ -244,7 +244,7 @@
         },
         {
           "key": "D",
-          "text": "7, 8, 10, 9, 11, 12, 4, 5, 1, 2, 3, 6 。"
+          "text": "7, 8, 10, 9, 11, 12, 4, 5, 1, 2, 3, 6。"
         }
       ],
       "answer": "C"
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面schedule函数的时间复杂度为 (  ) 。",
+      "stem": "下面schedule 函数的时间复杂度为(  )。\n#include <algorithm>\nusing namespace std;\nstruct activity {\n    int id, start, end;\n1\n2\n3\n4\n};\nbool compare(activity a, activity b) {\n    return a.end < b.end;\n}\nint schedule(int n, activity * p) {\n    sort(p, p + n, compare);\n    int cnt = 0, end = 0;\n    for (int i = 0; i < n; i++) {\n        if (p[i].start >= end) {\n            end = p[i].end;\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n            cnt++;\n        }\n    }\n    return cnt;\n}\n15\n16\n17\n18\n19",
       "options": [
         {
           "key": "A",
@@ -268,7 +268,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面search函数的平均时间复杂度为 (  ) 。\n#include <algorithm>\nusing namespace std;\nstruct activity {\n    int id, start, end;\n};\nbool compare(activity a, activity b) {\n    return a.end < b.end;\n}\nint schedule(int n, activity * p) {\n    sort(p, p + n, compare);\n    int cnt = 0, end = 0;\n    for (int i = 0; i < n; i++) {\n        if (p[i].start >= end) {\n            end = p[i].end;\n            cnt++;\n        }\n    }\n    return cnt;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19",
+      "stem": "下面search 函数的平均时间复杂度为(  )。\nint search(int n, int * p, int target) {\n    int low = 0, high = n;\n    while (low <= high) {\n        int middle = (low + high) / 2;\n        if (target == p[middle]) {\n            return middle;\n1\n2\n3\n4\n5\n6\n        } else if (target > p[middle]) {\n            low = middle + 1;\n        } else {\n            high = middle - 1;\n        }\n    }\n    return -1;\n}\n7\n8\n9\n10\n11\n12\n13\n14",
       "options": [
         {
           "key": "A",
@@ -284,7 +284,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面count_triple函数的时间复杂度为 (  ) 。",
+      "stem": "下面count_triple 函数的时间复杂度为(  )。\nint count_triple(int n) {\n    int cnt = 0;\n    for (int a = 1; a <= n; a++)\n        for (int b = a; a + b <= n; b++)\n            for (int c = b; a + b + c <= n; c++)\n                if (a * a + b * b == c * c)\n                    cnt++;\n    return cnt;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -300,7 +300,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面程序的输出为(   )。\nint search(int n, int * p, int target) {\n    int low = 0, high = n;\n    while (low <= high) {\n        int middle = (low + high) / 2;\n        if (target == p[middle]) {\n            return middle;\n        } else if (target > p[middle]) {\n            low = middle + 1;\n        } else {\n            high = middle - 1;\n        }\n    }\n    return -1;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nint count_triple(int n) {\n    int cnt = 0;\n    for (int a = 1; a <= n; a++)\n        for (int b = a; a + b <= n; b++)\n            for (int c = b; a + b + c <= n; c++)\n                if (a * a + b * b == c * c)\n                    cnt++;\n    return cnt;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n#include <iostream>\nusing namespace std;\nint down(int n) {\n    if (n <= 1)\n        return n;\n    return down(n - 1) + down(n - 2) + down(n - 3);\n}\nint main() {\n    cout << down(6) << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "下面程序的输出为(  )。\n#include <iostream>\nusing namespace std;\nint down(int n) {\n    if (n <= 1)\n        return n;\n    return down(n - 1) + down(n - 2) + down(n - 3);\n}\n1\n2\n3\n4\n5\n6\n7\nint main() {\n    cout << down(6) << endl;\n    return 0;\n}\n8\n9\n10\n11",
       "options": [
         {
           "key": "A",
@@ -324,7 +324,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面的程序使用邻接矩阵表达的带权无向图,则从顶点 0 到顶点 3 的最短距离为(   )。",
+      "stem": "下面的程序使用邻接矩阵表达的带权无向图,则从顶点0到顶点3的最短距离为(  )。\nint weight[4][4] = {\n    {0, 2, 5, 8},\n    {2, 0, 1, 7},\n    {5, 1, 0, 4},\n    {8, 7, 4, 0}};\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -350,7 +350,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "祖冲之是南北朝时期杰出的数学家、天文学家,其主要贡献在数学、天文历法和机械制造三方面。他首次将\n“ 圆周率 ” 精算到小数第七位,即在 3.1415926 和 3.1415927 之间。",
+      "stem": "祖冲之是南北朝时期杰出的数学家、天文学家,其主要贡献在数学、天文历法和机械制造三方面。他首次将\n“圆周率”精算到小数第七位,即在3.1415926和3.1415927之间。",
       "options": [
         {
           "key": "T",
@@ -361,12 +361,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "C++ 语言中,表达式2 ^ 3的结果类型为int、值为8。 (  )",
+      "stem": "C++语言中,表达式2 ^ 3 的结果类型为int 、值为8 。(  )",
       "options": [
         {
           "key": "T",
@@ -377,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "一棵有 个节点的完全二叉树,则树的深度为 。 (  )",
+      "stem": "一棵有\n个节点的完全二叉树,则树的深度为\n。(  )",
       "options": [
         {
           "key": "T",
@@ -393,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "能用动态规划解决的问题,一般也可以用贪心法解决,但动态规划的效率更高。 (  )",
+      "stem": "能用动态规划解决的问题,一般也可以用贪心法解决,但动态规划的效率更高。(  )",
       "options": [
         {
           "key": "T",
@@ -409,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "使用math.h或cmath头文件中的正弦函数,表达式sin(30)的结果类型为double、值约为0.5。 (  )",
+      "stem": "使用math.h 或cmath 头文件中的正弦函数,表达式sin(30) 的结果类型为double 、值约为0.5 。(  )",
       "options": [
         {
           "key": "T",
@@ -425,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "要求出简单有向图中从顶点A到顶点B的最短路径,在深度优先搜索和广度优先搜索中选择,广度优先更适\n合。 (  )",
+      "stem": "要求出简单有向图中从顶点A 到顶点B 的最短路径,在深度优先搜索和广度优先搜索中选择,广度优先更适\n合。(  )",
       "options": [
         {
           "key": "T",
@@ -441,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "某N个表项的哈希表,在发生哈希函数冲突时采用向后寻找空位的方法解决冲突。其查找操作的平均时间复\n杂度为 ,即使当该哈希表的每个表项都有元素时,查找操作的平均时间复杂度仍为 。 (  )",
+      "stem": "某N 个表项的哈希表,在发生哈希函数冲突时采用向后寻找空位的方法解决冲突。其查找操作的平均时间复\n杂度为\n,即使当该哈希表的每个表项都有元素时,查找操作的平均时间复杂度仍为\n。(  )",
       "options": [
         {
           "key": "T",
@@ -457,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "动态规划有递推实现和递归实现,有时两种实现的时间复杂度不同。 (  )",
+      "stem": "动态规划有递推实现和递归实现,有时两种实现的时间复杂度不同。(  )",
       "options": [
         {
           "key": "T",
@@ -473,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "围棋游戏中,判断落下一枚棋子后是否会提掉对方的子,可以使用泛洪算法来实现。 (  )",
+      "stem": "围棋游戏中,判断落下一枚棋子后是否会提掉对方的子,可以使用泛洪算法来实现。(  )",
       "options": [
         {
           "key": "T",
@@ -489,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "类B继承了抽象类A,但未实现类A中的纯虚函数f,则类B不能直接实例化。 (  )\nint weight[4][4] = {\n    {0, 2, 5, 8},\n    {2, 0, 1, 7},\n    {5, 1, 0, 4},\n    {8, 7, 4, 0}};",
+      "stem": "类B 继承了抽象类A ,但未实现类A 中的纯虚函数f ,则类B 不能直接实例化。(  )",
       "options": [
         {
           "key": "T",
@@ -505,7 +505,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -513,33 +513,35 @@
       "seq": 1,
       "kind": "traditional",
       "title": "交流问题",
-      "statement": "3.1.1 问题描述\n来自  2 所学校  A 校、 B 校的   名同学相聚在一起相互交流,方便起见,我们把这些同学从   至   编号。他们共进\n行了   次交流,第   次交流中,编号为   的同学相互探讨了他们感兴趣的话题,并结交成为了新的朋友。\n由于这次交流会的目的是促进两校友谊,因此只有不同学校的同学之间会交流,同校同学并不会相互交流。\n作为  A 校顾问,你对  B 校的规模非常感兴趣,你希望求出  B 校至少有几名同学、至多有几名同学。\n3.1.2 输入描述\n第一行两个正整数  ,表示同学的人数,交流的次数。\n接下来   行,每行两个正整数  ,表示一次交流。\n题目保证输入合法,即交流一定是跨校开展的。\n3.1.3 输出描述\n输出一行两个整数,用单个空格隔开,分别表示  B 校至少有几名同学、至多有几名同学。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7 样例输入  2\n4 3\n1 2\n2 3\n4 2\n\n1 31\n7 5\n1 2\n2 3\n4 2\n5 6\n6 7\n\n3.1.8 样例输出  2\n3.1.9 数据规模\n对于   的测试点,保证  , ;\n对于   的测试点,保证  , ;\n对于   的测试点,保证  , 。\n3.1.10",
+      "statement": "3.1.1\n问题描述\n来自 2 所学校 A 校、B 校的\n 名同学相聚在一起相互交流,方便起见,我们把这些同学从  至\n 编号。他们共进\n行了\n 次交流,第  次交流中,编号为\n 的同学相互探讨了他们感兴趣的话题,并结交成为了新的朋友。\n由于这次交流会的目的是促进两校友谊,因此只有不同学校的同学之间会交流,同校同学并不会相互交流。\n作为 A 校顾问,你对 B 校的规模非常感兴趣,你希望求出 B 校至少有几名同学、至多有几名同学。\n3.1.2\n输入描述\n第一行两个正整数\n,表示同学的人数,交流的次数。\n接下来\n 行,每行两个正整数\n,表示一次交流。\n题目保证输入合法,即交流一定是跨校开展的。\n3.1.3\n输出描述\n输出一行两个整数,用单个空格隔开,分别表示 B 校至少有几名同学、至多有几名同学。\n3.1.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5\n样例输入 1\n4 3\n1 2\n2 3\n4 2\n\n3.1.6\n样例输出 1\n1 3\n\n3.1.7\n样例输入 2\n7 5\n1 2\n2 3\n4 2\n5 6\n6 7\n\n3.1.8\n样例输出 2\n2 5\n\n3.1.9\n数据规模\n对于\n 的测试点,保证\n,\n;\n对于\n 的测试点,保证\n,\n;\n对于\n 的测试点,保证\n,\n。\n3.1.10",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "2\n3\n4\n",
-          "out": "4\n",
+          "in": "1\n2\n3\n4\n1\n",
+          "out": "6\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <iostream>\n#include <vector>\n#include <unordered_map>\nusing namespace std;\nvoid dfs(vector<vector<int>>& graph, int node, vector<int>& colors, int* color_cnt,\nint curr_color) {\n    colors[node] = curr_color;\n    color_cnt[curr_color]++;\n    for (int neighbor : graph[node]) {\n        if (colors[neighbor] == -1) {\n            dfs(graph, neighbor, colors, color_cnt, curr_color ^ 1);\n        }\n    }\n}\npair<int, int> find_b_school_students(int N, vector<pair<int, int>>& connections) {\n    vector<vector<int>> graph(N + 1);\n    for (const auto& connection : connections) {\n        graph[connection.first].push_back(connection.second);\n        graph[connection.second].push_back(connection.first);\n    }\n    vector<int> colors(N + 1, -1);\n    int min_ans = 0;\n    for (int i = 1; i <= N; ++i) {\n        if (colors[i] == -1) {\n            int color_cnt[2] = {0, 0};\n            dfs(graph, i, colors, color_cnt, 0);\n            min_ans += min(color_cnt[0], color_cnt[1]);\n        }\n    }\n    return make_pair(min_ans, N - min_ans);\n}\nint main() {\n    int N, M;\n    cin >> N >> M;\n    vector<pair<int, int>> connections(M);\n    for (int i = 0; i < M; ++i) {\n        cin >> connections[i].first >> connections[i].second;\n    }\n    pair<int, int> b_students = find_b_school_students(N, connections);\n    cout << b_students.first << \" \" << b_students.second << endl;\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "俄罗斯方块",
-      "statement": "3.2.1 题面描述\n小杨同学用不同种类的俄罗斯方块填满了一个大小为   的网格图。\n网格图由   个带颜色方块构成。小杨同学现在将这个网格图交给了你,请你计算出网格图中俄罗斯方块的种类\n数。\n如果两个同色方块是四连通(即上下左右四个相邻的位置)的,则称两个同色方块直接连通;若两个同色方块同时\n与另一个同色方块直接或间接连通,则称两个同色方块间接连通。一个俄罗斯方块由一个方块和所有与其直接或间\n接连通的同色方块组成。定义两个俄罗斯方块的种类相同当且仅当通过平移其中一个俄罗斯方块可以和另一个俄罗\n斯方块重合;如果两个俄罗斯方块颜色不同,仍然视为同一种俄罗斯方块。\n例如,在如下情况中,方块   和方块   是同一种俄罗斯方块,而方块   和方块   不是同一种俄罗斯方块。\n3.2.2\n\n输入格式\n第一行包含两个正整数  ,表示网格图的大小。\n对于之后   行,第   行包含   个正整数  ,表示该行   个方块的颜色。\n3.2.3 输出格式\n输出一个非负整数,表示俄罗斯方块的种类数。\n3.2.4 样例 1\n        cin >> connections[i].first >> connections[i].second;\n    }\n    pair<int, int> b_students = find_b_school_students(N, connections);\n    cout << b_students.first << \" \" << b_students.second << endl;\n    return 0;\n}\n\n方块 1 :    方块 2 :    方块 3 :\n1 1 1    2 2 2       1\n  1 1      2 2     1 1\n                   1 1\n\n5 6\n1 2 3 4 4 5\n1 2 3 3 4 5\n1 2 2 3 4 5\n1 6 6 7 7 8\n6 6 7 7 8 8\n\n子任务编\n号\n数据点占\n比 特殊条件\n1 所有的俄罗斯方块大小不超过  ,即均可以放置于   的网格\n图中\n2 所有的俄罗斯方块的形状均为   或   类型,其中   为任意\n正整数\n\n3.2.5 样例解释\n 种类型的俄罗斯方块如下:\n3.2.6 数据范围\n对于全部数据,保证有  , 。\n3.2.7",
+      "statement": "3.2.1\n题面描述\n小杨同学用不同种类的俄罗斯方块填满了一个大小为\n 的网格图。\n网格图由\n 个带颜色方块构成。小杨同学现在将这个网格图交给了你,请你计算出网格图中俄罗斯方块的种类\n数。\n如果两个同色方块是四连通(即上下左右四个相邻的位置)的,则称两个同色方块直接连通;若两个同色方块同时\n与另一个同色方块直接或间接连通,则称两个同色方块间接连通。一个俄罗斯方块由一个方块和所有与其直接或间\n接连通的同色方块组成。定义两个俄罗斯方块的种类相同当且仅当通过平移其中一个俄罗斯方块可以和另一个俄罗\n斯方块重合;如果两个俄罗斯方块颜色不同,仍然视为同一种俄罗斯方块。\n例如,在如下情况中,方块  和方块  是同一种俄罗斯方块,而方块  和方块  不是同一种俄罗斯方块。\n方块1:   方块2:   方块3:\n1 1 1    2 2 2       1\n  1 1      2 2     1 1\n                   1 1\n\n3.2.2\n\n输入格式\n第一行包含两个正整数\n,表示网格图的大小。\n对于之后  行,第  行包含\n 个正整数\n,表示该行\n 个方块的颜色。\n3.2.3\n输出格式\n输出一个非负整数,表示俄罗斯方块的种类数。\n3.2.4\n样例1\n5 6\n1 2 3 4 4 5\n1 2 3 3 4 5\n1 2 2 3 4 5\n1 6 6 7 7 8\n6 6 7 7 8 8\n\n3.2.5\n样例解释\n 种类型的俄罗斯方块如下:\n类型1:    类型2:    类型3:    类型4:    类型5:    类型6:          类型7:\n1         2         3         4 4       5           6 6    7 7      8\n1         2         3 3         4       5         6 6    7 7      8 8\n1         2 2         3         4       5\n\n3.2.6\n数据范围\n子任务编\n数据点占\n比\n特殊条件\n号\n\n所有的俄罗斯方块大小不超过\n,即均可以放置于\n 的网格\n图中\n\n所有的俄罗斯方块的形状均为\n 或\n 类型,其中  为任意\n正整数\n\n对于全部数据,保证有\n,\n。\n3.2.7",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "44\n45\n46\n47\n",
+          "in": "5\n6\n7\n1\n1\n",
           "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\n#include <map>\nusing namespace std;\nconst int N = 505;\nint n, m;\nint val[N][N];\nint vis[N][N];\nint xmin, xmax, ymin, ymax;\nint posx[N * N], posy[N * N], cnt;\nint idx[N * N];\nbool isend[3 * N * N];\nmap <int, int> ch[3 * N * N];\nint root, ncnt;\nint ans;\nvoid dfs(int x, int y, int c)\n{\n    if (x < 1 || x > n || y < 1 || y > m)\n        return;\n    if (vis[x][y])\n        return;\n    if (val[x][y] != c)\n        return;\n    vis[x][y] = 1;\n    xmin = min(xmin, x), xmax = max(xmax, x);\n    ymin = min(ymin, y), ymax = max(ymax, y);\n    posx[++cnt] = x;\n    posy[cnt] = y;\n    dfs(x - 1, y, c);\n    dfs(x + 1, y, c);\n    dfs(x, y - 1, c);\n    dfs(x, y + 1, c);\n}\nvoid go(int &n, int v)\n{\n    if (!ch[n].count(v))\n        ch[n][v] = ++ncnt;\n    n = ch[n][v];\n    return;\n}\nvoid work(int x, int y)\n{\n    cnt = 0;\n    xmin = n, xmax = 1;\n    ymin = m, ymax = 1;\n    dfs(x, y, val[x][y]);\n    for (int i = 1; i <= cnt; i++)\n        idx[i] = (posx[i] - xmin) * (ymax - ymin + 1) + (posy[i] - ymin);\n    sort(idx + 1, idx + cnt + 1);\n    int cur = root;\n    int lascnt = ncnt;\n    go(cur, xmax - xmin + 1);\n    go(cur, ymax - ymin + 1);\n    for (int i = 1; i <= cnt; i++)\n        go(cur, idx[i]);\n    ans += (! isend[cur]);\n    isend[cur] = 1;\n}\nint main()\n{\n    root = ++ncnt;\n    scanf(\"%d%d\", &n, &m);\n    for (int i = 1; i <= n; i++)\n        for (int j = 1; j <= m; j++)\n            scanf(\"%d\", &val[i][j]);\n    for (int i = 1; i <= n; i++)\n        for (int j = 1; j <= m; j++)\n            if (!vis[i][j])\n                work(i, j);\n    printf(\"%d\\n\", ans);\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -558,11 +560,8 @@
       "B",
       "C",
       "A",
-      "B",
-      "C"
+      "B"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

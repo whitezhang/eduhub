@@ -3,16 +3,16 @@
     "ym": "202603",
     "lang": "python",
     "level": 4,
-    "title": "CCF GESP 2026年3月认证 Python 4级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10269.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1734124815515680.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202603-python-4.pdf"
+    "title": "202603-python-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202603-python-4.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2026 年春节联欢晚会上一个武术表演节目《武  BOT 》。节目中多个人形机器人会表演空翻,它们落地可能会\n有微微踉跄,但都会迅速调整姿态站稳,并适当移动来和前后左右的其他机器人保持原来队列。如果将机器人视作\n一个计算机系统,那么在该计算机系统中下面哪一项不能作为输入设备 (   ) 。",
+      "stem": "2026年春节联欢晚会上一个武术表演节目《武 BOT》。节目中多个人形机器人会表演空翻,它们落地可能会\n有微微踉跄,但都会迅速调整姿态站稳,并适当移动来和前后左右的其他机器人保持原来队列。如果将机器人视作\n一个计算机系统,那么在该计算机系统中下面哪一项不能作为输入设备(   )。",
       "options": [
         {
           "key": "A",
@@ -20,7 +20,7 @@
         },
         {
           "key": "B",
-          "text": "预装的 AI 算法程序"
+          "text": "预装的AI算法程序"
         },
         {
           "key": "C",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面代码用来找出输入的  N 个正整数中最大的一个。如果将代码段用流程图来表示,则  L1 标记的代码行\n应该使用的图形是(   )。",
+      "stem": "下面代码用来找出输入的 N 个正整数中最大的一个。如果将代码段用流程图来表示,则 L1 标记的代码行\n应该使用的图形是(  )。\nMax = 0\nN = int(input())\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nwhile(N):\n    val = int(input())\n    if val > Max: #L1\n        Max = val\n    N -= 1\nprint(Max)",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "执行以下  Python 代码后,输出的结果是?(  )\nMax = 0\nN = int(input())\nwhile(N):\n    val = int(input())\n    if val > Max: #L1\n        Max = val\n    N -= 1\nprint(Max)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nmatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntotal = 0\nfor row in matrix:\n    for element in row:\n        if element % 2 == 0:\n            total += element\nprint(total)\n1\n2\n3\n4\n5\n6\n7\n第  1 页  / 共  9 页",
+      "stem": "执行以下 Python 代码后,输出的结果是?( )\nmatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntotal = 0\nfor row in matrix:\n    for element in row:\n        if element % 2 == 0:\n            total += element\nprint(total)\n1\n2\n3\n4\n5\n6\n7\n第 1 页 / 共 9 页",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "执行以下  Python 代码,说法正确的是?(  )",
+      "stem": "执行以下 Python 代码,说法正确的是?( )\ntup = (1, [2, 3], 4)\ntup[1] = [5, 6]\n1\n2",
       "options": [
         {
           "key": "A",
@@ -96,7 +96,7 @@
         },
         {
           "key": "C",
-          "text": "抛出TypeError异常"
+          "text": "抛出TypeError 异常"
         },
         {
           "key": "D",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "执行以下 Python 代码后,输出的结果是?(  )",
+      "stem": "执行以下Python代码后,输出的结果是?( )\nwords = [\"hello\", \"world\", \"python\"]\nresult = [char for word in words for char in word if char in 'aeiou']\nprint(len(result))\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "函数定义  def func(*args): pass 中的  *args 会将传入的参数打包成什么类型?",
+      "stem": "函数定义 def func(*args): pass 中的 *args 会将传入的参数打包成什么类型?",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "在嵌套函数中,需要修改外层函数(非全局作用域)的变量,应使用哪个关键字?(  )",
+      "stem": "在嵌套函数中,需要修改外层函数(非全局作用域)的变量,应使用哪个关键字?( )",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "执行以下  Python 代码后,输出的结果是?(  )\ntup = (1, [2, 3], 4)\ntup[1] = [5, 6]\n1\n2\nwords = [\"hello\", \"world\", \"python\"]\nresult = [char for word in words for char in word if char in 'aeiou']\nprint(len(result))\n1\n2\n3\n第  2 页  / 共  9 页",
+      "stem": "执行以下 Python 代码后,输出的结果是?( )\n第 2 页 / 共 9 页\ndef process_data(data):\n    result = []\n    for item in data:\n        if item > 0:\n            result.append(item * 2)\n        elif item < 0:\n            result.append(abs(item))\n        else:\n            result.append(0)\n    return result\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\noutput = process_data([-2, 0, 3, -1])\nprint(sum(output))",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "文件 text.txt  的内容如下:\n以下程序统计单词 \"Python\" 在文件中出现的次数。Python 后面是空格或行尾,且不跟标点。请补全代码。( )",
+      "stem": "文件 text.txt 的内容如下:\nPython is a programming language.\nPython is easy to learn.\n1\n2\n以下程序统计单词 \"Python\" 在文件中出现的次数。Python 后面是空格或行尾,且不跟标点。请补全代码。( )\ncount = 0\nwith open(\"text.txt\", \"r\") as f:\n    content = f.________  # 补全代码\n    words = content.split()\n    for word in words:\n        if word == \"Python\":\n            count += 1\nprint(\"Python出现次数:\", count)\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "以下代码的时间复杂度是?( )\ndef process_data(data):\n    result = []\n    for item in data:\n        if item > 0:\n            result.append(item * 2)\n        elif item < 0:\n            result.append(abs(item))\n        else:\n            result.append(0)\n    return result\noutput = process_data([-2, 0, 3, -1])\nprint(sum(output))\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nPython is a programming language.\nPython is easy to learn.\n1\n2\ncount = 0\nwith open(\"text.txt\", \"r\") as f:\n    content = f.________  # 补全代码\n    words = content.split()\n    for word in words:\n        if word == \"Python\":\n            count += 1\nprint(\"Python出现次数:\", count)\n1\n2\n3\n4\n5\n6\n7\n8\ndef func(n):\n    sum = 0\n    for i in range(n):\n        for j in range(i):\n            sum += j\n1\n2\n3\n4\n5\n页 9 共 / 页 3 第",
+      "stem": "以下代码的时间复杂度是?( )\ndef func(n):\n    sum = 0\n    for i in range(n):\n        for j in range(i):\n            sum += j\n1\n2\n3\n4\n5\n页\n 9\n共\n /\n页\n 3\n第",
       "options": [
         {
           "key": "A",
@@ -268,7 +268,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "执行以下  Python 代码后,输出的结果是?(  )",
+      "stem": "执行以下 Python 代码后,输出的结果是?( )\ntry:\n    print(1, end=\"\")\n    raise ValueError(\"x\")\nexcept ValueError as e:\n    print(2, end=\"\")\nelse:\n    print(3, end=\"\")\nfinally:\n    print(4, end=\"\")\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -292,7 +292,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "以下代码使用插入排序对列表进行升序排序。空白处应填入?(  )",
+      "stem": "以下代码使用插入排序对列表进行升序排序。空白处应填入?( )\ndef insertion_sort_optimized(arr):\n    n = len(arr)\n    for i in range(1, n):\n        key = arr[i]  # 当前待插入元素\n        j = i - 1\n        while j >= 0 and arr[j] > key:\n            arr[j + 1] = arr[j]  # 元素后移\n            j -= 1\n        _______________  # 插入元素到正确位置\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -316,15 +316,15 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "阅读以下  Python 代码,下列说法正确的是?(  )",
+      "stem": "阅读以下 Python 代码,下列说法正确的是?( )\nn = int(input())\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\ndef is_palindrome(s):\n    return s == s[::-1]\nmax_palindrome = 0\nfor i in range(10 ** (n - 1), 10 ** n):\n    for j in range(i, 10 ** n):\n        product = i * j\n        if is_palindrome(str(product)) and product > max_palindrome:\n            max_palindrome = product\nprint(max_palindrome)",
       "options": [
         {
           "key": "A",
-          "text": "找出所有n位数 try: print(1, end=\"\") raise ValueError(\"x\") except ValueError as e: print(2, end=\"\") else: print(3, end=\"\") finally: print(4, end=\"\") def insertion_sort_optimized(arr): n = len(arr) for i in range(1, n): key = arr[i] # 当前待插入元素 j = i - 1 while j >= 0 and arr[j] > key: arr[j + 1] = arr[j] # 元素后移 j -= 1 _______________ # 插入元素到正确位置 n = int(input()) def is_palindrome(s): return s == s[::-1] max_palindrome = 0 for i in range(10 ** (n - 1), 10 ** n): for j in range(i, 10 ** n): product = i * j if is_palindrome(str(product)) and product > max_palindrome: max_palindrome = product print(max_palindrome) 第 4 页 / 共 9 页 题 号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "找出所有n 位数 第 4 页 / 共 9 页"
         },
         {
           "key": "B",
-          "text": "找出由两个 n 位数相乘得到的最大回文数"
+          "text": "找出由两个n 位数相乘得到的最大回文数"
         },
         {
           "key": "C",
@@ -332,7 +332,7 @@
         },
         {
           "key": "D",
-          "text": "计算两个 n 位数乘积的最大值"
+          "text": "计算两个n 位数乘积的最大值"
         }
       ],
       "answer": "B"
@@ -340,7 +340,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "以下代码实现了根据分数返回等级(A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: 0-59)的功能,请选择正确的\n选项填入12处。( )",
+      "stem": "以下代码实现了根据分数返回等级(A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: 0-59)的功能,请选择正确的\n选项填入12处。( )\ngrade_map = {90: \"A\", 80: \"B\", 70: \"C\", 60: \"D\", 0: \"F\"}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\ndef get_grade(score):\n    if score < 0 or score > 100:\n        return \"无效分数\"\n    for key in sorted(grade_map.keys(), reverse=True):\n        if score >= key:\n            return _____1_____\nscore = int(input())\ngrade = get_grade(score)\nprint(f\"分数 {score} 的等级是 {_____2_____}\")",
       "options": [
         {
           "key": "A",
@@ -377,7 +377,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
@@ -393,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "执行以下 Python 代码后,输出的结果是 <class 'set'> 。",
+      "stem": "执行以下 Python 代码后,输出的结果是 <class 'set'> 。\nmy_set = {i: j for i, j in zip([1, 2], [3, 4])}\nprint(type(my_set))",
       "options": [
         {
           "key": "T",
@@ -409,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "执行以下 Python 代码后,输出的结果是 20 10 。",
+      "stem": "执行以下 Python 代码后,输出的结果是 20 10 。\ndef func(a, b):\n    a = a ^ b\n    b = a ^ b\n    a = a ^ b\n    return a, b\n\n\n\n\n\n\n\n\n\na, b = func(10, 20)\nprint(a, b)",
       "options": [
         {
           "key": "T",
@@ -425,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "执行以下 Python 代码后,输出的结果是 [6, 7] 。\ngrade_map = {90: \"A\", 80: \"B\", 70: \"C\", 60: \"D\", 0: \"F\"}\ndef get_grade(score):\n    if score < 0 or score > 100:\n        return \"无效分数\"\n    for key in sorted(grade_map.keys(), reverse=True):\n        if score >= key:\n            return _____1_____\nscore = int(input())\ngrade = get_grade(score)\nprint(f\"分数 {score} 的等级是 {_____2_____}\")\n\n\n\n\n\n\n\n\n\n\n\n\nmy_set = {i: j for i, j in zip([1, 2], [3, 4])}\nprint(type(my_set))\n\n\ndef func(a, b):\n    a = a ^ b\n    b = a ^ b\n    a = a ^ b\n    return a, b\na, b = func(10, 20)\nprint(a, b)\n\n\n\n\n\n\n\n\n\nprint(list(filter(lambda x: x > 5, [3, 6, 7, 2])))1\n页 9 共 / 页 5 第",
+      "stem": "执行以下 Python 代码后,输出的结果是 [6, 7] 。\nprint(list(filter(lambda x: x > 5, [3, 6, 7, 2])))\n\n页\n 9\n共\n /\n页\n 5\n第",
       "options": [
         {
           "key": "T",
@@ -441,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "执行以下 Python 代码后,输出的结果是  '789\\n456'。",
+      "stem": "执行以下Python代码后,输出的结果是 '789\\n456' 。\nwith open('test.txt', 'w') as f:\n    f.write('123\\n456')\nwith open('test.txt', 'r+') as f:\n    f.seek(0, 2)\n    f.write('789')\n    f.seek(0)\n    print(repr(f.read()))",
       "options": [
         {
           "key": "T",
@@ -457,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面这段程序的时间复杂度为平方阶  。",
+      "stem": "下面这段程序的时间复杂度为平方阶\n。\ndef func(n):\n    for i in range(n):\n        for j in range(n):\n            if i % 2 == 0:\n                break",
       "options": [
         {
           "key": "T",
@@ -473,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "执行以下  Python 代码后,会抛出异常  ZeroDivisionError。",
+      "stem": "执行以下 Python 代码后,会抛出异常 ZeroDivisionError 。\ndata = {'a': 1}\nindex = int(input())\nprint(data['b'] / index)",
       "options": [
         {
           "key": "T",
@@ -489,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在对列表进行排序时,sorted()函数会返回一个新的排序后的列表,不修改原列表,而sort()方法会直\n接修改原列表,返回值为None。",
+      "stem": "在对列表进行排序时,sorted() 函数会返回一个新的排序后的列表,不修改原列表,而sort() 方法会直\n接修改原列表,返回值为None 。",
       "options": [
         {
           "key": "T",
@@ -505,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "阅读以下递推算法的  Python 代码,执行后的输出结果是  13。",
+      "stem": "阅读以下递推算法的 Python 代码,执行后的输出结果是 13 。\na, b = 1, 2\nfor i in range(3):\n    a, b = b, a + b\nprint(b)",
       "options": [
         {
           "key": "T",
@@ -521,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -529,21 +529,34 @@
       "seq": 1,
       "kind": "traditional",
       "title": "山之谷",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n现有一片山地,可以视为一个   行   列的网格图,第   行   列的海拔为  。\n如果一个单元格的海拔不高于其所有相邻单元格(相邻包括上、下、左、右、左上、右上、左下、右下,最多   个\n方向)的海拔,则称该单元格为山谷。\n请你数一数该片山地中有多少山谷。\nwith open('test.txt', 'w') as f:\n    f.write('123\\n456')\nwith open('test.txt', 'r+') as f:\n    f.seek(0, 2)\n    f.write('789')\n    f.seek(0)\n    print(repr(f.read()))\n\ndef func(n):\n            if i % 2 == 0:\n                break\n\ndata = {'a': 1}\nindex = int(input())\nprint(data['b'] / index)\n\na, b = 1, 2\n    a, b = b, a + b\nprint(b)\n\n第  6 页  / 共  9 页\n3.1.2\n\n输入格式\n第一行包含   个整数  ,表示山地的大小。\n之后   行,每行包含   个整数  ,表示海拔。\n3.1.3 输出格式\n输出  1 行,包含  1 个整数  ,表示山谷的数量。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.5 样例解释\n样例  1 如图所示,绿色单元格代表山谷:\n3.1.6 数据范围\n保证  , 。\n3 5\n7 6 6 7 9\n6 5 6 7 6\n6 5 7 8 9\n\n第  7 页  / 共  9 页\n3.1.7",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n现有一片山地,可以视为一个\n 行\n 列的网格图,第  行  列的海拔为\n。\n如果一个单元格的海拔不高于其所有相邻单元格(相邻包括上、下、左、右、左上、右上、左下、右下,最多  个\n方向)的海拔,则称该单元格为山谷。\n请你数一数该片山地中有多少山谷。\n第 6 页 / 共 9 页\n3.1.2\n\n输入格式\n第一行包含  个整数\n,表示山地的大小。\n之后\n 行,每行包含\n 个整数\n,表示海拔。\n3.1.3\n输出格式\n输出 1 行,包含 1 个整数 ,表示山谷的数量。\n3.1.4\n样例\n3.1.4.1\n输入样例\n3 5\n7 6 6 7 9\n6 5 6 7 6\n6 5 7 8 9\n\n3.1.4.2\n输出样例\n\n3.1.5\n样例解释\n样例 1 如图所示,绿色单元格代表山谷:\n3.1.6\n数据范围\n保证\n,\n。\n第 7 页 / 共 9 页\n3.1.7",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 输入行列数\nn, m = map(int, input().split())\n# 输入每一行的海拔\nh = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    h.append(row)\nans = 0\n# 先遍历行\nfor i in range(n):\n    # 再遍历列\n    for j in range(m):\n        ok = True\n        # 遍历周边8个格子\n        for k in range(-1, 2):\n            for l in range(-1, 2):\n                # 边界判定,不能超列表边界\n                if 0 <= i + k < n and 0 <= j + l < m and h[i + k][j + l] < h[i][j]:\n                    ok = False\n        if(ok):\n            ans += 1\nprint(ans)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "礼盒排序",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n商店推出了许多礼盒,每个礼盒中包含   件商品,每件商品都有一个价格。\n现在需要对这些礼盒进行排序,排序规则如下:\n1. 先按礼盒总价格从小到大排序;\n2. 如果总价格相同,按礼盒中最贵商品的价格从小到大排序;\n3. 如果仍然相同,按礼盒中最便宜商品的价格从小到大排序;\n4. 如果仍然相同,按礼盒编号从小到大排序。\n请输出排序后的礼盒编号。\n3.2.2\n\n输入格式\n第一行包含两个整数   和  ,分别表示礼盒数量和每个礼盒中商品的数量。\n接下来   行,每行包含   个整数,第   行表示第   个礼盒中各商品的价格。\n# 输入行列数\nn, m = map(int, input().split())\n# 输入每一行的海拔\nh = []\nfor i in range(n):\n    row = list(map(int, input().split()))\n    h.append(row)\nans = 0\n# 先遍历行\nfor i in range(n):\n    # 再遍历列\n    for j in range(m):\n        ok = True\n        # 遍历周边 8 个格子\n        for k in range(-1, 2):\n            for l in range(-1, 2):\n                # 边界判定,不能超列表边界\n                if 0 <= i + k < n and 0 <= j + l < m and h[i + k][j + l] < h[i][j]:\n                    ok = False\n        if(ok):\n            ans += 1\nprint(ans)\n\n第  8 页  / 共  9 页\n编 号 商 品 价 格 总 价 最 大 值 最 小 值\n1 3 5 2 10 5 2\n2 4 1 5 10 5 1\n3 2 2 4 8 4 2\n4 3 4 3 10 4 3\n3.2.3 输出格式\n输出一行,包含排序后的礼盒编号(编号从  开始),用空格分隔。\n3.2.4 样例\n3.2.4.1 输入样例\n3.2.4.2 输出样例\n3.2.5 样例解释\n4 个礼盒分别为:\n排序过程:\n1. 按总价排序,3号礼盒总价最小;\n2. 其余总价均为 10,再按最大值排序,4号最大值更小;\n3. 1号和2号最大值相同,再按最小值排序,2号更小。\n最终顺序为:3 4 2 1\n3.2.6 数据范围\n保证 , ,商品价格 。\n3.2.7",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n商店推出了许多礼盒,每个礼盒中包含  件商品,每件商品都有一个价格。\n现在需要对这些礼盒进行排序,排序规则如下:\n1. 先按礼盒总价格从小到大排序;\n2. 如果总价格相同,按礼盒中最贵商品的价格从小到大排序;\n3. 如果仍然相同,按礼盒中最便宜商品的价格从小到大排序;\n4. 如果仍然相同,按礼盒编号从小到大排序。\n请输出排序后的礼盒编号。\n3.2.2\n\n输入格式\n第一行包含两个整数  和 ,分别表示礼盒数量和每个礼盒中商品的数量。\n接下来  行,每行包含  个整数,第  行表示第  个礼盒中各商品的价格。\n第 8 页 / 共 9 页\n3.2.3\n输出格式\n输出一行,包含排序后的礼盒编号(编号从  开始),用空格分隔。\n3.2.4\n样例\n3.2.4.1\n输入样例\n4 3\n3 5 2\n4 1 5\n2 2 4\n3 4 3\n\n3.2.4.2\n输出样例\n3 4 2 1\n\n3.2.5\n样例解释\n4 个礼盒分别为:\n编号\n商品价格\n总价\n最大值\n最小值\n\n3 5 2\n\n4 1 5\n\n2 2 4\n\n3 4 3\n\n排序过程:\n1. 按总价排序,3号礼盒总价最小;\n2. 其余总价均为 10,再按最大值排序,4号最大值更小;\n3. 1号和2号最大值相同,再按最小值排序,2号更小。\n最终顺序为:3 4 2 1\n3.2.6\n数据范围\n保证\n,\n,商品价格\n。\n3.2.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "5\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "5\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n, k = map(int, input().split())\nv = []\nfor i in range(n):\n    nums = list(map(int, input().split()))\n    s = sum(nums)\n    mx = max(nums)\n    mn = min(nums)\n    v.append((s, mx, mn, i + 1))\nv.sort()\nfor i in range(n):\n    print(v[i][3], end=\"\" if i == n - 1 else \" \")\nprint()\n页\n共\n /\n页\n第"
     }
   ],
   "answer_rows": [
@@ -563,6 +576,7 @@
       "A",
       "B",
       "D"
-    ]
+    ],
+    []
   ]
 }

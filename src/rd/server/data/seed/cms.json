@@ -14,12 +14,36 @@
     ]
   },
   "csp_compare": [
-    { "label": "初赛题型", "j": "选择 + 阅读程序 + 完善程序", "s": "选择 + 阅读程序 + 完善程序 + 多选" },
-    { "label": "复赛题数", "j": "4 题", "s": "4 题" },
-    { "label": "复赛时长", "j": "约 3.5 小时", "s": "约 4 小时" },
-    { "label": "复赛满分", "j": "400 分", "s": "400 分" },
-    { "label": "核心难度", "j": "模拟 / 贪心 / DP / 图论基础", "s": "线段树 / 树形 DP / 网络流 / KMP" },
-    { "label": "一等奖参考线", "j": "约 200 分", "s": "约 150 分" }
+    {
+      "label": "初赛题型",
+      "j": "选择 + 阅读程序 + 完善程序",
+      "s": "选择 + 阅读程序 + 完善程序 + 多选"
+    },
+    {
+      "label": "复赛题数",
+      "j": "4 题",
+      "s": "4 题"
+    },
+    {
+      "label": "复赛时长",
+      "j": "约 3.5 小时",
+      "s": "约 4 小时"
+    },
+    {
+      "label": "复赛满分",
+      "j": "400 分",
+      "s": "400 分"
+    },
+    {
+      "label": "核心难度",
+      "j": "模拟 / 贪心 / DP / 图论基础",
+      "s": "线段树 / 树形 DP / 网络流 / KMP"
+    },
+    {
+      "label": "一等奖参考线",
+      "j": "约 200 分",
+      "s": "约 150 分"
+    }
   ],
   "syllabus": [
     {
@@ -29,7 +53,11 @@
       "topics": [
         {
           "title": "1–2 级",
-          "points": ["计算机与程序基本概念、输入输出", "变量、顺序/分支/循环、一维数组", "简单枚举与模拟"],
+          "points": [
+            "计算机与程序基本概念、输入输出",
+            "变量、顺序/分支/循环、一维数组",
+            "简单枚举与模拟"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 3,
@@ -37,7 +65,11 @@
         },
         {
           "title": "3–4 级",
-          "points": ["函数、字符串、二维数组、结构体", "栈、队列、简单排序与查找", "递归、简单贪心与递推"],
+          "points": [
+            "函数、字符串、二维数组、结构体",
+            "栈、队列、简单排序与查找",
+            "递归、简单贪心与递推"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 4,
@@ -45,7 +77,11 @@
         },
         {
           "title": "5–6 级",
-          "points": ["链表、树与图的基本概念", "DFS/BFS、简单动态规划", "进制、质数与简单数论"],
+          "points": [
+            "链表、树与图的基本概念",
+            "DFS/BFS、简单动态规划",
+            "进制、质数与简单数论"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 4,
@@ -53,7 +89,11 @@
         },
         {
           "title": "7–8 级",
-          "points": ["更复杂的 DP、搜索与图论基础", "阅读程序与完善程序能力", "与 CSP-J 初赛大量重叠"],
+          "points": [
+            "更复杂的 DP、搜索与图论基础",
+            "阅读程序与完善程序能力",
+            "与 CSP-J 初赛大量重叠"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 5,
@@ -72,50 +112,90 @@
       "title": "CSP-J 入门级",
       "blurb": "与 CSP-S 互相独立报名。两轮制：先笔试客观题，再机试编程；通过第一轮方可参加第二轮。",
       "round_compare": [
-        { "label": "形式", "preliminary": "笔试（选择 + 阅读程序 + 完善程序）", "finals": "机试（4 道编程题）" },
-        { "label": "时长", "preliminary": "约 2 小时", "finals": "约 3.5 小时" },
-        { "label": "满分", "preliminary": "100 分", "finals": "400 分（每题 100 分）" },
-        { "label": "结果", "preliminary": "通过率约 20%–30%", "finals": "按分数评奖（一/二/三等奖）" }
+        {
+          "label": "形式",
+          "preliminary": "笔试（选择 + 阅读程序 + 完善程序）",
+          "finals": "机试（4 道编程题）"
+        },
+        {
+          "label": "时长",
+          "preliminary": "约 2 小时",
+          "finals": "约 3.5 小时"
+        },
+        {
+          "label": "满分",
+          "preliminary": "100 分",
+          "finals": "400 分（每题 100 分）"
+        },
+        {
+          "label": "结果",
+          "preliminary": "通过率约 20%–30%",
+          "finals": "按分数评奖（一/二/三等奖）"
+        }
       ],
       "topics": [
         {
           "title": "计算机基础",
-          "points": ["计算机发展史、硬件组成（CPU/内存/外存）", "信息编码（ASCII/Unicode）、进制转换", "原码/反码/补码、存储单位"],
+          "points": [
+            "计算机发展史、硬件组成（CPU/内存/外存）",
+            "信息编码（ASCII/Unicode）、进制转换",
+            "原码/反码/补码、存储单位"
+          ],
           "preliminary": true,
           "finals": false,
           "importance": 3
         },
         {
           "title": "程序设计",
-          "points": ["C++ 基本语法、输入输出", "顺序/选择/循环、数组、字符串", "函数与递归、结构体"],
+          "points": [
+            "C++ 基本语法、输入输出",
+            "顺序/选择/循环、数组、字符串",
+            "函数与递归、结构体"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 5
         },
         {
           "title": "数据结构",
-          "points": ["线性表、栈、队列、链表", "二叉树（定义/遍历）、图（邻接矩阵/表）", "哈希表"],
+          "points": [
+            "线性表、栈、队列、链表",
+            "二叉树（定义/遍历）、图（邻接矩阵/表）",
+            "哈希表"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 4
         },
         {
           "title": "算法基础",
-          "points": ["枚举、模拟、排序（冒泡/选择/插入/快排/归并）", "顺序/二分查找、递推、递归、贪心、分治", "时间复杂度（大 O）"],
+          "points": [
+            "枚举、模拟、排序（冒泡/选择/插入/快排/归并）",
+            "顺序/二分查找、递推、递归、贪心、分治",
+            "时间复杂度（大 O）"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 5
         },
         {
           "title": "算法进阶",
-          "points": ["动态规划（背包/LIS）", "搜索（DFS/BFS）", "最短路径、最小生成树"],
+          "points": [
+            "动态规划（背包/LIS）",
+            "搜索（DFS/BFS）",
+            "最短路径、最小生成树"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 4
         },
         {
           "title": "数学基础",
-          "points": ["数论基础（质数/gcd/lcm）", "排列组合、容斥原理", "概率初步"],
+          "points": [
+            "数论基础（质数/gcd/lcm）",
+            "排列组合、容斥原理",
+            "概率初步"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 3
@@ -126,12 +206,36 @@
           "title": "单项选择题（15 题 × 2 分，共 30 分）",
           "body": "覆盖面广，重在概念与手算。",
           "sections": [
-            { "level": "高频", "title": "计算机基础", "body": "冯·诺依曼结构、进制转换、原码/反码/补码、存储单位" },
-            { "level": "高频", "title": "C++ 语法", "body": "数据类型大小、运算符优先级、循环次数、数组下标" },
-            { "level": "高频", "title": "数据结构概念", "body": "栈（LIFO）、队列（FIFO）、树的性质、图基础" },
-            { "level": "中频", "title": "算法复杂度", "body": "大 O 记号、排序/查找复杂度分析" },
-            { "level": "中频", "title": "数学基础", "body": "排列组合 C(n,m)/A(n,m)、逻辑运算" },
-            { "level": "低频", "title": "网络与安全", "body": "IP 地址、TCP/IP、计算机病毒" }
+            {
+              "level": "高频",
+              "title": "计算机基础",
+              "body": "冯·诺依曼结构、进制转换、原码/反码/补码、存储单位"
+            },
+            {
+              "level": "高频",
+              "title": "C++ 语法",
+              "body": "数据类型大小、运算符优先级、循环次数、数组下标"
+            },
+            {
+              "level": "高频",
+              "title": "数据结构概念",
+              "body": "栈（LIFO）、队列（FIFO）、树的性质、图基础"
+            },
+            {
+              "level": "中频",
+              "title": "算法复杂度",
+              "body": "大 O 记号、排序/查找复杂度分析"
+            },
+            {
+              "level": "中频",
+              "title": "数学基础",
+              "body": "排列组合 C(n,m)/A(n,m)、逻辑运算"
+            },
+            {
+              "level": "低频",
+              "title": "网络与安全",
+              "body": "IP 地址、TCP/IP、计算机病毒"
+            }
           ]
         },
         {
@@ -164,71 +268,211 @@
           "title": "计算机基础",
           "focus": "初赛重点",
           "items": [
-            { "label": "冯·诺依曼结构", "level": "必考" },
-            { "label": "进制与转换", "level": "必考" },
-            { "label": "原码/反码/补码", "level": "必考" },
-            { "label": "存储单位", "level": "常考" },
-            { "label": "ASCII 编码", "level": "常考" }
+            {
+              "label": "冯·诺依曼结构",
+              "level": "必考",
+              "id": "kb-von-neumann"
+            },
+            {
+              "label": "进制与转换",
+              "level": "必考",
+              "id": "kb-number-system"
+            },
+            {
+              "label": "原码/反码/补码",
+              "level": "必考",
+              "id": "kb-original-complement"
+            },
+            {
+              "label": "存储单位",
+              "level": "常考",
+              "id": "kb-storage-unit"
+            },
+            {
+              "label": "ASCII 编码",
+              "level": "常考",
+              "id": "kb-ascii"
+            }
           ]
         },
         {
           "title": "C++ 语法基础",
           "focus": "初赛 + 复赛",
           "items": [
-            { "label": "数据类型与大小", "level": "必考" },
-            { "label": "运算符与优先级", "level": "必考" },
-            { "label": "输入输出", "level": "常考" },
-            { "label": "条件与循环", "level": "必考" },
-            { "label": "数组（一维/二维）", "level": "必考" },
-            { "label": "字符串 string", "level": "必考" },
-            { "label": "函数与递归", "level": "必考" },
-            { "label": "结构体 struct", "level": "常考" }
+            {
+              "label": "数据类型与大小",
+              "level": "必考",
+              "id": "kb-data-types"
+            },
+            {
+              "label": "运算符与优先级",
+              "level": "必考",
+              "id": "kb-operators"
+            },
+            {
+              "label": "输入输出",
+              "level": "常考",
+              "id": "kb-io"
+            },
+            {
+              "label": "条件与循环",
+              "level": "必考",
+              "id": "kb-condition-loop"
+            },
+            {
+              "label": "数组（一维/二维）",
+              "level": "必考",
+              "id": "kb-array"
+            },
+            {
+              "label": "字符串 string",
+              "level": "必考",
+              "id": "kb-string"
+            },
+            {
+              "label": "函数与递归",
+              "level": "必考",
+              "id": "kb-function"
+            },
+            {
+              "label": "结构体 struct",
+              "level": "常考",
+              "id": "kb-struct"
+            }
           ]
         },
         {
           "title": "数据结构",
           "focus": "核心",
           "items": [
-            { "label": "栈（Stack）", "level": "必考" },
-            { "label": "队列（Queue）", "level": "必考" },
-            { "label": "链表", "level": "常考" },
-            { "label": "二叉树", "level": "必考" },
-            { "label": "图的基本概念", "level": "常考" },
-            { "label": "哈希表", "level": "了解" }
+            {
+              "label": "栈（Stack）",
+              "level": "必考",
+              "id": "kb-stack"
+            },
+            {
+              "label": "队列（Queue）",
+              "level": "必考",
+              "id": "kb-queue"
+            },
+            {
+              "label": "链表",
+              "level": "常考",
+              "id": "kb-linked-list"
+            },
+            {
+              "label": "二叉树",
+              "level": "必考",
+              "id": "kb-binary-tree"
+            },
+            {
+              "label": "图的基本概念",
+              "level": "常考",
+              "id": "kb-graph-basics"
+            },
+            {
+              "label": "哈希表",
+              "level": "了解",
+              "id": "kb-hash"
+            }
           ]
         },
         {
           "title": "算法基础",
           "focus": "核心",
           "items": [
-            { "label": "枚举与模拟", "level": "必考" },
-            { "label": "排序算法", "level": "必考" },
-            { "label": "二分查找", "level": "必考" },
-            { "label": "递推与递归", "level": "必考" },
-            { "label": "贪心算法", "level": "必考" },
-            { "label": "分治算法", "level": "常考" }
+            {
+              "label": "枚举与模拟",
+              "level": "必考",
+              "id": "kb-enum-sim"
+            },
+            {
+              "label": "排序算法",
+              "level": "必考",
+              "id": "kb-sort"
+            },
+            {
+              "label": "二分查找",
+              "level": "必考",
+              "id": "kb-binary-search"
+            },
+            {
+              "label": "递推与递归",
+              "level": "必考",
+              "id": "kb-recursion"
+            },
+            {
+              "label": "贪心算法",
+              "level": "必考",
+              "id": "kb-greedy"
+            },
+            {
+              "label": "分治算法",
+              "level": "常考",
+              "id": "kb-divide-conquer"
+            }
           ]
         },
         {
           "title": "算法进阶",
           "focus": "复赛为主",
           "items": [
-            { "label": "动态规划 DP", "level": "必考" },
-            { "label": "DFS 深度优先搜索", "level": "必考" },
-            { "label": "BFS 广度优先搜索", "level": "必考" },
-            { "label": "最短路径", "level": "常考" },
-            { "label": "最小生成树", "level": "了解" },
-            { "label": "拓扑排序", "level": "了解" }
+            {
+              "label": "动态规划 DP",
+              "level": "必考",
+              "id": "kb-dp"
+            },
+            {
+              "label": "DFS 深度优先搜索",
+              "level": "必考",
+              "id": "kb-dfs"
+            },
+            {
+              "label": "BFS 广度优先搜索",
+              "level": "必考",
+              "id": "kb-bfs"
+            },
+            {
+              "label": "最短路径",
+              "level": "常考",
+              "id": "kb-dijkstra"
+            },
+            {
+              "label": "最小生成树",
+              "level": "了解",
+              "id": "kb-mst"
+            },
+            {
+              "label": "拓扑排序",
+              "level": "了解",
+              "id": "kb-topo"
+            }
           ]
         },
         {
           "title": "数学基础",
           "focus": "初赛重点",
           "items": [
-            { "label": "质数与最大公约数", "level": "常考" },
-            { "label": "排列组合", "level": "必考" },
-            { "label": "容斥原理", "level": "常考" },
-            { "label": "概率初步", "level": "了解" }
+            {
+              "label": "质数与最大公约数",
+              "level": "常考",
+              "id": "kb-prime-gcd"
+            },
+            {
+              "label": "排列组合",
+              "level": "必考",
+              "id": "kb-combinatorics"
+            },
+            {
+              "label": "容斥原理",
+              "level": "常考",
+              "id": "kb-inclusion-exclusion"
+            },
+            {
+              "label": "概率初步",
+              "level": "了解",
+              "id": "kb-probability"
+            }
           ]
         }
       ]
@@ -238,57 +482,94 @@
       "title": "CSP-S 提高级",
       "blurb": "在 J 组之上加深，与 CSP-J 互相独立。第一轮含多选题；第二轮时长更长、难度更高。",
       "round_compare": [
-        { "label": "形式", "preliminary": "笔试（选择 + 多选 + 阅读程序 + 完善程序）", "finals": "机试（4 道编程题）" },
-        { "label": "时长", "preliminary": "约 2 小时", "finals": "约 4 小时" },
-        { "label": "满分", "preliminary": "100 分", "finals": "400 分（每题 100 分）" },
-        { "label": "结果", "preliminary": "通过率约 20%–30%", "finals": "按分数评奖（一/二/三等奖）" }
+        {
+          "label": "形式",
+          "preliminary": "笔试（选择 + 多选 + 阅读程序 + 完善程序）",
+          "finals": "机试（4 道编程题）"
+        },
+        {
+          "label": "时长",
+          "preliminary": "约 2 小时",
+          "finals": "约 4 小时"
+        },
+        {
+          "label": "满分",
+          "preliminary": "100 分",
+          "finals": "400 分（每题 100 分）"
+        },
+        {
+          "label": "结果",
+          "preliminary": "通过率约 20%–30%",
+          "finals": "按分数评奖（一/二/三等奖）"
+        }
       ],
       "topics": [
         {
           "title": "计算机基础",
-          "points": ["编译过程、Linux 命令", "操作系统（进程/线程/死锁）"],
+          "points": [
+            "编译过程、Linux 命令",
+            "操作系统（进程/线程/死锁）"
+          ],
           "preliminary": true,
           "finals": false,
           "importance": 3
         },
         {
           "title": "C++ 进阶",
-          "points": ["指针与动态内存、位运算", "STL 高级（unordered_map/deque/multiset）"],
+          "points": [
+            "指针与动态内存、位运算",
+            "STL 高级（unordered_map/deque/multiset）"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 4
         },
         {
           "title": "高级数据结构",
-          "points": ["线段树、树状数组、并查集", "字典树 Trie、ST 表（RMQ）"],
+          "points": [
+            "线段树、树状数组、并查集",
+            "字典树 Trie、ST 表（RMQ）"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 5
         },
         {
           "title": "算法进阶",
-          "points": ["区间 DP、树形 DP、状压 DP、数位 DP", "倍增法"],
+          "points": [
+            "区间 DP、树形 DP、状压 DP、数位 DP",
+            "倍增法"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 5
         },
         {
           "title": "图论进阶",
-          "points": ["Tarjan SCC 缩点、LCA", "二分图匹配、网络流 Dinic"],
+          "points": [
+            "Tarjan SCC 缩点、LCA",
+            "二分图匹配、网络流 Dinic"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 4
         },
         {
           "title": "字符串",
-          "points": ["KMP 算法、字符串哈希", "Manacher 回文串"],
+          "points": [
+            "KMP 算法、字符串哈希",
+            "Manacher 回文串"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 4
         },
         {
           "title": "数学进阶",
-          "points": ["快速幂、exgcd、逆元与模运算", "组合数学（卡特兰/错排/Lucas）"],
+          "points": [
+            "快速幂、exgcd、逆元与模运算",
+            "组合数学（卡特兰/错排/Lucas）"
+          ],
           "preliminary": true,
           "finals": true,
           "importance": 4
@@ -299,12 +580,36 @@
           "title": "单项与多选题（15 题 × 2 分，共 30 分）",
           "body": "概念题比 J 组更深，常跨多个知识点。",
           "sections": [
-            { "level": "高频", "title": "编译原理", "body": "预处理/编译/汇编/链接四阶段、g++ 编译选项" },
-            { "level": "高频", "title": "Linux 命令", "body": "ls/cd/cp/mv/rm/mkdir/g++/time/diff" },
-            { "level": "高频", "title": "位运算", "body": "lowbit、x&(x-1)、移位、异或技巧" },
-            { "level": "常考", "title": "时间复杂度", "body": "线段树 O(log n)、倍增 O(n log n)、Tarjan O(V+E)" },
-            { "level": "常考", "title": "数据结构性质", "body": "并查集复杂度、线段树节点数、Trie 空间" },
-            { "level": "常考", "title": "排列组合", "body": "卡特兰数、错排、挡板法、Lucas 定理" }
+            {
+              "level": "高频",
+              "title": "编译原理",
+              "body": "预处理/编译/汇编/链接四阶段、g++ 编译选项"
+            },
+            {
+              "level": "高频",
+              "title": "Linux 命令",
+              "body": "ls/cd/cp/mv/rm/mkdir/g++/time/diff"
+            },
+            {
+              "level": "高频",
+              "title": "位运算",
+              "body": "lowbit、x&(x-1)、移位、异或技巧"
+            },
+            {
+              "level": "常考",
+              "title": "时间复杂度",
+              "body": "线段树 O(log n)、倍增 O(n log n)、Tarjan O(V+E)"
+            },
+            {
+              "level": "常考",
+              "title": "数据结构性质",
+              "body": "并查集复杂度、线段树节点数、Trie 空间"
+            },
+            {
+              "level": "常考",
+              "title": "排列组合",
+              "body": "卡特兰数、错排、挡板法、Lucas 定理"
+            }
           ]
         },
         {
@@ -337,69 +642,177 @@
           "title": "计算机基础（进阶）",
           "focus": "初赛重点",
           "items": [
-            { "label": "编译过程", "level": "必考" },
-            { "label": "Linux 常用命令", "level": "必考" },
-            { "label": "操作系统基础", "level": "常考" }
+            {
+              "label": "编译过程",
+              "level": "必考",
+              "id": "s-compile"
+            },
+            {
+              "label": "Linux 常用命令",
+              "level": "必考",
+              "id": "s-linux"
+            },
+            {
+              "label": "操作系统基础",
+              "level": "常考",
+              "id": "s-os-basics"
+            }
           ]
         },
         {
           "title": "C++ 进阶",
           "focus": "初赛 + 复赛",
           "items": [
-            { "label": "指针与动态内存", "level": "必考" },
-            { "label": "位运算技巧", "level": "必考" },
-            { "label": "STL 高级用法", "level": "常考" }
+            {
+              "label": "指针与动态内存",
+              "level": "必考",
+              "id": "s-pointer"
+            },
+            {
+              "label": "位运算技巧",
+              "level": "必考",
+              "id": "s-bitwise"
+            },
+            {
+              "label": "STL 高级用法",
+              "level": "常考",
+              "id": "s-stl-adv"
+            }
           ]
         },
         {
           "title": "高级数据结构",
           "focus": "核心",
           "items": [
-            { "label": "线段树", "level": "必考" },
-            { "label": "树状数组", "level": "必考" },
-            { "label": "并查集", "level": "必考" },
-            { "label": "字典树 Trie", "level": "常考" },
-            { "label": "ST 表（RMQ）", "level": "常考" }
+            {
+              "label": "线段树",
+              "level": "必考",
+              "id": "s-segtree"
+            },
+            {
+              "label": "树状数组",
+              "level": "必考",
+              "id": "s-fenwick"
+            },
+            {
+              "label": "并查集",
+              "level": "必考",
+              "id": "s-dsu"
+            },
+            {
+              "label": "字典树 Trie",
+              "level": "常考",
+              "id": "s-trie"
+            },
+            {
+              "label": "ST 表（RMQ）",
+              "level": "常考",
+              "id": "s-stable"
+            }
           ]
         },
         {
           "title": "算法进阶",
           "focus": "核心",
           "items": [
-            { "label": "区间 DP", "level": "必考" },
-            { "label": "树形 DP", "level": "必考" },
-            { "label": "状压 DP", "level": "常考" },
-            { "label": "数位 DP", "level": "常考" },
-            { "label": "倍增法", "level": "必考" }
+            {
+              "label": "区间 DP",
+              "level": "必考",
+              "id": "s-interval-dp"
+            },
+            {
+              "label": "树形 DP",
+              "level": "必考",
+              "id": "s-tree-dp"
+            },
+            {
+              "label": "状压 DP",
+              "level": "常考",
+              "id": "s-state-dp"
+            },
+            {
+              "label": "数位 DP",
+              "level": "常考",
+              "id": "s-digit-dp"
+            },
+            {
+              "label": "倍增法",
+              "level": "必考",
+              "id": "s-binary-lifting"
+            }
           ]
         },
         {
           "title": "图论进阶",
           "focus": "核心",
           "items": [
-            { "label": "Tarjan SCC", "level": "必考" },
-            { "label": "LCA 最近公共祖先", "level": "必考" },
-            { "label": "二分图匹配", "level": "常考" },
-            { "label": "网络流 Dinic", "level": "常考" }
+            {
+              "label": "Tarjan SCC",
+              "level": "必考",
+              "id": "s-tarjan"
+            },
+            {
+              "label": "LCA 最近公共祖先",
+              "level": "必考",
+              "id": "s-lca"
+            },
+            {
+              "label": "二分图匹配",
+              "level": "常考",
+              "id": "s-bipartite"
+            },
+            {
+              "label": "网络流 Dinic",
+              "level": "常考",
+              "id": "s-dinic"
+            }
           ]
         },
         {
           "title": "字符串算法",
           "focus": "核心",
           "items": [
-            { "label": "KMP 算法", "level": "必考" },
-            { "label": "字符串哈希", "level": "必考" },
-            { "label": "Manacher 回文串", "level": "常考" }
+            {
+              "label": "KMP 算法",
+              "level": "必考",
+              "id": "s-kmp"
+            },
+            {
+              "label": "字符串哈希",
+              "level": "必考",
+              "id": "s-string-hash"
+            },
+            {
+              "label": "Manacher 回文串",
+              "level": "常考",
+              "id": "s-manacher"
+            }
           ]
         },
         {
           "title": "数学进阶",
           "focus": "初赛 + 复赛",
           "items": [
-            { "label": "快速幂", "level": "必考" },
-            { "label": "扩展欧几里得", "level": "必考" },
-            { "label": "逆元与模运算", "level": "必考" },
-            { "label": "组合数学进阶", "level": "常考" }
+            {
+              "label": "快速幂",
+              "level": "必考",
+              "id": "s-qpow"
+            },
+            {
+              "label": "扩展欧几里得",
+              "level": "必考",
+              "id": "s-exgcd"
+            },
+            {
+              "label": "逆元与模运算",
+              "level": "必考",
+              "id": "s-modular"
+            },
+            {
+              "label": "组合数学进阶",
+              "level": "常考",
+              "id": "s-combinatorics-adv"
+            }
           ]
         }
       ]
@@ -411,7 +824,11 @@
       "topics": [
         {
           "title": "考查方向",
-          "points": ["在 CSP-S 知识面之上综合出题", "模拟、贪心、DP、图论、数据结构常交错", "重视部分分与实现稳健性"],
+          "points": [
+            "在 CSP-S 知识面之上综合出题",
+            "模拟、贪心、DP、图论、数据结构常交错",
+            "重视部分分与实现稳健性"
+          ],
           "preliminary": false,
           "finals": true,
           "importance": 5,
@@ -432,7 +849,11 @@
       "topics": [
         {
           "title": "考查方向",
-          "points": ["省选 / NOI 级别综合题", "高级 DP、图论、数据结构、数学与字符串", "部分分设计更细，需完整实现能力"],
+          "points": [
+            "省选 / NOI 级别综合题",
+            "高级 DP、图论、数据结构、数学与字符串",
+            "部分分设计更细，需完整实现能力"
+          ],
           "preliminary": false,
           "finals": true,
           "importance": 5,
@@ -448,10 +869,30 @@
     }
   ],
   "timeline": [
-    { "month_label": "3 / 6 / 9 / 12 月", "title": "GESP 认证", "prep": "按级别刷对应题单，考前两周做混合卷。" },
-    { "month_label": "9 月", "title": "CSP-J/S 第一轮（初赛）", "prep": "笔试客观题：J 组为选择 + 阅读程序 + 完善程序；S 组另有多选。约 2 小时 / 100 分。" },
-    { "month_label": "10–11 月", "title": "CSP-J/S 第二轮（复赛）", "prep": "第一轮通过者，或 GESP 认定免初赛场次。机试 4 题、满分 400；J 约 3.5 小时，S 约 4 小时。" },
-    { "month_label": "11–12 月", "title": "NOIP", "prep": "CSP-S 第二轮后按省资格准备，提高组一天四题节奏。" },
-    { "month_label": "次年 7 月前后", "title": "NOI", "prep": "省选之后。本站仅提供风格相近的训练题；报名与证书以官网为准。" }
+    {
+      "month_label": "3 / 6 / 9 / 12 月",
+      "title": "GESP 认证",
+      "prep": "按级别刷对应题单，考前两周做混合卷。"
+    },
+    {
+      "month_label": "9 月",
+      "title": "CSP-J/S 第一轮（初赛）",
+      "prep": "笔试客观题：J 组为选择 + 阅读程序 + 完善程序；S 组另有多选。约 2 小时 / 100 分。"
+    },
+    {
+      "month_label": "10–11 月",
+      "title": "CSP-J/S 第二轮（复赛）",
+      "prep": "第一轮通过者，或 GESP 认定免初赛场次。机试 4 题、满分 400；J 约 3.5 小时，S 约 4 小时。"
+    },
+    {
+      "month_label": "11–12 月",
+      "title": "NOIP",
+      "prep": "CSP-S 第二轮后按省资格准备，提高组一天四题节奏。"
+    },
+    {
+      "month_label": "次年 7 月前后",
+      "title": "NOI",
+      "prep": "省选之后。本站仅提供风格相近的训练题；报名与证书以官网为准。"
+    }
   ]
 }

@@ -5,6 +5,7 @@ import { api } from "../api.js";
 const tab = ref("review");
 const cms = reactive({ benefits: "", syllabus: "[]", timeline: "[]" });
 const users = ref([]);
+const newUser = reactive({ username: "", password: "" });
 const problems = ref([]);
 const contests = ref([]);
 const msg = ref("");
@@ -29,12 +30,22 @@ const openPaperId = ref(null);
 const paperProblems = ref({});
 const paperBusy = ref(false);
 
+function parsePaperQuery(raw) {
+  const needle = raw.trim().toLowerCase();
+  const wantNoAnswer = needle.includes("无答案");
+  const titlePart = needle.replace(/无答案/g, "").trim();
+  return { wantNoAnswer, titlePart };
+}
+
+const parsedPaperQuery = computed(() => parsePaperQuery(paperQ.value));
+
 const filteredPapers = computed(() => {
-  const q = paperQ.value.trim().toLowerCase();
+  const { wantNoAnswer, titlePart } = parsedPaperQuery.value;
   return contests.value.filter((c) => {
     if (paperFilter.value === "pending" && c.published) return false;
     if (paperFilter.value === "live" && !c.published) return false;
-    if (q && !String(c.title).toLowerCase().includes(q)) return false;
+    if (wantNoAnswer && (c.problem_count || 0) <= (c.answered_count || 0)) return false;
+    if (titlePart && !String(c.title).toLowerCase().includes(titlePart)) return false;
     return true;
   });
 });
@@ -188,6 +199,49 @@ async function toggleProblem(p) {
     msg.value = e.message;
   }
 }
+
+async function createUser() {
+  msg.value = "";
+  newUser.username = "";
+  newUser.password = "";
+  try {
+    const data = await api("/api/studio/users", { method: "POST", body: {} });
+    newUser.username = data.user.username;
+    newUser.password = data.password;
+    msg.value = "已创建学生账号，请把用户名和初始密码发给学生。";
+    await loadStudio();
+  } catch (e) {
+    msg.value = e.message;
+  }
+}
+
+async function copyCreds() {
+  if (!newUser.username || !newUser.password) return;
+  const text = `用户名：${newUser.username}\n初始密码：${newUser.password}`;
+  try {
+    await navigator.clipboard.writeText(text);
+    msg.value = "已复制到剪贴板";
+  } catch {
+    msg.value = "复制失败，请手动抄写";
+  }
+}
+
+async function deleteUser(u) {
+  if (u.role !== "student") return;
+  if (!window.confirm(`确定删除学生账号「${u.username}」？提交记录等数据会一并删除，且不可恢复。`)) return;
+  msg.value = "";
+  try {
+    await api(`/api/studio/users/${u.id}`, { method: "DELETE" });
+    msg.value = `已删除：${u.username}`;
+    if (newUser.username === u.username) {
+      newUser.username = "";
+      newUser.password = "";
+    }
+    await loadStudio();
+  } catch (e) {
+    msg.value = e.message;
+  }
+}
 </script>
 
 <template>
@@ -210,7 +264,7 @@ async function toggleProblem(p) {
         <a href="#" :class="{ on: paperFilter === 'all' }" @click.prevent="paperFilter = 'all'">全部</a>
         <a href="#" :class="{ on: paperFilter === 'pending' }" @click.prevent="paperFilter = 'pending'">未发布</a>
         <a href="#" :class="{ on: paperFilter === 'live' }" @click.prevent="paperFilter = 'live'">已发布</a>
-        <input v-model="paperQ" class="search" placeholder="搜索试卷名" />
+        <input v-model="paperQ" class="search" placeholder="搜索试卷名，或输入「无答案」" />
       </p>
       <p class="muted">{{ filteredPapers.length }} 套</p>
       <table class="table">
@@ -266,7 +320,7 @@ async function toggleProblem(p) {
       </p>
 
       <h2 class="serif">全部题目</h2>
-      <p class="muted">共 {{ problems.length }} 道，其中有答案 {{ withAnswerCount }} 道、无答案 {{ noAnswerCount }} 道。无答案题学生可见，作答不评分。</p>
+      <p class="muted">共 {{ problems.length }} 道，其中有答案 {{ withAnswerCount }} 道、无答案 {{ noAnswerCount }} 道。客观题看标准答案；编程题看满分程序。无答案题学生可见，作答不评分。</p>
       <p class="filter-row">
         <a href="#" :class="{ on: answerFilter === 'all' }" @click.prevent="answerFilter = 'all'">全部</a>
         <a href="#" :class="{ on: answerFilter === 'yes' }" @click.prevent="answerFilter = 'yes'">有答案</a>
@@ -329,13 +383,51 @@ async function toggleProblem(p) {
       <button class="btn" type="button" @click="createContest">创建比赛</button>
     </section>
     <section v-if="tab === 'users'">
+      <h2 class="serif">添加学生</h2>
+      <p class="muted">点「创建学生账号」后，生成的用户名和初始密码会出现在下方输入框里，可直接选中复制。显示名由学生登录后自行修改。</p>
+      <label class="field">用户名
+        <input
+          :value="newUser.username"
+          class="mono"
+          readonly
+          placeholder="点击下方按钮生成"
+          @focus="$event.target.select()"
+        />
+      </label>
+      <label class="field">初始密码
+        <input
+          :value="newUser.password"
+          class="mono"
+          readonly
+          placeholder="点击下方按钮生成"
+          @focus="$event.target.select()"
+        />
+      </label>
+      <p class="filter-row">
+        <button class="btn" type="button" @click="createUser">创建学生账号</button>
+        <button class="btn-ghost" type="button" :disabled="!newUser.username" @click="copyCreds">一键复制</button>
+      </p>
+
+      <h2 class="serif" style="margin-top:2rem">账号列表</h2>
       <table class="table">
-        <thead><tr><th>用户名</th><th>显示名</th><th>角色</th></tr></thead>
+        <thead><tr><th>用户名</th><th>密码</th><th>显示名</th><th>角色</th><th></th></tr></thead>
         <tbody>
           <tr v-for="u in users" :key="u.id">
             <td class="mono">{{ u.username }}</td>
+            <td class="mono">
+              <template v-if="u.role === 'student'">{{ u.password_plain || "—" }}</template>
+              <span v-else class="muted">隐藏</span>
+            </td>
             <td>{{ u.display_name }}</td>
-            <td>{{ u.role }}</td>
+            <td>{{ u.role === "coach" ? "教练" : "学生" }}</td>
+            <td>
+              <button
+                v-if="u.role === 'student'"
+                class="btn-ghost"
+                type="button"
+                @click="deleteUser(u)"
+              >删除</button>
+            </td>
           </tr>
         </tbody>
       </table>

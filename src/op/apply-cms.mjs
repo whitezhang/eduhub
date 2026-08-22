@@ -11,6 +11,7 @@ import { getDb } from "../rd/server/db.mjs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "../..");
 const SEED = path.join(ROOT, "src/rd/server/data/seed/cms.json");
+const KNOWLEDGE = path.join(ROOT, "src/rd/server/data/seed/knowledge-topics.json");
 
 function main() {
   if (!fs.existsSync(SEED)) {
@@ -37,6 +38,16 @@ function main() {
     upsert.run("syllabus_meta", JSON.stringify(meta));
     if (meta.csp_compare) console.log("cms csp_compare", meta.csp_compare.length, "rows");
     if (meta.gesp_csp_bridge) console.log("cms gesp_csp_bridge");
+  }
+  if (fs.existsSync(KNOWLEDGE)) {
+    const kn = JSON.parse(fs.readFileSync(KNOWLEDGE, "utf8"));
+    const topics = Array.isArray(kn.topics) ? kn.topics : [];
+    const map = {};
+    for (const t of topics) {
+      if (t?.id) map[t.id] = t;
+    }
+    upsert.run("knowledge_topics", JSON.stringify(map));
+    console.log("cms knowledge_topics", topics.length);
   }
   console.log("done");
 }

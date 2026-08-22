@@ -3,16 +3,16 @@
     "ym": "202603",
     "lang": "cpp",
     "level": 8,
-    "title": "CCF GESP 2026年3月认证 C++ 8级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10269.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1734124729532448.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202603-cpp-8.pdf"
+    "title": "202603-cpp-8",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202603-cpp-8.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "某班级有 8 名男生和 6 名女生,现要选出 3 人组成学习小组,要求小组中至少有 1 名男生和 1 名女生,则不同的\n选法共有(  )种。",
+      "stem": "某班级有8名男生和6名女生,现要选出3人组成学习小组,要求小组中至少有1名男生和1名女生,则不同的\n选法共有( )种。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "在杨辉三角中,从第 0 行开始计数,第 10 行的所有数之和为(  )。",
+      "stem": "在杨辉三角中,从第0行开始计数,第10行的所有数之和为( )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下列代码实现了快速幂算法,其时间复杂度为(  )。",
+      "stem": "下列代码实现了快速幂算法,其时间复杂度为( )。\nlong long fastPow(long long b, long long e, long long mod) {\n    long long result = 1;\n    while (e > 0) {\n        if (e & 1)\n            result = result * b % mod;\n        b = b * b % mod;\n        e >>= 1;\n    }\n    return result;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
       "options": [
         {
           "key": "A",
@@ -76,11 +76,11 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "从 5 本不同的数学书和 4 本不同的物理书中选取 3 本书,要求至少包含 1 本数学书,则不同的选法有(  )种。",
+      "stem": "从5本不同的数学书和4本不同的物理书中选取3本书,要求至少包含1本数学书,则不同的选法有( )种。",
       "options": [
         {
           "key": "A",
-          "text": "long long fastPow(long long b, long long e, long long mod) { long long result = 1; while (e > 0) { if (e & 1) result = result * b % mod; b = b * b % mod; e >>= 1; } return result; } 第 1 页 / 共 9 页"
+          "text": "第 1 页 / 共 9 页"
         },
         {
           "key": "B",
@@ -100,7 +100,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "在二叉搜索树( BST )中,若中序遍历的序列为{1, 2, 3, 4, 5},且先序遍历的第一个序列元素为3,\n则下列说法正确的是(  )。",
+      "stem": "在二叉搜索树(BST)中,若中序遍历的序列为{1, 2, 3, 4, 5} ,且先序遍历的第一个序列元素为3 ,\n则下列说法正确的是( )。",
       "options": [
         {
           "key": "A",
@@ -108,15 +108,15 @@
         },
         {
           "key": "B",
-          "text": "元素 4 和 5 不可能是兄弟节点"
+          "text": "元素4和5不可能是兄弟节点"
         },
         {
           "key": "C",
-          "text": "元素 1 所在节点的深度可能大于 3 (根节点深度为 1 )"
+          "text": "元素1所在节点的深度可能大于3(根节点深度为1)"
         },
         {
           "key": "D",
-          "text": "元素 2 一定是元素 1 的父节点"
+          "text": "元素2一定是元素1的父节点"
         }
       ],
       "answer": "B"
@@ -124,7 +124,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "在一个有向带权图中,使用 Dijkstra 算法求单源最短路时,若使用优先队列(小根堆)优化,其时间复杂度为\n(  )。",
+      "stem": "在一个有向带权图中,使用Dijkstra算法求单源最短路时,若使用优先队列(小根堆)优化,其时间复杂度为\n( )。",
       "options": [
         {
           "key": "A",
@@ -140,7 +140,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "对于含   个顶点( )的连通加权有向图,若图中不存在负权环,则任意两点之间的最短路径(简单路\n径)最多包含(  )条边。",
+      "stem": "对于含  个顶点(\n)的连通加权有向图,若图中不存在负权环,则任意两点之间的最短路径(简单路\n径)最多包含( )条边。",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "在使用 Floyd 算法求任意两点间最短路径时,时间复杂度为  。若在某次算法执行前,已经用  Dijkstra 算\n法正确求出了所有点对的最短路并存入了dist数组。如果此时继续对该dist数组执行一次完整的  Floyd 算法过程\n(无任何提前终止),执行完毕后dist数组内的值(  )。",
+      "stem": "在使用Floyd算法求任意两点间最短路径时,时间复杂度为\n。若在某次算法执行前,已经用 Dijkstra 算\n法正确求出了所有点对的最短路并存入了dist 数组。如果此时继续对该dist 数组执行一次完整的 Floyd 算法过程\n(无任何提前终止),执行完毕后dist 数组内的值( )。",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "关于图论中的最短路径算法,下列说法中严格正确的是(  )。",
+      "stem": "关于图论中的最短路径算法,下列说法中严格正确的是( )。",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "有 6 个人排成一排照相,其中甲、乙两人必须相邻,且丙不能站在排头的不同排法有(  )种。",
+      "stem": "有6个人排成一排照相,其中甲、乙两人必须相邻,且丙不能站在排头的不同排法有( )种。",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下列代码试图实现 Floyd 算法求所有点对之间的最短路径,横线处应填入(  )。",
+      "stem": "下列代码试图实现Floyd算法求所有点对之间的最短路径,横线处应填入( )。\nvoid floyd(int n, int dist[][MAXN]) {\n    for (int k = 0; k < n; k++)\n        for (int i = 0; i < n; i++)\n            for (int j = 0; j < n; j++)\n                if (__________) // 在此处填入选项\n                    dist[i][j] = dist[i][k] + dist[k][j];\n}\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "用数字  0 、 1 、 2 、 3 、 4 组成无重复数字的五位偶数,共有(  )个。",
+      "stem": "用数字 0、1、2、3、4 组成无重复数字的五位偶数,共有( )个。",
       "options": [
         {
           "key": "A",
@@ -276,7 +276,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "在一个无向带权图中,若使用  Prim 算法从顶点  0 开始构造最小生成树(边权均为正整数,且graph[u][v]\n== 0表示无边),下列代码中横线处应填入(  )。",
+      "stem": "在一个无向带权图中,若使用 Prim 算法从顶点 0 开始构造最小生成树(边权均为正整数,且graph[u][v]\n== 0 表示无边),下列代码中横线处应填入( )。\nint prim(vector<vector<int>>& graph, int n) {\n    vector<bool> inMST(n, false);\n    vector<int> minEdge(n, INT_MAX);\n    minEdge[0] = 0;\n    int result = 0;\n    for (int i = 0; i < n; i++) {\n        int u = -1;\n        for (int j = 0; j < n; j++)\n            if (!inMST[j] && (u == -1 || minEdge[j] < minEdge[u]))\n                u = j;\n        inMST[u] = true;\n        result += minEdge[u];\n        for (int v = 0; v < n; v++)\n            if (__________) // 在此处填入选项\n                minEdge[v] = graph[u][v];\n    }\n    return result;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18",
       "options": [
         {
           "key": "A",
@@ -300,7 +300,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "已知三个点   在平面直角坐标系中的坐标。下列  C++ 表达式中,在精度误差范\n围 1e-8 内能正确计算判断这三个点是三点共线的表达式是(  )。\nvoid floyd(int n, int dist[][MAXN]) {\n    for (int k = 0; k < n; k++)\n        for (int i = 0; i < n; i++)\n            for (int j = 0; j < n; j++)\n                if (__________) // 在此处填入选项\n                    dist[i][j] = dist[i][k] + dist[k][j];\n}\n1\n2\n3\n4\n5\n6\n7\nint prim(vector<vector<int>>& graph, int n) {\n    vector<bool> inMST(n, false);\n    vector<int> minEdge(n, INT_MAX);\n    minEdge[0] = 0;\n    int result = 0;\n    for (int i = 0; i < n; i++) {\n        int u = -1;\n        for (int j = 0; j < n; j++)\n            if (!inMST[j] && (u == -1 || minEdge[j] < minEdge[u]))\n                u = j;\n        inMST[u] = true;\n        result += minEdge[u];\n        for (int v = 0; v < n; v++)\n            if (__________) // 在此处填入选项\n                minEdge[v] = graph[u][v];\n    }\n    return result;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n第  3 页  / 共  9 页\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "已知三个点\n 在平面直角坐标系中的坐标。下列 C++ 表达式中,在精度误差范\n围1e-8内能正确计算判断这三个点是三点共线的表达式是( )。\n第 3 页 / 共 9 页",
       "options": [
         {
           "key": "A",
@@ -324,7 +324,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "在 64 位操作系统下( LP64 / LLP64 模型),下面代码的输出结果是()。",
+      "stem": "在64位操作系统下(LP64 / LLP64 模型),下面代码的输出结果是()。\n#include <iostream>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\nint main() {\n    int a[4] = {1, 2, 3, 4};\n    int (*p)[4] = &a;\n    int *q = a;\n    cout << sizeof(a) << \" \";\n    cout << sizeof(p) << \" \";\n    cout << sizeof(p + 1) << \" \";\n    cout << sizeof(q + 1) << \" \";\n    cout << (p + 1) - p << \" \";\n    cout << (q + 1) - q << endl;\n}",
       "options": [
         {
           "key": "A",
@@ -350,7 +350,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "在 C++ 中,若结构体中包含一个static成员变量,则该变量的存储空间属于结构体对象的一部分。(  )",
+      "stem": "在C++中,若结构体中包含一个static 成员变量,则该变量的存储空间属于结构体对象的一部分。( )",
       "options": [
         {
           "key": "T",
@@ -361,12 +361,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "对于任意正整数 ,二项式 展开式中各项的二项式系数之和等于 。(  )",
+      "stem": "对于任意正整数,二项式\n展开式中各项的二项式系数之和等于\n。( )",
       "options": [
         {
           "key": "T",
@@ -377,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在 C++ 中,若函数参数类型为const int &,则该参数既可以绑定左值,也可以绑定右值。(  )",
+      "stem": "在C++中,若函数参数类型为const int & ,则该参数既可以绑定左值,也可以绑定右值。( )",
       "options": [
         {
           "key": "T",
@@ -393,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "若一个无向图的最小生成树唯一,则图中所有边权必定各不相同。(  )",
+      "stem": "若一个无向图的最小生成树唯一,则图中所有边权必定各不相同。( )",
       "options": [
         {
           "key": "T",
@@ -409,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "使用快速排序对 个元素进行排序时,无论最好、最坏还是平均情况,时间复杂度均为 。(  )",
+      "stem": "使用快速排序对个元素进行排序时,无论最好、最坏还是平均情况,时间复杂度均为\n。( )",
       "options": [
         {
           "key": "T",
@@ -425,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "若一个图中所有顶点的度数为偶数,则一定存在欧拉回路。(  )",
+      "stem": "若一个图中所有顶点的度数为偶数,则一定存在欧拉回路。( )",
       "options": [
         {
           "key": "T",
@@ -441,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "使用倍增法预处理区间最值问题时,预处理的时间复杂度为 ,查询的时间复杂度为 。(  )",
+      "stem": "使用倍增法预处理区间最值问题时,预处理的时间复杂度为\n,查询的时间复杂度为\n。( )",
       "options": [
         {
           "key": "T",
@@ -457,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "如果将一个连通无向图 中所有边的权值都统一增加同一个正整数常数 ,形成图 。则 的最小生成树\n中每条边在 中对应的边组成的树,一定是 的最小生成树。(  )",
+      "stem": "如果将一个连通无向图\n中所有边的权值都统一增加同一个正整数常数,形成图\n。则\n的最小生成树\n中每条边在\n中对应的边组成的树,一定是\n的最小生成树。( )",
       "options": [
         {
           "key": "T",
@@ -473,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在图论算法中, Kruskal 算法和 Prim 算法都可以用来求解最小生成树,且这两者的贪心策略无论在任何连通无\n向图上求得的最小生成树总边权和必定相同。(  )",
+      "stem": "在图论算法中,Kruskal算法和Prim算法都可以用来求解最小生成树,且这两者的贪心策略无论在任何连通无\n向图上求得的最小生成树总边权和必定相同。( )",
       "options": [
         {
           "key": "T",
@@ -489,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "在动态规划问题中, “ 状态转移方程 + 递推 ” 和 “ 递归 + 记忆化搜索 ” 通常是解决同一问题的两种不同实现方\n式,它们的时间复杂度总是相同的。(  )\n#include <iostream>\nusing namespace std;\nint main() {\n    int a[4] = {1, 2, 3, 4};\n    int (*p)[4] = &a;\n    int *q = a;\n    cout << sizeof(a) << \" \";\n    cout << sizeof(p) << \" \";\n    cout << sizeof(p + 1) << \" \";\n    cout << sizeof(q + 1) << \" \";\n    cout << (p + 1) - p << \" \";\n    cout << (q + 1) - q << endl;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n第  4 页  / 共  9 页",
+      "stem": "在动态规划问题中,“状态转移方程+递推”和“递归+记忆化搜索”通常是解决同一问题的两种不同实现方\n式,它们的时间复杂度总是相同的。( )\n第 4 页 / 共 9 页",
       "options": [
         {
           "key": "T",
@@ -505,7 +505,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -513,7 +513,7 @@
       "seq": 1,
       "kind": "traditional",
       "title": "消息查找",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小  A 的消息记录中有   条消息,依次以   编号。编号小的消息发送时间早于编号大的消息。\n一条消息可以引用一条编号小于它的消息,也可以不引用消息。小  A 注意到消息记录里有引用的消息数量不会非常\n多。消息记录的一个例子是:\n【消息  1 】小  A :有人做了今天的第一题吗?\n【消息  2 】小  A :我第一题  WA 了,可能是什么原因?\n【消息  3 :引用消息  1 】小  B :我我我\n【消息  4 :引用消息  2 】小  C :我也  WA 了\n【消息  5 :引用消息  2 】小  B :是不是没开  long long?\n【消息  6 :引用消息  5 】小  A :改了就  AC 了,太厉害了!\n对于消息  ( ),小  A 以   标记消息   是否有引用,以及所引用的消息编号。如果  ,则消息   为引\n用了消息  ;如果  ,则消息   没有引用消息。\n消息记录里有非常多条消息。为了快速查找所需要的消息,小  A 准备实现一个简单的消息查找工具。消息查找工具\n任意时刻只能定位恰好一条消息,如果当前位于消息  ( ),那么接下来可以选择以下两种操作之一:\n定位到消息  ;\n如果消息   引用了消息  ,定位到消息  。\n以上操作可以执行任意次(包括零次)。\n小  A 有   次询问。在第  ( )次询问中,小  A 给出消息编号  ( )。小  A 想知道,如果当前消\n息查找工具位于  ,至少需要多少次操作才能定位到消息  。\n3.1.2\n\n输入格式\n第一行,两个正整数  ,分别表示消息条数与询问次数。\n第二行,  个非负整数  ,表示消息的引用关系,具体含义见题目描述。\n接下来   行中的第   行( )包含两个正整数  ,表示一次询问。\n保证至多只有   条引用消息。\n第  5 页  / 共  9 页\n3.1.3 输出格式\n输出   行,每行一个整数,表示将界面从消息   切换到消息   所需的最少操作次数。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于   的测试点,保证  , 。\n对于所有测试点,保证  , , , ,保证至多有   条引用消息。\n6 3\n0 0 1 2 2 5\n4 1\n6 2\n6 3\n\n5 5\n0 0 0 1 3\n4 1\n4 2\n5 1\n5 2\n5 3\n\n第  6 页  / 共  9 页\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小 A 的消息记录中有  条消息,依次以\n 编号。编号小的消息发送时间早于编号大的消息。\n一条消息可以引用一条编号小于它的消息,也可以不引用消息。小 A 注意到消息记录里有引用的消息数量不会非常\n多。消息记录的一个例子是:\n【消息 1】小 A:有人做了今天的第一题吗?\n【消息 2】小 A:我第一题 WA 了,可能是什么原因?\n【消息 3:引用消息 1】小 B:我我我\n【消息 4:引用消息 2】小 C:我也 WA 了\n【消息 5:引用消息 2】小 B:是不是没开 long long ?\n【消息 6:引用消息 5】小 A:改了就 AC 了,太厉害了!\n对于消息 (\n),小 A 以  标记消息  是否有引用,以及所引用的消息编号。如果\n,则消息  为引\n用了消息 ;如果\n,则消息  没有引用消息。\n消息记录里有非常多条消息。为了快速查找所需要的消息,小 A 准备实现一个简单的消息查找工具。消息查找工具\n任意时刻只能定位恰好一条消息,如果当前位于消息 (\n),那么接下来可以选择以下两种操作之一:\n定位到消息\n;\n如果消息  引用了消息 ,定位到消息 。\n以上操作可以执行任意次(包括零次)。\n小 A 有  次询问。在第 (\n)次询问中,小 A 给出消息编号\n(\n)。小 A 想知道,如果当前消\n息查找工具位于\n,至少需要多少次操作才能定位到消息\n。\n3.1.2\n\n输入格式\n第一行,两个正整数\n,分别表示消息条数与询问次数。\n第二行, 个非负整数\n,表示消息的引用关系,具体含义见题目描述。\n接下来  行中的第  行(\n)包含两个正整数\n,表示一次询问。\n保证至多只有\n 条引用消息。\n第 5 页 / 共 9 页\n3.1.3\n输出格式\n输出  行,每行一个整数,表示将界面从消息\n 切换到消息\n 所需的最少操作次数。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n6 3\n0 0 1 2 2 5\n4 1\n6 2\n6 3\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n5 5\n0 0 0 1 3\n4 1\n4 2\n5 1\n5 2\n5 3\n\n3.1.4.4\n输出样例 2\n\n3.1.5\n数据范围\n对于\n 的测试点,保证\n,\n。\n对于所有测试点,保证\n,\n,\n,\n,保证至多有\n 条引用消息。\n第 6 页 / 共 9 页\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -528,23 +528,25 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\nusing namespace std;\nconst int N = 1e5 + 5;\nconst int C = 2e3 + 5;\nconst int oo = 1e9;\nint n, q;\nint r[N], mark[N], pos[N];\nint p[C], cnt;\nint d[C][C];\nint pre[N], suf[N];\nint main() {\n    scanf(\"%d%d\", &n, &q);\n    for (int i = 1; i <= n; i++) {\n        scanf(\"%d\", &r[i]);\n        if (r[i])\n            mark[i] = mark[r[i]] = 1;\n    }\n    for (int i = 1; i <= n; i++)\n        if (mark[i]) {\n            p[++cnt] = i;\n            pos[i] = cnt;\n        }\n    for (int i = 1; i <= cnt; i++) {\n        for (int j = 1; j <= i; j++)\n            d[i][j] = oo;\n        d[i][i] = 0;\n        for (int j = i; j > 1; j--) {\n            d[i][j - 1] = min(d[i][j - 1], d[i][j] + p[j] - p[j - 1]);\n            if (r[p[j]]) {\n                int k = pos[r[p[j]]];\n                d[i][k] = min(d[i][k], d[i][j] + 1);\n            }\n        }\n    }\n    for (int i = 1; i <= n; i++) {\n        pre[i] = pre[i - 1];\n        if (mark[i])\n            pre[i] = i;\n    }\n    suf[n + 1] = n + 1;\n    for (int i = n; i; i--) {\n        suf[i] = suf[i + 1];\n        if (mark[i])\n            suf[i] = i;\n    }\n    while (q--) {\n        int x, y;\n        scanf(\"%d%d\", &x, &y);\n        if (pre[x] < suf[y])\n            printf(\"%d\\n\", x - y);\n        else\n            printf(\"%d\\n\", x - pre[x] + d[pos[pre[x]]][pos[suf[y]]] + suf[y] - y);\n    }\n    return 0;\n}\n第 7 页 / 共 9 页"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "子图最短路",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n给定包含   个结点   条边的带权无向图 ,结点依次以   编号。第  ( )条边连接编号为   与\n 的两个结点,权值为  。\n对于指定的  ,按以下方式构造图   的子图  :\n保留   中编号在区间   中的结点。删去其它编号不在   中的结点以及与之相连的边。剩余的结点和边构\n成子图  。\n对于   中的任意结点   应有  。记   在子图   上的最短距离为  。特殊地,若\n 在子图   上不连通,则认为  。\n你需要求出   对   取模的结果。\n题目中的英文字母   使用了特殊写法  ,以避免英文字母   与数字   混淆。\n3.2.2\n\n输入格式\n第一行,两个正整数  ,表示结点数与边数。\n接下来   行,第  ( )行包含三个正整数  ,表示一条连接结点   的权值为   的边。\n3.2.3 输出格式\n输出一行,一个整数,表示   对   取模的结果。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n3 2\n1 2 1\n2 3 2\n\n4 6\n1 2 100\n2 3 100\n3 4 100\n1 3 10\n2 4 10\n1 4 1\n\n第  8 页  / 共  9 页\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于   的测试点,保证  。\n对于所有测试点,保证  , , , 。图中可能存在重边。\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n给定包含  个结点\n 条边的带权无向图 ,结点依次以\n 编号。第 (\n)条边连接编号为\n 与\n 的两个结点,权值为\n。\n对于指定的\n,按以下方式构造图  的子图\n:\n保留  中编号在区间\n 中的结点。删去其它编号不在\n 中的结点以及与之相连的边。剩余的结点和边构\n成子图\n。\n对于\n 中的任意结点\n 应有\n。记\n 在子图\n 上的最短距离为\n。特殊地,若\n 在子图\n 上不连通,则认为\n。\n你需要求出\n 对\n 取模的结果。\n题目中的英文字母  使用了特殊写法 ,以避免英文字母  与数字  混淆。\n3.2.2\n\n输入格式\n第一行,两个正整数\n,表示结点数与边数。\n接下来\n 行,第 (\n)行包含三个正整数\n,表示一条连接结点\n 的权值为\n 的边。\n3.2.3\n输出格式\n输出一行,一个整数,表示\n 对\n 取模的结果。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n3 2\n1 2 1\n2 3 2\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n4 6\n1 2 100\n2 3 100\n3 4 100\n1 3 10\n2 4 10\n1 4 1\n\n第 8 页 / 共 9 页\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于\n 的测试点,保证\n。\n对于所有测试点,保证\n,\n,\n,\n。图中可能存在重边。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "1\n2\n3\n91\n",
-          "out": "5\n",
+          "in": "1\n2\n3\n9\n1\n",
+          "out": "6\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\nusing namespace std;\nconst int N = 105;\nconst int mod = 1e9;\nint n, m;\nint f[N][N];\nint g[N][N];\nint ans;\nint main() {\n    scanf(\"%d%d\", &n, &m);\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++)\n            f[i][j] = mod;\n        f[i][i] = 0;\n    }\n    for (int i = 1; i <= m; i++) {\n        int u, v, w;\n        scanf(\"%d%d%d\", &u, &v, &w);\n        f[u][v] = min(f[u][v], w);\n        f[v][u] = min(f[v][u], w);\n    }\n    for (int l = 1; l <= n; l++) {\n        for (int i = 1; i <= n; i++)\n            for (int j = 1; j <= n; j++)\n                g[i][j] = f[i][j];\n        for (int r = l; r <= n; r++) {\n            for (int i = 1; i <= n; i++)\n                for (int j = 1; j <= n; j++)\n                    g[i][j] = min(g[i][j], g[i][r] + g[r][j]);\n            for (int i = l; i <= r; i++)\n                for (int j = i; j <= r; j++)\n                    ans = (ans + g[i][j]) % mod;\n        }\n    }\n    printf(\"%d\\n\", ans);\n    return 0;\n}\n第 9 页 / 共 9 页"
     }
   ],
   "answer_rows": [
@@ -563,11 +565,8 @@
       "B",
       "A",
       "C",
-      "A",
-      "C"
-    ],
-    [
       "A"
-    ]
+    ],
+    []
   ]
 }

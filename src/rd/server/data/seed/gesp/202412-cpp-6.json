@@ -3,16 +3,16 @@
     "ym": "202412",
     "lang": "cpp",
     "level": 6,
-    "title": "CCF GESP 2024年12月认证 C++ 6级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10178.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1733580036243488.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202412-cpp-6.pdf"
+    "title": "202412-cpp-6",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202412-cpp-6.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "面向对象编程 (OOP) 是一种特殊的程序设计方法。下面 (   ) 不是重要的 OOP 特性。",
+      "stem": "面向对象编程(OOP)是一种特殊的程序设计方法。下面(   )不是重要的OOP特性。",
       "options": [
         {
           "key": "A",
@@ -36,19 +36,19 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "以下关于 C++ 中类的说法,哪一项是正确的?",
+      "stem": "以下关于C++中类的说法,哪一项是正确的?",
       "options": [
         {
           "key": "A",
-          "text": "类中定义的所有成员变量和成员函数默认是public访问权限。"
+          "text": "类中定义的所有成员变量和成员函数默认是public 访问权限。"
         },
         {
           "key": "B",
-          "text": "类的构造函数必须显式声明返回类型为void。"
+          "text": "类的构造函数必须显式声明返回类型为void 。"
         },
         {
           "key": "C",
-          "text": "在 C++ 中,类的数据一般设置为私有,其公有成员函数提供访问私有数据的唯一途径。"
+          "text": "在C++中,类的数据一般设置为私有,其公有成员函数提供访问私有数据的唯一途径。"
         },
         {
           "key": "D",
@@ -60,11 +60,11 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "以下 C++ 代码段中存在语法错误或逻辑错误,(   )是正确的。",
+      "stem": "以下C++代码段中存在语法错误或逻辑错误,(  )是正确的。\n#include <iostream>\nusing namespace std;\nclass MyClass {\npublic:\n    MyClass() {\n        cout << \"Constructor called!\" << endl;\n    }\n    void display() {\n        cout << \"Display function called!\" << endl;\n    }\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n};\nint main() {\n    MyClass* obj = NULL;\n    obj->display();\n    return 0;\n}\n11\n12\n13\n14\n15\n16",
       "options": [
         {
           "key": "A",
-          "text": "NULL 在 C++ 中无法用于指针初始化,应使用 nullptr。 #include <iostream> using namespace std; class MyClass { public: MyClass() { cout << \"Constructor called!\" << endl; } void display() { cout << \"Display function called!\" << endl; } }; int main() { MyClass* obj = NULL; obj->display(); return 0; }"
+          "text": "NULL 在C++中无法用于指针初始化,应使用 nullptr 。"
         },
         {
           "key": "B",
@@ -72,7 +72,7 @@
         },
         {
           "key": "C",
-          "text": "obj->display() 语句存在空指针访问错误, obj 应该初始化为一个有效的对象。"
+          "text": "obj->display() 语句存在空指针访问错误,obj 应该初始化为一个有效的对象。"
         },
         {
           "key": "D",
@@ -84,23 +84,23 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "阅读以下代码,下面哪一项是正确的?",
+      "stem": "阅读以下代码,下面哪一项是正确的?\nvoid processData() {\n    stack<int> s;\n    queue<int> q;\n    for (int i = 1; i <= 5; ++i) {\n        s.push(i);\n        q.push(i);\n    }\n    while (!s.empty()) {\n        cout << \"Stack pop: \" << s.top() << endl;\n        s.pop();\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n    }\n    while (!q.empty()) {\n        cout << \"Queue pop: \" << q.front() << endl;\n        q.pop();\n    }\n}\n11\n12\n13\n14\n15\n16",
       "options": [
         {
           "key": "A",
-          "text": "栈 s 的输出顺序是 1 2 3 4 5 ,队列 q 的输出顺序是 5 4 3 2 1 。"
+          "text": "栈s 的输出顺序是 1 2 3 4 5 ,队列q 的输出顺序是 5 4 3 2 1 。"
         },
         {
           "key": "B",
-          "text": "栈 s 的输出顺序是 5 4 3 2 1 ,队列 q 的输出顺序是 1 2 3 4 5 。"
+          "text": "栈s 的输出顺序是 5 4 3 2 1 ,队列q 的输出顺序是 1 2 3 4 5 。"
         },
         {
           "key": "C",
-          "text": "栈 s 的输出顺序是 1 2 3 4 5 ,队列 q 的输出顺序是 1 2 3 4 5 。"
+          "text": "栈s 的输出顺序是 1 2 3 4 5 ,队列q 的输出顺序是 1 2 3 4 5 。"
         },
         {
           "key": "D",
-          "text": "栈 s 的输出顺序是 1 2 3 4 5 ,队列 q 的输出顺序是 1 2 3 4 5 ,程序不会正常执行。"
+          "text": "栈s 的输出顺序是 1 2 3 4 5 ,队列q 的输出顺序是 1 2 3 4 5 ,程序不会正常执行。"
         }
       ],
       "answer": "B"
@@ -132,7 +132,15 @@
         },
         {
           "key": "B",
-          "text": "满二叉树中每一层的结点数等于 。层数"
+          "text": "满二叉树中每一层的结点数等于 。 层数"
+        },
+        {
+          "key": "C",
+          "text": "在一棵树中,所有结点的度之和等于所有叶子结点的度之和。"
+        },
+        {
+          "key": "D",
+          "text": "一棵二叉树的先序遍历结果和中序遍历结果一定相同。 集 {A, B, C, D} 的出现频率如下表所示:"
         }
       ],
       "answer": "B"
@@ -140,15 +148,23 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "已知字符\nC. 在一棵树中,所有结点的度之和等于所有叶子结点的度之和。\nD. 一棵二叉树的先序遍历结果和中序遍历结果一定相同。\n集 {A, B, C, D}  的出现频率如下表所示:\nvoid processData() {\n    stack<int> s;\n    queue<int> q;\n    for (int i = 1; i <= 5; ++i) {\n        s.push(i);\n        q.push(i);\n    }\n    while (!s.empty()) {\n        cout << \"Stack pop: \" << s.top() << endl;\n        s.pop();\n    }\n    while (!q.empty()) {\n        cout << \"Queue pop: \" << q.front() << endl;\n        q.pop();\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n字符 频率\nA 8\nB 3\nC 1\nD 6\n根据哈夫曼编码法,下面(    )是正确的哈夫曼树。",
+      "stem": "已知字符\n字符\n频率\nA\n8\nB\n3\nC\n1\nD\n6\n根据哈夫曼编码法,下面(   )是正确的哈夫曼树。",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "ABCD / \\ A BCD / \\ D BC / \\ B C"
+        },
+        {
+          "key": "B",
+          "text": "ABCD / \\ A BCD / \\ B CD / \\ C D"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "ABCD / \\ D ABC / \\ A BC / \\ B C"
+        },
+        {
+          "key": "D",
+          "text": "ABCD / \\ C ABC / \\ B AD / \\ A D"
         }
       ],
       "answer": "A"
@@ -156,7 +172,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "上一题中各字符的哈夫曼编码是(   )。",
+      "stem": "上一题中各字符的哈夫曼编码是(  )。",
       "options": [
         {
           "key": "A",
@@ -168,7 +184,7 @@
         },
         {
           "key": "C",
-          "text": "A: 0, B: 101, C: 100, D: 11 ABCD / \\ A BCD / \\ D BC / \\ B C ABCD / \\ A BCD / \\ B CD / \\ C D ABCD / \\ D ABC / \\ A BC / \\ B C ABCD / \\ C ABC / \\ B AD / \\ A D"
+          "text": "A: 0, B: 101, C: 100, D: 11"
         },
         {
           "key": "D",
@@ -180,7 +196,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "(  ) 是 位格雷编码。",
+      "stem": "(  )是位格雷编码。",
       "options": [
         {
           "key": "A",
@@ -204,7 +220,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "根据下面二叉树和给定的代码,\n给定以下二叉搜索树,调用函数  search(root,7) 时,输出的结果是(   )。",
+      "stem": "根据下面二叉树和给定的代码,\n#include <iostream>\nusing namespace std;\n1\n2\n3\n4\n5\n6\nstruct TreeNode {\n    int val;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n};\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\nTreeNode* search(TreeNode* root, int val) {\n    cout << root->val << \" \";\n    if (root == NULL || root->val == val) return root;\n    if (val < root->val)\n        return search(root->left, val);\n    else\n        return search(root->right, val);\n}\n18\n19\n给定以下二叉搜索树,调用函数 search(root,7) 时,输出的结果是(  )。\n        5\n       / \\\n      3   7\n     / \\ / \\\n    2  4 6  8\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -220,7 +236,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "阅读以下二叉树的深度优先搜索算法,横线上应填写(    )。\n#include <iostream>\nusing namespace std;\nstruct TreeNode {\n    int val;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n};\nTreeNode* search(TreeNode* root, int val) {\n    cout << root->val << \" \";\n    if (root == NULL || root->val == val) return root;\n    if (val < root->val)\n        return search(root->left, val);\n    else\n        return search(root->right, val);\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n        5\n       / \\\n      3   7\n     / \\ / \\\n    2  4 6  8\n1\n2\n3\n4\n5\nvoid dfs(TreeNode* root) {\n    if (root == nullptr)\n        return;\n    stack<TreeNode*> s;\n1\n2\n3\n4\n5",
+      "stem": "阅读以下二叉树的深度优先搜索算法,横线上应填写(   )。\nvoid dfs(TreeNode* root) {\n    if (root == nullptr)\n1\n2\n        return;\n3\n4\n5\n    stack<TreeNode*> s;\n    s.push(root);\n    while (!s.empty()) {\n        ———————————————————————— // 在此处填入代码\n        cout << node->value << \" \";\n6\n7\n8\n9\n10\n11\n        if (node->right) s.push(node->right);\n        if (node->left) s.push(node->left);\n    }\n}\n12\n13\n14",
       "options": [
         {
           "key": "A",
@@ -244,7 +260,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "阅读以下二叉树的广度优先搜索的代码,横线上应填写(    )。",
+      "stem": "阅读以下二叉树的广度优先搜索的代码,横线上应填写(   )。\n#include <queue>\nvoid bfs(TreeNode* root) {\n    if (root == NULL) return;\n1\n2\n3\n4\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        ———————————————————————— // 在此处填入代码\n        cout << node->val << \" \";\n        if (node->left) {\n            q.push(node->left);\n        }\n        if (node->right) {\n            q.push(node->right);\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n        }\n    }\n}\n15\n16\n17",
       "options": [
         {
           "key": "A",
@@ -268,7 +284,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "使用上题中的宽度优先搜索算法遍历以下这棵树,可能的输出是 ( ) 。\n    s.push(root);\n    while (!s.empty()) {\n        ———————————————————————— // 在此处填入代码\n        cout << node->value << \" \";\n        if (node->right) s.push(node->right);\n        if (node->left) s.push(node->left);\n    }\n}\n6\n7\n8\n9\n10\n11\n12\n13\n14\n#include <queue>\nvoid bfs(TreeNode* root) {\n    if (root == NULL) return;\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        ———————————————————————— // 在此处填入代码\n        cout << node->val << \" \";\n        if (node->left) {\n            q.push(node->left);\n        }\n        if (node->right) {\n            q.push(node->right);\n        }\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n        1\n       / \\\n      2   3\n     / \\   \\\n    8  9    6\n      / \\    \\\n      4  5    7\n1\n2\n3\n4\n5\n6\n7\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "使用上题中的宽度优先搜索算法遍历以下这棵树,可能的输出是( )。\n        1\n       / \\\n      2   3\n     / \\   \\\n1\n2\n3\n4\n    8  9    6\n      / \\    \\\n      4  5    7\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -284,7 +300,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "以下关于动态规划的描述,(   )是正确的。",
+      "stem": "以下关于动态规划的描述,(  )是正确的。",
       "options": [
         {
           "key": "A",
@@ -308,7 +324,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "假设背包的最大容量 ,共有有 个物品可供选择, 4 个物品的重量分别为 ,对应\n的价值分别为  ,则该 0/1 背包问题中,背包的最大价值为(   )。",
+      "stem": "假设背包的最大容量\n,共有有个物品可供选择,4个物品的重量分别为\n,对应\n的价值分别为\n,则该0/1背包问题中,背包的最大价值为(  )。",
       "options": [
         {
           "key": "A",
@@ -345,7 +361,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
@@ -361,7 +377,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
@@ -377,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "下面代码构建的树一定是完全二叉树:\nstruct TreeNode {\n    int value;\n    TreeNode* left;\n    TreeNode* right;\n};\nTreeNode* buildCompleteBinaryTree() {\n    TreeNode* root = new TreeNode{1};\n    root->left = new TreeNode{2};\n    root->right = new TreeNode{3};\n    root->left->left = new TreeNode{4};\n    root->left->right = new TreeNode{5};\n    root->right->left = new TreeNode{6};\n    return root;",
+      "stem": "下面代码构建的树一定是完全二叉树:\nstruct TreeNode {\n    int value;\n    TreeNode* left;\n    TreeNode* right;\n};\n\n\n\n\n\n\n\n\n\n\n\nTreeNode* buildCompleteBinaryTree() {\n    TreeNode* root = new TreeNode{1};\n    root->left = new TreeNode{2};\n    root->right = new TreeNode{3};\n    root->left->left = new TreeNode{4};\n    root->left->right = new TreeNode{5};\n    root->right->left = new TreeNode{6};\n    return root;\n\n\n\n}",
       "options": [
         {
           "key": "T",
@@ -393,7 +409,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
@@ -409,7 +425,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
@@ -425,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面的代码实现了二叉树的前序遍历,它通过递归方法访问每个节点并打印节点值。",
+      "stem": "下面的代码实现了二叉树的前序遍历,它通过递归方法访问每个节点并打印节点值。\nvoid preorder(TreeNode* root) {\n    if (root == NULL) return;\n    cout << root->val << \" \";\n    preorder(root->left);\n\n\n\n\n    preorder(root->right);\n}",
       "options": [
         {
           "key": "T",
@@ -441,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在二叉树中,宽度优先搜索算法(BFS) 保证从起点到 每个节点的访问路径是边数最少的路径(即 最短路径)。",
+      "stem": "在二叉树中,宽度优先搜索算法(BFS)保证从起点到每个节点的访问路径是边数最少的路径(即最短路径)。",
       "options": [
         {
           "key": "T",
@@ -457,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在解决简单背包问题时,动态规划的状态转移方程如下:\n该方程表示:在考虑第 i  个物品时,当前背包容量为 w ,如果不放物品 i ,则最大价值是 dp[i-1][w] ;如果\n放入物品 i ,则最大价值是 dp[i-1][w - weights[i-1]] + values[i-1] ,其中数组 weights 和 values 分\n别表示所有物品的重量和价值,数组下标从 0 开始。",
+      "stem": "在解决简单背包问题时,动态规划的状态转移方程如下:\ndp[i][w] = max(dp[i-1][w], dp[i-1][w - weights[i-1]] + values[i-1]);\n\n该方程表示:在考虑第 i 个物品时,当前背包容量为 w ,如果不放物品 i ,则最大价值是 dp[i-1][w] ;如果\n放入物品 i ,则最大价值是 dp[i-1][w - weights[i-1]] + values[i-1] ,其中数组weights 和values 分\n别表示所有物品的重量和价值,数组下标从0 开始。",
       "options": [
         {
           "key": "T",
@@ -473,7 +489,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
@@ -489,7 +505,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -497,27 +513,35 @@
       "seq": 1,
       "kind": "traditional",
       "title": "树上游走",
-      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1 题面描述\n小杨有一棵包含无穷节点的二叉树(即每个节点都有左儿子节点和右儿子节点;除根节点外,每个节点都有父节\n点),其中根节点的编号为 ,对于节点 ,其左儿子的编号为 ,右儿子的编号为 。\n小杨会从节点  开始在二叉树上移动,每次移动为以下三种移动方式的任意一种:\n第1种移动方式: 如果当前节点存在父亲节点,向上移动到当前节点的父亲节点,否则不移动;\n第2种移动方式: 移动到当前节点的左儿子;\n第3种移动方式: 移动到当前节点的右儿子。\n小杨想知道移动  次后自己所处的节点编号。数据保证最后的所处的节点编号不超过 。\n}15\nvoid preorder(TreeNode* root) {\n    preorder(root->left);\n    preorder(root->right);\n\ndp[i][w] = max(dp[i-1][w], dp[i-1][w - weights[i-1]] + values[i-1]);1\n子任务编号 数据点占比\n1 20%\n2 20%\n3 60%\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,代表移动次数和初始节点编号。\n第二行包含一个长度为   且仅包含大写字母   的字符串,代表每次移动的方式,其中   代表第 1 种移动方式,\n 代表第 2 种移动方式,  代表第 3 种移动方式。\n3.1.3 输出格式\n输出一个正整数,代表最后所处的节点编号。\n3.1.4 样例\n3.1.5 样例解释\n小杨的移动路线为  2-1-3-7 。\n对于全部数据,保证有  。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题面描述\n小杨有一棵包含无穷节点的二叉树(即每个节点都有左儿子节点和右儿子节点;除根节点外,每个节点都有父节\n点),其中根节点的编号为 ,对于节点 ,其左儿子的编号为\n,右儿子的编号为\n。\n小杨会从节点  开始在二叉树上移动,每次移动为以下三种移动方式的任意一种:\n第1种移动方式: 如果当前节点存在父亲节点,向上移动到当前节点的父亲节点,否则不移动;\n第2种移动方式: 移动到当前节点的左儿子;\n第3种移动方式: 移动到当前节点的右儿子。\n小杨想知道移动  次后自己所处的节点编号。数据保证最后的所处的节点编号不超过\n。\n3.1.2\n\n输入格式\n第一行包含一个正整数\n,代表移动次数和初始节点编号。\n第二行包含一个长度为  且仅包含大写字母\n 的字符串,代表每次移动的方式,其中  代表第1种移动方式,\n 代表第2种移动方式, 代表第3种移动方式。\n3.1.3\n输出格式\n输出一个正整数,代表最后所处的节点编号。\n3.1.4\n样例\n3 2\nURR\n\n3.1.5\n样例解释\n小杨的移动路线为 2-1-3-7。\n子任务编号\n数据点占比\n\n20%\n\n20%\n\n60%\n对于全部数据,保证有\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "7\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <bits/stdc++.h>\n#define ll long long\nusing namespace std;\nconst ll INF = 1e12;\nint n;\nstack<char> st;\nstring c;\nll s;\nint main(){\n    cin >> n >> s >> c;\n    for(int i = 0; i < n; i ++){\n        if(c[i] == 'U'){\n            if(s == 1) continue;\n            if(st.size()){\n                st.pop();\n                continue;\n            }\n            s >>= 1;\n        }else if(c[i] == 'L'){\n            if((s << 1) > INF){\n                st.push('L');\n                continue;\n            }\n            s = s << 1;\n        }else{\n            if((s << 1 | 1) > INF){\n                st.push('R');\n                continue;\n            }\n            s = s << 1 | 1;\n        }\n    }\n    cout << s << \"\\n\";\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "运送物资",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨管理着   辆货车,每辆货车每天需要向  A 市和  B 市运送若干次物资。小杨同时拥有   个运输站点,这些站点位\n于  A 市和  B 市之间。\n每次运送物资时,货车从初始运输站点出发,前往  A 市或  B 市,之后返回初始运输站点。 A 市、 B 市和运输站点的\n位置可以视作数轴上的三个点,其中  A 市的坐标为  , B 市的坐标为  ,运输站点的坐标为   且有  ,货车\n每次去  A 市运送物资的总行驶路程为  ,去  B 市运送物资的总行驶路程为  。\n对于第   个运输站点,其位置为   且至多作为   辆车的初始运输站点。小杨想知道,在最优分配每辆货车的初始运\n输站点的情况下,所有货车每天的最短总行驶路程是多少。\n3.2.2\n\n输入格式\n第一行包含三个正整数  ,代表运输站点数量,货车数量和两市距离。\n之后   行,每行包含两个正整数  ,代表第   个运输站点的位置和最多容纳车辆数。\n之后   行,每行包含两个正整数  ,代表第   辆货车每天需要向  A 市运送   次物资,向  B 市运送   次物资。\n3.2.3 输出格式\n输出一个正整数,代表所有货车每天的最短总行驶路程。\n3.2.4 样例\n            if((s << 1 | 1) > INF){\n                st.push('R');\n                continue;\n            }\n            s = s << 1 | 1;\n        }\n    }\n    cout << s << \"\\n\";\n    return 0;\n}\n\n3 4 10\n1 1\n2 1\n8 3\n5 3\n7 2\n9 0\n1 10000\n\n子任务编号 数据点占比\n1 20%\n2 20%\n3 60%\n3.2.5 样例解释\n第   辆车的初始运输站点为站点  ,第   辆车的初始运输站点为站点  。第   辆车的初始运输站点为站点  ,第   辆\n车的初始运输站点为站点  。此时总行驶路程最短,为  40186 。\n对于全部数据,保证有  。数据保证\n。\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题面描述\n小杨管理着\n 辆货车,每辆货车每天需要向 A 市和 B 市运送若干次物资。小杨同时拥有  个运输站点,这些站点位\n于 A 市和 B 市之间。\n每次运送物资时,货车从初始运输站点出发,前往 A 市或 B 市,之后返回初始运输站点。A 市、B 市和运输站点的\n位置可以视作数轴上的三个点,其中 A 市的坐标为 ,B 市的坐标为 ,运输站点的坐标为  且有\n,货车\n每次去 A 市运送物资的总行驶路程为\n,去 B 市运送物资的总行驶路程为\n。\n对于第  个运输站点,其位置为\n 且至多作为  辆车的初始运输站点。小杨想知道,在最优分配每辆货车的初始运\n输站点的情况下,所有货车每天的最短总行驶路程是多少。\n3.2.2\n\n输入格式\n第一行包含三个正整数\n,代表运输站点数量,货车数量和两市距离。\n之后  行,每行包含两个正整数\n,代表第  个运输站点的位置和最多容纳车辆数。\n之后\n 行,每行包含两个正整数\n,代表第  辆货车每天需要向 A 市运送\n 次物资,向 B 市运送  次物资。\n3.2.3\n输出格式\n输出一个正整数,代表所有货车每天的最短总行驶路程。\n3.2.4\n样例\n3 4 10\n\n1 1\n2 1\n8 3\n5 3\n7 2\n9 0\n1 10000\n\n3.2.5\n样例解释\n第  辆车的初始运输站点为站点 ,第  辆车的初始运输站点为站点 。第  辆车的初始运输站点为站点 ,第  辆\n车的初始运输站点为站点 。此时总行驶路程最短,为 40186。\n子任务编号\n数据点占比\n\n20%\n\n20%\n\n60%\n对于全部数据,保证有\n。数据保证\n。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "28\n29\n30\n31\n32\n33\n34\n35\n",
-          "out": "40186\n",
-          "suspect": true
+          "in": "40186\n",
+          "out": "1\n",
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include<bits/stdc++.h>\nusing namespace std;\n#define ll long long\nconst int N = 1e5+10;\nint n,m;\nll x;\nvector<pair<int,int> > st;\nint a[N],b[N];\nint main(){\n    cin>>n>>m>>x;\n    for(int i=1;i<=n;i++){\n        int p,c;\n        cin>>p>>c;\n        st.push_back(make_pair(p,c));\n    }\n    sort(st.begin(),st.end());\n    for(int i=1;i<=m;i++){\n        cin>>a[i]>>b[i];\n    }\n    vector<pair<int,int> > neg,pos;\n    ll res=0;\n    for(int i=1;i<=m;i++){\n        if(a[i]>=b[i])\n            pos.push_back(make_pair(a[i]-b[i],i));\n        else{\n            neg.push_back(make_pair(a[i]-b[i],i));\n        }\n        res+=1ll*b[i]*x;\n    }\n    sort(neg.begin(),neg.end());\n    sort(pos.begin(),pos.end());\n    reverse(pos.begin(),pos.end());\n    int l=0,r=n-1;\n    for(auto i:neg){\n        while(r>=1&&st[r].second==0)r--;\n        res+=1ll*(a[i.second]-b[i.second])*st[r].first;\n        st[r].second-=1;\n    }\n    for(auto i:pos){\n        while(l<=n&&st[l].second==0)l++;\n        res+=1ll*(a[i.second]-b[i.second])*st[l].first;\n        st[l].second-=1;\n    }\n    cout<<res*2<<\"\\n\";\n}"
     }
   ],
   "answer_rows": [
@@ -536,11 +560,8 @@
       "D",
       "C",
       "B",
-      "C",
       "C"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

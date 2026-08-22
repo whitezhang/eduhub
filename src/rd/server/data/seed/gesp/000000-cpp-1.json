@@ -3,43 +3,15 @@
     "ym": "000000",
     "lang": "cpp",
     "level": 1,
-    "title": "GESP 3月认证C++一级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10068.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1536716611518496.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/000000-cpp-1.pdf"
+    "title": "000000-cpp-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/000000-cpp-1.pdf"
   },
   "choice": [],
   "tf": [],
   "program": [],
   "answer_rows": [
-    [
-      "A",
-      "C",
-      "C",
-      "D",
-      "A",
-      "D",
-      "D",
-      "C",
-      "C",
-      "B",
-      "B",
-      "A",
-      "C",
-      "B",
-      "D"
-    ],
-    [
-      "√",
-      "√",
-      "×",
-      "×",
-      "√",
-      "√",
-      "√",
-      "×",
-      "×",
-      "√"
-    ]
+    [],
+    []
   ]
 }

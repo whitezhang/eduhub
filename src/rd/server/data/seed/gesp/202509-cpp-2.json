@@ -3,16 +3,16 @@
     "ym": "202509",
     "lang": "cpp",
     "level": 2,
-    "title": "CCF GESP 2025年9月认证 C++ 2级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10229.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1703973006344224.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202509-cpp-2.pdf"
+    "title": "202509-cpp-2",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202509-cpp-2.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "人工智能现在非常火,小杨就想多了解一下,其中就经常听人提到 “ 大模型 ” 。那么请问这里说的 “ 大模型 ” 最\n贴切是指  (   ) 。",
+      "stem": "人工智能现在非常火,小杨就想多了解一下,其中就经常听人提到“大模型”。那么请问这里说的“大模型”最\n贴切是指 (   )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "在 TCP 协议中,完成连接建立需要通过(   )握手。",
+      "stem": "在TCP协议中,完成连接建立需要通过(  )握手。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面的 C++ 代码用于输入姓名,然后输出姓名,正确的说法是 (  ) 。",
+      "stem": "下面的C++代码用于输入姓名,然后输出姓名,正确的说法是(\n )。\nstring XingMing;\ncout << \"请输入您的姓名:\";\ncin >> XingMing;\ncout << XingMing;\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面 C++ 代码用于获得正整数 N 的第 M 位数,如 N 等于 1234 , M 等于 2 ,则输出  3。此题假设 M 的值大于等于\n1 且小于等于 N 的位数。横线处应填入的代码是 (  ) 。\nstring XingMing;\ncout << \" 请输入您的姓名: \";\ncin >> XingMing;\ncout << XingMing;\n1\n2\n3\n4",
+      "stem": "下面C++代码用于获得正整数N的第M位数,如N等于1234,M等于2,则输出 3 。此题假设M的值大于等于\n1且小于等于N的位数。横线处应填入的代码是(\n )。\nint N, M, div=1;\ncout << \"请输入一个正整数:\";\ncin >> N;\ncout <<\"请输入从右到左取第几位数:\";\ncin >> M;\n1\n2\n3\n4\n5\n6\n7\n8\n9\nfor (int i =0; i < (M - 1); i++) div *= 10;\ncout << (______________);",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面C++代码执行,其输出是(  )。",
+      "stem": "下面C++代码执行,其输出是(\n )。\na, b = 3, 4;\nc = a == b;\ncout << a << ' ' << b << ' ' << c;\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "某种编号的规则是“XX-Y”,其中XX从00到11,Y从0到9。第1个编号是00-0,第2个编号是01-1,...,第12个\n编号11-1,第13个编号00-2,即其编码规则是XX和Y同时增1,到XX到11时下一个变为00,Y到9时,下一个变为0。\n下面的C++代码用于生成第N个编号,横线处应填上的代码是(  )。",
+      "stem": "某种编号的规则是“XX-Y”,其中XX从00到11,Y从0到9。第1个编号是00-0,第2个编号是01-1,...,第12个\n编号11-1,第13个编号00-2,即其编码规则是XX和Y同时增1,到XX到11时下一个变为00,Y到9时,下一个变为0。\n下面的C++代码用于生成第N个编号,横线处应填上的代码是(\n )。\ncout << \"请输入编号位置:\";\ncin >> N;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\npart1 = N % _____;\npart2 = N % _____;\nif (part1 < 10)\n    printf(\"0%d-%d\\n\", part1, part2);\nelse\n    printf(\"%d-%d\\n\", part1, part2);",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面的C++代码执行后其输出是(  )。\n\n```\nint N, M, div=1; cout << \"请输入一个正整数:\"; cin >> N; cout <<\"请输入从右到左取第几位数:\"; cin >> M; for (int i =0; i < (M - 1); i++) div *= 10; cout << (______________); a, b = 3, 4; c = a == b; cout << a << ' ' << b << ' ' << c; cout << \"请输入编号位置:\"; cin >> N; part1 = N % _____; part2 = N % _____; if (part1 < 10) printf(\"0%d-%d\\n\", part1, part2); else printf(\"%d-%d\\n\", part1, part2); cnt = 0; for (int i = -10; i < 10; i++) for (int j =0; j < i; j++) cnt += 1; cout << cnt;\n```",
+      "stem": "下面的C++代码执行后其输出是( )。\ncnt = 0;\nfor (int i = -10; i < 10; i++)\n    for (int j =0; j < i; j++)\n       cnt += 1;\ncout << cnt;\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面C++代码执行后其输出是(  )。",
+      "stem": "下面C++代码执行后其输出是(\n )。\nfor (i =1; i < 12; i++){\n    if (i % 2 == 0)\n        continue;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n    for (j = 0; j < i; j++)\n        if (i * j % 2)\n            break;\n}\nif(i>= 12)\n    cout << (i * j);",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "阅读下面的C++代码,其中变量都是整型,则说法正确的是(  )。",
+      "stem": "阅读下面的C++代码,其中变量都是整型,则说法正确的是( )。\ncin >>a >> b;\n1\n2\n3\n4\n5\n6\n7\n8\nwhile (b != 0){\n    remainder = a % b;\n    a = b;\n    b = remainder;\n}\ncout << a;",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面C++代码执行后输出是(     )。",
+      "stem": "下面C++代码执行后输出是(     )。\nnum = 0;\nwhile (num <= 5){\n    num += 1;\n    if (num == 3)\n        continue;\n    printf(\"%d#\", num);\n}\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -252,11 +252,11 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面C++代码用于记录多个输入数中的最大数和最小数(输入\n)。\nfor (i =1; i < 12; i++){\n    if (i % 2 == 0)\n        continue;\n    for (j = 0; j < i; j++)\n        if (i * j % 2)\n            break;\n}\nif(i>= 12)\n    cout << (i * j);\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\ncin >>a >> b;\nwhile (b != 0){\n    remainder = a % b;\n    a = b;\n    b = remainder;\n}\ncout << a;\n1\n2\n3\n4\n5\n6\n7\n8\nnum = 0;\nwhile (num <= 5){\n    num += 1;\n    if (num == 3)\n        continue;\n    printf(\"%d#\", num);\n}\n1\n2\n3\n4\n5\n6\n7",
+      "stem": "下面C++代码用于记录多个输入数中的最大数和最小数(输入\n)。\ncin >> now_num;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nmin num = max num = now num;\n_\n\n_\n\n_\nwhile (now_num != -999)\n{\n    if (max_num < now_num)\n        max_num = now_num;\n    if (min_num > now_num)\n        min_num = now_num;\n    cin >> now_num;\n}\ncout << min_num << ' ' << max_num;",
       "options": [
         {
           "key": "A",
-          "text": "程序运行时如果第一个数输入 -999 ,则输出将是 -999 -999"
+          "text": "程序运行时如果第一个数输入 -999 ,则输出将是-999 -999"
         },
         {
           "key": "B",
@@ -268,7 +268,7 @@
         },
         {
           "key": "D",
-          "text": "可以将 cin >> now_num; 移动到 while (now_num != -999) { 下面,结果不变"
+          "text": "可以将cin >> now_num; 移动到while (now_num != -999) { 下面,结果不变"
         }
       ],
       "answer": "D"
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面C++代码执行后输出与 5 有关数的数量。“与 5 有关的数”定义为含有 5 或者能被 5 整除的数。相关说法\n正确的是(     )。",
+      "stem": "下面C++代码执行后输出与 5 有关数的数量。“与 5 有关的数”定义为含有 5 或者能被 5 整除的数。相关说法\n正确的是(     )。\ncnt = 0;\nfor (i = 1; i < 1000; i++){\n    if (i % 5 == 0){\n        cnt += 1;\n        continue;\n    }\n    j = i;\n    while (j > 0)\n        if (j % 10 == 5){\n            cnt += 1;\n            break;\n        }\n        else\n            j /= 10;\n}\ncout << cnt;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16",
       "options": [
         {
           "key": "A",
@@ -284,15 +284,15 @@
         },
         {
           "key": "B",
-          "text": "删除 j = i 并将 while 循环内的j修改为 i ,不影响程序执行结果"
+          "text": "删除j = i 并将 while 循环内的j修改为 i ,不影响程序执行结果"
         },
         {
           "key": "C",
-          "text": "代码中 break 修改为 j = 0 ,不影响程序执行结果"
+          "text": "代码中 break 修改为j = 0 ,不影响程序执行结果"
         },
         {
           "key": "D",
-          "text": "将 while (j > 0) 修正为 while (j >= 0) 不影响程序执行的结果"
+          "text": "将while (j > 0) 修正为while (j >= 0) 不影响程序执行的结果"
         }
       ],
       "answer": "C"
@@ -300,15 +300,23 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面C++代码实现输出如下图形,应该在横线处填入的代码是(    )。\ncin >> now_num;\n_   _   _\nwhile (now_num != -999)\nmin num = max num = now num;\n{\n    if (max_num < now_num)\n        max_num = now_num;\n    if (min_num > now_num)\n        min_num = now_num;\n    cin >> now_num;\n}\ncout << min_num << ' ' << max_num;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\ncnt = 0;\nfor (i = 1; i < 1000; i++){\n    if (i % 5 == 0){\n        cnt += 1;\n        continue;\n    }\n    j = i;\n    while (j > 0)\n        if (j % 10 == 5){\n            cnt += 1;\n            break;\n        }\n        else\n            j /= 10;\n}\ncout << cnt;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n请输入层数:10\n         1\n        23\n       456\n      7891\n     23456\n    789123\n   4567891\n  23456789\n 123456789\n1234567891\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
+      "stem": "下面C++代码实现输出如下图形,应该在横线处填入的代码是(    )。\n请输入层数:10\n         1\n        23\n       456\n      7891\n     23456\n    789123\n   4567891\n  23456789\n 123456789\n1234567891\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\ncout << \"请输入层数:\";\ncin >> N;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nK = 1;\nfor (i = 1; i < N + 1; i++){\n    for (int _ = 1; _ < ___________; _++)\n        cout << \" \";\n    for (int _ = 1; _ < ________; _++){\n        cout << K;\n        K += 1;\n        if (K == 10)\n            K = 1;\n    }\n    cout << '\\n';\n}",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "N - i + 1 i + 1"
+        },
+        {
+          "key": "B",
+          "text": "N - i i"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "N i"
+        },
+        {
+          "key": "D",
+          "text": "N - i i + 1"
         }
       ],
       "answer": "A"
@@ -316,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面C++代码执行,其输出是(  )。",
+      "stem": "下面C++代码执行,其输出是(\n )。\nint a=9, b=27;\na = 'a' + 'b';\nb = 'a' - 'b';\na = a - b;\ncout << a << ' ' << b << endl;\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -340,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "有个无限长的链,由3种外形相同但材质不同的环链成。3种环的重量分别是3、4、6克,相同材质的多个环\n每12克一组,分别记为G3、G4、G6。链依次G3、G4、G6、G3、G4、G6、...。同时对链上所有环从头依次编号1、\n2、3、4......。输入正整数代表环编号,求该编号前所有环(不含该环本身)的重量。下面是C++代码是实现,正确\n说法是(  )。\ncout << \"请输入层数:\";\ncin >> N;\nK = 1;\nfor (i = 1; i < N + 1; i++){\n    for (int _ = 1; _ < ___________; _++)\n        cout << \" \";\n    for (int _ = 1; _ < ________; _++){\n        cout << K;\n        K += 1;\n        if (K == 10)\n            K = 1;\n    }\n    cout << '\\n';\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nN - i + 1\ni + 1\n1\n2\nN - i\ni\n1\n2\nN\ni\n1\n2\nN - i\ni + 1\n1\n2\nint a=9, b=27;\na = 'a' + 'b';\nb = 'a' - 'b';\na = a - b;\ncout << a << ' ' << b << endl;\n1\n2\n3\n4\n5\ni int N, G, R;\nint wc = 0;\ncin >> N;  // 输入正整数\n1\n2\n3\n4\n\n题 号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "有个无限长的链,由3种外形相同但材质不同的环链成。3种环的重量分别是3、4、6克,相同材质的多个环\n每12克一组,分别记为G3、G4、G6。链依次G3、G4、G6、G3、G4、G6、...。同时对链上所有环从头依次编号1、\n2、3、4......。输入正整数代表环编号,求该编号前所有环(不含该环本身)的重量。下面是C++代码是实现,正确\n说法是( )。\ni int N, G, R;\nint wc = 0;\n1\n2\n3\n4\ncin >> N;  // 输入正整数\nG = (N - 1) / 9; // L1\nR = (N - 1) % 9; // L2: 保存余数\nwc += 36*G;\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\nif((1 <= R) && (R <= 4))\n    wc += 3*R; // L3\nelse if ((5 <= R) &&  (R <= 7))\n    wc += 4*R; // L4\nelse if(R == 8)\n    wc += 6*(R - 1); // L5\ncout << wc << endl;",
       "options": [
         {
           "key": "A",
@@ -377,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在C++代码中,假设N为正整数且大于100,则 N / 100 将舍弃个位和十位,如N为1234则 cout << (N /\n100) 将输出 12 。如果N小于100,则其值为 0 。(  )",
+      "stem": "在C++代码中,假设N为正整数且大于100,则N / 100 将舍弃个位和十位,如N为1234则cout << (N /\n100) 将输出 12 。如果N小于100,则其值为 0 。(\n )",
       "options": [
         {
           "key": "T",
@@ -393,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "下列C++代码执行后将输出 1 ,因为 a  确实小于 20 和 10。(  )",
+      "stem": "下列C++代码执行后将输出 1 ,因为 a 确实小于 20 和 10。(\n )\na = 5;\ncout << (a < 10 and 20);",
       "options": [
         {
           "key": "T",
@@ -409,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "下面的C++代码中变量都是整型,则执行后将输出 1 。(  )",
+      "stem": "下面的C++代码中变量都是整型,则执行后将输出 1 。(  )\nx, y, z = 5, 10, 15;\nresult = x < y < z;\ncout << result;",
       "options": [
         {
           "key": "T",
@@ -425,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下面C++代码执行时如输入 99.99 ,将输出 及格 两个汉字。(  )",
+      "stem": "下面C++代码执行时如输入 99.99 ,将输出及格两个汉字。(  )\nint score;\ncout << \"请输入学生成绩:\";\ncin >> score;\nif (score >= 60)\n    printf(\"及格\");\nelse\n    printf(\"不及格\");",
       "options": [
         {
           "key": "T",
@@ -441,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "执行下面的C++代码时输入 123 ,则输出是 DCB 。(  )\nG = (N - 1) / 9; // L1\nR = (N - 1) % 9; // L2: 保存余数\nwc += 36*G;\nif((1 <= R) && (R <= 4))\n    wc += 3*R; // L3\nelse if ((5 <= R) &&  (R <= 7))\n    wc += 4*R; // L4\nelse if(R == 8)\n    wc += 6*(R - 1); // L5\ncout << wc << endl;\n\n\n\n\n\n\n\n\n\n\n\na = 5;\ncout << (a < 10 and 20);\n\n\nx, y, z = 5, 10, 15;\nresult = x < y < z;\ncout << result;\n\n\n\nint score;\ncout << \"请输入学生成绩:\";\ncin >> score;\nif (score >= 60)\n    printf(\"及格\");\nelse\n    printf(\"不及格\");\n\n\n\n\n\n\n\nint a;\ncin >> a;\nwhile(a){\n    cout << 'A'+a%10;\n    a /= 10;\n}",
+      "stem": "执行下面的C++代码时输入123 ,则输出是DCB 。(\n )\nint a;\ncin >> a;\nwhile(a){\n    cout << 'A'+a%10;\n    a /= 10;\n}",
       "options": [
         {
           "key": "T",
@@ -457,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面的 C++ 代码执行后将输出  +#+#3#。(   )",
+      "stem": "下面的C++代码执行后将输出 +#+#3# 。(  )\nint i;\nfor (i = 0; i < 3; i++){\n    if (i == 2)\n        continue;\n    printf(\"+#\");\n}\ncout << i << '#';",
       "options": [
         {
           "key": "T",
@@ -473,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下列 C++ 代码用于求斐波那契数列,即第 1 个数 0 ,第 2 个数 1 ,从第三个数开始,是前两个数之和。如果输入\n的值为大于 1 的正整数,该代码能实现。(   )",
+      "stem": "下列C++代码用于求斐波那契数列,即第1个数0,第2个数1,从第三个数开始,是前两个数之和。如果输入\n的值为大于1的正整数,该代码能实现。(  )\ncin >> n;\na = 0, b = 1;\nfor (int j = 0; j < n; j++){\n    cout << a << \" \";\n    b = b + a;\n    a = b - a;\n}",
       "options": [
         {
           "key": "T",
@@ -489,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下面的 C++ 不能实现如下输出,但如果将 L1 标记的cout << 0行移动if块外面,或者说移动到  L2 标记\n行,则可以。(   )",
+      "stem": "下面的C++不能实现如下输出,但如果将L1标记的cout << 0 行移动if 块外面,或者说移动到 L2 标记\n行,则可以。(  )\n请输入矩阵大小n: 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint n, i, j;\ncout << \"请输入矩阵大小n: \";\ncin >> n;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfor (i = 0; i < n; i++){\n    for  (j = 0; j < n; j++){\n        if (i == j){\n            cout << i + 1;\n            continue;\n            cout << 0; // L1\n        }\n        // L2\n    }\n    printf(\"\\n\");\n}",
       "options": [
         {
           "key": "T",
@@ -505,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "C++ 代码cout << ('5'+4); 执行后的输出为  9。 (  )\nint i;\nfor (i = 0; i < 3; i++){\n    if (i == 2)\n        continue;\n    printf(\"+#\");\n}\ncout << i << '#';\n\n\n\n\n\n\n\ncin >> n;\na = 0, b = 1;\nfor (int j = 0; j < n; j++){\n    cout << a << \" \";\n    b = b + a;\n    a = b - a;\n}\n\n\n\n\n\n\n\n请输入矩阵大小 n: 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint n, i, j;\ncout << \" 请输入矩阵大小 n: \";\ncin >> n;\nfor (i = 0; i < n; i++){\n    for  (j = 0; j < n; j++){\n        if (i == j){\n            cout << i + 1;\n            continue;\n            cout << 0; // L1\n        }\n        // L2\n    }\n    printf(\"\\n\");\n}",
+      "stem": "C++代码cout << ('5'+4); 执行后的输出为 9 。(  )",
       "options": [
         {
           "key": "T",
@@ -521,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -529,27 +537,45 @@
       "seq": 1,
       "kind": "traditional",
       "title": "优美的数字",
-      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1 题目描述\n如果一个正整数在十进制下的所有数位都相同,小 A 就会觉得这个正整数很优美。例如,正整数  的数位都是 ,\n所以  是优美的。正整数  的数位都是 ,所以  是优美的。正整数  的数位不都相同,所以  并不优美。\n小 A 想知道不超过  的正整数中有多少优美的数字。你能帮他数一数吗?\n3.1.2\n\n输入格式\n一行,一个正整数 。\n3.1.3 输出格式\n一行,一个正整数,表示不超过  的优美正整数的数量。\n3.1.4 样例\n3.1.4.1 输入样例 1\n3.1.4.2 输出样例 1\n3.1.4.3 输入样例 2\n3.1.4.4 输出样例 2\n3.1.5 数据范围\n对于所有测试点,保证 。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n如果一个正整数在十进制下的所有数位都相同,小 A 就会觉得这个正整数很优美。例如,正整数  的数位都是 ,\n所以  是优美的。正整数\n 的数位都是 ,所以\n 是优美的。正整数\n 的数位不都相同,所以\n 并不优美。\n小 A 想知道不超过  的正整数中有多少优美的数字。你能帮他数一数吗?\n3.1.2\n\n输入格式\n一行,一个正整数 。\n3.1.3\n输出格式\n一行,一个正整数,表示不超过  的优美正整数的数量。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n\n3.1.4.4\n输出样例 2\n\n3.1.5\n数据范围\n对于所有测试点,保证\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "6\n",
+          "out": "6\n",
+          "suspect": false
+        },
+        {
+          "in": "2025\n",
+          "out": "28\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <algorithm>\n#include <cstdio>\nusing namespace std;\nint n, ans;\nint main() {\n    scanf(\"%d\", &n);\n    for (int i = 1; i <= n; i++) {\n\nint v = i % 10, t = i / 10, chk = 1;\nwhile (t) {\n            if (t % 10 != v) chk = 0;\n            t /= 10;\n        }\n        ans += chk;\n    }\n    printf(\"%d\\n\", ans);\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "菱形",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小  A 想绘制一个菱形。具体来说,需要绘制的菱形是一个   行   列的字符画,  是一个大于   的奇数。菱形的四个\n顶点依次位于第   行、第   列、第   行、第   列的正中间,使用  # 绘制。相邻顶点之间也用  # 连接。其余位置都\n是  .。例如,一个   行   列的菱形字符画是这样的:\n给定  ,请你帮小  A 绘制对应的菱形。\n3.2.2\n\n输入格式\n一行,一个正整数  。\n3.2.3 输出格式\n输出共   行,表示对应的菱形。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n            if (t % 10 != v) chk = 0;\n            t /= 10;\n        }\n        ans += chk;\n    }\n    printf(\"%d\\n\", ans);\n    return 0;\n}\n\n..#..\n.#.#.\n#...#\n.#.#.\n..#..\n\n.#.\n#.#\n.#.\n\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于所有测试点,保证   并且   为奇数。\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n小 A 想绘制一个菱形。具体来说,需要绘制的菱形是一个  行  列的字符画, 是一个大于  的奇数。菱形的四个\n顶点依次位于第  行、第  列、第  行、第  列的正中间,使用 # 绘制。相邻顶点之间也用 # 连接。其余位置都\n是 . 。例如,一个  行  列的菱形字符画是这样的:\n..#..\n.#.#.\n#...#\n.#.#.\n..#..\n\n给定 ,请你帮小 A 绘制对应的菱形。\n3.2.2\n\n输入格式\n一行,一个正整数 。\n3.2.3\n输出格式\n输出共  行,表示对应的菱形。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n\n3.2.4.2\n输出样例 1\n.#.\n#.#\n.#.\n\n3.2.4.3\n输入样例 2\n\n3.2.4.4\n输出样例 2\n....#....\n...#.#...\n..#...#..\n.#.....#.\n#.......#\n.#.....#.\n..#...#..\n...#.#...\n....#....\n\n3.2.5\n数据范围\n对于所有测试点,保证\n 并且  为奇数。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "16\n17\n18\n19\n20\n",
-          "out": "3\n",
-          "suspect": true
+          "in": "3\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "2\n3\n9\n1\n",
+          "out": "5\n",
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <algorithm>\n#include <cstdio>\nusing namespace std;\nint main() {\n    int n, i, j, k;\n    scanf(\"%d\", &n);\n    k = n / 2;\n    for (i = 1; i <= n; i++) {\n        for (j = 1; j <= n; j++) {\n            if (abs(k - i + 1) + abs(k - j + 1) == k)\n                printf(\"#\");\n            else\n                printf(\".\");\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -568,8 +594,8 @@
       "C",
       "A",
       "A",
-      "D",
-      "C"
-    ]
+      "D"
+    ],
+    []
   ]
 }

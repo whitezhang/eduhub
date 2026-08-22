@@ -3,16 +3,16 @@
     "ym": "202506",
     "lang": "python",
     "level": 2,
-    "title": "CCF GESP 2025年6月认证 Python 2级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1687196140568608.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202506-python-2.pdf"
+    "title": "202506-python-2",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202506-python-2.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2025 年 4 月 19 日在北京举行了一场颇为瞩目的人形机器人半程马拉松赛。比赛期间,跑动着的机器人会利用\n身上安装的多个传感器所反馈的数据来调整姿态、保持平衡等,那么这类传感器类似于计算机的 (   ) 。",
+      "stem": "2025年4月19日在北京举行了一场颇为瞩目的人形机器人半程马拉松赛。比赛期间,跑动着的机器人会利用\n身上安装的多个传感器所反馈的数据来调整姿态、保持平衡等,那么这类传感器类似于计算机的(   )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是(  )。",
+      "stem": "下面Python代码执行后的输出是( )。\na, b, c = 3, 4, 5\nprint(a ** 2 + b * b == c ** 2)\n1\n2",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面 Python 代码用于获得正整数的第 3 位数,如 1234 则输出 2 。如果是一位数或两位数,则输出 0 。横线处应\n填入的代码是 (  ) 。\na, b, c = 3, 4, 5\nprint(a ** 2 + b * b == c ** 2)\n1\n2\nN = int(input(\" 请输入正整数 :\"))\nprint(________________)\n1\n2",
+      "stem": "下面Python代码用于获得正整数的第3位数,如1234则输出2。如果是一位数或两位数,则输出0。横线处应\n填入的代码是(\n )。\nN = int(input(\"请输入正整数:\"))\nprint(________________)\n1\n2",
       "options": [
         {
           "key": "A",
@@ -108,23 +108,23 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面的 Python 代码用于判断输入的正整数 N 是否为质数,其说法正确的是 (  ) 。",
+      "stem": "下面的Python代码用于判断输入的正整数N是否为质数,其说法正确的是( )。\nN = int(input(\"请输入正整数:\"))\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\nif N <= 1:\n    print(f\"{N}不是质数\")\nelif N == 2:\n    print(f\"{N}是质数\")\nelif N % 2 == 0 or N % 3 == 0:\n    print(f\"{N}不是质数\")\nelse:\n    for i in range(2, N):\n        if N % i == 0:\n           print(f\"{N}不是质数\")\n           break\n    else:\n        print(f\"{N}是质数\")",
       "options": [
         {
           "key": "A",
-          "text": "如果输入 2 ,则将先输出2 是质数,然后输出2 不是质数,因此程序存在错误"
+          "text": "如果输入2,则将先输出2是质数,然后输出2不是质数,因此程序存在错误"
         },
         {
           "key": "B",
-          "text": "删除 break ,对程序执行结果没有影响"
+          "text": "删除break,对程序执行结果没有影响"
         },
         {
           "key": "C",
-          "text": "每个 if 语句只能有一个 elif 子句,所以本程序有语法错误"
+          "text": "每个if语句只能有一个elif子句,所以本程序有语法错误"
         },
         {
           "key": "D",
-          "text": "如果输入 15 ,程序中的循环不会被执行"
+          "text": "如果输入15,程序中的循环不会被执行"
         }
       ],
       "answer": "D"
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "今天星期六,其后第 N 天星期几?如果是星期一到星期六输出形如:星期 1 、星期 2 等,星期天则输出星期\n天。下面的 Python 代码用于完成上述要求,横线处应填上的代码是 (  ) 。",
+      "stem": "今天星期六,其后第N天星期几?如果是星期一到星期六输出形如:星期1、星期2等,星期天则输出星期\n天。下面的Python代码用于完成上述要求,横线处应填上的代码是(\n )。\nN = int(input())\n1\n2\n3\n4\n5\n6\n7\nremainder = __________________\nif remainder == 0:\n    print(f\"星期六后第{N}天是星期天\")\nelse:\n    print(f\"星期六后第{N}天是星期{remainder}\")",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面的 Python 代码执行后其输出是 (  ) 。\nN = int(input(\" 请输入正整数: \"))\nif N <= 1:\n    print(f\"{N}不是质数 \")\nelif N == 2:\n    print(f\"{N}是质数 \")\nelif N % 2 == 0 or N % 3 == 0:\n    print(f\"{N}不是质数 \")\nelse:\n    for i in range(2, N):\n        if N % i == 0:\n           print(f\"{N}不是质数 \")\n           break\n    else:\n        print(f\"{N}是质数 \")\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\nN = int(input())\nremainder = __________________\nif remainder == 0:\n    print(f\" 星期六后第{N}天是星期天 \")\nelse:\n    print(f\" 星期六后第{N}天是星期{remainder}\")\n1\n2\n3\n4\n5\n6\n7",
+      "stem": "下面的Python代码执行后其输出是(\n )。\nSum = 0\nfor i in range(1, 10):\n    Sum += i\n    if i % 2:\n        continue\n    if i % 7:\n        break\nprint(Sum)\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后其输出是 (  ) 。",
+      "stem": "下面Python代码执行后其输出是( )。\nfor i in range(1, 12):\n    for j in range(1, i):\n        if i * j % 2 == 1:\n            break\nelse:\n    print(i * j)\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是 (  ) 。",
+      "stem": "下面Python代码执行后输出是(\n )。\ncnt = 0\nfor i in range(-99, 100, 2):\n    cnt = 1 + cnt\nprint(cnt)\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是(      )。\nSum = 0\nfor i in range(1, 10):\n    Sum += i\n    if i % 2:\n        continue\n    if i % 7:\n        break\nprint(Sum)\n1\n2\n3\n4\n5\n6\n7\n8\nfor i in range(1, 12):\n    for j in range(1, i):\n        if i * j % 2 == 1:\n            break\nelse:\n    print(i * j)\n1\n2\n3\n4\n5\n6\ncnt = 0\nfor i in range(-99, 100, 2):\n    cnt = 1 + cnt\nprint(cnt)\n1\n2\n3\n4\nfor i in range(1, 10):\n    if i % 3 != 0:\n        print(\"A\", end = \"#\")\n        continue\n    else:\n        break\n    print(\"0\", end = \"#\")\nelse:\n    print(\"1\")\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+      "stem": "下面Python代码执行后输出是(     )。\nfor i in range(1, 10):\n    if i % 3 != 0:\n        print(\"A\", end = \"#\")\n        continue\n    else:\n        break\n    print(\"0\", end = \"#\")\nelse:\n    print(\"1\")\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是(      )。",
+      "stem": "下面Python代码执行后的输出是(     )。\nfor i in range(3):\n    for j in range(i):\n        print(i, j, end = \"-\", sep = '#')\nprint(\"END\")\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后,将输出不能被 3 整除且除以 5 余数为 2 的数。下列选项不能实现的是( )。",
+      "stem": "下面Python代码执行后,将输出不能被3整除且除以5余数为2的数。下列选项不能实现的是(\n)。\nfor i in range(100):\n    if ___________________________:\n        print(i)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -300,19 +300,23 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面 Python 代码用于判断一个大于 0 的正整数是几位数,横线处应填入代码先后是(     )。\n\n```\nfor i in range(3): for j in range(i): print(i, j, end = \"-\", sep = '#') print(\"END\") for i in range(100): if ___________________________: print(i) N = int(input(\" 请输入大于 0 的正整数: \")) cnt = 0 while __________: cnt += 1 ____________ print(cnt) N > 1 N = N // 10 N > 0 N /= 10\n```",
+      "stem": "下面Python代码用于判断一个大于0的正整数是几位数,横线处应填入代码先后是(    )。\nN = int(input(\"请输入大于0的正整数:\"))\n1\n2\n3\n4\n5\n6\n7\ncnt = 0\nwhile __________:\n    cnt += 1\n    ____________\nprint(cnt)",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "N > 1 N = N // 10"
+        },
+        {
+          "key": "B",
+          "text": "N > 0 N /= 10"
         },
         {
           "key": "C",
-          "text": ""
+          "text": "N == 0 N //= 10"
         },
         {
           "key": "D",
-          "text": ""
+          "text": "N > 0 N //= 10"
         }
       ],
       "answer": "D"
@@ -320,11 +324,11 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "判断一个数是否为自守数。自守数的定义是如果一个数的平方其尾数与该数相同,则为自守数,如 25 的平\n方是 625 ,其尾数是 25 ,所以 25 是自守数。相关说法错误的是(     )。",
+      "stem": "判断一个数是否为自守数。自守数的定义是如果一个数的平方其尾数与该数相同,则为自守数,如25的平\n方是625,其尾数是25,所以25是自守数。相关说法错误的是(    )。\nN = int(input(\"输入一个正整数:\"))\nN1, M1 = N, N * N\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nFlag = True\nwhile N1 > 0:\n    if N1 % 10 != M1 % 10:\n        Flag = False\n        break\n    else:\n        N1, M1 = N1 // 10, M1 // 10\nif Flag == True:\n    print(f\"{N}的平方是{N * N},是自守数\")\nelse:\n    print(f\"{N}的平方是{N * N},不是自守数\")",
       "options": [
         {
           "key": "A",
-          "text": "如果 Flag 在循环中不被改为 False ,则说明该数是自守数"
+          "text": "如果Flag在循环中不被改为False,则说明该数是自守数"
         },
         {
           "key": "B",
@@ -344,15 +348,15 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面 Python 代码实现输出如下图形,相关说法错误的是(     )。",
+      "stem": "下面Python代码实现输出如下图形,相关说法错误的是(    )。\nline_number = int(input(\"请输入层数:\"))\nnow_number = 0\nfor row in range(1, line_number + 1):\n    for i in range(row):\n        print(now_number, end = \"\")\n        now_number += 1\n        if now_number == 10:\n            now_number = 0\n    print()\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
-          "text": "代码now_number = 0 移动到外层循环之下,内层循环之上,且与内层循环的 for 对齐,效果维持不变"
+          "text": "代码now_number = 0 移动到外层循环之下,内层循环之上,且与内层循环的for对齐,效果维持不变"
         },
         {
           "key": "B",
-          "text": "代码now_number += 1 修改为now_number = 1 + now_number 效果维持不变 N == 0 N //= 10 N > 0 N //= 10 N = int(input(\" 输入一个正整数: \")) N1, M1 = N, N * N Flag = True while N1 > 0: if N1 % 10 != M1 % 10: Flag = False break else: N1, M1 = N1 // 10, M1 // 10 if Flag == True: print(f\"{N}的平方是{N * N}, 是自守数 \") else: print(f\"{N}的平方是{N * N}, 不是自守数 \") line_number = int(input(\" 请输入层数 :\")) now_number = 0 for row in range(1, line_number + 1): for i in range(row): print(now_number, end = \"\") now_number += 1 if now_number == 10: now_number = 0 print() 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "代码now_number += 1 修改为now_number = 1 + now_number 效果维持不变"
         },
         {
           "key": "C",
@@ -360,7 +364,7 @@
         },
         {
           "key": "D",
-          "text": "将最后一行的 print() 修改为 print(\"\") ,效果维持不变"
+          "text": "将最后一行的print()修改为print(\"\"),效果维持不变"
         }
       ],
       "answer": "A"
@@ -370,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "现在,人们参加各种闭卷考试时通常都不允许将智能手机、平板电脑等带入考场,因为智能手表通常都有嵌\n入操作系统及通信等功能,所以也不允许携带入考场。(   )",
+      "stem": "现在,人们参加各种闭卷考试时通常都不允许将智能手机、平板电脑等带入考场,因为智能手表通常都有嵌\n入操作系统及通信等功能,所以也不允许携带入考场。(  )",
       "options": [
         {
           "key": "T",
@@ -381,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在 Python 代码中,假设 N 为正整数,如果 N 小于 10 ,则N // 10 其值为 0 ,大于 10 则是舍弃个位数的数。 (  )",
+      "stem": "在Python代码中,假设N为正整数,如果N小于10,则N // 10 其值为0,大于10则是舍弃个位数的数。(\n )",
       "options": [
         {
           "key": "T",
@@ -397,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "下列 Python 代码执行后,其输出为3 2 1 。 (  )",
+      "stem": "下列Python代码执行后,其输出为3 2 1 。(\n )\na, b, c = 1, 2, 3\na, b, c = c, b, a\nprint(a, b, c)",
       "options": [
         {
           "key": "T",
@@ -413,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "Python 表达式4 ** 0.5 ** 2 接近1.414 ,则说明幂运算符是右结合,即从右向左计算,先计算0.5 **\n2 ,其值与 4 进行幂运算。(   )",
+      "stem": "Python表达式4 ** 0.5 ** 2 接近1.414 ,则说明幂运算符是右结合,即从右向左计算,先计算0.5 **\n2 ,其值与4进行幂运算。(  )",
       "options": [
         {
           "key": "T",
@@ -429,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下面 Python 执行时将报错,因为变量 a 的类型从字符串型变到了整数型。  (  )",
+      "stem": "下面Python执行时将报错,因为变量a的类型从字符串型变到了整数型。 (  )\na = \"123\"\na = 456\nprint(a)",
       "options": [
         {
           "key": "T",
@@ -445,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "下面 Python 代码执行时如输入 99.99 ,将输出及格两个汉字。(   )",
+      "stem": "下面Python代码执行时如输入99.99,将输出及格两个汉字。(  )\nscore = input(\"请输入学生成绩:\")\nif score < 60:\n    print(\"不及格\")\nelse:\n    print(\"及格\")",
       "options": [
         {
           "key": "T",
@@ -461,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后,将输出 6 次CCF 。(   )",
+      "stem": "下面的Python代码执行后,将输出6次CCF 。(  )\ni, j = 0, 0\nwhile i < 3:\n    while j < 2:\n        print(\"CCF\")\n        j += 1\n    i += 1",
       "options": [
         {
           "key": "T",
@@ -477,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后将输出 200 次GESP 。(   )",
+      "stem": "下面的Python代码执行后将输出200次GESP 。(  )\nfor i in range(20):\n    for j in range(10):\n        print(\"GESP\")",
       "options": [
         {
           "key": "T",
@@ -493,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "将下面 Python 代码中的range(5, 1, -1) 调整为range(1, 5) 输出结果相同,因为 5 到 1 与 1 到 5 的求和相同。\n(   )\na, b, c = 1, 2, 3\na, b, c = c, b, a\nprint(a, b, c)\n\n\n\na = \"123\"\na = 456\nprint(a)\n\n\n\nscore = input(\" 请输入学生成绩: \")\nif score < 60:\n    print(\" 不及格 \")\nelse:\n    print(\" 及格 \")\n\n\n\n\n\ni, j = 0, 0\nwhile i < 3:\n    while j < 2:\n        print(\"CCF\")\n        j += 1\n    i += 1\n\n\n\n\n\n\nfor i in range(20):\n    for j in range(10):\n        print(\"GESP\")",
+      "stem": "将下面Python代码中的range(5, 1, -1) 调整为range(1, 5) 输出结果相同,因为5到1与1到5的求和相同。\n(  )\ntnt = 0\nfor i in range(5, 1, -1):\n    tnt += i\nprint(tnt)",
       "options": [
         {
           "key": "T",
@@ -509,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "为实现如下效果,即N 行 N 列字符。当输入是奇数时,中间列为* ,其他是- ;当输入是偶数时,则中间两\n列是* ,其他是- 。字符阵列后的代码能实现其效果。(   )",
+      "stem": "为实现如下效果,即N行N列字符。当输入是奇数时,中间列为* ,其他是- ;当输入是偶数时,则中间两\n列是* ,其他是- 。字符阵列后的代码能实现其效果。(  )\n\n--*--\n--*--\n--*--\n--*--\n--*--\n\n\n\n\n\n\nN = int(input())\n\n\n\n\n\n\n\n\n\nfor i in range(N):\n    for j in range(N):\n        if j == N // 2 or j == (N-1) // 2:\n            print(\"*\",end=\"\")\n        else:\n            print(\"-\",end=\"\")\n    print()",
       "options": [
         {
           "key": "T",
@@ -525,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -533,38 +537,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "数三角形",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n直角三角形有两条直角边与一条斜边,设两条直角边的长度分别为  ,则直角三角形的面积为  。\n请你计算当直角边长   均取不超过   的正整数时,有多少个不同的面积为整数的直角三角形。直角边长分别为\n和   的两个直角三角形相同,当且仅当   或者  。\n3.1.2\n\n输入格式\n一行,一个整数  ,表示直角边长的最大值。\n3.1.3 输出格式\n输出一行,一个整数,表示不同的直角三角形数量。\n3.1.4 样例\n3.1.4.1 输入样例  1\ntnt = 0\nfor i in range(5, 1, -1):\n    tnt += i\nprint(tnt)\n\n--*--\n--*--\n--*--\n--*--\n--*--\n\nN = int(input())\nfor i in range(N):\n    for j in range(N):\n        if j == N // 2 or j == (N-1) // 2:\n            print(\"*\",end=\"\")\n        else:\n            print(\"-\",end=\"\")\n    print()\n\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于所有测试点,保证  。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n直角三角形有两条直角边与一条斜边,设两条直角边的长度分别为\n,则直角三角形的面积为\n。\n请你计算当直角边长\n 均取不超过  的正整数时,有多少个不同的面积为整数的直角三角形。直角边长分别为\n和\n 的两个直角三角形相同,当且仅当\n 或者\n。\n3.1.2\n\n输入格式\n一行,一个整数 ,表示直角边长的最大值。\n3.1.3\n输出格式\n输出一行,一个整数,表示不同的直角三角形数量。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n\n3.1.4.4\n输出样例 2\n\n3.1.5\n数据范围\n对于所有测试点,保证\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "2\n3\n4\n5\n",
-          "out": "5\n",
+          "in": "3\n",
+          "out": "3\n",
           "suspect": false
         },
         {
-          "in": "6\n",
-          "out": "2\n",
+          "in": "5\n",
+          "out": "9\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "n = int(input())\ntotal = 0\nfor a in range(1, n + 1):\n    for b in range(a, n + 1):\n        if a * b % 2 == 0:\n            #确保面积为整数\n            total += 1\nprint(total)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "幂和数",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n对于正整数  ,如果   可以表为两个   的次幂之和,即  (  均为非负整数),那么称   为幂和数。\n给定正整数  ,请你求出满足   的整数   中有多少个幂和数。\n3.2.2\n\n输入格式\n一行,两个正整数  ,含义如上。\n3.2.3 输出格式\n输出一行,一个整数,表示   之间幂和数的数量。\n3.2.4 样例\n3.2.4.1 输入样例  1\n\nn = int(input())\ntotal = 0\nfor a in range(1, n + 1):\n    for b in range(a, n + 1):\n        if a * b % 2 == 0:\n            # 确保面积为整数\n            total += 1\nprint(total)\n\n2 81\n\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于所有测试点,保证  。\n3.2.6",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n对于正整数 ,如果  可以表为两个  的次幂之和,即\n(\n 均为非负整数),那么称  为幂和数。\n给定正整数\n,请你求出满足\n 的整数  中有多少个幂和数。\n3.2.2\n\n输入格式\n一行,两个正整数\n,含义如上。\n3.2.3\n输出格式\n输出一行,一个整数,表示\n 之间幂和数的数量。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n2 8\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n10 100\n\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于所有测试点,保证\n。\n3.2.6",
       "time_ms": 3000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "31\n51\n91\n",
-          "out": "4\n",
+          "in": "6\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "l, r = map(int,input().split()) # 输入两个数作为左右边界数\ntotal = 0\nfor i in range(l, r + 1):\n    x = 0\n    # 2 ** x得小于i\n    while 2 ** x <= i:\n        y = 0\n        Flag = False # 如果找到符合条件的x和y则变为True\n        # 2 ** x + 2 ** y得小于i\n        while 2 ** x + 2 ** y <= i:\n            if 2 ** x + 2 ** y == i:\n                total += 1\n                Flag = True # 找到符合条件的x和y,终止循环\n                break\n            y += 1\n        if Flag == True: # 找到了符合条件的x和y,终止循环\n            break\n        x += 1\nprint(total)"
     }
   ],
   "answer_rows": [
@@ -585,8 +591,6 @@
       "D",
       "A"
     ],
-    [
-      "C"
-    ]
+    []
   ]
 }

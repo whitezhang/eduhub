@@ -10,9 +10,9 @@ export default defineConfig({
   plugins: [vue()],
   base: "/",
   server: {
-    port: 5173,
+    port: 5171,
     proxy: {
-      "/api": "http://127.0.0.1:8080",
+      "/api": "http://127.0.0.1:8081",
     },
   },
   build: {

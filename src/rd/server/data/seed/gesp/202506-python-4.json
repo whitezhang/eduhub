@@ -3,16 +3,16 @@
     "ym": "202506",
     "lang": "python",
     "level": 4,
-    "title": "CCF GESP 2025年6月认证 Python 4级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1687196197191712.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202506-python-4.pdf"
+    "title": "202506-python-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202506-python-4.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2025 年 4 月 19 日在北京举行了一场颇为瞩目的人形机器人半程马拉松赛。比赛期间,跑动着的机器人会利用\n身上安装的多个传感器所反馈的数据来调整姿态、保持平衡等,那么这类传感器类似于计算机的 (   ) 。",
+      "stem": "2025年4月19日在北京举行了一场颇为瞩目的人形机器人半程马拉松赛。比赛期间,跑动着的机器人会利用\n身上安装的多个传感器所反馈的数据来调整姿态、保持平衡等,那么这类传感器类似于计算机的(   )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ns1 = {('a', 1), ('b', 2)}\ns2 = {('b', 2), ('a', 1)}\nt1 = (('a', 1), ('b', 2))\nt2 = (('b', 2), ('a', 1))\nprint(s1 == s2, t1 == t2)\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )\ns1 = {('a', 1), ('b', 2)}\ns2 = {('b', 2), ('a', 1)}\nt1 = (('a', 1), ('b', 2))\nt2 = (('b', 2), ('a', 1))\nprint(s1 == s2, t1 == t2)\n1\n2\n3\n4\n5",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef func(*args):\n    return sum(args) / len(args)\n1\n2\n3\n4\n5\n6\nresult = func(1, 2, 3, 4, 5)\nprint(result)",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "以下哪个函数调用是合法的?( )",
+      "stem": "以下哪个函数调用是合法的?( )\ndef func(a, b, *, c, d=0):\n    pass\n1\n2",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "执行下面Python代码后,输出的结果是?( )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\nx = 10\n1\n2\n3\n4\n5\n6\n7\n8\n9\ndef func():\n    x += 1\n    return x\nprint(func())",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "执行下面Python代码后,输出的结果是?( )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\nfunc = lambda x: x * 2 if x > 0 else x // 2\nprint(func(-4), func(4))\n1\n2",
       "options": [
         {
           "key": "A",
@@ -172,7 +172,7 @@
         },
         {
           "key": "D",
-          "text": "报错 def func(*args): return sum(args) / len(args) result = func(1, 2, 3, 4, 5) print(result) def func(a, b, *, c, d=0): pass x = 10 def func(): x += 1 return x print(func()) func = lambda x: x * 2 if x > 0 else x // 2 print(func(-4), func(4))"
+          "text": "报错"
         }
       ],
       "answer": "B"
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "执行下面Python代码后,输出的结果是?( )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef apply(func, x):\n    return func(x)\n1\n2\n3\n4\n5\n6\n7\n8\ndef square(n):\n    return n * n\nresult = apply(square, 4)\nprint(result)",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "执行下面Python代码后,会发生什么?( )",
+      "stem": "执行下面Python代码后,会发生什么?( )\ntry:\n    raise ValueError\nexcept Exception:\n    print(\"A\")\nexcept ValueError:\n    print(\"B\")\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "执行下面Python代码后,输出的结果是?( )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ntry:\nexcept ValueError:\n    print(\"A\")\nelse:\n    print(\"B\")\nprint(\"C\")\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -252,11 +252,11 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "以下哪个选项可以正确读取文件\"data.txt\"的全部内容并返回一个字符串?",
+      "stem": "以下哪个选项可以正确读取文件\"data.txt\"的全部内容并返回一个字符串?\nwith open(\"data.txt\", \"r\") as f:\n    content = ________\n1\n2",
       "options": [
         {
           "key": "A",
-          "text": "f.readlines() def apply(func, x): return func(x) def square(n): return n * n result = apply(square, 4) print(result) try: raise ValueError except Exception: print(\"A\") except ValueError: print(\"B\") try: except ValueError: print(\"A\") else: print(\"B\") print(\"C\") with open(\"data.txt\", \"r\") as f: content = ________"
+          "text": "f.readlines()"
         },
         {
           "key": "B",
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "以下哪种文件打开模式可以在不截断文件的情况下同时支持读写?(  )",
+      "stem": "以下哪种文件打开模式可以在不截断文件的情况下同时支持读写?( )",
       "options": [
         {
           "key": "A",
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "以下哪种排序算法的时间复杂度在最坏情况下是 ?(  )",
+      "stem": "以下哪种排序算法的时间复杂度在最坏情况下是\n?( )",
       "options": [
         {
           "key": "A",
@@ -324,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "执行以下代码后,输出的结果是?(  )",
+      "stem": "执行以下代码后,输出的结果是?( )\ndata = ['apple', 'Banana', 'cherry']\nprint(sorted(data))\n1\n2",
       "options": [
         {
           "key": "A",
@@ -348,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "给定一个整数数组  nums ,计算其最长递增子序列的长度。子序列可以不连续,但必须保持原数组的顺\n序。例如:nums = [10, 9, 2, 5, 3, 7, 101, 18] 的最长递增子序列是  [2, 3, 7, 101] ,长度为  4 。\n\n```\nprint(sorted(data))\n\n\ndef length_of_LIS(nums):\n    dp = [1] * len(nums)  # dp[i] 表示以  nums[i] 结尾的最长递增子序列长度\n    for i in range(1, len(nums)):\n        for j in range(i):\n            if nums[j] < nums[i]:\n                dp[i] = ________  # 填空\n    return max(dp)\n\n\n\n\n\n\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案\n```",
+      "stem": "给定一个整数数组 nums ,计算其最长递增子序列的长度。子序列可以不连续,但必须保持原数组的顺\n序。例如:nums = [10, 9, 2, 5, 3, 7, 101, 18] 的最长递增子序列是 [2, 3, 7, 101] ,长度为 4。\ndef length_of_LIS(nums):\n    dp = [1] * len(nums)  # dp[i] 表示以 nums[i] 结尾的最长递增子序列长度\n    for i in range(1, len(nums)):\n        for j in range(i):\n            if nums[j] < nums[i]:\n                dp[i] = ________  # 填空\n    return max(dp)\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -364,7 +364,7 @@
         },
         {
           "key": "D",
-          "text": "max(dp[i], dp[j] + 1) data = ['apple', 'Banana', 'cherry']"
+          "text": "max(dp[i], dp[j] + 1)"
         }
       ],
       "answer": "D"
@@ -374,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "现在,人们参加各种闭卷考试时通常都不允许将智能手机、平板电脑等带入考场,因为智能手表通常都有嵌\n入操作系统及通信等功能,所以也不允许携带入考场。(   )",
+      "stem": "现在,人们参加各种闭卷考试时通常都不允许将智能手机、平板电脑等带入考场,因为智能手表通常都有嵌\n入操作系统及通信等功能,所以也不允许携带入考场。(  )",
       "options": [
         {
           "key": "T",
@@ -385,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "执行下面 Python 代码后,输出的结果为 3 。",
+      "stem": "执行下面Python代码后,输出的结果为3。\ndata = {'ids': [1, 2], 'name': 'test'}\ndata['ids'].extend(['g', 'e', 's', 'p'])\nprint(len(data['ids']))",
       "options": [
         {
           "key": "T",
@@ -401,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "执行下面 Python 代码会报错,因为 lambda 函数不能有默认参数。",
+      "stem": "执行下面Python代码会报错,因为lambda函数不能有默认参数。\nf = lambda x, y=2: x + y\nf(1)",
       "options": [
         {
           "key": "T",
@@ -417,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "执行下面 Python 代码后,输出的结果为[1, 4, 9] 。",
+      "stem": "执行下面Python代码后,输出的结果为[1, 4, 9] 。\nprint(list(map(lambda x: x**2, [1, 2, 3])))",
       "options": [
         {
           "key": "T",
@@ -433,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "执行下面 Python 代码后,将只输出  try 。",
+      "stem": "执行下面Python代码后,将只输出 try 。\ndef test():\n    try:\n        return \"try\"\n    finally:\n        print(\"finally执行了\")\n\n\n\n\n\n\n\nprint(test())",
       "options": [
         {
           "key": "T",
@@ -449,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "在 Python 中,readlines() 方法返回的文件内容包含每行末尾的换行符(\\n )。",
+      "stem": "在Python中,readlines() 方法返回的文件内容包含每行末尾的换行符(\\n )。",
       "options": [
         {
           "key": "T",
@@ -465,7 +465,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
@@ -481,7 +481,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
@@ -497,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "以下代码的时间复杂度是O(n) 。",
+      "stem": "以下代码的时间复杂度是O(n) 。\ndef func(n):\n    for i in range(n):\n        for j in range(n):\n            print(i, j)",
       "options": [
         {
           "key": "T",
@@ -513,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "以下代码的空间复杂度是O(1) 。\ndata = {'ids': [1, 2], 'name': 'test'}\ndata['ids'].extend(['g', 'e', 's', 'p'])\nprint(len(data['ids']))\n\n\n\nf = lambda x, y=2: x + y\nf(1)\n\n\nprint(list(map(lambda x: x**2, [1, 2, 3])))1\ndef test():\n    try:\n        return \"try\"\n    finally:\n        print(\"finally 执行了 \")\nprint(test())\n\n\n\n\n\n\n\ndef func(n):\n    for i in range(n):\n        for j in range(n):\n            print(i, j)\n\n\n\n\ndef sum_elements(arr):\n    total = 0\n    for num in arr:\n        total += num\n    return total",
+      "stem": "以下代码的空间复杂度是O(1) 。\ndef sum_elements(arr):\n    total = 0\n    for num in arr:\n        total += num\n    return total",
       "options": [
         {
           "key": "T",
@@ -529,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -537,38 +537,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "画布裁剪",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小  A 在高为   宽为   的矩形画布上绘制了一幅画。由于画布边缘留白太多,小  A 想适当地裁剪画布,只保留画的主\n体。具体来说,画布可以视为   行   列的字符矩阵,其中的字符均为  ASCII 码位于   之间的可见字符,小  A\n只保留画布中由第   行到第   行、第   列到第   列构成的子矩阵。\n小  A 将画布交给了你,你能帮他完成画布的裁剪吗?\n3.1.2\n\n输入格式\n第一行,两个正整数  ,分别表示画布的行数与列数。\n第二行,四个正整数  ,表示保留的行列边界。\n接下来   行,每行一个长度为   的字符串,表示画布内容。\n3.1.3 输出格式\n输出共   行,每行一个长度为   的字符串,表示裁剪后的画布。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3 5\n2 2 2 4\n.....\n.>_<.\n.....\n\n>_<1\n5 5\n1 2 3 4\nAbCdE\nfGhIk\nLmNoP\nqRsTu\nVwXyZ\n\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于所有测试点,保证  , , 。\n3.1.6",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小 A 在高为  宽为  的矩形画布上绘制了一幅画。由于画布边缘留白太多,小 A 想适当地裁剪画布,只保留画的主\n体。具体来说,画布可以视为  行  列的字符矩阵,其中的字符均为 ASCII 码位于\n 之间的可见字符,小 A\n只保留画布中由第\n 行到第\n 行、第\n 列到第\n 列构成的子矩阵。\n小 A 将画布交给了你,你能帮他完成画布的裁剪吗?\n3.1.2\n\n输入格式\n第一行,两个正整数\n,分别表示画布的行数与列数。\n第二行,四个正整数\n,表示保留的行列边界。\n接下来  行,每行一个长度为  的字符串,表示画布内容。\n3.1.3\n输出格式\n输出共\n 行,每行一个长度为\n 的字符串,表示裁剪后的画布。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n3 5\n2 2 2 4\n.....\n.>_<.\n.....\n\n3.1.4.2\n输出样例 1\n>_<\n\n3.1.4.3\n输入样例 2\n5 5\n1 2 3 4\nAbCdE\nfGhIk\nLmNoP\nqRsTu\nVwXyZ\n\n3.1.4.4\n输出样例 2\nCd\nhI\n\n3.1.5\n数据范围\n对于所有测试点,保证\n,\n,\n。\n3.1.6",
       "time_ms": 3000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "2\n3\n4\n5\n",
-          "out": "5\n",
+          "in": "1\n2\n3\n4\n5\n1\n",
+          "out": "7\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "n, m = map(int, input().split())\nx1, x2, y1, y2 = map(int, input().split())\ns = [input().strip() for _ in range(n)]\n# 遍历需要输出的行\nfor i in range(x1 - 1, x2):\n    # 对需要输出的内容进行切片\n    print(s[i][y1 - 1 : y2])"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "排序",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n体育课上有   名同学排成一队,从前往后数第   位同学的身高为  ,体重为  。目前排成的队伍看起来参差不齐,\n老师希望同学们能按照身高从高到低的顺序排队,如果身高相同则按照体重从重到轻排序。在调整队伍时,每次只\n能交换相邻两位同学的位置。老师想知道,最少需要多少次交换操作,才能将队伍调整成目标顺序。\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示队伍人数。\n接下来   行,每行两个正整数   和  ,分别表示第   位同学的身高和体重。\n3.2.3 输出格式\n输出一行,一个整数,表示最少需要的交换次数。\n3.2.4 样例\n3.2.4.1 输入样例  1\nCd\nhI\n\nn, m = map(int, input().split())\nx1, x2, y1, y2 = map(int, input().split())\ns = [input().strip() for _ in range(n)]\n# 遍历需要输出的行\nfor i in range(x1 - 1, x2):\n    # 对需要输出的内容进行切片\n    print(s[i][y1 - 1 : y2])\n\n1 60\n3 70\n2 80\n4 55\n4 50\n\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于所有测试点,保证  , 。\n3.2.6",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n体育课上有  名同学排成一队,从前往后数第  位同学的身高为\n,体重为\n。目前排成的队伍看起来参差不齐,\n老师希望同学们能按照身高从高到低的顺序排队,如果身高相同则按照体重从重到轻排序。在调整队伍时,每次只\n能交换相邻两位同学的位置。老师想知道,最少需要多少次交换操作,才能将队伍调整成目标顺序。\n3.2.2\n\n输入格式\n第一行,一个正整数 ,表示队伍人数。\n接下来  行,每行两个正整数\n 和\n,分别表示第  位同学的身高和体重。\n3.2.3\n输出格式\n输出一行,一个整数,表示最少需要的交换次数。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n\n1 60\n3 70\n2 80\n4 55\n4 50\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n\n4 0\n4 0\n2 0\n3 0\n1 0\n\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于所有测试点,保证\n,\n。\n3.2.6",
       "time_ms": 3000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "2\n",
+          "in": "5\n",
           "out": "2\n",
           "suspect": false
         },
         {
-          "in": "5\n6\n7\n8\n5\n",
-          "out": "6\n",
+          "in": "4\n5\n6\n8\n1\n5\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "n = int(input().strip())\na = []\nfor _ in range(n):\n    h, w = map(int, input().split())\n    a.append((h, w))\n# 统计最终的交换次数\nans = 0\n# 统计是否还需要继续排序\nflag = True\nwhile flag:\n    flag = False\n    i = 0\n    while i < n - 1:\n        if a[i] < a[i + 1]:\n            # 只要发生过一次交换,就还需要继续排序\n            flag = True\n            a[i], a[i + 1] = a[i + 1], a[i]\n            ans += 1\n            i += 1\nprint(ans)"
     }
   ],
   "answer_rows": [
@@ -588,6 +590,7 @@
       "D",
       "B",
       "D"
-    ]
+    ],
+    []
   ]
 }

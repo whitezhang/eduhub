@@ -3,16 +3,16 @@
     "ym": "202506",
     "lang": "python",
     "level": 6,
-    "title": "CCF GESP 2025年6月认证 Python 6级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1700548772364320.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202506-python-6.pdf"
+    "title": "202506-python-6",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202506-python-6.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "下列哪一项不是面向对象编程( OOP )的基本特征?",
+      "stem": "下列哪一项不是面向对象编程(OOP)的基本特征?",
       "options": [
         {
           "key": "A",
@@ -36,15 +36,23 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "为了让  Dog 类的构造函数能正确地调用其父类  Animal 的构造方法,横线线处应填入(    )。",
+      "stem": "为了让 Dog 类的构造函数能正确地调用其父类 Animal 的构造方法,横线线处应填入(   )。\nclass Animal:\n    def __init__(self, name: str):\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n        self.name = name\n        print(\"Animal created\")\n    def speak(self) -> None:\n           print(\"Animal speaks\")\nclass Dog(Animal):\n    ______________________________\n        print(\"Dog created\")\n    def speak(self) -> None:\n        print(\"Dog barks\")\nif __name__ == \"__main__\":\n    animal: Animal = Dog(\"Rex\", \"Labrador\")\n    animal.speak()\n\n```\ndef __init__(self, name: str, breed: str): super().__init__(name) self.breed = breed\ndef __init__(self, name: str, breed: str): self.breed = breed\ndef __init__(self, name: str, breed: str):\n```",
       "options": [
         {
           "key": "A",
-          "text": "B. class Animal: def __init__(self, name: str): self.name = name print(\"Animal created\") def speak(self) -> None: print(\"Animal speaks\") class Dog(Animal): ______________________________ print(\"Dog created\") def speak(self) -> None: print(\"Dog barks\") if __name__ == \"__main__\": animal: Animal = Dog(\"Rex\", \"Labrador\") animal.speak() def __init__(self, name: str, breed: str): super().__init__(name) self.breed = breed def __init__(self, name: str, breed: str): self.breed = breed"
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
         },
         {
           "key": "C",
-          "text": "D."
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": "self.breed = breed"
         }
       ],
       "answer": "A"
@@ -52,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "代码同上一题,代码 animal.speak() 执行后输出结果是(   )。",
+      "stem": "代码同上一题,代码animal.speak()执行后输出结果是(  )。",
       "options": [
         {
           "key": "A",
@@ -76,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "以下 Python 代码执行后其输出是(    )。",
+      "stem": "以下Python代码执行后其输出是(   )。\nfrom collections import deque\nstack = []\nqueue = deque()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n# 元素入栈/入队(1, 2, 3)\nfor i in range(1, 4):\n    stack.append(i)\n    queue.append(i)\nprint(f\"{stack[-1]} {queue[0]}\")",
       "options": [
         {
           "key": "A",
@@ -100,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "在一个使用列表实现的循环队列中, front 表示队头元素的位置(索引), rear 表示队尾元素的下一个插入位\n置(索引),队列的最大容量为  maxSize 。那么判断队列已满的条件是(  )",
+      "stem": "在一个使用列表实现的循环队列中,front 表示队头元素的位置(索引),rear 表示队尾元素的下一个插入位\n置(索引),队列的最大容量为 maxSize。那么判断队列已满的条件是( )",
       "options": [
         {
           "key": "A",
@@ -124,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "在二叉树中,只有最底层的节点未被填满,且最底层节点尽量靠左填充的是(     )。",
+      "stem": "在二叉树中,只有最底层的节点未被填满,且最底层节点尽量靠左填充的是(    )。",
       "options": [
         {
           "key": "A",
@@ -140,7 +148,7 @@
         },
         {
           "key": "D",
-          "text": "平衡二叉树 def __init__(self, name: str, breed: str):1 self.breed = breed1 from collections import deque stack = [] queue = deque() # 元素入栈 / 入队( 1, 2, 3 ) for i in range(1, 4): stack.append(i) queue.append(i) print(f\"{stack[-1]} {queue[0]}\")"
+          "text": "平衡二叉树"
         }
       ],
       "answer": "B"
@@ -148,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "在使用数组表示完全二叉树时,如果一个节点的索引为(从 开始计数),那么其左子节点的索引通常是(\n)。",
+      "stem": "在使用数组表示完全二叉树时,如果一个节点的索引为(从开始计数),那么其左子节点的索引通常是(\n)。",
       "options": [
         {
           "key": "A",
@@ -164,7 +172,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "已知一棵二叉树的前序遍历序列为  GDAFEMHZ ,中序遍历序列为  ADFGEHMZ ,则其后序遍历序列为(    )。",
+      "stem": "已知一棵二叉树的前序遍历序列为 GDAFEMHZ ,中序遍历序列为 ADFGEHMZ ,则其后序遍历序列为(   )。",
       "options": [
         {
           "key": "A",
@@ -188,15 +196,23 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "设有字符集  {a, b, c, d, e} ,其出现频率分别为  {5, 8, 12, 15, 20} ,得到的哈夫曼编码为(    )。",
+      "stem": "设有字符集 {a, b, c, d, e},其出现频率分别为 {5, 8, 12, 15, 20},得到的哈夫曼编码为(   )。",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "a: 010 b: 011 c: 00 d: 10 e: 11"
+        },
+        {
+          "key": "B",
+          "text": "a: 00 b: 10 c: 011 d: 100 e: 111"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "a: 10 b: 01 c: 011 d: 100 e: 111"
+        },
+        {
+          "key": "D",
+          "text": "a: 100 b: 01 c: 011 d: 100 e: 00"
         }
       ],
       "answer": "A"
@@ -204,7 +220,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "3 位格雷编码中,编码  101 之后的下一个编码是(    )。",
+      "stem": "3位格雷编码中,编码 101 之后的下一个编码是(   )。",
       "options": [
         {
           "key": "A",
@@ -212,7 +228,7 @@
         },
         {
           "key": "B",
-          "text": "a: 010 b: 011 c: 00 d: 10 e: 11 a: 00 b: 10 c: 011 d: 100 e: 111 a: 10 b: 01 c: 011 d: 100 e: 111 a: 100 b: 01 c: 011 d: 100 e: 00"
+          "text": ""
         },
         {
           "key": "C",
@@ -228,15 +244,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "请将下列 Python 实现的深度优先搜索(DFS)代码补充完整,横线处应填入(   )。",
+      "stem": "请将下列 Python 实现的深度优先搜索(DFS)代码补充完整,横线处应填入(   )。\nfrom typing import List, Optional\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef dfs_preorder(root: Optional[TreeNode], result: List[int]) -> None:\n    if root is None:\n        return\n    _____________________________",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "result.append(root.val) dfs_preorder(root.left, result) dfs_preorder(root.right, result)"
+        },
+        {
+          "key": "B",
+          "text": "result.append(root.val) dfs_preorder(root.left, result)"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "result.append(root.val) dfs_preorder(root.right, result)"
+        },
+        {
+          "key": "D",
+          "text": "dfs_preorder(root.left, result) dfs_preorder(root.right, result)"
         }
       ],
       "answer": "A"
@@ -244,15 +268,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "给定一个二叉树,返回每一层中最大的节点值,结果以数组形式返回,横线处应填入(   )。\nfrom typing import List, Optional\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef dfs_preorder(root: Optional[TreeNode], result: List[int]) -> None:\n    if root is None:\n        return\n    _____________________________\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n    result.append(root.val)\n    dfs_preorder(root.left, result)\n    dfs_preorder(root.right, result)\n1\n2\n3\n    result.append(root.val)\n    dfs_preorder(root.left, result)\n1\n2\n    result.append(root.val)\n    dfs_preorder(root.right, result)\n1\n2\n    dfs_preorder(root.left, result)\n    dfs_preorder(root.right, result)\n1\n2\nfrom collections import deque\nimport math\nfrom typing import List, Optional\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef largestValues(root: Optional[TreeNode]) -> List[int]:\n    result = []\n    if not root:\n        return result\n    queue = deque([root])\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18",
+      "stem": "给定一个二叉树,返回每一层中最大的节点值,结果以数组形式返回,横线处应填入(   )。\nfrom collections import deque\nimport math\nfrom typing import List, Optional\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef largestValues(root: Optional[TreeNode]) -> List[int]:\n    result = []\n    if not root:\n        return result\n    queue = deque([root])\n    while queue:\n        level_size = len(queue)\n        max_val = -math.inf\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n        for _ in range(level_size):\n            ________________________\n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        result.append(max_val)\n    return result",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "node = queue.popright() max_val = max(max_val, node.val)"
+        },
+        {
+          "key": "B",
+          "text": "node = queue.popleft()"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "max_val = max(max_val, node.val)"
+        },
+        {
+          "key": "D",
+          "text": "node = queue.popleft() max_val = max(max_val, node.val)"
         }
       ],
       "answer": "D"
@@ -260,15 +292,23 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面代码实现一个二叉排序树的插入函数(没有相同的数值),横线处应填入(    )。",
+      "stem": "下面代码实现一个二叉排序树的插入函数(没有相同的数值),横线处应填入(   )。\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\ndef insert(root, key):\n    if root is None:\n        return TreeNode(key)\n    ___________________________\n    return root",
       "options": [
         {
           "key": "A",
-          "text": "B. while queue: level_size = len(queue) max_val = -math.inf for _ in range(level_size): ________________________ if node.left: queue.append(node.left) if node.right: queue.append(node.right) result.append(max_val) return result node = queue.popright() max_val = max(max_val, node.val) node = queue.popleft()1 max_val = max(max_val, node.val)1 node = queue.popleft() max_val = max(max_val, node.val) class TreeNode: def __init__(self, val=0, left=None, right=None): self.val = val self.left = left self.right = right def insert(root, key): if root is None: return TreeNode(key) ___________________________ return root if key < root.val: root.left = insert(root.left, key) elif key > root.val: root.right = insert(root.right, key) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "if key < root.val: root.left = insert(root.left, key) elif key > root.val: root.right = insert(root.right, key)"
+        },
+        {
+          "key": "B",
+          "text": "if key > root.val: root.left = insert(root.left, key) elif key > root.val: root.right = insert(root.right, key)"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "if key < root.val: root.left = insert(root.left, key) elif key >= root.val: root.right = insert(root.left, key)"
+        },
+        {
+          "key": "D",
+          "text": "if key < root.val: root.left = insert(root.right, key) elif key > root.val: root.right = insert(root.left, key)"
         }
       ],
       "answer": "A"
@@ -276,7 +316,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "以下关于动态规划算法特性的描述,正确的是(    )。",
+      "stem": "以下关于动态规划算法特性的描述,正确的是(   )。",
       "options": [
         {
           "key": "A",
@@ -300,7 +340,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "给定 个物品和一个最大承重为 的背包,每个物品有一个重量 和价值 ,每个物品只能选择放或\n不放。目标是选择若干个物品放入背包,使得总价值最大,且总重量不超过 。关于下面代码,说法正确的是(\n)。",
+      "stem": "给定个物品和一个最大承重为\n的背包,每个物品有一个重量\n和价值\n,每个物品只能选择放或\n不放。目标是选择若干个物品放入背包,使得总价值最大,且总重量不超过\n。关于下面代码,说法正确的是(\n)。\ndef knapsack1D(W: int, wt: list[int], val: list[int], n: int) -> int:\n    dp = [0] * (W + 1)\n1\n2\n3\n4\n5\n6\n7\n8\n    for i in range(n):\n        for w in range(W, wt[i] - 1, -1):\n            dp[w] = max(dp[w], dp[w - wt[i]] + val[i])\n    return dp[W]",
       "options": [
         {
           "key": "A",
@@ -337,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "给定一组字符及其出现的频率,构造出的哈夫曼树是唯一的。\n   if key > root.val:\n        root.left = insert(root.left, key)\n    elif key > root.val:\n        root.right = insert(root.right, key)\n\n\n\n\n   if key < root.val:\n        root.left = insert(root.left, key)\n    elif key >= root.val:\n        root.right = insert(root.left, key)\n\n\n\n\n   if key < root.val:\n        root.left = insert(root.right, key)\n    elif key > root.val:\n        root.right = insert(root.left, key)\n\n\n\n\ndef knapsack1D(W: int, wt: list[int], val: list[int], n: int) -> int:\n    dp = [0] * (W + 1)\n    for i in range(n):\n        for w in range(W, wt[i] - 1, -1):\n            dp[w] = max(dp[w], dp[w - wt[i]] + val[i])\n    return dp[W]",
+      "stem": "给定一组字符及其出现的频率,构造出的哈夫曼树是唯一的。",
       "options": [
         {
           "key": "T",
@@ -353,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "为了实现一个队列,使其出队操作(pop )的时间复杂度为 并且避免数组删除首元素的 问题,一\n种常见且有效的方法是使用环形数组,通过调整队首和队尾指针来实现。",
+      "stem": "为了实现一个队列,使其出队操作(pop )的时间复杂度为\n并且避免数组删除首元素的\n问题,一\n种常见且有效的方法是使用环形数组,通过调整队首和队尾指针来实现。",
       "options": [
         {
           "key": "T",
@@ -369,7 +409,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
@@ -385,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "如果二叉搜索树在连续的插入和删除操作后,所有节点都偏向一侧,导致其退化为类似于链表的结构,这时\n其查找、插入、删除操作的时间复杂度会从理想情况下的 退化到 。",
+      "stem": "如果二叉搜索树在连续的插入和删除操作后,所有节点都偏向一侧,导致其退化为类似于链表的结构,这时\n其查找、插入、删除操作的时间复杂度会从理想情况下的\n退化到\n。",
       "options": [
         {
           "key": "T",
@@ -401,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "执行下列代码,my_dog.name 的最终值是  Charlie 。",
+      "stem": "执行下列代码,my_dog.name 的最终值是 Charlie 。\nclass Dog:\n    def __init__(self, name):\n        self.name = name\n\n\n\n\n\n\n\nif __name__ == \"__main__\":\n    my_dog = Dog(\"Buddy\")\n    my_dog.name = \"Charlie\"",
       "options": [
         {
           "key": "T",
@@ -417,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下列  python 代码可以成功执行,并且子类  Child 的实例能通过其成员函数访问父类  Parent 的属性\nvalue 。",
+      "stem": "下列 python 代码可以成功执行,并且子类 Child 的实例能通过其成员函数访问父类 Parent 的属性\nvalue 。\nclass Parent:\n    def __init__(self):\n        self._value = 100\n\n\n\n\n\n\n\nclass Child(Parent):\n    def get_protected_val(self):\n        return self._value",
       "options": [
         {
           "key": "T",
@@ -433,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下列代码中的  tree 列表,表示的是一棵完全二叉树  (-1 代表空节点 ) 按照层序遍历的结果。",
+      "stem": "下列代码中的 tree 列表,表示的是一棵完全二叉树 ( -1 代表空节点)按照层序遍历的结果。\ntree = [1, 2, 3, 4, -1, 6, 7]",
       "options": [
         {
           "key": "T",
@@ -449,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在树的深度优先搜索( DFS )中,可以使用栈作为辅助数据结构以实现 “ 先进后出 ” 的访问顺序。",
+      "stem": "在树的深度优先搜索(DFS)中,可以使用栈作为辅助数据结构以实现“先进后出”的访问顺序。",
       "options": [
         {
           "key": "T",
@@ -465,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面代码采用动态规划求解零钱兑换问题:给定 种硬币,第i 种硬币的面值为coins [ i  − 1] ,目标金额为\namt ,每种硬币可以重复选取,求能够凑出目标金额的最少硬币数量;如果不能凑出目标金额,返回-1 。\nclass Dog:\n    def __init__(self, name):\n        self.name = name\nif __name__ == \"__main__\":\n    my_dog = Dog(\"Buddy\")\n    my_dog.name = \"Charlie\"\n\n\n\n\n\n\n\nclass Parent:\n    def __init__(self):\n        self._value = 100\nclass Child(Parent):\n    def get_protected_val(self):\n        return self._value\n\n\n\n\n\n\n\ntree = [1, 2, 3, 4, -1, 6, 7]1\ndef coinChangeDPComp(coins: list[int], amt: int) -> int:\n    n = len(coins)\n    MAX = amt + 1\n    dp = [MAX] * (amt + 1)\n    dp[0] = 0\n    for i in range(1, n + 1):\n        for a in range(1, amt + 1):\n            if coins[i - 1] > a:\n                dp[a] = dp[a]\n            else:\n                dp[a] = min(dp[a], dp[a - coins[i - 1]] + 1)\n    return dp[amt] if dp[amt] != MAX else -1",
+      "stem": "下面代码采用动态规划求解零钱兑换问题:给定种硬币,第i种硬币的面值为coins[i − 1] ,目标金额为\namt,每种硬币可以重复选取,求能够凑出目标金额的最少硬币数量;如果不能凑出目标金额,返回-1 。\ndef coinChangeDPComp(coins: list[int], amt: int) -> int:\n    n = len(coins)\n    MAX = amt + 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    dp = [MAX] * (amt + 1)\n    dp[0] = 0\n    for i in range(1, n + 1):\n        for a in range(1, amt + 1):\n            if coins[i - 1] > a:\n                dp[a] = dp[a]\n            else:\n                dp[a] = min(dp[a], dp[a - coins[i - 1]] + 1)\n    return dp[amt] if dp[amt] != MAX else -1",
       "options": [
         {
           "key": "T",
@@ -481,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -489,7 +529,7 @@
       "seq": 1,
       "kind": "traditional",
       "title": "学习小组",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n班主任计划将班级里的   名同学划分为若干个学习小组,每名同学都需要分入某一个学习小组中。观察发现,如果\n一个学习小组中恰好包含   名同学,则该学习小组的讨论积极度为  。\n给定讨论积极度  ,请你计算将这   名同学划分为学习小组的所有可能方案中,讨论积极度之和的最大\n值。\n3.1.2\n\n输入格式\n第一行,一个正整数  ,表示班级人数。\n第二行,  个非负整数  ,表示不同人数学习小组的讨论积极度。\n3.1.3 输出格式\n输出共一行,一个整数,表示所有划分方案中,学习小组讨论积极度之和的最大值。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于  % 的测试点,保证  。\n对于所有测试点,保证  , 。\n\n1 5 6 3\n\n0 2 5 6 4 3 3 4\n\n3.1.6",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n班主任计划将班级里的  名同学划分为若干个学习小组,每名同学都需要分入某一个学习小组中。观察发现,如果\n一个学习小组中恰好包含  名同学,则该学习小组的讨论积极度为\n。\n给定讨论积极度\n,请你计算将这  名同学划分为学习小组的所有可能方案中,讨论积极度之和的最大\n值。\n3.1.2\n\n输入格式\n第一行,一个正整数 ,表示班级人数。\n第二行, 个非负整数\n,表示不同人数学习小组的讨论积极度。\n3.1.3\n输出格式\n输出共一行,一个整数,表示所有划分方案中,学习小组讨论积极度之和的最大值。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n\n1 5 6 3\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n\n0 2 5 6 4 3 3 4\n\n3.1.4.4\n输出样例 2\n\n3.1.5\n数据范围\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n,\n。\n3.1.6",
       "time_ms": 3000,
       "memory_mb": 512,
       "samples": [
@@ -499,28 +539,40 @@
           "suspect": false
         },
         {
-          "in": "101\n8\n",
-          "out": "12\n",
-          "suspect": true
+          "in": "10\n",
+          "out": "8\n",
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 首先记录同学总数\nn = int(input())\n# 记录一个小组有k个同学的情况下,讨论积极度\na = [0] + list(map(int, input().split()))\n# 0个同学的时候,讨论度为0\ndp = [0]\n# 遍历同学总数k\nfor k in range(1, n + 1):\n    # i,j表示将k个同学分解为i个同学和j个同学两部分\n    dp.append(0)\n    for i in range(0, k):\n        j = k - i\n        # 核心状态转移公式\n\ndp[k] = max([a[k], dp[i] + dp[j], dp[k]])\nprint(dp[n])"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "最大因数",
-      "statement": "时间限制:6.0 s\n内存限制:512.0 MB\n3.2.1 题目描述\n给定一棵有  个结点的有根树,这些结点依次以  编号,根结点的编号为 。对于编号为 (\n)的结点,其父结点的编号为  的因数中除  以外最大的因数。\n现在有  组询问,第  ( )组询问给定 ,请你求出编号分别为  的两个结点在这棵树上的距离。\n两个结点之间的距离是连接这两个结点的简单路径所包含的边数。\n3.2.2\n\n输入格式\n第一行,一个正整数 ,表示询问组数。\n接下来  行,每行两个正整数 ,表示询问结点的编号。\n3.2.3 输出格式\n输出共  行,每行一个整数,表示结点  之间的距离。\n3.2.4 样例\n3.2.4.1 输入样例 1\n# 首先记录同学总数\nn = int(input())\n# 记录一个小组有k个同学的情况下,讨论积极度\na = [0] + list(map(int, input().split()))\n# 0个同学的时候,讨论度为0\ndp = [0]\n# 遍历同学总数k\nfor k in range(1, n + 1):\n    # i,j表示将k个同学分解为i个同学和j个同学两部分\n    dp.append(0)\n    for i in range(0, k):\n        j = k - i\n        # 核心状态转移公式\n              dp[k] = max([a[k], dp[i] + dp[j], dp[k]])\nprint(dp[n])\n\n1 3\n2 5\n4 8\n\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于  % 的测试点,保证  。\n对于所有测试点,保证  , 。\n3.2.6",
+      "statement": "时间限制:6.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n给定一棵有\n 个结点的有根树,这些结点依次以\n 编号,根结点的编号为 。对于编号为 (\n)的结点,其父结点的编号为  的因数中除  以外最大的因数。\n现在有  组询问,第  (\n)组询问给定\n,请你求出编号分别为\n 的两个结点在这棵树上的距离。\n两个结点之间的距离是连接这两个结点的简单路径所包含的边数。\n3.2.2\n\n输入格式\n第一行,一个正整数 ,表示询问组数。\n接下来  行,每行两个正整数\n,表示询问结点的编号。\n3.2.3\n输出格式\n输出共  行,每行一个整数,表示结点\n 之间的距离。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n\n1 3\n2 5\n4 8\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n\n120 650\n\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n,\n。\n3.2.6",
       "time_ms": 6000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "16\n17\n3\n",
-          "out": "4\n",
+          "in": "3\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n4\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 读取询问的组数\nn = int(input())\n\ndef factorize(x):\n    \"\"\"\n    得到x以及其全部祖先节点的编号列表,从大到小排列,第一个是x,最后一个是根节点\n    :param x: 输入节点的编号\n    :return 一个列表,如上所述\n    \"\"\"\n    f = [x]\n    # 遍历能够整除x的最小的数,除掉这个数之后剩下的数就是x最大的因数了\n    for i in range(2, int(x ** 0.5) + 1):\n        # 不断除以这个数,直到不能除尽\n        while x % i == 0:\n            x //= i\n            f.append(f[-1] // i)\n    if f[-1] != 1:\n        f.append(1)\n    return f\n\nfor _ in range(n):\n    # 接受这一组输入的x, y\n    x, y = map(int, input().split())\n    a = factorize(x)\n    b = factorize(y)\n    p1, p2 = 0, 0\n    # 找到x和y到根节点的路径上最大的公共节点\n    while a[p1] != b[p2]:\n        if a[p1] > b[p2]:\n            p1 += 1\n        else:\n            p2 += 1\n    print(p1 + p2)"
     }
   ],
   "answer_rows": [
@@ -541,8 +593,6 @@
       "B",
       "C"
     ],
-    [
-      "C"
-    ]
+    []
   ]
 }

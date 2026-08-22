@@ -1,6 +1,6 @@
 # EduHub
 
-信奥训练网站。设计见 `docs/PRD.md`、`docs/架构设计.md`、`docs/UI设计.md`。
+信奥训练网站。设计见 `docs/PRD.md`、`docs/架构设计.md`、`docs/UI设计.md`；题库抓取见 `docs/题库抓取.md`。
 
 ## 本地（Windows）
 
@@ -11,9 +11,9 @@ npm install
 npm run dev
 ```
 
-浏览器打开 http://127.0.0.1:5173 。API 在 8080，由 Vite 反代 `/api`。
+浏览器打开 http://127.0.0.1:5171 。API 在 8081（避开 blog 的 8080），由 Vite 反代 `/api`。
 
-示例账号（仅本地/文档，勿写在站点上）：`coach` / `eduhub`，`student` / `eduhub`。
+示例账号（仅本地/文档，勿写在站点上）：`coach` / `eduhub`。学生账号由教练在「管理 → 账号」一键生成（随机用户名与初始密码），显示名由学生登录后自行修改。无公开注册。
 
 只起后端：`npm start`。
 

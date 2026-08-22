@@ -3,16 +3,16 @@
     "ym": "202406",
     "lang": "python",
     "level": 2,
-    "title": "GESP 6月认证 Python 二级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10147.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1621071788769312.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202406-python-2.pdf"
+    "title": "202406-python-2",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202406-python-2.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "小杨父母带他到某培训机构给他报名参加 CCF 组织的 GESP 认证考试的第 1 级,那他可以选择的认证语言有几\n种?(    )",
+      "stem": "小杨父母带他到某培训机构给他报名参加CCF组织的GESP认证考试的第1级,那他可以选择的认证语言有几\n种?(   )",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面流程图在 yr 输入 2024 时,可以判定 yr 代表闰年,并输出2 月是 29 天,则图中菱形框中应该填入(   )。",
+      "stem": "下面流程图在yr输入2024时,可以判定yr代表闰年,并输出2月是29天,则图中菱形框中应该填入(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "在 Python 中,下列不可做变量的是 (  ) 。",
+      "stem": "在Python中,下列不可做变量的是(\n )。",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "在 Python 中,与range(10)效果相同的是 (  ) 。",
+      "stem": "在Python中,与range(10) 效果相同的是(\n )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "print(5 % 2 and 5 % 3)的输出是 (  ) 。",
+      "stem": "print(5 % 2 and 5 % 3) 的输出是(\n )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是 (  ) 。",
+      "stem": "下面Python代码执行后输出是(\n )。\na = 5\nb = \"5\"\nc = f\"{a}\" + f\"{b}\"\nprint(c)\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -156,23 +156,23 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,有关说法错误的是(     )。",
+      "stem": "执行下面Python代码后,有关说法错误的是(    )。\na = int(input())\nb = int(input())\nif a and b:\n    print(\"1\")\nelif not (a or b):\n    print(\"2\")\nelif a or b:\n1\n2\n3\n4\n5\n6\n7\n    print(\"3\")\nelse:\n    print(\"4\")\n8\n9\n10",
       "options": [
         {
           "key": "A",
-          "text": "如果先后输入 1 和 1 ,则将输出 1 a = 5 b = \"5\" c = f\"{a}\" + f\"{b}\" print(c) a = int(input()) b = int(input()) if a and b: print(\"1\") elif not (a or b): print(\"2\") elif a or b: print(\"3\") else: print(\"4\")"
+          "text": "如果先后输入1和1,则将输出1"
         },
         {
           "key": "B",
-          "text": "如果先后输入 0 和 1 或者 1 和 0 ,则将输出 3"
+          "text": "如果先后输入0和1或者1和0,则将输出3"
         },
         {
           "key": "C",
-          "text": "如果先后输入 0 和 0 ,则将输出 2"
+          "text": "如果先后输入0和0,则将输出2"
         },
         {
           "key": "D",
-          "text": "存在一组 a 和 b 的输入,输出是 4"
+          "text": "存在一组a和b的输入,输出是4"
         }
       ],
       "answer": "D"
@@ -180,23 +180,23 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "某货币由 5 元, 2 元和 1 元组成。输入货币总金额,计算出总货币数最少的币种组成。为实现其功能,横线处\n应填入代码是(     )。",
+      "stem": "某货币由5元,2元和1元组成。输入货币总金额,计算出总货币数最少的币种组成。为实现其功能,横线处\n应填入代码是(    )。\nN = int(input())\n1\n2\n3\n4\n5\nM5 = N // 5\nM2 = ______________\nM1 = ______________\nprint(f\"5*{M5}+2*{M2}+1*{M1}\")\n6",
       "options": [
         {
           "key": "A",
-          "text": "第 1 横线处应填入: N // 2 第 2 横线处应填入: N - M5 - M2"
+          "text": "第1横线处应填入:N // 2 第2横线处应填入:N - M5 - M2"
         },
         {
           "key": "B",
-          "text": "第 1 横线处应填入: (N - M5 * 5) // 2 第 2 横线处应填入: N - M5 * 5 - M2 * 2"
+          "text": "第1横线处应填入:(N - M5 * 5) // 2 第2横线处应填入:N - M5 * 5 - M2 * 2"
         },
         {
           "key": "C",
-          "text": "第 1 横线处应填入: N - M5 * 5 // 2 第 2 横线处应填入: N - M5 * 5 - M2 * 2"
+          "text": "第1横线处应填入:N - M5 * 5 // 2 第2横线处应填入:N - M5 * 5 - M2 * 2"
         },
         {
           "key": "D",
-          "text": "第 1 横线处应填入: (N - M5 * 5) // 2 第 2 横线处应填入: N - M5 - M2"
+          "text": "第1横线处应填入:(N - M5 * 5) // 2 第2横线处应填入:N - M5 - M2"
         }
       ],
       "answer": "B"
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是(     )。",
+      "stem": "下面Python代码执行后的输出是(    )。\nloopCount = 0\nfor i in range(10):\n    for j in range(1, i):\n        loopCount += 1\nprint(loopCount)\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是( )。\nN = int(input())\nM5 = N // 5\nM2 = ______________\nM1 = ______________\nprint(f\"5*{M5}+2*{M2}+1*{M1}\")\n1\n2\n3\n4\n5\n6\nloopCount = 0\nfor i in range(10):\n    for j in range(1, i):\n        loopCount += 1\nprint(loopCount)\n1\n2\n3\n4\n5\nloopCount = 0\nfor i in range(10):\n    for j in range(i):\n        if i * j % 2:\n            break\n    loopCount += 1\nprint(loopCount)\n1\n2\n3\n4\n5\n6\n7",
+      "stem": "下面Python代码执行后的输出是(\n)。\nloopCount = 0\nfor i in range(10):\n1\n2\n    for j in range(i):\n        if i * j % 2:\n            break\n    loopCount += 1\nprint(loopCount)\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -252,23 +252,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "假设下面 Python 代码执行过程中仅输入正负整数或 0 ,有关说法错误的是(     )。",
+      "stem": "假设下面Python代码执行过程中仅输入正负整数或0,有关说法错误的是(    )。\nSum = 0\nN = int(input())\nwhile N:\n    Sum += N\n    N = int(input())\nprint(Sum)\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
-          "text": "执行上面代码如果输入 0 ,将终止循环"
+          "text": "执行上面代码如果输入0,将终止循环"
         },
         {
           "key": "B",
-          "text": "执行上面代码能实现所有非 0 整数的求和"
+          "text": "执行上面代码能实现所有非0整数的求和"
         },
         {
           "key": "C",
-          "text": "执行上面代码第一次输入 0 ,最后将输出 0"
+          "text": "执行上面代码第一次输入0,最后将输出0"
         },
         {
           "key": "D",
-          "text": "执行上面代码将陷入死循环,可将while N:改为while N==0:"
+          "text": "执行上面代码将陷入死循环,可将while N: 改为while N==0:"
         }
       ],
       "answer": "D"
@@ -276,23 +276,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "执行下面的 Python 代码,有关说法正确的是(     )【质数是指仅能被 1 和它本身整除的正整数】。",
+      "stem": "执行下面的Python代码,有关说法正确的是(    )【质数是指仅能被1和它本身整除的正整数】。\nN = int(input())\nFlag = True\nfor i in range(2,N):\n    if i * i > N:\n        break\n    if N % i == 0:\n        Flag = False\n        break\nif Flag == True:\n    print(f\"{N}是质数\")\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nelse:\n    print(f\"{N}不是质数\")\n11\n12",
       "options": [
         {
           "key": "A",
-          "text": "如果输入正整数,上面代码能正确判断 N 是否为质数"
+          "text": "如果输入正整数,上面代码能正确判断N是否为质数"
         },
         {
           "key": "B",
-          "text": "如果输入整数,上面代码能正确判断 N 是否为质数"
+          "text": "如果输入整数,上面代码能正确判断N是否为质数"
         },
         {
           "key": "C",
-          "text": "如果输入大于等于 0 的整数,上面代码能正确判断 N 是否质数"
+          "text": "如果输入大于等于0的整数,上面代码能正确判断N是否质数"
         },
         {
           "key": "D",
-          "text": "如将Flag = True修改为Flag = True if N>=2 else False则能判断所有整数包括负整数、 0 、正整数 是否为质数"
+          "text": "如将Flag = True 修改为Flag = True if N>=2 else False 则能判断所有整数包括负整数、0、正整数 是否为质数"
         }
       ],
       "answer": "D"
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面 Python 代码用于实现如下图所示的效果,其有关说法正确的是(     )。\n\nSum = 0\nN = int(input())\nwhile N:\n    Sum += N\n    N = int(input())\nprint(Sum)\n1\n2\n3\n4\n5\n6\nN = int(input())\nFlag = True\nfor i in range(2,N):\n    if i * i > N:\n        break\n    if N % i == 0:\n        Flag = False\n        break\nif Flag == True:\n    print(f\"{N}是质数 \")\nelse:\n    print(f\"{N}不是质数 \")\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
+      "stem": "下面Python代码用于实现如下图所示的效果,其有关说法正确的是(    )。\nfor i in range(1, 6):\n    for j in range(1, i+1):\n        print(i*j, end=\" \")\n    print()\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -308,15 +308,15 @@
         },
         {
           "key": "B",
-          "text": "如果print()与上一行代码对齐,则可实现预期效果"
+          "text": "如果print() 与上一行代码对齐,则可实现预期效果"
         },
         {
           "key": "C",
-          "text": "如果print()与第一行代码对齐,则可实现预期效果"
+          "text": "如果print() 与第一行代码对齐,则可实现预期效果"
         },
         {
           "key": "D",
-          "text": "删除print()行,则可实现预期效果"
+          "text": "删除print() 行,则可实现预期效果"
         }
       ],
       "answer": "A"
@@ -324,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后,输出是(     )。",
+      "stem": "下面Python代码执行后,输出是(    )。\ncnt1 = 0\ncnt2 = 0\nfor i in range(10):\n    if i % 2 == 0:\n        continue\n    if i % 2:\n        cnt1 += 1\n    elif i % 3 == 0:\n        cnt2 += 1\n1\n2\n3\n4\n5\n6\n7\n8\n9\nprint(cnt1,cnt2)\n10",
       "options": [
         {
           "key": "A",
@@ -348,23 +348,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "在下面的 Python 代码中, N 必须是小于 10 大于 1 的整数, M 为正整数(大于 0 )。如果 M 整除 N 则为幸运数,\n如果 M 中含有 N 且能整除,则为超级幸运数,否则不是幸运数。程序用于判断 M 是否为幸运数或超级幸运数或非幸运\n数。阅读下面代码,有关说法正确的是(     )。",
+      "stem": "在下面的Python代码中,N必须是小于10大于1的整数,M为正整数(大于0)。如果M整除N则为幸运数,\n如果M中含有N且能整除,则为超级幸运数,否则不是幸运数。程序用于判断M是否为幸运数或超级幸运数或非幸运\n数。阅读下面代码,有关说法正确的是(    )。\nN = int(input(\"请输入幸运数字:\"))\nM = int(input(\"请输入正整数:\"))\nif M % N == 0:\n    Lucky = True\nelse:\n    Lucky = False\n1\n2\n3\n4\n5\n6\nwhile M != 0:\n    if M % 10 == N and Lucky == True:\n        print(f\"{M}是{N}的超级幸运数\")\n        break\n    M //= 10\nelse:\n    if Lucky == True:\n        print(f\"{M}是{N}的幸运数\")\n    else:\n        print(f\"{M}非{N}的幸运数\")\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16",
       "options": [
         {
           "key": "A",
-          "text": "如果 N 输入 3 , M 输入 36 则将输出: 36 是 3 的超级幸运数 for i in range(1, 6): for j in range(1, i+1): print(i*j, end=\" \") print() cnt1 = 0 cnt2 = 0 for i in range(10): if i % 2 == 0: continue if i % 2: cnt1 += 1 elif i % 3 == 0: cnt2 += 1 print(cnt1,cnt2) N = int(input(\" 请输入幸运数字: \")) M = int(input(\" 请输入正整数: \")) if M % N == 0: Lucky = True else: Lucky = False while M != 0: if M % 10 == N and Lucky == True: print(f\"{M}是{N}的超级幸运数 \") break M //= 10 else: if Lucky == True: print(f\"{M}是{N}的幸运数 \") else: print(f\"{M}非{N}的幸运数 \") 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "如果N输入3,M输入36则将输出:36是3的超级幸运数"
         },
         {
           "key": "B",
-          "text": "如果 N 输入 7 , M 输入 21 则将输出: 21 是 7 的幸运数"
+          "text": "如果N输入7,M输入21则将输出:21是7的幸运数"
         },
         {
           "key": "C",
-          "text": "如果 N 输入 8 , M 输入 36 则将输出: 36 非 8 的超级幸运数"
+          "text": "如果N输入8,M输入36则将输出:36非8的超级幸运数"
         },
         {
           "key": "D",
-          "text": "如果 N 输入 3 , M 输入 63 则将输出: 63 是 3 的超级幸运数"
+          "text": "如果N输入3,M输入63则将输出:63是3的超级幸运数"
         }
       ],
       "answer": "D"
@@ -374,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "GESP 测试是对认证者的编程能力进行等级认证,同一级别的能力基本上与编程语言无关。(   )",
+      "stem": "GESP测试是对认证者的编程能力进行等级认证,同一级别的能力基本上与编程语言无关。(  )",
       "options": [
         {
           "key": "T",
@@ -385,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在 Python , int() 可以将类似字符串 \"3.14\" 转换为整数 3 。 (  )",
+      "stem": "在Python,int()可以将类似字符串\"3.14\"转换为整数3。(  )",
       "options": [
         {
           "key": "T",
@@ -401,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "Python 表达式-12 % 10的值为 2 。 (  )",
+      "stem": "Python表达式-12 % 10 的值为2。(  )",
       "options": [
         {
           "key": "T",
@@ -417,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "Python 表达式round(12.56, 0)的值为 13 。(   )",
+      "stem": "Python表达式round(12.56, 0) 的值为13。(  )",
       "options": [
         {
           "key": "T",
@@ -433,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "Python 语句print(N // 3, N % 3, sep = \"-\")中的 N 已被赋值为 10 ,则该语句执行后输出是 3-1 。  (  )",
+      "stem": "Python语句print(N // 3, N % 3, sep = \"-\") 中的N已被赋值为10,则该语句执行后输出是3-1。 (\n )",
       "options": [
         {
           "key": "T",
@@ -449,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "在 Python 代码中,不可以将变量命名为 input ,因为 input 是 Python 语言的关键字。(   )",
+      "stem": "在Python代码中,不可以将变量命名为input,因为input是Python语言的关键字。(  )",
       "options": [
         {
           "key": "T",
@@ -465,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后将导致死循环。(   )",
+      "stem": "下面Python代码执行后将导致死循环。(  )\nfor i in range(10):\n\n    continue",
       "options": [
         {
           "key": "T",
@@ -481,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后将输出 10 。(   )",
+      "stem": "下面Python代码执行后将输出10。(  )\ncnt = 0\n\nfor i in range(10):\n    for j in range(i):\n        cnt += 1\n        break\nprint(cnt)",
       "options": [
         {
           "key": "T",
@@ -497,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后,将输出 5 。(   )",
+      "stem": "下面Python代码执行后,将输出5。(  )\ncnt = 0\nfor i in range(1,5):\n    for j in range(i,5,i):\n        if i * j % 2 == 0:\n            cnt += 1\nprint(cnt)",
       "options": [
         {
           "key": "T",
@@ -513,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面 Python 代码能实现正整数各位数字之和。(   )\nfor i in range(10):\n    continue\n\n\ncnt = 0\nfor i in range(10):\n    for j in range(i):\n        cnt += 1\n        break\nprint(cnt)\n\n\n\n\n\n\ncnt = 0\nfor i in range(1,5):\n    for j in range(i,5,i):\n        if i * j % 2 == 0:\n            cnt += 1\nprint(cnt)\n\n\n\n\n\n\nN = int(input())\nSum = 0\nwhile N != 0:\n    Sum += N % 10\n    N //= 10\nprint(Sum)",
+      "stem": "下面Python代码能实现正整数各位数字之和。(  )\nN = int(input())\nSum = 0\nwhile N != 0:\n    Sum += N % 10\n\n\n\n\n    N //= 10\nprint(Sum)",
       "options": [
         {
           "key": "T",
@@ -529,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -537,21 +537,35 @@
       "seq": 1,
       "kind": "traditional",
       "title": "平方之和",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有   个正整数  ,他想知道对于所有的   ( ) ,是否存在两个正整数   和   满足\n。\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,代表正整数数量。\n之后   行,每行包含一个正整数,代表  。\n3.1.3 输出格式\n对于每个正整数  ,如果存在两个正整数   和   满足  ,输出  Yes ,否则输出  No 。\n3.1.4 样例 1\n3.1.5 样例解释\n对于第一个正整数,存在  ,因此答案为  Yes 。\n3.1.6 数据范围\n对于全部数据,保证有  。\n3.1.7",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题面描述\n小杨有  个正整数\n,他想知道对于所有的  (\n),是否存在两个正整数  和  满足\n。\n3.1.2\n\n输入格式\n第一行包含一个正整数 ,代表正整数数量。\n之后  行,每行包含一个正整数,代表\n。\n3.1.3\n输出格式\n对于每个正整数\n,如果存在两个正整数  和  满足\n,输出 Yes,否则输出 No。\n3.1.4\n样例1\n\nYes\nNo\n\n3.1.5\n样例解释\n对于第一个正整数,存在\n,因此答案为 Yes。\n3.1.6\n数据范围\n对于全部数据,保证有\n。\n3.1.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "2\n5\n4\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "import math\ndef check(x):\n    if x<=0:\n        return False\n    y = int(math.sqrt(x))\n    if y*y==x:\n        return True\n    return False\nt = int(input())\nfor ii in range(0,t):\n    n = int(input())\n    fl = 0\n    for i in range(1,n+1):\n        j = n-i*i\n        if check(j):\n            fl=1\n            break\n    if fl==1:\n        print(\"Yes\")\n    else:\n        print(\"No\")"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "计数",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨认为自己的幸运数是正整数  (注:保证  )。小杨想知道,对于从   到   的所有正整数中,  出现了\n多少次。\n3.2.2\n\n输入格式\n第一行包含一个正整数  。\n第二行包含一个正整数  。\n3.2.3 输出格式\n输出从   到   的所有正整数中,  出现的次数。\n3.2.4 样例 1\n3.2.5 样例解释\n从   到   中, 出现的正整数有  ,一共出现了   次。\n3.2.6 数据范围\n对于全部数据,保证有  。\n3.2.7",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题面描述\n小杨认为自己的幸运数是正整数 (注:保证\n)。小杨想知道,对于从  到  的所有正整数中, 出现了\n多少次。\n3.2.2\n\n输入格式\n第一行包含一个正整数 。\n第二行包含一个正整数 。\n3.2.3\n输出格式\n输出从  到  的所有正整数中, 出现的次数。\n3.2.4\n样例1\n\n3.2.5\n样例解释\n从  到\n 中, 出现的正整数有\n,一共出现了  次。\n3.2.6\n数据范围\n对于全部数据,保证有\n。\n3.2.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "25\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "def check(x,y):\n    cnt = 0\n    while x>0:\n        tmp = x%10\n        if tmp==y:\n            cnt+=1\n        x=int(x/10)\n    return cnt\nn = int(input())\nk = int(input())\nans = 0\nfor i in range(1,n+1):\n    ans += check(i,k)\nprint(ans)"
     }
   ],
   "answer_rows": [
@@ -572,8 +586,6 @@
       "B",
       "D"
     ],
-    [
-      "B"
-    ]
+    []
   ]
 }

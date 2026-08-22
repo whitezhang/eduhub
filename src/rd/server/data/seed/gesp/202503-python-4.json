@@ -3,32 +3,32 @@
     "ym": "202503",
     "lang": "python",
     "level": 4,
-    "title": "CCF GESP 2025年3月认证 Python 4级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1669257165275168.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202503-python-4.pdf"
+    "title": "202503-python-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202503-python-4.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2025 年春节有两件轰动全球的事件,一个是 DeepSeek 横空出世,另一个是贺岁片《哪吒 2 》票房惊人,入了\n全球票房榜。下面关于 DeepSeek 与《哪吒 2 》的描述成立的是 (   ) 。",
+      "stem": "2025年春节有两件轰动全球的事件,一个是DeepSeek横空出世,另一个是贺岁片《哪吒2》票房惊人,入了\n全球票房榜。下面关于DeepSeek与《哪吒2》的描述成立的是(   )。",
       "options": [
         {
           "key": "A",
-          "text": "《哪吒 2 》是一款新型操作系统"
+          "text": "《哪吒2》是一款新型操作系统"
         },
         {
           "key": "B",
-          "text": "DeepSeek 是深海钻探软件"
+          "text": "DeepSeek是深海钻探软件"
         },
         {
           "key": "C",
-          "text": "《哪吒 2 》可以生成新的软件"
+          "text": "《哪吒2》可以生成新的软件"
         },
         {
           "key": "D",
-          "text": "DeepSeek 可以根据《哪吒 2 》的场景生成剧情脚本"
+          "text": "DeepSeek可以根据《哪吒2》的场景生成剧情脚本"
         }
       ],
       "answer": "D"
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "对整型变量 N ,如果它能够同时被 3 和 5 整出,则输出N 是含有至少两个质因数。如果用流程图来描述处理过\n程,则输出语句应该在哪种图形框中(   )。",
+      "stem": "对整型变量N,如果它能够同时被3和5整出,则输出N是含有至少两个质因数。如果用流程图来描述处理过\n程,则输出语句应该在哪种图形框中(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\nlst = [{'num': i} for i in range(3)]\nlst[1]['num'] = 99\nprint(lst)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )\nlst = [{'num': i} for i in range(3)]\nlst[1]['num'] = 99\nprint(lst)\n1\n2\n3",
+      "stem": "执行下面Python代码后,输出的结果是?( )\nkeys = ['a', 'b']\nvalues = [[1], (2,)]\nd = {k: v for k, v in zip(keys, values)}\nd['a'].append(3)\nprint(d['a'])\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef append_value(value, container=[]):\n    container.append(value)\n    return container\n1\n2\n3\n4\n5\n6\n7\n8\nresult1 = append_value(1)\nresult2 = append_value(2)\nresult3 = append_value(3, [])\nprint(result1, result2, result3)\n9",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "以下哪个函数调用是合法的?(  )",
+      "stem": "以下哪个函数调用是合法的?( )\ndef func(a, b, c=0):\n    print(a + b + c)\n1\n2",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )\nkeys = ['a', 'b']\nvalues = [[1], (2,)]\nd = {k: v for k, v in zip(keys, values)}\nd['a'].append(3)\nprint(d['a'])\n1\n2\n3\n4\n5\ndef append_value(value, container=[]):\n    container.append(value)\n    return container\nresult1 = append_value(1)\nresult2 = append_value(2)\nresult3 = append_value(3, [])\nprint(result1, result2, result3)\n1\n2\n3\n4\n5\n6\n7\n8\n9\ndef func(a, b, c=0):\n    print(a + b + c)\n1\n2",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef swap(a, b):\n    a, b = b, a\n    return a, b\n1\n2\n3\n4\n5\n6\nx, y = 1, 2\nswap(x, y)\nprint(x, y)\n7\n8",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef outer():\n    n = 0\n1\n2\n3\n4\n5\n    def inner():\n        nonlocal n\n        n += 1\n        return n\n6\n7\n8\n9\n10\n11\n12\n13\n    return inner\nf = outer()\nprint(f(), f(), f())",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "以下哪个函数调用会返回  [2, 4, 6] ?(  )",
+      "stem": "以下哪个函数调用会返回 [2, 4, 6]?( )\ndef process(lst, func):\n    return [func(x) for x in lst]\n1\n2\n3\n4\n5\nnums = [1, 2, 3]",
       "options": [
         {
           "key": "A",
@@ -220,7 +220,7 @@
         },
         {
           "key": "D",
-          "text": "process(nums, lambda x: x * 2) def swap(a, b): a, b = b, a return a, b x, y = 1, 2 swap(x, y) print(x, y) def outer(): n = 0 def inner(): nonlocal n n += 1 return n return inner f = outer() print(f(), f(), f()) def process(lst, func): return [func(x) for x in lst] nums = [1, 2, 3]"
+          "text": "process(nums, lambda x: x * 2)"
         }
       ],
       "answer": "D"
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "执行下面 Python 代码时,哪条调用会报错?(  )",
+      "stem": "执行下面Python代码时,哪条调用会报错?( )\ndef func(a, *, b, c):\n    pass\n1\n2",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "一只青蛙要跳上n级台阶。它每次可以跳 1 阶、 2 阶或 3 阶。下列代码可以计算青蛙有多少种不同的跳跃方式\n可以到达第  n 阶,其中横线处填写的代码是?(  )",
+      "stem": "一只青蛙要跳上n 级台阶。它每次可以跳1阶、2阶或3阶。下列代码可以计算青蛙有多少种不同的跳跃方式\n可以到达第 n 阶,其中横线处填写的代码是?( )\ndef jump_ways(n):\n    if n <= 3:\n        return [0, 1, 2, 4][n]\n    dp = [0] * (n + 1)\n1\n2\n3\n4\n    dp[1], dp[2], dp[3] = 1, 2, 4\n    for i in range(4, n + 1):\n        dp[i] = _______________\n    return dp[n]\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下列代码可将 24 小时制的 \"HH:MM\" 时间字符串转换为从午夜( 00:00 )开始经过的总分钟数(注:此分钟数\n为正整数),其中横线处填写的代码是?(  )",
+      "stem": "下列代码可将24小时制的\"HH:MM\"时间字符串转换为从午夜(00:00)开始经过的总分钟数(注:此分钟数\n为正整数),其中横线处填写的代码是?( )\ntime_str = \"8:30\"\nh, m = map(__________) # 横线在map的参数部分\ntotal_min = h * 60 + m\nprint(total_min) # 应输出510\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "以下代码实现了哪种排序算法?(  )\ndef func(a, *, b, c):\n    pass\n1\n2\ndef jump_ways(n):\n    if n <= 3:\n        return [0, 1, 2, 4][n]\n    dp = [0] * (n + 1)\n    dp[1], dp[2], dp[3] = 1, 2, 4\n    for i in range(4, n + 1):\n        dp[i] = _______________\n    return dp[n]\n1\n2\n3\n4\n5\n6\n7\n8\ntime_str = \"8:30\"\nh, m = map(__________) # 横线在 map 的参数部分\ntotal_min = h * 60 + m\nprint(total_min) # 应输出 510\n1\n2\n3\n4",
+      "stem": "以下代码实现了哪种排序算法?( )\ndef sort(arr):\n    for i in range(len(arr) - 1):\n        min_idx = i\n        for j in range(i + 1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n1\n2\n3\n4\n5\n6\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n7",
       "options": [
         {
           "key": "A",
@@ -324,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "以下代码的作用是?(  )",
+      "stem": "以下代码的作用是?( )\nwith open(r\"data.txt\") as f:\n    while True:\n        line = f.readline()\n        if not line:\n            break\n        print(line, end=\"\")\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -348,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef test():\n    try:\n        return \"A\"\n    finally:\n        return \"B\"\n1\n2\n3\n4\n5\n6\n7\n8\n9\nprint(test())",
       "options": [
         {
           "key": "A",
@@ -364,7 +364,7 @@
         },
         {
           "key": "D",
-          "text": "报错 def sort(arr): for i in range(len(arr) - 1): min_idx = i for j in range(i + 1, len(arr)): if arr[j] < arr[min_idx]: min_idx = j arr[i], arr[min_idx] = arr[min_idx], arr[i] with open(r\"data.txt\") as f: while True: line = f.readline() if not line: break print(line, end=\"\") def test(): try: return \"A\" finally: return \"B\" print(test()) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "报错"
         }
       ],
       "answer": "C"
@@ -374,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "C++ 、 Python 都是高级编程语言,它们每条语句的执行最终都要通过机器指令来完成。(   )",
+      "stem": "C++、Python都是高级编程语言,它们每条语句的执行最终都要通过机器指令来完成。(  )",
       "options": [
         {
           "key": "T",
@@ -385,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "下列程序用于统计字符串中元音字母( a, e, i, o, u )的数量。",
+      "stem": "下列程序用于统计字符串中元音字母(a, e, i, o, u)的数量。\ns = \"hello world\"\nvowels = \"aeiou\"\ncount = sum(1 for c in s if c in vowels)\nprint(count)",
       "options": [
         {
           "key": "T",
@@ -401,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在函数定义中,**kwargs 必须位于参数列表的最后。(  )",
+      "stem": "在函数定义中,**kwargs 必须位于参数列表的最后。( )",
       "options": [
         {
           "key": "T",
@@ -417,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "执行下面 Python 代码后,调用函数 func 可以得到一个列表类型的数据。",
+      "stem": "执行下面Python代码后,调用函数func可以得到一个列表类型的数据。\ndef func():\n    return [1, 2],\n\n\n\n\n\n\nresult = func()\nprint(type(result))",
       "options": [
         {
           "key": "T",
@@ -433,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "Python 代码尝试以读取模式( \"r\" )打开不存在的文件会引发FileNotFoundError异常。",
+      "stem": "Python代码尝试以读取模式(\"r\")打开不存在的文件会引发FileNotFoundError 异常。",
       "options": [
         {
           "key": "T",
@@ -449,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "下面这段程序的时间复杂度为平方阶  。",
+      "stem": "下面这段程序的时间复杂度为平方阶\n。\ndef func(n):\n    for i in range(n):\n        for j in range(n):\n            print(i, j)",
       "options": [
         {
           "key": "T",
@@ -465,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "对 5 个不同的数据元素进行直接插入排序,最多需要比较 9 次。",
+      "stem": "对5个不同的数据元素进行直接插入排序,最多需要比较9次。",
       "options": [
         {
           "key": "T",
@@ -481,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "执行下面 Python 代码,会触发 SyntaxError 异常,但不会输出  Error。",
+      "stem": "执行下面Python代码,会触发SyntaxError异常,但不会输出 Error 。\ntry:\n    print(\"Hello\"\nexcept SyntaxError:\n    print(\"Error\")",
       "options": [
         {
           "key": "T",
@@ -497,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "Python 中允许在同一个with语句中打开多个文件。",
+      "stem": "Python中允许在同一个with 语句中打开多个文件。\nwith open('a.txt', 'r') as f1, open('b.txt', 'w') as f2:\n    data = f1.read()\n    f2.write(data)",
       "options": [
         {
           "key": "T",
@@ -513,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "执行下面 Python 代码后,会输出  [4, 6]。\ns = \"hello world\"\nvowels = \"aeiou\"\ncount = sum(1 for c in s if c in vowels)\nprint(count)\n\n\n\n\ndef func():\n    return [1, 2],\nresult = func()\nprint(type(result))\n\n\n\n\n\n\ndef func(n):\n    for i in range(n):\n        for j in range(n):\n            print(i, j)\n\n\n\n\ntry:\n    print(\"Hello\"\nexcept SyntaxError:\n    print(\"Error\")\n\n\n\n\nwith open('a.txt', 'r') as f1, open('b.txt', 'w') as f2:\n    data = f1.read()\n    f2.write(data)\n\n\n\nprint(list(map(sum, zip([1, 2], [3, 4]))))1",
+      "stem": "执行下面Python代码后,会输出 [4, 6] 。\nprint(list(map(sum, zip([1, 2], [3, 4]))))",
       "options": [
         {
           "key": "T",
@@ -529,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -537,17 +537,18 @@
       "seq": 1,
       "kind": "traditional",
       "title": "荒地开垦",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有一大片荒地,可以表示为一个   行   列的网格图。\n小杨想要开垦这块荒地,但荒地中一些位置存在杂物,对于一块不存在杂物的荒地,该荒地可以开垦当且仅当其上\n下左右四个方向相邻的格子均不存在杂物。\n小杨可以选择至多一个位置,清除该位置的杂物,移除杂物后该位置变为荒地。小杨想知道在清除至多一个位置的\n杂物的情况下,最多能够开垦多少块荒地。\n3.1.2\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n之后   行,每行包含一个长度为   且仅包含字符  . 和  # 的字符串。如果为  .,代表该位置为荒地,如果为  #,\n代表该位置为杂物。\n3.1.3 输出格式\n输出一个整数,代表在清除至多一个位置的杂物的情况下,最多能够开垦的荒地块数。\n3.1.4 样例\n3.1.5 输入样例 1\n3.1.6 输出样例 1\n3.1.7 样例解释\n移除第二行从左数第二块空地的杂物后:\n第一行从左数前   块荒地,第二行从左数前   块荒地,第三行从左数前   块荒地,均可开垦, 。\n3 5\n.....\n.#..#\n.....\n\n.....\n....#\n.....\n\n3.1.8 数据范围\n对于全部数据,保证有  。\n3.1.9",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.1.1\n题面描述\n小杨有一大片荒地,可以表示为一个  行\n 列的网格图。\n小杨想要开垦这块荒地,但荒地中一些位置存在杂物,对于一块不存在杂物的荒地,该荒地可以开垦当且仅当其上\n下左右四个方向相邻的格子均不存在杂物。\n小杨可以选择至多一个位置,清除该位置的杂物,移除杂物后该位置变为荒地。小杨想知道在清除至多一个位置的\n杂物的情况下,最多能够开垦多少块荒地。\n3.1.2\n\n输入格式\n第一行包含两个正整数\n,含义如题面所示。\n之后  行,每行包含一个长度为\n 且仅包含字符 . 和 # 的字符串。如果为 . ,代表该位置为荒地,如果为 # ,\n代表该位置为杂物。\n3.1.3\n输出格式\n输出一个整数,代表在清除至多一个位置的杂物的情况下,最多能够开垦的荒地块数。\n3.1.4\n样例\n3.1.5\n输入样例1\n3 5\n.....\n.#..#\n.....\n\n3.1.6\n输出样例1\n\n3.1.7\n样例解释\n移除第二行从左数第二块空地的杂物后:\n.....\n....#\n.....\n\n第一行从左数前  块荒地,第二行从左数前  块荒地,第三行从左数前  块荒地,均可开垦,\n。\n3.1.8\n数据范围\n对于全部数据,保证有\n。\n3.1.9",
       "time_ms": 3000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "4\n111\n",
-          "out": "3\n",
+          "in": "11\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "N = 1005\nmat = [[''] * N for _ in range(N)]\na = [[0] * N for _ in range(N)]\nd = [(-1, 0), (1, 0), (0, -1), (0, 1)]\nn, m = map(int, input().split())\nfor i in range(1, n + 1):\n    line = input().strip()\n    for j in range(1, m + 1):\n        mat[i][j] = line[j - 1]\nans = 0\nfor i in range(1, n + 1):\n    for j in range(1, m + 1):\n        num = 0\n        p = -1\n\n        for k in range(4):\n            ni, nj = i + d[k][0], j + d[k][1]\n            if mat[ni][nj] == '#':\n                num += 1\n                p = k\n\n        if mat[i][j] == '.' and num == 1:\n            ni, nj = i + d[p][0], j + d[p][1]\n            a[ni][nj] += 1\n        elif mat[i][j] == '.' and num == 0:\n            ans += 1\n        elif mat[i][j] == '#' and num == 0:\n            a[i][j] += 1\nmx = 0\nfor i in range(1, n + 1):\n    for j in range(1, m + 1):\n        mx = max(mx, a[i][j])\nprint(ans + mx)"
     }
   ],
   "answer_rows": [
@@ -567,6 +568,7 @@
       "C",
       "B",
       "C"
-    ]
+    ],
+    []
   ]
 }

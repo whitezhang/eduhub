@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Crawl official CCF GESP 真题 PDFs and import them as published EduHub problems.
+"""Crawl official CCF GESP 真题 PDFs and import programming problems into EduHub.
 
-Problems without a standard answer stay visible to coaches only.
+Choice / judgment use AdaCpp (gesp_adacpp_import.py). This script only writes
+traditional (programming) problems from PDF; full parse still lands in seed/gesp/.
 Source: https://gesp.ccf.org.cn/101/1010/ only. Skips 图形化. Requires CCF authorization.
 """
 
@@ -30,6 +31,16 @@ DATA = Path(os.environ.get("DATA_DIR") or ROOT / "src" / "rd" / "server" / "data
 RUNTIME = DATA / "runtime"
 CACHE_GESP = DATA / "cache" / "gesp"
 PARSED_DIR = DATA / "seed" / "gesp"
+
+
+def apply_tf_vision(parsed: dict, pdf_path: Path, *, prefer_vision: bool = False) -> int:
+    """Fill judgment answers from PDF graphics / local vision (import-only)."""
+    op_dir = Path(__file__).resolve().parent
+    if str(op_dir) not in sys.path:
+        sys.path.insert(0, str(op_dir))
+    from gesp_tf_vision import enrich_parsed_tf
+
+    return enrich_parsed_tf(parsed, pdf_path, prefer_vision=prefer_vision)
 
 
 def migrate_layout() -> None:
@@ -198,17 +209,56 @@ def pdfs_on_session(html: str) -> list[dict]:
 
 
 def extract_pdf_text(path: Path) -> str:
-    from pypdf import PdfReader
+    """Extract PDF text with blocks sorted top-to-bottom, left-to-right per page."""
 
-    reader = PdfReader(str(path))
-    parts = []
-    for page in reader.pages:
-        parts.append(page.extract_text() or "")
-    text = nfkc("\n".join(parts))
-    text = re.sub(r"\n\s*\d+\s*/\s*\d+\s*\n", "\n", text)
-    text = text.replace("\u3000", " ")
-    text = re.sub(r"[ \t]+\n", "\n", text)
-    return text
+    def normalize(raw: str) -> str:
+        text = nfkc(raw)
+        text = re.sub(r"\n\s*\d+\s*/\s*\d+\s*\n", "\n", text)
+        text = text.replace("\u3000", " ")
+        text = re.sub(r"[ \t]+\n", "\n", text)
+        return text
+
+    try:
+        import pymupdf
+    except ImportError:
+        from pypdf import PdfReader
+
+        reader = PdfReader(str(path))
+        parts = [page.extract_text() or "" for page in reader.pages]
+        return normalize("\n".join(parts))
+
+    doc = pymupdf.open(str(path))
+    page_parts: list[str] = []
+    try:
+        for page in doc:
+            blocks = page.get_text("blocks")
+            ordered = sorted(blocks, key=lambda b: (round(b[1], 1), round(b[0], 1)))
+            chunks = [b[4].rstrip() for b in ordered if (b[4] or "").strip()]
+            page_parts.append("\n".join(chunks))
+    finally:
+        doc.close()
+    return normalize("\n".join(page_parts))
+
+
+def parse_section_answer_table(section: str, kind: str) -> list[str]:
+    """Parse 题号/答案 table at the top of a 单选题 or 判断题 section (before 第 1 题)."""
+    m = re.search(r"第\s*1\s*题", section)
+    if not m or "答案" not in section[: m.start()]:
+        return []
+    preamble = section[: m.start()]
+    _, after_ans = preamble.split("答案", 1)
+    after_ans = after_ans.strip()
+    if kind == "choice":
+        keys = re.findall(r"[A-D]", after_ans, flags=re.I)
+        return [k.upper() for k in keys[:15]]
+    tokens: list[str] = []
+    for hit in re.finditer(r"[√✓×✗]|对|错|正确|错误|\b[TtFf]\b", after_ans):
+        tokens.append(hit.group(0))
+    if not tokens:
+        return []
+    mapped = {"对": "T", "正确": "T", "√": "T", "✓": "T", "T": "T", "t": "T",
+              "错": "F", "错误": "F", "×": "F", "✗": "F", "F": "F", "f": "F"}
+    return [mapped.get(t, t) for t in tokens[:10]]
 
 
 def parse_answer_rows(text: str) -> list[list[str]]:
@@ -349,6 +399,24 @@ def strip_ref_program(text: str) -> tuple[str, str]:
     return text[: m.start()].strip(), text[m.end() :].strip()
 
 
+def clean_reference_code(raw: str) -> str:
+    if not raw:
+        return ""
+    raw = re.split(r"\n\d+\.\d+\s*编程题|\n\d+\s*编程题", raw, maxsplit=1)[0]
+    raw = re.split(r"\n试题名称\s*[:：]", raw, maxsplit=1)[0]
+    lines = []
+    for line in raw.splitlines():
+        s = line.strip()
+        if re.fullmatch(r"\d+", s):
+            continue
+        if re.fullmatch(r"\d+\s*/\s*\d+", s):
+            continue
+        lines.append(line.rstrip())
+    code = "\n".join(lines).strip()
+    code = re.sub(r"\n{3,}", "\n\n", code)
+    return code
+
+
 def clean_sample_out(token: str) -> tuple[str, bool]:
     s = token.strip()
     suspect = False
@@ -415,6 +483,7 @@ def parse_programming(section: str) -> list[dict]:
 
 def parse_one_prog(seq: int, title: str, body: str) -> dict | None:
     body, ref = strip_ref_program(body)
+    reference = clean_reference_code(ref)
     tm = re.search(r"时间限制\s*[:：]?\s*([\d.]+)\s*s", body, re.I)
     mm = re.search(r"内存限制\s*[:：]?\s*([\d.]+)\s*MB", body, re.I)
     desc = body
@@ -434,10 +503,15 @@ def parse_one_prog(seq: int, title: str, body: str) -> dict | None:
     if io_at:
         head, tail = statement[: io_at.start()], statement[io_at.start() :]
         cleaned = []
+        code_line = re.compile(
+            r"^\s*(?:"
+            r"#include|using namespace|int |float |double |for |while |cout |cin |printf|if \(|return "
+            r"|[a-zA-Z_]\w*\s*(?:\+\+|--|[+\-*/%]=|>>=|<<=|[=<>!]=|=)"
+            r"|\}|\{"
+            r")"
+        )
         for line in head.splitlines():
-            if re.match(r"^\s*(int |float |double |#include|for |while |cout |cin |printf|if \()", line):
-                continue
-            if re.match(r"^\s*[}{]\s*$", line):
+            if code_line.match(line):
                 continue
             cleaned.append(line)
         statement = "\n".join(cleaned).rstrip() + "\n\n" + tail
@@ -452,20 +526,26 @@ def parse_one_prog(seq: int, title: str, body: str) -> dict | None:
         "time_ms": int(float(tm.group(1)) * 1000) if tm else 1000,
         "memory_mb": int(float(mm.group(1))) if mm else 512,
         "samples": samples,
-        "has_ref": bool(ref),
+        "has_ref": bool(reference),
+        "reference": reference,
     }
 
 
 def parse_paper(text: str, meta: dict) -> dict:
-    rows = parse_answer_rows(text)
-    mcq_ans = rows[0] if rows else []
-    tf_ans = []
-    tf_ok = {"对", "错", "√", "×", "T", "F", "正确", "错误"}
-    if len(rows) > 1 and rows[1] and all(x in tf_ok for x in rows[1]):
-        tf_ans = rows[1]
     mcq_sec = split_section(text, r"单选题", [r"判断题", r"编程题"])
     tf_sec = split_section(text, r"判断题", [r"编程题"])
     prog_sec = split_section(text, r"编程题", [])
+    mcq_ans = parse_section_answer_table(mcq_sec, "choice")
+    tf_ans = parse_section_answer_table(tf_sec, "tf")
+    if not mcq_ans and not tf_ans:
+        rows = parse_answer_rows(text)
+        mcq_ans = rows[0] if rows else []
+        tf_ok = {"对", "错", "√", "×", "T", "F", "正确", "错误"}
+        if len(rows) > 1 and rows[1] and all(x in tf_ok for x in rows[1]):
+            tf_ans = rows[1]
+        rows = [mcq_ans, tf_ans]
+    else:
+        rows = [mcq_ans, tf_ans]
     mcqs = parse_choice_section(mcq_sec, mcq_ans, "choice")
     tfs = parse_choice_section(tf_sec, tf_ans, "tf")
     progs = parse_programming(prog_sec)
@@ -500,17 +580,19 @@ def ensure_schema(con: sqlite3.Connection) -> None:
     cols = [r[1] for r in con.execute("PRAGMA table_info(problems)")]
     if cols and "review_note" not in cols:
         con.execute("ALTER TABLE problems ADD COLUMN review_note TEXT")
+    if cols and "solution_code" not in cols:
+        con.execute("ALTER TABLE problems ADD COLUMN solution_code TEXT")
 
 
-def upsert_problem(con: sqlite3.Connection, row: dict) -> int | None:
+def upsert_problem(con: sqlite3.Connection, row: dict, *, force: bool = False) -> int | None:
     existing = con.execute("SELECT id, published FROM problems WHERE code = ?", (row["code"],)).fetchone()
-    if existing and existing[1] == 1:
+    if existing and existing[1] == 1 and not force:
         return existing[0]
     if existing:
         con.execute(
             """UPDATE problems SET title=?, source=?, difficulty=?, time_ms=?, memory_mb=?,
                languages=?, type=?, statement=?, sample_in=?, sample_out=?, sample_note=?,
-               choice_json=?, full_score=?, published=1, review_note=? WHERE id=?""",
+               choice_json=?, full_score=?, published=1, review_note=?, solution_code=? WHERE id=?""",
             (
                 row["title"],
                 row["source"],
@@ -526,6 +608,7 @@ def upsert_problem(con: sqlite3.Connection, row: dict) -> int | None:
                 row["choice_json"],
                 row["full_score"],
                 row["review_note"],
+                row.get("solution_code"),
                 existing[0],
             ),
         )
@@ -535,8 +618,8 @@ def upsert_problem(con: sqlite3.Connection, row: dict) -> int | None:
         cur = con.execute(
             """INSERT INTO problems (code, title, source, difficulty, time_ms, memory_mb, io_mode,
                languages, type, statement, sample_in, sample_out, sample_note, choice_json, full_score,
-               published, review_note)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?)""",
+               published, review_note, solution_code)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,?)""",
             (
                 row["code"],
                 row["title"],
@@ -554,6 +637,7 @@ def upsert_problem(con: sqlite3.Connection, row: dict) -> int | None:
                 row["choice_json"],
                 row["full_score"],
                 row["review_note"],
+                row.get("solution_code"),
             ),
         )
         pid = cur.lastrowid
@@ -571,11 +655,54 @@ def write_cases(pid: int, samples: list[dict], full_score: int) -> None:
         (d / f"{hid}.out").write_text(s["out"], encoding="utf-8")
 
 
+def merge_contest(con: sqlite3.Connection, title: str, program_pids: list[int]) -> int | None:
+    """Keep AdaCpp choice/tf order; append programming problems at the end."""
+    if not program_pids:
+        return None
+    ex = con.execute("SELECT id FROM contests WHERE title = ?", (title,)).fetchone()
+    if not ex:
+        con.execute(
+            "INSERT INTO contests (title, rule, duration_min, start_at, end_at, published) VALUES (?,?,?,?,?,1)",
+            (title, "practice", 120, "2020-01-01T00:00:00.000Z", "2099-12-31T00:00:00.000Z"),
+        )
+        cid = con.execute("SELECT last_insert_rowid()").fetchone()[0]
+    else:
+        cid = ex[0]
+    existing = {
+        r[0]: r[1]
+        for r in con.execute(
+            "SELECT problem_id, seq FROM contest_problems WHERE contest_id=?",
+            (cid,),
+        ).fetchall()
+    }
+    all_pids: list[int] = []
+    seen: set[int] = set()
+    for pid, _seq in sorted(existing.items(), key=lambda x: x[1]):
+        ptype = con.execute("SELECT type FROM problems WHERE id=?", (pid,)).fetchone()
+        if ptype and ptype[0] == "choice":
+            all_pids.append(pid)
+            seen.add(pid)
+    for pid in program_pids:
+        if pid not in seen:
+            all_pids.append(pid)
+            seen.add(pid)
+    con.execute("DELETE FROM contest_problems WHERE contest_id=?", (cid,))
+    for seq, pid in enumerate(all_pids, 1):
+        con.execute(
+            "INSERT INTO contest_problems (contest_id, problem_id, seq) VALUES (?,?,?)",
+            (cid, pid, seq),
+        )
+    return cid
+
+
 def import_paper(con: sqlite3.Connection, parsed: dict) -> dict:
     meta = parsed["meta"]
     ym, lang, level = meta["ym"], meta["lang"], meta["level"]
-    note_base = f"来源：{meta.get('pdf_url','')} 。官方试题 PDF 抽取，须对照原卷审核后再发布。官方通常只给样例，无隐藏测例。"
-    pids = []
+    note_base = (
+        f"来源：CCF GESP 官方 PDF（{meta.get('pdf_url', '')}）。"
+        "编程题面与样例由 PDF 抽取，须对照原卷审核。官方通常只给样例，无隐藏测例。"
+    )
+    program_pids: list[int] = []
     list_row = con.execute("SELECT id FROM problem_lists WHERE slug='gesp'").fetchone()
     list_id = list_row[0] if list_row else None
     max_seq = 0
@@ -599,60 +726,6 @@ def import_paper(con: sqlite3.Connection, parsed: dict) -> dict:
             (list_id, pid, max_seq),
         )
 
-    for it in parsed["choice"]:
-        code = problem_code(ym, lang, level, "choice", it["seq"])
-        flags = []
-        if not it.get("answer"):
-            flags.append("缺答案")
-        if len(it.get("options") or []) < 4:
-            flags.append("选项不完整")
-        row = {
-            "code": code,
-            "title": f"GESP {level}级 {lang_label(lang)} 选择 {it['seq']}",
-            "source": "gesp",
-            "difficulty": difficulty(level),
-            "time_ms": 0,
-            "memory_mb": 0,
-            "languages": "[]",
-            "type": "choice",
-            "statement": it["stem"],
-            "sample_in": "",
-            "sample_out": "",
-            "sample_note": "",
-            "choice_json": json.dumps({"options": it["options"], "answer": it.get("answer") or ""}, ensure_ascii=False),
-            "full_score": 100,
-            "review_note": note_base + ((" 标记：" + "、".join(flags)) if flags else ""),
-        }
-        pid = upsert_problem(con, row)
-        if pid:
-            pids.append(pid)
-            add_list(pid)
-
-    for it in parsed["tf"]:
-        code = problem_code(ym, lang, level, "tf", it["seq"])
-        flags = [] if it.get("answer") else ["缺答案"]
-        row = {
-            "code": code,
-            "title": f"GESP {level}级 {lang_label(lang)} 判断 {it['seq']}",
-            "source": "gesp",
-            "difficulty": difficulty(level),
-            "time_ms": 0,
-            "memory_mb": 0,
-            "languages": "[]",
-            "type": "choice",
-            "statement": it["stem"],
-            "sample_in": "",
-            "sample_out": "",
-            "sample_note": "",
-            "choice_json": json.dumps({"options": it["options"], "answer": it.get("answer") or ""}, ensure_ascii=False),
-            "full_score": 100,
-            "review_note": note_base + ((" 标记：" + "、".join(flags)) if flags else ""),
-        }
-        pid = upsert_problem(con, row)
-        if pid:
-            pids.append(pid)
-            add_list(pid)
-
     for it in parsed["program"]:
         code = problem_code(ym, lang, level, "traditional", it["seq"])
         samples = it.get("samples") or []
@@ -663,6 +736,8 @@ def import_paper(con: sqlite3.Connection, parsed: dict) -> dict:
             flags.append("缺样例")
         if any(s.get("suspect") for s in samples):
             flags.append("样例可能粘连")
+        if not it.get("reference"):
+            flags.append("缺满分程序")
         langs = ["cpp"] if lang == "cpp" else ["python"]
         row = {
             "code": code,
@@ -681,10 +756,11 @@ def import_paper(con: sqlite3.Connection, parsed: dict) -> dict:
             "choice_json": None,
             "full_score": 100,
             "review_note": note_base + ((" 标记：" + "、".join(flags)) if flags else ""),
+            "solution_code": it.get("reference") or "",
         }
-        pid = upsert_problem(con, row)
+        pid = upsert_problem(con, row, force=True)
         if pid:
-            pids.append(pid)
+            program_pids.append(pid)
             add_list(pid)
             if samples:
                 n = len(samples)
@@ -704,33 +780,13 @@ def import_paper(con: sqlite3.Connection, parsed: dict) -> dict:
                 write_cases(pid, samples, 100)
 
     title = f"GESP {ym[:4]}年{int(ym[4:] or 0)}月 {lang_label(lang)} {level}级"
-    if not pids:
-        return {"contest_id": None, "title": title, "problems": 0, "choice": 0, "tf": 0, "program": 0}
-
-    ex = con.execute("SELECT id, published FROM contests WHERE title = ?", (title,)).fetchone()
-    if not ex:
-        con.execute(
-            "INSERT INTO contests (title, rule, duration_min, start_at, end_at, published) VALUES (?,?,?,?,?,1)",
-            (title, "practice", 120, "2020-01-01T00:00:00.000Z", "2099-12-31T00:00:00.000Z"),
-        )
-        cid = con.execute("SELECT last_insert_rowid()").fetchone()[0]
-    elif ex[1] == 1:
-        cid = ex[0]
-        pids = []
-    else:
-        cid = ex[0]
-        con.execute("DELETE FROM contest_problems WHERE contest_id = ?", (cid,))
-    for i, pid in enumerate(pids, 1):
-        con.execute(
-            "INSERT OR REPLACE INTO contest_problems (contest_id, problem_id, seq) VALUES (?,?,?)",
-            (cid, pid, i),
-        )
+    cid = merge_contest(con, title, program_pids)
     return {
         "contest_id": cid,
         "title": title,
-        "problems": len(pids),
-        "choice": len(parsed["choice"]),
-        "tf": len(parsed["tf"]),
+        "problems": len(program_pids),
+        "choice": 0,
+        "tf": 0,
         "program": len(parsed["program"]),
     }
 
@@ -784,12 +840,14 @@ def crawl_and_parse(args: argparse.Namespace) -> list[Path]:
                 "pdf_path": str(pdf_path.relative_to(ROOT)).replace("\\", "/"),
             }
             parsed = parse_paper(text, meta)
+            tf_fill = apply_tf_vision(parsed, pdf_path, prefer_vision=getattr(args, "tf_vision", False))
             out = PARSED_DIR / f"{slug}.json"
             out.write_text(json.dumps(parsed, ensure_ascii=False, indent=2), encoding="utf-8")
             parsed_files.append(out)
             n_pdf += 1
             print(
-                f"    parsed choice={len(parsed['choice'])} tf={len(parsed['tf'])} prog={len(parsed['program'])}",
+                f"    parsed choice={len(parsed['choice'])} tf={len(parsed['tf'])} prog={len(parsed['program'])}"
+                + (f" tf_ans+={tf_fill}" if tf_fill else ""),
                 flush=True,
             )
     return parsed_files
@@ -801,6 +859,10 @@ def import_files(files: list[Path]) -> None:
     con = sqlite3.connect(str(DB_PATH))
     con.execute("PRAGMA foreign_keys = ON")
     ensure_schema(con)
+    con.execute(
+        "UPDATE problem_lists SET blurb=? WHERE slug='gesp'",
+        ("选择/判断来自 AdaCpp；编程来自 CCF 官方 PDF",),
+    )
     summary = []
     for f in files:
         parsed = json.loads(f.read_text(encoding="utf-8"))
@@ -820,11 +882,17 @@ def main() -> None:
     ap.add_argument("--lang", choices=["cpp", "python"])
     ap.add_argument("--level", type=int)
     ap.add_argument("--skip-crawl", action="store_true", help="only parse/import existing files")
+    ap.add_argument("--reparse", action="store_true", help="with --skip-crawl: re-extract PDFs in cache")
+    ap.add_argument(
+        "--tf-vision",
+        action="store_true",
+        help="判断题答案：优先用视觉模型识别节首答案表（需 OPENAI_API_KEY 或 Ollama；默认先用矢量符号）",
+    )
     ap.add_argument("--no-import", action="store_true")
     args = ap.parse_args()
     if args.skip_crawl:
         files = sorted(PARSED_DIR.glob("*.json"))
-        if not files:
+        if args.reparse or not files:
             # parse local pdfs
             CACHE_GESP.mkdir(parents=True, exist_ok=True)
             files = []
@@ -851,10 +919,13 @@ def main() -> None:
                         "pdf_path": str(pdf.relative_to(ROOT)).replace("\\", "/"),
                     },
                 )
+                apply_tf_vision(parsed, pdf, prefer_vision=args.tf_vision)
                 out = PARSED_DIR / f"{stem}.json"
                 PARSED_DIR.mkdir(parents=True, exist_ok=True)
                 out.write_text(json.dumps(parsed, ensure_ascii=False, indent=2), encoding="utf-8")
                 files.append(out)
+            if args.reparse:
+                files = sorted(PARSED_DIR.glob("*.json"))
     else:
         files = crawl_and_parse(args)
     if not args.no_import:

@@ -3,32 +3,32 @@
     "ym": "202403",
     "lang": "cpp",
     "level": 4,
-    "title": "GESP 3月认证C++四级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10134.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1602047134662688.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202403-cpp-4.pdf"
+    "title": "202403-cpp-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202403-cpp-4.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "若函数声明为int f(int &x){ x+=3; return x; },则对声明的变量int a=3,下面哪个调用能够改\n变a的值 (  ) 。",
+      "stem": "若函数声明为int f(int &x){ x+=3; return x; } ,则对声明的变量int a=3 ,下面哪个调用能够改\n变a 的值(\n )。",
       "options": [
         {
           "key": "A",
-          "text": "f(&a);"
+          "text": "f(&a) ;"
         },
         {
           "key": "B",
-          "text": "f(*a);"
+          "text": "f(*a) ;"
         },
         {
           "key": "C",
-          "text": "f(a);"
+          "text": "f(a) ;"
         },
         {
           "key": "D",
-          "text": "f(a-3);"
+          "text": "f(a-3) ;"
         }
       ],
       "answer": "C"
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面 C++ 代码执行后,输出的是 (  ) 。",
+      "stem": "下面C++代码执行后,输出的是( )。\nint main()\n1\n{\n    int x[]={2, 0, 2, 4};\n    char geSP[]=\"Grade Examination of SP\";\n2\n3\n4\n5\n6\n7\n8\n9\n10\n    cout << geSP[sizeof(x)] << endl;\n    cout << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面 C++ 代码执行后输出是 (  ) 。\nint main()\n{\n    int x[]={2, 0, 2, 4};\n    char geSP[]=\"Grade Examination of SP\";\n    cout << geSP[sizeof(x)] << endl;\n    cout << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint foo(float *f)\n{\n    return int(*f*2);\n}\nint main()\n1\n2\n3\n4\n5\n6",
+      "stem": "下面C++代码执行后输出是( )。\nint foo(float *f)\n{\n    return int(*f*2);\n}\n1\n2\n3\n4\n5\n6\nint main()\n{\n    float fnum[10]={1.1};\n    fnum[1]=foo(fnum);\n    cout << fnum[0]+fnum[1] << endl;\n7\n8\n9\n10\n11\n12\n    cout << endl;\n    return 0;\n}\n13\n14",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "对二维数组int arr[3][16];,则arr[1]占用内存的大小为(   )字节。",
+      "stem": "对二维数组int arr[3][16]; ,则arr[1] 占用内存的大小为(  )字节。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "对二维数组int arr[3][16];,若arr的地址是0x28cbc0,则arr[1]的值是(   )。",
+      "stem": "对二维数组int arr[3][16]; ,若arr 的地址是0x28cbc0 ,则arr[1] 的值是(  )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面 C++ 代码执行后输出是(     )。",
+      "stem": "下面C++代码执行后输出是(    )。\nint main()\n{\n    char *p=\"I love GESP!\";\n    cout << p+5 << endl;\n1\n2\n3\n4\n5\n6\n7\n8\n    cout << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面 C++ 代码执行以后输出的是(     )。\n{\n    float fnum[10]={1.1};\n    fnum[1]=foo(fnum);\n    cout << fnum[0]+fnum[1] << endl;\n    cout << endl;\n    return 0;\n}\n7\n8\n9\n10\n11\n12\n13\n14\nint main()\n{\n    char *p=\"I love GESP!\";\n    cout << p+5 << endl;\n    cout << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8",
+      "stem": "下面C++代码执行以后输出的是(    )。\nint rc=5;\nint main()\n{\n    int rc;\n    cout << ++rc << endl;\n1\n2\n3\n4\n5\n6\n    cout << endl;\n    return 0;\n}\n7\n8\n9\n10",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面 C++ 函数中采用的算法是(     )。",
+      "stem": "下面C++函数中采用的算法是(    )。\nint fib(int n)\n{\n    int i, f[n]={0, 1};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n    for(int i=2; i<=n; i++)\n        f[i]=f[i-1]+f[i-2];\n    return f[n];\n}",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "插入排序在最好情况下的时间复杂度是(      )。",
+      "stem": "插入排序在最好情况下的时间复杂度是(     )。",
       "options": [
         {
           "key": "A",
@@ -220,7 +220,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "在如下的 C++ 代码执行后,设第 11 和 12 行的输出地址值分别为X和Y,则下面正确的是(     )。\nint rc=5;\nint main()\n{\n    int rc;\n    cout << ++rc << endl;\n    cout << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint fib(int n)\n{\n    int i, f[n]={0, 1};\n    for(int i=2; i<=n; i++)\n        f[i]=f[i-1]+f[i-2];\n    return f[n];\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nstruct pass{\n    int no;\n    char name[20];\n    int level;\n};\n1\n2\n3\n4\n5",
+      "stem": "在如下的C++代码执行后,设第11和12行的输出地址值分别为X 和Y ,则下面正确的是(    )。\nstruct pass{\n    int no;\n    char name[20];\n1\n2\n3\n    int level;\n};\n4\n5\n6\n7\n8\n9\n10\n11\nint main()\n{\n    struct pass XiaoYang;\n    cout << \"&XiaoYang=\" << &XiaoYang << endl;  //第11行\n    cout << \"&(XiaoYang.no)=\" << &(XiaoYang.no) << endl; //第12行\n12\n13\n14\n15\n16\n    cout << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -244,7 +244,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "如果文件1.txt中的内容如下,则执行下面 C++ 代码时,注释了####那行代码所输出的x的值为(\n)。",
+      "stem": "如果文件1.txt 中的内容如下,则执行下面C++代码时,注释了#### 那行代码所输出的x 的值为(\n)。\n50 2024 3.16 I\nlove\nGESP!\n1\n2\n3\nint main()\n{\n    ifstream fin;\n    string line;\n    int x;\n    fin.open(\"1.txt\",ios::in);\n1\n2\n3\n4\n5\n6\n7\n8\n    for (int i=0; i< 2; i++){\n        fin >> line;\n        cout << line << endl;\n    }\n    fin>>x;\n    cout << x << endl; //####\n9\n10\n11\n12\n13\n14\n15\n16\n17\n    cout << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -268,7 +268,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "执行下列 C++ 代码时输出中的第 2 行是(     )。\nint main()\n{\n    struct pass XiaoYang;\n    cout << \"&XiaoYang=\" << &XiaoYang << endl;  // 第 11 行\n    cout << \"&(XiaoYang.no)=\" << &(XiaoYang.no) << endl; // 第 12 行\n    cout << endl;\n    return 0;\n}\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n50 2024 3.16 I\nlove\nGESP!\n1\n2\n3\nint main()\n{\n    ifstream fin;\n    string line;\n    int x;\n    fin.open(\"1.txt\",ios::in);\n    for (int i=0; i< 2; i++){\n        fin >> line;\n        cout << line << endl;\n    }\n    fin>>x;\n    cout << x << endl; //####\n    cout << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "执行下列C++代码时输出中的第2行是(    )。\nint main()\n{\n    char *s[]={(char*)\"2024\",(char*)\"3.16\",(char*)\"GESP\"};\n1\n2\n3\n4\n5\n6\n    for (int i=0; i< 2; i++){\n        cout << *s+i << endl;\n    }\n7\n8\n9\n10\n11\n    cout << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -292,7 +292,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "C++ 语言中下面哪个关键字能够限定对象的作用域(     )。",
+      "stem": "C++语言中下面哪个关键字能够限定对象的作用域(    )。",
       "options": [
         {
           "key": "A",
@@ -316,7 +316,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "小杨的父母最近刚刚给他买了一块华为手表,他说手表上跑的是鸿蒙,这个鸿蒙是(   )。",
+      "stem": "小杨的父母最近刚刚给他买了一块华为手表,他说手表上跑的是鸿蒙,这个鸿蒙是(  )。",
       "options": [
         {
           "key": "A",
@@ -340,7 +340,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "中国计算机学会( CCF )在 2024 年 1 月 27 日的颁奖典礼上颁布了王选奖,王选先生的重大贡献是(   )。",
+      "stem": "中国计算机学会(CCF)在2024年1月27日的颁奖典礼上颁布了王选奖,王选先生的重大贡献是(  )。",
       "options": [
         {
           "key": "A",
@@ -366,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "对int a[]={2,0,2,4,3,1,6},执行第一趟选择排序处理后a中数据变为{0,2,2,4,3,1,6}。 (  )",
+      "stem": "对int a[]={2,0,2,4,3,1,6} ,执行第一趟选择排序处理后a 中数据变为{0,2,2,4,3,1,6} 。(  )",
       "options": [
         {
           "key": "T",
@@ -377,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "如果待排序数据不能都装进内存,需要使用外排序算法。(   )\nint main()\n{\n    char *s[]={(char*)\"2024\",(char*)\"3.16\",(char*)\"GESP\"};\n    for (int i=0; i< 2; i++){\n        cout << *s+i << endl;\n    }\n    cout << endl;\n    return 0;\n}",
+      "stem": "如果待排序数据不能都装进内存,需要使用外排序算法。(  )",
       "options": [
         {
           "key": "T",
@@ -393,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "定义变量int a=5, 则cout << &++a会输出6。 (  )",
+      "stem": "定义变量int a=5 , 则cout << &++a 会输出6 。(\n )",
       "options": [
         {
           "key": "T",
@@ -409,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "两个函数之间可以使用全局变量来传递数据。  (  )",
+      "stem": "两个函数之间可以使用全局变量来传递数据。 (\n )",
       "options": [
         {
           "key": "T",
@@ -425,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "定义数组int a[2024][3][16]={2,0,2,4,3,1,6},则cout << a[2023][2][15]的结果不确定。(\n)",
+      "stem": "定义数组int a[2024][3][16]={2,0,2,4,3,1,6} ,则cout << a[2023][2][15] 的结果不确定。(\n)",
       "options": [
         {
           "key": "T",
@@ -441,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "在 C++ 语言中,函数的参数为指针时,可以在函数内部修改该参数的值。(   )",
+      "stem": "在C++语言中,函数的参数为指针时,可以在函数内部修改该参数的值。(  )",
       "options": [
         {
           "key": "T",
@@ -457,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "在 C++ 语言中try子句里抛出的结构体等类型的异常无法被catch捕获。(   )",
+      "stem": "在C++语言中try 子句里抛出的结构体等类型的异常无法被catch 捕获。(  )",
       "options": [
         {
           "key": "T",
@@ -473,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "C++ 语言中cout << 9^2 << endl;会输出 81 。(   )",
+      "stem": "C++语言中cout << 9^2 << endl; 会输出81。(  )",
       "options": [
         {
           "key": "T",
@@ -489,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "小杨今年春节回奶奶家了,奶奶家的数字电视要设置 ip 地址并接入到 WIFI 盒子才能收看节目,那这个 WIFI 盒\n子具有路由器的功能。(   )",
+      "stem": "小杨今年春节回奶奶家了,奶奶家的数字电视要设置ip地址并接入到WIFI盒子才能收看节目,那这个WIFI盒\n子具有路由器的功能。(  )",
       "options": [
         {
           "key": "T",
@@ -505,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "任何一个for循环都可以转化为等价的while循环(   )。",
+      "stem": "任何一个for 循环都可以转化为等价的while 循环(  )。",
       "options": [
         {
           "key": "T",
@@ -521,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -529,21 +529,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "相似字符串",
-      "statement": "3.1.1 问题描述\n对于两个字符串   和  ,如果   可以通过删除一个字符,或插入一个字符,或修改一个字符变成  ,那么我们说\n和   是相似的。\n比如  apple 可以通过插入一个字符变成  applee,可以通过删除一个字符变成  appe,也可以通过修改一个字符\n变成  bpple,因此  apple 和  applee、appe、bpple 都是相似的。但  applee 并不能通过任意一个操作变成\nbpple,因此它们并不相似。\n特别地,完全相同的两个字符串也是相似的。\n给定   组  ,请你分别判断他们是否相似。\n3.1.2 输入描述\n第一行一个正整数  。\n接下来   行,每行两个用空格隔开的字符串   和  。\n保证  ,  的长度不超过  。保证   和   只包含小写字母。\n3.1.3 输出描述\n输出   行,对于每组  ,如果它们相似,则输出  similar,否则输出  not similar。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7",
+      "statement": "3.1.1\n问题描述\n对于两个字符串  和 ,如果  可以通过删除一个字符,或插入一个字符,或修改一个字符变成 ,那么我们说\n和  是相似的。\n比如 apple 可以通过插入一个字符变成 applee ,可以通过删除一个字符变成 appe ,也可以通过修改一个字符\n变成 bpple ,因此 apple 和 applee 、appe 、bpple 都是相似的。但 applee 并不能通过任意一个操作变成\nbpple ,因此它们并不相似。\n特别地,完全相同的两个字符串也是相似的。\n给定  组\n,请你分别判断他们是否相似。\n3.1.2\n输入描述\n第一行一个正整数 。\n接下来  行,每行两个用空格隔开的字符串  和 。\n保证\n,\n 的长度不超过\n。保证  和  只包含小写字母。\n3.1.3\n输出描述\n输出  行,对于每组\n,如果它们相似,则输出 similar ,否则输出 not similar 。\n3.1.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5\n样例输入 1\n\napple applee\napple appe\napple bpple\napplee bpple\napple apple\n\n3.1.6\n样例输出 1\nsimilar\nsimilar\nsimilar\nnot similar\nsimilar\n\n3.1.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "5\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n4\n5\n6\n",
+          "out": "5\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <iostream>\n#include <string>\nusing namespace std;\nbool isSimilar(string A, string B) {\n    int m = A.size(), n = B.size();\n    if (abs(m - n) > 1) return false;\n    if (m == n) {\n        int diff = 0;\n        for (int i = 0; i < m; ++i) {\n            if (A[i] != B[i]) {\n                if (++diff > 1) return false;\n            }\n        }\n        return diff <= 1;\n    } else {\n        string& shorter = (m < n) ? A : B;\n        string& longer = (m < n) ? B : A;\n        int i = 0, j = 0;\n        int diff = 0;\n        while (i < shorter.size() && j < longer.size()) {\n            if (shorter[i] != longer[j]) {\n                if (++diff > 1) return false;\n                ++j;\n            } else {\n                ++i;\n                ++j;\n            }\n        }\n        return true;\n    }\n}\nint main() {\n    int T;\n    cin >> T;\n    while (T--) {\n        string A, B;\n        cin >> A >> B;\n        if (isSimilar(A, B)) {\n            cout << \"similar\" << endl;\n        } else {\n            cout << \"not similar\" << endl;\n        }\n    }\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "做题",
-      "statement": "3.2.1 题目描述\n小杨同学为了提高自己的实力制定了做题计划,在第   天时,他必须要完成   道题,否则他就会偷懒。\n小杨同学现在找到了一个题库,一共有   套题单,每一套题单中有一定数量的题目。但是他十分挑剔,每套题单他\n只会使用一次,每一天也只能使用一套题单里的题目,之后那套题单就会被弃之不用。对于每套题单,他不必完成\n题单内所有的题。\n那么问题来了,小杨同学最多会做题几天才偷懒呢?\n3.2.2\n\n输入格式\n第一行, 1 个数为   ,表示有多少套题单。\n第二行, n 个整数  ,分别表示每套题单有多少道题。\n3.2.3 输出格式\n输出一行,小杨同学偷懒前最多做题天数。\n3.2.4 样例 1\n对于全部数据,保证有  。\n3.2.5",
+      "statement": "3.2.1\n题目描述\n小杨同学为了提高自己的实力制定了做题计划,在第  天时,他必须要完成  道题,否则他就会偷懒。\n小杨同学现在找到了一个题库,一共有  套题单,每一套题单中有一定数量的题目。但是他十分挑剔,每套题单他\n只会使用一次,每一天也只能使用一套题单里的题目,之后那套题单就会被弃之不用。对于每套题单,他不必完成\n题单内所有的题。\n那么问题来了,小杨同学最多会做题几天才偷懒呢?\n3.2.2\n\n输入格式\n第一行,1个数为  ,表示有多少套题单。\n第二行,n个整数\n,分别表示每套题单有多少道题。\n3.2.3\n输出格式\n输出一行,小杨同学偷懒前最多做题天数。\n3.2.4\n样例1\n\n3 1 4 1\n\n对于全部数据,保证有\n。\n3.2.5",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include<bits/stdc++.h>\n#define maxn 1000006\nusing namespace std;\nlong long a[maxn];int n;\nint main()\n{\n    int m,ans=0;\n    cin>>n;m=n;int s=1;\n    for(int i=1;i<=n;i++)\n    {\n        cin>>a[i];\n    }\n    sort(a+1,a+n+1);\n    for(int j=1;j<=m;j++)\n    {\n        for(int k=s;k<=n;k++)\n        {\n            if(j<=a[k])\n            {\n                ans++;\n                a[k]=j;\n                s=k;\n                break;\n            }\n        }\n    }\n    cout<<ans;\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -562,11 +581,8 @@
       "C",
       "B",
       "C",
-      "C",
       "C"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

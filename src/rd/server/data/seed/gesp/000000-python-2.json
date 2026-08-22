@@ -3,31 +3,15 @@
     "ym": "000000",
     "lang": "python",
     "level": 2,
-    "title": "GESP3月认证  Python二级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10068.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1536716324208672.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/000000-python-2.pdf"
+    "title": "000000-python-2",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/000000-python-2.pdf"
   },
   "choice": [],
   "tf": [],
   "program": [],
   "answer_rows": [
-    [
-      "D",
-      "D",
-      "D",
-      "C",
-      "A",
-      "D",
-      "A",
-      "B",
-      "C",
-      "D",
-      "C",
-      "A",
-      "A",
-      "A",
-      "C"
-    ]
+    [],
+    []
   ]
 }

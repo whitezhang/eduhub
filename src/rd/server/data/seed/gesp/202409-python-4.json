@@ -3,16 +3,16 @@
     "ym": "202409",
     "lang": "python",
     "level": 4,
-    "title": "GESP 9月认证 Python 四级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10166.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1633836557402144.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202409-python-4.pdf"
+    "title": "202409-python-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202409-python-4.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "据有关资料,山东大学于 1972 年研制成功 DJL-1 计算机,并于 1973 年投入运行,其综合性能居当时全国第三\n位。 DJL-1 计算机运算控制部分所使用的磁心存储元件由磁心颗粒组成,设计存贮周期为 2μs (微秒)。那么该磁心\n存储元件相当于现代计算机的(   )。",
+      "stem": "据有关资料,山东大学于1972年研制成功DJL-1计算机,并于1973年投入运行,其综合性能居当时全国第三\n位。DJL-1计算机运算控制部分所使用的磁心存储元件由磁心颗粒组成,设计存贮周期为2μs(微秒)。那么该磁心\n存储元件相当于现代计算机的(  )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "IPv4 版本的因特网总共有(  )个 A 类地址网络。",
+      "stem": "IPv4版本的因特网总共有( )个A类地址网络。",
       "options": [
         {
           "key": "A",
@@ -44,7 +44,7 @@
         },
         {
           "key": "B",
-          "text": "200 万"
+          "text": "200万"
         },
         {
           "key": "C",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\nmy_list = [1, 2, [3, 4]]\nmy_list[2].extend([5, 6])\nprint(my_list)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -84,11 +84,11 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,会发生什么?(  )\nmy_list = [1, 2, [3, 4]]\nmy_list[2].extend([5, 6])\nprint(my_list)\n1\n2\n3\nmy_tuple = (1, 2, (3, 4))\nmy_tuple[2] = (5, 6)\n1\n2",
+      "stem": "执行下面Python代码后,会发生什么?( )\nmy_tuple = (1, 2, (3, 4))\nmy_tuple[2] = (5, 6)\n1\n2",
       "options": [
         {
           "key": "A",
-          "text": "my_tuple 变为 (1, 2, (5, 6))"
+          "text": "my_tuple变为(1, 2, (5, 6))"
         },
         {
           "key": "B",
@@ -96,11 +96,11 @@
         },
         {
           "key": "C",
-          "text": "抛出 ValueError 异常"
+          "text": "抛出ValueError异常"
         },
         {
           "key": "D",
-          "text": "抛出 TypeError 异常"
+          "text": "抛出TypeError异常"
         }
       ],
       "answer": "D"
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ntry:\n    result = 10 / int('a')\nexcept ValueError:\n    print(\"10\", end=\"#\")\nelse:\n    print(\"20\", end=\"#\")\nfinally:\n    print(\"30\", end=\"#\")\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef func(n):\n    return len([num for num in range(n) if num % 2 == 0])\n1\n2\n3\n4\n5\nprint(func(20))",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef func(*args):\n    return ''.join(args)\n1\n2\n3\n4\n5\nprint(func('Hello', 'World'))",
       "options": [
         {
           "key": "A",
@@ -168,7 +168,7 @@
         },
         {
           "key": "C",
-          "text": "\"Hello\" \"World\" try: result = 10 / int('a') except ValueError: print(\"10\", end=\"#\") else: print(\"20\", end=\"#\") finally: print(\"30\", end=\"#\") def func(n): return len([num for num in range(n) if num % 2 == 0]) print(func(20)) def func(*args): return ''.join(args) print(func('Hello', 'World'))"
+          "text": "\"Hello\" \"World\""
         },
         {
           "key": "D",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef func(lst):\n    lst.append(10)\n    return lst\n1\n2\n3\n4\n5\n6\n7\n8\nlstA = [1,2,3]\nfunc(lstA)\nprint(lstA,func(lstA))",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef tpADD(tpl):\n    tpl = tpl +(5,6)\n1\n2\n    return tpl\n3\n4\n5\n6\n7\ntp = (1,2,3)\ntpADD(tp)\nprint(tp,tpADD(tp))",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )\ndef func(lst):\n    lst.append(10)\n    return lst\nlstA = [1,2,3]\nfunc(lstA)\nprint(lstA,func(lstA))\n1\n2\n3\n4\n5\n6\n7\n8\ndef tpADD(tpl):\n    tpl = tpl +(5,6)\n    return tpl\ntp = (1,2,3)\ntpADD(tp)\nprint(tp,tpADD(tp))\n1\n2\n3\n4\n5\n6\n7\nx = 5\ndef foo():\n    def bar():\n        global x\n        x = 10\n    bar()\n    print(x, end=\"#\")\nfoo()\nprint(x, end=\"#\")\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14",
+      "stem": "执行下面Python代码后,输出的结果是?( )\nx = 5\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\ndef foo():\n    def bar():\n        global x\n        x = 10\n    bar()\n    print(x, end=\"#\")\nfoo()\nprint(x, end=\"#\")\n13\n14",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ndef func(d):\n    d['a'] = 5\n1\n2\n3\n4\n5\n6\n7\nc = {'a': 1, 'b': 2}\nfunc(c)\nprint(c)",
       "options": [
         {
           "key": "A",
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "以下 Python 代码实现的排序算法的时间复杂度是?(  )",
+      "stem": "以下Python代码实现的排序算法的时间复杂度是?( )\ndef func_sort(arr):\n    n = len(arr)\n    for i in range(n - 1):\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "执行下面 Python 代码后,输出的结果是?(  )",
+      "stem": "执行下面Python代码后,输出的结果是?( )\ntuples = [(1, 'apple'), (2, 'banana'), (0, 'cherry')]\nsorted_tuples = sorted(tuples, key=lambda x: x[1])\nprint(sorted_tuples)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -312,7 +312,7 @@
         },
         {
           "key": "C",
-          "text": "[(0, 'cherry'), (1, 'apple'), (2, 'banana')] def func(d): d['a'] = 5 c = {'a': 1, 'b': 2} func(c) print(c) def func_sort(arr): n = len(arr) for i in range(n - 1): min_idx = i for j in range(i+1, n): if arr[j] < arr[min_idx]: min_idx = j arr[i], arr[min_idx] = arr[min_idx], arr[i] tuples = [(1, 'apple'), (2, 'banana'), (0, 'cherry')] sorted_tuples = sorted(tuples, key=lambda x: x[1]) print(sorted_tuples)"
+          "text": "[(0, 'cherry'), (1, 'apple'), (2, 'banana')]"
         },
         {
           "key": "D",
@@ -324,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "假设你正在爬楼梯,每次可以爬 1 阶或 2 阶。给定楼梯的阶数  n ,计算有多少种不同的方法可以爬到楼顶。\n以下 Python 代码的横线处应该填写?(  )",
+      "stem": "假设你正在爬楼梯,每次可以爬1阶或2阶。给定楼梯的阶数 n ,计算有多少种不同的方法可以爬到楼顶。\n以下Python代码的横线处应该填写?( )\ndef climbStairs(n):\n    if n == 1:\n        return 1\n    if n == 2:\n        return 2\n1\n2\n3\n4\n5\n6\n7\n8\n    # 初始化前两阶楼梯的数据\n    dp = [0] * (n + 1)\n    dp[1] = 1\n    dp[2] = 2\n9\n10\n11\n12\n13\n14\n15\n    # 从第3阶楼梯开始,计算每一阶楼梯的爬法数量\n    for i in range(3, n + 1):\n        __________\n    return dp[n]",
       "options": [
         {
           "key": "A",
@@ -348,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "文件 numbers.txt 的内容如下:\n执行下面 Python 代码后,输出的结果是?(  )\ndef climbStairs(n):\n    if n == 1:\n        return 1\n    if n == 2:\n        return 2\n    # 初始化前两阶楼梯的数据\n    dp = [0] * (n + 1)\n    dp[1] = 1\n    dp[2] = 2\n    # 从第 3 阶楼梯开始,计算每一阶楼梯的爬法数量\n    for i in range(3, n + 1):\n        __________\n    return dp[n]\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n5\n12\n7\n15\n3\n20\n8\n1\n2\n3\n4\n5\n6\n7\ndef func(file_path, threshold):\n    lst = []\n    with open(file_path) as file:\n        for line in file:\n            number = int(line.strip())\n            if number > threshold:\n                lst.append(number)\n    return lst\nfile_path = 'numbers.txt'\nthreshold = 12\nselected_numbers = func(file_path, threshold)\nprint(selected_numbers)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "文件numbers.txt的内容如下:\n5\n12\n7\n15\n3\n20\n8\n1\n2\n3\n4\n5\n6\n7\n执行下面Python代码后,输出的结果是?( )\ndef func(file_path, threshold):\n    lst = []\n    with open(file_path) as file:\n        for line in file:\n            number = int(line.strip())\n            if number > threshold:\n1\n2\n3\n4\n5\n6\n                lst.append(number)\n    return lst\n7\n8\n9\n10\n11\n12\n13\n14\nfile_path = 'numbers.txt'\nthreshold = 12\nselected_numbers = func(file_path, threshold)\nprint(selected_numbers)",
       "options": [
         {
           "key": "A",
@@ -374,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "小杨最近开始学习 C++ 编程,老师说 C++ 是一门面向对象的编程语言 , 也是一门高级语言。(   )",
+      "stem": "小杨最近开始学习C++编程,老师说C++是一门面向对象的编程语言,也是一门高级语言。(  )",
       "options": [
         {
           "key": "T",
@@ -385,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在 Python 程序中,自定义函数可以定义在主程序代码的前面,也可以定义在主程序代码的后面,都不会发生\n错误。( )",
+      "stem": "在Python程序中,自定义函数可以定义在主程序代码的前面,也可以定义在主程序代码的后面,都不会发生\n错误。( )",
       "options": [
         {
           "key": "T",
@@ -401,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在 Python 程序中,如果自定义函数内没有 return 语句或者 return 语句不带任何返回值,那么该函数的返回值为\nFalse 。",
+      "stem": "在Python程序中,如果自定义函数内没有return语句或者return语句不带任何返回值,那么该函数的返回值为\nFalse。",
       "options": [
         {
           "key": "T",
@@ -417,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "try-except-else-finally 异常处理结构中,只有 try 程序段中的语句没有异常, else 程序段中的语句才会得到执\n行。",
+      "stem": "try-except-else-finally异常处理结构中,只有try程序段中的语句没有异常,else程序段中的语句才会得到执\n行。",
       "options": [
         {
           "key": "T",
@@ -433,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "Python 中避免使用反斜线\\指定文件路径时出错,如C:\\test\\numbers.txt;常常使用正斜线/或者双反\n斜线\\\\。",
+      "stem": "Python中避免使用反斜线\\ 指定文件路径时出错,如C:\\test\\numbers.txt ;常常使用正斜线/ 或者双反\n斜线\\\\ 。",
       "options": [
         {
           "key": "T",
@@ -449,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "'w' 可以作为 open() 函数的参数,表示以写的方式打开文件,若文件不存在,则会抛出异常。",
+      "stem": "'w'可以作为open()函数的参数,表示以写的方式打开文件,若文件不存在,则会抛出异常。",
       "options": [
         {
           "key": "T",
@@ -465,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面这段程序的时间复杂度为线性阶 。(  )",
+      "stem": "下面这段程序的时间复杂度为线性阶\n。( )\ndef func(n):\n    i = 0\n    while i ** 2 < n:\n        i += 1",
       "options": [
         {
           "key": "T",
@@ -481,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "对一组数据  [5, 2, 6, 4, 8, 1, 7, 3] 使用冒泡的方法按从大到小的顺序进行排序,则第 2 轮排序过后的结果是 [6, 5,\n8, 4, 7, 3, 2, 1] 。",
+      "stem": "对一组数据 [5, 2, 6, 4, 8, 1, 7, 3]使用冒泡的方法按从大到小的顺序进行排序,则第2轮排序过后的结果是[6, 5,\n8, 4, 7, 3, 2, 1]。",
       "options": [
         {
           "key": "T",
@@ -497,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "执行下面 Python 代码后,输出的结果为 (0, 0) 。",
+      "stem": "执行下面Python代码后,输出的结果为(0, 0)。\nlst = [(x, x**2) for x in range(-5, 6)]\na = min(lst, key=lambda x: abs(x[1]))\n\n\nprint(a)",
       "options": [
         {
           "key": "T",
@@ -513,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "在 Python 中表达式{1, 3, 5} & {2, 4, 6} == {}的值为 True 。",
+      "stem": "在Python中表达式{1, 3, 5} & {2, 4, 6} == {} 的值为True。",
       "options": [
         {
           "key": "T",
@@ -529,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -537,18 +537,18 @@
       "seq": 1,
       "kind": "traditional",
       "title": "黑白方块",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\ndef func(n):\n    i = 0\n        i += 1\n\nlst = [(x, x**2) for x in range(-5, 6)]\na = min(lst, key=lambda x: abs(x[1]))\nprint(a)\n\n3.1.1 题面描述\n小杨有一个   行   列的网格图,其中每个格子要么是白色,要么是黑色。\n小杨想知道网格图中是否存在一个满足如下条件的子矩形:\n子矩形由   行   列组成;\n子矩形的第   行  和第   行只包含白色格子;\n对于子矩形的第   行  和第   行,只有第   个和第   个格子是白色的,其余格子都是黑色的;\n请你编写程序帮助小杨判断。\n3.1.2\n\n输入格式\n第一行包含一个正整数  ,代表测试用例组数。\n接下来是   组测试用例。对于每组测试用例,一共   行。\n第一行包含两个正整数  ,含义如题面所示。\n之后   行,每行一个长度为   的   串,代表网格图第   行格子的颜色,如果为  ,则对应格子为白色,否则为黑\n色。\n3.1.3 输出格式\n对于每组测试用例,如果存在,输出  Yes ,否则输出  No 。\n3.1.4 样例 1\n满足条件的子矩形形如:\n\n1 4\n\n5 5\n\n5 5\n\nNo\nYes\nNo\n\n对于全部数据,保证有  。\n3.1.5",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题面描述\n小杨有一个  行\n 列的网格图,其中每个格子要么是白色,要么是黑色。\n小杨想知道网格图中是否存在一个满足如下条件的子矩形:\n子矩形由  行  列组成;\n子矩形的第  行 和第  行只包含白色格子;\n对于子矩形的第  行 和第  行,只有第  个和第  个格子是白色的,其余格子都是黑色的;\n请你编写程序帮助小杨判断。\n3.1.2\n\n输入格式\n第一行包含一个正整数 ,代表测试用例组数。\n接下来是  组测试用例。对于每组测试用例,一共\n 行。\n第一行包含两个正整数\n,含义如题面所示。\n之后  行,每行一个长度为\n 的\n 串,代表网格图第  行格子的颜色,如果为 ,则对应格子为白色,否则为黑\n色。\n3.1.3\n输出格式\n对于每组测试用例,如果存在,输出 Yes,否则输出 No。\n3.1.4\n样例1\n\n1 4\n\n5 5\n\n5 5\n\nNo\nYes\nNo\n\n满足条件的子矩形形如:\n\n对于全部数据,保证有\n。\n3.1.5",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "3\n0110\n00000\n01100\n01100\n00001\n01100\n00000\n01100\n01110\n00001\n01100\n",
-          "out": "13\n",
+          "in": "3\n0110\n00000\n",
+          "out": "4\n",
           "suspect": false
         },
         {
-          "in": "14\n15\n",
-          "out": "3\n",
+          "in": "13\n14\n15\n",
+          "out": "0000\n",
           "suspect": false
         },
         {
@@ -557,17 +557,25 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "N = 110\nw = [[0] * N for _ in range(N)]\nmatch = [[0] * 4 for _ in range(4)]\nn, m = 0, 0\ndef check(xa, ya):\n    for i in range(4):\n        for j in range(4):\n            if w[xa + i][ya + j] != match[i][j]:\n                return False\n    return True\ndef main():\n    for i in range(1, 3):\n        match[1][i] = match[2][i] = 1\n\n    t = int(input())\n    for _ in range(t):\n        global n, m\n        n, m = map(int, input().split())\n\n        for i in range(1, n + 1):\n            s = input()\n            for j in range(1, m + 1):\n                w[i][j] = int(s[j - 1])\n\n        fl = False\n        for i in range(1, n - 2):\n            for j in range(1, m - 2):\n                if check(i, j):\n                    fl = True\n                    break\n            if fl:\n                break\n        if fl:\n            print(\"Yes\")\n        else:\n            print(\"No\")\nif __name__ == \"__main__\":\n    main()"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "区间排序",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\nN = 110\nw = [[0] * N for _ in range(N)]\nmatch = [[0] * 4 for _ in range(4)]\nn, m = 0, 0\ndef check(xa, ya):\n            if w[xa + i][ya + j] != match[i][j]:\n                return False\n    return True\ndef main():\n        match[1][i] = match[2][i] = 1\n\n    t = int(input())\n        global n, m\n        n, m = map(int, input().split())\n\n            s = input()\n                w[i][j] = int(s[j - 1])\n\n        fl = False\n                if check(i, j):\n                    fl = True\n                    break\n            if fl:\n                break\n\n        if fl:\n            print(\"Yes\")\n        else:\n            print(\"No\")\nif __name__ == \"__main__\":\n    main()\n\n3.2.1 题面描述\n小杨有一个包含   个正整数的序列  。\n小杨计划对序列进行多次升序排序,每次升序排序小杨会选择一个区间  ( )并对区间内所有数字,即\n 进行升序排序。每次升序排序会在上一次升序排序的结果上进行。\n小杨想请你计算出多次升序排序后的序列。\n3.2.2\n\n输入格式\n第一行包含一个正整数  ,含义如题面所示。\n第二行包含   个正整数  ,代表序列。\n第三行包含一个正整数  ,代表排序次数。\n之后   行,每行包含两个正整数  ,代表将区间   内所有数字进行升序排序。,\n3.2.3 输出格式\n输出一行包含   个正整数,代表多次升序排序后的序列。\n3.2.4 样例 1\n第一次升序排序后,序列为  ;\n第二次升序排序后,序列为  ;\n第三次升序排序后,序列为  ;\n对于全部数据,保证有  。\n3.2.5",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题面描述\n小杨有一个包含  个正整数的序列 。\n小杨计划对序列进行多次升序排序,每次升序排序小杨会选择一个区间\n(\n)并对区间内所有数字,即\n 进行升序排序。每次升序排序会在上一次升序排序的结果上进行。\n小杨想请你计算出多次升序排序后的序列。\n3.2.2\n\n输入格式\n第一行包含一个正整数 ,含义如题面所示。\n第二行包含  个正整数\n,代表序列。\n第三行包含一个正整数 ,代表排序次数。\n之后  行,每行包含两个正整数\n,代表将区间\n 内所有数字进行升序排序。\n,\n3.2.3\n输出格式\n输出一行包含  个正整数,代表多次升序排序后的序列。\n3.2.4\n样例1\n\n3 4 5 2 1\n\n4 5\n3 4\n1 3\n\n1 3 4 5 2\n\n第一次升序排序后,序列为\n;\n第二次升序排序后,序列为\n;\n第三次升序排序后,序列为\n;\n对于全部数据,保证有\n。\n3.2.5",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "5\n3\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "N = 1010\na = [0] * N\nn = 0\ndef bubbleSort(l, r):\n    flag = True\n    while flag:\n        flag = False\n        for i in range(l, r):\n            if a[i] > a[i + 1]:\n                flag = True\n                a[i], a[i + 1] = a[i + 1], a[i]\nn = int(input())\ns = input().split()\nfor i in range(1, n + 1):\n    a[i] = int(s[i-1])\nq = int(input())\nwhile q:\n    q -= 1\n    l, r = map(int, input().split())\n    bubbleSort(l, r)\nfor i in range(1, n + 1):\n    print(a[i], end=\" \" if i != n else \"\\n\")"
     }
   ],
   "answer_rows": [
@@ -588,8 +596,6 @@
       "B",
       "A"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

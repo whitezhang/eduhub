@@ -1,40 +1,33 @@
 <script setup>
-import { useRoute } from "vue-router";
-
-defineProps({
+const props = defineProps({
   tracks: { type: Array, default: () => [] },
   track: { type: String, default: "" },
+  compact: { type: Boolean, default: false },
+  labelFn: { type: Function, default: null },
 });
 const emit = defineEmits(["pick"]);
-const route = useRoute();
 
-const tabs = [
-  { path: "/syllabus", label: "大纲总览" },
-  { path: "/syllabus/guide", label: "知识点详解" },
-];
+function labelOf(t) {
+  if (typeof props.labelFn === "function") return props.labelFn(t.title) || t.title;
+  return t.title;
+}
 </script>
 
 <template>
-  <header class="syll-hero">
-    <h1 class="serif">教学大纲</h1>
-    <p class="muted">参考 NOI 2025 大纲整理。CSP-J/S 分两轮：初赛客观题，复赛编程题。</p>
-    <nav class="syll-mode" aria-label="大纲视图">
-      <router-link
-        v-for="tab in tabs"
-        :key="tab.path"
-        :to="{ path: tab.path, query: route.query }"
-        :class="{ on: route.path === tab.path }"
-      >{{ tab.label }}</router-link>
-    </nav>
-    <div class="syll-tracks" role="tablist" aria-label="赛道">
-      <button
-        v-for="t in tracks"
-        :key="t.slug"
-        type="button"
-        class="syll-track"
-        :class="{ on: track === t.slug }"
-        @click="emit('pick', t.slug)"
-      >{{ t.title }}</button>
+  <header class="syll-hero" :class="{ compact }">
+    <div class="syll-hero-top">
+      <h1 class="serif">教学大纲</h1>
+      <div class="syll-tracks" role="tablist" aria-label="赛道">
+        <button
+          v-for="t in tracks"
+          :key="t.slug"
+          type="button"
+          class="syll-track"
+          :class="{ on: track === t.slug }"
+          @click="emit('pick', t.slug)"
+        >{{ labelOf(t) }}</button>
+      </div>
     </div>
+    <p v-if="!compact" class="muted syll-hero-blurb">参考 NOI 2025 大纲。CSP-J/S：初赛客观题，复赛编程题。</p>
   </header>
 </template>

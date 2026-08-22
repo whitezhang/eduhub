@@ -3,16 +3,16 @@
     "ym": "202409",
     "lang": "cpp",
     "level": 3,
-    "title": "GESP 9月认证 C++ 三级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10166.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1644702761746464.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202409-cpp-3.pdf"
+    "title": "202409-cpp-3",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202409-cpp-3.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "下列代码中,输出结果是( )",
+      "stem": "下列代码中,输出结果是( )\n#include<iostream>\nusing namespace std;\nint main()\n1\n2\n3\n{\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n double a=0.9;\n double b=1.0;\n if(((b-a)==0.1))\n {\n cout<<\"Equal\"<<endl;\n }\n else\n {\n cout<<\"Not equal\"<<endl;\n }\n15\n16\n}",
       "options": [
         {
           "key": "A",
@@ -64,7 +64,7 @@
       "options": [
         {
           "key": "A",
-          "text": "7C3 #include<iostream> using namespace std; int main() { double a=0.9; double b=1.0; if(((b-a)==0.1)) { cout<<\"Equal\"<<endl; } else { cout<<\"Not equal\"<<endl; } }"
+          "text": "7C3"
         },
         {
           "key": "B",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下列代码实现的是( )",
+      "stem": "下列代码实现的是( )\nvoid Swap(int &a, int &b) {\n1\n2\n3\n4\n5\n6\n7\n if (a != b) {\n a ^= b;\n b ^= a;\n a ^= b;\n }\n}",
       "options": [
         {
           "key": "A",
@@ -188,7 +188,7 @@
         },
         {
           "key": "B",
-          "text": "使a的最高位为1 void Swap(int &a, int &b) { if (a != b) { a ^= b; b ^= a; a ^= b; } }"
+          "text": "使a的最高位为1"
         },
         {
           "key": "C",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "a=1010 1110,a<<2,下面关于这个说法正确的是 (  )。",
+      "stem": "a=1010 1110,a<<2,下面关于这个说法正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下列程序中,result和result2输出分别是 ( )",
+      "stem": "下列程序中,result和result2输出分别是( )\nlong a = 123;\nint b = 1;\nlong result = a & b;\ncout<<result<<endl;\n1\n2\n3\n4\n5\n6\n7\n8\n9\nlong a2 = -123;\nunsigned int b2 = -1;\nlong result2 = a2 & b2;\ncout<<result2<<endl;",
       "options": [
         {
           "key": "A",
@@ -276,15 +276,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "关于一维数组,下列程序能够正确执行的是(  )。",
+      "stem": "关于一维数组,下列程序能够正确执行的是(  )。\n\n```\nint a[10]; int sum=0; for(int i=0;i<=10;i++) { sum=sum+a[i]; }\nint a[10]={1,2,3,4,5,6,7,8,9,10}; int sum=0; for(int i=0;i<=10;i++) { sum=sum+a[i]; }\nint a[10]={1,2,3,4,5,6,7,8,9,10}; int sum=0; for(int i=0;i<10;i++) { um=sum+a[i]; }\nint a[10]={0}; int sum=0; for(int i=0;i<=10;i++) { sum=sum+a[i]; }\n```",
       "options": [
         {
           "key": "A",
-          "text": "B. long a = 123; int b = 1; long result = a & b; cout<<result<<endl; long a2 = -123; unsigned int b2 = -1; long result2 = a2 & b2; cout<<result2<<endl; int a[10]; int sum=0; for(int i=0;i<=10;i++) { sum=sum+a[i]; }"
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
         },
         {
           "key": "C",
-          "text": "D."
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
         }
       ],
       "answer": "C"
@@ -292,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面的程序中,会输出(  )。",
+      "stem": "下面的程序中,会输出(  )。\nint a[10]={1,2,3,4,5,6,7,8,9,10};\ncout<<a[10]<<endl;\n1\n2",
       "options": [
         {
           "key": "A",
@@ -340,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下列程序输出的是()\n\n```\nint a[10]={1,2,3,4,5,6,7,8,9,10}; int sum=0; for(int i=0;i<=10;i++) { sum=sum+a[i]; } int a[10]={1,2,3,4,5,6,7,8,9,10}; int sum=0; for(int i=0;i<10;i++) { um=sum+a[i]; } int a[10]={0}; int sum=0; for(int i=0;i<=10;i++) { sum=sum+a[i]; } int a[10]={1,2,3,4,5,6,7,8,9,10}; cout<<a[10]<<endl; string str = \"Hello,CHAD\"; cout << str.find(\"A\") << '\\n'; 题号 1 2 3 4 5 6 7 8 9 10 答案\n```",
+      "stem": "下列程序输出的是()\nstring str = \"Hello,CHAD\";\ncout << str.find(\"A\") << '\\n';\n1\n2",
       "options": [
         {
           "key": "A",
@@ -377,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "~1 的输出值是 -2 。(   )",
+      "stem": "~1 的输出值是-2 。(   )",
       "options": [
         {
           "key": "T",
@@ -393,7 +401,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
@@ -409,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "取 X 的低四位,可以用 Y = 0000 1111 ,用 X&Y 获取 X 的低四位。(   )",
+      "stem": "取X 的低四位,可以用Y = 0000 1111 ,用X&Y 获取X 的低四位。(   )",
       "options": [
         {
           "key": "T",
@@ -425,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下列程序输出的是 A 。(   )",
+      "stem": "下列程序输出的是A 。(   )\nchar x=65;\nx++;\ncout<<x++<<endl;",
       "options": [
         {
           "key": "T",
@@ -441,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "下列程序输出的是 3 。(   )",
+      "stem": "下列程序输出的是3 。(   )\nstring str=\"CHADai\";\nsize_t pos = str.find('D');\ncout<<pos<<endl;",
       "options": [
         {
           "key": "T",
@@ -457,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下列程序将输出 1 。(   )",
+      "stem": "下列程序将输出1 。(   )\nint a[10]={1};\ncout<<a[1]<<endl;",
       "options": [
         {
           "key": "T",
@@ -473,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下列程序将输出 A 。(   )",
+      "stem": "下列程序将输出A 。(   )\nint a=65;\ncout<<(char)a<<endl;",
       "options": [
         {
           "key": "T",
@@ -489,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "16进制数 AB ,表示成2进制数是 10101011 。(   )",
+      "stem": "16进制数AB ,表示成2进制数是10101011 。(   )",
       "options": [
         {
           "key": "T",
@@ -505,7 +513,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
@@ -521,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -529,27 +537,45 @@
       "seq": 1,
       "kind": "traditional",
       "title": "平衡序列",
-      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\nchar x=65;\nx++;\ncout<<x++<<endl;\n\nstring str=\"CHADai\";\nsize_t pos = str.find('D');\ncout<<pos<<endl;\n\ncout<<a[1]<<endl;\n\ncout<<(char)a<<endl;\n\n3.1.1 题面描述\n小杨有一个包含  个正整数的序列 ,他认为一个序列是平衡的当且仅当存在一个正整数 ( )使得序列第\n个到第  个数字的总和等于第  个到第  个数字的总和。\n小杨想请你判断序列  是否是平衡的。\n3.1.2\n\n输入格式\n第一行包含一个正整数 ,代表测试用例组数。\n接下来是  组测试用例。对于每组测试用例,一共两行。\n第一行包含一个正整数 ,代表序列长度。\n第二行包含  个正整数,代表序列 。\n3.1.3 输出格式\n对于每组测试用例,如果序列  是否是平衡的,输出 Yes,否则输出 No。\n3.1.4 样例1\n对于第一组测试用例,令 ,则有 ,因此序列是平衡的;\n对于第二组测试用例,令 ,则有 ,因此序列是平衡的;\n对于第三组测试用例,不存在满足要求的 。\n对于全部数据,保证有 。\n3.1.5",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题面描述\n小杨有一个包含  个正整数的序列 ,他认为一个序列是平衡的当且仅当存在一个正整数(\n)使得序列第\n个到第  个数字的总和等于第\n 个到第  个数字的总和。\n小杨想请你判断序列  是否是平衡的。\n3.1.2\n\n输入格式\n第一行包含一个正整数 ,代表测试用例组数。\n接下来是  组测试用例。对于每组测试用例,一共两行。\n第一行包含一个正整数 ,代表序列长度。\n第二行包含  个正整数,代表序列 。\n3.1.3\n输出格式\n对于每组测试用例,如果序列  是否是平衡的,输出 Yes,否则输出 No。\n3.1.4\n样例1\n\n1 2 3\n\n2 3 1 4\n\n1 2 3 4 5\n\nYes\nYes\nNo\n\n对于第一组测试用例,令\n,则有\n,因此序列是平衡的;\n对于第二组测试用例,令\n,则有\n,因此序列是平衡的;\n对于第三组测试用例,不存在满足要求的\n。\n对于全部数据,保证有\n。\n3.1.5",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "3\n3\n4\n5\n",
+          "out": "5\n",
+          "suspect": false
+        },
+        {
+          "in": "6\n7\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include<bits/stdc++.h>\nusing namespace std;\nint a[10010];\nint main(){\n int t;\n cin>>t;\n while(t--){\n int n;\n cin>>n;\n int sum=0;\n for(int i=1;i<=n;i++){\n cin>>a[i];\n sum+=a[i];\n }\n int tot=0,fl=0;\n for(int i=1;i<n;i++){\n tot+=a[i];\n if(tot*2==sum){\n fl=1;\n break;\n }\n }\n if(fl)cout<<\"Yes\\n\";\n else cout<<\"No\\n\";\n }\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "回文拼接",
-      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1 题面描述\n一个字符串是回文串,当且仅当该字符串从前往后读和从后往前读是一样的,例如, 和 都是回文串,\n但  不是。\n小杨有  个仅包含小写字母的字符串,他想请你编写程序判断每个字符串是否由两个长度至少为 的回文串前后拼\n接而成。\n3.2.2\n\n输入格式\n第一行包含一个正整数 ,代表字符串数量。\n之后 行每行一个仅包含小写字母的字符串。\n3.2.3 输出格式\n对于每个字符串输出一行,如果该字符串由两个长度至少为 的回文串前后拼接而成则输出 Yes,否则输出 No。\n3.2.4 样例1\n对于第 个字符串,都不是由两个长度至少为 的回文串前后拼接而成。\n第 个字符串由回文串  和 前后拼接而成,并且两个回文串长度都至少为 。\n }\n int tot=0,fl=0;\n for(int i=1;i<n;i++){\n tot+=a[i];\n if(tot*2==sum){\n fl=1;\n break;\n }\n }\n if(fl)cout<<\"Yes\\n\";\n else cout<<\"No\\n\";\n }\n}\n\nabcd\naabbb\naaac\nabcdd\n\nNo\nYes\nNo\nNo\n\n对于全部数据,保证有 ,并且每个字符串的长度不超过 。\n3.2.5",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题面描述\n一个字符串是回文串,当且仅当该字符串从前往后读和从后往前读是一样的,例如,\n和\n都是回文串,\n但\n 不是。\n小杨有  个仅包含小写字母的字符串,他想请你编写程序判断每个字符串是否由两个长度至少为\n的回文串前后拼\n接而成。\n3.2.2\n\n输入格式\n第一行包含一个正整数 ,代表字符串数量。\n之后\n行每行一个仅包含小写字母的字符串。\n3.2.3\n输出格式\n对于每个字符串输出一行,如果该字符串由两个长度至少为\n的回文串前后拼接而成则输出 Yes,否则输出 No。\n3.2.4\n样例1\n\nabcd\naabbb\naaac\nabcdd\n\nNo\nYes\nNo\nNo\n\n对于第\n个字符串,都不是由两个长度至少为\n的回文串前后拼接而成。\n第\n个字符串由回文串\n 和\n前后拼接而成,并且两个回文串长度都至少为。\n对于全部数据,保证有\n,并且每个字符串的长度不超过\n。\n3.2.5",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "23\n24\n25\n26\n4\n",
-          "out": "1\n",
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n4\n5\n",
+          "out": "4\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include<bits/stdc++.h>\nusing namespace std;\nint main(){\n int n,k;\n cin>>n;\n for(int i=1;i<=n;i++){\n string s;\n cin>>s;\n int m = s.length();\n int fl = 0;\n for(int j=2;j<=m-2;j++){\n string s1=s.substr(0,j);\n string s2=s.substr(j,m-j);\n string t1=\"\",t2=\"\";\n for(int k=(int)s1.size()-1;k>=0;k--)t1+=s1[k];\n for(int k=(int)s2.size()-1;k>=0;k--)t2+=s2[k];\n if(t1==s1&&t2==s2){\n fl=1;\n break;\n }\n }\n if(fl)cout<<\"Yes\\n\";\n else cout<<\"No\\n\";\n }\n}"
     }
   ],
   "answer_rows": [
@@ -568,11 +594,8 @@
       "C",
       "D",
       "C",
-      "B",
-      "C"
+      "B"
     ],
-    [
-      "D"
-    ]
+    []
   ]
 }

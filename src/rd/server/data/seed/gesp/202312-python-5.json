@@ -3,10 +3,10 @@
     "ym": "202312",
     "lang": "python",
     "level": 5,
-    "title": "GESP 12月认证 Python五级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10119.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1584919123853344.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202312-python-5.pdf"
+    "title": "202312-python-5",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202312-python-5.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "小杨想编写一个判断任意输入的整数 N 是否为素数的程序,下面哪个方法不合适?(   )",
+      "stem": "小杨想编写一个判断任意输入的整数N是否为素数的程序,下面哪个方法不合适?(  )",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "内排序有不同的类别,下面哪种排序算法和冒泡排序是同一类?(   )",
+      "stem": "内排序有不同的类别,下面哪种排序算法和冒泡排序是同一类?(  )",
       "options": [
         {
           "key": "A",
@@ -84,23 +84,23 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面 Python 代码用于求斐波那契数列,该数列第 1 、 2 项为 1 ,以后各项均是前两项之和。下面有关说法错误\n的是 (  )。",
+      "stem": "下面Python代码用于求斐波那契数列,该数列第1、2项为1,以后各项均是前两项之和。下面有关说法错误\n的是(\n )。",
       "options": [
         {
           "key": "A",
-          "text": "fiboA( )用递归方式,fiboB()循环方式"
+          "text": "fiboA( ) 用递归方式,fiboB() 循环方式"
         },
         {
           "key": "B",
-          "text": "fiboA( )更加符合斐波那契数列的数学定义,直观易于理解,而fiboB()需要将数学定义转换为计算机程 序实现"
+          "text": "fiboA( ) 更加符合斐波那契数列的数学定义,直观易于理解,而fiboB() 需要将数学定义转换为计算机程 序实现"
         },
         {
           "key": "C",
-          "text": "fiboA( )不仅仅更加符合数学定义,直观易于理解,且因代码量较少执行效率更高"
+          "text": "fiboA( ) 不仅仅更加符合数学定义,直观易于理解,且因代码量较少执行效率更高"
         },
         {
           "key": "D",
-          "text": "fiboB( )虽然代码量有所增加,但其执行效率更高"
+          "text": "fiboB( ) 虽然代码量有所增加,但其执行效率更高"
         }
       ],
       "answer": "C"
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面 Python 代码以递归方式实现合并排序,并假设merge(left,right)函数能对有序(同样排序规则)的\nleft和right排序。横线处应填上代码是 (  )。",
+      "stem": "下面Python代码以递归方式实现合并排序,并假设merge(left,right) 函数能对有序(同样排序规则)的\nleft 和right 排序。横线处应填上代码是( )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "阅读下面的 Python 代码,执行后其输出是 (  )。",
+      "stem": "阅读下面的Python代码,执行后其输出是( )。",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面的 Python 用于对lstA排序,使得偶数在前奇数在后,横线处不应填入 (  )。",
+      "stem": "下面的Python用于对lstA 排序,使得偶数在前奇数在后,横线处不应填入(\n )。",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面的 Python 代码用于排序sA字符串中每个字符出现的次数(字频) , sA字符串可能很长,此处仅为示\n例。排序要求是按字频降序,如果字频相同则按字符的 ASCII 升序,横线处应填入代码是(     )。",
+      "stem": "下面的Python代码用于排序sA 字符串中每个字符出现的次数(字频), sA 字符串可能很长,此处仅为示\n例。排序要求是按字频降序,如果字频相同则按字符的ASCII升序,横线处应填入代码是(    )。",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "有关下面 Python 代码正确的是(     )。",
+      "stem": "有关下面Python代码正确的是(    )。",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面的 Python 代码实现对list的快速排序,有关说法,错误的是(     )。",
+      "stem": "下面的Python代码实现对list 的快速排序,有关说法,错误的是(    )。",
       "options": [
         {
           "key": "A",
@@ -252,23 +252,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面 Python 代码中的isPrimeA()和isPrimeB()都用于判断参数 N 是否素数,有关其时间复杂度的正确说\n法是(     )。",
+      "stem": "下面Python代码中的isPrimeA() 和isPrimeB() 都用于判断参数N是否素数,有关其时间复杂度的正确说\n法是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "isPrimeA( )的最坏时间复杂度是 ,isPrimeB( )的最坏时间复杂度是 , isPrimeA() 优于 isPrimeB()"
+          "text": "isPrimeA( ) 的最坏时间复杂度是 ,isPrimeB( ) 的最坏时间复杂度是 ,isPrimeA()优于 isPrimeB()"
         },
         {
           "key": "B",
-          "text": "isPrimeA()的最坏时间复杂度是 ,isPrimeB( )的最坏时间复杂度是 , isPrimeB() 绝大多数 情况下优于 isPrimeA()"
+          "text": "isPrimeA() 的最坏时间复杂度是 ,isPrimeB( ) 的最坏时间复杂度是 ,isPrimeB()绝大多数 情况下优于isPrimeA()"
         },
         {
           "key": "C",
-          "text": "isPrimeA()的最坏时间复杂度是 ,isPrimeB( )的最坏时间复杂度是 ,isPrimeA( )优于 isPrimeB( )"
+          "text": "isPrimeA() 的最坏时间复杂度是 ,isPrimeB( ) 的最坏时间复杂度是 ,isPrimeA( ) 优于 isPrimeB( )"
         },
         {
           "key": "D",
-          "text": "isPrimeA()的最坏时间复杂度是 ,isPrimeB( )的最坏时间复杂度是 , isPrimeA() 优于 isPrimeB( )"
+          "text": "isPrimeA() 的最坏时间复杂度是 ,isPrimeB( ) 的最坏时间复杂度是 ,isPrimeA()优于 isPrimeB( )"
         }
       ],
       "answer": "B"
@@ -276,23 +276,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面 Python 代码用于有序list的二分查找,有关说法错误的是(     )。",
+      "stem": "下面Python代码用于有序list 的二分查找,有关说法错误的是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "代码采用二分法实现有序 list 的查找"
+          "text": "代码采用二分法实现有序list的查找"
         },
         {
           "key": "B",
-          "text": "代码采用分治算法实现有序 list 的查找"
+          "text": "代码采用分治算法实现有序list的查找"
         },
         {
           "key": "C",
-          "text": "代码采用递归方式实现有序 list 的查找"
+          "text": "代码采用递归方式实现有序list的查找"
         },
         {
           "key": "D",
-          "text": "代码采用动态规划算法实现有序 list 的查找"
+          "text": "代码采用动态规划算法实现有序list的查找"
         }
       ],
       "answer": "D"
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "在上题的算法中,其时间复杂度是(     )。",
+      "stem": "在上题的算法中,其时间复杂度是(    )。",
       "options": [
         {
           "key": "A",
@@ -316,7 +316,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面的 Python 代码用于实现每个字符后紧跟随字符及其出现次数,并对紧跟随字符排序,即出现次数最多\n排在前,形如:{' 中 ': [(' 文 ', 1), (' 国 ', 2), (' 华 ', 2)]},此处S仅是部分字符,可能很多,横线处应\n填入代码是(     )。",
+      "stem": "下面的Python代码用于实现每个字符后紧跟随字符及其出现次数,并对紧跟随字符排序,即出现次数最多\n排在前,形如:{'中': [('文', 1), ('国', 2), ('华', 2)]} ,此处S 仅是部分字符,可能很多,横线处应\n填入代码是(    )。",
       "options": [
         {
           "key": "A",
@@ -340,7 +340,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "有关下面 Python 代码的说法正确的是(     )。\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "有关下面Python代码的说法正确的是(    )。",
       "options": [
         {
           "key": "A",
@@ -366,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "小杨想写一个程序来算出正整数 N 有多少个因数,经过思考他写出了一个重复没有超过 N/2 次的循环就能够算\n出来了。(   )",
+      "stem": "小杨想写一个程序来算出正整数N有多少个因数,经过思考他写出了一个重复没有超过N/2次的循环就能够算\n出来了。(  )",
       "options": [
         {
           "key": "T",
@@ -377,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "同样的整数序列分别保存在单链表和双向链中,这两种链表上的简单冒泡排序的复杂度相同。(   )",
+      "stem": "同样的整数序列分别保存在单链表和双向链中,这两种链表上的简单冒泡排序的复杂度相同。(  )",
       "options": [
         {
           "key": "T",
@@ -393,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "归并排序的时间复杂度是 。 (  )",
+      "stem": "归并排序的时间复杂度是\n。(\n )",
       "options": [
         {
           "key": "T",
@@ -409,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "在 Python 中,当对list类型进行in运算查找元素是否存在时,其查找通常采用二分法。(   )",
+      "stem": "在Python中,当对list 类型进行in 运算查找元素是否存在时,其查找通常采用二分法。(  )",
       "options": [
         {
           "key": "T",
@@ -425,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "以下 Python 代码能以递归方式实现斐波那契数列,该数列第 1 、 2 项为 1 ,以后各项均是前两项之和。 (  )\n`",
+      "stem": "以下Python代码能以递归方式实现斐波那契数列,该数列第1、2项为1,以后各项均是前两项之和。(  )\n`",
       "options": [
         {
           "key": "T",
@@ -441,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "贪心算法可以达到局部最优,但可能不是全局最优解。  (  )",
+      "stem": "贪心算法可以达到局部最优,但可能不是全局最优解。 (\n )",
       "options": [
         {
           "key": "T",
@@ -457,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "如果自定已 class 已经定义了__lt__()魔术方法,则自动支持内置函数sorted()。(   )",
+      "stem": "如果自定已class已经定义了__lt__() 魔术方法,则自动支持内置函数sorted() 。(  )",
       "options": [
         {
           "key": "T",
@@ -473,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "插入排序有时比快速排序时间复杂度更低。(   )",
+      "stem": "插入排序有时比快速排序时间复杂度更低。(  )",
       "options": [
         {
           "key": "T",
@@ -489,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下面的 Python 代码能实现十进制正整数 N 转换为八进制并输出。(   )",
+      "stem": "下面的Python代码能实现十进制正整数N转换为八进制并输出。(  )",
       "options": [
         {
           "key": "T",
@@ -505,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "Python 代码  print(sorted(list(range(10)), key = lambda x:x % 5)) 执行后将输出  [0, 5, 1,\n6, 2, 7, 3, 8, 4, 9]。(   )",
+      "stem": "Python代码 print(sorted(list(range(10)), key = lambda x:x % 5)) 执行后将输出 [0, 5, 1,\n6, 2, 7, 3, 8, 4, 9] 。(  )",
       "options": [
         {
           "key": "T",
@@ -521,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -529,32 +529,50 @@
       "seq": 1,
       "kind": "traditional",
       "title": "小杨的幸运数",
-      "statement": "时间限制: 5.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n小杨认为,所有大于等于   的完全平方数都是他的超级幸运数。\n小杨还认为,所有超级幸运数的倍数都是他的幸运数。自然地,小杨的所有超级幸运数也都是幸运数。\n对于一个非幸运数,小杨规定,可以将它一直  ,直到它变成一个幸运数。我们把这个过程叫做幸运化。例如,如\n果  ,那么   是最小的幸运数,而   不是,但我们可以连续对   做   次   操作,使其变为  ,所以我们可以\n说, 幸运化后的结果是  。\n现在,小样给出   个数,请你首先判断它们是不是幸运数;接着,对于非幸运数,请你将它们幸运化。\n3.1.2 输入描述\n第一行  2 个正整数  。\n接下来   行,每行一个正整数  ,表示需要判断(幸运化)的数。\n3.1.3 输出描述\n输出   行,对于每个给定的  ,如果它是幸运数,请输出  lucky,否则请输出将其幸运化后的结果。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n2 4\n\nlucky\n\nlucky\n\n3.1.7 样例解释  1\n 虽然是完全平方数,但它小于  ,因此它并不是超级幸运数,也不是幸运数。将其进行   次   操作后,最终得到\n幸运数  。\n 是幸运数,因此直接输出  lucky。\n 不是幸运数,将其进行   次   操作后,最终得到幸运数  。\n 是幸运数,因此直接输出  lucky。\n3.1.8 样例输入  2\n3.1.9 样例输出  2\n3.1.10 数据规模\n对于   的测试点,保证  , 。\n对于   的测试点,保证  。\n对于所有测试点,保证  ;保证  ;保证  。\n3.1.11",
+      "statement": "时间限制:5.0 s\n内存限制:128.0 MB\n3.1.1\n问题描述\n小杨认为,所有大于等于  的完全平方数都是他的超级幸运数。\n小杨还认为,所有超级幸运数的倍数都是他的幸运数。自然地,小杨的所有超级幸运数也都是幸运数。\n对于一个非幸运数,小杨规定,可以将它一直\n,直到它变成一个幸运数。我们把这个过程叫做幸运化。例如,如\n果\n,那么  是最小的幸运数,而  不是,但我们可以连续对  做  次\n 操作,使其变为 ,所以我们可以\n说, 幸运化后的结果是 。\n现在,小样给出\n 个数,请你首先判断它们是不是幸运数;接着,对于非幸运数,请你将它们幸运化。\n3.1.2\n输入描述\n第一行 2 个正整数\n。\n接下来\n 行,每行一个正整数 ,表示需要判断(幸运化)的数。\n3.1.3\n输出描述\n输出\n 行,对于每个给定的 ,如果它是幸运数,请输出 lucky ,否则请输出将其幸运化后的结果。\n3.1.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5\n样例输入 1\n2 4\n\n3.1.6\n样例输出 1\n\nlucky\n\nlucky\n\n3.1.7\n样例解释 1\n 虽然是完全平方数,但它小于 ,因此它并不是超级幸运数,也不是幸运数。将其进行  次\n 操作后,最终得到\n幸运数 。\n 是幸运数,因此直接输出 lucky 。\n 不是幸运数,将其进行  次\n 操作后,最终得到幸运数 。\n 是幸运数,因此直接输出 lucky 。\n3.1.8\n样例输入 2\n16 11\n\n3.1.9\n样例输出 2\n\nlucky\nlucky\nlucky\nlucky\n\nlucky\nlucky\nlucky\n\n3.1.10\n数据规模\n对于\n 的测试点,保证\n,\n。\n对于\n 的测试点,保证\n。\n对于所有测试点,保证\n;保证\n;保证\n。\n3.1.11",
       "time_ms": 5000,
       "memory_mb": 128,
       "samples": [
         {
-          "in": "1\n4\n5\n9\n",
-          "out": "5\n",
+          "in": "4\n5\n4\n8\n",
+          "out": "1\n",
           "suspect": false
         },
         {
-          "in": "4\n8\n",
-          "out": "3\n",
+          "in": "2\n4\n8\n16\n32\n",
+          "out": "6\n",
           "suspect": false
+        },
+        {
+          "in": "1024\n8\n9\n10\n11\n12\n16\n16\n16\n16\n",
+          "out": "1\n",
+          "suspect": true
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "a, n = input().split()\na, n = int(a), int(n)\nmax_lucky = 1001 ** 2 + 10\nis_lucky = [False for i in range(max_lucky + 1)]\nnext_lucky = [-1 for i in range(max_lucky + 1)]\nfor i in range(1, max_lucky):\n    if i >= a and int(i ** 0.5) ** 2 == i:\n        is_lucky[i] = True\n        for j in range(i + i, max_lucky, i):\n            is_lucky[j] = True\nfor i in range(max_lucky - 1, 0, -1):\n    if is_lucky[i]:\n        next_lucky[i] = i\n    else:\n        next_lucky[i] = next_lucky[i + 1]\nfor i in range(n):\n    x = int(input())\n    assert 1 <= x <= 10 ** 6 + 1\n    if next_lucky[x] == x:\n        print(\"lucky\")\n    else:\n        print(next_lucky[x])"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "烹饪问题",
-      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n有   种食材,编号从   至  ,其中第   种食材的美味度为  。\n不同食材之间的组合可能产生奇妙的化学反应。具体来说,如果两种食材的美味度分别为   和  ,那么它们的契合\n度为  。\n其中,  运算为按位与运算,需要先将两个运算数转换为二进制,然后在高位补足  ,再逐位进行与运算。例如,\n 与   的二进制表示分别为  1100 和  0110,将它们逐位进行与运算,得到  0100,转换为十进制得到  ,因此\n。在  C++ 或  Python 中,可以直接使用  & 运算符表示与运算。\n现在,请你找到契合度最高的两种食材,并输出它们的契合度。\n3.2.2 输入描述\n第一行一个整数  ,表示食材的种数。\n接下来一行   个用空格隔开的整数,依次为  ,表示各种食材的美味度。\n3.2.3 输出描述\n输出一行一个整数,表示最高的契合度。\nfor i in range(1, max_lucky):\n    if i >= a and int(i ** 0.5) ** 2 == i:\n        is_lucky[i] = True\n        for j in range(i + i, max_lucky, i):\n            is_lucky[j] = True\nfor i in range(max_lucky - 1, 0, -1):\n    if is_lucky[i]:\n        next_lucky[i] = i\n    else:\n        next_lucky[i] = next_lucky[i + 1]\nfor i in range(n):\n    x = int(input())\n    assert 1 <= x <= 10 ** 6 + 1\n    if next_lucky[x] == x:\n        print(\"lucky\")\n    else:\n        print(next_lucky[x])\n\n3.2.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.2.5 样例输入  1\n3.2.6 样例输出  1\n3.2.7 样例解释  1\n可以编号为   的食材之间的契合度为  ,是所有食材两两之间最高的契合度。\n3.2.8 样例输入  2\n3.2.9 样例输出  2\n3.2.10 样例解释  1\n可以编号为   的食材之间的契合度为  ,是所有食材两两之间最高的契合度。\n3.2.11 数据规模\n对于   的测试点,保证  ;\n对于所有测试点,保证  , 。\n3.2.12",
+      "statement": "时间限制:1.0 s\n内存限制:128.0 MB\n3.2.1\n问题描述\n有\n 种食材,编号从  至\n,其中第  种食材的美味度为\n。\n不同食材之间的组合可能产生奇妙的化学反应。具体来说,如果两种食材的美味度分别为  和 ,那么它们的契合\n度为\n。\n其中,\n 运算为按位与运算,需要先将两个运算数转换为二进制,然后在高位补足 ,再逐位进行与运算。例如,\n 与  的二进制表示分别为 1100 和 0110 ,将它们逐位进行与运算,得到 0100 ,转换为十进制得到 ,因此\n。在 C++ 或 Python 中,可以直接使用 & 运算符表示与运算。\n现在,请你找到契合度最高的两种食材,并输出它们的契合度。\n3.2.2\n输入描述\n第一行一个整数\n,表示食材的种数。\n接下来一行\n 个用空格隔开的整数,依次为\n,表示各种食材的美味度。\n3.2.3\n输出描述\n输出一行一个整数,表示最高的契合度。\n3.2.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.2.5\n样例输入 1\n\n1 2 3\n\n3.2.6\n样例输出 1\n\n3.2.7\n样例解释 1\n可以编号为\n 的食材之间的契合度为\n,是所有食材两两之间最高的契合度。\n3.2.8\n样例输入 2\n\n5 6 2 10 13\n\n3.2.9\n样例输出 2\n\n3.2.10\n样例解释 1\n可以编号为\n 的食材之间的契合度为\n,是所有食材两两之间最高的契合度。\n3.2.11\n数据规模\n对于\n 的测试点,保证\n;\n对于所有测试点,保证\n,\n。\n3.2.12",
       "time_ms": 1000,
       "memory_mb": 128,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "3\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "2\n",
+          "out": "5\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input())\na = list(map(int, input().split()))\na = [0] + a\ndef sort_(l, r, k):\n    while l <= r:\n        while (l <= r) and (a[l] >> k & 1):\n            l += 1\n        while (l <= r) and (not (a[r] >> k & 1)):\n            r -= 1\n        if l <= r:\n            a[l], a[r] = a[r], a[l]\n            l += 1\n            r -= 1\n    return r\nans = 0\nfor i in range(31, -1, -1):\n    j = sort_(1, n, i)\n    if j >= 2:\n        ans |= 1 << i\n        n = j\nprint(ans)"
     }
   ],
   "answer_rows": [
@@ -575,8 +593,6 @@
       "D",
       "B"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

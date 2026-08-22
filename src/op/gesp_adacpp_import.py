@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DATA = Path(os.environ.get("DATA_DIR") or ROOT / "src" / "rd" / "server" / "data")
 RUNTIME = DATA / "runtime"
 SEED = DATA / "seed" / "gesp-adacpp"
+GESP_PDF_SEED = DATA / "seed" / "gesp"
 
 
 def db_path() -> Path:
@@ -44,6 +45,52 @@ def load_papers() -> list[dict]:
     for p in sorted(SEED.glob("gesp-*.json")):
         papers.append(json.loads(p.read_text(encoding="utf-8")))
     return papers
+
+
+def load_pdf_answers() -> dict[str, str]:
+    """GESP code → answer key from PDF seed (试题节首答案表)."""
+    out: dict[str, str] = {}
+    tf_norm = {"T": "T", "F": "F", "对": "T", "错": "F", "√": "T", "✓": "T", "×": "F", "✗": "F"}
+    for path in sorted(GESP_PDF_SEED.glob("*.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        meta = data.get("meta") or {}
+        ym, lang, level = meta.get("ym"), meta.get("lang"), meta.get("level")
+        if not ym or not lang or not level:
+            continue
+        level = int(level)
+        for q in data.get("choice") or []:
+            a = str(q.get("answer") or "").strip().upper()
+            if re.fullmatch(r"[A-D]", a):
+                out[problem_code(ym, lang, level, "choice", int(q["seq"]))] = a
+        for q in data.get("tf") or []:
+            a = tf_norm.get(str(q.get("answer") or "").strip(), str(q.get("answer") or "").strip())
+            if a in ("T", "F"):
+                out[problem_code(ym, lang, level, "tf", int(q["seq"]))] = a
+    return out
+
+
+def backfill_pdf_answers(con: sqlite3.Connection, pdf_answers: dict[str, str]) -> int:
+    filled = 0
+    for code, ans in pdf_answers.items():
+        row = con.execute("SELECT id, choice_json FROM problems WHERE code=?", (code,)).fetchone()
+        if not row:
+            continue
+        try:
+            cj = json.loads(row[1] or "{}")
+        except Exception:
+            cj = {}
+        if str(cj.get("answer") or "").strip():
+            continue
+        cj["answer"] = ans
+        con.execute(
+            "UPDATE problems SET choice_json=? WHERE id=?",
+            (json.dumps(cj, ensure_ascii=False), row[0]),
+        )
+        filled += 1
+    return filled
 
 
 def normalize_answer(ans: str | None, is_tf: bool) -> str:
@@ -280,7 +327,12 @@ def import_papers(papers: list[dict]) -> None:
     total = 0
     with_ans = 0
     filled_existing = 0
+    pdf_answers = load_pdf_answers()
     try:
+        con.execute(
+            "UPDATE problem_lists SET blurb=? WHERE slug='gesp'",
+            ("GESP 客观题：AdaCpp 题面 + PDF/AdaCpp 合并答案；编程来自 CCF 官方 PDF",),
+        )
         for paper in papers:
             meta = paper.get("meta") or {}
             if not meta:
@@ -292,7 +344,7 @@ def import_papers(papers: list[dict]) -> None:
             ym, lang, level = meta["ym"], meta["lang"], int(meta["level"])
             choices, tfs = split_choice_tf(paper.get("questions") or [])
             pids: list[int] = []
-            note = "来源：https://adacpp.com/practice GESP 真题练习；用于补全答案，请核对。"
+            note = "来源：AdaCpp 题面 + PDF 试题节首答案表/AdaCpp 答案合并。"
 
             def add_q(q: dict, kind: str, seq: int) -> None:
                 nonlocal total, with_ans, filled_existing
@@ -300,6 +352,10 @@ def import_papers(papers: list[dict]) -> None:
                 is_tf = kind == "tf"
                 ans = map_answer_to_key(q.get("answer") or "", opts, is_tf)
                 code = problem_code(ym, lang, level, kind, seq)
+                if not ans:
+                    pdf_a = pdf_answers.get(code, "")
+                    if pdf_a:
+                        ans = pdf_a if is_tf else map_answer_to_key(pdf_a, opts, is_tf)
                 title = f"GESP {level}级 {'C++' if lang == 'cpp' else 'Python'} {'判断' if is_tf else '选择'} {seq}"
                 choice = {"options": opts, "answer": ans}
                 if q.get("explanation"):
@@ -375,10 +431,12 @@ def import_papers(papers: list[dict]) -> None:
                 (json.dumps(dst, ensure_ascii=False), pid),
             )
             mirrored += 1
+        pdf_filled = backfill_pdf_answers(con, pdf_answers)
         con.commit()
         print(
             f"done: problems touched={total}, with_answer={with_ans}, "
-            f"filled_existing={filled_existing}, mirrored_py={mirrored}, db={path}",
+            f"filled_existing={filled_existing}, mirrored_py={mirrored}, "
+            f"pdf_backfill={pdf_filled}, db={path}",
             flush=True,
         )
     finally:

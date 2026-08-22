@@ -9,8 +9,8 @@ import { fileURLToPath } from "node:url";
 import { setTimeout as sleep } from "node:timers/promises";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const API_PORT = Number(process.env.PORT || 8080);
-const VITE_PORT = Number(process.env.VITE_PORT || 5173);
+const API_PORT = Number(process.env.PORT || 8081);
+const VITE_PORT = Number(process.env.VITE_PORT || 5171);
 const selfPid = String(process.pid);
 
 function pidsOnPort(port) {

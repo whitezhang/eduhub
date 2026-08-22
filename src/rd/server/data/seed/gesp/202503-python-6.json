@@ -3,16 +3,16 @@
     "ym": "202503",
     "lang": "python",
     "level": 6,
-    "title": "CCF GESP 2025年3月认证 Python 6级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1669257226092576.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202503-python-6.pdf"
+    "title": "202503-python-6",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202503-python-6.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "在面向对象编程中,类是一种重要的概念。下面关于类的描述中,不正确的是(   )。",
+      "stem": "在面向对象编程中,类是一种重要的概念。下面关于类的描述中,不正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "哈夫曼编码是一种用于数据压缩的算法。以下关于哈夫曼编码的描述中,不正确的是(   )。",
+      "stem": "哈夫曼编码是一种用于数据压缩的算法。以下关于哈夫曼编码的描述中,不正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "以下代码实现了树的哪种遍历方式?",
+      "stem": "以下代码实现了树的哪种遍历方式?\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n1\n2\n3\n4\n5\n6\ndef traverse(root):\n    if root is None:\n        return\n    print(root.val, end=\" \")\n    traverse(root.left)\n    traverse(root.right)\n7\n8\n9\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
@@ -68,7 +68,7 @@
         },
         {
           "key": "B",
-          "text": "中序遍历 class TreeNode: def __init__(self, val=0, left=None, right=None): self.val = val self.left = left self.right = right def traverse(root): if root is None: return print(root.val, end=\" \") traverse(root.left) traverse(root.right)"
+          "text": "中序遍历"
         },
         {
           "key": "C",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "以下关于完全二叉树的代码描述,正确的是(   )。",
+      "stem": "以下关于完全二叉树的代码描述,正确的是(  )。\nfrom collections import deque\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef is_complete_tree(root):\n    if root is None:\n        return True\n    q = deque()\n    q.append(root)\n    has_null = False\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n    while q:\n        node = q.popleft()\n        if node is None:\n            has_null = True\n        else:\n            if has_null:\n                return False\n            q.append(node.left)\n            q.append(node.right)\n24\n25\n26\n27\n28\n29\n    return True",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "以下代码实现了二叉排序树的哪种操作?\nfrom collections import deque\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef is_complete_tree(root):\n    if root is None:\n        return True\n    q = deque()\n    q.append(root)\n    has_null = False\n    while q:\n        node = q.popleft()\n        if node is None:\n            has_null = True\n        else:\n            if has_null:\n                return False\n            q.append(node.left)\n            q.append(node.right)\n    return True\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef op(root, val):\n    if root is None:\n        return TreeNode(val)\n    if val < root.val:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
+      "stem": "以下代码实现了二叉排序树的哪种操作?\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\ndef op(root, val):\n    if root is None:\n        return TreeNode(val)\n    if val < root.val:\n        root.left = op(root.left, val)\n    else:\n        root.right = op(root.right, val)\n    return root\n11\n12\n13\n14",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "给定字符集  {A, B, C, D} 的出现频率分别为  {5, 1, 6, 2},则正确的哈夫曼编码是(   )。",
+      "stem": "给定字符集 {A, B, C, D} 的出现频率分别为 {5, 1, 6, 2} ,则正确的哈夫曼编码是(  )。",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "关于动态规划的描述,正确的是(   )。",
+      "stem": "关于动态规划的描述,正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "以下代码中,类的构造函数被调用了(   )次。",
+      "stem": "以下代码中,类的构造函数被调用了(  )次。\nimport copy\nclass MyClass:\n    def __init__(self):\n        print(\"Constructor called!\")\n1\n2\n3\n4\nif __name__ == \"__main__\":\n    obj1 = MyClass()\n    obj2 = copy.deepcopy(obj1)\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "以下代码中 function1() 实现了循环队列的哪种操作?\n        root.left = op(root.left, val)\n    else:\n        root.right = op(root.right, val)\n    return root\n11\n12\n13\n14\nimport copy\nclass MyClass:\n    def __init__(self):\n        print(\"Constructor called!\")\nif __name__ == \"__main__\":\n    obj1 = MyClass()\n    obj2 = copy.deepcopy(obj1)\n1\n2\n3\n4\n5\n6\n7\nclass CircularQueue:\n    def __init__(self, k):\n        self.size = k\n        self.arr = [0] * k\n        self.front = -1\n1\n2\n3\n4\n5",
+      "stem": "以下代码中function1()实现了循环队列的哪种操作?\nclass CircularQueue:\n    def __init__(self, k):\n        self.size = k\n        self.arr = [0] * k\n1\n2\n3\n4\n        self.front = -1\n5\n        self.rear = -1\n6\n7\n8\n9\n10\n11\n    def is_full(self):\n\n        return (self.rear + 1) % self.size == self.front\n    def is_empty(self):\n\n        return self.front == -1\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n    def fuction1(self, value):\n        if self.is_full():\n            return False\n        if self.is_empty():\n            self.front = 0\n        self.rear = (self.rear + 1) % self.size\n        self.arr[self.rear] = value\n        return True\n22\n23",
       "options": [
         {
           "key": "A",
@@ -228,11 +228,11 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "以下代码实现了二叉树的深度优先搜索( DFS ),并统计了叶子节点的数量。横线上应填写(  )。",
+      "stem": "以下代码实现了二叉树的深度优先搜索(DFS),并统计了叶子节点的数量。横线上应填写( )。\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\ndef count_leaf_nodes(root):\n    if root is None:\n        return 0\n    stack = []\n    stack.append(root)\n    count = 0\n    while stack:\n        node = stack.pop()\n        if node.left is None and node.right is None:\n            count += 1\n        if node.right:\n            stack.append(node.right)\n        if node.left:\n            _______________________\n17\n18\n19\n20\n21\n22\n23\n24\n    return count",
       "options": [
         {
           "key": "A",
-          "text": "stack.append(node.left) self.rear = -1 def is_full(self): return (self.rear + 1) % self.size == self.front def is_empty(self): return self.front == -1 def fuction1(self, value): if self.is_full(): return False if self.is_empty(): self.front = 0 self.rear = (self.rear + 1) % self.size self.arr[self.rear] = value return True class TreeNode: def __init__(self, val=0, left=None, right=None): self.val = val self.left = left self.right = right def count_leaf_nodes(root): if root is None: return 0 stack = [] stack.append(root) count = 0 while stack: node = stack.pop() if node.left is None and node.right is None: count += 1 if node.right: stack.append(node.right) if node.left: _______________________ return count"
+          "text": "stack.append(node.left)"
         },
         {
           "key": "B",
@@ -252,15 +252,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "以下代码实现了二叉树的广度优先搜索( BFS ),并查找特定值的节点。横线上应填写(  )。\n\n```\ndef __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef find_node(root, target):\n    if root is None:\n        return None\n    q = deque()\n    q.append(root)\n    while q:\n        current = q.popleft()\n        if current.val == target:\n            return current\n        __________________\n    return None\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    if current.left:\n            q.append(current.right)\n    if current.right:\n            q.append(current.left)\n\n\n\n\n    if current.left:\n            q.append(current.left)\n    if current.right:\n            q.append(current.right)\n\n\n\n\n    if current.left:\n            q.append(current)\n    if current.right:\n            q.append(current.right)\n```",
+      "stem": "以下代码实现了二叉树的广度优先搜索(BFS),并查找特定值的节点。横线上应填写( )。\nfrom collections import deque\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef find_node(root, target):\n    if root is None:\n        return None\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n    q = deque()\n    q.append(root)\n    while q:\n        current = q.popleft()\n        if current.val == target:\n            return current\n        __________________\n22\n23\n    return None",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "if current.left: q.append(current.right) if current.right: q.append(current.left)"
+        },
+        {
+          "key": "B",
+          "text": "if current.left: q.append(current.left) if current.right: q.append(current.right)"
         },
         {
           "key": "C",
-          "text": "D. from collections import deque class TreeNode: def __init__(self, val=0, left=None, right=None): self.val = val self.left = left self.right = right def find_node(root, target): if root is None: return None q = deque() q.append(root) while q: current = q.popleft() if current.val == target: return current __________________ return None if current.left: q.append(current.right) if current.right: q.append(current.left) if current.left: q.append(current.left) if current.right: q.append(current.right) if current.left: q.append(current) if current.right: q.append(current.right)"
+          "text": "if current.left: q.append(current) if current.right: q.append(current.right)"
+        },
+        {
+          "key": "D",
+          "text": "if current.left: q.append(current.left) if current.right: q.append(current)"
         }
       ],
       "answer": "B"
@@ -268,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "以下代码用于生成   位格雷编码。横线上应填写(  )。",
+      "stem": "以下代码用于生成  位格雷编码。横线上应填写( )。\ndef generate_gray_code(n):\n    if n == 0:\n        return [\"0\"]\n    if n == 1:\n1\n2\n3\n4\n        return [\"0\", \"1\"]\n5\n6\n7\n8\n9\n10\n11\n12\n    prev = generate_gray_code(n - 1)\n    result = [\"0\" + s for s in prev]\n    __________________________________\n    return result",
       "options": [
         {
           "key": "A",
@@ -292,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "以下代码实现了 0/1 背包问题的动态规划解法。假设物品重量为weights[],价值为values[],背包容\n量为W,横线上应填写(  )。",
+      "stem": "以下代码实现了0/1背包问题的动态规划解法。假设物品重量为weights[] ,价值为values[] ,背包容\n量为W ,横线上应填写( )。\ndef knapsack(W, weights, values):\n    n = len(weights)\n    dp = [[0] * (W + 1) for _ in range(n + 1)]\n1\n2\n3\n4\n    for i in range(1, n + 1):\n        for j in range(1, W + 1):\n            if weights[i - 1] > j:\n                dp[i][j] = dp[i - 1][j]\n            else:\n                dp[i][j] = max(__________________________________)\n5\n6\n7\n8\n9\n10\n11\n12\n    return dp[n][W]",
       "options": [
         {
           "key": "A",
@@ -316,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "以下代码用于检查字符串中的括号是否匹配,横线上应填写(  )。\n    if current.left:\n            q.append(current.left)\n    if current.right:\n            q.append(current)\n1\n2\n3\n4\ndef generate_gray_code(n):\n    if n == 0:\n        return [\"0\"]\n    if n == 1:\n        return [\"0\", \"1\"]\n    prev = generate_gray_code(n - 1)\n    result = [\"0\" + s for s in prev]\n    __________________________________\n    return result\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\ndef knapsack(W, weights, values):\n    n = len(weights)\n    dp = [[0] * (W + 1) for _ in range(n + 1)]\n    for i in range(1, n + 1):\n        for j in range(1, W + 1):\n            if weights[i - 1] > j:\n                dp[i][j] = dp[i - 1][j]\n            else:\n                dp[i][j] = max(__________________________________)\n    return dp[n][W]\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\ndef is_balanced(s):\n    stack = []\n1\n2\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "以下代码用于检查字符串中的括号是否匹配,横线上应填写( )。\ndef is_balanced(s):\n    stack = []\n1\n2\n    for c in s:\n        if c in '([{':\n            stack.append(c)\n        else:\n            if not stack:\n                return False\n3\n4\n5\n6\n7\n8\n            top = stack.pop()\n\n            if (c == ')' and top != '(') or \\\n               (c == ']' and top != '[') or \\\n               (c == '}' and top != '{'):\n                return False\n    __________________\n9\n10\n11\n12\n13\n14\n15",
       "options": [
         {
           "key": "A",
@@ -340,23 +348,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "给定一个二叉排序树( BST ),其中节点的值均为正整数。以下关于 BST 的说法中,错误的是:",
+      "stem": "给定一个二叉排序树(BST),其中节点的值均为正整数。以下关于BST的说法中,错误的是:",
       "options": [
         {
           "key": "A",
-          "text": "对 BST 进行中序遍历,得到的序列一定是有序的。"
+          "text": "对BST进行中序遍历,得到的序列一定是有序的。"
         },
         {
           "key": "B",
-          "text": "在 BST 中查找一个值为 k 的节点,最坏情况下需要遍历整棵树。"
+          "text": "在BST中查找一个值为k的节点,最坏情况下需要遍历整棵树。"
         },
         {
           "key": "C",
-          "text": "向 BST 中插入一个新节点,可能会破坏 BST 的平衡性。"
+          "text": "向BST中插入一个新节点,可能会破坏BST的平衡性。"
         },
         {
           "key": "D",
-          "text": "删除 BST 中的一个节点后,树的高度一定不会增加。"
+          "text": "删除BST中的一个节点后,树的高度一定不会增加。"
         }
       ],
       "answer": "D"
@@ -377,7 +385,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
@@ -393,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在树的深度优先搜索( DFS )中,使用队列作为辅助数据结构以实现 “ 先进后出 ” 的访问顺序。",
+      "stem": "在树的深度优先搜索(DFS)中,使用队列作为辅助数据结构以实现“先进后出”的访问顺序。",
       "options": [
         {
           "key": "T",
@@ -409,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "以下代码实现的是二叉树的中序遍历:\n    for c in s:\n        if c in '([{':\n            stack.append(c)\n        else:\n            if not stack:\n                return False\n            top = stack.pop()\n\n            if (c == ')' and top != '(') or \\\n               (c == ']' and top != '[') or \\\n               (c == '}' and top != '{'):\n                return False\n    __________________\n\n\n\n\n\n\n\n\n\n\n\n\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\ndef traverse(root):\n    if root is None:\n        return\n    traverse(root.left)\n    print(root.val, end=\" \")\n    traverse(root.right)",
+      "stem": "以下代码实现的是二叉树的中序遍历:\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\n\n\n\n\n\n\n\ndef traverse(root):\n    if root is None:\n        return\n    traverse(root.left)\n    print(root.val, end=\" \")\n    traverse(root.right)",
       "options": [
         {
           "key": "T",
@@ -425,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "python 可以直接定义多个构造函数,但默认无参数的构造函数只能有一个。",
+      "stem": "python可以直接定义多个构造函数,但默认无参数的构造函数只能有一个。",
       "options": [
         {
           "key": "T",
@@ -441,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "二叉排序树( BST )中,若某节点的左子树为空,则该节点一定是树中的最小值节点。",
+      "stem": "二叉排序树(BST)中,若某节点的左子树为空,则该节点一定是树中的最小值节点。",
       "options": [
         {
           "key": "T",
@@ -457,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "在动态规划解决一维硬币找零问题时,若硬币面额为  [1, 3, 4],目标金额为  6,则最少需要  2 枚硬币\n( 3+3 )。",
+      "stem": "在动态规划解决一维硬币找零问题时,若硬币面额为 [1, 3, 4] ,目标金额为 6 ,则最少需要 2 枚硬币\n(3+3)。",
       "options": [
         {
           "key": "T",
@@ -473,7 +481,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
@@ -489,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "以下代码创建的树是一棵完全二叉树:",
+      "stem": "以下代码创建的树是一棵完全二叉树:\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n\n\n\n\n        self.right = right\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)",
       "options": [
         {
           "key": "T",
@@ -505,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "栈和队列均可以用双向链表实现,插入和删除操作的时间复杂度为  O(1) 。",
+      "stem": "栈和队列均可以用双向链表实现,插入和删除操作的时间复杂度为 O(1) 。",
       "options": [
         {
           "key": "T",
@@ -521,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -529,17 +537,29 @@
       "seq": 1,
       "kind": "traditional",
       "title": "编程题 1",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.1.1 树上漫步\n3.1.2 题目描述\n小  A 有一棵   个结点的树,这些结点依次以   标号。\n小  A 想在这棵树上漫步。具体来说,小  A 会从树上的某个结点出发,每一步可以移动到与当前结点相邻的结点,并\n且小  A 只会在偶数步(可以是零步)后结束漫步。\n现在小  A 想知道,对于树上的每个结点,从这个结点出发开始漫步,经过偶数步能结束漫步的结点有多少个(可以\n经过重复的节点)。\n3.1.3\n\n输入格式\n第一行,一个正整数  。\n接下来   行,每行两个整数  ,表示树上有一条连接结点   和结点   的边。\n3.1.4 输出格式\n一行,  个整数,第   个整数表示从结点   出发开始漫步,能结束漫步的结点数量。\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\n\n3.1.5 样例\n3.1.5.1 输入样例  1\n3.1.5.2 输出样例  1\n3.1.5.3 输入样例  2\n3.1.5.4 输出样例  2\n3.1.6 数据范围\n对于  % 的测试点,保证  。\n对于所有测试点,保证  。\n3.1.7",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.1.1\n树上漫步\n3.1.2\n题目描述\n小 A 有一棵  个结点的树,这些结点依次以\n 标号。\n小 A 想在这棵树上漫步。具体来说,小 A 会从树上的某个结点出发,每一步可以移动到与当前结点相邻的结点,并\n且小 A 只会在偶数步(可以是零步)后结束漫步。\n现在小 A 想知道,对于树上的每个结点,从这个结点出发开始漫步,经过偶数步能结束漫步的结点有多少个(可以\n经过重复的节点)。\n3.1.3\n\n输入格式\n第一行,一个正整数 。\n接下来\n 行,每行两个整数\n,表示树上有一条连接结点\n 和结点\n 的边。\n3.1.4\n输出格式\n一行, 个整数,第  个整数表示从结点  出发开始漫步,能结束漫步的结点数量。\n3.1.5\n样例\n3.1.5.1\n输入样例 1\n\n1 3\n2 3\n\n3.1.5.2\n输出样例 1\n2 2 1\n\n3.1.5.3\n输入样例 2\n\n1 3\n3 2\n4 3\n\n3.1.5.4\n输出样例 2\n3 3 1 3\n\n3.1.6\n数据范围\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n。\n3.1.7",
       "time_ms": 3000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "3\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n",
+          "out": "4\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input())\nto = [[] for i in range(n + 2)]\nfor i in range(n - 1):\n    x, y = map(int, input().split())\n    to[x].append(y)\n    to[y].append(x)\ncnt = [0, 0]\ncolor = [0 for i in range(n + 2)]\ndef dfs(x, c, f):\n    color[x] = c\n    cnt[c] += 1\n    for y in to[x]:\n        if y != f:\n            dfs(y, c ^ 1, x)\ndfs(1, 0, 0)\nans = []\nfor i in range(1, n + 1):\n    ans.append(str(cnt[color[i]]))\nprint(' '.join(ans))"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "编程题 2",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.2.8 环线\n3.2.9 题目描述\n小  A 喜欢坐地铁。地铁环线有   个车站,依次以   标号。车站  ( )的下一个车站是车站  。\n特殊地,车站   的下一个车站是车站  。\n小  A 会从某个车站出发,乘坐地铁环线到某个车站结束行程,这意味着小  A 至少会经过一个车站。小  A 不会经过一\n个车站多次。当小  A 乘坐地铁环线经过车站   时,小  A 会获得   点快乐值。请你安排小  A 的行程,选择出发车站与\n结束车站,使得获得的快乐值总和最大。\n3.2.10\n\n输入格式\n第一行,一个正整数  ,表示车站的数量。\n第二行,  个整数  ,分别表示经过每个车站时获得的快乐值。\n3.2.11 输出格式\n一行,一个整数,表示小  A 能获得的最大快乐值。\n3.2.12 样例\n3.2.12.5 输入样例  1\n3.2.12.6 输出样例  1\n3.2.12.7 输入样例  2\n3.2.12.8 输出样例  2\n3.2.13 数据范围\n对于  % 的测试点,保证  。\n对于  % 的测试点,保证  。\n对于所有测试点,保证  , 。\n\n-1 2 3 0\n\n-3 4 -5 1 3\n\n3.2.14",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.2.8\n环线\n3.2.9\n题目描述\n小 A 喜欢坐地铁。地铁环线有  个车站,依次以\n 标号。车站 (\n)的下一个车站是车站\n。\n特殊地,车站  的下一个车站是车站 。\n小 A 会从某个车站出发,乘坐地铁环线到某个车站结束行程,这意味着小 A 至少会经过一个车站。小 A 不会经过一\n个车站多次。当小 A 乘坐地铁环线经过车站  时,小 A 会获得\n 点快乐值。请你安排小 A 的行程,选择出发车站与\n结束车站,使得获得的快乐值总和最大。\n3.2.10\n\n输入格式\n第一行,一个正整数 ,表示车站的数量。\n第二行, 个整数\n,分别表示经过每个车站时获得的快乐值。\n3.2.11\n输出格式\n一行,一个整数,表示小 A 能获得的最大快乐值。\n3.2.12\n样例\n3.2.12.5\n输入样例 1\n\n-1 2 3 0\n\n3.2.12.6\n输出样例 1\n\n3.2.12.7\n输入样例 2\n\n-3 4 -5 1 3\n\n3.2.12.8\n输出样例 2\n\n3.2.13\n数据范围\n对于\n% 的测试点,保证\n。\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n,\n。\n3.2.14",
       "time_ms": 3000,
       "memory_mb": 512,
       "samples": [
@@ -549,12 +569,13 @@
           "suspect": false
         },
         {
-          "in": "51\n5\n",
+          "in": "5\n",
           "out": "5\n",
-          "suspect": true
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "n = int(input())\na = [0] + list(map(int, input().split()))\npre = [0 for i in range(2 * n + 5)]\nfor i in range(1, n + 1):\n    a.append(a[i])\nfor i in range(1, 2 * n + 1):\n    pre[i] = pre[i - 1] + a[i]\nql, qr, ans = 1, 1, -1e18\nq = [0 for i in range(2 * n + 5)]\nfor i in range(1, 2 * n + 1):\n    while ql <= qr and q[ql] < i - n:\n        ql += 1\n    ans = max(ans, pre[i] - pre[q[ql]])\n    while ql <= qr and pre[i] < pre[q[qr]]:\n        qr -= 1\n    qr += 1\n    q[qr] = i\nprint(ans)"
     }
   ],
   "answer_rows": [
@@ -575,8 +596,6 @@
       "D",
       "D"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

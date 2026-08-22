@@ -3,16 +3,16 @@
     "ym": "202512",
     "lang": "python",
     "level": 1,
-    "title": "CCF GESP 2025年12月认证 Python 1级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10242.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1723013061935136.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202512-python-1.pdf"
+    "title": "202512-python-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202512-python-1.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "近日,空中客车公司表示,约 6000 架空客 A320 系列飞机需要紧急更换一种易受太阳辐射影响的飞行控制软\n件。空客表示,在对一起飞行事故进行分析后,结果表明强烈的太阳辐射可能会损坏飞行控制系统所需的关键数\n据,导致判断失误,进而可能引发飞行异常。在这里的飞行控制系统中,执行判断的部件最可能是下面的 (   ) 。",
+      "stem": "近日,空中客车公司表示,约6000架空客A320系列飞机需要紧急更换一种易受太阳辐射影响的飞行控制软\n件。空客表示,在对一起飞行事故进行分析后,结果表明强烈的太阳辐射可能会损坏飞行控制系统所需的关键数\n据,导致判断失误,进而可能引发飞行异常。在这里的飞行控制系统中,执行判断的部件最可能是下面的(   )。",
       "options": [
         {
           "key": "A",
@@ -36,15 +36,15 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面的 Python 代码在集成开发环境中运行时,提示有 “invalid character” 错误。可能的原因是 ( ) :",
+      "stem": "下面的Python代码在集成开发环境中运行时,提示有“invalid character”错误。可能的原因是( ):\na,b = 3,4 #L1\nprint(a) #L2\nprint(b) #L3\n1\n2\n3",
       "options": [
         {
           "key": "A",
-          "text": "L1 行代码中的逗号很可能是中文逗号,应该改为英文逗号。"
+          "text": "L1行代码中的逗号很可能是中文逗号,应该改为英文逗号。"
         },
         {
           "key": "B",
-          "text": "L1 行应该分为两行,分别是 a = 3 和 b = 4。"
+          "text": "L1行应该分为两行,分别是 a = 3 和 b = 4 。"
         },
         {
           "key": "C",
@@ -52,7 +52,7 @@
         },
         {
           "key": "D",
-          "text": "L2 和 L3 不能分为两行,应合并为一行。"
+          "text": "L2和L3不能分为两行,应合并为一行。"
         }
       ],
       "answer": "A"
@@ -60,11 +60,11 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面有关 Python 变量的说法,正确的是 (  ) 。",
+      "stem": "下面有关Python变量的说法,正确的是(\n )。",
       "options": [
         {
           "key": "A",
-          "text": "不可以用 for 作为变量名,因为 for 是 Python 的关键字(保留字)。"
+          "text": "不可以用 for 作为变量名,因为 for 是Python的关键字(保留字)。"
         },
         {
           "key": "B",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "Python 表达式  2 + 3 * 4 ** 2的值为 ( ) 。",
+      "stem": "Python表达式 2 + 3 * 4 ** 2 的值为( )。",
       "options": [
         {
           "key": "A",
@@ -100,7 +100,7 @@
         },
         {
           "key": "D",
-          "text": "a , b = 3, 4 #L1 print(a) #L2 print(b) #L3 第 1 页 / 共 10 页"
+          "text": "第 1 页 / 共 10 页"
         }
       ],
       "answer": "B"
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面的 Python 代码执行后,其输出是 ( ) 。",
+      "stem": "下面的Python代码执行后,其输出是( )。\na = 3\nb = a = 4\nprint(a, b)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面的 Python 代码执行时如果先输入  10 回车后输入  20 并回车,其输出是 (  ) 。",
+      "stem": "下面的Python代码执行时如果先输入 10 回车后输入 20 并回车,其输出是(\n )。\nN = input(\"第一个数:\")\nM = input(\"第二个数:\")\nprint(f\"int(N+M)={int(N+M)}\")\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "某个整数很长很长,形如: 1232123212321...... ,其规律是从 1 开始逐一升高到 3 然后逐一降低到 1 ,然后又逐\n一升高到 3 ,一直到很长很长。编写程序,判断从左开始第 N 位数是几?假设从左到右第 1 位为 1 。在横线处应该填入\n的代码是 ( ) 。",
+      "stem": "某个整数很长很长,形如:1232123212321......,其规律是从1开始逐一升高到3然后逐一降低到1,然后又逐\n一升高到3,一直到很长很长。编写程序,判断从左开始第N位数是几?假设从左到右第1位为1。在横线处应该填入\n的代码是( )。\nN = int(input(\"请输入编号:\"))\nM = ________________\n1\n2\n3\n4\n5\n6\n7\nif M != 0:\n    print(M)\nelse:\n    print(2)",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是 ( ) 。",
+      "stem": "下面Python代码执行后的输出是( )。\ntnt = 0\nfor i in range(100):\n    tnt += 1\nprint(tnt, i)\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "有关下面 Python 代码的说法,错误的是 ( ) 。\na = 3\nb = a = 4\nprint(a, b)\n1\n2\n3\nN = input(\" 第一个数 :\")\nM = input(\" 第二个数 :\")\nprint(f\"int(N+M)={int(N+M)}\")\n1\n2\n3\nN = int(input(\" 请输入编号: \"))\nM = ________________\nif M != 0:\n    print(M)\nelse:\n    print(2)\n1\n2\n3\n4\n5\n6\n7\ntnt = 0\nfor i in range(100):\n    tnt += 1\nprint(tnt, i)\n1\n2\n3\n4\n第  2 页  / 共  10 页",
+      "stem": "有关下面Python代码的说法,错误的是( )。\n第 2 页 / 共 10 页\ntnt = 0\nfor i in range(1, 10, 2):\n    tnt += i\nprint(tnt)\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是 ( ) 。",
+      "stem": "下面Python代码执行后输出是( )。\nfor i in range(10, 100, 10):\n    if i % 10 == 0:\n        continue\nprint(i, end = \"#\")\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -252,15 +252,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "两个正整数,只要不相等,就一直进行如下操作:最大数减去最小数得到一个值,该值和两个数的最小数\n构成新的两个正整数,重复操作,直到两个数相等,此时输出该数。下面的 Python 代码用于实现该操作,横线处应\n该填写的代码是 ( ) 。",
+      "stem": "两个正整数,只要不相等,就一直进行如下操作:最大数减去最小数得到一个值,该值和两个数的最小数\n构成新的两个正整数,重复操作,直到两个数相等,此时输出该数。下面的Python代码用于实现该操作,横线处应\n该填写的代码是( )。\nN = int(input())\nM = int(input())\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nwhile N != M:\n    if N > M:\n        _______________\n    else:\n        _______________\nprint(N)",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "N = N - M M = M - N"
+        },
+        {
+          "key": "B",
+          "text": "M = M - N N = N - M"
         },
         {
           "key": "C",
-          "text": "D. tnt = 0 for i in range(1, 10, 2): tnt += i print(tnt) for i in range(10, 100, 10): if i % 10 == 0: continue print(i, end = \"#\") N = int(input()) M = int(input()) while N != M: if N > M: _______________ else: _______________ print(N) N = N - M M = M - N M = M - N N = N - M M = N - M N = M - N N, M = M, N M, N = N, M 第 3 页 / 共 10 页"
+          "text": "M = N - M N = M - N"
+        },
+        {
+          "key": "D",
+          "text": "N, M = M, N M, N = N, M 第 3 页 / 共 10 页"
         }
       ],
       "answer": "A"
@@ -268,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "如果一个正整数能被 3 整除,或者某一位能被 3 整除,则称之为 “ 漂亮数 ” ,如 12 是漂亮数因为能被 3 整除,\n311 是漂亮数因为含有 3 , 22 不是漂亮数因为不能被 3 整除也不含有 3 。下面的 Python 用于判断正整数  N 是否为漂亮\n数,横线处应该填入的代码是 ( ) 。",
+      "stem": "如果一个正整数能被3整除,或者某一位能被3整除,则称之为“漂亮数”,如12是漂亮数因为能被3整除,\n311是漂亮数因为含有3,22不是漂亮数因为不能被3整除也不含有3。下面的Python用于判断正整数 N 是否为漂亮\n数,横线处应该填入的代码是( )。\nN = int(input())\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nFlag = \"非漂亮数\"\nif N % 3 == 0:\n    Flag = \"漂亮数\"\nelse:\n    while N != 0:\n        if ____________________:\n            Flag = \"漂亮数\"\n            break\n        N //= 10\nprint(Flag)",
       "options": [
         {
           "key": "A",
@@ -292,23 +300,23 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面的 Python 代码执行后海龟最终朝向是 ( ) 。(默认初始朝向东,即屏幕右侧)",
+      "stem": "下面的Python代码执行后海龟最终朝向是( )。(默认初始朝向东,即屏幕右侧)\nimport turtle\nturtle.forward(100)\nturtle.right(90)\nturtle.forward(50)\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
-          "text": "东( 0° )"
+          "text": "东(0°)"
         },
         {
           "key": "B",
-          "text": "南( 270° 或 -90° )"
+          "text": "南(270° 或 -90°)"
         },
         {
           "key": "C",
-          "text": "西( 180° )"
+          "text": "西(180°)"
         },
         {
           "key": "D",
-          "text": "北( 90° )"
+          "text": "北(90°)"
         }
       ],
       "answer": "B"
@@ -316,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "为在 Python Turtle 中输出如下图形,代码横线处应填入 ( ) 。",
+      "stem": "为在Python Turtle中输出如下图形,代码横线处应填入( )。\nimport turtle\nfor i in range(12):\n    turtle.forward(100)\n    _________________\n    turtle.left(30)\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -328,7 +336,7 @@
         },
         {
           "key": "C",
-          "text": "turtle.reset() N = int(input()) Flag = \" 非漂亮数 \" if N % 3 == 0: Flag = \" 漂亮数 \" else: while N != 0: if ____________________: Flag = \" 漂亮数 \" break N //= 10 print(Flag) import turtle turtle.forward(100) turtle.right(90) turtle.forward(50) import turtle for i in range(12): turtle.forward(100) _________________ turtle.left(30) 第 4 页 / 共 10 页 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "turtle.reset() 第 4 页 / 共 10 页"
         },
         {
           "key": "D",
@@ -340,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "为在 Python Turtle 中输出如下图形,代码横线处应填入 ( ) 。",
+      "stem": "为在Python Turtle中输出如下图形,代码横线处应填入( )。\nimport turtle\nfor i in range(6):\n    turtle.circle(________________)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -366,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "鸿蒙是华为公司开发的一款操作系统,那么它能够将正确的源程序翻译成目标程序,并运行。(   )",
+      "stem": "鸿蒙是华为公司开发的一款操作系统,那么它能够将正确的源程序翻译成目标程序,并运行。(  )",
       "options": [
         {
           "key": "T",
@@ -377,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "Python 表达式  10 ** 0.5 和  10 ** 1 / 2 的结果并不相同。 (  )",
+      "stem": "Python表达式 10 ** 0.5 和 10 ** 1 / 2 的结果并不相同。(\n )",
       "options": [
         {
           "key": "T",
@@ -393,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后将输出  1。  (  )",
+      "stem": "下面Python代码执行后将输出 1 。 (  )\nfor i in range(10):\n    if i % 3 == 0:\n        continue\n    else:\n        break\nprint(i)",
       "options": [
         {
           "key": "T",
@@ -409,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "下面 Python 代码中的  range(-10) 改为  range(10) 执行结果相同。(   )",
+      "stem": "下面Python代码中的 range(-10) 改为 range(10) 执行结果相同。(  )\ntnt = 0\nfor i in range(-10):\n    if i < 0:\n        i = -i\n    tnt += i\nprint(tnt)",
       "options": [
         {
           "key": "T",
@@ -425,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后将输出  99,因为  range(100) 不包括  100 ,而是到  99 。(   )\nimport turtle\nfor i in range(6):\n    turtle.circle(________________)\n\n\n\nfor i in range(10):\n    if i % 3 == 0:\n        continue\n    else:\n        break\nprint(i)\n\n\n\n\n\n\ntnt = 0\nfor i in range(-10):\n    if i < 0:\n        i = -i\n    tnt += i\nprint(tnt)\n\n\n\n\n\n\n第  5 页  / 共  10 页",
+      "stem": "下面Python代码执行后将输出 99 ,因为 range(100) 不包括 100,而是到 99。(  )\n第 5 页 / 共 10 页\ncnt = 0\nfor i in range(100):\n    cnt += 1\nprint(cnt)",
       "options": [
         {
           "key": "T",
@@ -441,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "下面的 Python 代码能用于判断输入的正整数是否为对称数。所谓对称数是指从左到右或从右到左读该数,其\n值相同,如121或414等是对称数,而123不是对称数。(   )",
+      "stem": "下面的Python代码能用于判断输入的正整数是否为对称数。所谓对称数是指从左到右或从右到左读该数,其\n值相同,如121 或414 等是对称数,而123 不是对称数。(  )\nn = int(input(\"请输入正整数:\"))\n\n\n\n\n\n\n\n\n\n\n\nnew_number = 0\nwhile n != 0:\n    new_number = new_number * 10 + n % 10\n    n //= 10\nif n == new_number:\n    print(\"对称数\")\nelse:\n    print(\"非对称数\")",
       "options": [
         {
           "key": "T",
@@ -457,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后将输出  -100。(   )",
+      "stem": "下面的Python代码执行后将输出 -100 。(  )\ntnt = 0\nfor i in range(-100,100):\n    tnt += i\nprint(tnt)",
       "options": [
         {
           "key": "T",
@@ -473,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后,其输出是  -50。(   )",
+      "stem": "下面Python代码执行后,其输出是 -50 。(  )\ntnt = 0\nflag = 1\nfor i in range(1,100 + 1):\n    tnt += i * flag\n    flag = -flag\nprint(tnt)",
       "options": [
         {
           "key": "T",
@@ -489,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后,将画出横平竖直 ( 两条边水平,另两条边与之垂直,且首尾相接 ) 的正方形。(   )",
+      "stem": "下面的Python代码执行后,将画出横平竖直(两条边水平,另两条边与之垂直,且首尾相接)的正方形。(  )\nimport turtle\nturtle.right(45)\nturtle.circle(45, steps = 4)",
       "options": [
         {
           "key": "T",
@@ -505,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后将绘制出如下图形。(   )\ncnt = 0\nfor i in range(100):\n    cnt += 1\nprint(cnt)\n\n\n\n\nn = int(input(\" 请输入正整数 :\"))\nnew_number = 0\nwhile n != 0:\n    new_number = new_number * 10 + n % 10\n    n //= 10\nif n == new_number:\n    print(\" 对称数 \")\nelse:\n    print(\" 非对称数 \")\n\n\n\n\n\n\n\n\n\n\n\ntnt = 0\nfor i in range(-100,100):\n    tnt += i\nprint(tnt)\n\n\n\n\ntnt = 0\nflag = 1\nfor i in range(1,100 + 1):\n    tnt += i * flag\n    flag = -flag\nprint(tnt)\n\n\n\n\n\n\nimport turtle\nturtle.right(45)\nturtle.circle(45, steps = 4)\n\n\n\nimport turtle\nfor i in range(8):\n    turtle.right(45)\n    turtle.circle(50,steps = 4)\n\n\n\n\n第  6 页  / 共  10 页",
+      "stem": "下面的Python代码执行后将绘制出如下图形。(  )\nimport turtle\nfor i in range(8):\n    turtle.right(45)\n    turtle.circle(50,steps = 4)\n\n\n\n\n第 6 页 / 共 10 页",
       "options": [
         {
           "key": "T",
@@ -521,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -529,28 +537,29 @@
       "seq": 1,
       "kind": "traditional",
       "title": "小杨的爱心快递",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小杨是 “ 爱心社区 ” 的小志愿者,每周他都会帮助邻居们寄送捐赠给山区小学的文具和书籍。快递公司为了支持公益\n行动,制定了特殊的运费规则,鼓励大家合理包装:\n假设快递的体积为  ,重量为  。\n按体积计算:运费按体积计算,公式是   元。\n按重量计算:为了鼓励减轻包裹重量,规则是:当重量小于   克,即   时,运费为   元;当重量达到\n或超过   克,即   时,运费为   元。\n快递公司的叔叔说: “ 我们应该选择最公平合理的计费方式。 ”\n所以,最终的运费会取按体积计算和按重量计算这两种方式中价格较低的那一个,这样对寄件人最公道。\n3.1.2\n\n输入格式\n四行,每行一个一位小数的浮点数,分别代表,快递的体积  ,快递的重量  ,第一档重量运费  ,第二档重量运\n费  。\n3.1.3 输出格式\n一行一个一位小数,代表实际快递运费。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n100.4\n300.2\n60.6\n70.5\n\n50.21\n99.8\n200.9\n60.2\n70.1\n\n第  7 页  / 共  10 页\n3.1.4.4 输出样例  2\n3.1.4.5 样例解释\n对于样例  1 :快递体积   为  ,重量   为  ,第一档重量运费   为  ,第二档重量运费   为  。\n–   若按体积收费,费用为  ;\n–   若按重量收费,由于重量   超过  ,费用为  。\n输出价格较低的  。\n对于样例  2 :快递体积   为  ,重量   为  ,第一档重量运费   为  ,第二档重量运费   为  。\n–   若按体积收费,费用为  ;\n–   若按重量收费,由于重量   小于  ,费用为  。\n输出价格较低的  。\n3.1.5 数据范围\n对于所有测试点,保证给出的浮点数不超过  。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小杨是“爱心社区”的小志愿者,每周他都会帮助邻居们寄送捐赠给山区小学的文具和书籍。快递公司为了支持公益\n行动,制定了特殊的运费规则,鼓励大家合理包装:\n假设快递的体积为 ,重量为 。\n按体积计算:运费按体积计算,公式是\n 元。\n按重量计算:为了鼓励减轻包裹重量,规则是:当重量小于\n 克,即\n 时,运费为\n 元;当重量达到\n或超过\n 克,即\n 时,运费为\n 元。\n快递公司的叔叔说:“我们应该选择最公平合理的计费方式。”\n所以,最终的运费会取按体积计算和按重量计算这两种方式中价格较低的那一个,这样对寄件人最公道。\n3.1.2\n\n输入格式\n四行,每行一个一位小数的浮点数,分别代表,快递的体积 ,快递的重量 ,第一档重量运费\n,第二档重量运\n费\n。\n3.1.3\n输出格式\n一行一个一位小数,代表实际快递运费。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n100.4\n300.2\n60.6\n70.5\n\n3.1.4.2\n输出样例 1\n50.2\n\n3.1.4.3\n输入样例 2\n99.8\n200.9\n60.2\n70.1\n\n第 7 页 / 共 10 页\n3.1.4.4\n输出样例 2\n49.9\n\n3.1.4.5\n样例解释\n对于样例 1:快递体积  为\n,重量  为\n,第一档重量运费\n 为\n,第二档重量运费\n 为\n。\n–   若按体积收费,费用为\n;\n–   若按重量收费,由于重量\n 超过\n,费用为\n。\n输出价格较低的\n。\n对于样例 2:快递体积  为\n,重量  为\n,第一档重量运费\n 为\n,第二档重量运费\n 为\n。\n–   若按体积收费,费用为\n;\n–   若按重量收费,由于重量\n 小于\n,费用为\n。\n输出价格较低的\n。\n3.1.5\n数据范围\n对于所有测试点,保证给出的浮点数不超过\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
           "in": "100.4\n300.2\n60.6\n70.5\n",
           "out": "50.2\n",
-          "suspect": true
+          "suspect": false
         },
         {
-          "in": "200.9\n60.2\n70.1\n",
-          "out": "4\n",
+          "in": "99.8\n200.9\n60.2\n70.1\n",
+          "out": "49.9\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "V = float(input()) #输入体积V\nG = float(input()) #输入重量W\nM = float(input()) #第一档重量运费M\nN = float(input()) #第二档重量运费 N\n#按体积计费时的费用总额\np_v = V / 2\n#按重量档次计费计算\nif G < 300:\n    p_g = M #如果小于300,则按此计费\nelse:\n    p_g = N #按第二档计费\n#比较体积计费和重量计费,选择费用少的计费方式\nif p_v < p_g:\n    print(f\"{p_v:.1f}\")\nelse:\n    print(f\"{p_g:.1f}\")"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "手机电量显示",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小杨的手机就像一个聪明的小助手,当电量变化时,它会用不同的方式来提醒我们,假设当前的电量百分比为  :\n当电量非常低(不超过  ,即  ),它会显示一个大写字母  R ,就像在说: “ 快给我充电吧!( Red 警告\n色) ”\n当电量有点低(超过   但不超过  ,即  ),它会显示一个大写字母  L ,意思是 “ 电量有点 Low\n49.91\nV = float(input()) # 输入体积 V\nG = float(input()) # 输入重量 W\nM = float(input()) # 第一档重量运费 M\nN = float(input()) # 第二档重量运费  N\n# 按体积计费时的费用总额\np_v = V / 2\n# 按重量档次计费计算\nif G < 300:\n    p_g = M # 如果小于 300 ,则按此计费\nelse:\n    p_g = N # 按第二档计费\n# 比较体积计费和重量计费,选择费用少的计费方式\nif p_v < p_g:\n    print(f\"{p_v:.1f}\")\nelse:\n    print(f\"{p_g:.1f}\")\n\n第  8 页  / 共  10 页\n啦! ”\n当电量比较充足(超过  ,即  ),它就会直接显示具体的数字,比如直接显示  ,表示还有   的电\n量。\n3.2.2\n\n输入格式\n第一行一个正整数  ,代表数据组数。\n对于每组数据,一行包含一个正整数  ,代表手机电量百分比。\n3.2.3 输出格式\n对于每组数据,输出一行,代表当前手机显示的电量信息。\n3.2.4 样例\n3.2.4.1 输入样例\n3.2.4.2 输出样例\n3.2.4.3 样例解释\n输入样例  1 共有五组数据:\n第一组数据手机电量  ,满足  ,电量非常低,显示  R。\n第二组数据手机电量  ,满足  ,电量非常低,显示  R。\n第三组数据手机电量  ,满足  ,电量有点低,显示  L。\n第四组数据手机电量  ,满足  ,电量比较充足,直接显示具体的数字  99。\n第五组数据手机电量  ,满足  ,电量有点低,显示  L。\n3.2.5 数据范围\n对于所有测试点,保证  。\n\nR\nR\nL\n\nL\n\n第  9 页  / 共  10 页\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n小杨的手机就像一个聪明的小助手,当电量变化时,它会用不同的方式来提醒我们,假设当前的电量百分比为 :\n当电量非常低(不超过\n,即\n),它会显示一个大写字母 R,就像在说:“快给我充电吧!(Red警告\n色)”\n当电量有点低(超过\n 但不超过\n,即\n),它会显示一个大写字母 L,意思是“电量有点Low\n第 8 页 / 共 10 页\n啦!”\n当电量比较充足(超过\n,即\n),它就会直接显示具体的数字,比如直接显示\n,表示还有\n 的电\n量。\n3.2.2\n\n输入格式\n第一行一个正整数 ,代表数据组数。\n对于每组数据,一行包含一个正整数 ,代表手机电量百分比。\n3.2.3\n输出格式\n对于每组数据,输出一行,代表当前手机显示的电量信息。\n3.2.4\n样例\n3.2.4.1\n输入样例\n\n3.2.4.2\n输出样例\nR\nR\nL\n\nL\n\n3.2.4.3\n样例解释\n输入样例 1 共有五组数据:\n第一组数据手机电量\n,满足\n,电量非常低,显示 R 。\n第二组数据手机电量\n,满足\n,电量非常低,显示 R 。\n第三组数据手机电量\n,满足\n,电量有点低,显示 L 。\n第四组数据手机电量\n,满足\n,电量比较充足,直接显示具体的数字 99 。\n第五组数据手机电量\n,满足\n,电量有点低,显示 L 。\n3.2.5\n数据范围\n对于所有测试点,保证\n。\n第 9 页 / 共 10 页\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -560,7 +569,8 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 读取测试用例的数量 T\nline = input() # 读入数据行的数量,line的数据类型为字符串\nT = int(line) # 将line转换为整数,表示输入数据行的数量\n# 循环 T 次\n# 循环变量仅用于控制循环次数\nfor _ in range(T):\n    # 读取 P\n    P = int(input())\n\n    # 判断逻辑\n    if P <= 10:\n        print(\"R\") #电量小于10%时\n    elif P <= 20: #电量小于20%时\n        print(\"L\")\n    else:\n        print(P) #电量超过20%时\n第 10 页 / 共 10 页"
     }
   ],
   "answer_rows": [
@@ -581,8 +591,6 @@
       "B",
       "D"
     ],
-    [
-      "D"
-    ]
+    []
   ]
 }

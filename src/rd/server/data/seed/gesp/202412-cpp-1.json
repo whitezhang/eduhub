@@ -3,16 +3,15 @@
     "ym": "202412",
     "lang": "cpp",
     "level": 1,
-    "title": "GESP 2024年12月认证 C++ 1级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10178.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1652740757389344.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202412-cpp-1.pdf"
+    "title": "202412-cpp-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202412-cpp-1.pdf"
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2024年10月8日 ,诺贝尔物理学奖“意外地”颁给了两位计算机科学家约翰·霍普菲尔德(JohnJ. Hopfield)和杰\n弗里·辛顿(Geoffrey E. Hinton) 。这两位科学家的主要研究方向是( )。\n口 A. 天体物理\n口 B. 流体力学\n口 C. 人工智能\n口 D. 量子理论",
+      "stem": "2024年10月8日,诺贝尔物理学奖“意外地”颁给了两位计算机科学家约翰·霍普菲尔德(John J. Hopfield)和杰\n弗里·辛顿(Geoffrey E. Hinton)。这两位科学家的主要研究方向是(\n)。\n口A. 天体物理\n口B. 流体力学\n口C. 人工智能\n口D. 量子理论",
       "options": [
         {
           "key": "A",
@@ -31,12 +30,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下列软件中是操作系统的是( )。\n口 A. 高德地图\n口 B. 腾讯会议\n口 C. 纯血鸿蒙\n口 D. 金山永中",
+      "stem": "下列软件中是操作系统的是(\n)。\n口A. 高德地图\n口B. 腾讯会议\n口C. 纯血鸿蒙\n口D. 金山永中",
       "options": [
         {
           "key": "A",
@@ -55,12 +54,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "有关下列C++代码的说法 ,正确的是( )。\n1\n printf(\"Hello,GESP!\");\n口 A. 配对双引号内 ,不可以有汉字\n口 B. 配对双引号可以相应改变为英文单引号而输出效果不变\n口 C. 配对双引号可以相应改变为三个连续英文单引号而输出效果不变\n口 D. 配对双引号可以相应改变为三个连续英文双引号而输出效果不变",
+      "stem": "有关下列C++代码的说法,正确的是( )。\n1\nprintf(\"Hello,GESP!\");\n口A. 配对双引号内,不可以有汉字\n口B. 配对双引号可以相应改变为英文单引号而输出效果不变\n口C. 配对双引号可以相应改变为三个连续英文单引号而输出效果不变\n口D. 配对双引号可以相应改变为三个连续英文双引号而输出效果不变",
       "options": [
         {
           "key": "A",
@@ -79,12 +78,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "D"
     },
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "C++表达式 12 - 3 * 2 && 2 的值是( )。\n口 A. 0\n口 B. 1\n口 C. 6\n口 D. 9",
+      "stem": "C++表达式12 - 3 * 2 && 2 的值是(\n)。\n口A. 0\n口B. 1\n口C. 6\n口D. 9",
       "options": [
         {
           "key": "A",
@@ -103,12 +102,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "在C++中 ,假设N为正整数2 ,则 cout << (N / 3 + N % 3) 将输出( )。\n口 A. 0\n口 B. 2\n口 C. 3\n口 D. 4",
+      "stem": "在C++中,假设N为正整数2 ,则cout << (N / 3 + N % 3) 将输出(\n)。\n口A. 0\n口B. 2\n口C. 3\n口D. 4",
       "options": [
         {
           "key": "A",
@@ -127,12 +126,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "C++语句 cout << 7%3 << ' '<< \"7%3\"<< ' ' << \"7%3={7%3}\" 执行后的输出是( )。\n口 A. 1 1 1=1\n口 B. 17%3 1=1\nw C. 17%3 7%3=1\no D. 1 7%3 7%3={7%3}",
+      "stem": "C++语句cout << 7%3 <<\n'\n'<< \"7%3\"<<\n'\n' << \"7%3={7%3}\" 执行后的输出是(\n)。\n口A. 1 1 1=1\n口B. 1 7%3 1=1\nw C. 1 7%3 7%3=1\no D. 1 7%3 7%3={7%3}",
       "options": [
         {
           "key": "A",
@@ -151,12 +150,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "D"
     },
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面C++代码执行后 ,求出几天后星期几 。如果星期日则输出“星期天”否则输出形如“星期1” 。横线上应填入\n的代码是( )。\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nint N, nowDay, afterDays;\ncout << \"今天星期几? \" <<endl;\nc in >> nowDay;\ncout << \"求几天后星期几? \"<< endl;\ncin >>afterDays;\nN = nowDay+afterDays;\nif( )\nprintf(\"星期天\");\nelse\nprintf(\"星期%d\", N%7);\n口 A. N% 7 != 0\n口 B. N% 7 == 0\nw C. N == 0\n口 D. N % 7",
+      "stem": "下面C++代码执行后,求出几天后星期几。如果星期日则输出“星期天”否则输出形如“星期1” 。横线上应填入\n的代码是(\n)。\nint N, nowDay, afterDays;\n1\n2\n3\n4\n5\ncout << \"今天星期几?\" <<endl;\ncin >> nowDay;\ncout << \"求几天后星期几?\"<< endl;\ncin >>afterDays;\n6\n7\n8\n9\n10\n11\n12\nN = nowDay+afterDays;\nif(\n)\nprintf(\"星期天\");\nelse\nprintf(\"星期%d\", N%7);\n口A. N % 7 != 0\n口B. N % 7 == 0\nw C. N == 0\n口D. N % 7",
       "options": [
         {
           "key": "A",
@@ -175,12 +174,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面C++代码执行后输出是( )。\n1\n2\n3\n4\nint N=0,i;\nfor (i = 1; i < 10; i++)\nN += 1;\ncout << (N + i);\n口 A. 54\n口 B. 20\n口 C. 19\n口 D. 18",
+      "stem": "下面C++代码执行后输出是(\n)。\nint N=0,i;\nfor (i = 1; i < 10; i++)\n1\n2\n3\n4\nN += 1;\ncout << (N + i);\n口A. 54\n口B. 20\n口C. 19\n口D. 18",
       "options": [
         {
           "key": "A",
@@ -199,36 +198,24 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面C++代码执行后输出的是( )。\n1\n2\n3\n4\nint tnt = 0;\nfor (i = 0; i < 100; i++)\ntnt += i % 10;\ncout << tnt;\n口 A. 4950\n口 B. 5050\n口 C. 450\n口 D. 100",
+      "stem": "下面C++代码执行后输出的是(\n)。\nint tnt = 0;\nfor (i = 0; i < 100; i++)\n1\n2\n3\n4\ntnt += i % 10;\ncout << tnt;\n口A. 4950\n口B. 5050\n口",
       "options": [
         {
-          "key": "A",
-          "text": "A"
-        },
-        {
-          "key": "B",
-          "text": "B"
-        },
-        {
           "key": "C",
-          "text": "C"
-        },
-        {
-          "key": "D",
-          "text": "D"
+          "text": "口D. 100"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面C++代码执行后输出的是( )。\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nint N=0,i;\nint tnt = 0;\nfor (i = 5; i < 100; i+=5){\nif (i % 2 == 0)\ncontinue;\ntnt += 1;\nif (i >= 50)\nbreak;\n}\ncout << tnt;\n口 A. 10\n口 B. 9\n口 C. 6\n口 D. 5",
+      "stem": "下面C++代码执行后输出的是(\n)。\nint N=0,i;\nint tnt = 0;\n1\n2\n3\n4\n5\n6\n7\nfor (i = 5; i < 100; i+=5){\nif (i % 2 == 0)\ncontinue;\ntnt += 1;\nif (i >= 50)\nbreak;\n}\n8\n9\n10\n11\ncout << tnt;\n口A. 10\n口B. 9\n口C. 6\n口D. 5",
       "options": [
         {
           "key": "A",
@@ -247,12 +234,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面的程序用于判断输入的整数N是否为能被3整除的偶数 ,横线处应填写代码是( )。\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint N;\ncin >> N;\nif( )\ncout << \"能被3整除的偶数 \" << endl;\nelse\ncout << \"其他情形 \" << endl;\ncout << endl;\n口 A.\n口 B.\n口 C.\n口 D.\n(N%2)&&(N%3)\n(N%2==0)&&(N%3)\n(N%2)&&(N%3==0)\n(N%2==0)&&(N%3==0)",
+      "stem": "下面的程序用于判断输入的整数N是否为能被3整除的偶数,横线处应填写代码是(\n)。\nint N;\ncin >> N;\n1\n2\n3\nif(\n)\n4\n5\n6\n7\n8\n9\n10\ncout << \"能被3整除的偶数\" << endl;\nelse\ncout << \"其他情形\" << endl;\ncout << endl;\n(N%2)&&(N%3)\n口A.\n(N%2==0)&&(N%3)\n口B.\n口C.\n(N%2)&&(N%3==0)\n口D.\n(N%2==0)&&(N%3==0)",
       "options": [
         {
           "key": "A",
@@ -271,12 +258,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "D"
     },
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面C++代码执行后的输出是( )。\n1\n2\n3\n4\n5\n6\n7\n8\nint cnt;\ncnt = 0;\nfor(int i = 1; i < 10; i++)\ncnt += i++;\ncout << cnt;\ncout << endl;\n口 A. 54\n口 B. 45\n口 C. 25\n口 D. 10",
+      "stem": "下面C++代码执行后的输出是(\n)。\nint cnt;\n1\n2\n3\n4\ncnt = 0;\nfor(int i = 1; i < 10; i++)\ncnt += i++;\n5\n6\n7\n8\ncout << cnt;\ncout << endl;\n口A. 54\n口B. 45\n口C. 25\n口D. 10",
       "options": [
         {
           "key": "A",
@@ -295,12 +282,12 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "C"
     },
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "int类型变量a的值是一个正方形的边长 ,如下图中的正方形的四条边长都为4 ,则下列哪个语句执行后能够\n使得正方形的周长(四条边长的和)增加4?( )。\n1 + + + + +\n2 + +\n3 + +\n4 + +\n5 + + + + +\n口 A. a*4;\n口 B. a+4;",
+      "stem": "int类型变量a的值是一个正方形的边长,如下图中的正方形的四条边长都为4 ,则下列哪个语句执行后能够\n使得正方形的周长(四条边长的和)增加4?(\n)。\n1\n+\n+\n+\n+\n+\n2\n+\n+\n3\n+\n+\n4\n+\n+\n5\n+\n+\n+\n+\n+\n口A. a*4;\n口B. a+4;",
       "options": [
         {
           "key": "C",
@@ -311,12 +298,12 @@
           "text": "++a;"
         }
       ],
-      "answer": ""
+      "answer": "D"
     },
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "C++表达式 (6 > 2) * 2 的值是( )。\n口 A. 1\n口 B. 2\n口 C. true\n口 D. truetrue",
+      "stem": "C++表达式(6 > 2) * 2 的值是(\n)。\n口A. 1\n口B. 2\n口C. true\n口D. truetrue",
       "options": [
         {
           "key": "A",
@@ -335,26 +322,26 @@
           "text": "D"
         }
       ],
-      "answer": ""
+      "answer": "B"
     },
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面C++代码用于判断输入的整数是否为位增数, 即从首位到个位逐渐增大 ,是则输出1 。如123是一个位增\n数 。下面横线处应填入的是( )。\n1 int N;\n2 int n1,n2;\n3\n4 cin >> N;\n5\n6 ;\n7 while(N){\n8 n1 = N % 10;\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\nif(n1 >= n2){\ncout << 0;\nreturn 1;\n}\nn2 = n1, N /=10;\n}\ncout << 1;\ncout << endl;\nreturn 0;\n口 A. n2 = N%10\n口 B. N /= 10",
+      "stem": "下面C++代码用于判断输入的整数是否为位增数,即从首位到个位逐渐增大,是则输出1 。如123是一个位增\n数。下面横线处应填入的是(\n)。\n1\nint N;\n2\nint n1,n2;\n3\n4\ncin >> N;\n5\n6\n;\n7\nwhile(N){\n8\nn1 = N % 10;\nif(n1 >= n2){\n9\n10\n11\n12\n13\n14\ncout << 0;\nreturn 1;\n}\nn2 = n1, N /=10;\n}\n15\n16\n17\n18\n19\ncout << 1;\ncout << endl;\nreturn 0;\n口A. n2 = N%10\n口B. N /= 10",
       "options": [
         {
           "key": "C",
-          "text": "n2 = N/10, N %= 10 口 D. n2 = N%10, N /= 10"
+          "text": "n2 = N/10, N %= 10 口D. n2 = N%10, N /= 10"
         }
       ],
-      "answer": ""
+      "answer": "D"
     }
   ],
   "tf": [
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "在Windows的资源管理器中为已有文件A建立副本的操作是 Ctrl+C ,然后 Ctrl+V 。( )",
+      "stem": "在Windows的资源管理器中为已有文件A建立副本的操作是\nCtrl+C\n,然后\nCtrl+V\n。( )",
       "options": [
         {
           "key": "T",
@@ -370,7 +357,7 @@
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在C++中 ,表达式 8/3 和 8%3 的值相同 。( )",
+      "stem": "在C++中,表达式8/3 和8%3 的值相同。(\n)",
       "options": [
         {
           "key": "T",
@@ -386,7 +373,7 @@
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "X是C++语言的基本类型变量 ,则语句 cin>>X, cout <<X 能接收键盘输入并原样输出 。 ( )",
+      "stem": "X是C++语言的基本类型变量,则语句cin>>X, cout <<X 能接收键盘输入并原样输出。(\n)",
       "options": [
         {
           "key": "T",
@@ -402,7 +389,7 @@
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "下面C++代码执行后将输出10 。 ( )\n\n\n\n\n\n\nint N = 0;\nfor (int i = 0; i < 10; i++){\ncontinue;\nN += 1;\n}\ncout << N;",
+      "stem": "下面C++代码执行后将输出10 。(\n)\nint N = 0;\nfor (int i = 0; i < 10; i++){\n\n\n\n\n\n\ncontinue;\nN += 1;\n}\ncout << N;",
       "options": [
         {
           "key": "T",
@@ -418,7 +405,7 @@
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下面C++代码执行后将输出100 。 ( )\n\n\n\n\nint i;\nfor (i = 0; i <= 100; i++)\ncontinue;\ncout << i;",
+      "stem": "下面C++代码执行后将输出100 。( )\nint i;\nfor (i = 0; i <= 100; i++)\n\n\n\ncontinue;\ncout << i;",
       "options": [
         {
           "key": "T",
@@ -434,7 +421,7 @@
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "下面C++代码被执行时 ,将执行三次输出(即标记行L2将被执行一次) 。 ( )\n\n\nfor (int i = 0; i < 10; i+=3)\ncout << i; //L2",
+      "stem": "下面C++代码被执行时,将执行三次输出(即标记行L2将被执行一次)。(\n)\nfor (int i = 0; i < 10; i+=3)\n\n\ncout << i;\n//L2",
       "options": [
         {
           "key": "T",
@@ -450,7 +437,7 @@
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "C++语句 cout << (3,2) 执行后 ,将输出3和2 ,且3和2之间有逗号间隔 。 ( )",
+      "stem": "C++语句cout << (3,2) 执行后,将输出3和2 ,且3和2之间有逗号间隔。(\n)",
       "options": [
         {
           "key": "T",
@@ -466,7 +453,7 @@
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在C++代码中, studentName 、 student_name 以及 sStudentName 都是合法的变量名称 。 ( )",
+      "stem": "在C++代码中,studentName 、student_name 以及sStudentName 都是合法的变量名称。(\n)",
       "options": [
         {
           "key": "T",
@@ -482,7 +469,7 @@
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在C++中 ,对浮点变量 float f ,则语句 cin >> f; cout << (f<1); 在输入是 2e-1 时 ,输出是0 。 (\n)",
+      "stem": "在C++中,对浮点变量float f ,则语句cin >> f; cout << (f<1); 在输入是2e-1 时,输出是0 。(\n)",
       "options": [
         {
           "key": "T",
@@ -498,7 +485,7 @@
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "在C++的循环体内部 ,如果 break 和 continue 语句连续在一起 ,那么作用抵消 ,可以顺利执行下一次\n循环 。 ( )",
+      "stem": "在C++的循环体内部,如果break 和continue 语句连续在一起,那么作用抵消,可以顺利执行下一次\n循环。( )",
       "options": [
         {
           "key": "T",
@@ -517,28 +504,55 @@
       "seq": 1,
       "kind": "traditional",
       "title": "温度转换",
-      "statement": ". 时间限制:1.0s\n. 内存限制:512.0 MB\n3.1.1 题目描述\n小杨最近学习了开尔文温度、摄氏温度和华氏温度的转换 。令符号 K 表示开尔文温度 ,符号 C 表示摄氏温度 ,符号\nF 表示华氏温度 ,这三者的转换公示如下:\nC\n K 273.15\nF = C'X 1.8 + 32\n现在小杨想编写一个程序计算某一开尔文温度对应的摄氏温度和华氏温度 ,你能帮帮他吗?\n3.1.2\n\n输入格式\n一行 ,一个实数K ,表示开尔文温度。\n3.1.3 输出格式\n一行 ,若输入开尔文温度对应的华氏温度高于 212 ,输出 Temperature is too high! ;\n否则,输出两个由空格分隔的实数 C和F ,分别表示摄氏温度和华氏度 ,保留两位小数。\n3.1.4\n3.1.5\n\n 412.00\n3.1.6 输出样例 1\n\n Temperature is too high!\n3.1.7 输入样例 2\n\n 173.56\n3.1.8 输出样例 2\n\n -99.59 -147.26\n样例\n输入样例 1\n3.1.9 数据范围\n0 < K < 105\n3.1.10",
+      "statement": ".\n时间限制:1.0 s\n.\n内存限制:512.0 MB\n3.1.1\n题目描述\n小杨最近学习了开尔文温度、摄氏温度和华氏温度的转换。令符号K 表示开尔文温度,符号C 表示摄氏温度,符号\nF 表示华氏温度,这三者的转换公示如下:\nC\nK\n273. 15\n现在小杨想编写一个程序计算某一开尔文温度对应的摄氏温度和华氏温度,你能帮帮他吗?\n3.1.2\n\n输入格式\n一行,一个实数K ,表示开尔文温度。\n3.1.3\n输出格式\n一行,若输入开尔文温度对应的华氏温度高于212 ,输出Temperature is too high! ;\n否则,输出两个由空格分隔的实数C和F ,分别表示摄氏温度和华氏度,保留两位小数。\n样例\n3.1.4\n输入样例1\n3.1.5\n\n412.00\n3.1.6\n输出样例1\n\nTemperature is too high!\n3.1.7\n输入样例2\n\n173.56\n3.1.8\n输出样例2\n\n-99.59 -147.26\n3.1.9\n数据范围\n0 < K < 105\n3.1.10",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "412.00\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <cstdio>\nusing namespace std;\nint main() {\ndouble K; scanf(\"%lf\", &K);\ndouble C = K - 273.15;\ndouble F = 32 + C * 1.8;\nif (F > 212)\nprintf(\"Temperature is too high!\\n\");\nelse\nprintf(\"%.2f %.2f\\n\", C, F);\nreturn 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "奇数和偶数",
-      "statement": ". 时间限制:1.0s\n. 内存限制:512.0 MB\n3.2.1 题面描述\n小杨有 n 个正整数 ,他想知道其中的奇数有多少个 ,偶数有多少个。\n3.2.2\n\n输入格式\n第一行包含一个正整数 n ,代表正整数个数。\n之后 n 行 ,每行包含一个正整数。\n3.2.3 输出格式\n输出两个正整数(用英文空格间隔) ,代表奇数的个数和偶数的个数 。如奇数或偶数的个数为0 ,则对应输出0。\n3.2.4 样例\n\n3 2\n对于全部数据 ,保证有 1 ≤ n ≤ 105 且正整数大小不超过 105 。\n3.2.5",
+      "statement": ".\n时间限制:1.0 s\n.\n内存限制:512.0 MB\n3.2.1\n题面描述\n小杨有n 个正整数,他想知道其中的奇数有多少个,偶数有多少个。\n3.2.2\n\n输入格式\n第一行包含一个正整数n ,代表正整数个数。\n之后n 行,每行包含一个正整数。\n3.2.3\n输出格式\n输出两个正整数(用英文空格间隔),代表奇数的个数和偶数的个数。如奇数或偶数的个数为0 ,则对应输出0。\n3.2.4\n样例\n\n3 2\n\n对于全部数据,保证有1 ≤n ≤105 且正整数大小不超过105。\n3.2.5",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "5\n6\n1\n5\n",
-          "out": "5\n",
+          "in": "5\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include<bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;\nint a=0,b=0;\ncin>>n;\nfor(int i=1;i<=n;i++){\nint x;\ncin>>x;\nif(x%2 !=0)a++;\nelse b++;\n}\ncout<<a<<\" \"<<b<<\"\\n\";\n}"
     }
   ],
-  "answer_rows": []
+  "answer_rows": [
+    [
+      "C",
+      "C",
+      "D",
+      "B",
+      "B",
+      "D",
+      "B",
+      "C",
+      "C",
+      "C",
+      "D",
+      "C",
+      "D",
+      "B",
+      "D"
+    ],
+    []
+  ]
 }

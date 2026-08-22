@@ -3,10 +3,10 @@
     "ym": "202506",
     "lang": "python",
     "level": 1,
-    "title": "CCF GESP 2025年6月认证 Python 1级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1687196115402784.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202506-python-1.pdf"
+    "title": "202506-python-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202506-python-1.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下列Python代码执行后,其结果是(  )。",
+      "stem": "下列Python代码执行后,其结果是(\n )。\nfirst = 10\nprint(f\"{First}\")\n1\n2",
       "options": [
         {
           "key": "A",
@@ -68,11 +68,11 @@
         },
         {
           "key": "B",
-          "text": "输出 {First}"
+          "text": "输出{First}"
         },
         {
           "key": "C",
-          "text": "输出 \"{First}\""
+          "text": "输出\"{First}\""
         },
         {
           "key": "D",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "Python表达式 14 - 3 * 3 ** 2 的值是(  )。",
+      "stem": "Python表达式14 - 3 * 3 ** 2 的值是(\n )。",
       "options": [
         {
           "key": "A",
@@ -96,7 +96,7 @@
         },
         {
           "key": "C",
-          "text": "-13 first = 10 print(f\"{First}\")"
+          "text": "-13"
         },
         {
           "key": "D",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面的 Python 代码执行后,其输出是 (  ) 。",
+      "stem": "下面的Python代码执行后,其输出是( )。\nx = 10\ny = 20\nx = x + y\ny = x - y\nx = x - y\nprint(x, y)\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是 (  ) 。",
+      "stem": "下面Python代码执行后的输出是( )。\na, b, c = 3, 4, 5\nprint(f\"a={a} b={b} c={c},a^2+b^2={a**2+b**2},c^2={c**2}\")\n1\n2",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "阅读下面的 Python 代码,横线上应填入的代码是(     )。",
+      "stem": "阅读下面的Python代码,横线上应填入的代码是(    )。\nYearOld = input(\"您今年的整数年龄是?\")\nprint(f\"您出生于__________年。\")\n1\n2",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是( )。\n\n```\nprint(x, y)\n\n\n\n\n\n\na, b, c = 3, 4, 5\nprint(f\"a={a} b={b} c={c},a^2+b^2={a**2+b**2},c^2={c**2}\")\n\n\nYearOld = input(\" 您今年的整数年龄是 ?\")\nprint(f\" 您出生于 __________ 年。 \")\n\n\na = 3\nb = 4\nprint(\"a+b=\", a+b, \"a+b={a+b}\")\n```",
+      "stem": "下面Python代码执行后的输出是(\n)。\na = 3\nb = 4\nprint(\"a+b=\", a+b, \"a+b={a+b}\")\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -196,7 +196,7 @@
         },
         {
           "key": "D",
-          "text": "a+b=7a+b=7 x = 10 y = 20 x = x + y y = x - y x = x - y"
+          "text": "a+b=7a+b=7"
         }
       ],
       "answer": "A"
@@ -204,15 +204,23 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面的 Python 代码用于求 M 天后是星期几,横线处应填入的代码是( )。",
+      "stem": "下面的Python代码用于求M天后是星期几,横线处应填入的代码是(\n)。\nN = int(input(\"当前星期几?\")) #星期日是0\nM = int(input(\"求多少天后?\")) #输入正整数\n1\n2\n3\n4\n5\n6\n7\n8\nD = __________________\nif ______________:\n    print(f\"{M}后是星期日\")\nelse:\n    print(f\"{M}后是星期{D}\")",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "(N + M) // 7 D == 0"
+        },
+        {
+          "key": "B",
+          "text": "(N + M) % 7 D == 0"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "(N + M) // 7 D <= 0"
+        },
+        {
+          "key": "D",
+          "text": "(N + M) % 7 D = 0"
         }
       ],
       "answer": "B"
@@ -220,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是(     )。",
+      "stem": "下面Python代码执行后输出是(    )。\nfor i in range(1,11,3):\n    continue\n    if i % 2 == 0:\n        break\n    print(i,end=\"#\")\nelse:\n    print(\"END\")\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -244,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面的 Python 代码用于求 N 的所有因数,如输入 12 则将输出12,6,4,3,2,1, 。(     )。\nN = int(input(\" 当前星期几? \")) # 星期日是 0\nM = int(input(\" 求多少天后? \")) # 输入正整数\nD = __________________\nif ______________:\n    print(f\"{M}后是星期日 \")\nelse:\n    print(f\"{M}后是星期{D}\")\n1\n2\n3\n4\n5\n6\n7\n8\n(N + M) // 7\nD == 0\n1\n2\n(N + M) % 7\nD == 0\n1\n2\n(N + M) // 7\nD <= 0\n1\n2\n(N + M) % 7\nD = 0\n1\n2\nfor i in range(1,11,3):\n    continue\n    if i % 2 == 0:\n        break\n    print(i,end=\"#\")\nelse:\n    print(\"END\")\n1\n2\n3\n4\n5\n6\n7\nN = int(input())\ni = N\nwhile ______________:\n    if N % i == 0:\n        print(i, end = \",\")\n    i -= 1\nprint(1)\n1\n2\n3\n4\n5\n6\n7",
+      "stem": "下面的Python代码用于求N的所有因数,如输入12则将输出12,6,4,3,2,1, 。(    )。\nN = int(input())\ni = N\nwhile ______________:\n    if N % i == 0:\n        print(i, end = \",\")\n    i -= 1\nprint(1)\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -268,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出的是(     )。",
+      "stem": "下面Python代码执行后输出的是(    )。\nSum = 0\nfor i in range(10):\n    if i % 2 == 0:\n        continue\n    if i % 5 == 0:\n        break\n    Sum += i\nprint(Sum)\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -292,23 +300,23 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "turtle.forward(100) 是(     )。",
+      "stem": "turtle.forward(100)是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "让海龟向右转 100 度"
+          "text": "让海龟向右转100度"
         },
         {
           "key": "B",
-          "text": "让海龟向上移动 100 像素"
+          "text": "让海龟向上移动100像素"
         },
         {
           "key": "C",
-          "text": "让海龟向前移动 100 像素"
+          "text": "让海龟向前移动100像素"
         },
         {
           "key": "D",
-          "text": "让海龟向前移动 100 单位"
+          "text": "让海龟向前移动100单位"
         }
       ],
       "answer": "C"
@@ -316,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "为在 Python Turtle 中输出如下图形,代码横线处应填入(     )。",
+      "stem": "为在Python Turtle中输出如下图形,代码横线处应填入(    )。\nimport turtle\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nturtle.pensize(2)\nfor i in range(____________):\n    if i % 2 == 0:\n        turtle.color(\"red\")\n    else:\n        turtle.color(\"green\")\n    turtle.forward(i * 5)\n    turtle.right(90)",
       "options": [
         {
           "key": "A",
@@ -324,7 +332,7 @@
         },
         {
           "key": "B",
-          "text": "1, 12 Sum = 0 for i in range(10): if i % 2 == 0: continue if i % 5 == 0: break Sum += i print(Sum) import turtle turtle.pensize(2) for i in range(____________): if i % 2 == 0: turtle.color(\"red\") else: turtle.color(\"green\") turtle.forward(i * 5) turtle.right(90) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "1, 12"
         },
         {
           "key": "C",
@@ -340,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "为在 Python Turtle 中输出如下图形,代码横线处应填入(     )。",
+      "stem": "为在Python Turtle中输出如下图形,代码横线处应填入(    )。\nimport turtle\nfor i in range(9):\n    turtle.forward(100)\n    turtle.left(120)\n    if i % 3 == 2:\n        turtle.right(____________)\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -366,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "现在,人们参加各种闭卷考试时通常都不允许将智能手机、平板电脑等带入考场,因为智能手表通常都有嵌\n入操作系统及通信等功能,所以也不允许携带入考场。(   )",
+      "stem": "现在,人们参加各种闭卷考试时通常都不允许将智能手机、平板电脑等带入考场,因为智能手表通常都有嵌\n入操作系统及通信等功能,所以也不允许携带入考场。(  )",
       "options": [
         {
           "key": "T",
@@ -377,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "如果 Python 表达式int(N ** 0.5) ** 2 == N 的值为 True ,则 N 是完全平方数,如 4 、 9 等。 (  )",
+      "stem": "如果Python表达式int(N ** 0.5) ** 2 == N 的值为True,则N是完全平方数,如4、9等。(  )",
       "options": [
         {
           "key": "T",
@@ -393,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在下面 Python 代码中,删除break 语句对程序执行结果没有影响。  (  )",
+      "stem": "在下面Python代码中,删除break 语句对程序执行结果没有影响。 (  )\nfor i in range(10):\n    continue\n    print(i, end = \"#\")\n    break\nelse:\n    print(\"END\")",
       "options": [
         {
           "key": "T",
@@ -409,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "删除下面 Python 代码中的continue 后其输出是0#2#4#6#8# 。(   )\nimport turtle\nfor i in range(9):\n    turtle.forward(100)\n    turtle.left(120)\n    if i % 3 == 2:\n        turtle.right(____________)\n\n\n\n\n\n\nfor i in range(10):\n    continue\n    print(i, end = \"#\")\n    break\nelse:\n    print(\"END\")",
+      "stem": "删除下面Python代码中的continue 后其输出是0#2#4#6#8# 。(  )\nfor i in range(10):\n    if i % 2 == 0:\n        print(i, end = \"#\")\n        continue\nelse:\n    print(\"END\")",
       "options": [
         {
           "key": "T",
@@ -425,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "将下面 Python 代码中的range(100) 修改为range(1,100) ,其输出与当前代码输出相同。(   )",
+      "stem": "将下面Python代码中的range(100) 修改为range(1,100) ,其输出与当前代码输出相同。(  )\ncnt = 0\nfor i in range(100):\n    cnt += 1\nprint(cnt)",
       "options": [
         {
           "key": "T",
@@ -441,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "交换下面 Python 代码中的i += 2 和cnt += 1 ,其输出相同。(   )",
+      "stem": "交换下面Python代码中的i += 2 和cnt += 1 ,其输出相同。(  )\ncnt = 0\ni = 0\nwhile i < 10:\n    i += 2\n    cnt += 1\nprint(cnt)",
       "options": [
         {
           "key": "T",
@@ -457,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后将输出 45 。(   )",
+      "stem": "下面的Python代码执行后将输出45。(  )\ni = 0\nfor i in range(10):\n    cnt += i\nprint(cnt)",
       "options": [
         {
           "key": "T",
@@ -473,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "执行 Python 代码print(12 + 12.12) 将报错,因为 12 是 int 类型,而 12.12 是 float 类型,不同类型不能直接运\n算。(   )",
+      "stem": "执行Python代码print(12 + 12.12) 将报错,因为12是int类型,而12.12是float类型,不同类型不能直接运\n算。(  )",
       "options": [
         {
           "key": "T",
@@ -489,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后,海龟指向不会发生变化。(   )",
+      "stem": "下面的Python代码执行后,海龟指向不会发生变化。(  )\nimport turtle\nturtle.left(30)\nturtle.right(30)",
       "options": [
         {
           "key": "T",
@@ -505,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面的 Python 代码被执行后将绘制出正六边形。(   )",
+      "stem": "下面的Python代码被执行后将绘制出正六边形。(  )\nimport turtle\nfor i in range(6):\n    turtle.forward(100)\n    turtle.right(120)",
       "options": [
         {
           "key": "T",
@@ -521,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -529,21 +537,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "假期阅读",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n    if i % 2 == 0:\n        print(i, end = \"#\")\n        continue\nelse:\n    print(\"END\")\n\ncnt = 0\n    cnt += 1\nprint(cnt)\n\ncnt = 0\ni = 0\n    i += 2\n    cnt += 1\nprint(cnt)\n\ni = 0\n    cnt += i\nprint(cnt)\n\nimport turtle\nturtle.left(30)\nturtle.right(30)\n\nimport turtle\n    turtle.forward(100)\n    turtle.right(120)\n\n3.1.1 题目描述\n小  A 有一本厚厚的书。这本书总共有   页,小  A 一天中最多只能阅读完其中的   页。小  A 的假期总共有   天,他想\n知道在假期中最多能阅读完这本书的多少页。\n3.1.2\n\n输入格式\n第一行,一个正整数  ,表示书的页数。\n第二行,一个正整数  ,表示小  A 每天最多阅读的页数。\n第三行,一个正整数  ,表示小  A 假期的天数。\n3.1.3 输出格式\n一行,一个整数,表示假期中所能阅读的最多页数。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于所有测试点,保证   均不超过  。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小 A 有一本厚厚的书。这本书总共有  页,小 A 一天中最多只能阅读完其中的  页。小 A 的假期总共有  天,他想\n知道在假期中最多能阅读完这本书的多少页。\n3.1.2\n\n输入格式\n第一行,一个正整数 ,表示书的页数。\n第二行,一个正整数 ,表示小 A 每天最多阅读的页数。\n第三行,一个正整数 ,表示小 A 假期的天数。\n3.1.3\n输出格式\n一行,一个整数,表示假期中所能阅读的最多页数。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n\n3.1.4.4\n输出样例 2\n\n3.1.5\n数据范围\n对于所有测试点,保证\n 均不超过\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "8\n3\n2\n",
+          "out": "6\n",
+          "suspect": false
+        },
+        {
+          "in": "19\n3\n30\n",
+          "out": "19\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input()) #图书页码总数\nk = int(input()) #每天阅读页数\nt = int(input()) #阅读天数\ntotal_pages = k * t #总共能阅读的页码数\nif n < total_pages:\n    #图书页码数小于能阅读的总页码数\n    print(n)\nelse:\n    print(total_pages)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "值日",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小杨和小红是值日生,负责打扫教室。小杨每   天值日一次,小红每   天值日一次。今天他们两个一起值日,请问\n至少多少天后,他们会再次同一天值日?\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示小杨的值日周期;\n第二行,一个正整数  ,表示小红的值日周期。\n3.2.3 输出格式\n一行,一个整数,表示至少多少天后他们会再次同一天值日。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n3.2.5 数据范围\n对于所有测试点,保证  。\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n小杨和小红是值日生,负责打扫教室。小杨每\n 天值日一次,小红每  天值日一次。今天他们两个一起值日,请问\n至少多少天后,他们会再次同一天值日?\n3.2.2\n\n输入格式\n第一行,一个正整数\n,表示小杨的值日周期;\n第二行,一个正整数 ,表示小红的值日周期。\n3.2.3\n输出格式\n一行,一个整数,表示至少多少天后他们会再次同一天值日。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n\n3.2.4.2\n输出样例 1\n\n3.2.5\n数据范围\n对于所有测试点,保证\n。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "4\n6\n",
+          "out": "12\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input()) #输入第1位同学值班间隔\nm = int(input()) #输入第2位同学值班间隔\ni = 1 #隔1天开始,也就是同一天值班的第二天开始\nwhile True:\n    #能同时整除,则表示该天可以同时值班\n    if i % n == 0 and i % m == 0:\n        print(i) #输出同一天值班的天数\n        break #找到了同一天值班,不必继续循环。如果不终端将死循环\n    i += 1 #每次循环增加1天"
     }
   ],
   "answer_rows": [
@@ -564,8 +591,6 @@
       "C",
       "D"
     ],
-    [
-      "C"
-    ]
+    []
   ]
 }

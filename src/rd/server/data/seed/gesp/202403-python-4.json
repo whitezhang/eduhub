@@ -3,16 +3,16 @@
     "ym": "202403",
     "lang": "python",
     "level": 4,
-    "title": "GESP 3月认证 Python四级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10134.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1602047491178528.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202403-python-4.pdf"
+    "title": "202403-python-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202403-python-4.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "小杨的父母最近刚刚给他买了一块华为手表,他说手表上跑的是鸿蒙,这个鸿蒙是?(   )",
+      "stem": "小杨的父母最近刚刚给他买了一块华为手表,他说手表上跑的是鸿蒙,这个鸿蒙是?(  )",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "中国计算机学会( CCF )在 2024 年 1 月 27 日的颁奖典礼上颁布了王选奖,王选先生的重大贡献是(   )。",
+      "stem": "中国计算机学会(CCF)在2024年1月27日的颁奖典礼上颁布了王选奖,王选先生的重大贡献是(  )。",
       "options": [
         {
           "key": "A",
@@ -60,23 +60,23 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面有关 Python 的说法,正确的是 (  ) 。",
+      "stem": "下面有关Python的说法,正确的是(\n )。",
       "options": [
         {
           "key": "A",
-          "text": "Python 是低级程序设计语言,适合初学者"
+          "text": "Python是低级程序设计语言,适合初学者"
         },
         {
           "key": "B",
-          "text": "Python 一门编译型语言"
+          "text": "Python一门编译型语言"
         },
         {
           "key": "C",
-          "text": "和 C/C++ 、 Java 一样, Python 也是静态类型的语言"
+          "text": "和C/C++、Java一样,Python也是静态类型的语言"
         },
         {
           "key": "D",
-          "text": "Python 是脚本型程序设计语言"
+          "text": "Python是脚本型程序设计语言"
         }
       ],
       "answer": "D"
@@ -84,23 +84,23 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "有关 Python 语句print(3,2,sep='#')说法错误的是 (  ) 。",
+      "stem": "有关Python语句print(3,2,sep='#') 说法错误的是(\n )。",
       "options": [
         {
           "key": "A",
-          "text": "3 和 2 称之为位置参数"
+          "text": "3和2称之为位置参数"
         },
         {
           "key": "B",
-          "text": "sep 称之为命名关键字参数"
+          "text": "sep称之为命名关键字参数"
         },
         {
           "key": "C",
-          "text": "3 和 2 称之为变参参数"
+          "text": "3和2称之为变参参数"
         },
         {
           "key": "D",
-          "text": "sep 参数可以放在 3 和 2 之前"
+          "text": "sep参数可以放在3和2之前"
         }
       ],
       "answer": "D"
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后,第 4 行输出是 (  ) 。",
+      "stem": "下面Python代码执行后,第4行输出是(\n )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面 Python 代码最后执行后最后一行输出是 (  ) 。",
+      "stem": "下面Python代码最后执行后最后一行输出是(\n )。",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是(     )。",
+      "stem": "下面Python代码执行后输出是(    )。",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是(     )。",
+      "stem": "下面Python代码执行后输出是(    )。",
       "options": [
         {
           "key": "A",
@@ -196,7 +196,7 @@
         },
         {
           "key": "D",
-          "text": "报错。因为第 2 行只能返回一个值,不可以是两个值"
+          "text": "报错。因为第2行只能返回一个值,不可以是两个值"
         }
       ],
       "answer": "B"
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "Python 代码print({(i,i ** 2) for i in range(5)})执行后可能输出是 (  ) 。",
+      "stem": "Python代码print({(i,i ** 2) for i in range(5)}) 执行后可能输出是( )。",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码执行,其输出是(     )。",
+      "stem": "下面Python代码执行,其输出是(    )。",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "在 Python 中,对 list 、 tuple 或 str 类型执行 in 运算,其时间复杂度均为(     )。",
+      "stem": "在Python中,对list、tuple或str类型执行in运算,其时间复杂度均为(    )。",
       "options": [
         {
           "key": "A",
@@ -268,23 +268,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下列 Python 代码用于寻找 1~100 之间的因数最多的数及其因数,程序本意是 factor 变量存储形如 {6:[1,2,3,6],8:\n[1,2,4,8]} 。下面有关说法正确的是(      )。",
+      "stem": "下列Python代码用于寻找1~100之间的因数最多的数及其因数,程序本意是factor变量存储形如{6:[1,2,3,6],8:\n[1,2,4,8]}。下面有关说法正确的是(     )。",
       "options": [
         {
           "key": "A",
-          "text": "程序第 5 行存在语法错误,因为 append() 的返回值为 None"
+          "text": "程序第5行存在语法错误,因为append()的返回值为None"
         },
         {
           "key": "B",
-          "text": "程序第 5 行存在语法错误,当某个数第 1 次作为 factor 的 key 时,其对应的值为 append() 的返回值即 None ,当该数 第 2 次作为 factor 的 key 时, factor.get(i,[]) 返回值为 None 不再是 [] , append() 不能成其为函数"
+          "text": "程序第5行存在语法错误,当某个数第1次作为factor的key时,其对应的值为append()的返回值即None,当该数 第2次作为factor的key时,factor.get(i,[])返回值为None不再是[],append()不能成其为函数"
         },
         {
           "key": "C",
-          "text": "程序第 6 行存在语法错误,因为 max() 不能有 key 参数"
+          "text": "程序第6行存在语法错误,因为max()不能有key参数"
         },
         {
           "key": "D",
-          "text": "程序第 6 行存在语法错误, max() 虽然可以有 key 作为参数,但其中 lambda 函数存在语法错误"
+          "text": "程序第6行存在语法错误,max()虽然可以有key作为参数,但其中lambda函数存在语法错误"
         }
       ],
       "answer": "B"
@@ -292,11 +292,11 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "在如下 Python 代码中,假设变量 zen 代表很多字符此处仅为示例,代码实现按小写字母频次升序,如频次相\n同则按字符 ASCII 升序输出,横线处应填入是(     )。",
+      "stem": "在如下Python代码中,假设变量zen代表很多字符此处仅为示例,代码实现按小写字母频次升序,如频次相\n同则按字符ASCII升序输出,横线处应填入是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "alphaCount[c] += 1 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "alphaCount[c] += 1"
         },
         {
           "key": "B",
@@ -316,23 +316,23 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面 Python 代码能正确执行。在代码被执行之前, abc.txt 已经存在,其文件字节数为 100 。下面有关说法,\n正确的是(     )。",
+      "stem": "下面Python代码能正确执行。在代码被执行之前,abc.txt已经存在,其文件字节数为100。下面有关说法,\n正确的是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "abc.txt 的内容将被覆盖,但由于没有写入操作,文件字节数为 0"
+          "text": "abc.txt的内容将被覆盖,但由于没有写入操作,文件字节数为0"
         },
         {
           "key": "B",
-          "text": "abc.txt 的内容不会被覆盖,因为没有执行任何文件写入操作, abc.txt 将继续原样存在"
+          "text": "abc.txt的内容不会被覆盖,因为没有执行任何文件写入操作,abc.txt将继续原样存在"
         },
         {
           "key": "C",
-          "text": "原 abc.txt 的内容将被复制到 abc.bak 之中,然后覆盖 abc.txt ,由于没有写入操作,因此文件字节数为 0"
+          "text": "原abc.txt的内容将被复制到abc.bak之中,然后覆盖abc.txt,由于没有写入操作,因此文件字节数为0"
         },
         {
           "key": "D",
-          "text": "abc.txt 将被删除,因为第一行代码执行后,原文件内容将被删除,但由于没有写入操作,因此 abc.txt 将不会存 在"
+          "text": "abc.txt将被删除,因为第一行代码执行后,原文件内容将被删除,但由于没有写入操作,因此abc.txt将不会存 在"
         }
       ],
       "answer": "A"
@@ -340,7 +340,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下列 Python 代码执行后,将输出的是(     )。",
+      "stem": "下列Python代码执行后,将输出的是(    )。",
       "options": [
         {
           "key": "A",
@@ -366,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "任何一个 for 循环都可以转化为等价的 while 循环。(   )",
+      "stem": "任何一个for循环都可以转化为等价的while循环。(  )",
       "options": [
         {
           "key": "T",
@@ -377,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "小杨今年春节回奶奶家了,奶奶家的数字电视要设置 ip 地址并接入到 WIFI 盒子才能收看节目,那这个 WIFI 盒\n子具有路由器的功能。(   )",
+      "stem": "小杨今年春节回奶奶家了,奶奶家的数字电视要设置ip地址并接入到WIFI盒子才能收看节目,那这个WIFI盒\n子具有路由器的功能。(  )",
       "options": [
         {
           "key": "T",
@@ -393,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "小杨在练习 Python 准备 GESP 考试的过程中,发现如果执行 import os ,可以通过 os.system() 启动外部程序,因\n此也可以说 Python 是一个小型操作系统。(   )",
+      "stem": "小杨在练习Python准备GESP考试的过程中,发现如果执行import os,可以通过os.system()启动外部程序,因\n此也可以说Python是一个小型操作系统。(  )",
       "options": [
         {
           "key": "T",
@@ -409,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "在 Python 中,任何一个 while 循环都可以转化为等价的 for 循环(   )。",
+      "stem": "在Python中,任何一个while循环都可以转化为等价的for循环(  )。",
       "options": [
         {
           "key": "T",
@@ -425,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "在 Python 中, list 类型有 sort() 函数,但 tuple 、 set 和 dict 则没有 sort() 函数。 (  )",
+      "stem": "在Python中,list类型有sort()函数,但tuple、set和dict则没有sort()函数。(\n )",
       "options": [
         {
           "key": "T",
@@ -441,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "当对 list 和 tuple 类型执行 in 运算时,其时间复杂度为O(N)。(   )",
+      "stem": "当对list和tuple类型执行in运算时,其时间复杂度为O(N) 。(  )",
       "options": [
         {
           "key": "T",
@@ -457,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "在 Python 中,[i*2 for i in range(10) ]*3是合法的表达式。 (  )",
+      "stem": "在Python中,[i*2 for i in range(10) ]*3 是合法的表达式。(  )",
       "options": [
         {
           "key": "T",
@@ -473,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在下面 Python 代码中,文本文件 abc.txt 共有 10 行,每行由 1 个英文半角字母组成。第 5 行代码执行后其输出为\n10 。(   )",
+      "stem": "在下面Python代码中,文本文件abc.txt共有10行,每行由1个英文半角字母组成。第5行代码执行后其输出为\n10。(  )",
       "options": [
         {
           "key": "T",
@@ -489,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在 Python 中,已执行tpl = ([1,2],[3,4],[5,6]),如果执行tpl[1] = [99,100]将报错,而执行\ntpl[1][1] = [99,100]则不会报错。(   )",
+      "stem": "在Python中,已执行tpl = ([1,2],[3,4],[5,6]) ,如果执行tpl[1] = [99,100] 将报错,而执行\ntpl[1][1] = [99,100] 则不会报错。(  )",
       "options": [
         {
           "key": "T",
@@ -505,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "在 Python 中,表达式len(set(\"China\")^set(\"china\"))的值为 2 。(   )",
+      "stem": "在Python中,表达式len(set(\"China\")^set(\"china\")) 的值为2。(  )",
       "options": [
         {
           "key": "T",
@@ -521,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -529,21 +529,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "相似字符串",
-      "statement": "3.1.1 问题描述\n对于两个字符串   和  ,如果   可以通过删除一个字符,或插入一个字符,或修改一个字符变成  ,那么我们说\n和   是相似的。\n比如  apple 可以通过插入一个字符变成  applee,可以通过删除一个字符变成  appe,也可以通过修改一个字符\n变成  bpple,因此  apple 和  applee、appe、bpple 都是相似的。但  applee 并不能通过任意一个操作变成\nbpple,因此它们并不相似。\n特别地,完全相同的两个字符串也是相似的。\n给定   组  ,请你分别判断他们是否相似。\n3.1.2 输入描述\n第一行一个正整数  。\n接下来   行,每行两个用空格隔开的字符串   和  。\n保证  ,  的长度不超过  。保证   和   只包含小写字母。\n3.1.3 输出描述\n输出   行,对于每组  ,如果它们相似,则输出  similar,否则输出  not similar。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7",
+      "statement": "3.1.1\n问题描述\n对于两个字符串  和 ,如果  可以通过删除一个字符,或插入一个字符,或修改一个字符变成 ,那么我们说\n和  是相似的。\n比如 apple 可以通过插入一个字符变成 applee ,可以通过删除一个字符变成 appe ,也可以通过修改一个字符\n变成 bpple ,因此 apple 和 applee 、appe 、bpple 都是相似的。但 applee 并不能通过任意一个操作变成\nbpple ,因此它们并不相似。\n特别地,完全相同的两个字符串也是相似的。\n给定  组\n,请你分别判断他们是否相似。\n3.1.2\n输入描述\n第一行一个正整数 。\n接下来  行,每行两个用空格隔开的字符串  和 。\n保证\n,\n 的长度不超过\n。保证  和  只包含小写字母。\n3.1.3\n输出描述\n输出  行,对于每组\n,如果它们相似,则输出 similar ,否则输出 not similar 。\n3.1.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5\n样例输入 1\n\napple applee\napple appe\napple bpple\napplee bpple\napple apple\n\n3.1.6\n样例输出 1\nsimilar\nsimilar\nsimilar\nnot similar\nsimilar\n\n3.1.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "5\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n4\n5\n6\n",
+          "out": "5\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "def is_similar(A, B):\n    m, n = len(A), len(B)\n    if abs(m - n) > 1:\n        return False\n    if m == n:\n        diff = sum(1 for i in range(m) if A[i] != B[i])\n        return diff <= 1\n    else:\n        shorter = A if m < n else B\n        longer = B if m < n else A\n        i, j = 0, 0\n        diff = 0\n        while i < len(shorter) and j < len(longer):\n            if shorter[i] != longer[j]:\n                diff += 1\n                if diff > 1:\n                    return False\n                j += 1\n            else:\n                i += 1\n                j += 1\n        return True\nT = int(input())\nfor _ in range(T):\n    A, B = input().split()\n    if is_similar(A, B):\n        print(\"similar\")\n    else:\n        print(\"not similar\")"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "做题",
-      "statement": "3.2.1 题目描述\n小杨同学为了提高自己的实力制定了做题计划,在第   天时,他必须要完成   道题,否则他就会偷懒。\n小杨同学现在找到了一个题库,一共有   套题单,每一套题单中有一定数量的题目。但是他十分挑剔,每套题单他\n只会使用一次,每一天也只能使用一套题单里的题目,之后那套题单就会被弃之不用。对于每套题单,他不必完成\n题单内所有的题。\n那么问题来了,小杨同学最多会做题几天才偷懒呢?\n3.2.2\n\n输入格式\n第一行, 1 个数为   ,表示有多少套题单。\n第二行, n 个整数  ,分别表示每套题单有多少道题。\n3.2.3 输出格式\n输出一行,小杨同学偷懒前最多做题天数。\n3.2.4 样例 1\n对于全部数据,保证有  。\n3.2.5",
+      "statement": "3.2.1\n题目描述\n小杨同学为了提高自己的实力制定了做题计划,在第  天时,他必须要完成  道题,否则他就会偷懒。\n小杨同学现在找到了一个题库,一共有  套题单,每一套题单中有一定数量的题目。但是他十分挑剔,每套题单他\n只会使用一次,每一天也只能使用一套题单里的题目,之后那套题单就会被弃之不用。对于每套题单,他不必完成\n题单内所有的题。\n那么问题来了,小杨同学最多会做题几天才偷懒呢?\n3.2.2\n\n输入格式\n第一行,1个数为  ,表示有多少套题单。\n第二行,n个整数\n,分别表示每套题单有多少道题。\n3.2.3\n输出格式\n输出一行,小杨同学偷懒前最多做题天数。\n3.2.4\n样例1\n\n3 1 4 1\n\n对于全部数据,保证有\n。\n3.2.5",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input())\nA = list(map(int, input().split()))\nA = sorted(A)\nday, idx = 1, 0\nwhile idx < n:\n    if A[idx] >= day:\n        day += 1\n    idx += 1\nprint(day - 1)"
     }
   ],
   "answer_rows": [
@@ -564,8 +583,6 @@
       "A",
       "A"
     ],
-    [
-      "B"
-    ]
+    []
   ]
 }

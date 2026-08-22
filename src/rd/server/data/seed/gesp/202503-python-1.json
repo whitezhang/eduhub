@@ -3,32 +3,32 @@
     "ym": "202503",
     "lang": "python",
     "level": 1,
-    "title": "CCF GESP 2025年3月认证 Python 1级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1669257054126112.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202503-python-1.pdf"
+    "title": "202503-python-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202503-python-1.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2025 年春节有两件轰动全球的事件,一个是 DeepSeek 横空出世,另一个是贺岁片《哪吒 2 》票房惊人,入了\n全球票房榜。下面关于 DeepSeek 与《哪吒 2 》的描述成立的是 (   ) 。",
+      "stem": "2025年春节有两件轰动全球的事件,一个是DeepSeek横空出世,另一个是贺岁片《哪吒2》票房惊人,入了\n全球票房榜。下面关于DeepSeek与《哪吒2》的描述成立的是(   )。",
       "options": [
         {
           "key": "A",
-          "text": "《哪吒 2 》是一款新型操作系统"
+          "text": "《哪吒2》是一款新型操作系统"
         },
         {
           "key": "B",
-          "text": "DeepSeek 是深海钻探软件"
+          "text": "DeepSeek是深海钻探软件"
         },
         {
           "key": "C",
-          "text": "《哪吒 2 》可以生成新的软件"
+          "text": "《哪吒2》可以生成新的软件"
         },
         {
           "key": "D",
-          "text": "DeepSeek 可以根据《哪吒 2 》的场景生成剧情脚本"
+          "text": "DeepSeek可以根据《哪吒2》的场景生成剧情脚本"
         }
       ],
       "answer": "D"
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "在某集成开发环境中编辑一个源代码文件时不可以执行下面(   )操作。",
+      "stem": "在某集成开发环境中编辑一个源代码文件时不可以执行下面(  )操作。",
       "options": [
         {
           "key": "A",
@@ -60,11 +60,11 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "有关下列 Python 代码的说法, 的是 (  ) 。错误",
+      "stem": "有关下列Python代码的说法,\n的是(\n )。\n错误\nprint(\"我爱码代码!\")\n1",
       "options": [
         {
           "key": "A",
-          "text": "配对双引号内的汉字改为英文 Hello,Python 代码能正确执行"
+          "text": "配对双引号内的汉字改为英文Hello,Python代码能正确执行"
         },
         {
           "key": "B",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "Python 表达式16 // 4 % 2的值是 (  ) 。\n\n```\nprint(\" 我爱码代码! \")1\n```",
+      "stem": "Python表达式16 // 4 % 2 的值是( )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "在 Python 中,假设 N 为正整数 12 ,则print(N % 3 + N // 5)将输出 (  ) 。",
+      "stem": "在Python中,假设N为正整数12,则print(N % 3 + N // 5) 将输出(\n )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是 (  ) 。",
+      "stem": "下面Python代码执行后的输出是( )。\nN = 10\nprint(f\"N*N={N*N}\")\n1\n2",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "执行下面的 Python 代码,在键盘上先后输入 100 和 200 ,输出是(     )。",
+      "stem": "执行下面的Python代码,在键盘上先后输入100和200,输出是(    )。\nfirst = input(\"请输入第1个正整数:\")\nsecond = input(\"请输入第2个正整数:\")\n1\n2\nprint(first + second)\n3",
       "options": [
         {
           "key": "A",
@@ -180,11 +180,11 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "有关下列 Python 代码print(input())的说法, 的是( )。错误",
+      "stem": "有关下列Python代码print(input()) 的说法,\n的是(\n)。\n错误",
       "options": [
         {
           "key": "A",
-          "text": "input() 函数的输出可以作为函数 print() 的输入"
+          "text": "input()函数的输出可以作为函数print()的输入"
         },
         {
           "key": "B",
@@ -192,11 +192,11 @@
         },
         {
           "key": "C",
-          "text": "input() 函数的输出是函数 print() 的参数"
+          "text": "input()函数的输出是函数print()的参数"
         },
         {
           "key": "D",
-          "text": "该代码存在错误, input() 函数应该有提示信息,该提示信息是 input() 的参数"
+          "text": "该代码存在错误,input()函数应该有提示信息,该提示信息是input()的参数"
         }
       ],
       "answer": "D"
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后,将输出能被 2 整除且除以 7 余数为 2 的数。下列选项不能实现的是( )。",
+      "stem": "下面Python代码执行后,将输出能被2整除且除以7余数为2的数。下列选项不能实现的是(\n)。\nfor i in range(100):\n    if ________________:\n        print(i)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -216,7 +216,7 @@
         },
         {
           "key": "C",
-          "text": "not(i % 2) and not(i % 7) N = 10 print(f\"N*N={N*N}\") first = input(\" 请输入第 1 个正整数: \") second = input(\" 请输入第 2 个正整数: \") print(first + second) for i in range(100): if ________________: print(i)"
+          "text": "not(i % 2) and not(i % 7)"
         },
         {
           "key": "D",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是(     )。",
+      "stem": "下面Python代码执行后输出是(    )。\ntnt = 0\nfor i in range(-1000, 1000):\n    tnt += i\n1\n2\n3\nprint(tnt)\n4",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出的是(     )。",
+      "stem": "下面Python代码执行后输出的是(    )。\nfor i in range(1, 100, 5):\n    continue\nprint(i)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出的是(     )。",
+      "stem": "下面Python代码执行后输出的是(    )。\ntnt = 0\nfor i in range(5, 100, 5):\n1\n2\n3\n4\n5\n6\n7\n8\n9\n    if i % 2 == 0:\n        continue\n    tnt += 1\n    if i % 3 == 0 and i % 7 == 1:\n        break\n10\n11\n12\nprint(tnt)",
       "options": [
         {
           "key": "A",
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面 Python 执行后,海龟指向 135 度,横线处填入代码 的是(     )。错误\ntnt = 0\nfor i in range(-1000, 1000):\n    tnt += i\nprint(tnt)\n1\n2\n3\n4\nfor i in range(1, 100, 5):\n    continue\nprint(i)\n1\n2\n3\ntnt = 0\nfor i in range(5, 100, 5):\n    if i % 2 == 0:\n        continue\n    tnt += 1\n    if i % 3 == 0 and i % 7 == 1:\n        break\nprint(tnt)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
+      "stem": "下面Python执行后,海龟指向135度,横线处填入代码\n的是(    )。\n错误\nimport turtle\nfor i in range(_______):\n    turtle.left(45)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -324,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "为在 Python Turtle 中输出如下图形,代码横线处应填入(     )。",
+      "stem": "为在Python Turtle中输出如下图形,代码横线处应填入(    )。\nimport turtle\nfor i in range(_________):\n    turtle.right(60)\n1\n2\n3\n    turtle.forward(50)\n4",
       "options": [
         {
           "key": "A",
@@ -348,19 +348,15 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面的 Python 执行后,输出的图形是(     )。",
+      "stem": "下面的Python执行后,输出的图形是(    )。\nimport turtle\nfor i in range(1, 20):\n    if i % 5 == 0:\n        turtle.penup()\n        turtle.forward(50)\n1\n2\n3\n4\n5\n        turtle.pendown()\n6\n7\n8\n9\n    turtle.left(90)\n    turtle.forward(50)",
       "options": [
         {
           "key": "A",
-          "text": "import turtle for i in range(_______): turtle.left(45) import turtle for i in range(_________): turtle.right(60) turtle.forward(50) import turtle for i in range(1, 20): if i % 5 == 0: turtle.penup() turtle.forward(50) turtle.pendown() turtle.left(90) turtle.forward(50) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "B."
         },
         {
-          "key": "B",
-          "text": "C."
-        },
-        {
-          "key": "D",
-          "text": ""
+          "key": "C",
+          "text": "D."
         }
       ],
       "answer": "A"
@@ -370,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "C++ 、 Python 都是高级编程语言,它们每条语句的执行最终都要通过机器指令来完成。(   )",
+      "stem": "C++、Python都是高级编程语言,它们每条语句的执行最终都要通过机器指令来完成。(  )",
       "options": [
         {
           "key": "T",
@@ -381,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在 Python 中表达式N ** 2 // N中如果N的值为正整数,则其值为 2 。 (  )",
+      "stem": "在Python中表达式N ** 2 // N 中如果N 的值为正整数,则其值为2。(  )",
       "options": [
         {
           "key": "T",
@@ -397,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "执行如下 Python 代码如果在键盘上输入 10 ,执行后将输出 20 。  (  )",
+      "stem": "执行如下Python代码如果在键盘上输入10,执行后将输出20。 (\n )\nN = input(\"请输入正整数:\")\n\nprint(N * 2)",
       "options": [
         {
           "key": "T",
@@ -413,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "删除下面 Python 代码中的 continue 不影响程序的执行效果。(   )\nN = input(\" 请输入正整数: \")\nprint(N * 2)\n\n\nfor i in range(100):\n    if i % 2 == 0:\n        print(\" 偶数 \")\n        continue\n    else:\n        print(\" 奇数 \")",
+      "stem": "删除下面Python代码中的continue不影响程序的执行效果。(  )\nfor i in range(100):\n\n    if i % 2 == 0:\n        print(\"偶数\")\n        continue\n    else:\n        print(\"奇数\")",
       "options": [
         {
           "key": "T",
@@ -429,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下面 Python 代码执行时将报错,因为所在位置应该是变量名,而不可以做变量名。(   )",
+      "stem": "下面Python代码执行时将报错,因为所在位置应该是变量名,而不可以做变量名。(  )\nfor _ in range(100):\n    print(\"*\")",
       "options": [
         {
           "key": "T",
@@ -445,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "下面 Python 代码被执行后,将先后输出 3 和 5 。(   )",
+      "stem": "下面Python代码被执行后,将先后输出3和5。(  )\nfor i in range(3, 5, 2):\n    print(i)",
       "options": [
         {
           "key": "T",
@@ -461,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后将先后输出 10 个 True 。(   )",
+      "stem": "下面的Python代码执行后将先后输出10个True。(  )\nfor i in range(10):\n    print(i ** 2 == i * i)",
       "options": [
         {
           "key": "T",
@@ -477,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在 Python 代码中,user_Name、_userName、user-Name、userName_ 都是合法的变量名。(   )",
+      "stem": "在Python代码中,user_Name 、_userName 、user-Name 、userName_ 都是合法的变量名。(  )",
       "options": [
         {
           "key": "T",
@@ -493,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后,海龟指向与初始一样,即和指向 0 度方向一致。(   )",
+      "stem": "下面的Python代码执行后,海龟指向与初始一样,即和指向0度方向一致。(  )\nimport turtle\nfor i in range(4):\n    turtle.right(90)",
       "options": [
         {
           "key": "T",
@@ -509,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面的 Python 代码被执行后将绘出围绕同一中心的正多边形。(   )",
+      "stem": "下面的Python代码被执行后将绘出围绕同一中心的正多边形。(  )\nimport turtle\nfor i in range(3,8):\n\n\n    turtle.circle(60,steps = i)",
       "options": [
         {
           "key": "T",
@@ -525,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -533,21 +529,45 @@
       "seq": 1,
       "kind": "traditional",
       "title": "编程题 1",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 图书馆里的老鼠\n3.1.2 题目描述\n图书馆里有   本书,不幸的是,还混入了一只老鼠,老鼠每   小时能啃光一本书,假设老鼠在啃光一本书之前,不\n会啃另一本。请问   小时后图书馆里还剩下多少本完整的书。\n3.1.3\n\n输入格式\n三行,第一行一个正整数  ,表示图书馆里书的数量;\n第二行,一个正整数  ,表示老鼠啃光一本书需要的时间;\n第三行,一个正整数  ,表示经过的总时间;\n输入数据保证   小时后至少会剩下一本完整的书。\nfor _ in range(100):\n    print(\"*\")\n\nfor i in range(3, 5, 2):\n    print(i)\n\nfor i in range(10):\n    print(i ** 2 == i * i)\n\nimport turtle\nfor i in range(4):\n    turtle.right(90)\n\nimport turtle\nfor i in range(3,8):\n    turtle.circle(60,steps = i)\n\n3.1.4 输出格式\n一行,一个整数,表示   小时后图书馆里还剩下多少本完整的书。\n3.1.5 样例\n3.1.5.1 输入样例  1\n3.1.5.2 输出样例  1\n3.1.5.3 输入样例  2\n3.1.5.4 输出样例  2\n3.1.6 数据范围\n对于所有测试点,保证  ,保证   小时后至少会剩下一本完整的书。\n3.1.7",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n图书馆里的老鼠\n3.1.2\n题目描述\n图书馆里有  本书,不幸的是,还混入了一只老鼠,老鼠每  小时能啃光一本书,假设老鼠在啃光一本书之前,不\n会啃另一本。请问  小时后图书馆里还剩下多少本完整的书。\n3.1.3\n\n输入格式\n三行,第一行一个正整数 ,表示图书馆里书的数量;\n第二行,一个正整数 ,表示老鼠啃光一本书需要的时间;\n第三行,一个正整数 ,表示经过的总时间;\n输入数据保证  小时后至少会剩下一本完整的书。\n3.1.4\n输出格式\n一行,一个整数,表示  小时后图书馆里还剩下多少本完整的书。\n3.1.5\n样例\n3.1.5.1\n输入样例 1\n\n3.1.5.2\n输出样例 1\n\n3.1.5.3\n输入样例 2\n\n3.1.5.4\n输出样例 2\n\n3.1.6\n数据范围\n对于所有测试点,保证\n,保证  小时后至少会剩下一本完整的书。\n3.1.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": false
+      "samples": [
+        {
+          "in": "10\n2\n3\n",
+          "out": "8\n",
+          "suspect": false
+        },
+        {
+          "in": "5\n2\n4\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input())\nx = int(input())\ny = int(input())\nans = n - y // x\nif y % x > 0:\n    ans -= 1\nprint(ans)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "编程题 2",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.8 四舍五入\n3.2.9 题目描述\n四舍五入是一种常见的近似计算方法。现在,给定   个整数,你需要将每个整数四舍五入到最接近的整十数。例\n如,  四舍五入后为  ,  四舍五入后为  。\n\nn = int(input())\nx = int(input())\ny = int(input())\nans = n - y // x\nif y % x > 0:\n    ans -= 1\nprint(ans)\n\n3.2.10\n\n输入格式\n共   行,第一行,一个整数  ,表示接下来输入的整数个数。\n接下来   行,每行一个整数  ,表示需要四舍五入的整数。\n3.2.11 输出格式\n 行,每行一个整数,表示每个整数四舍五入后的结果。\n3.2.12 样例\n3.2.12.5 输入样例  1\n3.2.12.6 输出样例  1\n3.2.13 数据范围\n对于所有测试点,保证  , 。\n3.2.14",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.8\n四舍五入\n3.2.9\n题目描述\n四舍五入是一种常见的近似计算方法。现在,给定  个整数,你需要将每个整数四舍五入到最接近的整十数。例\n如,\n 四舍五入后为\n,\n 四舍五入后为\n。\n3.2.10\n\n输入格式\n共\n 行,第一行,一个整数 ,表示接下来输入的整数个数。\n接下来  行,每行一个整数\n,表示需要四舍五入的整数。\n3.2.11\n输出格式\n 行,每行一个整数,表示每个整数四舍五入后的结果。\n3.2.12\n样例\n3.2.12.5\n输入样例 1\n\n3.2.12.6\n输出样例 1\n\n3.2.13\n数据范围\n对于所有测试点,保证\n,\n。\n3.2.14",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "5\n43\n58\n25\n67\n90\n",
+          "out": "40\n",
+          "suspect": false
+        },
+        {
+          "in": "60\n30\n70\n90\n",
+          "out": "5\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input())\nfor i in range(n):\n    x = int(input())\n    print((x + 5) // 10 * 10)"
     }
   ],
   "answer_rows": [
@@ -568,8 +588,6 @@
       "A",
       "A"
     ],
-    [
-      "B"
-    ]
+    []
   ]
 }

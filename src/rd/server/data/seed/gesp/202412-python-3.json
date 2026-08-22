@@ -3,16 +3,16 @@
     "ym": "202412",
     "lang": "python",
     "level": 3,
-    "title": "CCF GESP 2024年12月认证 Python 3级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10178.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1650239912017952.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202412-python-3.pdf"
+    "title": "202412-python-3",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202412-python-3.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2024 年 10 月 8 日,诺贝尔物理学奖 “ 意外地 ” 颁给了两位计算机科学家约翰 · 霍普菲尔德( John J. Hopfield )和杰\n弗里 · 辛顿( Geoffrey E. Hinton )。这两位科学家的主要研究方向是(    )。",
+      "stem": "2024年10月8日,诺贝尔物理学奖“意外地”颁给了两位计算机科学家约翰·霍普菲尔德(John J. Hopfield)和杰\n弗里·辛顿(Geoffrey E. Hinton)。这两位科学家的主要研究方向是(   )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "计算机系统中存储的基本单位用 B 来表示,比如某个照片大小为 3MB ,其中 B 代表的是(   )。",
+      "stem": "计算机系统中存储的基本单位用B来表示,比如某个照片大小为3MB,其中B代表的是(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下列流程图的输出结果是?(  )",
+      "stem": "下列流程图的输出结果是?( )",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "十六进制数 2024 转换为八进制数是?(  )",
+      "stem": "十六进制数2024转换为八进制数是?( )",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "执行  print(10 ^ 3) 语句的输出结果是?(  )",
+      "stem": "执行 print(10 ^ 3) 语句的输出结果是?( )",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "运行下列程序,输出结果是?(  )",
+      "stem": "运行下列程序,输出结果是?( )\nmylist = list(range(1, 13))\nprint(mylist[1::3])\n1\n2",
       "options": [
         {
           "key": "A",
@@ -156,11 +156,11 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下列创建列表的方法中不正确的是?(  )",
+      "stem": "下列创建列表的方法中不正确的是?( )",
       "options": [
         {
           "key": "A",
-          "text": "lst = [1, 2, ' 信息 ']"
+          "text": "lst = [1, 2, '信息']"
         },
         {
           "key": "B",
@@ -168,11 +168,11 @@
         },
         {
           "key": "C",
-          "text": "lst = [' 信息 ',]"
+          "text": "lst = ['信息',]"
         },
         {
           "key": "D",
-          "text": "lst = ' 音乐 ', ' 体育 ', ' 美术 '"
+          "text": "lst = '音乐', '体育', '美术'"
         }
       ],
       "answer": "D"
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "运行下列程序,输出结果是?(  )",
+      "stem": "运行下列程序,输出结果是?( )\ntuple1 = (4, 3, 2, 1)\ntuple2 = (2)\nprint(tuple1 * tuple2)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "关于字典的描述错误的是?(  )\nmylist = list(range(1, 13))\nprint(mylist[1::3])\n1\n2\ntuple1 = (4, 3, 2, 1)\ntuple2 = (2)\nprint(tuple1 * tuple2)\n1\n2\n3",
+      "stem": "关于字典的描述错误的是?( )",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下列关于字符串的描述正确的是?(  )",
+      "stem": "下列关于字符串的描述正确的是?( )",
       "options": [
         {
           "key": "A",
@@ -240,11 +240,11 @@
         },
         {
           "key": "C",
-          "text": "\"Hello\".find(\"l\") 的结果是 3"
+          "text": "\"Hello\".find(\"l\") 的结果是3"
         },
         {
           "key": "D",
-          "text": "字符串是用一对双引号 \" \" 或者单引号 ' ' 括起来的零个或者多个字符"
+          "text": "字符串是用一对双引号\" \"或者单引号' '括起来的零个或者多个字符"
         }
       ],
       "answer": "D"
@@ -252,23 +252,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下列程序执行结果正确的是?(  )",
+      "stem": "下列程序执行结果正确的是?( )\nx = set(\"杜甫\")\n1\ny = set(\"杜牧\")\nprint(x & y)\n2\n3",
       "options": [
         {
           "key": "A",
-          "text": "{' 杜 '}"
+          "text": "{'杜'}"
         },
         {
           "key": "B",
-          "text": "{' 杜甫 '}"
+          "text": "{'杜甫'}"
         },
         {
           "key": "C",
-          "text": "{' 杜牧 '}"
+          "text": "{'杜牧'}"
         },
         {
           "key": "D",
-          "text": "{' 杜甫杜牧 '}"
+          "text": "{'杜甫杜牧'}"
         }
       ],
       "answer": "A"
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "向集合  s = set() 中添加多个元素的方法是?(  )",
+      "stem": "向集合 s = set() 中添加多个元素的方法是?( )",
       "options": [
         {
           "key": "A",
@@ -292,7 +292,7 @@
         },
         {
           "key": "D",
-          "text": "利用(+=)运算符"
+          "text": "利用(+= )运算符"
         }
       ],
       "answer": "B"
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "图书馆准备举办一次读书分享会,设计通知的过程中需要对一段文本进行编辑,文本由大小写英文字母和\n英文标点符号组成,根据活动主题,需要将文本中小写字母 'b' 替换为大写字母 'B' 。有一点要注意:第一个和最后一\n个 'b' 不用替换。请在下面程序空白处填上正确内容以实现程序功能。",
+      "stem": "图书馆准备举办一次读书分享会,设计通知的过程中需要对一段文本进行编辑,文本由大小写英文字母和\n英文标点符号组成,根据活动主题,需要将文本中小写字母'b'替换为大写字母'B'。有一点要注意:第一个和最后一\n个'b'不用替换。请在下面程序空白处填上正确内容以实现程序功能。\ns = input()\n# 如输入:book boy beautiful bicycle box building\nx = s.find('b')\ny = s.rfind('b')\nt = _______________  # 填写代码\nt = t.replace('b', 'B')\nprint(s[0:x + 1] + t + s[y:])\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -308,7 +308,7 @@
         },
         {
           "key": "B",
-          "text": "s[x + 1:y] x = set(\" 杜甫 \") y = set(\" 杜牧 \") print(x & y) s = input() # 如输入: book boy beautiful bicycle box building x = s.find('b') y = s.rfind('b') t = _______________ # 填写代码 t = t.replace('b', 'B') print(s[0:x + 1] + t + s[y:])"
+          "text": "s[x + 1:y]"
         },
         {
           "key": "C",
@@ -324,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "小杨想编写一个程序来统计日志文件中每种错误出现的次数,这样可以方便他快速定位问题。他希望能够\n输入一段日志文件的内容后,程序就输出每种错误及其出现的次数。请在下面程序空白处填上正确内容以实现程序\n功能。",
+      "stem": "小杨想编写一个程序来统计日志文件中每种错误出现的次数,这样可以方便他快速定位问题。他希望能够\n输入一段日志文件的内容后,程序就输出每种错误及其出现的次数。请在下面程序空白处填上正确内容以实现程序\n功能。\nlog = input(\"请输入日志文件内容:\")\n# 如输入:SyntaxError TypeError SyntaxError IndexError\n1\n2\nerror_count = {}\nerrors = log.split()\nfor error in errors:\n    if error in error_count:\n        _______________  # 填写代码 1\n    else:\n        _______________  # 填写代码 2\nprint(\"日志中每种错误出现的次数如下:\")\nfor error, count in error_count.items():\n    print(f\"{error}: {count}\")\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
       "options": [
         {
           "key": "A",
@@ -348,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "小杨想要编写一个程序来记录他每周的健身情况。他希望在输入每天健身的时间后,能够查看一周内健身\n的总时间。为了实现这个目标,请在下面程序空白处填上正确内容以实现程序功能。",
+      "stem": "小杨想要编写一个程序来记录他每周的健身情况。他希望在输入每天健身的时间后,能够查看一周内健身\n的总时间。为了实现这个目标,请在下面程序空白处填上正确内容以实现程序功能。\ngym_times = []\nfor i in range(1, 8):\n1\n2\n    time = input(f\"请输入第{i}天健身的时间:\")\n    gym_times.append(time)\n3\n4\n5\n6\n7\n8\n9\n10\n11\nprint(\"一周内的健身情况如下:\")\nfor i in range(7):\n    print(f\"第{i + 1}天健身的时间:{gym_times[i]}\")\ntotal_gym_time = sum(_______________) # 填写代码\nprint(\"一周内健身的总时间为:\", total_gym_time)",
       "options": [
         {
           "key": "A",
@@ -364,7 +364,7 @@
         },
         {
           "key": "D",
-          "text": "int(time) for time in gym_times log = input(\" 请输入日志文件内容: \") # 如输入: SyntaxError TypeError SyntaxError IndexError error_count = {} errors = log.split() for error in errors: if error in error_count: _______________ # 填写代码 1 else: _______________ # 填写代码 2 print(\" 日志中每种错误出现的次数如下: \") for error, count in error_count.items(): print(f\"{error}: {count}\") gym_times = [] for i in range(1, 8): time = input(f\" 请输入第{i}天健身的时间: \") gym_times.append(time) print(\" 一周内的健身情况如下: \") for i in range(7): print(f\" 第{i + 1}天健身的时间:{gym_times[i]}\") total_gym_time = sum(_______________) # 填写代码 print(\" 一周内健身的总时间为: \", total_gym_time) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "int(time) for time in gym_times"
         }
       ],
       "answer": "D"
@@ -374,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "在 Windows 的资源管理器中为已有文件 A 建立副本的操作是 Ctrl+C ,然后 Ctrl+V 。",
+      "stem": "在Windows的资源管理器中为已有文件A建立副本的操作是Ctrl+C,然后Ctrl+V。",
       "options": [
         {
           "key": "T",
@@ -385,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "整数 -8 的 16 位反码可用十六进制表示为 FFF8 。",
+      "stem": "整数-8的16位反码可用十六进制表示为FFF8。",
       "options": [
         {
           "key": "T",
@@ -401,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "运行下列代码,输出的结果可能是{1: '1', 2: '2', 3: '3'}。",
+      "stem": "运行下列代码,输出的结果可能是{1: '1', 2: '2', 3: '3'} 。\na = ['1', '2', '3']\nb = [1, 2, 3]\nc = dict(zip(a, b))\nprint(c)",
       "options": [
         {
           "key": "T",
@@ -417,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "表达式  int('13', 8) 的返回值是 11 。",
+      "stem": "表达式 int('13', 8) 的返回值是11。",
       "options": [
         {
           "key": "T",
@@ -433,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "Python 代码  print([x for x in range(1, 11) if x % 2 == 1]) 被执行后,将得到从 1 到 11 所有的奇\n数,不含 11 。",
+      "stem": "Python代码 print([x for x in range(1, 11) if x % 2 == 1]) 被执行后,将得到从1到11所有的奇\n数,不含11。",
       "options": [
         {
           "key": "T",
@@ -449,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "Python 代码print(f\"{3.1415926:06.3f}\") 被执行后,输出为 3.142 。",
+      "stem": "Python代码print(f\"{3.1415926:06.3f}\") 被执行后,输出为3.142。",
       "options": [
         {
           "key": "T",
@@ -465,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "编写  Python 程序模拟石头剪刀布游戏,数字  0 代表石头,数字  1 代表剪刀,数字  2 代表布,石头胜剪刀,剪\n刀胜布,布胜石头,模拟玩家出拳可以使用下面的程序代码。",
+      "stem": "编写 Python 程序模拟石头剪刀布游戏,数字 0 代表石头,数字 1 代表剪刀,数字 2 代表布,石头胜剪刀,剪\n刀胜布,布胜石头,模拟玩家出拳可以使用下面的程序代码。\nimport random\na = random.randint(0, 2)",
       "options": [
         {
           "key": "T",
@@ -481,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "执行下列两段 Python 代码,输出的结果相同。",
+      "stem": "执行下列两段Python代码,输出的结果相同。\nlst = [0, 1, 2, 3, 4, 5, 5, 3, 1]\na = []\nfor item in lst:\n    if item not in a:\n        a.append(item)\nprint(sorted(a))\n\n\n\n\n\n\nlst = [0, 1, 2, 3, 4, 5, 5, 3, 1]\na = sorted(list(set(lst)))\nprint(a)",
       "options": [
         {
           "key": "T",
@@ -497,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在 Python 中,使用乘法运算符*乘一个正整数可以对同一个字符串、列表、元组甚至是集合进行合并,即以\n下赋值语句都是合法的。",
+      "stem": "在Python中,使用乘法运算符* 乘一个正整数可以对同一个字符串、列表、元组甚至是集合进行合并,即以\n下赋值语句都是合法的。\nmy_string = \"123\" * 3\n\nmy_list = [10, 20, 30] * 3\nmy_tuple = (10, 20, 30) * 3\nmy_set = {10, 20, 30} * 3",
       "options": [
         {
           "key": "T",
@@ -513,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "“ 水仙花数 ” 是指一个三位数各位数字的立方和等于该数本身,求 100 到 999 之间的所有水仙花数并统计个\n数。可以使用枚举的方法来求解这个问题。\na = ['1', '2', '3']\nb = [1, 2, 3]\nc = dict(zip(a, b))\nprint(c)\n\n\n\n\nimport random\na = random.randint(0, 2)\n\n\nlst = [0, 1, 2, 3, 4, 5, 5, 3, 1]\na = []\nfor item in lst:\n    if item not in a:\n        a.append(item)\nprint(sorted(a))\n\n\n\n\n\n\nlst = [0, 1, 2, 3, 4, 5, 5, 3, 1]\na = sorted(list(set(lst)))\nprint(a)\n\n\n\nmy_string = \"123\" * 3\nmy_list = [10, 20, 30] * 3\nmy_tuple = (10, 20, 30) * 3\nmy_set = {10, 20, 30} * 3",
+      "stem": "“水仙花数”是指一个三位数各位数字的立方和等于该数本身,求100到999之间的所有水仙花数并统计个\n数。可以使用枚举的方法来求解这个问题。",
       "options": [
         {
           "key": "T",
@@ -529,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -537,21 +537,29 @@
       "seq": 1,
       "kind": "traditional",
       "title": "数字替换",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题面描述\n小杨有一个包含   个数字的序列  ,即  ,他想将其中大于   的数字都替换为序列的最大值,将\n其中小于   的数字都替换为序列的最小值,请你帮他计算出替换后的序列。\n3.1.2\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n第二行包含   个数字,代表序列  。\n3.1.3 输出格式\n输出   个整数,代表替换后的结果。\n3.1.4 样例\n对于全部数据,保证有  。\n3.1.5",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题面描述\n小杨有一个包含  个数字的序列 ,即\n,他想将其中大于  的数字都替换为序列的最大值,将\n其中小于  的数字都替换为序列的最小值,请你帮他计算出替换后的序列。\n3.1.2\n\n输入格式\n第一行包含两个正整数\n,含义如题面所示。\n第二行包含  个数字,代表序列 。\n3.1.3\n输出格式\n输出  个整数,代表替换后的结果。\n3.1.4\n样例\n5 0\n-2 -1 0 1 2\n\n-2 -2 0 2 2\n\n对于全部数据,保证有\n。\n3.1.5",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "n, k = map(int, input().split())\na = list(map(int, input().split()))\nmax_value = max(a)\nmin_value = min(a)\nfor i in range(len(a)):\n    if a[i] > k:\n        a[i] = max_value\n    elif a[i] < k:\n        a[i] = min_value\n    if i!=len(a)-1:\n        print(a[i],end=' ')\n    else:\n        print(a[i])"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "打印数字",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题面描述\n小杨为数字  , ,  和   设计了一款表示形式,每个数字占用了   的网格。数字  , ,  和   的表示形式如下:\n小杨想请你将给定的数字   转换为对应的表示形式。\n3.2.2\n\n输入格式\n第一行包含一个正整数代表  。\n3.2.3 输出格式\n输出对应的表示形式。\n3.2.4 样例\n对于全部数据,保证有  ,且   仅由数字  , , ,  组成。\n3.2.5",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题面描述\n小杨为数字 , ,  和  设计了一款表示形式,每个数字占用了\n 的网格。数字 , ,  和  的表示形式如下:\n..... ****. ..... .....\n\n.***. ****. ****. ****.\n.***. ****. ..... .....\n.***. ****. .**** ****.\n..... ****. ..... .....\n\n小杨想请你将给定的数字  转换为对应的表示形式。\n3.2.2\n\n输入格式\n第一行包含一个正整数代表 。\n3.2.3\n输出格式\n输出对应的表示形式。\n3.2.4\n样例\n\n****.....................\n****.****.****.****..***.\n****.................***.\n****..****.********..***.\n****.....................\n\n对于全部数据,保证有\n,且  仅由数字 , , ,  组成。\n3.2.5",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "12230\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = input()\nfor row in range(5):\n    line =\"\"\n    for digit in n:\n        if digit == '0':\n            if row == 0 or row == 4:\n                line +=\".....\"\n            else:\n                line +=\".***.\"\n        elif digit == '1':\n            line +=\"****.\"\n        elif digit == '2':\n            if row == 0:\n                line +=\".....\"\n            elif row == 1:\n                line +=\"****.\"\n            elif row == 2:\n                line +=\".....\"\n            elif row == 3:\n                line +=\".****\"\n            else:\n                line +=\".....\"\n        elif digit == '3':\n            if row == 0:\n                line +=\".....\"\n            elif row == 1:\n                line +=\"****.\"\n            elif row == 2:\n                line +=\".....\"\n            elif row == 3:\n                line +=\"****.\"\n            else:\n                line +=\".....\"\n    print(line)"
     }
   ],
   "answer_rows": [
@@ -571,6 +579,7 @@
       "B",
       "A",
       "D"
-    ]
+    ],
+    []
   ]
 }

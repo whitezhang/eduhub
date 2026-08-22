@@ -78,6 +78,7 @@ function schema(database) {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       username TEXT NOT NULL UNIQUE,
       password_hash TEXT NOT NULL,
+      password_plain TEXT,
       display_name TEXT NOT NULL,
       role TEXT NOT NULL CHECK(role IN ('student','coach')),
       grade TEXT,
@@ -112,7 +113,8 @@ function schema(database) {
       choice_json TEXT,
       full_score INTEGER NOT NULL DEFAULT 100,
       published INTEGER NOT NULL DEFAULT 1,
-      review_note TEXT
+      review_note TEXT,
+      solution_code TEXT
     );
     CREATE TABLE IF NOT EXISTS testcases (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -203,10 +205,19 @@ function migrate(database) {
   if (!names.has("review_note")) {
     database.exec("ALTER TABLE problems ADD COLUMN review_note TEXT");
   }
+  if (!names.has("solution_code")) {
+    database.exec("ALTER TABLE problems ADD COLUMN solution_code TEXT");
+  }
   const contestCols = new Set(database.prepare("PRAGMA table_info(contests)").all().map((c) => c.name));
   if (!contestCols.has("is_demo")) {
     database.exec("ALTER TABLE contests ADD COLUMN is_demo INTEGER NOT NULL DEFAULT 0");
   }
+  const userCols = new Set(database.prepare("PRAGMA table_info(users)").all().map((c) => c.name));
+  if (!userCols.has("password_plain")) {
+    database.exec("ALTER TABLE users ADD COLUMN password_plain TEXT");
+  }
+  // Coach passwords must never be exposed in studio; clear any leftover plaintext.
+  database.prepare("UPDATE users SET password_plain = NULL WHERE role = 'coach'").run();
 }
 
 
@@ -310,6 +321,15 @@ function seedIfEmpty(database) {
   database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("timeline", timeline);
   if (syllabusMeta) {
     database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("syllabus_meta", syllabusMeta);
+  }
+  const knowledgePath = path.join(SEED_DIR, "knowledge-topics.json");
+  if (fs.existsSync(knowledgePath)) {
+    const kn = JSON.parse(fs.readFileSync(knowledgePath, "utf8"));
+    const map = {};
+    for (const t of kn.topics || []) {
+      if (t?.id) map[t.id] = t;
+    }
+    database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("knowledge_topics", JSON.stringify(map));
   }
 
   const lists = [

@@ -3,10 +3,10 @@
     "ym": "202503",
     "lang": "python",
     "level": 5,
-    "title": "CCF GESP 2025年3月认证 Python 5级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1684021977284640.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202503-python-5.pdf"
+    "title": "202503-python-5",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202503-python-5.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
@@ -36,15 +36,23 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "双向链表中每个结点有两个指针域 prev 和 next ,分别指向该结点的前驱及后继结点。设 p 指向链表中的\n一个结点,它的前驱结点和后继结点均非空。现要求删除结点 p   ,则下述语句中正确的是( )。",
+      "stem": "双向链表中每个结点有两个指针域prev 和next ,分别指向该结点的前驱及后继结点。设p 指向链表中的\n一个结点,它的前驱结点和后继结点均非空。现要求删除结点p\n\n,则下述语句中正确的是()。",
       "options": [
         {
           "key": "A",
-          "text": "B. class Node: def __init__(self, value): self.value = value self.prev = None self.next = None if p.next: p.next.prev = p.prev if p.prev: p.prev.next = p.next p = None"
+          "text": "class Node: def __init__(self, value): self.value = value self.prev = None self.next = None if p.next: p.next.prev = p.prev if p.prev: p.prev.next = p.next p = None"
+        },
+        {
+          "key": "B",
+          "text": "class Node: def __init__(self, value): self.value = value self.prev = None self.next = None if p.next: p.next.next = p.prev if p.prev: p.prev.next = p.next p = None"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "class Node: def __init__(self, value): self.value = value self.prev = None self.next = None if p.next: p.next.prev = p.prev if p.prev: p.prev.next = p.prev p = None"
+        },
+        {
+          "key": "D",
+          "text": "class Node: def __init__(self, value): self.value = value self.prev = None self.next = None if p.next: p.next.prev = p.next if p.prev: p.prev.next = p.next p = None"
         }
       ],
       "answer": "A"
@@ -52,15 +60,23 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "假设双向循环链表包含头尾哨兵结点 ( 不存储实际内容 ) ,分别为head和tail,链表中每个结点有两个指\n针域prev和next,分别指向该结点的前驱及后继结点。下面代码实现了一个空的双向循环链表,横线上应填的最\n佳代码是 ( ) 。\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.prev = None\n        self.next = None\nif p.next:\n    p.next.next = p.prev\nif p.prev:\n    p.prev.next = p.next\np = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.prev = None\n        self.next = None\nif p.next:\n    p.next.prev = p.prev\nif p.prev:\n    p.prev.next = p.prev\np = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.prev = None\n        self.next = None\nif p.next:\n    p.next.prev = p.next\nif p.prev:\n    p.prev.next = p.next\np = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nclass ListNode:\n    def __init__(self, val=None):\n        self.data = val\n        self.prev = None\n        self.next = None\nclass LinkedList:\n    def __init__(self):\n        self.head = ListNode()\n        self.tail = ListNode()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
+      "stem": "假设双向循环链表包含头尾哨兵结点(不存储实际内容),分别为head 和tail ,链表中每个结点有两个指\n针域prev 和next ,分别指向该结点的前驱及后继结点。下面代码实现了一个空的双向循环链表,横线上应填的最\n佳代码是( )。\nclass ListNode:\n1\n    def __init__(self, val=None):\n        self.data = val\n        self.prev = None\n        self.next = None\n2\n3\n4\n5\n6\n7\n8\n9\n10\nclass LinkedList:\n    def __init__(self):\n        self.head = ListNode()\n        self.tail = ListNode()\n        _______________________\n        _______________________\n11\n12\n13\n14\n15\n16\ndef init_linked_list():\n    return LinkedList()\n17",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "self.head.next = self.tail self.tail.prev = self.head"
+        },
+        {
+          "key": "B",
+          "text": "self.head.next = self.head self.tail.prev = self.tail"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "self.head.next = self.tail self.tail.next = self.head"
+        },
+        {
+          "key": "D",
+          "text": "self.head.prev = self.tail self.tail.next = self.head"
         }
       ],
       "answer": "A"
@@ -68,23 +84,23 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "用以下辗转相除法(欧几里得算法)求 gcd(84, 60) 的步骤中,第二次调用 gcd() 函数计算的数是(   )。",
+      "stem": "用以下辗转相除法(欧几里得算法)求gcd(84, 60)的步骤中,第二次调用gcd()函数计算的数是(  )。\ndef gcd(a, b):\n    big = max(a, b)\n1\n2\n    small = min(a, b)\n    if big % small == 0:\n        return small\n    return gcd(small, big % small)\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
-          "text": "84 和 60"
+          "text": "84和60"
         },
         {
           "key": "B",
-          "text": "60 和 24"
+          "text": "60和24"
         },
         {
           "key": "C",
-          "text": "24 和 12"
+          "text": "24和12"
         },
         {
           "key": "D",
-          "text": "12 和 0"
+          "text": "12和0"
         }
       ],
       "answer": "B"
@@ -92,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "根据唯一分解定理,下面整数的唯一分解是正确的(   )。",
+      "stem": "根据唯一分解定理,下面整数的唯一分解是正确的(  )。",
       "options": [
         {
           "key": "A",
@@ -116,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下述代码实现素数表的线性筛法,筛选出所有小于等于 的素数,横线上应填的最佳代码是 ( ) 。\n        _______________________\n        _______________________\ndef init_linked_list():\n    return LinkedList()\n11\n12\n13\n14\n15\n16\n17\n    self.head.next = self.tail\n    self.tail.prev = self.head\n1\n2\n    self.head.next = self.head\n    self.tail.prev = self.tail\n1\n2\n    self.head.next = self.tail\n    self.tail.next = self.head\n1\n2\n    self.head.prev = self.tail\n    self.tail.next = self.head\n1\n2\ndef gcd(a, b):\n    big = max(a, b)\n    small = min(a, b)\n    if big % small == 0:\n        return small\n    return gcd(small, big % small)\n1\n2\n3\n4\n5\n6",
+      "stem": "下述代码实现素数表的线性筛法,筛选出所有小于等于的素数,横线上应填的最佳代码是( )。\ndef sieve_linear(n):\n    is_prime = [True] * (n + 1)\n    primes = []\n1\n2\n3\n4\n5\n6\n    if n < 2:\n        return primes  #\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n    is_prime[0] = is_prime[1] = False\n    for i in range(2, n // 2 + 1):\n        if is_prime[i]:\n            primes.append(i)\n\n        j = 0\n        _____________________________________\n            is_prime[i * primes[j]] = False\n            if i % primes[j] == 0:\n                break\n            j += 1\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n\n    for i in range(n // 2 + 1, n + 1):\n        if is_prime[i]:\n            primes.append(i)\n    return primes",
       "options": [
         {
           "key": "A",
@@ -140,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "在程序运行过程中,如果递归调用的层数过多,会因为(   )引发错误。",
+      "stem": "在程序运行过程中,如果递归调用的层数过多,会因为(  )引发错误。",
       "options": [
         {
           "key": "A",
@@ -164,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "对下面两个函数,说法错误的是(   )。\ndef sieve_linear(n):\n    is_prime = [True] * (n + 1)\n    primes = []\n    if n < 2:\n        return primes  #\n    is_prime[0] = is_prime[1] = False\n    for i in range(2, n // 2 + 1):\n        if is_prime[i]:\n            primes.append(i)\n\n        j = 0\n        _____________________________________\n            is_prime[i * primes[j]] = False\n            if i % primes[j] == 0:\n                break\n            j += 1\n\n    for i in range(n // 2 + 1, n + 1):\n        if is_prime[i]:\n            primes.append(i)\n    return primes\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27",
+      "stem": "对下面两个函数,说法错误的是(  )。\ndef factorialA(n):\n    if n <= 1:\n        return 1\n    return n * factorialA(n - 1)\n1\n2\n3\n4\n5\n6\ndef factorialB(n):\n    if n <= 1:\n        return 1\n    res = 1\n    for i in range(2, n + 1):\n        res *= i\n    return res\n7\n8\n9\n10\n11\n12",
       "options": [
         {
           "key": "A",
@@ -176,11 +192,11 @@
         },
         {
           "key": "C",
-          "text": "factorialA 采用递归方式。"
+          "text": "factorialA采用递归方式。"
         },
         {
           "key": "D",
-          "text": "factorialB 采用递归方式。"
+          "text": "factorialB采用递归方式。"
         }
       ],
       "answer": "D"
@@ -188,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下算法中,(   )是不稳定的排序。",
+      "stem": "下算法中,(  )是不稳定的排序。",
       "options": [
         {
           "key": "A",
@@ -212,15 +228,23 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "考虑以下 python 代码实现的快速排序算法,将数据从小到大排序,则横线上应填的最佳代码是 ( ) 。",
+      "stem": "考虑以下python代码实现的快速排序算法,将数据从小到大排序,则横线上应填的最佳代码是( )。\ndef partition(arr, low, high):\n    pivot = arr[high]\n    i = low - 1\n1\n2\n3\n4\n    for j in range(low, high):\n    _________________________________\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n    arr[i + 1], arr[high] = arr[high], arr[i + 1]\n    return i + 1\ndef quick_sort(arr, low, high):\n    if low < high:\n        pi = partition(arr, low, high)\n        quick_sort(arr, low, pi - 1)\n        quick_sort(arr, pi + 1, high)\n15",
       "options": [
         {
           "key": "A",
-          "text": "B. def factorialA(n): if n <= 1: return 1 return n * factorialA(n - 1) def factorialB(n): if n <= 1: return 1 res = 1 for i in range(2, n + 1): res *= i return res def partition(arr, low, high): pivot = arr[high] i = low - 1 for j in range(low, high): _________________________________ arr[i + 1], arr[high] = arr[high], arr[i + 1] return i + 1 def quick_sort(arr, low, high): if low < high: pi = partition(arr, low, high) quick_sort(arr, low, pi - 1) quick_sort(arr, pi + 1, high) if arr[i] < pivot: i += 1 arr[i], arr[j] = arr[j], arr[i]"
+          "text": "if arr[i] < pivot: i += 1 arr[i], arr[j] = arr[j], arr[i]"
+        },
+        {
+          "key": "B",
+          "text": "if arr[j] < pivot: j += 1"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "if arr[i] < pivot: j += 1 arr[i], arr[i] = arr[j], arr[i]"
+        },
+        {
+          "key": "D",
+          "text": "if arr[j] < pivot: i += 1 arr[i], arr[j] = arr[j], arr[i]"
         }
       ],
       "answer": "D"
@@ -228,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "若用二分法在 [1, 100] 内猜数,最多需要猜(   )次。",
+      "stem": "若用二分法在[1, 100]内猜数,最多需要猜(  )次。",
       "options": [
         {
           "key": "A",
@@ -252,15 +276,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面的 python 代码实现了二分查找算法,在数组  arr 找到目标元素  target 的位置,则横线上能填写的\n最佳代码是(   )。\n\n```\ndef binary_search(arr, left, right, target):\n    while left <= right:\n        _________________________\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\n\n\n\n\n\n\n\n\n\n\n\n\n\nmid = left + (right - left) // 2 1\nmid = left;1\nmid = (left + right) // 2 + 1;1\n```",
+      "stem": "下面的python代码实现了二分查找算法,在数组 arr 找到目标元素 target 的位置,则横线上能填写的\n最佳代码是(  )。\ndef binary_search(arr, left, right, target):\n    while left <= right:\n1\n2\n        _________________________\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "mid = left + (right - left) // 2"
+        },
+        {
+          "key": "B",
+          "text": "mid = left;"
         },
         {
           "key": "C",
-          "text": "D. if arr[j] < pivot: j += 1 if arr[i] < pivot: j += 1 arr[i], arr[i] = arr[j], arr[i] if arr[j] < pivot: i += 1 arr[i], arr[j] = arr[j], arr[i] def binary_search(arr, left, right, target): while left <= right: _________________________ if arr[mid] == target: return mid elif arr[mid] < target: left = mid + 1 else: right = mid - 1 return -1 mid = left + (right - left) // 2 1 mid = left;1 mid = (left + right) // 2 + 1;1"
+          "text": "mid = (left + right) // 2 + 1;"
+        },
+        {
+          "key": "D",
+          "text": "mid = right;"
         }
       ],
       "answer": "A"
@@ -268,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "贪心算法的核心特征是(   )。",
+      "stem": "贪心算法的核心特征是(  )。",
       "options": [
         {
           "key": "A",
@@ -292,15 +324,23 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "函数def find_max(arr, low, high): 计算数组中最大元素,其中数组arr从索引low到high,(\n)正确实现了分治逻辑。",
+      "stem": "函数def find_max(arr, low, high): 计算数组中最大元素,其中数组arr 从索引low 到high ,(\n)正确实现了分治逻辑。\n\n```\ndef find_max(arr, low, high): if low = high: return arr[low] mid = low + (high - low) // 2 left_max = find_max(arr, low, mid) right_max = find_max(arr, mid, high) return left_max if left_max > right_max else right_max\ndef find_max(arr, low, high): if low == high: return arr[low] mid = low + (high - low) // 2 left_max = find_max(arr, low, mid) right_max = find_max(arr, mid, high) return left_max if left_max > right_max else right_max\ndef find_max(arr, low, high): if low == high: return arr[low] mid = low + (high - low) // 2 left_max = find_max(arr, low, mid) right_max = find_max(arr, mid - 1, high) return left_max if left_max > right_max else right_max\ndef find_max(arr, low, high): if low == high: return arr[low] mid = low + (high - low) // 2 left_max = find_max(arr, low, mid) right_max = find_max(arr, mid + 1, high) return left_max if left_max > right_max else right_max\n```",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
         },
         {
           "key": "C",
-          "text": "D. mid = right;1 def find_max(arr, low, high): if low = high: return arr[low] mid = low + (high - low) // 2 left_max = find_max(arr, low, mid) right_max = find_max(arr, mid, high) return left_max if left_max > right_max else right_max def find_max(arr, low, high): if low == high: return arr[low] mid = low + (high - low) // 2 left_max = find_max(arr, low, mid) right_max = find_max(arr, mid, high) return left_max if left_max > right_max else right_max def find_max(arr, low, high): if low == high: return arr[low] mid = low + (high - low) // 2 left_max = find_max(arr, low, mid) right_max = find_max(arr, mid - 1, high) return left_max if left_max > right_max else right_max def find_max(arr, low, high): if low == high: return arr[low] mid = low + (high - low) // 2 left_max = find_max(arr, low, mid) right_max = find_max(arr, mid + 1, high) return left_max if left_max > right_max else right_max 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
         }
       ],
       "answer": "D"
@@ -308,15 +348,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "小杨编写了一个如下的高精度乘法函数,则横线上应填写的代码为(   )。",
+      "stem": "小杨编写了一个如下的高精度乘法函数,则横线上应填写的代码为(  )。\ndef multiply(a, b):\n    m, n = len(a), len(b)\n    c = [0] * (m + n)\n    for i in range(m):\n1\n2\n3\n4\n        for j in range(n):\n            c[i + j] += a[i] * b[j]\n    carry = 0\n    for k in range(len(c)):\n        ————————————————————\n        c[k] = temp % 10\n        carry = temp // 10\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n    while len(c) > 1 and c[-1] == 0:\n        c.pop()\n    return c\n16",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "temp = c[k]"
+        },
+        {
+          "key": "B",
+          "text": "temp = c[k] + carry"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "temp = c[k] - carry"
+        },
+        {
+          "key": "D",
+          "text": "temp = c[k] * carry"
         }
       ],
       "answer": "B"
@@ -326,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "单链表中删除某个结点p( 非尾结点 ) ,但不知道头结点,可行的操作是将p的值设为p.next的值,然后删\n除p.next。",
+      "stem": "单链表中删除某个结点p (非尾结点),但不知道头结点,可行的操作是将p 的值设为p.next 的值,然后删\n除p.next 。",
       "options": [
         {
           "key": "T",
@@ -337,7 +385,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
@@ -353,7 +401,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
@@ -369,7 +417,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
@@ -385,7 +433,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
@@ -401,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "快速排序算法的时间复杂度与输入是否有序无关,始终稳定为 。",
+      "stem": "快速排序算法的时间复杂度与输入是否有序无关,始终稳定为\n。",
       "options": [
         {
           "key": "T",
@@ -417,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "归并排序算法的时间复杂度与输入是否有序无关,始终稳定为 。\ndef multiply(a, b):\n    m, n = len(a), len(b)\n    c = [0] * (m + n)\n    for i in range(m):\n        for j in range(n):\n            c[i + j] += a[i] * b[j]\n    carry = 0\n    for k in range(len(c)):\n        ————————————————————\n        c[k] = temp % 10\n        carry = temp // 10\n    while len(c) > 1 and c[-1] == 0:\n        c.pop()\n    return c\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  temp = c[k]1\n  temp = c[k] + carry 1\n  temp = c[k] - carry 1\ntemp = c[k] * carry 1",
+      "stem": "归并排序算法的时间复杂度与输入是否有序无关,始终稳定为\n。",
       "options": [
         {
           "key": "T",
@@ -433,7 +481,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
@@ -449,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "小杨有 10 元去超市买东西,每个商品有各自的价格,每种商品只能买 1 个,小杨的目标是买到最多数量的商\n品。小杨采用的策略是每次挑价格最低的商品买,这体现了分治思想。",
+      "stem": "小杨有10元去超市买东西,每个商品有各自的价格,每种商品只能买1个,小杨的目标是买到最多数量的商\n品。小杨采用的策略是每次挑价格最低的商品买,这体现了分治思想。",
       "options": [
         {
           "key": "T",
@@ -465,7 +513,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
@@ -481,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -489,7 +537,7 @@
       "seq": 1,
       "kind": "traditional",
       "title": "编程题 1",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.1.1 平均分配\n3.1.2 题目描述\n小  A 有   件物品,小  B 和小  C 想从小  A 手上买走这些物品。对于第   件物品,小  B 会以   的价格购买,而小  C 会\n以   的价格购买。为了平均分配这   件物品,小  A 决定小  B 和小  C 各自只能买走恰好   件物品。你能帮小  A 求出\n他卖出这   件物品所能获得的最大收入吗?\n3.1.3\n\n输入格式\n第一行,一个正整数  。\n第二行,  个整数  。\n第三行,  个整数  。\n3.1.4 输出格式\n一行,一个整数,表示答案。\n3.1.5 样例\n3.1.5.1 输入样例  1\n3.1.5.2 输出样例  1\n3.1.5.3 输入样例  2\n\n1 3 5 6 8 10\n2 4 6 7 9 11\n\n6 7 9 9\n1 2 10 12\n\n3.1.5.4 输出样例  2\n3.1.6 数据范围\n对于  % 的测试点,保证  。\n对于另外  % 的测试点,保证  , 。\n对于所有测试点,保证  , , 。\n3.1.7",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.1.1\n平均分配\n3.1.2\n题目描述\n小 A 有\n 件物品,小 B 和小 C 想从小 A 手上买走这些物品。对于第  件物品,小 B 会以  的价格购买,而小 C 会\n以  的价格购买。为了平均分配这\n 件物品,小 A 决定小 B 和小 C 各自只能买走恰好  件物品。你能帮小 A 求出\n他卖出这\n 件物品所能获得的最大收入吗?\n3.1.3\n\n输入格式\n第一行,一个正整数 。\n第二行,\n 个整数\n。\n第三行,\n 个整数\n。\n3.1.4\n输出格式\n一行,一个整数,表示答案。\n3.1.5\n样例\n3.1.5.1\n输入样例 1\n\n1 3 5 6 8 10\n2 4 6 7 9 11\n\n3.1.5.2\n输出样例 1\n\n3.1.5.3\n输入样例 2\n\n6 7 9 9\n1 2 10 12\n\n3.1.5.4\n输出样例 2\n\n3.1.6\n数据范围\n对于\n% 的测试点,保证\n。\n对于另外\n% 的测试点,保证\n,\n。\n对于所有测试点,保证\n,\n,\n。\n3.1.7",
       "time_ms": 3000,
       "memory_mb": 512,
       "samples": [
@@ -499,22 +547,35 @@
           "suspect": false
         },
         {
-          "in": "361\n2\n",
-          "out": "3\n",
+          "in": "3\n36\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": false
+      "has_ref": true,
+      "reference": "n = int(input())\nb = list(map(int, input().split()))\nc = list(map(int, input().split()))\nd = [c[i] - b[i] for i in range(2 * n)]\nprint(sum(b) + sum(sorted(d)[n:]))"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "编程题 2",
-      "statement": "时间限制: 3.0 s\n内存限制: 512.0 MB\n3.2.8 原根判断\n3.2.9 题目描述\n小  A 知道,对于质数   而言,  的原根   是满足以下条件的正整数:\n;\n;\n对于任意   均有  。\n其中   表示   除以   的余数。\n小  A 现在有一个整数  ,请你帮他判断   是不是   的原根。\n3.2.10\n\n输入格式\n第一行,一个正整数  ,表示测试数据组数。\n每组测试数据包含一行,两个正整数  。\n3.2.11 输出格式\n对于每组测试数据,输出一行,如果   是   的原根则输出  Yes,否则输出  No。\n\nn = int(input())\nb = list(map(int, input().split()))\nc = list(map(int, input().split()))\nd = [c[i] - b[i] for i in range(2 * n)]\nprint(sum(b) + sum(sorted(d)[n:]))\n\n3.2.12 样例\n3.2.12.5 输入样例  1\n3.2.12.6 输出样例  1\n3.2.13 数据范围\n对于  % 的测试点,保证  。\n对于所有测试点,保证  , , ,  为质数。\n3.2.14",
+      "statement": "时间限制:3.0 s\n内存限制:512.0 MB\n3.2.8\n原根判断\n3.2.9\n题目描述\n小 A 知道,对于质数  而言, 的原根  是满足以下条件的正整数:\n;\n;\n对于任意\n 均有\n。\n其中\n 表示  除以  的余数。\n小 A 现在有一个整数 ,请你帮他判断  是不是  的原根。\n3.2.10\n\n输入格式\n第一行,一个正整数 ,表示测试数据组数。\n每组测试数据包含一行,两个正整数\n。\n3.2.11\n输出格式\n对于每组测试数据,输出一行,如果  是  的原根则输出 Yes ,否则输出 No 。\n3.2.12\n样例\n3.2.12.5\n输入样例 1\n\n3 998244353\n5 998244353\n7 998244353\n\n3.2.12.6\n输出样例 1\nYes\nYes\nNo\n\n3.2.13\n数据范围\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n,\n,\n, 为质数。\n3.2.14",
       "time_ms": 3000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "3\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n4\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "def fpw(b, e, p):\n    if e == 0:\n        return 1\n    r = fpw(b, e >> 1, p)\n    return r * r * (b if e & 1 else 1) % p\ndef solve():\n    a, p = map(int, input().split())\n    phi, v = p - 1, p - 1\n    for i in range(2, int(phi ** 0.5) + 2):\n        if v % i == 0:\n            while v % i == 0:\n                v //= i\n            if fpw(a, phi // i, p) == 1:\n                print(\"No\")\n                return\n    if v > 1:\n        if fpw(a, phi // v, p) == 1:\n            print(\"No\")\n            return\n    print(\"Yes\")\n[solve() for _ in range(int(input()))]"
     }
   ],
   "answer_rows": [
@@ -534,6 +595,7 @@
       "A",
       "D",
       "B"
-    ]
+    ],
+    []
   ]
 }

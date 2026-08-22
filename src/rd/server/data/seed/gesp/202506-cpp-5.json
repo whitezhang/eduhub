@@ -3,10 +3,10 @@
     "ym": "202506",
     "lang": "cpp",
     "level": 5,
-    "title": "CCF GESP 2025年6月认证 C++ 5级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1749477555699744.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202506-cpp-5.pdf"
+    "title": "202506-cpp-5",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202506-cpp-5.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面C++代码实现双向链表。函数 is_empty() 判断链表是否为空,如链表为空返回 true ,否则返回\nfalse 。横线处不能填写(  )。\n// 节点结构体\nstruct Node {\n    int data;\n    Node* prev;\n    Node* next;\n};\n// 双向链表结构体\nstruct DoubleLink {\n    Node* head;\n    Node* tail;\n    int size;\n    DoubleLink() {\n        head = nullptr;\n        tail = nullptr;\n        size = 0;\n    }\n    ~DoubleLink() {\n        Node* curr = head;\n        while (curr) {\n            Node* next = curr->next;\n            delete curr;\n            curr = next;\n        }\n    }\n    // 判断链表是否为空\n    bool is_empty() const {\n        _______________________\n    }\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32",
+      "stem": "下面C++代码实现双向链表。函数is_empty() 判断链表是否为空,如链表为空返回true ,否则返回\nfalse 。横线处不能填写(  )。\n// 节点结构体\nstruct Node {\n    int data;\n    Node* prev;\n    Node* next;\n};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n// 双向链表结构体\nstruct DoubleLink {\n    Node* head;\n    Node* tail;\n    int size;\n    DoubleLink() {\n        head = nullptr;\n        tail = nullptr;\n        size = 0;\n    }\n    ~DoubleLink() {\n        Node* curr = head;\n        while (curr) {\n            Node* next = curr->next;\n            delete curr;\n            curr = next;\n        }\n    }\n    // 判断链表是否为空\n    bool is_empty() const {\n        _______________________\n    }\n};\n33",
       "options": [
         {
           "key": "A",
@@ -60,15 +60,23 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "基于上题代码正确的前提下,填入相应代码完善 append() ,用于在双向链表尾部增加新节点,横线上应填\n写(   )。",
+      "stem": "基于上题代码正确的前提下,填入相应代码完善append() ,用于在双向链表尾部增加新节点,横线上应填\n写(   )。\nvoid append(int data) {\n    Node* newNode = new Node{data, nullptr, nullptr};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n    if (is_empty()) {\n        head = tail = newNode;\n    } else {\n        _______________________\n    }\n    ++size;\n}",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "tail->next = newNode;"
+        },
+        {
+          "key": "B",
+          "text": "newNode->prev = tail; tail = newNode;"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "tail = newNode; newNode->prev = tail; tail->next = newNode;"
+        },
+        {
+          "key": "D",
+          "text": "tail->next = newNode; newNode->prev = tail; tail = newNode;"
         }
       ],
       "answer": "D"
@@ -76,15 +84,23 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下列C++代码用循环链表解决约瑟夫问题,即假设 n 个人围成一圈,从第一个人开始数,每次数到第 k  个\n的人就出圈,输出最后留下的那个人的编号。横线上应填写(   )。\n};33\nvoid append(int data) {\n    Node* newNode = new Node{data, nullptr, nullptr};\n    if (is_empty()) {\n        head = tail = newNode;\n    } else {\n        _______________________\n    }\n    ++size;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\ntail->next = newNode;1\nnewNode->prev = tail;\ntail = newNode;\n1\n2\ntail = newNode;\nnewNode->prev = tail;\ntail->next = newNode;\n1\n2\n3\ntail->next = newNode;\nnewNode->prev = tail;\ntail = newNode;\n1\n2\n3\nstruct Node {\n    int data;\n    Node* next;\n};\nNode* createCircularList(int n) {\n    Node* head = new Node{1, nullptr};\n    Node* prev = head;\n    for (int i = 2; i <= n; ++i) {\n        Node* node = new Node{i, nullptr};\n        prev->next = node;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
+      "stem": "下列C++代码用循环链表解决约瑟夫问题,即假设n 个人围成一圈,从第一个人开始数,每次数到第k 个\n的人就出圈,输出最后留下的那个人的编号。横线上应填写(   )。\nstruct Node {\n    int data;\n    Node* next;\n};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nNode* createCircularList(int n) {\n    Node* head = new Node{1, nullptr};\n    Node* prev = head;\n    for (int i = 2; i <= n; ++i) {\n        Node* node = new Node{i, nullptr};\n        prev->next = node;\n        prev = node;\n    }\n    prev->next = head;\n    return head;\n}\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\nint fingLastSurvival(int n, int k) {\n    Node* head = createCircularList(n);\n    Node* p = head;\n    Node* prev = nullptr;\n    while (p->next != p) {\n        for (int count = 1; count < k; ++count) {\n            prev = p;\n            p = p->next;\n        }\n        _______________________\n    }\n    cout << \"最后留下的人编号是: \" << p->data << endl;\n    delete p;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "prev->next = p->next; delete p; p = prev->next;"
+        },
+        {
+          "key": "B",
+          "text": "delete p; prev->next = p->next; p = prev->next;"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "delete p; p = prev->next; prev->next = p->next;"
+        },
+        {
+          "key": "D",
+          "text": "prev->next = p->next; p = prev->next; delete p;"
         }
       ],
       "answer": "A"
@@ -92,23 +108,23 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下列C++代码判断一个正整数是否是质数,说法正确的是(  )。\n        prev = node;\n    }\n    prev->next = head;\n    return head;\n}\nint fingLastSurvival(int n, int k) {\n    Node* head = createCircularList(n);\n    Node* p = head;\n    Node* prev = nullptr;\n    while (p->next != p) {\n        for (int count = 1; count < k; ++count) {\n            prev = p;\n            p = p->next;\n        }\n        _______________________\n    }\n    cout << \"最后留下的人编号是: \" << p->data << endl;\n    delete p;\n    return 0;\n}\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\nprev->next = p->next;\ndelete p;\np = prev->next;\n1\n2\n3\ndelete p;\nprev->next = p->next;\np = prev->next;\n1\n2\n3\ndelete p;\np = prev->next;\nprev->next = p->next;\n1\n2\n3\nprev->next = p->next;\np = prev->next;\ndelete p;\n1\n2\n3\nbool is_prime(int n) {\n    if (n <= 1)\n        return false;\n    if (n == 2 || n == 3 || n == 5)\n        return true;\n    if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0)\n        return false;\n    int i = 7;\n    int step = 4;\n    int finish_number = sqrt(n) + 1;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
+      "stem": "下列C++代码判断一个正整数是否是质数,说法正确的是(  )。\nbool is_prime(int n) {\n    if (n <= 1)\n        return false;\n    if (n == 2 || n == 3 || n == 5)\n        return true;\n    if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0)\n        return false;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n    int i = 7;\n    int step = 4;\n    int finish_number = sqrt(n) + 1;\n12\n13\n14\n15\n16\n17\n18\n19\n20\n    while (i <= finish_number) {\n        if (n % i == 0)\n            return false;\n        i += step;\n        step = 6 - step;\n    }\n    return true;\n}",
       "options": [
         {
           "key": "A",
-          "text": "代码存在错误,比如5是质数,但因为 5 % 5 余数是0返回了 false"
+          "text": "代码存在错误,比如5是质数,但因为5 % 5 余数是0返回了false"
         },
         {
           "key": "B",
-          "text": "finish_number 的值应该是 n / 2 ,当前写法将导致错误"
+          "text": "finish_number 的值应该是n / 2 ,当前写法将导致错误"
         },
         {
           "key": "C",
-          "text": "当前 while 循环正确的前提是:所有大于3的质数都符合 6k±1 形式"
+          "text": "当前while 循环正确的前提是:所有大于3的质数都符合6k±1 形式"
         },
         {
           "key": "D",
-          "text": "while 循环修改如下,其执行效果和执行时间相同。"
+          "text": "while 循环修改如下,其执行效果和执行时间相同。 for (int i = 2; i < finish_number; i++) { if (n % i == 0) return false; } return true;"
         }
       ],
       "answer": "C"
@@ -116,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下列C++代码用两种方式求解两个正整数的最大公约数,说法错误的是(  )。",
+      "stem": "下列C++代码用两种方式求解两个正整数的最大公约数,说法错误的是(  )。\nint gcd0(int big, int small) {\n    if (big < small) {\n        swap(big, small);\n    }\n    if (big % small == 0) {\n        return small;\n    }\n    return gcd0(small, big % small);\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\nint gcd1(int big, int small) {\n    if (big < small) {\n        swap(big, small);\n    }\n    for (int i = small; i >= 1; --i) {\n        if (big % i == 0 && small % i == 0)\n            return i;\n    }\n    return 1;\n}",
       "options": [
         {
           "key": "A",
@@ -128,11 +144,11 @@
         },
         {
           "key": "C",
-          "text": "一般说来, gcd0() 的效率高于 gcd1()"
+          "text": "一般说来,gcd0() 的效率高于gcd1()"
         },
         {
           "key": "D",
-          "text": "gcd1() 中的代码 for (int i = small; i >= 1; --i) 应该修改为 for (int i = small; i > 1; --i)"
+          "text": "gcd1() 中的代码for (int i = small; i >= 1; --i) 应该修改为for (int i = small; i > 1; --i)"
         }
       ],
       "answer": "D"
@@ -140,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面的代码用于判断一个整数是否为质数。若要找出 1 到 n 之间的所有质数,对 1 到 n 中的每个整数都\n调用该函数,下列说法中错误的是( )。\n    while (i <= finish_number) {\n        if (n % i == 0)\n            return false;\n        i += step;\n        step = 6 - step;\n    }\n    return true;\n}\n12\n13\n14\n15\n16\n17\n18\n19\n20\nfor (int i = 2; i < finish_number; i++) {\n    if (n % i == 0)\n        return false;\n}\nreturn true;\n1\n2\n3\n4\n5\nint gcd0(int big, int small) {\n    if (big < small) {\n        swap(big, small);\n    }\n    if (big % small == 0) {\n        return small;\n    }\n    return gcd0(small, big % small);\n}\nint gcd1(int big, int small) {\n    if (big < small) {\n        swap(big, small);\n    }\n    for (int i = small; i >= 1; --i) {\n        if (big % i == 0 && small % i == 0)\n            return i;\n    }\n    return 1;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20",
+      "stem": "下面的代码用于判断一个整数是否为质数。若要找出 1 到 n 之间的所有质数,对 1 到 n 中的每个整数都\n调用该函数,下列说法中错误的是()。\nbool is_prime(int n) {\n    if (n <= 1) return false;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n    int finish_number = static_cast<int>(sqrt(n)) + 1;\n    for (int i = 2; i < finish_number; ++i) {\n        if (n % i == 0)\n            return false;\n    }\n    return true;\n}",
       "options": [
         {
           "key": "A",
@@ -188,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面的C++代码,用于求一系列数据中的最大值。有关其算法说法错误的是(    )。",
+      "stem": "下面的C++代码,用于求一系列数据中的最大值。有关其算法说法错误的是(    )。\nint find_max_recursive(const vector<int>& nums, int left, int right) {\n    if (left == right)\n        return nums[left];\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n    int mid = left + (right - left) / 2;\n    int left_max = find_max_recursive(nums, left, mid);\n    int right_max = find_max_recursive(nums, mid + 1, right);\n    return max(left_max, right_max);\n}\nint find_max(const vector<int>& nums) {\n    if (nums.empty()) {\n        throw invalid_argument(\"输入数组不能为空\");\n    }\n    return find_max_recursive(nums, 0, nums.size() - 1);\n}",
       "options": [
         {
           "key": "A",
@@ -212,19 +228,23 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面的C++代码,用于求一系列数据中的最大值。有关其算法说法错误的是(    )。\nbool is_prime(int n) {\n    if (n <= 1) return false;\n    int finish_number = static_cast<int>(sqrt(n)) + 1;\n    for (int i = 2; i < finish_number; ++i) {\n        if (n % i == 0)\n            return false;\n    }\n    return true;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint find_max_recursive(const vector<int>& nums, int left, int right) {\n    if (left == right)\n        return nums[left];\n    int mid = left + (right - left) / 2;\n    int left_max = find_max_recursive(nums, left, mid);\n    int right_max = find_max_recursive(nums, mid + 1, right);\n    return max(left_max, right_max);\n}\nint find_max(const vector<int>& nums) {\n    if (nums.empty()) {\n        throw invalid_argument(\"输入数组不能为空\");\n    }\n    return find_max_recursive(nums, 0, nums.size() - 1);\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17",
+      "stem": "下面的C++代码,用于求一系列数据中的最大值。有关其算法说法错误的是(    )。\nint find_max(const vector<int>& nums) {\n    if (nums.empty()) {\n        throw invalid_argument(\"输入数组不能为空\");\n    }\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n    int max_value = nums[0];\n    for (int num : nums) {\n        if (num > max_value) {\n            max_value = num;\n        }\n    }\n    return max_value;\n}",
       "options": [
         {
           "key": "A",
-          "text": "本题 find_max() 函数采用的是迭代算法"
+          "text": "本题find_max() 函数采用的是迭代算法"
         },
         {
           "key": "B",
-          "text": "本题 find_max() 函数的时间复杂度为"
+          "text": "本题find_max() 函数的时间复杂度为"
+        },
+        {
+          "key": "C",
+          "text": "本题find_max() 函数没有使用递归,因此不会因为递归调用层数过多而导致栈溢出。"
         },
         {
           "key": "D",
-          "text": "本题 find_max() 函数和上一题的 find_max() 空间复杂度相同"
+          "text": "本题find_max() 函数和上一题的find_max() 空间复杂度相同"
         }
       ],
       "answer": "C"
@@ -232,23 +252,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面的 C++ 代码用于在升序数组 lst 中查找目标值 target 最后一次出现的位置。相关说法,正确的是(\n)。",
+      "stem": "下面的C++ 代码用于在升序数组lst 中查找目标值target 最后一次出现的位置。相关说法,正确的是(\n)。\nint binary_search_last_occurrence(const vector<int>& lst, int target) {\n    if (lst.empty()) return -1;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n    int low = 0, high = lst.size() - 1;\n    while (low < high) {\n        int mid = (low + high + 1) / 2;\n        if (lst[mid] <= target) {\n            low = mid;\n        } else {\n            high = mid - 1;\n        }\n    }\n    if (lst[low] == target)\n        return low;\n    else\n        return -1;\n}",
       "options": [
         {
           "key": "A",
-          "text": "当 lst 中存在重复的 target 时,该函数总能返回最后一个 target 的位置,即便 lst 全由相同元素组成"
+          "text": "当lst 中存在重复的target 时,该函数总能返回最后一个target 的位置,即便lst 全由相同元素组成"
         },
         {
           "key": "B",
-          "text": "当 target 小于 lst 中所有元素时,该函数会返回 0"
+          "text": "当target 小于lst 中所有元素时,该函数会返回0"
         },
         {
           "key": "C",
-          "text": "循环条件改为 while (low <= high) 程序执行效果相同,且能提高准确性"
+          "text": "循环条件改为while (low <= high) 程序执行效果相同,且能提高准确性"
         },
         {
           "key": "D",
-          "text": "将代码中 (low + high + 1) / 2 修改为 (low + high) / 2 效果相同"
+          "text": "将代码中(low + high + 1) / 2 修改为(low + high) / 2 效果相同"
         }
       ],
       "answer": "A"
@@ -256,19 +276,19 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "有关下面C++代码的说法,错误的是(    )。\nint find_max(const vector<int>& nums) {\n    if (nums.empty()) {\n        throw invalid_argument(\"输入数组不能为空\");\n    }\n    int max_value = nums[0];\n    for (int num : nums) {\n        if (num > max_value) {\n            max_value = num;\n        }\n    }\n    return max_value;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nint binary_search_last_occurrence(const vector<int>& lst, int target) {\n    if (lst.empty()) return -1;\n    int low = 0, high = lst.size() - 1;\n    while (low < high) {\n        int mid = (low + high + 1) / 2;\n        if (lst[mid] <= target) {\n            low = mid;\n        } else {\n            high = mid - 1;\n        }\n    }\n    if (lst[low] == target)\n        return low;\n    else\n        return -1;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\ndouble sqrt_binary(long long n, double epsilon = 1e-10) {\n    if (n < 0) {\n        throw invalid_argument(\"输入必须为非负整数\");\n    }\n    if (n == 0 || n == 1) return n;\n1\n2\n3\n4\n5\n6\n7\nC. 本题 find_max() 函数没有使用递归,因此 不会因为递归调用层 数过多而导致栈溢 出。",
+      "stem": "有关下面C++代码的说法,错误的是(    )。\ndouble sqrt_binary(long long n, double epsilon = 1e-10) {\n    if (n < 0) {\n        throw invalid_argument(\"输入必须为非负整数\");\n    }\n1\n2\n3\n4\n5\n6\n7\n    if (n == 0 || n == 1) return n;\n    // 阶段 1\n    long long low = 1, high = n;\n    long long k = 0;\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n    while (low <= high) {\n        long long mid = (low + high) / 2;\n        long long mid_sq = mid * mid;\n        if (mid_sq == n) {\n            return mid;\n        } else if (mid_sq < n) {\n            k = mid;\n            low = mid + 1;\n        } else {\n            high = mid - 1;\n        }\n    }\n    long long next_k = k + 1;\n    if (next_k * next_k == n) {\n        return next_k;\n    }\n    // 阶段 2\n    double low_d = (double)k;\n    double high_d = (double)(k + 1);\n    double mid;\n    while (high_d - low_d >= epsilon) {\n        mid = (low_d + high_d) / 2;\n        double mid_sq = mid * mid;\n        if (mid_sq < n) {\n            low_d = mid;\n        } else {\n            high_d = mid;\n        }\n    }\n    double result = (low_d + high_d) / 2;\n    long long check_int = (long long)(result + 0.5);\n    if (check_int * check_int == n) {\n        return check_int;\n    }\n    return result;\n}",
       "options": [
         {
           "key": "A",
-          "text": "“阶段1”的目标是寻找正整数 n 可能的正完全平方根"
+          "text": "“阶段1”的目标是寻找正整数n 可能的正完全平方根"
         },
         {
           "key": "B",
-          "text": "“阶段2”的目标是如果正整数 n 没有正完全平方根,则在可能产生完全平方根附近寻找带小数点的平方根"
+          "text": "“阶段2”的目标是如果正整数n 没有正完全平方根,则在可能产生完全平方根附近寻找带小数点的平方根"
         },
         {
           "key": "C",
-          "text": "代码 check_int = (long long)(result + 0.5) 是检查因浮点误差是否为正完全平方根"
+          "text": "代码check_int = (long long)(result + 0.5) 是检查因浮点误差是否为正完全平方根"
         },
         {
           "key": "D",
@@ -280,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "13.硬币找零问题中要求找给客户最少的硬币。 coins 存储可用硬币规格,单位为角,假设规格都小于10\n角,且一定有1角规格。 amount 为要找零的金额,约定必须为1角的整数倍。输出为每种规格及其数量,按规格从大\n到小输出,如果某种规格不必要,则输出为0。下面是其实现代码,相关说法正确的是(    )。\n    // 阶段 1\n    long long low = 1, high = n;\n    long long k = 0;\n    while (low <= high) {\n        long long mid = (low + high) / 2;\n        long long mid_sq = mid * mid;\n        if (mid_sq == n) {\n            return mid;\n        } else if (mid_sq < n) {\n            k = mid;\n            low = mid + 1;\n        } else {\n            high = mid - 1;\n        }\n    }\n    long long next_k = k + 1;\n    if (next_k * next_k == n) {\n        return next_k;\n    }\n    // 阶段 2\n    double low_d = (double)k;\n    double high_d = (double)(k + 1);\n    double mid;\n    while (high_d - low_d >= epsilon) {\n        mid = (low_d + high_d) / 2;\n        double mid_sq = mid * mid;\n        if (mid_sq < n) {\n            low_d = mid;\n        } else {\n            high_d = mid;\n        }\n    }\n    double result = (low_d + high_d) / 2;\n    long long check_int = (long long)(result + 0.5);\n    if (check_int * check_int == n) {\n        return check_int;\n    }\n    return result;\n}\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\nconst int MAX_COINS = 10;\nint result[MAX_COINS] = {0};  // 假设最多10种面额\n1\n2\n3",
+      "stem": "13.硬币找零问题中要求找给客户最少的硬币。coins 存储可用硬币规格,单位为角,假设规格都小于10\n角,且一定有1角规格。amount 为要找零的金额,约定必须为1角的整数倍。输出为每种规格及其数量,按规格从大\n到小输出,如果某种规格不必要,则输出为0。下面是其实现代码,相关说法正确的是(    )。\nconst int MAX_COINS = 10;\nint result[MAX_COINS] = {0};  // 假设最多10种面额\n1\n2\n3\nint find_coins(const vector<int>& coins, int amount) {\n    sort(coins.begin(), coins.end(), greater<int>());\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n    int n = coins.size();\n    for (int i = 0; i < n; ++i) {\n        int coin = coins[i];\n        int num = amount / coin;\n        result[i] = num;\n        amount -= num * coin;\n        if (amount == 0) break;\n    }\n    cout << \"找零方案如下:\" << endl;\n    for (int i = 0; i < n; ++i) {\n        cout << sorted_coins[i] << \"角需要\" << result[i] << \"枚\" << endl;\n    }\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -304,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "关于下述 C++ 代码的快速排序算法,说法错误的是(    )。",
+      "stem": "关于下述C++代码的快速排序算法,说法错误的是(   )。\nint randomPartition(std::vector<int>& arr, int low, int high) {\n    int random = low + rand() % (high - low + 1);\n    std::swap(arr[random], arr[high]);\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n    int pivot = arr[high];\n    int i = low - 1;\n    for (int j = low; j < high; j++) {\n        if (arr[j] <= pivot) {\n            i++;\n            std::swap(arr[i], arr[j]);\n        }\n    }\n    std::swap(arr[i + 1], arr[high]);\n    return i + 1;\n}\nvoid quickSort(std::vector<int>& arr, int low, int high) {\n    if (low < high) {\n        int pi = randomPartition(arr, low, high);\n        quickSort(arr, low, pi - 1);\n        quickSort(arr, pi + 1, high);\n    }\n}",
       "options": [
         {
           "key": "A",
@@ -312,11 +332,11 @@
         },
         {
           "key": "B",
-          "text": "randomPartition 函数随机选择基准值,可以避免输入数据特定模式导致的最坏情况下时间复杂度 2"
+          "text": "randomPartition 函数随机选择基准值,可以避免输入数据特定模式导致的最坏情况下时间复杂度"
         },
         {
           "key": "C",
-          "text": "快速排序平均时间复杂度是 int find_coins(const vector<int>& coins, int amount) { sort(coins.begin(), coins.end(), greater<int>()); int n = coins.size(); for (int i = 0; i < n; ++i) { int coin = coins[i]; int num = amount / coin; result[i] = num; amount -= num * coin; if (amount == 0) break; } cout << \" 找零方案如下: \" << endl; for (int i = 0; i < n; ++i) { cout << sorted_coins[i] << \" 角需要 \" << result[i] << \" 枚 \" << endl; } return 0; } int randomPartition(std::vector<int>& arr, int low, int high) { int random = low + rand() % (high - low + 1); std::swap(arr[random], arr[high]); int pivot = arr[high]; int i = low - 1; for (int j = low; j < high; j++) { if (arr[j] <= pivot) { i++; std::swap(arr[i], arr[j]); } } std::swap(arr[i + 1], arr[high]); return i + 1; } void quickSort(std::vector<int>& arr, int low, int high) { if (low < high) { int pi = randomPartition(arr, low, high); quickSort(arr, low, pi - 1); quickSort(arr, pi + 1, high); } }"
+          "text": "快速排序平均时间复杂度是"
         },
         {
           "key": "D",
@@ -328,15 +348,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "小杨编写了一个如下的高精度除法函数,则横线上应填写的代码为( )。\n\n\n\n\nconst int MAXN = 1005; // 最大位数\nstruct BigInt {\n\nint d[MAXN]; // 存储数字,d[0]是个位,d[1]是十位,...\nint len;\n\n// 数字长度\n\n\n\nBigInt() {\nmemset(d, 0, sizeof(d));\nlen = 1;\n}\n\n\n\n\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n// 比较两个高精度数的大小\nint compare(BigInt a, BigInt b) {\nif(a.len != b.len) return a.len > b.len ? 1 : -1;\nfor(int i = a.len - 1; i >= 0; i--) {\nif(a.d[i] != b.d[i]) return a.d[i] > b.d[i] ? 1 : -1;\n}\nreturn 0;\n}\n// 高精度减法,要求 a> =b\nBigInt sub(BigInt a, BigInt b) {\nBigInt c;\nc.len = a.len;\nfor(int i = 0; i < a.len; i++) {\nc.d[i] += a.d[i] - b.d[i];\nif(c.d[i] < 0) {\nc.d[i] += 10;\nc.d[i+1]--;\n// 高精度除法(a/b,返回商和余数)\npair<BigInt, BigInt> div(BigInt a, BigInt b\n}\n}\nc.len = a.len;\nwhile(c.len > 1 && c.d[c.len-1] == 0) c.len--;\nreturn c;\n}\n) {\nBigInt q, r; // q是商,r是余数\nif(compare(a, b) < 0) { // 如果a<b,商为0,余数为a\nq.len = 1;\nq.d[0] = 0;\nr = a;\nreturn make pair(q, r_ );\n}\n// 初始化余数r为a的前b.len位\nr.len = b.len;\nfor(int i = a.len - 1; i >= a.len - b.len; i--) {\nr.d[i - (a.len - b.len)] = a.d[i];\n}\n// 把下一位加入余数\nif(r.len > 1 || r.d[0] != 0\n// 逐位计算商\nfor(int i = a.len - b.len; i >= 0; i--) {\n) {\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n// 判断是否0\nbool isZero(const BigInt& x) {\n  return X.len==1&&x.d[0]==0;\n}\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "小杨编写了一个如下的高精度除法函数,则横线上应填写的代码为()。\nconst int MAXN = 1005; // 最大位数\nstruct BigInt {\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\nint d[MAXN]; // 存储数字,d[0]是个位,d[1]是十位,...\n// 数字长度\nint len;\nBigInt() {\nmemset(d, 0, sizeof(d));\nlen = 1;\n}\n};\n// 判断是否0\nbool isZero(const BigInt& x) {\n  return X.len==1&&x.d[0]==0;\n}\n// 比较两个高精度数的大小\nint compare(BigInt a, BigInt b) {\nif(a.len != b.len) return a.len > b.len ? 1 : -1;\nfor(int i = a.len - 1; i >= 0; i--) {\nif(a.d[i] != b.d[i]) return a.d[i] > b.d[i] ? 1 : -1;\n}\nreturn 0;\n}\n// 高精度减法,要求a>=b\nBigInt sub(BigInt a, BigInt b) {\nBigInt c;\nc.len = a.len;\nfor(int i = 0; i < a.len; i++) {\nc.d[i] += a.d[i] - b.d[i];\nif(c.d[i] < 0) {\nc.d[i] += 10;\nc.d[i+1]--;\n}\n}\nc.len = a.len;\nwhile(c.len > 1 && c.d[c.len-1] == 0) c.len--;\nreturn c;\n}\n// 高精度除法(a/b,返回商和余数)\npair<BigInt, BigInt> div(BigInt a, BigInt b\n) {\nBigInt q, r; // q是商,r是余数\nif(compare(a, b) < 0) { // 如果a<b,商为0,余数为a\nq.len = 1;\nq.d[0] = 0;\nr = a;\nreturn make pair(q, r\n_\n);\n}\n// 初始化余数r为a的前b.len位\nr.len = b.len;\nfor(int i = a.len - 1; i >= a.len - b.len; i--) {\nr.d[i - (a.len - b.len)] = a.d[i];\n}\n// 逐位计算商\nfor(int i = a.len - b.len; i >= 0; i--) {\n// 把下一位加入余数\nif(r.len > 1 || r.d[0] != 0\n) {\nfor(int j = r.len; j > 0; j--) {\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\nr.d[j] = r.d[j-1];\n}\n_______________________\n} else {\nr.d[0] = a.d[i];\nr.len = 1;\n}\n// 计算当前位的商\nwhile(compare(r, b) >= 0\n) {\nr = sub(r, b);\nq.d[i]++;\n}\n}\n// 确定商的长度\nq.len = a.len - b.len + 1;\nwhile(q.len > 1 && q.d[q.len-1] == 0) q.len--\n;\n// 处理余数前导零\nwhile(r.len > 1 && r.d[r.len-1] == 0) r.len--;\n_\nreturn make pair(q, r);\n}",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "r.d[0] = a.d[i]; r.len++ ;"
+        },
+        {
+          "key": "B",
+          "text": "r.d[i] = a.d[i]; r.len++ ;"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "r.d[i] = a.d[i]; r.len = 1 ;"
+        },
+        {
+          "key": "D",
+          "text": "r.d[0] = a.d[i]; r.len = 1 ;"
         }
       ],
       "answer": "A"
@@ -346,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "下面C++代码是用欧几里得算法(辗转相除法)求两个正整数的最大公约数, a 大于 b 还是小于 b 都适用。",
+      "stem": "下面C++代码是用欧几里得算法(辗转相除法)求两个正整数的最大公约数,a 大于b 还是小于b 都适用。\nint gcd(int a, int b) {\n    while (b) {\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}",
       "options": [
         {
           "key": "T",
@@ -357,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "假设函数 gcd() 函数能正确求两个正整数的最大公约数,则下面的 lcm() 函数能求相应两数的最小公倍数。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n// 确定商的长度\nq.len = a.len - b.len + 1;\nwhile(q.len > 1 && q.d[q.len-1] == 0) q.len--\nr = sub(r, b);\nq.d[i]++;\n// 计算当前位的商\nwhile(compare(r, b) >= 0\nr.d[0] = a.d[i];\nr.len = 1;\n}\n) {\n}\n}\n;\n// 处理余数前导零\nwhile(r.len > 1 && r.d[r.len-1] == 0) r.len--;_\n}\nreturn make pair(q, r);\n\nr.d[0] = a.d[i];\nr.len++\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n;\n\nr.d[i] = a.d[i];\nr.len++\n\n\n;\n\n  r.d[i] = a.d[i];\nr.len = 1\n\n\n;\n\n\nr.d[0] = a.d[i];\nr.len = 1\n\n\n;\n\n\nint gcd(int a, int b) {\n    while (b) {\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\n\n\n\n\n\n\n\n} else {\n}\n_______________________\nr.d[j] = r.d[j-1];\nfor(int j = r.len; j > 0; j--) {",
+      "stem": "假设函数gcd() 函数能正确求两个正整数的最大公约数,则下面的lcm() 函数能求相应两数的最小公倍数。\nint lcm(int a, int b) {\n    return a * b / gcd(a, b);\n}",
       "options": [
         {
           "key": "T",
@@ -373,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "下面的C++代码用于输出每个数对应的质因数列表,输出形如: {5: [5], 6: [2, 3], 7: [7], 8: [2, 2,\n2]} 。",
+      "stem": "下面的C++代码用于输出每个数对应的质因数列表,输出形如:{5: [5], 6: [2, 3], 7: [7], 8: [2, 2,\n2]} 。\nint main() {\n    int n, m;\n    cin >> n >> m;\n    if (n > m) swap(n, m);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    map<int, vector<int>> prime_factor;\n    for (int i = n; i <= m; ++i) {\n        int j = 2, k = i;\n        while (k != 1) {\n            if (k % j == 0) {\n                prime_factor[i] = prime_factor[i] + j;\n                k /= j;\n            } else {\n                ++j;\n            }\n        }\n    }\n    for (auto& p : prime_factor) {\n        cout << p.first << \": \";\n        for (int v : p.second)\n            cout << v << \" \";\n        cout << endl;\n    }\n    return 0;\n}",
       "options": [
         {
           "key": "T",
@@ -389,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "下面的C++代码实现归并排序。代码在执行时,将输出一次 HERE 字符串,因为merge()函数仅被调用一次。\nint lcm(int a, int b) {\n    return a * b / gcd(a, b);\n}\n\n\n\nint main() {\n    int n, m;\n    cin >> n >> m;\n    if (n > m) swap(n, m);\n    map<int, vector<int>> prime_factor;\n    for (int i = n; i <= m; ++i) {\n        int j = 2, k = i;\n        while (k != 1) {\n            if (k % j == 0) {\n                prime_factor[i] = prime_factor[i] + j;\n                k /= j;\n            } else {\n                ++j;\n            }\n        }\n    }\n    for (auto& p : prime_factor) {\n        cout << p.first << \": \";\n        for (int v : p.second)\n            cout << v << \" \";\n        cout << endl;\n    }\n    return 0;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvoid merge(std::vector<int>& arr, int left, int mid, int right) {\n    std::vector<int> temp(right - left + 1);\n    int i = left;\n    int j = mid + 1;\n    int k = 0;\n    while (i <= mid && j <= right) {\n        if (arr[i] <= arr[j]) {\n            temp[k++] = arr[i++];\n        } else {\n            temp[k++] = arr[j++];\n        }\n    }\n    while (i <= mid) {\n        temp[k++] = arr[i++];\n    }\n    while (j <= right) {\n        temp[k++] = arr[j++];\n    }\n    for (int p = 0; p < k; ++p) {\n        arr[left + p] = temp[p];",
+      "stem": "下面的C++代码实现归并排序。代码在执行时,将输出一次HERE 字符串,因为merge()函数仅被调用一次。\nvoid merge(std::vector<int>& arr, int left, int mid, int right) {\n    std::vector<int> temp(right - left + 1);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    int i = left;\n    int j = mid + 1;\n    int k = 0;\n    while (i <= mid && j <= right) {\n        if (arr[i] <= arr[j]) {\n            temp[k++] = arr[i++];\n        } else {\n            temp[k++] = arr[j++];\n        }\n    }\n    while (i <= mid) {\n        temp[k++] = arr[i++];\n    }\n    while (j <= right) {\n        temp[k++] = arr[j++];\n    }\n    for (int p = 0; p < k; ++p) {\n        arr[left + p] = temp[p];\n    }\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvoid mergeSort(std::vector<int>& arr, int left, int right) {\n    if (left >= right) {\n        return;\n    }\n    int mid = left + (right - left) / 2;\n    mergeSort(arr, left, mid);\n    mergeSort(arr, mid + 1, right);\n    std::cout << \"HERE\";\n    merge(arr, left, mid, right);\n}",
       "options": [
         {
           "key": "T",
@@ -405,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "归并排序的最好、最坏和平均时间复杂度均为 。",
+      "stem": "归并排序的最好、最坏和平均时间复杂度均为\n。",
       "options": [
         {
           "key": "T",
@@ -421,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "查字典这个小学生必备技能,可以把字典视为一个已排序的数组。假设小杨要查找一个音首字母为 g 的单\n词,他首先翻到字典约一半的页数,发现该页的首字母是 m ,由于字母表中 g 位于 m 之前,所以排除字典后半部\n分,查找范围缩小到前半部分;不断重复上述步骤,直至找到首字母为 g 的页码。这种查字典的一系列操作可看作\n二分查找。",
+      "stem": "查字典这个小学生必备技能,可以把字典视为一个已排序的数组。假设小杨要查找一个音首字母为g 的单\n词,他首先翻到字典约一半的页数,发现该页的首字母是m ,由于字母表中g 位于m 之前,所以排除字典后半部\n分,查找范围缩小到前半部分;不断重复上述步骤,直至找到首字母为g 的页码。这种查字典的一系列操作可看作\n二分查找。",
       "options": [
         {
           "key": "T",
@@ -437,7 +465,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
@@ -453,7 +481,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
@@ -469,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "函数 puzzle 定义如下,则调用 puzzle(7) 程序会无限递归。",
+      "stem": "函数puzzle 定义如下,则调用puzzle(7) 程序会无限递归。\nint puzzle(int n) {\n    if (n == 1) return 1;\n    if (n % 2 == 0) return puzzle(n / 2);\n    return puzzle(3 * n + 1);\n}",
       "options": [
         {
           "key": "T",
@@ -485,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "如下为线性筛法,用于高效生成素数表,其核心思想是每个合数只被它的最小质因数筛掉一次,时间复杂\n度为 。\n    }\n}\nvoid mergeSort(std::vector<int>& arr, int left, int right) {\n    if (left >= right) {\n        return;\n    }\n    int mid = left + (right - left) / 2;\n    mergeSort(arr, left, mid);\n    mergeSort(arr, mid + 1, right);\n    std::cout << \"HERE\";\n    merge(arr, left, mid, right);\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint puzzle(int n) {\n    if (n == 1) return 1;\n    if (n % 2 == 0) return puzzle(n / 2);\n    return puzzle(3 * n + 1);\n}\n\n\n\n\n\nvector<int> linearSieve(int n) {\n    vector<bool> is_prime(n + 1, true);\n    vector<int> primes;\n    for (int i = 2; i <= n; ++i) {\n        if (is_prime[i]) {\n            primes.push_back(i);\n        }\n        for (int j = 0; j < primes.size() && i * primes[j] <= n; ++j) {",
+      "stem": "如下为线性筛法,用于高效生成素数表,其核心思想是每个合数只被它的最小质因数筛掉一次,时间复杂\n度为\n。\nvector<int> linearSieve(int n) {\n    vector<bool> is_prime(n + 1, true);\n    vector<int> primes;\n\n\n\n\n\n\n\n\n\n\n    for (int i = 2; i <= n; ++i) {\n        if (is_prime[i]) {\n            primes.push_back(i);\n        }\n        for (int j = 0; j < primes.size() && i * primes[j] <= n; ++j) {\n            is_prime[i * primes[j]] = false;\n            if (i % primes[j] == 0) {\n                break;\n            }\n        }\n    }\n    return primes;\n}",
       "options": [
         {
           "key": "T",
@@ -501,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -509,27 +537,55 @@
       "seq": 1,
       "kind": "traditional",
       "title": "奖品兑换",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n班主任给上课专心听讲、认真完成作业的同学们分别发放了若干张课堂优秀券和作业优秀券。同学们可以使用这两\n种券找班主任兑换奖品。具体来说,可以使用   张课堂优秀券和   张作业优秀券兑换一份奖品,或者使用   张课堂\n优秀券和   张作业优秀券兑换一份奖品。\n现在小  A 有   张课堂优秀券和   张作业优秀券,他最多能兑换多少份奖品呢?\n3.1.2\n\n输入格式\n第一行,两个正整数  ,分别表示小  A 持有的课堂优秀券和作业优秀券的数量。\n第二行,两个正整数  ,表示兑换一份奖品所需的两种券的数量。\n3.1.3 输出格式\n输出共一行,一个整数,表示最多能兑换的奖品份数。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n3.1.4.4 输出样例  2\n            is_prime[i * primes[j]] = false;\n            if (i % primes[j] == 0) {\n                break;\n            }\n        }\n    }\n    return primes;\n}\n\n8 8\n2 1\n\n314159 2653589\n27 1828\n\n3.1.5 数据范围\n对于  % 的测试点,保证  , 。\n对于所有测试点,保证  , 。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n班主任给上课专心听讲、认真完成作业的同学们分别发放了若干张课堂优秀券和作业优秀券。同学们可以使用这两\n种券找班主任兑换奖品。具体来说,可以使用  张课堂优秀券和  张作业优秀券兑换一份奖品,或者使用  张课堂\n优秀券和  张作业优秀券兑换一份奖品。\n现在小 A 有  张课堂优秀券和\n 张作业优秀券,他最多能兑换多少份奖品呢?\n3.1.2\n\n输入格式\n第一行,两个正整数\n,分别表示小 A 持有的课堂优秀券和作业优秀券的数量。\n第二行,两个正整数\n,表示兑换一份奖品所需的两种券的数量。\n3.1.3\n输出格式\n输出共一行,一个整数,表示最多能兑换的奖品份数。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n8 8\n2 1\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n314159 2653589\n27 1828\n\n3.1.4.4\n输出样例 2\n\n3.1.5\n数据范围\n对于\n% 的测试点,保证\n,\n。\n对于所有测试点,保证\n,\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "17\n18\n",
-          "out": "5\n",
-          "suspect": true
+          "in": "5\n",
+          "out": "1\n",
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\nusing namespace std;\nint n, m, a, b;\nint l, r;\nint check(int v) {\n    long long x, y, t;\n    x = 1ll * v * a;\n    y = 1ll * v * b;\n    if (y > m) {\n        t = (y - m + (b - a) - 1) / (b - a);\n        y -= t * (b - a);\n        x += t * (b - a);\n    }\n    return x <= n && y <= m;\n}\nint main() {\n    scanf(\"%d%d\", &n, &m);\n    scanf(\"%d%d\", &a, &b);\n    if (n > m)\n        swap(n, m);\n    if (a > b)\n        swap(a, b);\n    if (a == b) {\n        printf(\"%d\\n\", n / a);\n        return 0;\n    }\n    l = 0;\n    r = n;\n    while (l < r) {\n        int mid = (l + r + 1) >> 1;\n        if (check(mid))\n            l = mid;\n        else\n            r = mid - 1;\n    }\n    printf(\"%d\\n\", r);\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "最大公因数",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n对于两个正整数\n,它们的最大公因数记为\n。对于\n 个正整数\n,它们的最大公因数为:\n给定  个正整数\n 以及  组询问。对于第 (\n)组询问,请求出\n  的最\n大公因数,也即\n。\n3.2.2\n\n输入格式\n第一行,两个正整数\n,分别表示给定正整数的数量,以及询问组数。\n第二行, 个正整数\n。\n3.2.3\n输出格式\n输出共  行,第  行包含一个正整数,表示\n  的最大公因数。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n5 3\n6 9 12 18 30\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n3 5\n31 47 59\n\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于\n% 的测试点,保证\n,\n。\n对于所有测试点,保证\n,\n,\n。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "2\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "1\n4\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\nusing namespace std;\nconst int N = 1e5 + 5;\nint n, q, a[N], g;\nint gcd(int a, int b) {\n    if (a == 0 || b == 0)\n        return a + b;\n    return gcd(b, a % b);\n}\nint main() {\n    scanf(\"%d%d\", &n, &q);\n    for (int i = 1; i <= n; i++)\n        scanf(\"%d\", &a[i]);\n    sort(a + 1, a + n + 1);\n    for (int i = 2; i <= n; i++)\n        g = gcd(g, a[i] - a[i - 1]);\n    for (int i = 1; i <= q; i++)\n        printf(\"%d\\n\", gcd(g, a[1] + i));\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -548,11 +604,8 @@
       "D",
       "A",
       "D",
-      "A",
-      "C"
-    ],
-    [
       "A"
-    ]
+    ],
+    []
   ]
 }

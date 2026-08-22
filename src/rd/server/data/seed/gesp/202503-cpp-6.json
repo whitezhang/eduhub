@@ -3,16 +3,16 @@
     "ym": "202503",
     "lang": "cpp",
     "level": 6,
-    "title": "CCF GESP 2025年3月认证 C++ 6级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1669256961851424.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202503-cpp-6.pdf"
+    "title": "202503-cpp-6",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202503-cpp-6.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "在面向对象编程中,类是一种重要的概念。下面关于类的描述中,不正确的是(   )。",
+      "stem": "在面向对象编程中,类是一种重要的概念。下面关于类的描述中,不正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "哈夫曼编码是一种数据压缩算法。以下关于哈夫曼编码的描述中,不正确的是(   )。",
+      "stem": "哈夫曼编码是一种数据压缩算法。以下关于哈夫曼编码的描述中,不正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "以下代码实现了树的哪种遍历方式?",
+      "stem": "以下代码实现了树的哪种遍历方式?\nvoid traverse(TreeNode* root) {\n    if (root == nullptr) return;\n    cout << root->val << \" \";\n    traverse(root->left);\n    traverse(root->right);\n}\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "以下关于完全二叉树的代码描述,正确的是(   )。\nvoid traverse(TreeNode* root) {\n    if (root == nullptr) return;\n    cout << root->val << \" \";\n    traverse(root->left);\n    traverse(root->right);\n}\n1\n2\n3\n4\n5\n6\nbool isCompleteTree(TreeNode* root) {1",
+      "stem": "以下关于完全二叉树的代码描述,正确的是(  )。\nbool isCompleteTree(TreeNode* root) {\n1\n    if (root == nullptr) return true;\n    queue<TreeNode*> q;\n    q.push(root);\n    bool hasNull = false;\n    while (!q.empty()) {\n        TreeNode* node = q.front();\n2\n3\n4\n5\n6\n7\n        q.pop();\n        if (node == nullptr) {\n            hasNull = true;\n        } else {\n            if (hasNull) return false;\n            q.push(node->left);\n            q.push(node->right);\n        }\n    }\n    return true;\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n}\n18",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "以下代码实现了二叉排序树的哪种操作?",
+      "stem": "以下代码实现了二叉排序树的哪种操作?\nTreeNode* op(TreeNode* root, int val) {\n    if (root == nullptr) return new TreeNode(val);\n    if (val < root->val) {\n        root->left = op(root->left, val);\n    } else {\n        root->right = op(root->right, val);\n1\n2\n3\n4\n5\n6\n    }\n    return root;\n}\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "给定字符集  {A, B, C, D} 的出现频率分别为  {5, 1, 6, 2},则正确的哈夫曼编码是(   )。",
+      "stem": "给定字符集 {A, B, C, D} 的出现频率分别为 {5, 1, 6, 2} ,则正确的哈夫曼编码是(  )。",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "关于动态规划的描述,正确的是(   )。\n    if (root == nullptr) return true;\n    queue<TreeNode*> q;\n    q.push(root);\n    bool hasNull = false;\n    while (!q.empty()) {\n        TreeNode* node = q.front();\n        q.pop();\n        if (node == nullptr) {\n            hasNull = true;\n        } else {\n            if (hasNull) return false;\n            q.push(node->left);\n            q.push(node->right);\n        }\n    }\n    return true;\n}\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nTreeNode* op(TreeNode* root, int val) {\n    if (root == nullptr) return new TreeNode(val);\n    if (val < root->val) {\n        root->left = op(root->left, val);\n    } else {\n        root->right = op(root->right, val);\n    }\n    return root;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+      "stem": "关于动态规划的描述,正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "以下代码中,类的构造函数被调用了(   )次。",
+      "stem": "以下代码中,类的构造函数被调用了(  )次。\nclass MyClass {\npublic:\n    MyClass() {\n        cout << \"Constructor called!\" << endl;\n    }\n};\nint main() {\n    MyClass obj1;\n    MyClass obj2 = obj1;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n    return 0;\n}\n10\n11",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "以下代码实现了循环队列的哪种操作?\n\n```\ncout << \"Constructor called!\" << endl;\n    }\n};\nint main() {\n    MyClass obj1;\n    MyClass obj2 = obj1;\n    return 0;\n}\n\n\n\n\n\n\n\n\n\n\n\nclass CircularQueue {\n    int* arr;\n    int front, rear, size;\npublic:\n    CircularQueue(int k) {\n        size = k;\n        arr = new int[k];\n        front = rear = -1;\n    }\n    bool enQueue(int value) {\n        if (isFull()) return false;\n        if (isEmpty()) front = 0;\n        rear = (rear + 1) % size;\n        arr[rear] = value;\n        return true;\n    }\n};\n```",
+      "stem": "以下代码实现了循环队列的哪种操作?\nclass CircularQueue {\n    int* arr;\n    int front, rear, size;\npublic:\n    CircularQueue(int k) {\n1\n2\n3\n4\n5\n        size = k;\n        arr = new int[k];\n        front = rear = -1;\n    }\n    bool enQueue(int value) {\n        if (isFull()) return false;\n        if (isEmpty()) front = 0;\n        rear = (rear + 1) % size;\n        arr[rear] = value;\n        return true;\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n    }\n};\n16\n17",
       "options": [
         {
           "key": "A",
@@ -220,7 +220,7 @@
         },
         {
           "key": "D",
-          "text": "判断队列是否为空 class MyClass { public: MyClass() {"
+          "text": "判断队列是否为空"
         }
       ],
       "answer": "A"
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "以下代码实现了二叉树的深度优先搜索( DFS ),并统计叶子结点的数量,则横线上应填写(  )。",
+      "stem": "以下代码实现了二叉树的深度优先搜索(DFS),并统计叶子结点的数量,则横线上应填写( )。\nint countLeafNodes(TreeNode* root) {\n    if (root == nullptr) return 0;\n1\n2\n3\n4\n    stack<TreeNode*> s;\n    s.push(root);\n    int count = 0;\n    while (!s.empty()) {\n        TreeNode* node = s.top();\n        s.pop();\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n        if (node->left == nullptr && node->right == nullptr) {\n            count++;\n        }\n        if (node->right) s.push(node->right);\n        ———————————————————————— // 在此处填入代码\n    }\n    return count;\n}\n16\n17\n18\n19",
       "options": [
         {
           "key": "A",
@@ -252,15 +252,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "以下代码实现了二叉树的广度优先搜索( BFS ),并查找特定值的节点,则横线上应填写(  )。",
+      "stem": "以下代码实现了二叉树的广度优先搜索(BFS),并查找特定值的节点,则横线上应填写( )。\nTreeNode* findNode(TreeNode* root, int target) {\n    if (root == nullptr) return nullptr;\n1\n2\n3\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        TreeNode* current = q.front();\n        q.pop();\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n        if (current->val == target) {\n            return current; // 找到目标节点\n        }\n        ———————————————————————— // 在此处填入代码\n    }\n    return nullptr; // 未找到目标节点\n}\n14\n15\n16\n17",
       "options": [
         {
           "key": "A",
-          "text": "B. int countLeafNodes(TreeNode* root) { if (root == nullptr) return 0; stack<TreeNode*> s; s.push(root); int count = 0; while (!s.empty()) { TreeNode* node = s.top(); s.pop(); if (node->left == nullptr && node->right == nullptr) { count++; } if (node->right) s.push(node->right); ———————————————————————— // 在此处填入代码 } return count; } TreeNode* findNode(TreeNode* root, int target) { if (root == nullptr) return nullptr; queue<TreeNode*> q; q.push(root); while (!q.empty()) { TreeNode* current = q.front(); q.pop(); if (current->val == target) { return current; // 找到目标节点 } ———————————————————————— // 在此处填入代码 } return nullptr; // 未找到目标节点 } if (current->left) q.push(current->left); if (current->right) q.push(current->right);"
+          "text": "if (current->left) q.push(current->left); if (current->right) q.push(current->right);"
+        },
+        {
+          "key": "B",
+          "text": "if (current->left) q.pop(current->left); if (current->right) q.pop(current->right);"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "if (current->left) q.front(current->left); if (current->right) q.front(current->right);"
+        },
+        {
+          "key": "D",
+          "text": "if (current->left) q.push(current->right); if (current->right) q.push(current->left);"
         }
       ],
       "answer": "A"
@@ -268,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "以下代码用于生成   位格雷编码。横线上应填写(  )。",
+      "stem": "以下代码用于生成  位格雷编码。横线上应填写( )。\nvector<string> generateGrayCode(int n) {\n    if (n == 0) return {\"0\"};\n    if (n == 1) return {\"0\", \"1\"};\n1\n2\n3\n4\n5\n6\n    vector<string> prev = generateGrayCode(n - 1);\n    vector<string> result;\n7\n8\n9\n10\n11\n12\n13\n14\n15\n    for (string s : prev) {\n        result.push_back(\"0\" + s); // 在前缀添加 0\n    }\n    for (int i = prev.size() - 1; i >= 0; i--) {\n        ———————————————————————— // 在此处填入代码\n    }\n    return result;\n}",
       "options": [
         {
           "key": "A",
@@ -292,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "以下代码实现了 0/1 背包问题的动态规划解法。假设物品重量为weights[],价值为values[],背包容\n量为W,横线上应填写(  )。\nif (current->left) q.pop(current->left);\nif (current->right) q.pop(current->right);\n1\n2\nif (current->left) q.front(current->left);\nif (current->right) q.front(current->right);\n1\n2\nif (current->left) q.push(current->right);\nif (current->right) q.push(current->left);\n1\n2\nvector<string> generateGrayCode(int n) {\n    if (n == 0) return {\"0\"};\n    if (n == 1) return {\"0\", \"1\"};\n    vector<string> prev = generateGrayCode(n - 1);\n    vector<string> result;\n    for (string s : prev) {\n        result.push_back(\"0\" + s); // 在前缀添加  0\n    }\n    for (int i = prev.size() - 1; i >= 0; i--) {\n        ———————————————————————— // 在此处填入代码\n    }\n    return result;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\nint knapsack(int W, vector<int>& weights, vector<int>& values) {\n    int n = weights.size();\n    vector<vector<int>> dp(n + 1, vector<int>(W + 1, 0));\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= W; j++) {\n            if (weights[i-1] > j) {\n                dp[i][j] = dp[i-1][j]; // 当前物品装不下\n            } else {\n                dp[i][j] = max(_________________________);  // 在此处填入代码\n            }\n        }\n    }\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
+      "stem": "以下代码实现了0/1背包问题的动态规划解法。假设物品重量为weights[] ,价值为values[] ,背包容\n量为W ,横线上应填写( )。\nint knapsack(int W, vector<int>& weights, vector<int>& values) {\n    int n = weights.size();\n    vector<vector<int>> dp(n + 1, vector<int>(W + 1, 0));\n1\n2\n3\n4\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= W; j++) {\n            if (weights[i-1] > j) {\n                dp[i][j] = dp[i-1][j]; // 当前物品装不下\n            } else {\n                dp[i][j] = max(_________________________);  // 在此处填入代码\n            }\n        }\n    }\n5\n6\n7\n8\n9\n10\n11\n12\n13\n    return dp[n][W];\n}\n14\n15",
       "options": [
         {
           "key": "A",
@@ -316,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "以下代码用于检查字符串中的括号是否匹配,横线上应填写(  )。",
+      "stem": "以下代码用于检查字符串中的括号是否匹配,横线上应填写( )。\nbool isBalanced(string s) {\n    stack<char> st;\n    for (char c : s) {\n        if (c == '(' || c == '[' || c == '{') {\n            st.push(c);\n        } else {\n            if (st.empty()) return false; // 无左括号匹配\n            char top = st.top();\n            st.pop();\n            if ((c == ')' && top != '(') ||\n                (c == ']' && top != '[') ||\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n                (c == '}' && top != '{')) {\n                return false;\n            }\n        }\n    }\n    return ________________; //在此处填入代码\n}\n12\n13\n14\n15\n16\n17\n18",
       "options": [
         {
           "key": "A",
@@ -340,15 +348,15 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "关于下面代码,说法错误的是(   )。\n    return dp[n][W];\n}\n14\n15\nbool isBalanced(string s) {\n    stack<char> st;\n    for (char c : s) {\n        if (c == '(' || c == '[' || c == '{') {\n            st.push(c);\n        } else {\n            if (st.empty()) return false; // 无左括号匹配\n            char top = st.top();\n            st.pop();\n            if ((c == ')' && top != '(') ||\n                (c == ']' && top != '[') ||\n                (c == '}' && top != '{')) {\n                return false;\n            }\n        }\n    }\n    return ________________; // 在此处填入代码\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\nclass Shape {\nprotected:\n    string name;\npublic:\n    Shape(const string& n) : name(n) {}\n    virtual double area() const {\n        return 0.0;\n    }\n};\nclass Circle : public Shape {\nprivate:\n    double radius;  // 半径\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "关于下面代码,说法错误的是(  )。\nclass Shape {\nprotected:\n    string name;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\npublic:\n    Shape(const string& n) : name(n) {}\n    virtual double area() const {\n        return 0.0;\n    }\n};\n11\n12\n13\n14\n15\nclass Circle : public Shape {\nprivate:\n    double radius;  // 半径\n16\n17\n18\n19\n20\n21\npublic:\n    Circle(const string& n, double r) : Shape(n), radius(r) {}\n    double area() const override {\n        return 3.14159 * radius * radius;\n    }\n};\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\nclass Rectangle : public Shape {\nprivate:\n    double width;   // 宽度\n    double height;  // 高度\npublic:\n    Rectangle(const string& n, double w, double h) : Shape(n), width(w), height(h)\n{}\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n    double area() const override {\n        return width * height;\n    }\n};\nint main() {\n    Circle circle(\"MyCircle\", 5.0);\n    Rectangle rectangle(\"MyRectangle\", 4.0, 6.0);\n    Shape* shapePtr = &circle;\n    cout << \"Area: \" << shapePtr->area() << endl;\n42\n43\n44\n45\n46\n47\n48\n49\n    shapePtr = &rectangle;\n    cout << \"Area: \" << shapePtr->area() << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
-          "text": "语句Shape* shapePtr = &circle;和shapePtr = &rectangle;出现编译错误"
+          "text": "语句Shape* shapePtr = &circle; 和shapePtr = &rectangle; 出现编译错误"
         },
         {
           "key": "B",
-          "text": "Shape为基类, Circle 和 Rectangle是派生类"
+          "text": "Shape 为基类, Circle 和 Rectangle 是派生类"
         },
         {
           "key": "C",
@@ -356,7 +364,7 @@
         },
         {
           "key": "D",
-          "text": "Circle 和 Rectangle通过重写( override )基类的虚函数area和基类指针,实现了运行时多态"
+          "text": "Circle 和 Rectangle 通过重写(override)基类的虚函数area 和基类指针,实现了运行时多态"
         }
       ],
       "answer": "A"
@@ -377,7 +385,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
@@ -393,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在树的深度优先搜索( DFS )中,使用队列作为辅助数据结构以实现 “ 先进后出 ” 的访问顺序。",
+      "stem": "在树的深度优先搜索(DFS)中,使用队列作为辅助数据结构以实现“先进后出”的访问顺序。",
       "options": [
         {
           "key": "T",
@@ -409,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "以下代码实现的是二叉树的中序遍历:\npublic:\n    Circle(const string& n, double r) : Shape(n), radius(r) {}\n    double area() const override {\n        return 3.14159 * radius * radius;\n    }\n};\nclass Rectangle : public Shape {\nprivate:\n    double width;   // 宽度\n    double height;  // 高度\npublic:\n    Rectangle(const string& n, double w, double h) : Shape(n), width(w), height(h)\n{}\n    double area() const override {\n        return width * height;\n    }\n};\nint main() {\n    Circle circle(\"MyCircle\", 5.0);\n    Rectangle rectangle(\"MyRectangle\", 4.0, 6.0);\n    Shape* shapePtr = &circle;\n    cout << \"Area: \" << shapePtr->area() << endl;\n    shapePtr = &rectangle;\n    cout << \"Area: \" << shapePtr->area() << endl;\n    return 0;\n}",
+      "stem": "以下代码实现的是二叉树的中序遍历:\nvoid traverse(TreeNode* root) {\n    if (root == nullptr) return;\n    traverse(root->left);\n    cout << root->val << \" \";\n    traverse(root->right);\n}",
       "options": [
         {
           "key": "T",
@@ -425,7 +433,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
@@ -441,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "二叉排序树( BST )中,若某节点的左子树为空,则该节点一定是树中的最小值节点。",
+      "stem": "二叉排序树(BST)中,若某节点的左子树为空,则该节点一定是树中的最小值节点。",
       "options": [
         {
           "key": "T",
@@ -457,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "在动态规划解决一维硬币找零问题时,若硬币面额为  [1, 3, 4],目标金额为  6,则最少需要  2 枚硬币\n( 3+3 )。",
+      "stem": "在动态规划解决一维硬币找零问题时,若硬币面额为 [1, 3, 4] ,目标金额为 6 ,则最少需要 2 枚硬币\n(3+3)。",
       "options": [
         {
           "key": "T",
@@ -473,7 +481,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
@@ -489,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "以下代码创建的树是一棵完全二叉树:",
+      "stem": "以下代码创建的树是一棵完全二叉树:\nTreeNode* root = new TreeNode{1};\n\nroot->left = new TreeNode{2};\nroot->right = new TreeNode{3};\nroot->left->left = new TreeNode{4};",
       "options": [
         {
           "key": "T",
@@ -505,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "栈和队列均可以用双向链表实现,插入和删除操作的时间复杂度为  O(1) 。",
+      "stem": "栈和队列均可以用双向链表实现,插入和删除操作的时间复杂度为 O(1) 。",
       "options": [
         {
           "key": "T",
@@ -521,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -529,27 +537,45 @@
       "seq": 1,
       "kind": "traditional",
       "title": "编程题 1",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 树上漫步\n3.1.2 题目描述\n小  A 有一棵   个结点的树,这些结点依次以   标号。\n小  A 想在这棵树上漫步。具体来说,小  A 会从树上的某个结点出发,每一步可以移动到与当前结点相邻的结点,并\n且小  A 只会在偶数步(可以是零步)后结束漫步。\n现在小  A 想知道,对于树上的每个结点,从这个结点出发开始漫步,经过偶数步能结束漫步的结点有多少个(可以\n经过重复的节点)。\n3.1.3\n\n输入格式\n第一行,一个正整数  。\n接下来   行,每行两个整数  ,表示树上有一条连接结点   和结点   的边。\n3.1.4 输出格式\n一行,  个整数,第   个整数表示从结点   出发开始漫步,能结束漫步的结点数量。\nvoid traverse(TreeNode* root) {\n    if (root == nullptr) return;\n    traverse(root->left);\n    cout << root->val << \" \";\n    traverse(root->right);\n}\n\nTreeNode* root = new TreeNode{1};\nroot->left = new TreeNode{2};\nroot->right = new TreeNode{3};\nroot->left->left = new TreeNode{4};\n\n3.1.5 样例\n3.1.5.1 输入样例  1\n3.1.5.2 输出样例  1\n3.1.5.3 输入样例  2\n3.1.5.4 输出样例  2\n3.1.6 数据范围\n对于  % 的测试点,保证  。\n对于所有测试点,保证  。\n3.1.7",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n树上漫步\n3.1.2\n题目描述\n小 A 有一棵  个结点的树,这些结点依次以\n 标号。\n小 A 想在这棵树上漫步。具体来说,小 A 会从树上的某个结点出发,每一步可以移动到与当前结点相邻的结点,并\n且小 A 只会在偶数步(可以是零步)后结束漫步。\n现在小 A 想知道,对于树上的每个结点,从这个结点出发开始漫步,经过偶数步能结束漫步的结点有多少个(可以\n经过重复的节点)。\n3.1.3\n\n输入格式\n第一行,一个正整数 。\n接下来\n 行,每行两个整数\n,表示树上有一条连接结点\n 和结点\n 的边。\n3.1.4\n输出格式\n一行, 个整数,第  个整数表示从结点  出发开始漫步,能结束漫步的结点数量。\n3.1.5\n样例\n3.1.5.1\n输入样例 1\n\n1 3\n2 3\n\n3.1.5.2\n输出样例 1\n2 2 1\n\n3.1.5.3\n输入样例 2\n\n1 3\n3 2\n4 3\n\n3.1.5.4\n输出样例 2\n3 3 1 3\n\n3.1.6\n数据范围\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n。\n3.1.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "3\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n",
+          "out": "4\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\nusing namespace std;\nconst int N = 2e5 + 5;\nconst int E = N << 1;\nint n;\nint h[N], to[E], nx[E], et;\nint cnt[N], bel[N];\nvoid ae(int u, int v) {\n    et++;\n    to[et] = v;\n    nx[et] = h[u];\n    h[u] = et;\n}\nvoid dfs(int u, int c, int f) {\n    bel[u] = c;\n    cnt[c]++;\n    for (int i = h[u]; i; i = nx[i])\n        if (to[i] != f)\n            dfs(to[i], c ^ 1, u);\n}\nint main() {\n    scanf(\"%d\", &n);\n    for (int i = 1; i < n; i++) {\n        int u, v;\n        scanf(\"%d%d\", &u, &v);\n        ae(u, v);\n        ae(v, u);\n    }\n    dfs(1, 0, 0);\n    for (int i = 1; i <= n; i++)\n        printf(\"%d%c\", cnt[bel[i]], \" \\n\"[i == n]);\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "编程题 2",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.8 环线\n3.2.9 题目描述\n小  A 喜欢坐地铁。地铁环线有   个车站,依次以   标号。车站  ( )的下一个车站是车站  。\n特殊地,车站   的下一个车站是车站  。\n小  A 会从某个车站出发,乘坐地铁环线到某个车站结束行程,这意味着小  A 至少会经过一个车站。小  A 不会经过一\n个车站多次。当小  A 乘坐地铁环线经过车站   时,小  A 会获得   点快乐值。请你安排小  A 的行程,选择出发车站与\n结束车站,使得获得的快乐值总和最大。\n3.2.10\n\n输入格式\n第一行,一个正整数  ,表示车站的数量。\n第二行,  个整数  ,分别表示经过每个车站时获得的快乐值。\n3.2.11 输出格式\n一行,一个整数,表示小  A 能获得的最大快乐值。\n3.2.12 样例\n3.2.12.5 输入样例  1\n3.2.12.6 输出样例  1\n}",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.8\n环线\n3.2.9\n题目描述\n小 A 喜欢坐地铁。地铁环线有  个车站,依次以\n 标号。车站 (\n)的下一个车站是车站\n。\n特殊地,车站  的下一个车站是车站 。\n小 A 会从某个车站出发,乘坐地铁环线到某个车站结束行程,这意味着小 A 至少会经过一个车站。小 A 不会经过一\n个车站多次。当小 A 乘坐地铁环线经过车站  时,小 A 会获得\n 点快乐值。请你安排小 A 的行程,选择出发车站与\n结束车站,使得获得的快乐值总和最大。\n3.2.10\n\n输入格式\n第一行,一个正整数 ,表示车站的数量。\n第二行, 个整数\n,分别表示经过每个车站时获得的快乐值。\n3.2.11\n输出格式\n一行,一个整数,表示小 A 能获得的最大快乐值。\n3.2.12\n样例\n3.2.12.5\n输入样例 1\n\n-1 2 3 0\n\n3.2.12.6\n输出样例 1\n\n3.2.12.7\n输入样例 2\n\n-3 4 -5 1 3\n\n3.2.12.8\n输出样例 2\n\n3.2.13\n数据范围\n对于\n% 的测试点,保证\n。\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n,\n。\n3.2.14",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "40\n4\n",
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "5\n",
           "out": "5\n",
-          "suspect": true
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\nusing namespace std;\nconst int N = 4e5 + 5;\nint n;\nlong long a[N], pre[N];\nint q[N], ql, qr;\nlong long ans;\nint main() {\n    scanf(\"%d\", &n);\n    for (int i = 1; i <= n; i++) {\n        scanf(\"%lld\", &a[i]);\n        a[n + i] = a[i];\n    }\n    for (int i = 1; i <= 2 * n; i++)\n        pre[i] = pre[i - 1] + a[i];\n    ql = qr = 1;\n    ans = -1e18;\n    for (int i = 1; i <= 2 * n; i++) {\n        while (ql <= qr && q[ql] < i - n)\n            ql++;\n        ans = max(ans, pre[i] - pre[q[ql]]);\n        while (ql <= qr && pre[i] < pre[q[qr]])\n            qr--;\n        q[++qr] = i;\n    }\n    printf(\"%lld\\n\", ans);\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -568,11 +594,8 @@
       "A",
       "B",
       "C",
-      "A",
-      "C"
-    ],
-    [
       "A"
-    ]
+    ],
+    []
   ]
 }

@@ -3,32 +3,32 @@
     "ym": "202503",
     "lang": "python",
     "level": 2,
-    "title": "CCF GESP 2025年3月认证 Python 2级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10200.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1669257104457760.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202503-python-2.pdf"
+    "title": "202503-python-2",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202503-python-2.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2025 年春节有两件轰动全球的事件,一个是 DeepSeek 横空出世,另一个是贺岁片《哪吒 2 》票房惊人,入了\n全球票房榜。下面关于 DeepSeek 与《哪吒 2 》的描述成立的是 (   ) 。",
+      "stem": "2025年春节有两件轰动全球的事件,一个是DeepSeek横空出世,另一个是贺岁片《哪吒2》票房惊人,入了\n全球票房榜。下面关于DeepSeek与《哪吒2》的描述成立的是(   )。",
       "options": [
         {
           "key": "A",
-          "text": "《哪吒 2 》是一款新型操作系统"
+          "text": "《哪吒2》是一款新型操作系统"
         },
         {
           "key": "B",
-          "text": "DeepSeek 是深海钻探软件"
+          "text": "DeepSeek是深海钻探软件"
         },
         {
           "key": "C",
-          "text": "《哪吒 2 》可以生成新的软件"
+          "text": "《哪吒2》可以生成新的软件"
         },
         {
           "key": "D",
-          "text": "DeepSeek 可以根据《哪吒 2 》的场景生成剧情脚本"
+          "text": "DeepSeek可以根据《哪吒2》的场景生成剧情脚本"
         }
       ],
       "answer": "D"
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "对整型变量 N ,如果它能够同时被 3 和 5 整出,则输出N 是含有至少两个质因数。如果用流程图来描述处理过\n程,则输出语句应该在哪种图形框中(   )。",
+      "stem": "对整型变量N,如果它能够同时被3和5整出,则输出N是含有至少两个质因数。如果用流程图来描述处理过\n程,则输出语句应该在哪种图形框中(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "Python 语句print(3+3**(2-2)*3)执行后输出的值是(  )。",
+      "stem": "Python语句print(3+3**(2-2)*3) 执行后输出的值是( )。",
       "options": [
         {
           "key": "A",
@@ -84,11 +84,11 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面 Python 代码执行,其输出是 (  ) 。",
+      "stem": "下面Python代码执行,其输出是( )。\na, b = 3,4\na == b\nb == a\nprint(a,b)\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
-          "text": "3 4 a, b = 3,4 a == b b == a print(a,b)"
+          "text": "3 4"
         },
         {
           "key": "B",
@@ -108,23 +108,23 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "求三色彩球的颜色。有数量无限的红 (Red) 绿 (Green) 蓝 (Blue) 三种彩球排成一行,每组先为 5 个红色球,随后 3\n个绿色,最后为 2 个蓝色。每个球都有编号,从左到右依次为 1,2,3...... 。输入整数代表编号,求该编号球的颜色。下\n面是 Python 代码的实现,正确说法是 (  ) 。",
+      "stem": "求三色彩球的颜色。有数量无限的红(Red)绿(Green)蓝(Blue)三种彩球排成一行,每组先为5个红色球,随后3\n个绿色,最后为2个蓝色。每个球都有编号,从左到右依次为1,2,3......。输入整数代表编号,求该编号球的颜色。下\n面是Python代码的实现,正确说法是(\n )。\nN = int(input())\nremainder = N % 10 #remainder变量保存余数\n1\n2\n3\n4\n5\n6\n7\n8\n9\nif 1 <= remainder <= 5:\n    print(\"Red\")\nelif 6 <= remainder <= 8:\n    print(\"Green\")\nelif remainder == 9 or remainder == 0:\n    print(\"Blue\")",
       "options": [
         {
           "key": "A",
-          "text": "将elif remainder == 9 or remainder == 0:修改为else效果相同"
+          "text": "将elif remainder == 9 or remainder == 0: 修改为else 效果相同"
         },
         {
           "key": "B",
-          "text": "将if 1 <= remainder <= 5:修改为if remainder <= 5:效果相同"
+          "text": "将if 1 <= remainder <= 5: 修改为if remainder <= 5: 效果相同"
         },
         {
           "key": "C",
-          "text": "elif 6 <= remainder <= 8:写法错误,应修改为elif 6 <= remainder and remainder <= 8:"
+          "text": "elif 6 <= remainder <= 8: 写法错误,应修改为elif 6 <= remainder and remainder <= 8:"
         },
         {
           "key": "D",
-          "text": "根据题意remainder = N % 10应修改为remainder = N // 10"
+          "text": "根据题意remainder = N % 10 应修改为remainder = N // 10"
         }
       ],
       "answer": "A"
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后其输出是 (  ) 。",
+      "stem": "下面Python代码执行后其输出是( )。\ntnt = 0\nfor i in range(10):\n    if i % 3:\n        tnt += 1\n    else:\n        tnt += 2\nprint(tnt)\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是 (  ) 。",
+      "stem": "下面Python代码执行后输出是(\n )。\nfor i in range(10, 0, -2):\n    break\nprint(i)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -168,11 +168,11 @@
         },
         {
           "key": "C",
-          "text": "N = int(input()) remainder = N % 10 #remainder 变量保存余数 if 1 <= remainder <= 5: print(\"Red\") elif 6 <= remainder <= 8: print(\"Green\") elif remainder == 9 or remainder == 0: print(\"Blue\") tnt = 0 for i in range(10): if i % 3: tnt += 1 else: tnt += 2 print(tnt) for i in range(10, 0, -2): break print(i)"
+          "text": ""
         },
         {
           "key": "D",
-          "text": "因为循环执行时会执行 break 语句而终止循环,因此 i 的值不确定"
+          "text": "因为循环执行时会执行break语句而终止循环,因此i的值不确定"
         }
       ],
       "answer": "A"
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出是(      )。",
+      "stem": "下面Python代码执行后输出是(     )。\nfor i in range(10):\n    if i % 3 == 0:\n        continue\n1\n2\n3\n    print(\"0\", end = \"#\")\nelse:\n    print(\"1\",end = \"#\")\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是(      )。",
+      "stem": "下面Python代码执行后的输出是(     )。\nfor i in range(5):\n    for j in range(i,0,-1):\n        print(j,end=\"-\")\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后,将输出能被 2 整除且除以 7 余数为 2 的数。下列选项不能实现的是( )。",
+      "stem": "下面Python代码执行后,将输出能被2整除且除以7余数为2的数。下列选项不能实现的是(\n)。\nfor i in range(100):\n    if ________________:\n        print(i)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,31 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面 Python 代码用于求正整数 1 到 N 之间含有 3 的数的个数,横线处应填入代码先后是(     )。\nfor i in range(10):\n    if i % 3 == 0:\n        continue\n    print(\"0\", end = \"#\")\nelse:\n    print(\"1\",end = \"#\")\n1\n2\n3\n4\n5\n6\nfor i in range(5):\n    for j in range(i,0,-1):\n        print(j,end=\"-\")\n1\n2\n3\nfor i in range(100):\n    if ________________:\n        print(i)\n1\n2\n3",
+      "stem": "下面Python代码用于求正整数1到N之间含有3的数的个数,横线处应填入代码先后是(    )。\ncnt = 0\nN = int(input(\"请输入正整数:\"))\nfor i in range(1,N):\n    while i != 0:\n        if i % 10 == 3:\n            cnt +=1\n1\n2\n3\n4\n5\n6\n            __________\n        else:\n            __________\nprint(cnt)\n7\n8\n9\n10",
+      "options": [
+        {
+          "key": "A",
+          "text": "continue i = i // 10"
+        },
+        {
+          "key": "B",
+          "text": "break i //= 10"
+        },
+        {
+          "key": "C",
+          "text": "continue i %= 10"
+        },
+        {
+          "key": "D",
+          "text": "break i %= 10"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "seq": 12,
+      "kind": "choice",
+      "stem": "下面Python代码用于实现九九乘法表,代码中{i*j}与等号之间有一个空格。代码执行后效果是(  ) 。\nfor i in range(1, 10):\n    for j in range(1, i + 1):\n        print(f\"{j}*{i}= {i*j}\", end=\" \")\n    print()\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -263,44 +287,24 @@
           "text": "D."
         }
       ],
-      "answer": "B"
-    },
-    {
-      "seq": 12,
-      "kind": "choice",
-      "stem": "下面 Python 代码用于实现九九乘法表,代码中 {i*j} 与等号之间有一个空格。代码执行后效果是(   )  。",
-      "options": [
-        {
-          "key": "A",
-          "text": "cnt = 0 N = int(input(\" 请输入正整数: \")) for i in range(1,N): while i != 0: if i % 10 == 3: cnt +=1 __________ else: __________ print(cnt) continue i = i // 10 break i //= 10 continue i %= 10 break i %= 10 for i in range(1, 10): for j in range(1, i + 1): print(f\"{j}*{i}= {i*j}\", end=\" \") print()"
-        },
-        {
-          "key": "B",
-          "text": "C."
-        },
-        {
-          "key": "D",
-          "text": ""
-        }
-      ],
       "answer": "D"
     },
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "在数学中 N! 表示 N 的阶乘,即 1 到 N 的乘积,如3!=1*2*3,且0! = 1。下面的两段 Python 代码用于求 1-N\n的阶乘之和,如 N 为 3 ,则是1!+2!+3!。选项中的说法,正确的是(     )。",
+      "stem": "在数学中N!表示N的阶乘,即1到N的乘积,如3!=1*2*3 ,且0! = 1 。下面的两段Python代码用于求1-N\n的阶乘之和,如N为3,则是1!+2!+3! 。选项中的说法,正确的是(    )。\n#实现1\nN = int(input())\ntnt, last = 0, 1\nfor i in range(1,N + 1):\n    last *= i\n    tnt += last\nprint(tnt)\n1\n2\n3\n4\n5\n6\n7\n#实现2\nN = int(input())\ntnt = 0\n1\n2\n3\nfor i in range(1, N + 1):\n    tmp = 1\n    for j in range(1,i + 1):\n        tmp *= j\n    tnt += tmp\nprint(tnt)\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
-          "text": "虽然实现 1 的代码短小,但效率并不高 # 实现 1 N = int(input()) tnt, last = 0, 1 for i in range(1,N + 1): last *= i tnt += last print(tnt) # 实现 2 N = int(input()) tnt = 0 for i in range(1, N + 1): tmp = 1 for j in range(1,i + 1): tmp *= j tnt += tmp print(tnt)"
+          "text": "虽然实现1的代码短小,但效率并不高"
         },
         {
           "key": "B",
-          "text": "实现 2 的代码效率更高,且更易于理解"
+          "text": "实现2的代码效率更高,且更易于理解"
         },
         {
           "key": "C",
-          "text": "实现 1 因为应用了前项计算结果,计算量更小,因此效率高"
+          "text": "实现1因为应用了前项计算结果,计算量更小,因此效率高"
         },
         {
           "key": "D",
@@ -312,11 +316,11 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "哥德巴赫猜想是指大于 2 的偶数都可以分解为两个质数之和,下面的代码用于验证 4-1000 之内的偶数能否分\n解为两个质数之和。下面 Python 代码中假设 isPrime() 是已经定义好用于判断正整数 N 是否为质数。对该段代码,\n的说法是(     )。\n错误",
+      "stem": "哥德巴赫猜想是指大于2的偶数都可以分解为两个质数之和,下面的代码用于验证4-1000之内的偶数能否分\n解为两个质数之和。下面Python代码中假设isPrime()是已经定义好用于判断正整数N是否为质数。对该段代码,\n错误\n的说法是(    )。\nfor i in range(4,1000,2):\n    for j in range(2,i):\n        if isPrime(j) and isPrime(i-j):\n            print(f\"{i}={j}+{i-j}\")\n            break\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
-          "text": "将代码isPrime(j) and isPrime(i-j)修改为 isPrime(j) == True and isPrime(i-j) == True效果相同"
+          "text": "将代码isPrime(j) and isPrime(i-j) 修改为 isPrime(j) == True and isPrime(i-j) == True 效果相同"
         },
         {
           "key": "B",
@@ -324,11 +328,11 @@
         },
         {
           "key": "C",
-          "text": "即便将 ange(4,1000,2) 中的 1000 修改为很大的整数,也不能说从数学上证明了哥德巴赫猜想"
+          "text": "即便将ange(4,1000,2)中的1000修改为很大的整数,也不能说从数学上证明了哥德巴赫猜想"
         },
         {
           "key": "D",
-          "text": "根据题意, break 语句应该与 if 对齐"
+          "text": "根据题意,break语句应该与if对齐"
         }
       ],
       "answer": "D"
@@ -336,23 +340,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面 Python 代码实现输出如下图形,相关说法正确的是(     )。",
+      "stem": "下面Python代码实现输出如下图形,相关说法正确的是(    )。\nN = int(input(\"请输入层数:\"))\n1\n2\n3\nlast = 1\nfor i in range(1,N):\n    for j in range(1,i + 1):\n        if last > 9:\n            last = 1\n4\n5\n6\n7\n8\n9\n10\n11\n12\n        print(last,end = \" \")\n        last += 1\n    print()",
       "options": [
         {
           "key": "A",
-          "text": "最后一行的 print() 有错,应该修改为 print(\"\") , print() 函数不能没有参数"
+          "text": "最后一行的print()有错,应该修改为print(\"\"),print()函数不能没有参数"
         },
         {
           "key": "B",
-          "text": "last += 1 修改为 last = last + 1 执行效果相同"
+          "text": "last += 1修改为last = last + 1执行效果相同"
         },
         {
           "key": "C",
-          "text": "代码中的 range(1, i + 1) 应修改为 range(1, i)"
+          "text": "代码中的range(1, i + 1)应修改为range(1, i)"
         },
         {
           "key": "D",
-          "text": "外层 for 循环前的 last = 1 修改为 last = 0 执行效果相同 for i in range(4,1000,2): for j in range(2,i): if isPrime(j) and isPrime(i-j): print(f\"{i}={j}+{i-j}\") break N = int(input(\" 请输入层数: \")) last = 1 for i in range(1,N): for j in range(1,i + 1): if last > 9: last = 1 print(last,end = \" \") last += 1 print() 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "外层for循环前的last = 1修改为last = 0执行效果相同"
         }
       ],
       "answer": "B"
@@ -362,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "C++ 、 Python 都是高级编程语言,它们每条语句的执行最终都要通过机器指令来完成。(   )",
+      "stem": "C++、Python都是高级编程语言,它们每条语句的执行最终都要通过机器指令来完成。(  )",
       "options": [
         {
           "key": "T",
@@ -373,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在 Python 代码中,假设 N 为正整数,则N - N // 10 * 10与N % 10都将获得 N 的个位数。 (  )",
+      "stem": "在Python代码中,假设N为正整数,则N - N // 10 * 10 与N % 10 都将获得N的个位数。(\n )",
       "options": [
         {
           "key": "T",
@@ -389,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在 Python 语句print(10 <= N <= 12)中,假设 N 为 12 ,则其输出为 True 。原因是执行10 <= N后其值为\nTrue,True与12相比仍然是True。 (  )",
+      "stem": "在Python语句print(10 <= N <= 12) 中,假设N为12,则其输出为True。原因是执行10 <= N 后其值为\nTrue ,True 与12 相比仍然是True 。(\n )",
       "options": [
         {
           "key": "T",
@@ -405,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "Python 表达式N ** 0.5 ** 2 == N中的 N 如果为正整数,则表达式的值为 True ,相当于开平方后平方是本\n身。(   )",
+      "stem": "Python表达式N ** 0.5 ** 2 == N 中的N如果为正整数,则表达式的值为True,相当于开平方后平方是本\n身。(  )",
       "options": [
         {
           "key": "T",
@@ -421,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下面 Python 执行后将输出 3*2=6 。  (  )",
+      "stem": "下面Python执行后将输出3*2=6。 (\n )\na, b = 2, 3\na, b = b, a\n\n\nprint(f\"{a}*{b}={a*b}\")",
       "options": [
         {
           "key": "T",
@@ -437,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后将输出 10 。(   )",
+      "stem": "下面Python代码执行后将输出10。(  )\nfor i in range(10):\n\n    continue\nprint(i)",
       "options": [
         {
           "key": "T",
@@ -453,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后将输出 1 。(   )",
+      "stem": "下面Python代码执行后将输出1。(  )\nfor i in range(1, 10):\n    break\n    continue\nprint(i)",
       "options": [
         {
           "key": "T",
@@ -469,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下面的 Python 代码执行后将输出 10 行 “OK” 。(   )",
+      "stem": "下面的Python代码执行后将输出10行“OK”。(  )\nfor i in range(5):\n    for j in range(i):\n        print(\"OK\")",
       "options": [
         {
           "key": "T",
@@ -485,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "将下面 Python 代码中的 range(1, 5) 调整为 range(5) 输出结果相同。(   )",
+      "stem": "将下面Python代码中的range(1, 5)调整为range(5)输出结果相同。(  )\ntnt = 0\nfor i in range(1, 5):\n    tnt += i\nprint(tnt)",
       "options": [
         {
           "key": "T",
@@ -501,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面 Python 代码执行后将输出 0123 。(   )\na, b = 2, 3\na, b = b, a\nprint(f\"{a}*{b}={a*b}\")\n\n\n\nfor i in range(10):\n    continue\nprint(i)\n\n\n\nfor i in range(1, 10):\n    break\n    continue\nprint(i)\n\n\n\n\nfor i in range(5):\n    for j in range(i):\n        print(\"OK\")\n\n\n\ntnt = 0\nfor i in range(1, 5):\n    tnt += i\nprint(tnt)\n\n\n\n\nfor i in range(5):\n    for i in range(i):\n        continue\n    print(i,end=\"\")",
+      "stem": "下面Python代码执行后将输出0123。(  )\nfor i in range(5):\n    for i in range(i):\n        continue\n    print(i,end=\"\")",
       "options": [
         {
           "key": "T",
@@ -517,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -525,11 +529,18 @@
       "seq": 1,
       "kind": "traditional",
       "title": "时间跨越",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3 41\n1 2 3 4\n2 4 6 8\n3 6 9 12\n\nn, m = map(int, input().split())\n    print(*[i * j for j in range(1, m + 1)])\n\n3.2.8 题面描述\n假设现在是   年   月   日   时而   小时后是   年   月   日   时,对于给定的  ,小杨想请你帮他计算\n出对应的   是多少。\n3.2.9\n\n输入格式\n输入包含五行,每行一个正整数,分别代表  。\n3.2.10 输出格式\n输出四个正整数,代表   。\n3.2.11 样例\n3.2.12 数据范围\n对于全部数据,保证有  。数据保证为合法时间。\n3.2.13 提示\n闰年判断规则\n普通闰年:年份能被  4 整除,但不能被  100 整除。\n世纪闰年:年份能被  400 整除。\n满足以上任意一条规则的年份就是闰年,否则是平年。\n3.2.14",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.8\n题面描述\n假设现在是  年\n 月  日  时而  小时后是  年\n 月\n 日\n 时,对于给定的\n,小杨想请你帮他计算\n出对应的\n 是多少。\n3.2.9\n\n输入格式\n输入包含五行,每行一个正整数,分别代表\n。\n3.2.10\n输出格式\n输出四个正整数,代表\n 。\n3.2.11\n样例\n\n2008 2 29 0\n\n3.2.12\n数据范围\n对于全部数据,保证有\n。数据保证为合法时间。\n3.2.13\n提示\n闰年判断规则\n普通闰年:年份能被 4 整除,但不能被 100 整除。\n世纪闰年:年份能被 400 整除。\n满足以上任意一条规则的年份就是闰年,否则是平年。\n3.2.14",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "2008\n2\n28\n23\n1\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "y = int(input())\nm = int(input())\nd = int(input())\nh = int(input())\nk = int(input())\nh += k\nif h >= 24:\n    h -= 24\n    d += 1\n    days = 0\n    if m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12:\n        days= 31\n    elif m == 4 or m == 6 or m == 9 or m == 11:\n        days= 30\n    elif m == 2:\n        if (y % 4 == 0 and y % 100 != 0) or (y % 400 == 0):\n            days= 29\n        else:\n            days= 28\n    if d > days:\n        d -= days\n        m += 1\n        if m > 12:\n            m = 1\n            y += 1\nprint(y,end=' ')\nprint(m,end=' ')\nprint(d,end=' ')\nprint(h)"
     }
   ],
   "answer_rows": [
@@ -549,6 +560,7 @@
       "C",
       "D",
       "B"
-    ]
+    ],
+    []
   ]
 }

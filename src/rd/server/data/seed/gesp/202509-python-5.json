@@ -3,10 +3,10 @@
     "ym": "202509",
     "lang": "python",
     "level": 5,
-    "title": "CCF GESP 2025年9月认证 Python 5级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10229.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1703973237030944.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202509-python-5.pdf"
+    "title": "202509-python-5",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202509-python-5.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
@@ -36,15 +36,23 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面的 python 代码实现给定单链表头结点  head 和一个整数  val,删除链表中所有结点值等于  val 的节\n点,并返回新的头结点,则横线处填写(    )。",
+      "stem": "下面的python代码实现给定单链表头结点 head 和一个整数 val ,删除链表中所有结点值等于 val 的节\n点,并返回新的头结点,则横线处填写(   )。\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\ndef removeElements(head: ListNode, val: int) -> ListNode:\n    dummy = ListNode(0, head)\n    cur = dummy\n    while cur.next:\n        if cur.next.val == val:\n           ——————————————————————————————————\n            del del_node\n        else:\n            cur = cur.next\n    return dummy.next",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "del_node = del_node. cur.next = del_node.next"
+        },
+        {
+          "key": "B",
+          "text": "del_node = cur.next cur = del_node.next"
         },
         {
           "key": "C",
-          "text": "D. class ListNode: def __init__(self, val=0, next=None): self.val = val self.next = next def removeElements(head: ListNode, val: int) -> ListNode: dummy = ListNode(0, head) cur = dummy while cur.next: if cur.next.val == val: —————————————————————————————————— del del_node else: cur = cur.next return dummy.next del_node = del_node. cur.next = del_node.next del_node = cur.next cur = del_node.next del_node = cur.next cur.next = del_node.next"
+          "text": "del_node = cur.next cur.next = del_node.next"
+        },
+        {
+          "key": "D",
+          "text": "del_node = cur.next cur.next = del_node"
         }
       ],
       "answer": "C"
@@ -52,15 +60,23 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下列python代码用Floyd判断一个单链表中是否存在环,链表的头节点为 head ,即用两个指针在链表上前\n进: slow  每次走 1 步, fast  每次走 2 步,若存在环, fast  终会追上 slow (相遇);若无环, fast  会先到\n达 nullptr。横线上应填写(   )。",
+      "stem": "下列python代码用Floyd判断一个单链表中是否存在环,链表的头节点为head ,即用两个指针在链表上前\n进:slow 每次走 1 步,fast 每次走 2 步,若存在环,fast 终会追上 slow (相遇);若无环,fast 会先到\n达 nullptr。横线上应填写(   )。\nclass ListNode:\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\ndef hasCycle(head: ListNode) -> bool:\n    if not head or not head.next:\n        return False\n    slow = head\n    fast = head.next\n    while fast and fast.next:\n        if slow == fast:\n            return True\n        _________________\n    return False",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "slow = slow.next fast = fast.next.next"
+        },
+        {
+          "key": "B",
+          "text": "slow.next = slow fast = fast.next.next"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "slow = slow.next fast.next = fast.next.next"
+        },
+        {
+          "key": "D",
+          "text": "slow = slow.next fast = fast.next"
         }
       ],
       "answer": "A"
@@ -68,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "4.下列代码用于判断一个数是否为完全数(即等于它的真因子之和的数,如6=1+2+3),哪个选项是正确的实\n现?",
+      "stem": "4.下列代码用于判断一个数是否为完全数(即等于它的真因子之和的数,如6=1+2+3),哪个选项是正确的实\n现?\ndef isPerfectNumber(n: int) -> bool:\n    if n <= 1:\n        return False\n    sum = 1\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            sum += i\n            _______________\n                sum += n // i\n        i += 1\n    return sum == n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
       "options": [
         {
           "key": "A",
@@ -76,7 +92,7 @@
         },
         {
           "key": "B",
-          "text": "if i != n // i: del_node = cur.next cur.next = del_node class ListNode: def __init__(self, x): self.val = x self.next = None def hasCycle(head: ListNode) -> bool: if not head or not head.next: return False slow = head fast = head.next while fast and fast.next: if slow == fast: return True _________________ return False slow = slow.next fast = fast.next.next slow.next = slow fast = fast.next.next slow = slow.next fast.next = fast.next.next slow = slow.next fast = fast.next def isPerfectNumber(n: int) -> bool: if n <= 1: return False sum = 1 i = 2 while i * i <= n: if n % i == 0: sum += i _______________ sum += n // i i += 1 return sum == n"
+          "text": "if i != n // i:"
         },
         {
           "key": "C",
@@ -92,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "以下代码计算两个数的最大公约数(GCD),横线上应填写(   )。",
+      "stem": "以下代码计算两个数的最大公约数(GCD),横线上应填写(   )。\ndef gcd(a: int, b: int) -> int:\n    if a < b:\n        a, b = b, a  # 交换a和b的值\n    while b != 0:\n        temp = a % b\n        a = b\n        b = temp\n    return _________\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -116,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面的代码实现埃拉托斯特尼筛法(埃氏筛),横线处应填入(  )。",
+      "stem": "下面的代码实现埃拉托斯特尼筛法(埃氏筛),横线处应填入(  )。\ndef sieve(n: int):\n    is_prime = [True] * (n + 1)\n    is_prime[0] = is_prime[1] = False\n    for i in range(2, n + 1):\n        if is_prime[i]:\n            for j in range(______, n + 1, i):\n                is_prime[j] = False\n    return is_prime\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -140,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面的代码实现线性筛法(欧拉筛),横线处应填入(  )。",
+      "stem": "下面的代码实现线性筛法(欧拉筛),横线处应填入(  )。\ndef linearSieve(n: int):\n    is_prime = [True] * (n + 1)\n    primes = []\n    for i in range(2, n + 1):\n        if is_prime[i]:\n            primes.append(i)\n        for p in primes:\n            if p * i > n:\n                break\n            is_prime[p * i] = False\n            if _____________:\n                break\n    return primes\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
@@ -156,7 +172,7 @@
         },
         {
           "key": "D",
-          "text": "i * p == n def gcd(a: int, b: int) -> int: if a < b: a, b = b, a # 交换a和b的值 while b != 0: temp = a % b a = b b = temp return _________ def sieve(n: int): is_prime = [True] * (n + 1) is_prime[0] = is_prime[1] = False for i in range(2, n + 1): if is_prime[i]: for j in range(______, n + 1, i): is_prime[j] = False return is_prime def linearSieve(n: int): is_prime = [True] * (n + 1) primes = [] for i in range(2, n + 1): if is_prime[i]: primes.append(i) for p in primes: if p * i > n: break is_prime[p * i] = False if _____________: break return primes"
+          "text": "i * p == n"
         }
       ],
       "answer": "A"
@@ -164,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "线性筛算法中有语句if p * i > n break;,其目的是(     )。",
+      "stem": "线性筛算法中有语句if p * i > n break; ,其目的是(    )。\ndef linearSieve(n: int):\n    is_prime = [True] * (n + 1)\n    primes = []\n    for i in range(2, n + 1):\n        if is_prime[i]:\n            primes.append(i)\n        for p in primes:\n            if p * i > n:\n                break\n            is_prime[p * i] = False\n            if _____________:\n                break\n    return primes\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
@@ -188,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "唯一分解定理描述的是 (   ) 。",
+      "stem": "唯一分解定理描述的是(   )。",
       "options": [
         {
           "key": "A",
@@ -204,7 +220,7 @@
         },
         {
           "key": "D",
-          "text": "素数只有两个因子: 1 和自身"
+          "text": "素数只有两个因子:1 和自身"
         }
       ],
       "answer": "B"
@@ -212,19 +228,23 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "给定一个  n x n 的矩阵  matrix,矩阵的每一行和每一列都按升序排列。下面代码返回矩阵中第  k 小的\n元素,则两处横线上应分别填写(   )。\n\n```\ndef linearSieve(n: int): is_prime = [True] * (n + 1) primes = [] for i in range(2, n + 1): if is_prime[i]: primes.append(i) for p in primes: if p * i > n: break is_prime[p * i] = False if _____________: break return primes def countLE(matrix, x): n = len(matrix) i, j = n - 1, 0 cnt = 0 while i >= 0 and j < n: if matrix[i][j] <= x: cnt += i + 1 j += 1 else: i -= 1 return cnt def kthSmallest(matrix, k): n = len(matrix) lo = matrix[0][0] hi = matrix[n-1][n-1] while lo < hi: mid = lo + (hi - lo) // 2 if countLE(matrix, mid) >= k: ________ else: ________ return lo\n```",
+      "stem": "给定一个 n x n 的矩阵 matrix ,矩阵的每一行和每一列都按升序排列。下面代码返回矩阵中第 k 小的\n元素,则两处横线上应分别填写(  )。\ndef countLE(matrix, x):\n    n = len(matrix)\n    i, j = n - 1, 0\n    cnt = 0\n    while i >= 0 and j < n:\n        if matrix[i][j] <= x:\n            cnt += i + 1\n            j += 1\n        else:\n            i -= 1\n    return cnt\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\ndef kthSmallest(matrix, k):\n    n = len(matrix)\n    lo = matrix[0][0]\n    hi = matrix[n-1][n-1]\n\n    while lo < hi:\n        mid = lo + (hi - lo) // 2\n        if countLE(matrix, mid) >= k:\n            ________\n        else:\n            ________\n    return lo",
       "options": [
         {
           "key": "A",
-          "text": ""
+          "text": "hi = mid - 1; lo = mid + 1;"
         },
         {
           "key": "B",
-          "text": "C."
+          "text": "hi = mid; lo = mid;"
+        },
+        {
+          "key": "C",
+          "text": "hi = mid; lo = mid + 1;"
         },
         {
           "key": "D",
-          "text": ""
+          "text": "hi = mid + 1; lo = mid;"
         }
       ],
       "answer": "C"
@@ -232,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下述python代码实现了快速排序算法,下面说法错误的是(   )。",
+      "stem": "下述python代码实现了快速排序算法,下面说法错误的是(   )。\ndef partition(arr, low, high):\n\n    i, j = low, high\n    while i < j:\n        while i < j and arr[j] >= arr[low]:\n            j -= 1\n        while i < j and arr[i] <= arr[low]:\n            i += 1\n        arr[i], arr[j] = arr[j], arr[i]\n    arr[i], arr[low] = arr[low], arr[i]\n    return i\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\ndef quickSort(arr, low, high):\n    if low < high:\n        pivot = partition(arr, low, high)\n        quickSort(arr, low, pivot - 1)\n        quickSort(arr, pivot + 1, high)",
       "options": [
         {
           "key": "A",
@@ -244,7 +264,7 @@
         },
         {
           "key": "C",
-          "text": "在最差情况下,每轮划分操作都将长度为 的数组划分为长度为 0 和 的两个子数组,此时递归层数达到 ,每层中的循环数为 ,总时间为 。"
+          "text": "在最差情况下,每轮划分操作都将长度为的数组划分为长度为 0 和 的两个子数组,此时递归层数达到 ,每层中的循环数为,总时间为 。"
         },
         {
           "key": "D",
@@ -256,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下述python代码实现了归并排序算法,则横线上应填写(   )。\nhi = mid - 1;\nlo = mid + 1;\n1\n2\nhi = mid;\nlo = mid;\n1\n2\nhi = mid;\nlo = mid + 1;\n1\n2\nhi = mid + 1;\nlo = mid;\n1\n2\ndef partition(arr, low, high):\n\n    i, j = low, high\n    while i < j:\n        while i < j and arr[j] >= arr[low]:\n            j -= 1\n        while i < j and arr[i] <= arr[low]:\n            i += 1\n        arr[i], arr[j] = arr[j], arr[i]\n    arr[i], arr[low] = arr[low], arr[i]\n    return i\ndef quickSort(arr, low, high):\n    if low < high:\n        pivot = partition(arr, low, high)\n        quickSort(arr, low, pivot - 1)\n        quickSort(arr, pivot + 1, high)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\ndef merge(nums, left, mid, right):\n    tmp = []\n    i, j = left, mid + 1\n    while i <= mid and j <= right:\n        if nums[i] <= nums[j]:\n            tmp.append(nums[i])\n            i += 1\n        else:\n            tmp.append(nums[j])\n            j += 1\n\n    while i <= mid:\n        tmp.append(nums[i])\n        i += 1\n\n    while ___________:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16",
+      "stem": "下述python代码实现了归并排序算法,则横线上应填写(   )。\ndef merge(nums, left, mid, right):\n    tmp = []\n    i, j = left, mid + 1\n    while i <= mid and j <= right:\n        if nums[i] <= nums[j]:\n            tmp.append(nums[i])\n            i += 1\n        else:\n            tmp.append(nums[j])\n            j += 1\n\n    while i <= mid:\n        tmp.append(nums[i])\n        i += 1\n\n    while ___________:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n        tmp.append(nums[j])\n        j += 1\n\n    for k in range(len(tmp)):\n        nums[left + k] = tmp[k]\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\ndef mergeSort(nums, left, right):\n    if left >= right:\n        return\n\n    mid = (left + right) // 2\n    mergeSort(nums, left, mid)\n    mergeSort(nums, mid + 1, right)\n    merge(nums, left, mid, right)\n# 使用示例\nif __name__ == \"__main__\":\n    nums = [3, 1, 4, 1, 5, 9, 2, 6]\n    mergeSort(nums, 0, len(nums) - 1)\n    print(nums)  # 输出排序后的数组",
       "options": [
         {
           "key": "A",
@@ -280,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "假设你是一家电影院的排片经理,只有一个放映厅。你有一个电影列表 movies ,其中 movies[i] =\n[start_i, end_i] 表示第 i  部电影的开始和结束时间。请你找出最多能安排多少部不重叠的电影,则横线上应分\n别填写的代码为(   )。",
+      "stem": "假设你是一家电影院的排片经理,只有一个放映厅。你有一个电影列表 movies ,其中 movies[i] =\n[start_i, end_i] 表示第 i 部电影的开始和结束时间。请你找出最多能安排多少部不重叠的电影,则横线上应分\n别填写的代码为(   )。\ndef maxMovies(movies):\n    if not movies:\n        return 0\n\n    # 按照结束时间排序\n    movies.sort(key=lambda x: x[1])\n\n    count = 1\n    _____________ = movies[0][1]\n\n    for i in range(1, len(movies)):\n        if movies[i][0] >= lastEnd:\n            count += 1\n            lastEnd = movies[i][1]\n\n    return count\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16",
       "options": [
         {
           "key": "A",
@@ -304,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "给定一个整数数组 nums ,下面代码找到一个具有最大和的连续子数组,并返回其最大和。则下面说法错\n误的是(   )。\n        tmp.append(nums[j])\n        j += 1\n\n    for k in range(len(tmp)):\n        nums[left + k] = tmp[k]\ndef mergeSort(nums, left, right):\n    if left >= right:\n        return\n\n    mid = (left + right) // 2\n    mergeSort(nums, left, mid)\n    mergeSort(nums, mid + 1, right)\n    merge(nums, left, mid, right)\n# 使用示例\nif __name__ == \"__main__\":\n    nums = [3, 1, 4, 1, 5, 9, 2, 6]\n    mergeSort(nums, 0, len(nums) - 1)\n    print(nums)  # 输出排序后的数组\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\ndef maxMovies(movies):\n    if not movies:\n        return 0\n\n    # 按照结束时间排序\n    movies.sort(key=lambda x: x[1])\n\n    count = 1\n    _____________ = movies[0][1]\n\n    for i in range(1, len(movies)):\n        if movies[i][0] >= lastEnd:\n            count += 1\n            lastEnd = movies[i][1]\n\n    return count\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nimport math\ndef crossSum(nums, left, mid, right):\n1\n2\n3",
+      "stem": "给定一个整数数组nums ,下面代码找到一个具有最大和的连续子数组,并返回其最大和。则下面说法错\n误的是(   )。\nimport math\n1\n2\n3\ndef crossSum(nums, left, mid, right):\n    leftSum = -math.inf\n    sum_val = 0\n    for i in range(mid, left - 1, -1):\n        sum_val += nums[i]\n        leftSum = max(leftSum, sum_val)\n\n    rightSum = -math.inf\n    sum_val = 0\n    for i in range(mid + 1, right + 1):\n        sum_val += nums[i]\n        rightSum = max(rightSum, sum_val)\n\n    return leftSum + rightSum\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\ndef helper(nums, left, right):\n    if left == right:\n        return nums[left]\n\n    mid = left + (right - left) // 2\n    leftMax = helper(nums, left, mid)\n    rightMax = helper(nums, mid + 1, right)\n    crossMax = crossSum(nums, left, mid, right)\n\n    return max(leftMax, rightMax, crossMax)\ndef maxSubArray(nums):\n    return helper(nums, 0, len(nums) - 1)",
       "options": [
         {
           "key": "A",
@@ -328,15 +348,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "给定一个由非负整数组成的数组digits,表示一个非负整数的各位数字(最高位在数组首位)。下面代\n码对该整数执行  +1 操作,并返回结果数组,则横线上应填写(    )。",
+      "stem": "给定一个由非负整数组成的数组digits ,表示一个非负整数的各位数字(最高位在数组首位)。下面代\n码对该整数执行 +1 操作,并返回结果数组,则横线上应填写(   )。\ndef plusOne(digits):\n    for i in range(len(digits)-1, -1, -1):\n        if digits[i] < 9:\n            digits[i] += 1\n            return digits\n        digits[i] = 0\n\n    _______________\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "digits.insert(0, 1) return digits"
+        },
+        {
+          "key": "B",
+          "text": "digits.insert(1, 0) return digits"
         },
         {
           "key": "C",
-          "text": "D. leftSum = -math.inf sum_val = 0 for i in range(mid, left - 1, -1): sum_val += nums[i] leftSum = max(leftSum, sum_val) rightSum = -math.inf sum_val = 0 for i in range(mid + 1, right + 1): sum_val += nums[i] rightSum = max(rightSum, sum_val) return leftSum + rightSum def helper(nums, left, right): if left == right: return nums[left] mid = left + (right - left) // 2 leftMax = helper(nums, left, mid) rightMax = helper(nums, mid + 1, right) crossMax = crossSum(nums, left, mid, right) return max(leftMax, rightMax, crossMax) def maxSubArray(nums): return helper(nums, 0, len(nums) - 1) def plusOne(digits): for i in range(len(digits)-1, -1, -1): if digits[i] < 9: digits[i] += 1 return digits digits[i] = 0 _______________ digits.insert(0, 1) return digits digits.insert(1, 0) return digits digits.insert(0, 1)1 题 号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "digits.insert(0, 1)"
+        },
+        {
+          "key": "D",
+          "text": "digits.insert(1, 1) return digits"
         }
       ],
       "answer": "A"
@@ -346,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "基于下面定义的函数,通过判断 isDivisibleBy9(n) == isDigitSumDivisibleBy9(n) 代码可验算如果\n一个数能被9整除,则它的各位数字之和能被9整除。",
+      "stem": "基于下面定义的函数,通过判断isDivisibleBy9(n) == isDigitSumDivisibleBy9(n) 代码可验算如果\n一个数能被9整除,则它的各位数字之和能被9整除。\ndef isDivisibleBy9(n):\n    return n % 9 == 0\n\n\n\n\n\n\n\n\n\ndef isDigitSumDivisibleBy9(n):\n    num_str = str(n)\n    digit_sum = 0\n    for c in num_str:\n        digit_sum += int(c)\n    return digit_sum % 9 == 0",
       "options": [
         {
           "key": "T",
@@ -357,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "假设函数 gcd() 函数能正确求两个正整数的最大公约数,则下面的 findMusicalPattern(4,6) 函数返回\n2。",
+      "stem": "假设函数gcd() 函数能正确求两个正整数的最大公约数,则下面的findMusicalPattern(4,6) 函数返回\n2。\nimport math\n\n\n\n\n\ndef findMusicalPattern(rhythm1, rhythm2):\n    commonDivisor = math.gcd(rhythm1, rhythm2)\n    patternLength = (rhythm1 * rhythm2) // commonDivisor",
       "options": [
         {
           "key": "T",
@@ -373,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "下面递归实现的斐波那契数列的时间复杂度为 。",
+      "stem": "下面递归实现的斐波那契数列的时间复杂度为\n。\ndef fib_memo(n, memo):\n    if n <= 1:\n        return n\n    if memo[n] != -1:\n        return memo[n]\n    memo[n] = fib_memo(n - 1, memo) + fib_memo(n - 2, memo)\n    return memo[n]\n\n\n\n\n\n\n\n\n\n\n\n\n\nif __name__ == \"__main__\":\n    n = 40\n    memo = [-1] * 100\n    result = fib_memo(n, memo)\n    print(result)",
       "options": [
         {
           "key": "T",
@@ -389,7 +417,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
@@ -405,7 +433,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
@@ -421,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "线性筛关键是“每个合数只会被最小质因子筛到一次”,因此为 。",
+      "stem": "线性筛关键是“每个合数只会被最小质因子筛到一次”,因此为\n。",
       "options": [
         {
           "key": "T",
@@ -437,7 +465,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
@@ -453,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下面代码采用分治算法求解汉诺塔问题,时间复杂度为 。\n    digits.insert(1, 1)\n    return digits\n\n\ndef isDivisibleBy9(n):\n    return n % 9 == 0\ndef isDigitSumDivisibleBy9(n):\n    num_str = str(n)\n    digit_sum = 0\n    for c in num_str:\n        digit_sum += int(c)\n    return digit_sum % 9 == 0\n\n\n\n\n\n\n\n\n\nimport math\ndef findMusicalPattern(rhythm1, rhythm2):\n    commonDivisor = math.gcd(rhythm1, rhythm2)\n    patternLength = (rhythm1 * rhythm2) // commonDivisor\n\n\n\n\n\ndef fib_memo(n, memo):\n    if n <= 1:\n        return n\n    if memo[n] != -1:\n        return memo[n]\n    memo[n] = fib_memo(n - 1, memo) + fib_memo(n - 2, memo)\n    return memo[n]\nif __name__ == \"__main__\":\n    n = 40\n    memo = [-1] * 100\n    result = fib_memo(n, memo)\n    print(result)\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef move(src, tar):\n    pan = src.pop()",
+      "stem": "下面代码采用分治算法求解汉诺塔问题,时间复杂度为\n。\ndef move(src, tar):\n    pan = src.pop()\n\n\n    tar.append(pan)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef dfs(n, src, buf, tar):\n    if n == 1:\n        move(src, tar)\n        return\n\n    dfs(n - 1, src, tar, buf)\n    move(src, tar)\n    dfs(n - 1, buf, src, tar)\ndef solveHanota(A, B, C):\n    n = len(A)\n    dfs(n, A, B, C)",
       "options": [
         {
           "key": "T",
@@ -469,7 +497,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
@@ -485,7 +513,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
@@ -501,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -509,27 +537,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "数字选取",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n给定正整数  ,现在有   共计   个整数。你需要从这   个整数中选取一些整数,使得所选取的整数中任意\n两个不同的整数均互质(也就是说,这两个整数的最大公因数为  )。请你最大化所选取整数的数量。\n例如,当   时,可以选择   共计   个整数。可以验证不存在数量更多的选取整数的方案。\n3.1.2\n\n输入格式\n一行,一个正整数  ,表示给定的正整数。\n3.1.3 输出格式\n一行,一个正整数,表示所选取整数的最大数量。\n3.1.4 样例\n3.1.4.1 输入样例  1\n3.1.4.2 输出样例  1\n3.1.4.3 输入样例  2\n    tar.append(pan)\ndef dfs(n, src, buf, tar):\n    if n == 1:\n        move(src, tar)\n        return\n\n    dfs(n - 1, src, tar, buf)\n    move(src, tar)\n    dfs(n - 1, buf, src, tar)\ndef solveHanota(A, B, C):\n    n = len(A)\n    dfs(n, A, B, C)\n\n3.1.4.4 输出样例  2\n3.1.5 数据范围\n对于  % 的测试点,保证  。\n对于所有测试点,保证  。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n给定正整数 ,现在有\n 共计  个整数。你需要从这  个整数中选取一些整数,使得所选取的整数中任意\n两个不同的整数均互质(也就是说,这两个整数的最大公因数为 )。请你最大化所选取整数的数量。\n例如,当\n 时,可以选择\n 共计  个整数。可以验证不存在数量更多的选取整数的方案。\n3.1.2\n\n输入格式\n一行,一个正整数 ,表示给定的正整数。\n3.1.3\n输出格式\n一行,一个正整数,表示所选取整数的最大数量。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n\n3.1.4.4\n输出样例 2\n\n3.1.5\n数据范围\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "6\n",
+          "out": "4\n",
+          "suspect": false
+        },
+        {
+          "in": "9\n",
+          "out": "5\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input())  # 输入n\np = [0] + [1] * n  # 各个数字是否被选中,p[i]=1表示被选中\nfor i in range(2, int(n**0.5) + 1):  # 假设一个数小于等于n,且不能被int(n**0.5)以下的数整除,那么这\n个数必定为质数\n    if not p[i]:\n        continue\n    for j in range(i, n + 1):\n        if i * j > n:\n            break\n        p[i * j] = 0  # 排除掉能够整除i的数\nprint(sum(p))"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "有趣的数字和",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n如果一个正整数的二进制表示包含奇数个  ,那么小  A 就会认为这个正整数是有趣的。\n例如, 的二进制表示为  ,包含   的个数为   个,所以   是有趣的。但是   包含   个  ,所以   不\n是有趣的。\n给定正整数  ,请你统计满足   的有趣的整数   之和。\n3.2.2\n\n输入格式\n一行,两个正整数  ,表示给定的正整数。\n3.2.3 输出格式\n一行,一个正整数,表示   之间有趣的整数之和。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n\nn = int(input())  # 输入 n\np = [0] + [1] * n  # 各个数字是否被选中, p[i]=1 表示被选中\nfor i in range(2, int(n**0.5) + 1):  # 假设一个数小于等于 n ,且不能被 int(n**0.5) 以下的数整除,那么这\n个数必定为质数\n    if not p[i]:\n        continue\n    for j in range(i, n + 1):\n        if i * j > n:\n            break\n        p[i * j] = 0  # 排除掉能够整除 i 的数\nprint(sum(p))\n\n3 81\n\n3.2.4.3 输入样例  2\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于  % 的测试点,保证  。\n对于另外  % 的测试点,保证   并且  ,其中   是大于   的正整数。\n对于所有测试点,保证  。\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n如果一个正整数的二进制表示包含奇数个 ,那么小 A 就会认为这个正整数是有趣的。\n例如, 的二进制表示为\n,包含  的个数为  个,所以  是有趣的。但是\n 包含  个 ,所以  不\n是有趣的。\n给定正整数\n,请你统计满足\n 的有趣的整数  之和。\n3.2.2\n\n输入格式\n一行,两个正整数\n,表示给定的正整数。\n3.2.3\n输出格式\n一行,一个正整数,表示\n 之间有趣的整数之和。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n3 8\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n65 36248\n\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于\n% 的测试点,保证\n。\n对于另外\n% 的测试点,保证\n 并且\n,其中  是大于  的正整数。\n对于所有测试点,保证\n。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "51\n",
-          "out": "2\n",
+          "in": "19\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "def cal2(n, p):\n    \"\"\"\n    计算奇偶性为p的,0~n的有趣的数之和,但是要求n为2^k-1的形式\n    :return 有趣的数数量,有趣的数之和\n    \"\"\"\n    if n == 0:\n        return 1 - p, 0\n    if n == 1:\n        return 1, p\n    return (n + 1) // 2, n * (n + 1) // 4\ndef cal(n, p):\n    \"\"\"\n    计算奇偶性为p的0~n的有趣的数之和\n    :return 有趣的数数量,有趣的数之和\n    \"\"\"\n    if n <= 1:\n        return cal2(n, p)\n    x = 1\n    while x * 2 <= n:\n        x *= 2\n    # 找出一个k,是的2^k-1<=n,并且k尽可能大,使用上面的简单情况计算\n    cntl, sl = cal2(x - 1, p)\n    # 剩下的部分,减去2^k之后,相当于最高位的1被拿掉了,所以有趣的数剩下的各个数位之和要和p相反\n    cntr, sr = cal(n - x, 1 - p)\n    # 有趣的数数量是两部分之和\n    # 有趣的数之和左边就是cal2的计算结果,右边就是cal的计算结果,再乘以有趣的数被去掉的2^k\n    return cntl + cntr, sl + sr + x * cntr\nl, r = map(int, input().split())\n# 分别计算0~l-1和0~r的有趣的数之和,再做差\n_, ansl = cal(l - 1, 1)\n_, ansr = cal(r, 1)\nprint(ansr - ansl)"
     }
   ],
   "answer_rows": [
@@ -549,6 +590,7 @@
       "B",
       "C",
       "A"
-    ]
+    ],
+    []
   ]
 }

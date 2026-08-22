@@ -3,16 +3,15 @@
     "ym": "202606",
     "lang": "cpp",
     "level": 4,
-    "title": "CCF GESP 2026年6月认证 C++ 4级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10284.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1753295324446752.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202606-cpp-4.pdf"
+    "title": "202606-cpp-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202606-cpp-4.pdf"
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "小杨正在编写一个 “ 数字交换器 ” 程序,他希望通过函数交换两个变量的值。请问运行以下代码后,屏幕上输\n出的是(   )。",
+      "stem": "小杨正在编写一个“数字交换器”程序,他希望通过函数交换两个变量的值。请问运行以下代码后,屏幕上输\n出的是(  )。\nvoid exchange(int *a, int &b) {\n    int t = *a;\n    *a = b;\n    b = t;\n}\nint main() {\n    int x = 100, y = 200;\n    exchange(&x, y);\n    cout << x << \" \" << y;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
       "options": [
         {
           "key": "A",
@@ -36,7 +35,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面程序想通过函数计算三门课总分,横线处应填入的是(   )。",
+      "stem": "下面程序想通过函数计算三门课总分,横线处应填入的是(  )。\nint sumScore(int a, int b, int c) {\n    return a + b + c;\n}\nint main() {\n    int chinese = 88, math = 95, english = 90;\n    int total = __________;\n    cout << total;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -60,7 +59,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面程序输出结果是(   )。\nvoid exchange(int *a, int &b) {\n    int t = *a;\n    *a = b;\n    b = t;\n}\nint main() {\n    int x = 100, y = 200;\n    exchange(&x, y);\n    cout << x << \" \" << y;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nint sumScore(int a, int b, int c) {\n    return a + b + c;\n}\nint main() {\n    int chinese = 88, math = 95, english = 90;\n    int total = __________;\n    cout << total;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+      "stem": "下面程序输出结果是(  )。\nint addOne(int x) {\n    return x + 1;\n}\nint main() {\n    int a = 6;\n    cout << addOne(a) + addOne(3);\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -84,7 +83,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "关于下面程序,说法正确的是(   )。",
+      "stem": "关于下面程序,说法正确的是(  )。\nvoid show() {\n    int stars = 5;\n}\nint main() {\n    cout << stars;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -108,7 +107,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "小杨在调试一个 “ 等级提升 ” 系统,代码逻辑如下,执行后  *p 的值是(   )。",
+      "stem": "小杨在调试一个“等级提升”系统,代码逻辑如下,执行后 *p 的值是(  )。\nint lv = 5, next_lv = 6;\nint *p = &lv;\n*p = *p + 1;\np = &next_lv;\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -132,7 +131,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "小杨正在开发一款名为 “ 星际网格 ” 的游戏,他用二维数组  int map[5][4]; 来表示地图。已知  int 占\n字节,如果  map 的内存地址是  0x2000,则表达式  &map + 1 的地址值是(   )。",
+      "stem": "小杨正在开发一款名为“星际网格”的游戏,他用二维数组 int map[5][4]; 来表示地图。已知 int 占\n字节,如果 map 的内存地址是 0x2000 ,则表达式 &map + 1 的地址值是(  )。",
       "options": [
         {
           "key": "A",
@@ -156,7 +155,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "执行完下面代码后,变量  val 的值是(   )。\nint addOne(int x) {\n    return x + 1;\n}\nint main() {\n    int a = 6;\n    cout << addOne(a) + addOne(3);\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\nvoid show() {\n    int stars = 5;\n}\nint main() {\n    cout << stars;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\nint lv = 5, next_lv = 6;\nint *p = &lv;\n*p = *p + 1;\np = &next_lv;\n1\n2\n3\n4",
+      "stem": "执行完下面代码后,变量 val 的值是(  )。\nint data[] = {10, 20, 30, 40, 50};\nint *ptr = data + 2;\nint val = *(ptr - 1) + *(ptr + 1);\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -180,7 +179,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "某班   个小组、每组   名同学的分数存入下面的二维数组  score,则  score[1][2] 的值是(   )。",
+      "stem": "某班  个小组、每组  名同学的分数存入下面的二维数组 score ,则 score[1][2] 的值是(  )。\nint score[3][4] = {\n    {80, 81, 82, 83},\n    {90, 91, 92, 93},\n    {70, 71, 72, 73}\n};\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -204,7 +203,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "小杨定义了一个结构体  Hero 来表示游戏角色,下面哪种初始化方式会由于语法错误导致编译失败?(\n)。",
+      "stem": "小杨定义了一个结构体 Hero 来表示游戏角色,下面哪种初始化方式会由于语法错误导致编译失败?(\n)。\nstruct Hero {\n    string name;\n    int hp;\n};\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -212,7 +211,11 @@
         },
         {
           "key": "B",
-          "text": "C. Hero h = new Hero{\"Arthur\", 100};"
+          "text": "Hero h; h.name = \"Arthur\"; h.hp = 100;"
+        },
+        {
+          "key": "C",
+          "text": "Hero h = new Hero{\"Arthur\", 100};"
         },
         {
           "key": "D",
@@ -224,7 +227,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面程序输出结果是(   )。",
+      "stem": "下面程序输出结果是(  )。\nstruct Book {\n    string title;\n    int pages;\n};\nint main() {\n    Book books[2] = {{\"Math\", 120}, {\"Science\", 150}};\n    cout << books[1].title;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -232,7 +235,7 @@
         },
         {
           "key": "B",
-          "text": "Science int data[] = {10, 20, 30, 40, 50}; int *ptr = data + 2; int val = *(ptr - 1) + *(ptr + 1); int score[3][4] = { {80, 81, 82, 83}, {90, 91, 92, 93}, {70, 71, 72, 73} }; struct Hero { string name; int hp; }; Hero h; h.name = \"Arthur\"; h.hp = 100; struct Book { string title; int pages; }; int main() { Book books[2] = {{\"Math\", 120}, {\"Science\", 150}}; cout << books[1].title; return 0; }"
+          "text": "Science"
         },
         {
           "key": "C",
@@ -248,7 +251,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "小杨在对 “ 能量晶石 ” 按亮度进行排序。如果两块晶石亮度相同,他希望保持它们在原始序列中的相对顺\n序。下列关于排序算法稳定性的说法,错误的是(   )。",
+      "stem": "小杨在对“能量晶石”按亮度进行排序。如果两块晶石亮度相同,他希望保持它们在原始序列中的相对顺\n序。下列关于排序算法稳定性的说法,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -272,7 +275,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "小杨的机器人正在能量踏板上跳跃,踏板编号为  。跳到第   块踏板的方案数满足递推式\n。若  ,则运行以下代码计算  jump(5) 的结果是(   )。",
+      "stem": "小杨的机器人正在能量踏板上跳跃,踏板编号为\n。跳到第  块踏板的方案数满足递推式\n。若\n,则运行以下代码计算 jump(5) 的结果是(  )。\nint jump(int n) {\n    if (n <= 2)\n        return n;\n    int a = 1, b = 2, c = 0;\n    for (int i = 3; i <= n; i++) {\n        c = a + b;\n        a = b;\n        b = c;\n    }\n    return c;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
       "options": [
         {
           "key": "A",
@@ -296,7 +299,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "在 “ 模拟实验室 ” 程序中,为了防止除以   导致崩溃,小杨使用了异常处理机制。执行以下代码将输出(\n)。",
+      "stem": "在“模拟实验室”程序中,为了防止除以  导致崩溃,小杨使用了异常处理机制。执行以下代码将输出(\n)。\ntry {\n    int x = 10, y = 0;\n    if (y == 0) throw \"Zero Error\";\n    cout << x / y;\n} catch (int e) {\n    cout << \"Error Code: \" << e;\n} catch (const char* msg) {\n    cout << \"Caught: \" << msg;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -320,7 +323,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面代码使用某种排序算法,将数组中的元素按从小到大排序。这段代码使用的排序算法是(   )。\nint jump(int n) {\n    if (n <= 2)\n        return n;\n    int a = 1, b = 2, c = 0;\n    for (int i = 3; i <= n; i++) {\n        c = a + b;\n        a = b;\n        b = c;\n    }\n    return c;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\ntry {\n    int x = 10, y = 0;\n    if (y == 0) throw \"Zero Error\";\n    cout << x / y;\n} catch (int e) {\n    cout << \"Error Code: \" << e;\n} catch (const char* msg) {\n    cout << \"Caught: \" << msg;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "下面代码使用某种排序算法,将数组中的元素按从小到大排序。这段代码使用的排序算法是(  )。\nvoid mystery_sort(double arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        int minPos = i;\n        for (int j = i + 1; j < n; j++) {\n            if (arr[j] < arr[minPos]) {\n                minPos = j;\n            }\n        }\n        double temp = arr[i];\n        arr[i] = arr[minPos];\n        arr[minPos] = temp;\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
@@ -344,7 +347,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "小杨正在读取 “ 冒险日志 ” 文件  quest.txt。若文件内容为  Level 10,执行以下程序后输出为(   )。",
+      "stem": "小杨正在读取“冒险日志”文件 quest.txt 。若文件内容为 Level 10 ,执行以下程序后输出为(  )。\nifstream fin(\"quest.txt\");\nstring s;\nint v;\nfin >> s >> v;\ncout << s.length() * v;\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -370,7 +373,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "运行以下程序后,变量  a 的值最终会变为  20。",
+      "stem": "运行以下程序后,变量 a 的值最终会变为 20 。\nvoid modify(int *p) {\n    *p = *p + 10;\n}\nint main() {\n    int a = 10;\n    modify(&a);\n    return 0;\n}",
       "options": [
         {
           "key": "T",
@@ -386,7 +389,7 @@
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "在  C++ 中,引用一旦初始化并绑定到某个变量后,可以通过赋值语句将其重新绑定到另一个变量。",
+      "stem": "在 C++ 中,引用一旦初始化并绑定到某个变量后,可以通过赋值语句将其重新绑定到另一个变量。",
       "options": [
         {
           "key": "T",
@@ -402,7 +405,7 @@
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "下面程序可以正确计算并输出   名学生的平均成绩。\nvoid mystery_sort(double arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        int minPos = i;\n        for (int j = i + 1; j < n; j++) {\n            if (arr[j] < arr[minPos]) {\n                minPos = j;\n            }\n        }\n        double temp = arr[i];\n        arr[i] = arr[minPos];\n        arr[minPos] = temp;\n    }\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\nifstream fin(\"quest.txt\");\nstring s;\nint v;\nfin >> s >> v;\ncout << s.length() * v;\n\n\n\n\n\nvoid modify(int *p) {\n    *p = *p + 10;\n}\nint main() {\n    int a = 10;\n    modify(&a);\n    return 0;\n}",
+      "stem": "下面程序可以正确计算并输出  名学生的平均成绩。\nstruct Student {\n    int id;\n    int score;\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint main() {\n    Student students[3] = {\n        {1, 90},\n        {2, 80},\n        {3, 100}\n    };\n    int sum = 0;\n    for (int i = 0; i < 3; i++) {\n        sum += students[i].score;\n    }\n    double average = sum / 3.0;\n    cout << average << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "T",
@@ -434,7 +437,7 @@
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "如果使用带  flag 的冒泡排序,且待排序数组一开始就是有序的,那么算法只需一轮扫描即可结束,时间\n复杂度为  。",
+      "stem": "如果使用带 flag 的冒泡排序,且待排序数组一开始就是有序的,那么算法只需一轮扫描即可结束,时间\n复杂度为\n。",
       "options": [
         {
           "key": "T",
@@ -450,7 +453,7 @@
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "在  C++ 中定义二维数组并初始化时,可以省略第一维,但不能省略第二维。因此  int a[][2] = {{1, 2},\n{3, 4}}; 是合法的,而  int a[][] = {{1, 2}, {3, 4}}; 是不合法的。",
+      "stem": "在 C++ 中定义二维数组并初始化时,可以省略第一维,但不能省略第二维。因此 int a[][2] = {{1, 2},\n{3, 4}}; 是合法的,而 int a[][] = {{1, 2}, {3, 4}}; 是不合法的。",
       "options": [
         {
           "key": "T",
@@ -466,7 +469,7 @@
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下面代码的时间复杂度是  。",
+      "stem": "下面代码的时间复杂度是\n。\nint cnt = 0;\nfor (int i = 1; i <= n; i++) {\n    for (int j = 1; j <= i; j++) {\n        cnt++;\n    }\n}",
       "options": [
         {
           "key": "T",
@@ -482,7 +485,7 @@
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "假设文件  output.txt 能正常打开,下面代码通过  rdbuf 将  cout 的输出重定向到了文件中。",
+      "stem": "假设文件 output.txt 能正常打开,下面代码通过 rdbuf 将 cout 的输出重定向到了文件中。\nofstream fout(\"output.txt\");\nstreambuf* old_buf = cout.rdbuf();\ncout.rdbuf(fout.rdbuf());\ncout << \"GESP Exam\";\ncout.rdbuf(old_buf);",
       "options": [
         {
           "key": "T",
@@ -498,7 +501,7 @@
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "小杨想通过下面程序给饭卡充值,程序会输出  70。",
+      "stem": "小杨想通过下面程序给饭卡充值,程序会输出 70 。\nvoid recharge(int money) {\n    money += 20;\n}\nint main() {\n    int card = 50;\n    recharge(card);\n    cout << card;\n    return 0;\n}",
       "options": [
         {
           "key": "T",
@@ -514,7 +517,7 @@
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面代码可以通过编译。\nstruct Student {\n    int id;\n    int score;\n};\nint main() {\n    Student students[3] = {\n        {1, 90},\n        {2, 80},\n        {3, 100}\n    };\n    int sum = 0;\n    for (int i = 0; i < 3; i++) {\n        sum += students[i].score;\n    }\n    double average = sum / 3.0;\n    cout << average << endl;\n    return 0;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint cnt = 0;\nfor (int i = 1; i <= n; i++) {\n    for (int j = 1; j <= i; j++) {\n        cnt++;\n    }\n}\n\n\n\n\n\n\nofstream fout(\"output.txt\");\nstreambuf* old_buf = cout.rdbuf();\ncout.rdbuf(fout.rdbuf());\ncout << \"GESP Exam\";\ncout.rdbuf(old_buf);\n\n\n\n\n\nvoid recharge(int money) {\n    money += 20;\n}\nint main() {\n    int card = 50;\n    recharge(card);\n    cout << card;\n    return 0;\n}",
+      "stem": "下面代码可以通过编译。\nint a[5];\na++;",
       "options": [
         {
           "key": "T",
@@ -533,23 +536,24 @@
       "seq": 1,
       "kind": "traditional",
       "title": "扫雷",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小杨同学正在游玩经典游戏「扫雷」,他想自己生成一个「扫雷」的地图。\n小杨同学希望生成的地图大小为   行   列,一共   个区块。\n区块行号为  ,列号为  。\n其中一些区块为雷区,其它区块不为雷区。\n小杨同学指定了   个区块为雷区,而其它区块均不为雷区。小杨同学希望你帮忙计算非雷区的区块,每个区块与多\n少个雷区相邻?\n我们定义区块相邻,当且仅当两个区块至少有一个公共顶点(也就是说对于不在地图边缘的区块,周围   个区块均\n与其相邻)。\n3.1.2\n\n输入格式\n输入包含   行。\n第一行,三个正整数  ,  和  ,分别表示地图行数和列数,以及雷区数量。\n接下来的   行,每行有   个整数,分别表示第   个雷区的行号和列号。\n保证输入的雷区不重复。\n3.1.3 输出格式\n输出   行,每行   个  字符(使用空格分割),对于第   行第   列,输出地图对应区块的信息:\n1. 如果为雷区,输出  *;\n2. 如果不是雷区,输出其相邻雷区数量(输出   到   中的一个数字)。\n3.1.4 样例\n3.1.5 输入样例  1\nint a[5];\na++;\n\n3 4 4\n1 1\n1 3\n2 4\n3 2\n\n3.1.6 输出样例  1\n3.1.7 输出解释  1\n根据输入,在   的地图上有   个雷区,分别是  , ,  和  ,如输出样例中  * 所示,其它非雷\n区区块的相邻雷区数量可以直观看出。\n3.1.8 数据范围\n。\n输入的雷区必定在地图内且不重复,注意行号和列号均从   开始。\n3.1.9",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小杨同学正在游玩经典游戏「扫雷」,他想自己生成一个「扫雷」的地图。\n小杨同学希望生成的地图大小为  行\n 列,一共\n 个区块。\n区块行号为\n,列号为\n。\n其中一些区块为雷区,其它区块不为雷区。\n小杨同学指定了  个区块为雷区,而其它区块均不为雷区。小杨同学希望你帮忙计算非雷区的区块,每个区块与多\n少个雷区相邻?\n我们定义区块相邻,当且仅当两个区块至少有一个公共顶点(也就是说对于不在地图边缘的区块,周围  个区块均\n与其相邻)。\n3.1.2\n\n输入格式\n输入包含\n 行。\n第一行,三个正整数 ,\n 和 ,分别表示地图行数和列数,以及雷区数量。\n接下来的  行,每行有  个整数,分别表示第  个雷区的行号和列号。\n保证输入的雷区不重复。\n3.1.3\n输出格式\n输出  行,每行\n 个 字符(使用空格分割),对于第  行第  列,输出地图对应区块的信息:\n1. 如果为雷区,输出 * ;\n2. 如果不是雷区,输出其相邻雷区数量(输出  到  中的一个数字)。\n3.1.4\n样例\n3.1.5\n输入样例 1\n3 4 4\n1 1\n1 3\n2 4\n3 2\n\n3.1.6\n输出样例 1\n* 2 * 2\n2 3 3 *\n1 * 2 1\n\n3.1.7\n输出解释 1\n根据输入,在\n 的地图上有  个雷区,分别是\n,\n,\n 和\n,如输出样例中 * 所示,其它非雷\n区区块的相邻雷区数量可以直观看出。\n3.1.8\n数据范围\n。\n输入的雷区必定在地图内且不重复,注意行号和列号均从  开始。\n3.1.9",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "2\n",
-          "out": "2\n",
+          "in": "4\n5\n",
+          "out": "3\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <iostream>\nusing namespace std;\nint mp[510][510];\nint main() {\n    int n, m, q;\n    cin >> n >> m >> q;\n    for (int i = 0; i < q; ++i) {\n        int x, y;\n        cin >> x >> y;\n        mp[x-1][y-1] = -1;\n    }\n    for (int i = 0; i < n; ++i) {\n        for (int j = 0; j < m; ++j) {\n            if (mp[i][j] == -1) {\n                cout << '*' << ' ';\n                continue;\n            }\n            for (int di = -1; di <= 1; ++di) {\n                for (int dj = -1; dj <= 1; ++dj) {\n                    if (i + di < 0 || i + di >= n || j + dj < 0 || j + dj >= m)\n                        continue;\n                    if (mp[i+di][j+dj] == -1)\n                        mp[i][j] += 1;\n                }\n            }\n            cout << mp[i][j] << ' ';\n        }\n        cout << '\\n';\n    }\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "身高体重指数",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n* 2 * 2\n2 3 3 *\n1 * 2 1",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n一个人的身高体重指数(BMI)等于其体重(千克为单位)除以其身高(米为单位)的平方。\n例如,一个体重为\n,身高为\n 的人的身高体重指数为\n。\n现在有  个小朋友,第  个小朋友的编号为 ,体重为\n,身高为\n。\n请按照身高体重指数从高到低为小朋友们排序,数据保证不存在两个小朋友的身高体重指数完全相同。输出排序后\n小朋友的编号。\n3.2.2\n\n输入格式\n输入  行,\n第一行为一个正整数 ,表示小朋友的个数;\n第二行为  个整数\n 表示小朋友们的体重,单位为\n;\n第三行为  个浮点数\n 表示小朋友们的身高,单位为\n。\n3.2.3\n输出格式\n输出一行  个数,表示按照身高体重指数从高到低排序后的编号。\n3.2.4\n样例\n3.2.5\n输入样例 1\n\n45 33 39\n1.55 1.33 1.44\n\n3.2.6\n输出样例 1\n3 1 2\n\n3.2.7\n样例解释\n三个小朋友(编号依次为 1 ,2 ,3 )的身高体重指数分别为(保留两位小数的结果):\n,\n,\n,故\n排序后输出的编号为 3 1 2 。\n3.2.8\n数据范围\n,\n 均恰有两位小数。\n3.2.9",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -559,7 +563,8 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <iostream>\nusing namespace std;\nstruct Human {\n    int id;\n    int w;\n    double h;\n} humans[1010];\nvoid bubble_sort(int n) {\n    for (int i = 0; i < n; ++i) {\n        for (int j = 1; j < n - i; ++j) {\n            double bmi1 = (double)humans[j-1].w / humans[j-1].h / humans[j-1].h;\n            double bmi2 = (double)humans[j].w / humans[j].h / humans[j].h;\n            if (bmi1 < bmi2)\n                swap(humans[j - 1], humans[j]);\n        }\n    }\n}\nint main() {\n    int n;\n    cin >> n;\n    for (int i = 0; i < n; ++i)\n        humans[i].id = i + 1;\n    for (int i = 0; i < n; ++i)\n        cin >> humans[i].w;\n    for (int i = 0; i < n; ++i)\n        cin >> humans[i].h;\n    bubble_sort(n);\n    for (int i = 0; i < n; ++i)\n        cout << humans[i].id << ' ';\n    cout << endl;\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -578,11 +583,8 @@
       "B",
       "C",
       "C",
-      "A",
-      "C"
-    ],
-    [
       "A"
-    ]
+    ],
+    []
   ]
 }

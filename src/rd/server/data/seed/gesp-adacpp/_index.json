@@ -858,17 +858,6 @@
     }
   },
   {
-    "slug": "gesp-cpp-8ji-202406",
-    "title": "GESP C++八级 202406",
-    "questions": 25,
-    "answered": 25,
-    "meta": {
-      "lang": "cpp",
-      "level": 8,
-      "ym": "202406"
-    }
-  },
-  {
     "slug": "gesp-cpp-8ji-202412",
     "title": "GESP C++八级 202412",
     "questions": 25,

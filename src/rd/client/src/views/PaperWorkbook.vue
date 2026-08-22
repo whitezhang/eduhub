@@ -52,6 +52,11 @@ function bankSource() {
   return src || "";
 }
 
+const isGespPaper = computed(() => {
+  const t = String(paper.value?.title || "");
+  return t.startsWith("GESP") || bankSource() === "gesp";
+});
+
 function ensureAnswer(p) {
   const key = String(p.id);
   if (!answers[key]) {
@@ -394,6 +399,9 @@ onUnmounted(() => {
       </p>
       <h1 v-if="paper" class="serif">{{ paper.title }}</h1>
       <p v-if="paper" class="muted">本卷 {{ paper.problems.length }} 题。左侧可跳转；标记用于稍后复查。</p>
+      <p v-if="isGespPaper" class="muted workbook-source">
+        选择/判断来自 AdaCpp；编程题来自 CCF 官方 PDF。
+      </p>
       <p v-if="saveHint" class="muted">{{ saveHint }}</p>
       <p v-if="err" class="err">{{ err }}</p>
       <p v-if="loading" class="muted">载入中</p>
@@ -481,7 +489,9 @@ onUnmounted(() => {
                   >运行样例</button>
                 </div>
               </template>
-              <p v-if="!p.has_answer" class="muted">本题还没有标准答案。作答会记下，但不评分。</p>
+              <p v-if="!p.has_answer" class="muted">
+                {{ p.type === 'traditional' ? '本题还没有满分程序。作答会记下，但不评分。' : '本题还没有标准答案。作答会记下，但不评分。' }}
+              </p>
               <p v-if="ensureAnswer(p).waiting" class="muted">{{ ensureAnswer(p).waiting }}</p>
               <p v-if="ensureAnswer(p).unofficial" class="muted">非正式分。仅跑了公开样例。</p>
               <div v-if="ensureAnswer(p).result">

@@ -3,16 +3,16 @@
     "ym": "202506",
     "lang": "cpp",
     "level": 3,
-    "title": "CCF GESP 2025年6月认证 C++ 3级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10217.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1699464809021472.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202506-cpp-3.pdf"
+    "title": "202506-cpp-3",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202506-cpp-3.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "8 位二进制原码能表示的最小整数是:(  )",
+      "stem": "8位二进制原码能表示的最小整数是:( )",
       "options": [
         {
           "key": "A",
@@ -40,19 +40,19 @@
       "options": [
         {
           "key": "A",
-          "text": "1 种"
+          "text": "1种"
         },
         {
           "key": "B",
-          "text": "2 种"
+          "text": "2种"
         },
         {
           "key": "C",
-          "text": "8 种"
+          "text": "8种"
         },
         {
           "key": "D",
-          "text": "16 种"
+          "text": "16种"
         }
       ],
       "answer": "B"
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "补码  1011 1011 对应的真值是 ( )",
+      "stem": "补码 1011 1011 对应的真值是( )",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "若 X 的 8 位补码为  0000 1010 ,则  X/2 的补码是(   )。",
+      "stem": "若X的8位补码为 0000 1010,则 X/2 的补码是(  )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "二进制数  1101.101 对应的十进制数是 ( )",
+      "stem": "二进制数 1101.101 对应的十进制数是( )",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "补码加法中,若符号 位无进位而次高位有进位,则说明( )",
+      "stem": "补码加法中,若符号位无进位而次高位有进位,则说明()",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "以下程序使用枚举法(穷举法)求解满足条件的三位数,横线处应该填入的是()\n\n```\nint b = (i / 10) / 10;\nint b = (i / 10) % 10;\nint b = (i % 10) / 10;\nint b = (i % 10) % 10;\n```",
+      "stem": "以下程序使用枚举法(穷举法)求解满足条件的三位数,横线处应该填入的是()\n#include <iostream>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nint main() {\n    int count = 0;\n    for (int i = 100; i <= 999; i++) {\n        int a = i / 100;\n        ————————————————————\n        int c = i % 10;\n        if (a * a + b * b == c * c) {\n            count++;\n        }\n    }\n    cout << count << endl;\n    return 0;\n}\n\n```\nint b = (i / 10) / 10;\nint b = (i / 10) % 10;\nint b = (i % 10) / 10;\nint b = (i % 10) % 10;\n```",
       "options": [
         {
           "key": "A",
@@ -276,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "以下程序模拟了一个简单的小球反弹过程,横线处应该填入的是()",
+      "stem": "以下程序模拟了一个简单的小球反弹过程,横线处应该填入的是()\n#include <iostream>\nusing namespace std;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nint main() {\n    int height = 10;\n    int distance = 0;\n    for (int i = 1; i <= 5; i++) { // 模拟5次落地\n        ——————————————————————\n        height /= 2;\n        distance += height;\n    }\n    cout << distance << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -300,7 +300,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "C++ 代码string s = \"GESP 考试 \"; , s 占据的字节数是()",
+      "stem": "C++代码string s = \"GESP考试\"; ,s占据的字节数是()",
       "options": [
         {
           "key": "A",
@@ -312,7 +312,7 @@
         },
         {
           "key": "C",
-          "text": "8 或 10"
+          "text": "8或10"
         },
         {
           "key": "D",
@@ -324,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "C++ 语句string s=\"Gesp Test\"; 执行 s.rfind(\"e\") 以后 , 输出的是()\n#include <iostream>\nusing namespace std;\nint main() {\n    int count = 0;\n    for (int i = 100; i <= 999; i++) {\n        int a = i / 100;\n        ————————————————————\n        int c = i % 10;\n        if (a * a + b * b == c * c) {\n            count++;\n        }\n    }\n    cout << count << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n#include <iostream>\nusing namespace std;\nint main() {\n    int height = 10;\n    int distance = 0;\n    for (int i = 1; i <= 5; i++) { // 模拟 5 次落地\n        ——————————————————————\n        height /= 2;\n        distance += height;\n    }\n    cout << distance << endl;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "C++语句string s=\"Gesp Test\"; 执行s.rfind(\"e\")以后,输出的是()",
       "options": [
         {
           "key": "A",
@@ -348,7 +348,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "字符串 \"Gesp 考试 \", 字符数是(  )",
+      "stem": "字符串\"Gesp考试\",字符数是( )",
       "options": [
         {
           "key": "A",
@@ -374,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "C++ 中string 的== 运算符比较的是字符串的内存地址,而非内容",
+      "stem": "C++中string 的== 运算符比较的是字符串的内存地址,而非内容",
       "options": [
         {
           "key": "T",
@@ -385,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "string 的substr(1, 3) 返回从下标 1 开始的 3 个字符的子串。",
+      "stem": "string 的substr(1, 3) 返回从下标1开始的3个字符的子串。",
       "options": [
         {
           "key": "T",
@@ -401,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "x 是浮点数,(x >> 1) 等价于  x / 2",
+      "stem": "x 是浮点数,(x >> 1) 等价于 x / 2",
       "options": [
         {
           "key": "T",
@@ -417,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "string(\"hello\") == \"hello\" 的比较结果为 true 。",
+      "stem": "string(\"hello\") == \"hello\" 的比较结果为true。",
       "options": [
         {
           "key": "T",
@@ -433,7 +433,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
@@ -449,7 +449,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
@@ -465,7 +465,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
@@ -481,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在数学纸面计算中,pow(2, 3) 的计算结果一定是 8 ,但是在 C++ 中,如果遇到数据类型是浮点数,那就不\n一定正确。",
+      "stem": "在数学纸面计算中,pow(2, 3) 的计算结果一定是8,但是在C++中,如果遇到数据类型是浮点数,那就不\n一定正确。",
       "options": [
         {
           "key": "T",
@@ -497,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在  C++ 中,枚举的底层类型可以是非整型(如  float 或  double )。",
+      "stem": "在 C++ 中,枚举的底层类型可以是非整型(如 float 或 double )。",
       "options": [
         {
           "key": "T",
@@ -513,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "函数声明  double f(); 返回  int 时,会自动转换为  double",
+      "stem": "函数声明 double f(); 返回 int 时,会自动转换为 double",
       "options": [
         {
           "key": "T",
@@ -529,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -537,32 +537,45 @@
       "seq": 1,
       "kind": "traditional",
       "title": "奇偶校验",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n\n3.1.1 题目描述\n数据在传输过程中可能出错,因此接收方收到数据后通常会校验传输的数据是否正确,奇偶校验是经典的校验方式\n之一。\n给定  个非负整数  代表所传输的数据,它们的校验码取决于这些整数在二进制下  的数量之和的奇偶\n性。如果这些整数在二进制下共有奇数个 ,那么校验码为 ;否则校验码为 。你能求出这些整数的校验码吗?\n3.1.2\n\n输入格式\n第一行,一个正整数 ,表示所传输的数据量。\n第二行,  个非负整数 ,表示所传输的数据。\n3.1.3 输出格式\n输出一行,两个整数,以一个空格分隔:\n第一个整数表示  在二进制下  的总数量;\n第二个整数表示校验码(0或1)。\n3.1.4 样例\n3.1.4.1 输入样例 1\n3.1.4.2 输出样例 1\n3.1.4.3 输入样例 2\n3.1.4.4 输出样例 2\n3.1.5 数据范围\n对于所有测试点,保证 , 。\n3.1.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n数据在传输过程中可能出错,因此接收方收到数据后通常会校验传输的数据是否正确,奇偶校验是经典的校验方式\n之一。\n给定  个非负整数\n 代表所传输的数据,它们的校验码取决于这些整数在二进制下  的数量之和的奇偶\n性。如果这些整数在二进制下共有奇数个 ,那么校验码为 ;否则校验码为 。你能求出这些整数的校验码吗?\n3.1.2\n\n输入格式\n第一行,一个正整数 ,表示所传输的数据量。\n第二行, 个非负整数\n,表示所传输的数据。\n3.1.3\n输出格式\n输出一行,两个整数,以一个空格分隔:\n第一个整数表示\n 在二进制下  的总数量;\n第二个整数表示校验码(0或1)。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n\n71 69 83 80\n\n3.1.4.2\n输出样例 1\n13 1\n\n3.1.4.3\n输入样例 2\n\n1 2 4 8 16 32\n\n3.1.4.4\n输出样例 2\n6 0\n\n3.1.5\n数据范围\n对于所有测试点,保证\n,\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "1\n6\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <cstdio>\nusing namespace std;\nint n, v;\nint main() {\n    scanf(\"%d\", &n);\n    for (int i = 1; i <= n; i++) {\n        int c;\n        scanf(\"%d\", &c);\n        while (c) {\n            v += c & 1;\n            c >>= 1;\n        }\n    }\n    printf(\"%d %d\\n\", v, v & 1);\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "分糖果",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n有   位小朋友排成一队等待老师分糖果。第   位小朋友想要至少   颗糖果,并且分给他的糖果数量必须比分给前一\n位小朋友的糖果数量更多,不然他就会不开心。\n老师想知道至少需要准备多少颗糖果才能让所有小朋友都开心。你能帮帮老师吗?\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示小朋友的人数。\n第二行,  个正整数  ,依次表示每位小朋友至少需要的糖果数量。\n3.2.3 输出格式\n输出一行,一个整数,表示最少需要准备的糖果数量。\n3.2.4 样例\n3.2.4.1 输入样例  1\n3.2.4.2 输出样例  1\n3.2.4.3 输入样例  2\n3.2.4.4 输出样例  2\n3.2.5 数据范围\n对于所有测试点,保证  , 。\n            c >>= 1;\n        }\n    }\n    printf(\"%d %d\\n\", v, v & 1);\n    return 0;\n}\n\n1 4 3 3\n\n314 15926 53589793 238462643 383279502 8 8 4 1 9 7 1 6 9 3\n\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n有  位小朋友排成一队等待老师分糖果。第  位小朋友想要至少\n 颗糖果,并且分给他的糖果数量必须比分给前一\n位小朋友的糖果数量更多,不然他就会不开心。\n老师想知道至少需要准备多少颗糖果才能让所有小朋友都开心。你能帮帮老师吗?\n3.2.2\n\n输入格式\n第一行,一个正整数 ,表示小朋友的人数。\n第二行, 个正整数\n,依次表示每位小朋友至少需要的糖果数量。\n3.2.3\n输出格式\n输出一行,一个整数,表示最少需要准备的糖果数量。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n\n1 4 3 3\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n\n314 15926 53589793 238462643 383279502 8 8 4 1 9 7 1 6 9 3\n\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于所有测试点,保证\n,\n。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "19\n4\n",
-          "out": "16\n",
-          "suspect": true
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
         },
         {
-          "in": "15\n",
-          "out": "2\n",
+          "in": "16\n",
+          "out": "15\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <cstdio>\n#include <algorithm>\nusing namespace std;\nconst int N = 1005;\nint n, a[N];\nlong long ans;\nint main() {\n    scanf(\"%d\", &n);\n    for (int i = 1; i <= n; i++) {\n        scanf(\"%d\", &a[i]);\n        a[i] = max(a[i - 1] + 1, a[i]);\n        ans += a[i];\n    }\n    printf(\"%lld\\n\", ans);\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -581,11 +594,8 @@
       "B",
       "D",
       "C",
-      "C",
       "C"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

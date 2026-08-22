@@ -3,16 +3,16 @@
     "ym": "202312",
     "lang": "python",
     "level": 1,
-    "title": "GESP 12月认证 Python一级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10119.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1585703664222240.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202312-python-1.pdf"
+    "title": "202312-python-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202312-python-1.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "某公司新出了一款无人驾驶的小汽车,通过声控智能驾驶系统,乘客只要告诉汽车目的地,车子就能自动选\n择一条优化路线,告诉乘客后驶达那里。请问下面哪项不是驾驶系统完成选路所必须的。(   )",
+      "stem": "某公司新出了一款无人驾驶的小汽车,通过声控智能驾驶系统,乘客只要告诉汽车目的地,车子就能自动选\n择一条优化路线,告诉乘客后驶达那里。请问下面哪项不是驾驶系统完成选路所必须的。(  )",
       "options": [
         {
           "key": "A",
@@ -36,15 +36,15 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "现代计算机是指电子计算机,它所基于的是(   )体系结构。",
+      "stem": "现代计算机是指电子计算机,它所基于的是(  )体系结构。",
       "options": [
         {
           "key": "A",
-          "text": "艾伦 · 图灵"
+          "text": "艾伦·图灵"
         },
         {
           "key": "B",
-          "text": "冯 · 诺依曼"
+          "text": "冯·诺依曼"
         },
         {
           "key": "C",
@@ -52,7 +52,7 @@
         },
         {
           "key": "D",
-          "text": "埃克特 - 莫克利"
+          "text": "埃克特-莫克利"
         }
       ],
       "answer": "B"
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "以下 Python 不可以作为变量的名称的是 (  )。",
+      "stem": "以下Python不可以作为变量的名称的是(\n )。",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "Python 表达式10 - 3 ** 2 % 10的值是 (  )。",
+      "stem": "Python表达式10 - 3 ** 2 % 10 的值是(\n )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "假设现在是上午十点,求出N小时(正整数)后是第几天及时,如输入20小时则为第2天6点,如N输入4则为\n今天14点。为实现相应功能,应在横线处填写代码是(  )。",
+      "stem": "假设现在是上午十点,求出N小时(正整数)后是第几天及时,如输入20小时则为第2天6点,如N输入4则为\n今天14点。为实现相应功能,应在横线处填写代码是( )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面的程序用于判断N是否为偶数,横线处应填写代码是( )。",
+      "stem": "下面的程序用于判断N是否为偶数,横线处应填写代码是(\n)。",
       "options": [
         {
           "key": "A",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是(     )。",
+      "stem": "下面Python代码执行后的输出是(    )。",
       "options": [
         {
           "key": "A",
@@ -228,7 +228,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后的输出是(     )。",
+      "stem": "下面Python代码执行后的输出是(    )。",
       "options": [
         {
           "key": "A",
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面 Python 代码用于判断一个数是否为质数(素数),在横线处应填入代码是(     )。",
+      "stem": "下面Python代码用于判断一个数是否为质数(素数),在横线处应填入代码是(    )。",
       "options": [
         {
           "key": "A",
@@ -276,23 +276,23 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "当执行turtle.forward()时,提示如下信息:NameError: name 'turtle' is not defined. Did\nyou mean: 'tuple'?,下面描述正确的是(       )。",
+      "stem": "当执行turtle.forward() 时,提示如下信息:NameError: name 'turtle' is not defined. Did\nyou mean: 'tuple'? ,下面描述正确的是(      )。",
       "options": [
         {
           "key": "A",
-          "text": "提示的含义有 “turtle没有定义 ” 之意,故先执行turtle = 0即可"
+          "text": "提示的含义有“ turtle 没有定义”之意,故先执行turtle = 0 即可"
         },
         {
           "key": "B",
-          "text": "将turtle修改为tuple后将不会报错"
+          "text": "将turtle 修改为tuple 后将不会报错"
         },
         {
           "key": "C",
-          "text": "turtle.forward()中的forward错误,必须先执行turtle.pendown()"
+          "text": "turtle.forward() 中的forward 错误,必须先执行turtle.pendown()"
         },
         {
           "key": "D",
-          "text": "因为没有执行import turtle,故有此错误。"
+          "text": "因为没有执行import turtle ,故有此错误。"
         }
       ],
       "answer": "D"
@@ -300,23 +300,23 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "先后执行 Python 代码import turtle和turtle.circle(10,steps = 3)后,正确的说法是(    )。",
+      "stem": "先后执行Python代码import turtle 和turtle.circle(10,steps = 3) 后,正确的说法是(   )。",
       "options": [
         {
           "key": "A",
-          "text": "将绘制出半径为 10 ,弧度为 3 的圆"
+          "text": "将绘制出半径为10,弧度为3的圆"
         },
         {
           "key": "B",
-          "text": "将绘制出半径为 10 ,角度为 3 的圆"
+          "text": "将绘制出半径为10,角度为3的圆"
         },
         {
           "key": "C",
-          "text": "将绘制出边长为 10 的正三边形,即等边三角形"
+          "text": "将绘制出边长为10的正三边形,即等边三角形"
         },
         {
           "key": "D",
-          "text": "将绘制出半径为 10 的内接圆正三边形,即等边三角形"
+          "text": "将绘制出半径为10的内接圆正三边形,即等边三角形"
         }
       ],
       "answer": "D"
@@ -324,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面 Python 代码执行后输出的正确图形是 ( )。",
+      "stem": "下面Python代码执行后输出的正确图形是(\n)。",
       "options": [
         {
           "key": "A",
@@ -340,7 +340,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "为实现下图所示效果,请完善随后的 Python 代码,并在横线上填入相应代码 ( )。",
+      "stem": "为实现下图所示效果,请完善随后的Python代码,并在横线上填入相应代码(\n)。",
       "options": [
         {
           "key": "A",
@@ -348,7 +348,7 @@
         },
         {
           "key": "B",
-          "text": "10 * i 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "10 * i"
         },
         {
           "key": "C",
@@ -366,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "小杨最近在准备考 GESP ,他用的 Python IDLE 来练习和运行程序,所以 Python IDLE 也是一个小型操作系统。\n(   )",
+      "stem": "小杨最近在准备考GESP,他用的Python IDLE来练习和运行程序,所以Python IDLE也是一个小型操作系统。\n(  )",
       "options": [
         {
           "key": "T",
@@ -377,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "任何一个while循环都可以转化为等价的for循环(   )。",
+      "stem": "任何一个while 循环都可以转化为等价的for 循环(  )。",
       "options": [
         {
           "key": "T",
@@ -393,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "Python 表达式int(3.14)的值为 3 。 (  )",
+      "stem": "Python表达式int(3.14) 的值为3。(\n )",
       "options": [
         {
           "key": "T",
@@ -409,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "Python 语句print(2 ** 3, 3 % 10, 2+3)的输出为8,3,5。  (  )",
+      "stem": "Python语句print(2 ** 3, 3 % 10, 2+3) 的输出为8,3,5 。 (\n )",
       "options": [
         {
           "key": "T",
@@ -425,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "Python 内置函数range(1,10,3)表示从 1 开始到 10 结束间隔为 3 ,相当于 1 、 4 、 7 、 10 。(   )",
+      "stem": "Python内置函数range(1,10,3) 表示从1开始到10结束间隔为3,相当于1、4、7、10。(  )",
       "options": [
         {
           "key": "T",
@@ -441,12 +441,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "Python 表达式int(\"10\"*2+\"10\")+101的值为 101111 。(   )",
+      "stem": "Python表达式int(\"10\"*2+\"10\")+101 的值为101111。(  )",
       "options": [
         {
           "key": "T",
@@ -457,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "在 Python 中,判断语句如果有多个条件,条件之间通常不应重叠,否则可能导致误判。(   )",
+      "stem": "在Python中,判断语句如果有多个条件,条件之间通常不应重叠,否则可能导致误判。(  )",
       "options": [
         {
           "key": "T",
@@ -473,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "在下面的 Python 代码中,由于循环中的continue是无条件被执行,因此将导致死循环。(   )",
+      "stem": "在下面的Python代码中,由于循环中的continue 是无条件被执行,因此将导致死循环。(  )",
       "options": [
         {
           "key": "T",
@@ -489,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在 Python 代码中,turtle.reset()和turtle.clear()功能相同,都是清除画面,海龟回到原点,朝向\n置为默认方向。(   )",
+      "stem": "在Python代码中,turtle.reset() 和turtle.clear() 功能相同,都是清除画面,海龟回到原点,朝向\n置为默认方向。(  )",
       "options": [
         {
           "key": "T",
@@ -505,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "在 Python 的 turtle 库中,turtle.right()与turtle.rt()等价。(   )",
+      "stem": "在Python的turtle库中,turtle.right() 与turtle.rt() 等价。(  )",
       "options": [
         {
           "key": "T",
@@ -521,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -529,21 +529,60 @@
       "seq": 1,
       "kind": "traditional",
       "title": "小杨的考试",
-      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.1.1 问题描述\n今天是星期  ,小杨还有   天就要考试了,你能推算出小杨考试那天是星期几吗?(本题中使用   表示星期日)\n3.1.2 输入描述\n输入  2 行,第一行一个整数  ( );第二行一个整数  ( )。\n3.1.3 输出描述\n输出一个整数,表示小杨考试那天是星期几。\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7 样例解释  1\n今天是星期  1 ,那么  6 天后就是星期日,星期日在本题中用   表示。\n3.1.8 样例输入  2\n3.1.9 样例输出  2\n3.1.10 样例解释  2\n今天是星期  5 ,那么  3 天后就是星期  1 。\n3.1.11",
+      "statement": "时间限制:1.0 s\n内存限制:128.0 MB\n3.1.1\n问题描述\n今天是星期\n,小杨还有\n 天就要考试了,你能推算出小杨考试那天是星期几吗?(本题中使用  表示星期日)\n3.1.2\n输入描述\n输入 2 行,第一行一个整数\n(\n);第二行一个整数\n(\n)。\n3.1.3\n输出描述\n输出一个整数,表示小杨考试那天是星期几。\n3.1.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5\n样例输入 1\n\n3.1.6\n样例输出 1\n\n3.1.7\n样例解释 1\n今天是星期 1,那么 6 天后就是星期日,星期日在本题中用  表示。\n3.1.8\n样例输入 2\n\n3.1.9\n样例输出 2\n\n3.1.10\n样例解释 2\n今天是星期 5,那么 3 天后就是星期 1。\n3.1.11",
       "time_ms": 1000,
       "memory_mb": 128,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "6\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "7\n",
+          "out": "5\n",
+          "suspect": false
+        },
+        {
+          "in": "2\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "x = int(input())\nn = int(input())\nprint((x - 1 + n % 7) % 7 + 1)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "小杨报数",
-      "statement": "时间限制: 1.0 s\n内存限制: 128.0 MB\n3.2.1 问题描述\n小杨需要从   到   报数。在报数过程中,小杨希望跳过   的倍数。例如,如果  , ,那么小杨就需要\n依次报出  、、。\n现在,请你依次输出小杨报的数。\n\nx = int(input())\nn = int(input())\nprint((x - 1 + n % 7) % 7 + 1)\n\n3.2.2 输入描述\n输入  2 行,第一行一个整数  ( );第二行一个整数  ( )。\n3.2.3 输出描述\n输出若干行,依次表示小杨报的数。\n3.2.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.2.5 样例输入  1\n3.2.6 样例输出  1\n3.2.7 样例输入  2\n3.2.8 样例输出  2\n3.2.9",
+      "statement": "时间限制:1.0 s\n内存限制:128.0 MB\n3.2.1\n问题描述\n小杨需要从  到\n 报数。在报数过程中,小杨希望跳过\n 的倍数。例如,如果\n,\n,那么小杨就需要\n依次报出 、、。\n现在,请你依次输出小杨报的数。\n3.2.2\n输入描述\n输入 2 行,第一行一个整数\n(\n);第二行一个整数\n(\n)。\n3.2.3\n输出描述\n输出若干行,依次表示小杨报的数。\n3.2.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.2.5\n样例输入 1\n\n3.2.6\n样例输出 1\n\n3.2.7\n样例输入 2\n\n3.2.8\n样例输出 2\n\n3.2.9",
       "time_ms": 1000,
       "memory_mb": 128,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "5\n2\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n5\n",
+          "out": "3\n",
+          "suspect": false
+        },
+        {
+          "in": "10\n3\n",
+          "out": "1\n",
+          "suspect": false
+        },
+        {
+          "in": "2\n4\n5\n7\n8\n10\n",
+          "out": "7\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n = int(input())\nm = int(input())\nfor i in range(1, n + 1):\n    if i % m != 0:\n        print(i)"
     }
   ],
   "answer_rows": [
@@ -564,8 +603,6 @@
       "A",
       "D"
     ],
-    [
-      "C"
-    ]
+    []
   ]
 }

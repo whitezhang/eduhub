@@ -3,16 +3,15 @@
     "ym": "202606",
     "lang": "python",
     "level": 4,
-    "title": "CCF GESP 2026年6月认证 Python 4级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10284.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1753295519481888.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202606-python-4.pdf"
+    "title": "202606-python-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202606-python-4.pdf"
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "学校组织同学们到未来农场参观,小明听讲解员介绍。在智能温室中,湿度传感器可以连续检测土壤的湿\n度,并将检测到的湿度数据实时发送给中央控制器。中央控制器根据这些数据判断是否开启灌溉系统。请问,这里\n的湿度传感器所发挥的作用,类似于计算机系统中的哪一类组件?(   )",
+      "stem": "学校组织同学们到未来农场参观,小明听讲解员介绍。在智能温室中,湿度传感器可以连续检测土壤的湿\n度,并将检测到的湿度数据实时发送给中央控制器。中央控制器根据这些数据判断是否开启灌溉系统。请问,这里\n的湿度传感器所发挥的作用,类似于计算机系统中的哪一类组件?(  )",
       "options": [
         {
           "key": "A",
@@ -36,7 +35,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "小明同学去郊外农场参观回来后,在自己的电脑中安装了一个  3D 农场仿真模拟系统。因为他今年买的这台\n二手电脑有点老旧, 3D 农场仿真模拟系统运行时经常弹出 “ 系统内存不足 ” 的警告,导致系统卡顿严重。他计划通过\n增加物理内存来解决问题。请问他应该购买以下哪种硬件组件?(   )",
+      "stem": "小明同学去郊外农场参观回来后,在自己的电脑中安装了一个 3D 农场仿真模拟系统。因为他今年买的这台\n二手电脑有点老旧,3D 农场仿真模拟系统运行时经常弹出“系统内存不足”的警告,导致系统卡顿严重。他计划通过\n增加物理内存来解决问题。请问他应该购买以下哪种硬件组件?(  )",
       "options": [
         {
           "key": "A",
@@ -60,7 +59,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "执行下面  Python 代码后,输出的结果是?(   )",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )\na = {1: [2], 3: [4]}\nb = a.copy()\nb[1].append(3)\nprint(a[1])\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -84,7 +83,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "如果想要将一个二维列表  matrix = [[1, 2], [3, 4], [5, 6]] 扁平化为  [1, 2, 3, 4, 5, 6],应\n使用下列哪个列表推导式?(   )",
+      "stem": "如果想要将一个二维列表 matrix = [[1, 2], [3, 4], [5, 6]] 扁平化为 [1, 2, 3, 4, 5, 6] ,应\n使用下列哪个列表推导式?(  )",
       "options": [
         {
           "key": "A",
@@ -92,7 +91,7 @@
         },
         {
           "key": "B",
-          "text": "[item for row in matrix for item in row] a = {1: [2], 3: [4]} b = a.copy() b[1].append(3) print(a[1])"
+          "text": "[item for row in matrix for item in row]"
         },
         {
           "key": "C",
@@ -108,7 +107,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "执行下面  Python 代码后,输出的结果是?(   )",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )\ndef func(x, lst=[]):\n    lst.append(x)\n    return lst\n1\n2\n3\n4\n5\n6\nprint(func(1), func(2), func(3))",
       "options": [
         {
           "key": "A",
@@ -132,7 +131,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "执行下面  Python 代码后,输出的结果是?(   )",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )\ndef func(x, y, *args, z=10, **kwargs):\n    return x + y + z + sum(args) + kwargs.get('m', 0)\n1\n2\n3\n4\n5\n6\nresult = func(1, 2, 3, 4, z=5, m=6, n=7)\nprint(result)",
       "options": [
         {
           "key": "A",
@@ -156,7 +155,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "与列表推导式  [i**2 for i in range(10)] 功能等价的  map 函数调用是?(   )",
+      "stem": "与列表推导式 [i**2 for i in range(10)] 功能等价的 map 函数调用是?(  )",
       "options": [
         {
           "key": "A",
@@ -180,7 +179,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "以下代码的功能是读取一个二进制图片文件  pic.jpg 并复制到  pic_copy.jpg,空白处应填入?(   )",
+      "stem": "以下代码的功能是读取一个二进制图片文件 pic.jpg 并复制到 pic_copy.jpg ,空白处应填入?(  )\nwith open('pic.jpg', '__1__') as src, open('pic_copy.jpg', '__2__') as dst:\n    dst.write(src.read())\n1\n2",
       "options": [
         {
           "key": "A",
@@ -204,7 +203,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "以下函数的时间复杂度是?(   )\ndef func(x, lst=[]):\n    lst.append(x)\n    return lst\nprint(func(1), func(2), func(3))\n1\n2\n3\n4\n5\n6\ndef func(x, y, *args, z=10, **kwargs):\n    return x + y + z + sum(args) + kwargs.get('m', 0)\nresult = func(1, 2, 3, 4, z=5, m=6, n=7)\nprint(result)\n1\n2\n3\n4\n5\n6\nwith open('pic.jpg', '__ 1 __') as src, open('pic_copy.jpg', '__ 2 __') as dst:\n    dst.write(src.read())\n1\n2",
+      "stem": "以下函数的时间复杂度是?(  )\ndef example(n):\n    matrix = [[0] * n for _ in range(n)]\n    for i in range(n):\n        for j in range(n):\n            matrix[i][j] = i * j\n    return matrix\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -220,7 +219,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "执行下面  Python 代码后,输出的结果是?(   )",
+      "stem": "执行下面 Python 代码后,输出的结果是?(  )\ndef test_function():\n    try:\n        return \"From try\"\n    finally:\n        print(\"From finally\", end=\"#\")\n1\n2\n3\n4\n5\n6\n7\n8\nprint(test_function(), end=\"#\")",
       "options": [
         {
           "key": "A",
@@ -244,7 +243,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "若输入  5,以下程序的输出结果是?(   )",
+      "stem": "若输入 5 ,以下程序的输出结果是?(  )\nn = int(input())\nf = [0] * (n + 1)\nf[0] = 1\nfor i in range(1, n + 1):\n    f[i] = f[i - 1] * i\nprint(f[n])\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -268,7 +267,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "关于以下代码,说法正确的是?(   )",
+      "stem": "关于以下代码,说法正确的是?(  )\nwords = [\"apple\", \"Cherry\", \"Banana\"]\nsorted_words = sorted(words, key=lambda s: s.lower())\n1\n2",
       "options": [
         {
           "key": "A",
@@ -276,7 +275,7 @@
         },
         {
           "key": "B",
-          "text": "key=lambda s: s.lower() 可以替换为 key=str.lower,效果相同。"
+          "text": "key=lambda s: s.lower() 可以替换为 key=str.lower ,效果相同。"
         },
         {
           "key": "C",
@@ -284,7 +283,7 @@
         },
         {
           "key": "D",
-          "text": "sorted 函数不能直接对字符串列表进行排序。 def example(n): matrix = [[0] * n for _ in range(n)] for i in range(n): for j in range(n): matrix[i][j] = i * j return matrix def test_function(): try: return \"From try\" finally: print(\"From finally\", end=\"#\") print(test_function(), end=\"#\") n = int(input()) f = [0] * (n + 1) f[0] = 1 for i in range(1, n + 1): f[i] = f[i - 1] * i print(f[n]) words = [\"apple\", \"Cherry\", \"Banana\"] sorted_words = sorted(words, key=lambda s: s.lower())"
+          "text": "sorted 函数不能直接对字符串列表进行排序。"
         }
       ],
       "answer": "B"
@@ -292,7 +291,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "某电商平台根据用户的会员等级计算商品最终价格。等级与折扣率的对应关系存储在字典  discounts\n中。为了保证程序在面对未知等级时不会报错,而是按原价(即不打折)处理,以下哪个选项是正确的?(   )",
+      "stem": "某电商平台根据用户的会员等级计算商品最终价格。等级与折扣率的对应关系存储在字典 discounts\n中。为了保证程序在面对未知等级时不会报错,而是按原价(即不打折)处理,以下哪个选项是正确的?(  )\ndef calculate_price(price, level):\n    discounts = {\"VIP\": 0.8, \"SVIP\": 0.6}\n    # 请补全代码\n    discount_rate = ______1______\n    return ______2______\n1\n2\n3\n4\n5\n6\n7\n8\n9\nfinal_price = calculate_price(100, \"VIP\")\nprint(final_price)",
       "options": [
         {
           "key": "A",
@@ -316,7 +315,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "有一个名为  score.txt 的文本文件,内容如下(第一行为标题行,后面每行包含姓名和分数,用空格分\n隔):\n编写一段  Python 代码,读取该文件,统计及格人数(分数   分),并在最后输出统计结果,以下哪个选项是正\n确的?(   )",
+      "stem": "有一个名为 score.txt 的文本文件,内容如下(第一行为标题行,后面每行包含姓名和分数,用空格分\n隔):\n姓名 分数\n张三 85\n李四 42\n王五 90\n赵六 78\n1\n2\n3\n4\n5\n编写一段 Python 代码,读取该文件,统计及格人数(分数\n 分),并在最后输出统计结果,以下哪个选项是正\n确的?(  )\ncount = 0\nwith open(\"score.txt\", \"r\") as f:\n    lines = f.readlines()\n    for i in range(1, len(lines)):\n        data = lines[i].______  # 此处需要填入适当的方法\n        score = int(data[1])\n        if score >= 60:\n            count += 1\nprint(\"及格人数:\", count)\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -340,7 +339,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "商品列表已按特定规则排序,每个商品包含三个信息:编号、价格、库存量,对应三元组  (id, price,\nstock)。现有预算  M 元,按排好的顺序依次购买,只要当前商品的价格不超过剩余预算并且尚有剩余就购买并扣\n款,否则立即停止。以下哪个选项是正确的?(   )\ndef calculate_price(price, level):\n    discounts = {\"VIP\": 0.8, \"SVIP\": 0.6}\n    # 请补全代码\n    discount_rate = ______ 1 ______\n    return ______ 2 ______\nfinal_price = calculate_price(100, \"VIP\")\nprint(final_price)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n姓名  分数\n张三  85\n李四  42\n王五  90\n赵六  78\n1\n2\n3\n4\n5\ncount = 0\nwith open(\"score.txt\", \"r\") as f:\n    lines = f.readlines()\n    for i in range(1, len(lines)):\n        data = lines[i].______  # 此处需要填入适当的方法\n        score = int(data[1])\n        if score >= 60:\n            count += 1\nprint(\" 及格人数: \", count)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "商品列表已按特定规则排序,每个商品包含三个信息:编号、价格、库存量,对应三元组 (id, price,\nstock) 。现有预算 M 元,按排好的顺序依次购买,只要当前商品的价格不超过剩余预算并且尚有剩余就购买并扣\n款,否则立即停止。以下哪个选项是正确的?(  )\nbudget = M\nproducts.sort(key=lambda x: (x[1], x[2], x[0]))  # 按规则排序\nbought = []\nfor item in products:\n    if ________:  # 此处需要填入适当的代码\n        budget -= item[1]\n        bought.append(item[0])\n    else:\n        break\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -366,7 +365,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "又到期末考试周,小明发现这次许多闭卷考试不仅禁止携带手机、平板电脑,还有最近比较时髦的各类  AI\n眼镜(也有叫智能眼镜)也同样不允许带入考场。这些  AI 眼镜应该也是内置了操作系统并可能支持  Wi-Fi 或蓝牙连\n接。",
+      "stem": "又到期末考试周,小明发现这次许多闭卷考试不仅禁止携带手机、平板电脑,还有最近比较时髦的各类 AI\n眼镜(也有叫智能眼镜)也同样不允许带入考场。这些 AI 眼镜应该也是内置了操作系统并可能支持 Wi-Fi 或蓝牙连\n接。",
       "options": [
         {
           "key": "T",
@@ -382,7 +381,7 @@
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "执行  [[j for j in range(i)] for i in range(3)] 解析式的结果是  [[0], [0,1]]。",
+      "stem": "执行 [[j for j in range(i)] for i in range(3)] 解析式的结果是 [[0], [0,1]] 。",
       "options": [
         {
           "key": "T",
@@ -398,7 +397,7 @@
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "使用  global 关键字在函数内部创建的变量,在函数执行结束后依然存在。",
+      "stem": "使用 global 关键字在函数内部创建的变量,在函数执行结束后依然存在。",
       "options": [
         {
           "key": "T",
@@ -414,7 +413,7 @@
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "执行以下代码后,输出结果为  (1, 'a')。",
+      "stem": "执行以下代码后,输出结果为 (1, 'a') 。\npairs = [(2, 'b'), (1, 'a'), (3, 'c')]\nresult = min(pairs, key=lambda p: p[0])\nprint(result)",
       "options": [
         {
           "key": "T",
@@ -430,7 +429,7 @@
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "在  Python 中,read() 方法会一次性读取整个文件内容,返回字符串;readlines() 方法会一次性读取所\n有行,返回行列表。",
+      "stem": "在 Python 中,read() 方法会一次性读取整个文件内容,返回字符串;readlines() 方法会一次性读取所\n有行,返回行列表。",
       "options": [
         {
           "key": "T",
@@ -446,7 +445,7 @@
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "以下函数的空间复杂度为  。",
+      "stem": "以下函数的空间复杂度为\n。\ndef func(n):\n    return [i ** 2 for i in range(n)]",
       "options": [
         {
           "key": "T",
@@ -462,7 +461,7 @@
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "在  Python 的异常处理结构中,try 块后面可以只跟随  finally 块,而不需要包含任何  except 块。",
+      "stem": "在 Python 的异常处理结构中,try 块后面可以只跟随 finally 块,而不需要包含任何 except 块。",
       "options": [
         {
           "key": "T",
@@ -478,7 +477,7 @@
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "已知递推关系式为  (其中  ),为了保证对所有   的计算都不出现负\n数下标,必须提供的初始值至少包括   这五个值。",
+      "stem": "已知递推关系式为\n(其中\n),为了保证对所有\n 的计算都不出现负\n数下标,必须提供的初始值至少包括\n 这五个值。",
       "options": [
         {
           "key": "T",
@@ -510,7 +509,7 @@
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "执行以下代码后,输出结果为  2。\nbudget = M\nproducts.sort(key=lambda x: (x[1], x[2], x[0]))  # 按规则排序\nbought = []\nfor item in products:\n    if ________:  # 此处需要填入适当的代码\n        budget -= item[1]\n        bought.append(item[0])\n    else:\n        break\n\n\n\n\n\n\n\n\n\npairs = [(2, 'b'), (1, 'a'), (3, 'c')]\nresult = min(pairs, key=lambda p: p[0])\nprint(result)\n\n\n\ndef func(n):\n    return [i ** 2 for i in range(n)]",
+      "stem": "执行以下代码后,输出结果为 2 。\nn, m = 3, 4\ngrid = [[1, 3, 2, 4],\n        [5, 7, 6, 8],\n        [9, 0, 1, 2]]\ndx = [-1, -1, -1, 0, 0, 1, 1, 1]\ndy = [-1, 0, 1, -1, 1, -1, 0, 1]\ncount = 0\nfor i in range(n):\n    for j in range(m):\n        lower_neighbors = 0\n        for k in range(8):\n            x, y = i + dx[k], j + dy[k]\n            if 0 <= x < n and 0 <= y < m and grid[x][y] < grid[i][j]:\n                lower_neighbors += 1\n        if lower_neighbors >= 5:\n            count += 1\nprint(count)",
       "options": [
         {
           "key": "T",
@@ -529,17 +528,24 @@
       "seq": 1,
       "kind": "traditional",
       "title": "扫雷",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小杨同学正在游玩经典游戏「扫雷」,他想自己生成一个「扫雷」的地图。\n小杨同学希望生成的地图大小为   行   列,一共   个区块。\n区块行号为  ,列号为  。\n其中一些区块为雷区,其它区块不为雷区。\n小杨同学指定了   个区块为雷区,而其它区块均不为雷区。小杨同学希望你帮忙计算非雷区的区块,每个区块与多\n少个雷区相邻?\n我们定义区块相邻,当且仅当两个区块至少有一个公共顶点(也就是说对于不在地图边缘的区块,周围   个区块均\n与其相邻)。\n3.1.2\n\n输入格式\n输入包含   行。\n第一行,三个正整数  ,  和  ,分别表示地图行数和列数,以及雷区数量。\n接下来的   行,每行有   个整数,分别表示第   个雷区的行号和列号。\n保证输入的雷区不重复。\n3.1.3 输出格式\n输出   行,每行   个  字符(使用空格分割),对于第   行第   列,输出地图对应区块的信息:\n1. 如果为雷区,输出  *;\n2. 如果不是雷区,输出其相邻雷区数量(输出   到   中的一个数字)。\nn, m = 3, 4\ngrid = [[1, 3, 2, 4],\n        [5, 7, 6, 8],\n        [9, 0, 1, 2]]\ndx = [-1, -1, -1, 0, 0, 1, 1, 1]\ndy = [-1, 0, 1, -1, 1, -1, 0, 1]\ncount = 0\nfor i in range(n):\n    for j in range(m):\n        lower_neighbors = 0\n        for k in range(8):\n            x, y = i + dx[k], j + dy[k]\n            if 0 <= x < n and 0 <= y < m and grid[x][y] < grid[i][j]:\n                lower_neighbors += 1\n        if lower_neighbors >= 5:\n            count += 1\nprint(count)\n\n3.1.4 样例\n3.1.5 输入样例  1\n3.1.6 输出样例  1\n3.1.7 输出解释  1\n根据输入,在   的地图上有   个雷区,分别是  , ,  和  ,如输出样例中  * 所示,其它非雷\n区区块的相邻雷区数量可以直观看出。\n3.1.8 数据范围\n。\n输入的雷区必定在地图内且不重复,注意行号和列号均从   开始。\n3.1.9",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小杨同学正在游玩经典游戏「扫雷」,他想自己生成一个「扫雷」的地图。\n小杨同学希望生成的地图大小为  行\n 列,一共\n 个区块。\n区块行号为\n,列号为\n。\n其中一些区块为雷区,其它区块不为雷区。\n小杨同学指定了  个区块为雷区,而其它区块均不为雷区。小杨同学希望你帮忙计算非雷区的区块,每个区块与多\n少个雷区相邻?\n我们定义区块相邻,当且仅当两个区块至少有一个公共顶点(也就是说对于不在地图边缘的区块,周围  个区块均\n与其相邻)。\n3.1.2\n\n输入格式\n输入包含\n 行。\n第一行,三个正整数 ,\n 和 ,分别表示地图行数和列数,以及雷区数量。\n接下来的  行,每行有  个整数,分别表示第  个雷区的行号和列号。\n保证输入的雷区不重复。\n3.1.3\n输出格式\n输出  行,每行\n 个 字符(使用空格分割),对于第  行第  列,输出地图对应区块的信息:\n1. 如果为雷区,输出 * ;\n2. 如果不是雷区,输出其相邻雷区数量(输出  到  中的一个数字)。\n3.1.4\n样例\n3.1.5\n输入样例 1\n3 4 4\n1 1\n1 3\n2 4\n3 2\n\n3.1.6\n输出样例 1\n* 2 * 2\n2 3 3 *\n1 * 2 1\n\n3.1.7\n输出解释 1\n根据输入,在\n 的地图上有  个雷区,分别是\n,\n,\n 和\n,如输出样例中 * 所示,其它非雷\n区区块的相邻雷区数量可以直观看出。\n3.1.8\n数据范围\n。\n输入的雷区必定在地图内且不重复,注意行号和列号均从  开始。\n3.1.9",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "4\n5\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n, m, q = map(int, input().split())\n# 地图。mp是二维数组,使用二维数组表示地图。mp[i][j]表示地图第i+1行第j+1列的格点\nmp = [[0 for _ in range(m)] for _ in range(n)]\n# 将地图上x行y列的地方放上地雷\nfor _ in range(q):\n    x, y = map(int, input().split())\n    mp[x - 1][y - 1] = '*'\n# 遍历整张地图,先从行开始\nfor i in range(n):\n    # 然后是列\n    for j in range(m):\n        # 如果这里是地雷,那就不管了,只考虑不是地雷的地方\n        if mp[i][j] == '*':\n            continue\n        # 对于不是地雷的格点,判断周边是否有地雷\n        # 遍历周边的8个格子,也就是i+di, j+dj\n        for di in [-1, 0, 1]:\n            for dj in [-1, 0, 1]:\n                # 判断这个格子是否存在\n                if i + di < 0 or i + di >= n or j + dj < 0 or j + dj >= m:\n                    continue\n                if mp[i+di][j+dj] == '*':\n                    mp[i][j] += 1\n# 最后把答案输出即可完成本题\nfor i in range(n):\n    print(' '.join(map(str, mp[i])))"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "身高体重指数",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n一个人的身高体重指数( BMI )等于其体重(千克为单位)除以其身高(米为单位)的平方。\n例如,一个体重为  ,身高为   的人的身高体重指数为  。\n现在有   个小朋友,第   个小朋友的编号为  ,体重为  ,身高为  。\n请按照身高体重指数从高到低为小朋友们排序,数据保证不存在两个小朋友的身高体重指数完全相同。输出排序后\n小朋友的编号。\n3.2.2\n\n输入格式\n输入   行,\n第一行为一个正整数  ,表示小朋友的个数;\n第二行为   个整数   表示小朋友们的体重,单位为  ;\n第三行为   个浮点数   表示小朋友们的身高,单位为  。\n3.2.3 输出格式\n输出一行   个数,表示按照身高体重指数从高到低排序后的编号。\n3.2.4 样例\n3.2.5 输入样例  1\n3.2.6 输出样例  1\n3.2.7 样例解释\n三个小朋友(编号依次为  1,2,3)的身高体重指数分别为(保留两位小数的结果): , , ,故\n排序后输出的编号为  3 1 2。\n3.2.8 数据范围\n,  均恰有两位小数。\n\n45 33 39\n1.55 1.33 1.44\n\n3 1 21\n3.2.9",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n一个人的身高体重指数(BMI)等于其体重(千克为单位)除以其身高(米为单位)的平方。\n例如,一个体重为\n,身高为\n 的人的身高体重指数为\n。\n现在有  个小朋友,第  个小朋友的编号为 ,体重为\n,身高为\n。\n请按照身高体重指数从高到低为小朋友们排序,数据保证不存在两个小朋友的身高体重指数完全相同。输出排序后\n小朋友的编号。\n3.2.2\n\n输入格式\n输入  行,\n第一行为一个正整数 ,表示小朋友的个数;\n第二行为  个整数\n 表示小朋友们的体重,单位为\n;\n第三行为  个浮点数\n 表示小朋友们的身高,单位为\n。\n3.2.3\n输出格式\n输出一行  个数,表示按照身高体重指数从高到低排序后的编号。\n3.2.4\n样例\n3.2.5\n输入样例 1\n\n45 33 39\n1.55 1.33 1.44\n\n3.2.6\n输出样例 1\n3 1 2\n\n3.2.7\n样例解释\n三个小朋友(编号依次为 1 ,2 ,3 )的身高体重指数分别为(保留两位小数的结果):\n,\n,\n,故\n排序后输出的编号为 3 1 2 。\n3.2.8\n数据范围\n,\n 均恰有两位小数。\n3.2.9",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -549,7 +555,8 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 读取小朋友个数\nn = int(input())\n# 读取体重和身高\nw = list(map(int, input().split()))\nh = list(map(float, input().split()))\n# 把小朋友们的编号和bmi指数打包在一个tuple放到列表里面\ndata = []\nfor i in range(n):\n    bmi = w[i] / h[i] / h[i]\n    data.append((bmi, i + 1))\n# 按 BMI(即每个小列表的第 0 号元素)降序排序\ndata.sort(reverse=True)\n# 输出排序后的编号\nfor i in range(n):\n    print(data[i][1], end=' ')\nprint()\n3.2.10\n参考程序 2\n# 同学总数\nn = int(input())\n# 同学们的体重\nw = list(map(int, input().split()))\n# 同学们的身高\nh = list(map(float, input().split()))\nids = list(range(1, n + 1))\n# 遍历i表示每一次都会将目前没确定顺序的元素中最小的元素挪到最右侧\nfor i in range(n):\n    # j表示每一次会把没确定顺序的元素中最小的元素挪到坐标n-i\n    for j in range(1, n - i):\n        # 计算同学i和同学j之间的bmi指数\n        bmi1 = float(w[j - 1]) / h[j - 1] / h[j - 1]\n        bmi2 = float(w[j]) / h[j] / h[j]\n        if bmi1 < bmi2:\n            w[j - 1], w[j] = w[j], w[j - 1]\n            h[j - 1], h[j] = h[j], h[j - 1]\n            ids[j - 1], ids[j] = ids[j], ids[j - 1]\nprint(*[i for i in ids])"
     }
   ],
   "answer_rows": [
@@ -570,8 +577,6 @@
       "A",
       "B"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

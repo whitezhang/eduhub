@@ -1,6 +1,6 @@
 import { getDb } from "./db.mjs";
 import { sendJson, readJsonBody } from "./http-util.mjs";
-import { userFromRequest, login, register, logout, cookieHeader, clearCookieHeader, requireCoach } from "./auth.mjs";
+import { userFromRequest, login, createStudent, updateDisplayName, deleteStudent, logout, cookieHeader, clearCookieHeader, requireCoach, requireUser } from "./auth.mjs";
 import { enqueue, queueStatus } from "./judge.mjs";
 import {
   applyCatalog,
@@ -34,7 +34,7 @@ function hideCode(sub, viewer, contest) {
   return out;
 }
 
-/** Choice/TF: non-empty answer key. Traditional: testcases or sample I/O. */
+/** Choice/TF: non-empty answer key. Traditional: non-empty reference solution (满分程序). */
 function hasAnswerSql(alias = "problems") {
   return `(
     (
@@ -43,13 +43,7 @@ function hasAnswerSql(alias = "problems") {
     )
     OR (
       ${alias}.type = 'traditional'
-      AND (
-        EXISTS (SELECT 1 FROM testcases t WHERE t.problem_id = ${alias}.id)
-        OR (
-          length(trim(coalesce(${alias}.sample_in, ''))) > 0
-          AND length(trim(coalesce(${alias}.sample_out, ''))) > 0
-        )
-      )
+      AND length(trim(coalesce(${alias}.solution_code, ''))) > 0
     )
   )`;
 }
@@ -63,9 +57,7 @@ function problemHasAnswer(db, p) {
       return false;
     }
   }
-  const n = db.prepare("SELECT COUNT(*) AS c FROM testcases WHERE problem_id = ?").get(p.id).c;
-  if (n > 0) return true;
-  return Boolean(String(p.sample_in || "").trim() && String(p.sample_out || "").trim());
+  return Boolean(String(p.solution_code || "").trim());
 }
 
 function studentCanSeeProblem(db, p, me) {
@@ -177,22 +169,27 @@ export async function handleApi(req, res, pathname, query) {
     return true;
   }
 
+  if (method === "PATCH" && pathname === "/api/session") {
+    const u = requireUser(req);
+    if (!u) {
+      sendJson(res, 401, { error: "请先登录" });
+      return true;
+    }
+    const body = await readJsonBody(req);
+    const got = updateDisplayName(u.id, body.display_name);
+    if (got.error) {
+      sendJson(res, 400, { error: got.error });
+      return true;
+    }
+    sendJson(res, 200, { user: got.user });
+    return true;
+  }
+
   if (method === "POST" && pathname === "/api/login") {
     const body = await readJsonBody(req);
     const got = login(body.username, body.password);
     if (!got) {
       sendJson(res, 401, { error: "用户名或密码不正确" });
-      return true;
-    }
-    sendJson(res, 200, { user: got.user }, { "Set-Cookie": cookieHeader(got.sid, req) });
-    return true;
-  }
-
-  if (method === "POST" && pathname === "/api/register") {
-    const body = await readJsonBody(req);
-    const got = register(body.username, body.password, body.display_name);
-    if (got.error) {
-      sendJson(res, 400, { error: got.error });
       return true;
     }
     sendJson(res, 200, { user: got.user }, { "Set-Cookie": cookieHeader(got.sid, req) });
@@ -224,6 +221,28 @@ export async function handleApi(req, res, pathname, query) {
       } else cms[r.key] = r.body;
     }
     sendJson(res, 200, cms);
+    return true;
+  }
+
+  const knowledgeMatch = pathname.match(/^\/api\/knowledge\/([a-z0-9-]+)$/i);
+  if (method === "GET" && knowledgeMatch) {
+    const row = db.prepare("SELECT body FROM cms_blocks WHERE key = 'knowledge_topics'").get();
+    if (!row) {
+      sendJson(res, 404, { error: "知识点库未导入" });
+      return true;
+    }
+    let map = {};
+    try {
+      map = JSON.parse(row.body || "{}");
+    } catch {
+      map = {};
+    }
+    const topic = map[knowledgeMatch[1]];
+    if (!topic) {
+      sendJson(res, 404, { error: "知识点不存在" });
+      return true;
+    }
+    sendJson(res, 200, topic);
     return true;
   }
 
@@ -747,8 +766,35 @@ export async function handleApi(req, res, pathname, query) {
       sendJson(
         res,
         200,
-        { users: db.prepare("SELECT id, username, display_name, role, grade FROM users ORDER BY id").all() },
+        {
+          users: db
+            .prepare(
+              `SELECT id, username, display_name, role, grade,
+                      CASE WHEN role = 'student' THEN password_plain ELSE NULL END AS password_plain
+               FROM users ORDER BY id`,
+            )
+            .all(),
+        },
       );
+      return true;
+    }
+    if (method === "POST" && pathname === "/api/studio/users") {
+      const got = createStudent();
+      if (got.error) {
+        sendJson(res, 400, { error: got.error });
+        return true;
+      }
+      sendJson(res, 200, { user: got.user, password: got.password });
+      return true;
+    }
+    const studioUserOne = pathname.match(/^\/api\/studio\/users\/(\d+)$/);
+    if (method === "DELETE" && studioUserOne) {
+      const got = deleteStudent(studioUserOne[1]);
+      if (got.error) {
+        sendJson(res, 400, { error: got.error });
+        return true;
+      }
+      sendJson(res, 200, { ok: true, username: got.username });
       return true;
     }
     if (method === "GET" && pathname === "/api/studio/problems") {

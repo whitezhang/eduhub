@@ -1,0 +1,3 @@
+# 可选：仅本机 GESP 判断题 PDF 答案识别（导入 seed 时用，线上 deploy 不装）
+openai>=1.40.0
+# 本地 Ollama 视觉模型（二选一）：pip install ollama && ollama pull llava:13b

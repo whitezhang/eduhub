@@ -3,24 +3,31 @@
     "ym": "202606",
     "lang": "python",
     "level": 5,
-    "title": "CCF GESP 2026年6月认证 Python 5级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10284.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1753295542550560.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202606-python-5.pdf"
+    "title": "202606-python-5",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202606-python-5.pdf"
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "假设  head 不为空,下面是实现单向循环链表在头节点后插入新节点的代码,横线处应填入(   )。",
+      "stem": "假设 head 不为空,下面是实现单向循环链表在头节点后插入新节点的代码,横线处应填入(  )。\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.next = None\n1\n2\n3\n4\n5\n6\n7\n8\ndef insert_after_head(head, x):\n    new_node = Node(x)\n    ____________________",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "new_node.next = head.next head.next = new_node"
+        },
+        {
+          "key": "B",
+          "text": "new_node.next = head head.next = new_node"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "head.next = new_node new_node.next = head"
+        },
+        {
+          "key": "D",
+          "text": "new_node.next = head.next; head = new_node"
         }
       ],
       "answer": "A"
@@ -28,15 +35,23 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面代码遍历并输出一个循环单链表,其中  head 指向链表的第一个节点,横线处应填入的是(   )。\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.next = None\ndef insert_after_head(head, x):\n    new_node = Node(x)\n    ____________________\n1\n2\n3\n4\n5\n6\n7\n8\nnew_node.next = head.next\nhead.next = new_node\n1\n2\nnew_node.next = head\nhead.next = new_node\n1\n2\nhead.next = new_node\nnew_node.next = head\n1\n2\nnew_node.next = head.next;\nhead = new_node\n1\n2\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.next = None\ndef printList(head):\n    if head is None:\n        return\n    p = head\n    _______________________\n    print()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
+      "stem": "下面代码遍历并输出一个循环单链表,其中 head 指向链表的第一个节点,横线处应填入的是(  )。\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.next = None\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\ndef printList(head):\n    if head is None:\n        return\n    p = head\n    _______________________\n    print()",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "while p is not None: print(p.val, end=\" \") p = p.next"
+        },
+        {
+          "key": "B",
+          "text": "while p.next is not None: print(p.val, end=\" \") p = p.next"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "while True: print(p.val, end=\" \") p = p.next if p == head: break"
+        },
+        {
+          "key": "D",
+          "text": "while p: print(p.val, end=\" \") p = p.next"
         }
       ],
       "answer": "C"
@@ -44,15 +59,23 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "双链表结点定义如下,若要删除双链表中的中间结点(非首尾节点)p,写法正确的是(   )。",
+      "stem": "双链表结点定义如下,若要删除双链表中的中间结点(非首尾节点)p ,写法正确的是(  )。\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.prev = None\n        self.next = None\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "p.prev.next = p.next p.next.prev = p.prev del p"
+        },
+        {
+          "key": "B",
+          "text": "p.next.prev = p.next p.prev.next = p.prev del p"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "p.prev = p.next p.next = p.prev del p"
+        },
+        {
+          "key": "D",
+          "text": "p.next.next = p.prev p.prev.prev = p.next del p"
         }
       ],
       "answer": "A"
@@ -60,7 +83,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "使用如下欧几里得算法求  gcd(105, 45) 时,函数  gcd(a, b) 的递归调用序列正确的是(   )。\nwhile p is not None:\n    print(p.val, end=\" \")\n    p = p.next\n1\n2\n3\nwhile p.next is not None:\n    print(p.val, end=\" \")\n    p = p.next\n1\n2\n3\nwhile True:\n    print(p.val, end=\" \")\n    p = p.next\n    if p == head:\n        break\n1\n2\n3\n4\n5\nwhile p:\n    print(p.val, end=\" \")\n    p = p.next\n1\n2\n3\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.prev = None\n        self.next = None\n1\n2\n3\n4\n5\np.prev.next = p.next\np.next.prev = p.prev\ndel p\n1\n2\n3\np.next.prev = p.next\np.prev.next = p.prev\ndel p\n1\n2\n3\np.prev = p.next\np.next = p.prev\ndel p\n1\n2\n3\np.next.next = p.prev\np.prev.prev = p.next\ndel p\n1\n2\n3\ndef gcd(a, b):\n    return a if b == 0 else gcd(b, a % b)\n1\n2",
+      "stem": "使用如下欧几里得算法求 gcd(105, 45) 时,函数 gcd(a, b) 的递归调用序列正确的是(  )。\ndef gcd(a, b):\n    return a if b == 0 else gcd(b, a % b)\n1\n2",
       "options": [
         {
           "key": "A",
@@ -84,7 +107,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面代码实现线性筛(欧拉筛),以筛选出  n 以内的所有素数。横线处的代码应为(   )。",
+      "stem": "下面代码实现线性筛(欧拉筛),以筛选出 n 以内的所有素数。横线处的代码应为(  )。\ndef sieve(n):\n    is_prime = [True] * (n + 1)\n    primes = []\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n    if n >= 0:\n        is_prime[0] = False\n    if n >= 1:\n        is_prime[1] = False\n    for i in range(2, n + 1):\n        if is_prime[i]:\n            primes.append(i)\n        j = 0\n        while j < len(primes) and i * primes[j] <= n:\n            is_prime[i * primes[j]] = False\n            if ________________:  # 在此处填入代码\n                break\n            j += 1\n    return primes",
       "options": [
         {
           "key": "A",
@@ -108,7 +131,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面关于埃氏筛法的说法正确的是(   )。",
+      "stem": "下面关于埃氏筛法的说法正确的是(  )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +155,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面代码实现了计算   的快速幂算法,该算法体现的编程思想是(   )。",
+      "stem": "下面代码实现了计算\n 的快速幂算法,该算法体现的编程思想是(  )。\ndef power(x, n):\n    if n == 0:\n        return 1\n    res = power(x, n // 2)\n    if n % 2 == 0:\n        return res * res\n    else:\n        return res * res * x\n1\n2\n3\n4\n5\n6\n7\n8",
       "options": [
         {
           "key": "A",
@@ -148,7 +171,7 @@
         },
         {
           "key": "D",
-          "text": "模拟 def sieve(n): is_prime = [True] * (n + 1) primes = [] if n >= 0: is_prime[0] = False if n >= 1: is_prime[1] = False for i in range(2, n + 1): if is_prime[i]: primes.append(i) j = 0 while j < len(primes) and i * primes[j] <= n: is_prime[i * primes[j]] = False if ________________: # 在此处填入代码 break j += 1 return primes def power(x, n): if n == 0: return 1 res = power(x, n // 2) if n % 2 == 0: return res * res else: return res * res * x"
+          "text": "模拟"
         }
       ],
       "answer": "C"
@@ -156,7 +179,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面代码用于统计  n 中因子  2 出现了多少次。若  n = 40,输出是(   )。",
+      "stem": "下面代码用于统计 n 中因子 2 出现了多少次。若 n = 40 ,输出是(  )。\nn = 40\ncnt = 0\nwhile n % 2 == 0:\n    cnt += 1\n    n = n // 2\nprint(cnt)\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -180,7 +203,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "在一个有序数组中查找第一个大于或等于  x 的元素位置,横线处应填写(   )。",
+      "stem": "在一个有序数组中查找第一个大于或等于 x 的元素位置,横线处应填写(  )。\ndef lowerBound(a, x):\n    l = 0\n    r = len(a)\n    while l < r:\n        mid = l + (r - l) // 2\n        if a[mid] >= x:\n            ________________  # 在此处填入代码\n        else:\n            l = mid + 1\n    return l\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
       "options": [
         {
           "key": "A",
@@ -204,7 +227,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "有若干根木头,长度存于  wood。每切一刀可以把一段木头分成两段。函数  check(wood, K, x) 返回:\n用不超过  K 刀,能否使所有木段长度都不超过  x。下面代码使用二分答案查找最小可行的  x,横线处应填(\n)。",
+      "stem": "有若干根木头,长度存于 wood 。每切一刀可以把一段木头分成两段。函数 check(wood, K, x) 返回:\n用不超过 K 刀,能否使所有木段长度都不超过 x 。下面代码使用二分答案查找最小可行的 x ,横线处应填(\n)。\ndef binary_cut(wood, K):\n    l = 1\n    r = 0\n    for length in wood:\n        r = max(r, length)\n    while l < r:\n        mid = l + (r - l) // 2\n        if check(wood, K, mid):\n            ________________  # 在此处填入代码\n        else:\n            l = mid + 1\n    return l\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
       "options": [
         {
           "key": "A",
@@ -228,7 +251,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面代码段实现了快速排序的划分操作(以首元素为基准),横线处代码应填入(   )。\nn = 40\ncnt = 0\nwhile n % 2 == 0:\n    cnt += 1\n    n = n // 2\nprint(cnt)\n1\n2\n3\n4\n5\n6\ndef lowerBound(a, x):\n    l = 0\n    r = len(a)\n    while l < r:\n        mid = l + (r - l) // 2\n        if a[mid] >= x:\n            ________________  # 在此处填入代码\n        else:\n            l = mid + 1\n    return l\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\ndef binary_cut(wood, K):\n    l = 1\n    r = 0\n    for length in wood:\n        r = max(r, length)\n    while l < r:\n        mid = l + (r - l) // 2\n        if check(wood, K, mid):\n            ________________  # 在此处填入代码\n        else:\n            l = mid + 1\n    return l\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
+      "stem": "下面代码段实现了快速排序的划分操作(以首元素为基准),横线处代码应填入(  )。\ndef partition(arr, low, high):\n    pivot = arr[low]\n    i = low\n    j = high\n    while i < j:\n        while i < j and arr[j] >= pivot:\n            j -= 1\n        while i < j and arr[i] <= pivot:\n            i += 1\n        if i < j:\n            arr[i], arr[j] = arr[j], arr[i]\n    ________________  # 在此处填入代码\n    return i\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
@@ -252,7 +275,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面哪句话最符合归并排序的思想?(   )",
+      "stem": "下面哪句话最符合归并排序的思想?(  )",
       "options": [
         {
           "key": "A",
@@ -276,7 +299,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "在对长度为   的数组进行归并排序的过程中,mergeArray 函数(合并两个有序子数组的操作)被\n调用的次数是(   )。\ndef partition(arr, low, high):\n    pivot = arr[low]\n    i = low\n    j = high\n    while i < j:\n        while i < j and arr[j] >= pivot:\n            j -= 1\n        while i < j and arr[i] <= pivot:\n            i += 1\n        if i < j:\n            arr[i], arr[j] = arr[j], arr[i]\n    ________________  # 在此处填入代码\n    return i\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
+      "stem": "在对长度为\n 的数组进行归并排序的过程中,mergeArray 函数(合并两个有序子数组的操作)被\n调用的次数是(  )。\nMAXN = 100005\na = [0] * MAXN\ntempArr = [0] * MAXN\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\ndef mergeArray(left, mid, right):\n    i = left\n    j = mid + 1\n    k = left\n    while i <= mid and j <= right:\n        if a[i] <= a[j]:\n            tempArr[k] = a[i]\n            i += 1\n        else:\n            tempArr[k] = a[j]\n            j += 1\n        k += 1\n    while i <= mid:\n        tempArr[k] = a[i]\n        i += 1\n        k += 1\n    while j <= right:\n        tempArr[k] = a[j]\n        j += 1\n        k += 1\n    for p in range(left, right + 1):\n        a[p] = tempArr[p]\ndef mergeSort(left, right):\n    if left >= right:\n        return\n    mid = left + (right - left) // 2\n    mergeSort(left, mid)\n    mergeSort(mid + 1, right)\n    mergeArray(left, mid, right)",
       "options": [
         {
           "key": "A",
@@ -292,7 +315,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "小杨在学校义卖会上负责打包 “ 零食盲盒 ” 。每个盲盒重量不同,快递盒最多承重  limit 克,每个快递盒最\n多装两个盲盒。为了尽量少用快递盒,他采用如下策略:\n( 1 )每次把最轻的盲盒和最重的盲盒尝试放在一起;\n( 2 )如果两者重量之和不超过  limit,就一起装;\n( 3 )否则,只能让最重的盲盒单独装一盒。\n下面代码用于计算最少需要多少个快递盒,则横线处应填入的是(   )。\nMAXN = 100005\na = [0] * MAXN\ntempArr = [0] * MAXN\ndef mergeArray(left, mid, right):\n    i = left\n    j = mid + 1\n    k = left\n    while i <= mid and j <= right:\n        if a[i] <= a[j]:\n            tempArr[k] = a[i]\n            i += 1\n        else:\n            tempArr[k] = a[j]\n            j += 1\n        k += 1\n    while i <= mid:\n        tempArr[k] = a[i]\n        i += 1\n        k += 1\n    while j <= right:\n        tempArr[k] = a[j]\n        j += 1\n        k += 1\n    for p in range(left, right + 1):\n        a[p] = tempArr[p]\ndef mergeSort(left, right):\n    if left >= right:\n        return\n    mid = left + (right - left) // 2\n    mergeSort(left, mid)\n    mergeSort(mid + 1, right)\n    mergeArray(left, mid, right)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\ndef minBoxes(w, limit):\n    w.sort()\n    l = 0\n    r = len(w) - 1\n    boxes = 0\n    while l <= r:\n        if w[l] + w[r] <= limit:\n            __________  # 在此处填入代码\n        else:\n            r -= 1\n        boxes += 1\n    return boxes\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "小杨在学校义卖会上负责打包“零食盲盒”。每个盲盒重量不同,快递盒最多承重 limit 克,每个快递盒最\n多装两个盲盒。为了尽量少用快递盒,他采用如下策略:\n(1)每次把最轻的盲盒和最重的盲盒尝试放在一起;\n(2)如果两者重量之和不超过 limit ,就一起装;\n(3)否则,只能让最重的盲盒单独装一盒。\n下面代码用于计算最少需要多少个快递盒,则横线处应填入的是(  )。\ndef minBoxes(w, limit):\n    w.sort()\n    l = 0\n    r = len(w) - 1\n    boxes = 0\n    while l <= r:\n        if w[l] + w[r] <= limit:\n            __________  # 在此处填入代码\n        else:\n            r -= 1\n        boxes += 1\n    return boxes\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
       "options": [
         {
           "key": "A",
@@ -304,7 +327,11 @@
         },
         {
           "key": "C",
-          "text": "D. boxes -= 1"
+          "text": "l += 1 r -= 1"
+        },
+        {
+          "key": "D",
+          "text": "boxes -= 1"
         }
       ],
       "answer": "C"
@@ -312,7 +339,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "高精度减法中,假设两个高精度数按低位在前存储,且已经保证被减数不小于减数。下面处理借位逻辑代\n码中横线处应填入(   )。",
+      "stem": "高精度减法中,假设两个高精度数按低位在前存储,且已经保证被减数不小于减数。下面处理借位逻辑代\n码中横线处应填入(  )。\nif a[i] < b[i]:\n    a[i + 1] -= 1\n    ________________\nt = a[i] - b[i]\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -354,7 +381,7 @@
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "带哨兵头尾节点的双向循环链表,在表头插入节点  p,以下四步操作无论什么顺序执行结果都正确。",
+      "stem": "带哨兵头尾节点的双向循环链表,在表头插入节点 p ,以下四步操作无论什么顺序执行结果都正确。\n# 1\np.next = head.next\n# 2\np.prev = head\n# 3\nhead.next.prev = p\n# 4\nhead.next = p",
       "options": [
         {
           "key": "T",
@@ -370,7 +397,7 @@
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "对任意正整数  a、b,以下两种写法的  gcd 函数返回值完全相同。",
+      "stem": "对任意正整数 a 、b ,以下两种写法的 gcd 函数返回值完全相同。\ndef gcd1(a, b):\n    return gcd1(b, a % b) if b else a\n\n\n\n\n\n\n\n\n\ndef gcd2(a, b):\n    while b:\n        t = b\n        b = a % b\n        a = t\n    return a",
       "options": [
         {
           "key": "T",
@@ -386,7 +413,7 @@
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "在归并排序的合并操作中,如下代码片段可以正确地将两个已排序的子数组  L 和  R 合并回原数组  arr\n中。\nl += 1\nr -= 1\n\n\nif a[i] < b[i]:\n    a[i + 1] -= 1\n    ________________\nt = a[i] - b[i]\n\n\n\n\n# 1\np.next = head.next\n# 2\np.prev = head\n# 3\nhead.next.prev = p\n# 4\nhead.next = p\n\n\n\n\n\n\n\n\ndef gcd1(a, b):\n    return gcd1(b, a % b) if b else a\ndef gcd2(a, b):\n    while b:\n        t = b\n        b = a % b\n        a = t\n    return a",
+      "stem": "在归并排序的合并操作中,如下代码片段可以正确地将两个已排序的子数组 L 和 R 合并回原数组 arr\n中。\ndef merge(arr, left, mid, right):\n    n1 = mid - left + 1\n    n2 = right - mid\n    L = [0] * n1\n    R = [0] * n2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    for i in range(n1):\n        L[i] = arr[left + i]\n    for j in range(n2):\n        R[j] = arr[mid + 1 + j]\n    i = 0\n    j = 0\n    k = left\n    while i < n1 and j < n2:\n        if L[i] <= R[j]:\n            arr[k] = L[i]\n            i += 1\n        else:\n            arr[k] = R[j]\n            j += 1\n        k += 1\n    while i < n1:\n        arr[k] = L[i]\n        i += 1\n        k += 1\n    while j < n2:\n        arr[k] = R[j]\n        j += 1\n        k += 1",
       "options": [
         {
           "key": "T",
@@ -434,7 +461,7 @@
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "二分查找不仅可以应用于有序数组,也可以在不增加时间复杂度的情况下应用于有序的单链表,因为链表也\n支持   时间内的随机访问。",
+      "stem": "二分查找不仅可以应用于有序数组,也可以在不增加时间复杂度的情况下应用于有序的单链表,因为链表也\n支持\n 时间内的随机访问。",
       "options": [
         {
           "key": "T",
@@ -450,7 +477,7 @@
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "以下函数  f1 的时间复杂度比函数  f2 的更高。",
+      "stem": "以下函数 f1 的时间复杂度比函数 f2 的更高。\ndef f1(n):\n    i = 1\n    while i < n:\n        i *= 2\n\n\n\n\n\n\n\n\n\n\ndef f2(n):\n    if n <= 1:\n        return\n    f2(n - 1)\n    f2(n - 1)",
       "options": [
         {
           "key": "T",
@@ -466,7 +493,7 @@
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "唯一分解定理表明,任何一个大于   的自然数都可以唯一地分解为若干个质数的乘积,如果不考虑质因数的\n顺序,这种分解方式是唯一的。",
+      "stem": "唯一分解定理表明,任何一个大于  的自然数都可以唯一地分解为若干个质数的乘积,如果不考虑质因数的\n顺序,这种分解方式是唯一的。",
       "options": [
         {
           "key": "T",
@@ -482,7 +509,7 @@
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "归并排序和快速排序在平均情况下的时间复杂度均为  。但在稳定性方面,归并排序通常是不稳定\n的,而快速排序是稳定的。\ndef merge(arr, left, mid, right):\n    n1 = mid - left + 1\n    n2 = right - mid\n    L = [0] * n1\n    R = [0] * n2\n    for i in range(n1):\n        L[i] = arr[left + i]\n    for j in range(n2):\n        R[j] = arr[mid + 1 + j]\n    i = 0\n    j = 0\n    k = left\n    while i < n1 and j < n2:\n        if L[i] <= R[j]:\n            arr[k] = L[i]\n            i += 1\n        else:\n            arr[k] = R[j]\n            j += 1\n        k += 1\n    while i < n1:\n        arr[k] = L[i]\n        i += 1\n        k += 1\n    while j < n2:\n        arr[k] = R[j]\n        j += 1\n        k += 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef f1(n):\n    i = 1\n    while i < n:\n        i *= 2\ndef f2(n):\n    if n <= 1:\n        return\n    f2(n - 1)\n    f2(n - 1)",
+      "stem": "归并排序和快速排序在平均情况下的时间复杂度均为\n。但在稳定性方面,归并排序通常是不稳定\n的,而快速排序是稳定的。",
       "options": [
         {
           "key": "T",
@@ -501,7 +528,7 @@
       "seq": 1,
       "kind": "traditional",
       "title": "排排坐",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n老师正在和小朋友们分糖果。\n小朋友们先在自己的手上写一个数字,然后坐成一排。\n老师分发糖果的规则是:每个小朋友获得自己以及左侧所有小朋友的手上数字之和个糖果。\n现在小朋友们都已经在自己手上写上了数字。\n请帮小朋友们安排合适的座位顺序,使得小朋友们分到的糖果总量最大,输出这个最大值。\n3.1.2\n\n输入格式\n输入   行,\n第一行为一个正整数  ,表示小朋友的个数;\n第二行为   个正整数  ,表示小朋友们手上的数字,整数之间以空格分隔。\n3.1.3 输出格式\n输出一个整数,表示小朋友们可能分到的最大糖果总数量。\n3.1.4 样例\n3.1.5 输入样例  1\n3.1.6 输出样例  1\n3.1.7 样例解释\n小朋友安排座位后从左向右每人手上数字依次是: 。\n这时可以得到最多的糖果: 。\n3.1.8 数据范围\n, 。\n\n7 5 8 9 3\n\n3.1.9",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n老师正在和小朋友们分糖果。\n小朋友们先在自己的手上写一个数字,然后坐成一排。\n老师分发糖果的规则是:每个小朋友获得自己以及左侧所有小朋友的手上数字之和个糖果。\n现在小朋友们都已经在自己手上写上了数字。\n请帮小朋友们安排合适的座位顺序,使得小朋友们分到的糖果总量最大,输出这个最大值。\n3.1.2\n\n输入格式\n输入  行,\n第一行为一个正整数 ,表示小朋友的个数;\n第二行为  个正整数\n,表示小朋友们手上的数字,整数之间以空格分隔。\n3.1.3\n输出格式\n输出一个整数,表示小朋友们可能分到的最大糖果总数量。\n3.1.4\n样例\n3.1.5\n输入样例 1\n\n7 5 8 9 3\n\n3.1.6\n输出样例 1\n\n3.1.7\n样例解释\n小朋友安排座位后从左向右每人手上数字依次是:\n。\n这时可以得到最多的糖果:\n。\n3.1.8\n数据范围\n,\n。\n3.1.9",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -511,23 +538,25 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "n = int(input())\n# 将糖果的数目合并在一个数组里面,进行降序排序\na = sorted(map(int, input().split()), reverse=True)\n# 总答案\nans = 0\n# 当前这个小孩能拿到多少糖果\nsum = 0\n# 遍历每一个小孩\nfor x in a:\n    # 计算这个小孩能拿多少糖果,sum就是左侧所有小孩的累加\n    sum += x\n    # 最后的答案,加上当前小孩能拿多少糖果\n    ans += sum\n# 展示最后的答案\nprint(ans)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "晚宴",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小明去参加晚宴。晚宴中有   个菜肴,每个菜肴都有一个美味度,第   个菜肴的美味度为  。\n晚宴规定小明只能恰好选取两道菜肴,并且这两道菜肴的美味度必须要互质(即最大公约数为  )。\n请帮助小明选取两道菜肴,使得两道菜肴美味度之和最大。\n3.2.2\n\n输入格式\n输入   行,\n第一行为一个正整数  ,表示菜肴的个数;\n第二行为   个整数   表示菜肴的美味度,整数之间以空格分隔。\n3.2.3 输出格式\n输出一个整数,表示两道互质菜肴美味度之和的最大值。\n3.2.4 样例\n3.2.5 输入样例  1\n3.2.6 输出样例  1\nn = int(input())\n# 将糖果的数目合并在一个数组里面,进行降序排序\na = sorted(map(int, input().split()), reverse=True)\n# 总答案\nans = 0\n# 当前这个小孩能拿到多少糖果\nsum = 0\n# 遍历每一个小孩\nfor x in a:\n    # 计算这个小孩能拿多少糖果, sum 就是左侧所有小孩的累加\n    sum += x\n    # 最后的答案,加上当前小孩能拿多少糖果\n    ans += sum\n# 展示最后的答案\nprint(ans)\n\n3 5 7 35 105\n\n3.2.7 样例解释  1\n最优选择是   和  。\n注意到,  与其他任意菜肴的最大公约数都大于  ,因此无法参与合法选择。\n3.2.8 数据范围\n。\n数据保证不存在相同美味度的菜肴。\n数据保证至少存在一种选取两道菜肴的方案。\n3.2.9",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n小明去参加晚宴。晚宴中有  个菜肴,每个菜肴都有一个美味度,第  个菜肴的美味度为\n。\n晚宴规定小明只能恰好选取两道菜肴,并且这两道菜肴的美味度必须要互质(即最大公约数为 )。\n请帮助小明选取两道菜肴,使得两道菜肴美味度之和最大。\n3.2.2\n\n输入格式\n输入  行,\n第一行为一个正整数 ,表示菜肴的个数;\n第二行为  个整数\n 表示菜肴的美味度,整数之间以空格分隔。\n3.2.3\n输出格式\n输出一个整数,表示两道互质菜肴美味度之和的最大值。\n3.2.4\n样例\n3.2.5\n输入样例 1\n\n3 5 7 35 105\n\n3.2.6\n输出样例 1\n\n3.2.7\n样例解释 1\n最优选择是  和\n。\n注意到,\n 与其他任意菜肴的最大公约数都大于 ,因此无法参与合法选择。\n3.2.8\n数据范围\n。\n数据保证不存在相同美味度的菜肴。\n数据保证至少存在一种选取两道菜肴的方案。\n3.2.9",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "15\n5\n",
-          "out": "38\n",
-          "suspect": true
+          "in": "5\n",
+          "out": "2\n",
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 辗转相除法\ndef gcd(a, b):\n    if b == 0:\n        return a\n    return gcd(b, a % b)\n# 菜品数量为n\nn = int(input())\n# 每一道菜品的美味度\narr = list(map(int, input().split()))\nans = 0\nfor i in range(n):\n    for j in range(i + 1, n):\n        if gcd(arr[i], arr[j]) == 1:\n            ans = max(ans, arr[i] + arr[j])\nassert ans != 0\nprint(ans)"
     }
   ],
   "answer_rows": [
@@ -548,8 +577,6 @@
       "C",
       "A"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

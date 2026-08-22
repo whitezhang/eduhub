@@ -9,7 +9,7 @@ import Studio from "./views/Studio.vue";
 import StudioProblemEdit from "./views/StudioProblemEdit.vue";
 import PaperWorkbook from "./views/PaperWorkbook.vue";
 import SyllabusOverview from "./views/syllabus/SyllabusOverview.vue";
-import SyllabusGuide from "./views/syllabus/SyllabusGuide.vue";
+import About from "./views/About.vue";
 import { useSession } from "./stores/session.js";
 
 const router = createRouter({
@@ -17,7 +17,8 @@ const router = createRouter({
   routes: [
     { path: "/", component: Home },
     { path: "/syllabus", component: SyllabusOverview },
-    { path: "/syllabus/guide", component: SyllabusGuide },
+    { path: "/syllabus/guide", redirect: (to) => ({ path: "/syllabus", query: to.query }) },
+    { path: "/syllabus/topic/:id", redirect: (to) => ({ path: "/syllabus", query: to.query }) },
     { path: "/problems", component: Problems },
     { path: "/problems/papers/:id", component: PaperWorkbook, meta: { requiresAuth: true } },
     { path: "/problems/:id", component: ProblemSolve, meta: { requiresAuth: true } },
@@ -28,6 +29,7 @@ const router = createRouter({
     { path: "/progress/:id", component: ProgressUser },
     { path: "/studio", component: Studio },
     { path: "/studio/problems/:id", component: StudioProblemEdit },
+    { path: "/about", component: About },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {

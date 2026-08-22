@@ -3,16 +3,16 @@
     "ym": "202509",
     "lang": "cpp",
     "level": 4,
-    "title": "CCF GESP 2025年9月认证 C++ 4级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10229.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1703973044092960.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202509-cpp-4.pdf"
+    "title": "202509-cpp-4",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202509-cpp-4.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "运行下面程序后变量a的值是(    )。",
+      "stem": "运行下面程序后变量a 的值是(   )。\nint a = 42;\nint* p = &a;\n*p = *p + 1;\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "以下关于数组的描述中,(    )是错误的。",
+      "stem": "以下关于数组的描述中,(   )是错误的。",
       "options": [
         {
           "key": "A",
@@ -52,7 +52,7 @@
         },
         {
           "key": "D",
-          "text": "sizeof(arr) 返回的是整个数组arr占用的字节数"
+          "text": "sizeof(arr) 返回的是整个数组arr 占用的字节数"
         }
       ],
       "answer": "C"
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "给定如下定义的数组arr,则*(*(arr + 1) + 2)的值是(    )。",
+      "stem": "给定如下定义的数组arr ,则*(*(arr + 1) + 2) 的值是(   )。\nint arr[2][3] = {{1, 2, 3}, {4, 5, 6}};\n1",
       "options": [
         {
           "key": "A",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面这段代码会输出(    )。\nint a = 42;\nint* p = &a;\n*p = *p + 1;\n1\n2\n3\nint arr[2][3] = {{1, 2, 3}, {4, 5, 6}};1",
+      "stem": "下面这段代码会输出(   )。\nint add(int a, int b = 1); // 函数声明\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nint main() {\n    cout << add(2) << \" \" << add(2, 3);\n    return 0;\n}\nint add(int a, int b) { // 函数定义\n    return a + b;\n}",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面这段代码会输出(    )。",
+      "stem": "下面这段代码会输出(   )。\nint x = 5;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\nvoid foo() {\n    int x = 10;\n    cout << x << \" \";\n}\nvoid bar() {\n    cout << x << \" \";\n}\nint main() {\n    foo();\n    bar();\n}",
       "options": [
         {
           "key": "A",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面程序运行的结果是(    )。",
+      "stem": "下面程序运行的结果是(   )。\nvoid increaseA(int x) {\n    x++;\n}\nvoid increaseB(int* p) {\n    (*p)++;\n}\nint main() {\n    int a = 5;\n    increaseA(a);\n    cout << a << \" \";\n    increaseB(&a);\n    cout << a;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13",
       "options": [
         {
           "key": "A",
@@ -144,7 +144,7 @@
         },
         {
           "key": "C",
-          "text": "5 6 int add(int a, int b = 1); // 函数声明 int main() { cout << add(2) << \" \" << add(2, 3); return 0; } int add(int a, int b) { // 函数定义 return a + b; } int x = 5; void foo() { int x = 10; cout << x << \" \"; } void bar() { cout << x << \" \"; } int main() { foo(); bar(); } void increaseA(int x) { x++; } void increaseB(int* p) { (*p)++; } int main() { int a = 5; increaseA(a); cout << a << \" \"; increaseB(&a); cout << a; }"
+          "text": "5 6"
         },
         {
           "key": "D",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "关于结构体初始化,以下哪个选项中正确的是(   )。",
+      "stem": "关于结构体初始化,以下哪个选项中正确的是(   )。\nstruct Point {int x,y;};\n1",
       "options": [
         {
           "key": "A",
@@ -180,7 +180,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "运行如下代码会输出(  )。",
+      "stem": "运行如下代码会输出(  )。\nstruct Cat {\n    string name;\n    int age;\n};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nvoid birthday(Cat& c) {\n    c.age++;\n}\nint main() {\n    Cat kitty{\"Mimi\", 2};\n    birthday(kitty);\n    cout << kitty.name << \" \" << kitty.age;\n}",
       "options": [
         {
           "key": "A",
@@ -228,19 +228,23 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面代码试图实现选择排序,使其能对数组 nums  排序为升序,则横线上应分别填写(   )。",
+      "stem": "下面代码试图实现选择排序,使其能对数组 nums 排序为升序,则横线上应分别填写(   )。\nvoid selectionSort(vector<int>& nums) {\n    int n = nums.size();\n    for (int i = 0; i < n - 1; ++i) {\n        int minIndex = i;\n        for (int j = i + 1; j < n; ++j) {\n            if ( __________ ) {     // 在此处填入代码\n                minIndex = j;\n            }\n        }\n       ____________________; // 在此处填入代码\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12",
       "options": [
         {
           "key": "A",
-          "text": "struct Point {int x,y;};1 struct Cat { string name; int age; }; void birthday(Cat& c) { c.age++; } int main() { Cat kitty{\"Mimi\", 2}; birthday(kitty); cout << kitty.name << \" \" << kitty.age; } void selectionSort(vector<int>& nums) { int n = nums.size(); for (int i = 0; i < n - 1; ++i) { int minIndex = i; for (int j = i + 1; j < n; ++j) { if ( __________ ) { // 在此处填入代码 minIndex = j; } } ____________________; // 在此处填入代码 } }"
+          "text": "nums[j] < nums[minIndex] swap(nums[i], nums[minIndex])"
         },
         {
           "key": "B",
-          "text": "C."
+          "text": "nums[j] > nums[minIndex] swap(nums[i], nums[minIndex])"
+        },
+        {
+          "key": "C",
+          "text": "nums[j] <= nums[minIndex] swap(nums[j], nums[minIndex])"
         },
         {
           "key": "D",
-          "text": ""
+          "text": "nums[j] <= nums[minIndex] swap(nums[i], nums[j])"
         }
       ],
       "answer": "A"
@@ -248,15 +252,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面程序实现插入排序(升序排序),则横线上应分别填写(    )。",
+      "stem": "下面程序实现插入排序(升序排序),则横线上应分别填写(   )。\nvoid insertionSort(int arr[], int n) {\n    for (int i = 1; i < n; i++) {\n        int key = arr[i];\n        int j = i - 1;\n        while ( j >= 0 && ____________________ ) { // 在此处填入代码\n            arr[j + 1] = arr[j];\n            j--;\n        }\n        ____________________; // 在此处填入代码\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "arr[j] > key arr[j + 1] = key"
+        },
+        {
+          "key": "B",
+          "text": "arr[j] < key arr[j + 1] = key"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "arr[j] > key arr[j] = key"
+        },
+        {
+          "key": "D",
+          "text": "arr[j] < key arr[j] = key"
         }
       ],
       "answer": "A"
@@ -264,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "关于插入排序的时间复杂度,下列说法正确的是(    )。",
+      "stem": "关于插入排序的时间复杂度,下列说法正确的是(   )。",
       "options": [
         {
           "key": "A",
@@ -288,15 +300,23 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "小杨正在爬楼梯,需要   阶才能到达楼顶,每次可以爬   阶或   阶,求小杨有多少种不同的方法可以爬到\n楼顶,横线上应填写(   )。\nnums[j] < nums[minIndex]\nswap(nums[i], nums[minIndex])\n1\n2\nnums[j] > nums[minIndex]\nswap(nums[i], nums[minIndex])\n1\n2\nnums[j] <= nums[minIndex]\nswap(nums[j], nums[minIndex])\n1\n2\nnums[j] <= nums[minIndex]\nswap(nums[i], nums[j])\n1\n2\nvoid insertionSort(int arr[], int n) {\n    for (int i = 1; i < n; i++) {\n        int key = arr[i];\n        int j = i - 1;\n        while ( j >= 0 && ____________________ ) { // 在此处填入代码\n            arr[j + 1] = arr[j];\n            j--;\n        }\n        ____________________; // 在此处填入代码\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\narr[j] > key\narr[j + 1] = key\n1\n2\narr[j] < key\narr[j + 1] = key\n1\n2\narr[j] > key\narr[j] = key\n1\n2\narr[j] < key\narr[j] = key\n1\n2",
+      "stem": "小杨正在爬楼梯,需要  阶才能到达楼顶,每次可以爬  阶或  阶,求小杨有多少种不同的方法可以爬到\n楼顶,横线上应填写(  )。\nint climbStairs(int n) {\n    if (n <= 2) return n;\n    int prev2 = 1;\n    int prev1 = 2;\n    int current = 0;\n    for (int i = 3; i <= n; ++i) {\n        ________________    // 在此处填入代码\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n    }\n    return current;\n}",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "prev2 = prev1; prev1 = current; current = prev1 + prev2;"
+        },
+        {
+          "key": "B",
+          "text": "current = prev1 + prev2; prev2 = prev1; prev1 = current;"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "current = prev1 + prev2; prev1 = current; prev2 = prev1;"
+        },
+        {
+          "key": "D",
+          "text": "prev1 = current; prev2 = prev1; current = prev1 + prev2;"
         }
       ],
       "answer": "B"
@@ -304,7 +324,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "假设有一个班级的成绩单,存储在一个长度为 n  的数组 scores  中,每个元素是一个学生的分数。老师\n想要找出 所有满足 scores[i] + scores[j] + scores[k] == 300  的三元组,其中 i < j < k。下面代码实现该功\n能,请问其时间复杂度是(   )。",
+      "stem": "假设有一个班级的成绩单,存储在一个长度为 n 的数组 scores 中,每个元素是一个学生的分数。老师\n想要找出 所有满足 scores[i] + scores[j] + scores[k] == 300 的三元组,其中 i < j < k。下面代码实现该功\n能,请问其时间复杂度是(   )。\nint cnt = 0;\nfor (int i = 0; i < n; i++) {\n    for (int j = i + 1; j < n; j++) {\n        for (int k = j + 1; k < n; k++) {\n            if (scores[i] + scores[j] + scores[k] == 300) {\n                cnt++;\n            }\n        }\n    }\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",
       "options": [
         {
           "key": "A",
@@ -328,7 +348,7 @@
         },
         {
           "key": "B",
-          "text": "catch 块可以有多个,处理不同类型的异常 int climbStairs(int n) { if (n <= 2) return n; int prev2 = 1; int prev1 = 2; int current = 0; for (int i = 3; i <= n; ++i) { ________________ // 在此处填入代码 } return current; } prev2 = prev1; prev1 = current; current = prev1 + prev2; current = prev1 + prev2; prev2 = prev1; prev1 = current; current = prev1 + prev2; prev1 = current; prev2 = prev1; prev1 = current; prev2 = prev1; current = prev1 + prev2; int cnt = 0; for (int i = 0; i < n; i++) { for (int j = i + 1; j < n; j++) { for (int k = j + 1; k < n; k++) { if (scores[i] + scores[j] + scores[k] == 300) { cnt++; } } } } 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "catch 块可以有多个,处理不同类型的异常"
         },
         {
           "key": "C",
@@ -346,7 +366,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "以下代码能正确初始化指针。",
+      "stem": "以下代码能正确初始化指针。\nint a = 5;\nint *p = a;",
       "options": [
         {
           "key": "T",
@@ -357,12 +377,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "执行下面 C++ 代码将输出  11。",
+      "stem": "执行下面C++代码将输出 11 。\nint x = 10;\nvoid f() {\n    int x = x + 1;\n    cout << x << endl;\n}\n\n\n\n\n\n\n\n\n\nint main() {\n    f();\n}",
       "options": [
         {
           "key": "T",
@@ -373,12 +393,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "以下 C++ 代码合法。",
+      "stem": "以下C++代码合法。\nstruct Student {\n    string name;\n    int age;\n    float score;\n};\nStudent* students = new Student[20];",
       "options": [
         {
           "key": "T",
@@ -389,12 +409,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "执行下面 C++ 代码将输出  10。",
+      "stem": "执行下面C++代码将输出 10 。\nvoid func(int* p) {\n    *p = 10;\n}\n\n\n\n\n\n\n\n\n\n\nint main() {\n    int a = 5;\n    func(&a);\n    cout << a << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "T",
@@ -405,12 +425,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下面代码将二维数组arr传递给函数f,函数内部用arr[i][j]访问元素,函数参数声明为int arr[]\n[4]是错误的。\nint a = 5;\nint *p = a;\n\n\nint x = 10;\nvoid f() {\n    int x = x + 1;\n    cout << x << endl;\n}\nint main() {\n    f();\n}\n\n\n\n\n\n\n\n\n\nstruct Student {\n    string name;\n    int age;\n    float score;\n};\nStudent* students = new Student[20];\n\n\n\n\n\n\nvoid func(int* p) {\n    *p = 10;\n}\nint main() {\n    int a = 5;\n    func(&a);\n    cout << a << endl;\n    return 0;\n}\n\n\n\n\n\n\n\n\n\n\nvoid f(int arr[][4], int rows) {\n    // 访问  arr[i][j]\n}\nint main() {\n    int arr[3][4] = { /* 初始化  */ };\n    f(arr, 3);\n}",
+      "stem": "下面代码将二维数组arr 传递给函数f ,函数内部用arr[i][j] 访问元素,函数参数声明为int arr[]\n[4] 是错误的。\nvoid f(int arr[][4], int rows) {\n    // 访问 arr[i][j]\n}\n\n\n\n\n\n\n\n\nint main() {\n    int arr[3][4] = { /* 初始化 */ };\n    f(arr, 3);\n}",
       "options": [
         {
           "key": "T",
@@ -421,7 +441,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 6,
@@ -437,12 +457,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "虽然插入排序的时间复杂度为   ,但由于单元操作相对较少,因此在小数据量的排序任务中非常受欢\n迎。",
+      "stem": "虽然插入排序的时间复杂度为\n ,但由于单元操作相对较少,因此在小数据量的排序任务中非常受欢\n迎。",
       "options": [
         {
           "key": "T",
@@ -453,12 +473,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "对整数数组{4, 1, 3, 1, 5, 2}进行冒泡排序(将最大元素放到最后),执行一轮之后是{4, 1, 3, 1,\n2, 5}。",
+      "stem": "对整数数组{4, 1, 3, 1, 5, 2} 进行冒泡排序(将最大元素放到最后),执行一轮之后是{4, 1, 3, 1,\n2, 5} 。",
       "options": [
         {
           "key": "T",
@@ -469,12 +489,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "以下代码只能捕获int类型异常。",
+      "stem": "以下代码只能捕获int 类型异常。\nint main() {\n    try {\n        throw 42;\n    } catch (...) {\n        cout << \"Caught\" << endl;\n    }\n    return 0;\n}",
       "options": [
         {
           "key": "T",
@@ -485,12 +505,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "以下代码将  Hello 写入文件  data.txt。",
+      "stem": "以下代码将 Hello 写入文件 data.txt 。\nofstream file(\"data.txt\");\ncout<<\"Hello\"<< endl;\nfile.close();",
       "options": [
         {
           "key": "T",
@@ -501,7 +521,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -509,27 +529,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "排兵布阵",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n作为将军,你自然需要合理地排兵布阵。地图可以视为   行   列的网格,适合排兵的网格以  1 标注,不适合排兵\n的网格以  0 标注。现在你需要在地图上选择一个矩形区域排兵,这个矩形区域内不能包含不适合排兵的网格。请问\n可选择的矩形区域最多能包含多少网格?\n3.1.2\n\n输入格式\n第一行,两个正整数  ,分别表示地图网格的行数与列数。\n接下来   行,每行   个整数  ,表示各行中的网格是否适合排兵。\n3.1.3 输出格式\n一行,一个整数,表示适合排兵的矩形区域包含的最大网格数。\n3.1.4 样例\n3.1.4.1 输入样例  1",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n作为将军,你自然需要合理地排兵布阵。地图可以视为  行\n 列的网格,适合排兵的网格以 1 标注,不适合排兵\n的网格以 0 标注。现在你需要在地图上选择一个矩形区域排兵,这个矩形区域内不能包含不适合排兵的网格。请问\n可选择的矩形区域最多能包含多少网格?\n3.1.2\n\n输入格式\n第一行,两个正整数\n,分别表示地图网格的行数与列数。\n接下来  行,每行\n 个整数\n,表示各行中的网格是否适合排兵。\n3.1.3\n输出格式\n一行,一个整数,表示适合排兵的矩形区域包含的最大网格数。\n3.1.4\n样例\n3.1.4.1\n输入样例 1\n4 3\n0 1 1\n1 0 1\n0 1 1\n1 1 1\n\n3.1.4.2\n输出样例 1\n\n3.1.4.3\n输入样例 2\n3 5\n1 0 1 0 1\n0 1 0 1 0\n0 1 1 1 0\n\n3.1.4.4\n输出样例 2\n\n3.1.5\n数据范围\n对于所有测试点,保证\n,\n。\n3.1.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "6\n7\n8\n",
-          "out": "1\n",
+          "in": "4\n5\n4\n1\n",
+          "out": "3\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <algorithm>\n#include <cstdio>\nusing namespace std;\nconst int N = 15;\nint n, m;\nint a[N][N];\nint ans;\nint main() {\n    scanf(\"%d%d\", &n, &m);\n    for (int i = 1; i <= n; i++)\n        for (int j = 1; j <= m; j++) scanf(\"%d\", &a[i][j]);\n    for (int u = 1; u <= n; u++)\n        for (int l = 1; l <= m; l++)\n            for (int d = u; d <= n; d++) {\n                int chk = 1;\n                for (int r = l; r <= m; r++) {\n                    for (int x = u; x <= d; x++) chk &= a[x][r];\n                    if (!chk) break;\n                    ans = max(ans, (r - l + 1) * (d - u + 1));\n                }\n            }\n    printf(\"%d\\n\", ans);\n    return 0;\n}"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "最长连续段",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n\n3 5\n1 0 1 0 1\n0 1 0 1 0\n0 1 1 1 0",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n对于  个整数构成的数组\n,如果对\n 都有\n,那么称数组  是一个连续段。\n给定由  个整数构成的数组\n,你可以任意重排数组  中元素顺序。请问在重排顺序之后, 所有是连\n续段的子数组中,最长的子数组长度是多少?\n例如,对于数组\n,可以将其重排为\n,有以下\n 个子数组:\n其中除\n 以外的子数组均是连续段,因此是连续段的子数组中,最长子数组长度为 。\n3.2.2\n\n输入格式\n第一行,一个正整数 ,表示数组长度。\n第二行, 个整数\n,表示数组中的整数。\n3.2.3\n输出格式\n一行,一个整数,表示数组  重排顺序后,所有是连续段的子数组的最长长度。\n3.2.4\n样例\n3.2.4.1\n输入样例 1\n\n1 0 2 4\n\n3.2.4.2\n输出样例 1\n\n3.2.4.3\n输入样例 2\n\n9 9 8 2 4 4 3 5 3\n\n3.2.4.4\n输出样例 2\n\n3.2.5\n数据范围\n对于\n% 的测试点,保证\n。\n对于所有测试点,保证\n,\n。\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "3\n",
+          "out": "9\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <algorithm>\n#include <cstdio>\nusing namespace std;\nconst int N = 1e5 + 5;\nint n;\nint a[N];\nint last, cnt, mx;\nint main() {\n    scanf(\"%d\", &n);\n    for (int i = 1; i <= n; i++) scanf(\"%d\", &a[i]);\n    sort(a + 1, a + n + 1);\n    last = a[1];\n    cnt = mx = 1;\n    for (int i = 1; i <= n; i++) {\n        if (a[i] == last) continue;\n        if (a[i] == last + 1)\n            cnt++;\n        else\n            cnt = 1;\n        last = a[i];\n        mx = max(cnt, mx);\n    }\n    printf(\"%d\\n\", mx);\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -548,11 +581,8 @@
       "B",
       "B",
       "C",
-      "D",
-      "C"
+      "D"
     ],
-    [
-      "C"
-    ]
+    []
   ]
 }

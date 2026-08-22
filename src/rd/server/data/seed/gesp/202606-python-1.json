@@ -3,16 +3,15 @@
     "ym": "202606",
     "lang": "python",
     "level": 1,
-    "title": "CCF GESP 2026年6月认证 Python 1级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10284.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1753295446081568.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202606-python-1.pdf"
+    "title": "202606-python-1",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202606-python-1.pdf"
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "学校组织同学们到未来农场参观,小明听讲解员介绍。在智能温室中,湿度传感器可以连续检测土壤的湿\n度,并将检测到的湿度数据实时发送给中央控制器。中央控制器根据这些数据判断是否开启灌溉系统。请问,这里\n的湿度传感器所发挥的作用,类似于计算机系统中的哪一类组件?(   )",
+      "stem": "学校组织同学们到未来农场参观,小明听讲解员介绍。在智能温室中,湿度传感器可以连续检测土壤的湿\n度,并将检测到的湿度数据实时发送给中央控制器。中央控制器根据这些数据判断是否开启灌溉系统。请问,这里\n的湿度传感器所发挥的作用,类似于计算机系统中的哪一类组件?(  )",
       "options": [
         {
           "key": "A",
@@ -36,7 +35,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "在使用某集成开发环境(比如  Python IDLE 、 PyCharm )来编辑源代码文件时,程序员经常需要在编辑区中\n对代码进行各种修改。以下关于在编辑区中执行的操作,描述  不正确 的是(   )。",
+      "stem": "在使用某集成开发环境(比如 Python IDLE、PyCharm)来编辑源代码文件时,程序员经常需要在编辑区中\n对代码进行各种修改。以下关于在编辑区中执行的操作,描述 不正确 的是(  )。",
       "options": [
         {
           "key": "A",
@@ -60,7 +59,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "有关如下  Python 代码的说法,正确的是(   )。",
+      "stem": "有关如下 Python 代码的说法,正确的是(  )。\na = 3 + 3.5\nprint(a)\n1\n2",
       "options": [
         {
           "key": "A",
@@ -72,11 +71,11 @@
         },
         {
           "key": "C",
-          "text": "代码能正常执行,将输出 6。"
+          "text": "代码能正常执行,将输出 6 。"
         },
         {
           "key": "D",
-          "text": "代码能正常执行,将输出 6.5。"
+          "text": "代码能正常执行,将输出 6.5 。"
         }
       ],
       "answer": "D"
@@ -84,7 +83,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下列  Python 表达式与  - 2 * 2 ** 4 的值相同的是(   )。",
+      "stem": "下列 Python 表达式与 - 2 * 2 ** 4 的值相同的是(  )。",
       "options": [
         {
           "key": "A",
@@ -100,7 +99,7 @@
         },
         {
           "key": "D",
-          "text": "(2 * 2) ** - 4 a = 3 + 3.5 print(a)"
+          "text": "(2 * 2) ** - 4"
         }
       ],
       "answer": "C"
@@ -108,7 +107,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "如下  Python 代码执行后,其输出是(   )。",
+      "stem": "如下 Python 代码执行后,其输出是(  )。\na = 3\nb = a\na = 4\nprint(a, b)\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -132,7 +131,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "如下  Python 代码执行时输入  2026-6-27,下列说法正确的是(   )。",
+      "stem": "如下 Python 代码执行时输入 2026-6-27 ,下列说法正确的是(  )。\nN = input()\nprint(N)\n1\n2",
       "options": [
         {
           "key": "A",
@@ -148,7 +147,7 @@
         },
         {
           "key": "D",
-          "text": "允许输入并输出 '2026-6-27'【注:两侧有英文单引号】"
+          "text": "允许输入并输出 '2026-6-27' 【注:两侧有英文单引号】"
         }
       ],
       "answer": "C"
@@ -156,23 +155,23 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "如下  Python 代码执行时,下列说法  错误 的是(   )。",
+      "stem": "如下 Python 代码执行时,下列说法 错误 的是(  )。\nN = int(input())\nM = int(input())\n1\n2\n3\n4\n5\n6\n7\nif N > M:\n    print(\"A\", N - M)\nelse:\n    print(\"B\", M - N)",
       "options": [
         {
           "key": "A",
-          "text": "如果先后输入 4 和 3,将输出 A 1"
+          "text": "如果先后输入 4 和 3 ,将输出 A 1"
         },
         {
           "key": "B",
-          "text": "如果先后输入 3 和 4,将输出 B 1"
+          "text": "如果先后输入 3 和 4 ,将输出 B 1"
         },
         {
           "key": "C",
-          "text": "如果先后输入 3 和 3,将输出 A 0"
+          "text": "如果先后输入 3 和 3 ,将输出 A 0"
         },
         {
           "key": "D",
-          "text": "如果先后输入 4 和 4,将输出 B 0"
+          "text": "如果先后输入 4 和 4 ,将输出 B 0"
         }
       ],
       "answer": "C"
@@ -180,23 +179,23 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "阅读如下  Python 代码,下列说法  错误 的是(   )。",
+      "stem": "阅读如下 Python 代码,下列说法 错误 的是(  )。\ncnt = 0\nfor i in range(5):\n    cnt += 1\nprint(cnt)\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
-          "text": "将 cnt += 1 修改为 cnt = cnt + 1,执行效果相同"
+          "text": "将 cnt += 1 修改为 cnt = cnt + 1 ,执行效果相同"
         },
         {
           "key": "B",
-          "text": "将 cnt += 1 修改为 cnt = 1 + cnt,执行效果相同"
+          "text": "将 cnt += 1 修改为 cnt = 1 + cnt ,执行效果相同"
         },
         {
           "key": "C",
-          "text": "将 cnt += 1 修改为 cnt =+ 1,执行效果相同"
+          "text": "将 cnt += 1 修改为 cnt =+ 1 ,执行效果相同"
         },
         {
           "key": "D",
-          "text": "将 cnt += 1 修改为 cnt = + 1 + cnt,执行效果相同"
+          "text": "将 cnt += 1 修改为 cnt = + 1 + cnt ,执行效果相同"
         }
       ],
       "answer": "C"
@@ -204,7 +203,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "如下  Python 代码执行后输出是  1 2 3 4 5 6 7 8 9 10 11 5 6 7 8 9 10 11 5 6 7 8 9 10 11 5 6 7\n8 9 10 11 5 6 7 之值。横线处应该填入的运算符是(   )。\na = 3\nb = a\na = 4\nprint(a, b)\n1\n2\n3\n4\nN = input()\nprint(N)\n1\n2\nN = int(input())\nM = int(input())\nif N > M:\n    print(\"A\", N - M)\nelse:\n    print(\"B\", M - N)\n1\n2\n3\n4\n5\n6\n7\ncnt = 0\nfor i in range(5):\n    cnt += 1\nprint(cnt)\n1\n2\n3\n4",
+      "stem": "如下 Python 代码执行后输出是 1 2 3 4 5 6 7 8 9 10 11 5 6 7 8 9 10 11 5 6 7 8 9 10 11 5 6 7\n8 9 10 11 5 6 7 之值。横线处应该填入的运算符是(  )。\nnum = 1\nfor i in range(35):\n    print(num, end = \" \")\n    if num ______ 10:\n        num _______ 2\n    else:\n        num _______ 1\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
@@ -228,7 +227,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "如下  Python 代码执行,其输出是(   )。",
+      "stem": "如下 Python 代码执行,其输出是(  )。\nfor i in range(1,5):\n    if i % 2 == 0:\n        continue\n        print(i, end = \"#\")\nprint(i, \"END\", end = \"#\")\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
@@ -252,23 +251,23 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "如下  Python 代码执行时,下列说法正确的是(   )。",
+      "stem": "如下 Python 代码执行时,下列说法正确的是(  )。\nN = int(input())\n1\n2\n3\n4\n5\n6\n7\n8\nfor i in range(2, N):\n    if N % i == 0:\n        print(1, end = \"#\")\n        break\n    else:\n        print(0, end = \"#\")",
       "options": [
         {
           "key": "A",
-          "text": "如果输入 2,将输出 1#。"
+          "text": "如果输入 2 ,将输出 1# 。"
         },
         {
           "key": "B",
-          "text": "如果输入 15,将输出 0#1#。"
+          "text": "如果输入 15 ,将输出 0#1# 。"
         },
         {
           "key": "C",
-          "text": "如果输入 1,将输出 0#。"
+          "text": "如果输入 1 ,将输出 0# 。"
         },
         {
           "key": "D",
-          "text": "如果输入 3,将输出 1#。"
+          "text": "如果输入 3 ,将输出 1# 。"
         }
       ],
       "answer": "B"
@@ -276,15 +275,15 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下列说法有关如下  Python 代码,错误 的是(   )。",
+      "stem": "下列说法有关如下 Python 代码,错误 的是(  )。\ni = 0\ntot = 0\nwhile 0 <= i < 10:\n    tot += i\n    i += 1\nprint(tot)\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
-          "text": "如果调整 0 <= i < 10 为 1 <= i < 10,输出同样为 45,因为加上 0 不影响结果。"
+          "text": "如果调整 0 <= i < 10 为 1 <= i < 10 ,输出同样为 45 ,因为加上 0 不影响结果。"
         },
         {
           "key": "B",
-          "text": "如果将 i = 0 和 tot = 0 合并为 i, tot = 0, 0,执行结果与修改前相同。 num = 1 for i in range(35): print(num, end = \" \") if num ______ 10: num _______ 2 else: num _______ 1 for i in range(1,5): if i % 2 == 0: continue print(i, end = \"#\") print(i, \"END\", end = \"#\") N = int(input()) for i in range(2, N): if N % i == 0: print(1, end = \"#\") break else: print(0, end = \"#\") i = 0 tot = 0 while 0 <= i < 10: tot += i i += 1 print(tot)"
+          "text": "如果将 i = 0 和 tot = 0 合并为 i, tot = 0, 0 ,执行结果与修改前相同。"
         },
         {
           "key": "C",
@@ -300,7 +299,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "如下  Python 代码执行后,下列说法正确的是(   )。",
+      "stem": "如下 Python 代码执行后,下列说法正确的是(  )。\nimport turtle\nturtle.circle(50)\nturtle.done()\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -324,15 +323,23 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "如下  Python 代码用于画一个边长为   的正方形,横线处应填入的代码是(   )。",
+      "stem": "如下 Python 代码用于画一个边长为\n 的正方形,横线处应填入的代码是(  )。\nimport turtle\nfor i in range(4):\n    ________________\n    ________________\nturtle.done()\n1\n2\n3\n4\n5",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "turtle.forward(100) turtle.left(90)"
+        },
+        {
+          "key": "B",
+          "text": "turtle.forward(100) turtle.left(180)"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "turtle.forward(100) turtle.right(180)"
+        },
+        {
+          "key": "D",
+          "text": "turtle.forward(100) turtle.left(45)"
         }
       ],
       "answer": "A"
@@ -340,15 +347,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "要实现如下图所示的执行效果,横线处分别应填入的代码是(   )。\nimport turtle\nturtle.circle(50)\nturtle.done()\n1\n2\n3\nimport turtle\nfor i in range(4):\n    ________________\n    ________________\nturtle.done()\n1\n2\n3\n4\n5\nturtle.forward(100)\nturtle.left(90)\n1\n2\nturtle.forward(100)\nturtle.left(180)\n1\n2\nturtle.forward(100)\nturtle.right(180)\n1\n2\nturtle.forward(100)\nturtle.left(45)\n1\n2\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "要实现如下图所示的执行效果,横线处分别应填入的代码是(  )。\nimport turtle\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nfor i in range(10):\n    if i % 2 == 0:\n        _____________________________\n        turtle.penup()\n        turtle.goto(100, (i + 1) * 10)\n    else:\n        _____________________________\n        turtle.penup()\n        turtle.goto(0, (i + 1) * 10)\n    turtle.pendown()\nturtle.done()",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "turtle.goto(100, i * 10) turtle.goto(100, i * 10)"
+        },
+        {
+          "key": "B",
+          "text": "turtle.goto(100, i * 10) turtle.goto(0, i * 10)"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "turtle.goto(0, i * 10) turtle.goto(0, i * 10)"
+        },
+        {
+          "key": "D",
+          "text": "turtle.goto(0, i * 10) turtle.goto(100, i * 10)"
         }
       ],
       "answer": "B"
@@ -358,7 +373,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "又到期末考试周,小明发现这次许多闭卷考试不仅禁止携带手机、平板电脑,还有最近比较时髦的各类  AI\n眼镜(也有叫智能眼镜)也同样不允许带入考场。这些  AI 眼镜应该也是内置了操作系统并可能支持  Wi-Fi 或蓝牙连\n接。",
+      "stem": "又到期末考试周,小明发现这次许多闭卷考试不仅禁止携带手机、平板电脑,还有最近比较时髦的各类 AI\n眼镜(也有叫智能眼镜)也同样不允许带入考场。这些 AI 眼镜应该也是内置了操作系统并可能支持 Wi-Fi 或蓝牙连\n接。",
       "options": [
         {
           "key": "T",
@@ -374,7 +389,7 @@
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "如果  n 为大于   的整数,则  Python 表达式  (n // 10) % 10 与  (n % 100) // 10 的结果相同。",
+      "stem": "如果 n 为大于\n 的整数,则 Python 表达式 (n // 10) % 10 与 (n % 100) // 10 的结果相同。",
       "options": [
         {
           "key": "T",
@@ -390,7 +405,7 @@
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "下面  Python 代码执行后将输出  19。",
+      "stem": "下面 Python 代码执行后将输出 19 。\nfor i in range(0, 20, 3):\n    if i % 3 != 0:\n        break\nprint(i)",
       "options": [
         {
           "key": "T",
@@ -406,7 +421,7 @@
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "在数学中,  称之为   的阶乘,其含义是   到   之积,包括  。如  。如下  Python 代码\n能输出   的结果。\nimport turtle\nfor i in range(10):\n    if i % 2 == 0:\n        _____________________________\n        turtle.penup()\n        turtle.goto(100, (i + 1) * 10)\n    else:\n        _____________________________\n        turtle.penup()\n        turtle.goto(0, (i + 1) * 10)\n    turtle.pendown()\nturtle.done()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nturtle.goto(100, i * 10)\nturtle.goto(100, i * 10)\n\n\nturtle.goto(100, i * 10)\nturtle.goto(0, i * 10)\n\n\nturtle.goto(0, i * 10)\nturtle.goto(0, i * 10)\n\n\nturtle.goto(0, i * 10)\nturtle.goto(100, i * 10)\n\n\nfor i in range(0, 20, 3):\n    if i % 3 != 0:\n        break\nprint(i)",
+      "stem": "在数学中,\n 称之为\n 的阶乘,其含义是  到\n 之积,包括\n。如\n。如下 Python 代码\n能输出\n 的结果。\nN = int(input(\"请输入正整数:\"))\nrst = 0\nfor i in range(1, N + 1):\n    rst *= i\nprint(rst)",
       "options": [
         {
           "key": "T",
@@ -422,7 +437,7 @@
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "如下  Python 代码能实现输出正整数   的各位数字。",
+      "stem": "如下 Python 代码能实现输出正整数\n 的各位数字。\nN = int(input())\nwhile N > 0:\n    print(N % 10)\n    N = N / 10",
       "options": [
         {
           "key": "T",
@@ -438,7 +453,7 @@
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "将如下  Python 代码中的  print() 更换为  print(\"\"),输出效果相同。",
+      "stem": "将如下 Python 代码中的 print() 更换为 print(\"\") ,输出效果相同。\nfor i in range(0, 100):\n    if i % 5 == 0:\n        print()\n\n\n\n\n\n    print(f\"{i:2}\", end = \" \")",
       "options": [
         {
           "key": "T",
@@ -454,7 +469,7 @@
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "执行  Python 代码  print(2.5 % 2) 时不会报错。",
+      "stem": "执行 Python 代码 print(2.5 % 2) 时不会报错。",
       "options": [
         {
           "key": "T",
@@ -470,7 +485,7 @@
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "执行  Python 语句  print(int(3.5) * 2) 将输出  6。",
+      "stem": "执行 Python 语句 print(int(3.5) * 2) 将输出 6 。",
       "options": [
         {
           "key": "T",
@@ -486,7 +501,7 @@
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "在  Python turtle 编程中,turtle.speed(0) 最慢,turtle.speed(10) 最快。",
+      "stem": "在 Python turtle 编程中,turtle.speed(0) 最慢,turtle.speed(10) 最快。",
       "options": [
         {
           "key": "T",
@@ -502,7 +517,7 @@
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "在  Python turtle 编程中,调用  turtle.clear() 后,画布上的所有图形会被清除,且海龟会自动回到\n屏幕中心(原点),朝向也重置为默认的向右( 度)。",
+      "stem": "在 Python turtle 编程中,调用 turtle.clear() 后,画布上的所有图形会被清除,且海龟会自动回到\n屏幕中心(原点),朝向也重置为默认的向右( 度)。",
       "options": [
         {
           "key": "T",
@@ -521,38 +536,40 @@
       "seq": 1,
       "kind": "traditional",
       "title": "去旅行",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n快暑假了,小杨同学正在计划出去旅行,前往目的地的方案多种多样,小杨同学想知道如何前往目的地最便宜。\n小杨同学住在  A 市,旅行目的地是  B 市,小杨同学前往目的地有三种方案:\n1. 从  A 市直飞  B 市;\n2. 从  A 市坐高铁到  C 市,然后坐飞机到  B 市;\n3. 从  A 市坐高铁到  C 市,然后坐高铁到  B 市。\n请帮小杨同学求出最便宜的出行方案的价格。\nN = int(input(\" 请输入正整数: \"))\nrst = 0\n    rst *= i\nprint(rst)\n\nN = int(input())\n    print(N % 10)\n    N = N / 10\n\n    if i % 5 == 0:\n        print()\n    print(f\"{i:2}\", end = \" \")\n\n3.1.2\n\n输入格式\n输入包含   行,每行一个正整数:\n第   行的正整数表示「从  A 市直飞  B 市」的价格;\n第   行的正整数表示「从  A 市坐高铁到  C 市」的价格;\n第   行的正整数表示「从  C 市坐飞机到  B 市」的价格;\n第   行的正整数表示「从  C 市坐高铁到  B 市」的价格。\n3.1.3 输出格式\n输出一个正整数,表示   种方式中,最便宜的出行方案的价格。\n3.1.4 样例\n3.1.5 输入样例  1\n3.1.6 输出样例  1\n3.1.7 样例解释  1\n方案  1. 直飞价格为  ;\n方案  2. 高铁转飞机价格为  ;\n方案  3. 高铁的价格为  ;\n因此最便宜的价格是  。\n3.1.8 输入样例  2\n3.1.9 输出样例  2\n3.1.10 样例解释  2\n方案  1. 直飞价格为  ;\n方案  2. 高铁转飞机价格为  ;\n方案  3. 高铁的价格为  ;\n因此最便宜的价格是  。\n\n3.1.11 数据范围\n所有输入均为正整数,且不超过  。\n3.1.12",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n快暑假了,小杨同学正在计划出去旅行,前往目的地的方案多种多样,小杨同学想知道如何前往目的地最便宜。\n小杨同学住在 A 市,旅行目的地是 B 市,小杨同学前往目的地有三种方案:\n1. 从 A 市直飞 B 市;\n2. 从 A 市坐高铁到 C 市,然后坐飞机到 B 市;\n3. 从 A 市坐高铁到 C 市,然后坐高铁到 B 市。\n请帮小杨同学求出最便宜的出行方案的价格。\n3.1.2\n\n输入格式\n输入包含  行,每行一个正整数:\n第  行的正整数表示「从 A 市直飞 B 市」的价格;\n第  行的正整数表示「从 A 市坐高铁到 C 市」的价格;\n第  行的正整数表示「从 C 市坐飞机到 B 市」的价格;\n第  行的正整数表示「从 C 市坐高铁到 B 市」的价格。\n3.1.3\n输出格式\n输出一个正整数,表示  种方式中,最便宜的出行方案的价格。\n3.1.4\n样例\n3.1.5\n输入样例 1\n\n3.1.6\n输出样例 1\n\n3.1.7\n样例解释 1\n方案 1. 直飞价格为\n;\n方案 2. 高铁转飞机价格为\n;\n方案 3. 高铁的价格为\n;\n因此最便宜的价格是\n。\n3.1.8\n输入样例 2\n\n3.1.9\n输出样例 2\n\n3.1.10\n样例解释 2\n方案 1. 直飞价格为 ;\n方案 2. 高铁转飞机价格为\n;\n方案 3. 高铁的价格为\n;\n因此最便宜的价格是 。\n3.1.11\n数据范围\n所有输入均为正整数,且不超过\n。\n3.1.12",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
           "in": "999\n105\n699\n588\n",
           "out": "693\n",
-          "suspect": true
+          "suspect": false
         },
         {
           "in": "9\n3\n8\n7\n",
           "out": "9\n",
-          "suspect": true
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 读取第1个数据:从A市直飞B市的价格\na = int(input())\n# 读取第2个数据:从A市坐高铁到C市的价格\nb = int(input())\n# 读取第3个数据:从C市坐飞机到B市的价格\nc = int(input())\n# 读取第4个数据:从C市坐高铁到B市的价格\nd = int(input())\n# 计算方案1的总价格:A市 直飞 B市\nprice1 = a\n# 计算方案2的总价格:A市高铁到C市,再飞机到B市\nprice2 = b + c\n# 计算方案3的总价格:A市高铁到C市,再高铁到B市\nprice3 = b + d\n# 先假设方案1是最便宜的(打擂台思想)\nmin_price = price1\n# 如果方案2比当前最便宜的价格还低,就更新最小值\nif price2 < min_price:\n    min_price = price2\n# 如果方案3比当前最便宜的价格还低,就更新最小值\nif price3 < min_price:\n    min_price = price3\n# 输出三种方案中最便宜的出行价格\nprint(min_price)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "交税",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n根据国家税收相关规定,劳务报酬需要按月预交个税,预交税率如下:\n1. 劳务报酬不超过   的,不需要预交个税;\n2. 劳务报酬超过   的,仅超过   的部分按照  (即  )税率预交个税(不超过   的部分不需要预交个\n税);\n例如,月劳务报酬为  ,则按照规则  2 需要预交个税  。\n现在给定小杨同学   个月的月度劳务报酬,请帮小杨同学计算他这   个月应预交个税的总和。\n# 读取第 1 个数据:从 A 市直飞 B 市的价格\na = int(input())\n# 读取第 2 个数据:从 A 市坐高铁到 C 市的价格\nb = int(input())\n# 读取第 3 个数据:从 C 市坐飞机到 B 市的价格\nc = int(input())\n# 读取第 4 个数据:从 C 市坐高铁到 B 市的价格\nd = int(input())\n# 计算方案 1 的总价格: A 市  直飞  B 市\nprice1 = a\n# 计算方案 2 的总价格: A 市高铁到 C 市,再飞机到 B 市\nprice2 = b + c\n# 计算方案 3 的总价格: A 市高铁到 C 市,再高铁到 B 市\nprice3 = b + d\n# 先假设方案 1 是最便宜的(打擂台思想)\nmin_price = price1\n# 如果方案 2 比当前最便宜的价格还低,就更新最小值\nif price2 < min_price:\n    min_price = price2\n# 如果方案 3 比当前最便宜的价格还低,就更新最小值\nif price3 < min_price:\n    min_price = price3\n# 输出三种方案中最便宜的出行价格\nprint(min_price)\n\n3.2.2\n\n输入格式\n输入   行,每行一个浮点数,表示小杨同学   个月中每个月的劳务报酬。\n每个浮点数恰好有一位小数。\n3.2.3 输出格式\n输出   行,一个浮点数,保留两位小数,表示小杨同学   个月应预交个税的总和。\n3.2.4 样例\n3.2.5 输入样例  1\n3.2.6 输出样例  1\n3.2.7 样例解释  1\n1.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n2.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n3.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n4.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n5.  符合规则  1 ,不需要预交个税;\n6.  符合规则  1 ,不需要预交个税;\n7.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n8.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n9.  符合规则  1 ,不需要预交个税;\n10.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n11.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n12.  符合规则  2 ,超过   的部分为  ,按照   预交为  ;\n总和为  。\n932.0\n1634.3\n1790.4\n2172.9\n378.1\n283.4\n2761.9\n3583.5\n10.1\n2324.9\n1111.6\n3812.3\n\n2584.761\n3.2.8 数据范围\n小杨同学每月劳务报酬收入均为正,且恰好有一位小数,且不超过  。\n3.2.9",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n根据国家税收相关规定,劳务报酬需要按月预交个税,预交税率如下:\n1. 劳务报酬不超过\n 的,不需要预交个税;\n2. 劳务报酬超过\n 的,仅超过\n 的部分按照\n(即\n)税率预交个税(不超过\n 的部分不需要预交个\n税);\n例如,月劳务报酬为\n,则按照规则 2 需要预交个税\n。\n现在给定小杨同学\n 个月的月度劳务报酬,请帮小杨同学计算他这\n 个月应预交个税的总和。\n3.2.2\n\n输入格式\n输入\n 行,每行一个浮点数,表示小杨同学\n 个月中每个月的劳务报酬。\n每个浮点数恰好有一位小数。\n3.2.3\n输出格式\n输出  行,一个浮点数,保留两位小数,表示小杨同学\n 个月应预交个税的总和。\n3.2.4\n样例\n3.2.5\n输入样例 1\n932.0\n1634.3\n1790.4\n2172.9\n378.1\n283.4\n2761.9\n3583.5\n10.1\n2324.9\n1111.6\n3812.3\n\n3.2.6\n输出样例 1\n2584.76\n\n3.2.7\n样例解释 1\n1.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n2.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n3.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n4.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n5.\n 符合规则 1,不需要预交个税;\n6.\n 符合规则 1,不需要预交个税;\n7.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n8.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n9.\n 符合规则 1,不需要预交个税;\n10.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n11.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n12.\n 符合规则 2,超过\n 的部分为\n,按照\n 预交为\n;\n总和为\n。\n3.2.8\n数据范围\n小杨同学每月劳务报酬收入均为正,且恰好有一位小数,且不超过\n。\n3.2.9",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
           "in": "932.0\n1634.3\n1790.4\n2172.9\n378.1\n283.4\n2761.9\n3583.5\n10.1\n2324.9\n1111.6\n3812.3\n",
           "out": "2584.76\n",
-          "suspect": true
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 总的税额\nans = 0.0\n# for循环遍历12个月的收入\nfor _ in range(12):\n    a = float(input())\n    # 分支语句,判断800以下和800以上的个税额度\n    if a <= 800.0:\n        ans += 0.0 # 800以下不用交税\n    else:\n        b = (a - 800.0) * 0.2 # 800以上的部分缴纳20%的个税\n        ans += b\nprint(f'{ans:.2f}') # 最终的结果"
     }
   ],
   "answer_rows": [
@@ -573,8 +590,6 @@
       "A",
       "B"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

@@ -3,16 +3,16 @@
     "ym": "202603",
     "lang": "python",
     "level": 2,
-    "title": "CCF GESP 2026年3月认证 Python 2级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10269.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1734124767281184.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202603-python-2.pdf"
+    "title": "202603-python-2",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202603-python-2.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "2026 年春节联欢晚会上一个武术表演节目《武  BOT 》。节目中多个人形机器人会表演空翻,它们落地可能会\n有微微踉跄,但都会迅速调整姿态站稳,并适当移动来和前后左右的其他机器人保持原来队列。如果将机器人视作\n一个计算机系统,那么在该计算机系统中下面哪一项不能作为输入设备 (   ) 。",
+      "stem": "2026年春节联欢晚会上一个武术表演节目《武 BOT》。节目中多个人形机器人会表演空翻,它们落地可能会\n有微微踉跄,但都会迅速调整姿态站稳,并适当移动来和前后左右的其他机器人保持原来队列。如果将机器人视作\n一个计算机系统,那么在该计算机系统中下面哪一项不能作为输入设备(   )。",
       "options": [
         {
           "key": "A",
@@ -20,7 +20,7 @@
         },
         {
           "key": "B",
-          "text": "预装的 AI 算法程序"
+          "text": "预装的AI算法程序"
         },
         {
           "key": "C",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下面代码用来找出输入的  N 个正整数中最大的一个。如果将代码段用流程图来表示,则  L1 标记的代码行\n应该使用的图形是(   )。",
+      "stem": "下面代码用来找出输入的 N 个正整数中最大的一个。如果将代码段用流程图来表示,则 L1 标记的代码行\n应该使用的图形是(  )。\nMax = 0\nN = int(input())\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nwhile(N):\n    val = int(input())\n    if val > Max: #L1\n        Max = val\n    N -= 1\nprint(Max)",
       "options": [
         {
           "key": "A",
@@ -60,11 +60,11 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "有关下面  Python 的说法,正确的是 (  ) 。\n\n```\nprint(PI)修改为print(Pi)能正常执行\n```",
+      "stem": "有关下面 Python 的说法,正确的是(\n )。\nPI = 3.1415926\nprint(PI)\n1\n2\n\n```\nprint(PI) 修改为print(Pi) 能正常执行\n```",
       "options": [
         {
           "key": "A",
-          "text": "为了方便初学者,print(PI)和print(pi)效果相同,即变量的大小写不敏感"
+          "text": "为了方便初学者,print(PI) 和print(pi) 效果相同,即变量的大小写不敏感"
         },
         {
           "key": "B",
@@ -72,11 +72,11 @@
         },
         {
           "key": "C",
-          "text": "不能用 PI 做变量名,因为要保存圆周率这个常量 Max = 0 N = int(input()) while(N): val = int(input()) if val > Max: #L1 Max = val N -= 1 print(Max) PI = 3.1415926 print(PI) 第 1 页 / 共 10 页"
+          "text": "不能用PI做变量名,因为要保存圆周率这个常量 第 1 页 / 共 10 页"
         },
         {
           "key": "D",
-          "text": "将程序中 PI 全部改写为 Pai,将能正常执行,不会报错"
+          "text": "将程序中 PI 全部改写为 Pai ,将能正常执行,不会报错"
         }
       ],
       "answer": "D"
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "下面选择项中,与  Python 表达式not (x > 5 and y <= 10)等价的是 (  ) 。",
+      "stem": "下面选择项中,与 Python 表达式not (x > 5 and y <= 10) 等价的是( )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +108,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "某同学执行  Python 代码print((0.1 + 0.2) == 0.3)时输出False,其原因是 (  ) 。",
+      "stem": "某同学执行 Python 代码print((0.1 + 0.2) == 0.3) 时输出False ,其原因是( )。",
       "options": [
         {
           "key": "A",
@@ -116,7 +116,7 @@
         },
         {
           "key": "B",
-          "text": "0.1 、 0.2 和 0.3 在计算机中无法用二进制浮点数精确表示,导致 0.1 + 0.2 的结果与 0.3 存在微小误差"
+          "text": "0.1、0.2 和 0.3 在计算机中无法用二进制浮点数精确表示,导致 0.1 + 0.2 的结果与 0.3 存在微小误差"
         },
         {
           "key": "C",
@@ -132,7 +132,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面的  Python 代码执行后其输出是 (  ) 。",
+      "stem": "下面的 Python 代码执行后其输出是(\n )。\ntnt = 0\nfor i in range(5):\n    for j in range(i):\n        tnt += 1\n    print(tnt, end = \"#\")\nprint(tnt)\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -156,7 +156,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "下面的  Python 代码执行之后的输出是 (  ) 。",
+      "stem": "下面的 Python 代码执行之后的输出是(\n )。\nfor i in range(-2, 2):\n    if not i % 3:\n        print(i, end = \"#\")\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -180,11 +180,11 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面的  Python 代码执行后其输出是 (  ) 。",
+      "stem": "下面的 Python 代码执行后其输出是(\n )。\ncnt = 0\nfor i in range(1, 5):\n    for j in range(i):\n       print(j,end = \"#\")\n    break\nelse:\n    print(i*j)\n1\n2\n3\n4\n5\n6\n7",
       "options": [
         {
           "key": "A",
-          "text": "0#0#1#0#1#2#0#1#2#3#12 tnt = 0 for i in range(5): for j in range(i): tnt += 1 print(tnt, end = \"#\") print(tnt) for i in range(-2, 2): if not i % 3: print(i, end = \"#\") cnt = 0 for i in range(1, 5): for j in range(i): print(j,end = \"#\") break else: print(i*j) 第 2 页 / 共 10 页"
+          "text": "0#0#1#0#1#2#0#1#2#3#12 第 2 页 / 共 10 页"
         },
         {
           "key": "B",
@@ -204,7 +204,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面  Python 代码执行后其输出是 (  ) 。",
+      "stem": "下面 Python 代码执行后其输出是(\n )。\ncount = 0\nfor i in range(1, 4):\n    for j in range(1, 5):\n        if j == 3:\n            continue\n        if i == 2:\n            break\n        count += 1\nprint(count)\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -228,15 +228,23 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "下面 4 个选项中,与下面  Python 代码输出结果相同的是 (  ) 。",
+      "stem": "下面4个选项中,与下面 Python 代码输出结果相同的是(\n )。\ni = 0\nwhile i < 5:\n    print(i)\n    i += 1\n1\n2\n3\n4\n\n```\nfor i in range(5): print(i)\nfor i in range(1, 5): print(i)\nfor i in range(6): print(i)\nfor i in range(0, 6): print(i)\n```",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
         },
         {
           "key": "C",
-          "text": "D."
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
         }
       ],
       "answer": "A"
@@ -244,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面  Python 代码执行后输出是(      )。\ncount = 0\nfor i in range(1, 4):\n    for j in range(1, 5):\n        if j == 3:\n            continue\n        if i == 2:\n            break\n        count += 1\nprint(count)\n1\n2\n3\n4\n5\n6\n7\n8\n9\ni = 0\nwhile i < 5:\n    print(i)\n    i += 1\n1\n2\n3\n4\nfor i in range(5):\n    print(i)\n1\n2\nfor i in range(1, 5):\n    print(i)\n1\n2\nfor i in range(6):\n    print(i)\n1\n2\nfor i in range(0, 6):\n    print(i)\n1\n2\nn = 10\nwhile n > 0:\n    n -= 1\n    if n % 3 == 0:\n        continue\n    if n == 5:\n        break\nprint(n)\n1\n2\n3\n4\n5\n6\n7\n8\n第  3 页  / 共  10 页",
+      "stem": "下面 Python 代码执行后输出是(     )。\nn = 10\nwhile n > 0:\n    n -= 1\n    if n % 3 == 0:\n        continue\n    if n == 5:\n        break\nprint(n)\n1\n2\n3\n4\n5\n6\n7\n8\n第 3 页 / 共 10 页",
       "options": [
         {
           "key": "A",
@@ -268,7 +276,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "下面  Python 代码执行后,其输出是(    )。",
+      "stem": "下面 Python 代码执行后,其输出是(   )。\ncnt = 0\nfor i in range(5):\n    i = -i\n    for j in range(i, -i):\n        cnt += 1\nprint(cnt)\n1\n2\n3\n4\n5\n6",
       "options": [
         {
           "key": "A",
@@ -292,15 +300,23 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "某学校图书馆的借阅卡号由 6 位数字组成。前 5 位是顺序编号,第 6 位是校验码,用于防止输错。校验码规则\n如下:将前 5 位数字相加,然后除以 10 的余数,就是第 6 位数字。如卡号 123455 的前 5 位之和为 15 ,除以 10 的余数是\n5 ,故第 6 位为 5 。下面的  Python 代码用于判断卡号是否正确,横线处应填入的代码是 (  ) 。",
+      "stem": "某学校图书馆的借阅卡号由6位数字组成。前5位是顺序编号,第6位是校验码,用于防止输错。校验码规则\n如下:将前5位数字相加,然后除以10的余数,就是第6位数字。如卡号123455的前5位之和为15,除以10的余数是\n5,故第6位为5。下面的 Python 代码用于判断卡号是否正确,横线处应填入的代码是(\n )。\nN = int(input(\"请输入卡号:\"))\norder_num = N // 10 #获得前5位顺序号,假设录入一定为6位正整数\ncheck_num = N % 10 #获得最后一位\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\ntnt = 0 #保存前5位之和\nfor i in range(5):\n    ________________\n    order_num //= 10\nif __________________:\n    print(\"符合校验规则\")\nelse:\n    print(\"不符合校验规则\")",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": "tnt += order_num // 10 tnt // 10 == check_num"
+        },
+        {
+          "key": "B",
+          "text": "tnt += order_num % 10 tnt % 10 == check_num"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "tnt = order_num % 10 + tnt tnt % 10 = check_num"
+        },
+        {
+          "key": "D",
+          "text": "tnt = order_num % 10 tnt // 10 == check_num"
         }
       ],
       "answer": "B"
@@ -308,15 +324,23 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面的  Python 代码执行后其输出的数字图形是(     )。\ncnt = 0\nfor i in range(5):\n    i = -i\n    for j in range(i, -i):\n        cnt += 1\nprint(cnt)\n1\n2\n3\n4\n5\n6\nN = int(input(\" 请输入卡号: \"))\norder_num = N // 10 # 获得前 5 位顺序号 , 假设录入一定为 6 位正整数\ncheck_num = N % 10 # 获得最后一位\ntnt = 0 # 保存前 5 位之和\nfor i in range(5):\n    ________________\n    order_num //= 10\nif __________________:\n    print(\" 符合校验规则 \")\nelse:\n    print(\" 不符合校验规则 \")\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\ntnt += order_num // 10\ntnt // 10 == check_num\n1\n2\ntnt += order_num % 10\ntnt % 10 == check_num\n1\n2\ntnt = order_num % 10 + tnt\ntnt % 10 = check_num\n1\n2\ntnt = order_num % 10\ntnt // 10 == check_num\n1\n2\n第  4 页  / 共  10 页",
+      "stem": "下面的 Python 代码执行后其输出的数字图形是(    )。\n第 4 页 / 共 10 页\nfor i in range(1, 5):\n    for j in range(1, i + 1):\n        print(j, end='')\n    print()\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
-          "text": "B."
+          "text": ""
+        },
+        {
+          "key": "B",
+          "text": ""
         },
         {
           "key": "C",
-          "text": "D."
+          "text": ""
+        },
+        {
+          "key": "D",
+          "text": ""
         }
       ],
       "answer": "A"
@@ -324,15 +348,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "某学校举办 “ 校园演讲比赛 ” ,每位选手由 8 位评委打分(分数为  0~10 的整数),且每位评委必须打分。计\n分规则:若至少有 5 位评委给出大于等于 6 分,则成绩有效,最终得分为所有 8 位评委的总分;否则记为 0 分。以下程\n序通过键盘依次输入 8 个分数,并计算最终得分。横线处应填入(  )。",
+      "stem": "某学校举办“校园演讲比赛”,每位选手由8位评委打分(分数为 0~10 的整数),且每位评委必须打分。计\n分规则:若至少有5位评委给出大于等于6分,则成绩有效,最终得分为所有8位评委的总分;否则记为0分。以下程\n序通过键盘依次输入8个分数,并计算最终得分。横线处应填入( )。\ntotal_score = 0 # 所有分数之和\nhigh_count = 0 # ≥6分的评委数量\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nfor i in range(8):\n    score = int(input(\"请输入评委分数: \"))\n    ____________________\n    if score >= 6:\n        ________________\nif high_count >= 5:\n    print(total_score)\nelse:\n    print(0)",
       "options": [
         {
           "key": "A",
-          "text": "B. for i in range(1, 5): for j in range(1, i + 1): print(j, end='') print() total_score = 0 # 所有分数之和 high_count = 0 # ≥6 分的评委数量 for i in range(8): score = int(input(\" 请输入评委分数 : \")) ____________________ if score >= 6: ________________ if high_count >= 5: print(total_score) else: print(0) total_score += score high_count += 1 total_score += score high_count += score 第 5 页 / 共 10 页 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "total_score += score high_count += 1"
+        },
+        {
+          "key": "B",
+          "text": "total_score += score high_count += score 第 5 页 / 共 10 页"
         },
         {
           "key": "C",
-          "text": "D."
+          "text": "high_count += 1 total_score += score"
+        },
+        {
+          "key": "D",
+          "text": "total_score *= score high_count *= 1"
         }
       ],
       "answer": "A"
@@ -342,7 +374,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "小明的妈妈最近刚刚给他买了一块电话手表,除了可以看时间,小明也可以用它和妈妈打电话、收发信息,\n那么可以推测这块手表中装有一款特定操作系统。(   )",
+      "stem": "小明的妈妈最近刚刚给他买了一块电话手表,除了可以看时间,小明也可以用它和妈妈打电话、收发信息,\n那么可以推测这块手表中装有一款特定操作系统。(  )",
       "options": [
         {
           "key": "T",
@@ -353,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "Python 代码print(4 ** 2 == 2 * 2 ** 2)执行后的输出是  True。 (  )",
+      "stem": "Python 代码print(4 ** 2 == 2 * 2 ** 2) 执行后的输出是 True 。(  )",
       "options": [
         {
           "key": "T",
@@ -369,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "下面的  Python 代码执行时将报错,因为 10 是整数类型,a 是布尔类型。由于类型不同,不能进行加法运\n算。(   )",
+      "stem": "下面的 Python 代码执行时将报错,因为10是整数类型,a 是布尔类型。由于类型不同,不能进行加法运\n算。(  )\na = True\nprint(10 + a)",
       "options": [
         {
           "key": "T",
@@ -385,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "下面  Python 代码执行后将输出  0-3-6-9-。  (  )",
+      "stem": "下面 Python 代码执行后将输出 0-3-6-9- 。 (  )\nfor i in range(10):\n    if i % 3:\n        continue\n    print(i, end = \"-\")",
       "options": [
         {
           "key": "T",
@@ -401,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "执行下面的  Python 代码,其语句  print(N) 将被执行  0 次或极多次(即死循环)。(   )",
+      "stem": "执行下面的 Python 代码,其语句 print(N) 将被执行 0 次或极多次(即死循环)。(  )\nN = input()\nwhile N:\n    print(N)",
       "options": [
         {
           "key": "T",
@@ -417,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "在下面的  Python 代码中,删除  continue 不影响执行效果。(   )",
+      "stem": "在下面的 Python 代码中,删除 continue 不影响执行效果。(  )\nfor  i in range(10):\n    i += 1\n    continue\nprint(i)",
       "options": [
         {
           "key": "T",
@@ -433,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "下列  Python 代码用于计算从  1 到  N (含  N )的所有正整数中,数字  3 出现的总次数。当N = 40时,共有\n14 个 3 ,包括 3 、 13 、 23 、 30-39 ,其中 33 计两次,共计 14 个 3 。将代码while i != 0改为while i执行结果相同。 (\n)\nhigh_count += 1\ntotal_score += score\n\n\ntotal_score *= score\nhigh_count *= 1\n\n\na = True\nprint(10 + a)\n\n\nfor i in range(10):\n    if i % 3:\n        continue\n    print(i, end = \"-\")\n\n\n\n\nN = input()\nwhile N:\n    print(N)\n\n\n\nfor  i in range(10):\n    i += 1\n    continue\nprint(i)\n\n\n\n\n第  6 页  / 共  10 页",
+      "stem": "下列 Python 代码用于计算从 1 到 N(含 N)的所有正整数中,数字 3 出现的总次数。当N = 40 时,共有\n14个3,包括3、13、23、30-39,其中33计两次,共计14个3。将代码while i != 0 改为while i 执行结果相同。(\n)\n第 6 页 / 共 10 页\nN = int(input(\"请输入正整数N:\"))\ncnt = 0 #保存3的个数\nfor  i in range(1, N + 1):\n    while i != 0:\n        if i % 10 == 3:\n            cnt += 1\n        i //= 10\nprint(cnt)",
       "options": [
         {
           "key": "T",
@@ -449,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "下面的  Python 代码执行将不会有输出,因为内层循环  j 总是  0 开始,i * j % 10 == 0将会被满足,执\n行  break,故而不会执行代码中的  else 子句部分。(   )",
+      "stem": "下面的 Python 代码执行将不会有输出,因为内层循环 j 总是 0 开始,i * j % 10 == 0 将会被满足,执\n行 break ,故而不会执行代码中的 else 子句部分。(  )\nfor i in range(1, 10):\n    for j in range(i):\n        if i * j % 10 == 0:\n            break\nelse:\n    print(i*j)",
       "options": [
         {
           "key": "T",
@@ -465,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下列  Python 代码执行后将输出  1#4#9#16#16。(   )",
+      "stem": "下列 Python 代码执行后将输出 1#4#9#16#16 。(  )\nfor  i in range(1, 5):\n    for j in range(1, i + 1):\n        if i * j % 10 == 0:\n            break\n    else:\n        print(i * j, end = \"#\")\nelse:\n    print(i * j)",
       "options": [
         {
           "key": "T",
@@ -481,12 +513,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下面  Python 代码执行后输出如左图所示,将f\" {i*j}\"修改为f\"{i*j:3}\"即可实现右图输出。(   )",
+      "stem": "下面 Python 代码执行后输出如左图所示,将f\" {i*j}\" 修改为f\"{i*j:3}\" 即可实现右图输出。(  )\nfor i in range(1, 10):\n    for j in range(1, 10):\n        print(f\" {i*j}\", end = \"\")\n    print()",
       "options": [
         {
           "key": "T",
@@ -497,7 +529,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     }
   ],
   "program": [
@@ -505,27 +537,35 @@
       "seq": 1,
       "kind": "traditional",
       "title": "数数",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\nN = int(input(\" 请输入正整数 N : \"))\ncnt = 0 # 保存 3 的个数\n        if i % 10 == 3:\n            cnt += 1\n        i //= 10\nprint(cnt)\n\n        if i * j % 10 == 0:\n            break\nelse:\n    print(i*j)\n\n        if i * j % 10 == 0:\n            break\n    else:\n        print(i * j, end = \"#\")\nelse:\n    print(i * j)\n\n        print(f\" {i*j}\", end = \"\")\n    print()\n\n第  7 页  / 共  10 页\n3.1.1 题目描述\n对于正整数  ,如果   的所有数位中包含恰好  个  , Alice 会认为这个正整数是美丽的。例如,正整数   中包\n含   个  ,所以   是美丽的;正整数   中包含   个  ,所以   不是美丽的;正整数   中包含   个  ,\n所以   不是美丽的。\nAlice 想知道正整数   到正整数   (包括   和  )中有多少美丽的正整数,你能帮她数一数吗?\n3.1.2\n\n输入格式\n输入共   行,第一行为正整数  ,第二行为正整数  。\n3.1.3 输出格式\n输出一行,包含一个整数  ,表示   到   中有   个美丽数。\n3.1.4 样例\n3.1.4.1 输入样例\n3.1.4.2 输出样例\n3.1.5 样例解释\n 到   中,  与   是美丽的,  不是美丽的。\n3.1.6 数据范围\n保证  。\n3.1.7",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n第 7 页 / 共 10 页\n3.1.1\n题目描述\n对于正整数 ,如果  的所有数位中包含恰好  个 ,Alice 会认为这个正整数是美丽的。例如,正整数\n 中包\n含  个 ,所以\n 是美丽的;正整数\n 中包含  个 ,所以\n 不是美丽的;正整数\n 中包含  个 ,\n所以\n 不是美丽的。\nAlice 想知道正整数  到正整数  (包括  和 )中有多少美丽的正整数,你能帮她数一数吗?\n3.1.2\n\n输入格式\n输入共  行,第一行为正整数 ,第二行为正整数 。\n3.1.3\n输出格式\n输出一行,包含一个整数 ,表示  到  中有  个美丽数。\n3.1.4\n样例\n3.1.4.1\n输入样例\n\n3.1.4.2\n输出样例\n\n3.1.5\n样例解释\n 到\n 中,\n 与\n 是美丽的,\n 不是美丽的。\n3.1.6\n数据范围\n保证\n。\n3.1.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "2221\n2223\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "left = int(input()) # 范围开始\nright = int(input()) # 范围结束\ntotal_count = 0 # 美丽数的总数量\nfor i in range(left, right + 1):\n    count2 = 0 # 记录i中2的数量,每次循环清零\n    while i > 0:\n        if i % 10 == 2: # 得到个位数,并判断是否为2\n            count2 += 1 # 如果为2,count2累加1\n        i //= 10 # 去除个位数后的新数\n    if count2 == 3: # 判断2的数量是否为3\n        total_count += 1 #2的数量为3,美丽数,累加1\nprint(total_count) # 输出美丽数的数量\n第 8 页 / 共 10 页"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "画画",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n输入一个正整数  ,你需要绘制一个   行   列的正方形,绘制规则如下:\n正方形的四个顶点使用  + 绘制;\n除顶点外,第   行与第   行使用  - 绘制;\n除顶点外,第   列与第   列使用  | 绘制;\n正方形内部使用  * 绘制。\n3.2.2\n\n输入格式\n一行,一个正整数  。\n3.2.3 输出格式\n输出共   行,表示对应的正方形。\n3.2.4 样例\n3.2.4.1 输入样例\n3.2.4.2 输出样例\n3.2.5 数据范围\n保证  。\n\n+---+\n|***|\n|***|\n|***|\n+---+\n\n第  9 页  / 共  10 页\n3.2.6",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n输入一个正整数 ,你需要绘制一个  行  列的正方形,绘制规则如下:\n正方形的四个顶点使用 + 绘制;\n除顶点外,第  行与第  行使用 - 绘制;\n除顶点外,第  列与第  列使用 | 绘制;\n正方形内部使用 * 绘制。\n3.2.2\n\n输入格式\n一行,一个正整数 。\n3.2.3\n输出格式\n输出共  行,表示对应的正方形。\n3.2.4\n样例\n3.2.4.1\n输入样例\n\n3.2.4.2\n输出样例\n+---+\n|***|\n|***|\n|***|\n+---+\n\n3.2.5\n数据范围\n保证\n。\n第 9 页 / 共 10 页\n3.2.6",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
         {
-          "in": "51\n",
-          "out": "2\n",
+          "in": "5\n",
+          "out": "1\n",
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "n = int(input()) #输入n行n列的n值\nfor i in range(0, n):# 一共n行,循环n次\n    for j in range(0, n): # 一共n列,循环n次\n\n        if j == 0 or j == n - 1: # j == 0为第1列,j == n - 1为最后n列\n            if i == 0 or i == n - 1: # 第一行或者最后一行的处理\n                print('+', end='')\n            else:\n                print('|', end='') # 非第一行或者最后一行的处理\n\n        else: # 不是第1列或者最后一列\n\n            if i == 0 or i == n - 1: # 第1行或者最后一行的处理\n                print('-', end='')\n            else:\n                print('*', end='')# 非第1行或者最后一行的处理\n    print() #一行结束,换行\n第 10 页 / 共 10 页"
     }
   ],
   "answer_rows": [
@@ -546,8 +586,6 @@
       "A",
       "A"
     ],
-    [
-      "C"
-    ]
+    []
   ]
 }

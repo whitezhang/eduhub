@@ -3,16 +3,15 @@
     "ym": "202606",
     "lang": "cpp",
     "level": 6,
-    "title": "CCF GESP 2026年6月认证 C++ 6级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10284.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1753295364292640.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202606-cpp-6.pdf"
+    "title": "202606-cpp-6",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202606-cpp-6.pdf"
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "下列关于  C++ 中继承和多态的描述中,错误的是(   )。",
+      "stem": "下列关于 C++ 中继承和多态的描述中,错误的是(  )。",
       "options": [
         {
           "key": "A",
@@ -28,7 +27,7 @@
         },
         {
           "key": "D",
-          "text": "构造函数可以声明为 virtual,以便在构造对象时实现动态绑定。"
+          "text": "构造函数可以声明为 virtual ,以便在构造对象时实现动态绑定。"
         }
       ],
       "answer": "D"
@@ -36,7 +35,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "下列代码中,d1->work(); 和  d2->work(); 输出不同结果的主要原因是(   )。\nclass Device {\npublic:\n    virtual void work() {\n        cout << \"Device is working\" << endl;\n    }\n    virtual ~Device() {}\n};\nclass Printer : public Device {\npublic:\n    void work() override {\n        cout << \"Printer is printing\" << endl;\n    }\n};\nclass Scanner : public Device {\npublic:\n    void work() override {\n        cout << \"Scanner is scanning\" << endl;\n    }\n};\nint main() {\n    Device* d1 = new Printer();\n    Device* d2 = new Scanner();\n    d1->work();\n    d2->work();\n    delete d1;\n    delete d2;\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33",
+      "stem": "下列代码中,d1->work(); 和 d2->work(); 输出不同结果的主要原因是(  )。\nclass Device {\npublic:\n    virtual void work() {\n        cout << \"Device is working\" << endl;\n    }\n    virtual ~Device() {}\n};\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\nclass Printer : public Device {\npublic:\n    void work() override {\n        cout << \"Printer is printing\" << endl;\n    }\n};\nclass Scanner : public Device {\npublic:\n    void work() override {\n        cout << \"Scanner is scanning\" << endl;\n    }\n};\nint main() {\n    Device* d1 = new Printer();\n    Device* d2 = new Scanner();\n    d1->work();\n    d2->work();\n    delete d1;\n    delete d2;\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -60,7 +59,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面代码在  main() 中有一行会导致编译错误,请找出来。",
+      "stem": "下面代码在 main() 中有一行会导致编译错误,请找出来。\nclass Student {\npublic:\n    Student(string n, int s) : name(n), score(s) {}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n    string getName() {\n        return name;\n    }\n    void setScore(int s) {\n        score = s;\n    }\nprivate:\n    string name;\n    int score;\n};\nint main() {\n    Student stu(\"Tom\", 85);\n    cout << stu.getName();   // 1\n    stu.setScore(90);        // 2\n    stu.score = 100;         // 3\n    cout << stu.getName();   // 4\n    return 0;\n}",
       "options": [
         {
           "key": "A",
@@ -84,7 +83,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "某文本编辑器把用户输入的字符依次压入栈  S。用户依次输入  X, Y, Z, W 后,连续执行两次撤销操作。\n每次撤销都会弹出栈顶一个字符。此时栈从栈底到栈顶的内容是(   )。",
+      "stem": "某文本编辑器把用户输入的字符依次压入栈 S 。用户依次输入 X, Y, Z, W 后,连续执行两次撤销操作。\n每次撤销都会弹出栈顶一个字符。此时栈从栈底到栈顶的内容是(  )。",
       "options": [
         {
           "key": "A",
@@ -108,7 +107,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "假设循环队列数组长度为  N = 7,队空判断条件为  front == rear。入队和出队操作如下:\nclass Student {\npublic:\n    Student(string n, int s) : name(n), score(s) {}\n    string getName() {\n        return name;\n    }\n    void setScore(int s) {\n        score = s;\n    }\nprivate:\n    string name;\n    int score;\n};\nint main() {\n    Student stu(\"Tom\", 85);\n    cout << stu.getName();   // 1\n    stu.setScore(90);        // 2\n    stu.score = 100;         // 3\n    cout << stu.getName();   // 4\n    return 0;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n依次执行:\n最终  (front, rear) 的值是(   )。",
+      "stem": "假设循环队列数组长度为 N = 7 ,队空判断条件为 front == rear 。入队和出队操作如下:\nconst int N = 7;\nint q[N];\nint front = 3, rear = 3;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nvoid enqueue(int x) {\n    q[rear] = x;\n    rear = (rear + 1) % N;\n}\nvoid dequeue() {\n    front = (front + 1) % N;\n}\n依次执行:\nenqueue(10);\nenqueue(20);\nenqueue(30);\ndequeue();\nenqueue(40);\ndequeue();\nenqueue(50);\n1\n2\n3\n4\n5\n6\n7\n最终 (front, rear) 的值是(  )。",
       "options": [
         {
           "key": "A",
@@ -132,7 +131,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "以下函数  check() 用于判断一棵二叉树是否为(   )。",
+      "stem": "以下函数 check() 用于判断一棵二叉树是否为(  )。\nbool check(TreeNode* root) {\n    if (!root) return true;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n    queue<TreeNode*> q;\n    q.push(root);\n    bool hasNull = false;\n    while (!q.empty()) {\n        TreeNode* cur = q.front();\n        q.pop();\n        if (cur == nullptr) {\n            hasNull = true;\n        } else {\n            if (hasNull) return false;\n            q.push(cur->left);\n            q.push(cur->right);\n        }\n    }\n    return true;\n}",
       "options": [
         {
           "key": "A",
@@ -140,7 +139,7 @@
         },
         {
           "key": "B",
-          "text": "完全二叉树 const int N = 7; int q[N]; int front = 3, rear = 3; void enqueue(int x) { q[rear] = x; rear = (rear + 1) % N; } void dequeue() { front = (front + 1) % N; } enqueue(10); enqueue(20); enqueue(30); dequeue(); enqueue(40); dequeue(); enqueue(50); bool check(TreeNode* root) { if (!root) return true; queue<TreeNode*> q; q.push(root); bool hasNull = false; while (!q.empty()) { TreeNode* cur = q.front(); q.pop(); if (cur == nullptr) { hasNull = true; } else { if (hasNull) return false; q.push(cur->left); q.push(cur->right); } } return true; }"
+          "text": "完全二叉树"
         },
         {
           "key": "C",
@@ -156,7 +155,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "以下代码实现了二叉树的哪种遍历方式?",
+      "stem": "以下代码实现了二叉树的哪种遍历方式?\nvoid traverse(TreeNode* root) {\n    if (root == nullptr) return;\n1\n2\n3\n4\n5\n6\n7\n    cout << root->val << \" \";\n    traverse(root->left);\n    traverse(root->right);\n}",
       "options": [
         {
           "key": "A",
@@ -180,7 +179,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "已知一棵二叉树的先序遍历序列为:A B D E H C F G,中序遍历序列为:D B H E A F C G,\n则该二叉树的后序遍历序列是(   )。",
+      "stem": "已知一棵二叉树的先序遍历序列为:A B D E H C F G ,中序遍历序列为:D B H E A F C G ,\n则该二叉树的后序遍历序列是(  )。",
       "options": [
         {
           "key": "A",
@@ -204,7 +203,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "有   个字符,它们出现的次数分别为: ,现在用哈夫曼编码为这些字符编码,最小加权路\n径长度  WPL 的值为(   )。",
+      "stem": "有  个字符,它们出现的次数分别为:\n,现在用哈夫曼编码为这些字符编码,最小加权路\n径长度 WPL 的值为(  )。",
       "options": [
         {
           "key": "A",
@@ -220,7 +219,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "对  n 个不同符号进行哈夫曼编码。若生成的哈夫曼树共有   个结点,则  n 的值是(   )。",
+      "stem": "对 n 个不同符号进行哈夫曼编码。若生成的哈夫曼树共有\n 个结点,则 n 的值是(  )。",
       "options": [
         {
           "key": "A",
@@ -236,7 +235,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "在格雷码中,相邻两个编码只能有一位不同。若当前编码为  110,则它的下一个编码不可能是(   )。\n\n```\ncout << root->val << \" \";\n    traverse(root->left);\n    traverse(root->right);\n}\n```",
+      "stem": "在格雷码中,相邻两个编码只能有一位不同。若当前编码为 110 ,则它的下一个编码不可能是(  )。",
       "options": [
         {
           "key": "A",
@@ -252,7 +251,7 @@
         },
         {
           "key": "D",
-          "text": "001 void traverse(TreeNode* root) { if (root == nullptr) return;"
+          "text": ""
         }
       ],
       "answer": "D"
@@ -260,7 +259,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "给定一棵二叉树,采用广度优先搜索  BFS 返回其右视图,其中右视图中的每个节点都是该层最右侧的节\n点。横线处应填写(   )。",
+      "stem": "给定一棵二叉树,采用广度优先搜索 BFS 返回其右视图,其中右视图中的每个节点都是该层最右侧的节\n点。横线处应填写(  )。\nvector<int> rightSideView(TreeNode* root) {\n    vector<int> result;\n    if (!root) return result;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        int sz = q.size();\n        for (int i = 0; i < sz; ++i) {\n            TreeNode* node = q.front();\n            q.pop();\n            __________________________\n            if (node->left) q.push(node->left);\n            if (node->right) q.push(node->right);\n        }\n    }\n    return result;\n}",
       "options": [
         {
           "key": "A",
@@ -284,7 +283,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下面代码实现二叉搜索树的插入操作。假设树中不存在重复值,横线处应填写(   )。",
+      "stem": "下面代码实现二叉搜索树的插入操作。假设树中不存在重复值,横线处应填写(  )。\nTreeNode* insertNode(TreeNode* root, int x) {\n    if (root == nullptr) {\n        return new TreeNode(x);\n    }\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n    if (x < root->val) {\n        __________________________\n    } else {\n        root->right = insertNode(root->right, x);\n    }\n    return root;\n}",
       "options": [
         {
           "key": "A",
@@ -308,7 +307,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "给定一个整数数组  a,每个元素表示一个位置上的数值。要求从数组中选择若干个元素,使得任意两个被\n选择的元素在原数组中都不相邻,并且所选元素的总和最大。函数  choose(vector<int>& a) 返回能够得到的最\n大总和,则横线处应填写(   )。\nvector<int> rightSideView(TreeNode* root) {\n    vector<int> result;\n    if (!root) return result;\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        int sz = q.size();\n        for (int i = 0; i < sz; ++i) {\n            TreeNode* node = q.front();\n            q.pop();\n            __________________________\n            if (node->left) q.push(node->left);\n            if (node->right) q.push(node->right);\n        }\n    }\n    return result;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\nTreeNode* insertNode(TreeNode* root, int x) {\n    if (root == nullptr) {\n        return new TreeNode(x);\n    }\n    if (x < root->val) {\n        __________________________\n    } else {\n        root->right = insertNode(root->right, x);\n    }\n    return root;\n}\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "给定一个整数数组 a ,每个元素表示一个位置上的数值。要求从数组中选择若干个元素,使得任意两个被\n选择的元素在原数组中都不相邻,并且所选元素的总和最大。函数 choose(vector<int>& a) 返回能够得到的最\n大总和,则横线处应填写(  )。\nint choose(vector<int>& a) {\n    if (a.empty()) return 0;\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n    int n = a.size();\n    if (n == 1) return a[0];\n    vector<int> dp(n, 0);\n    dp[0] = a[0];\n    dp[1] = max(a[0], a[1]);\n    for (int i = 2; i < n; ++i) {\n        dp[i] = __________________________;\n    }\n    return dp[n - 1];\n}",
       "options": [
         {
           "key": "A",
@@ -332,7 +331,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "下面代码实现  0/1 背包的一维动态规划。第  i 个物品重量为  wt[i],价值为  val[i],背包容量为  W。\n横线处应填写(   )。",
+      "stem": "下面代码实现 0/1 背包的一维动态规划。第 i 个物品重量为 wt[i] ,价值为 val[i] ,背包容量为 W 。\n横线处应填写(  )。\nint knapsack(int W, vector<int>& wt, vector<int>& val) {\n    int n = wt.size();\n    vector<int> dp(W + 1, 0);\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n    for (int i = 0; i < n; ++i) {\n        for (int w = W; w >= wt[i]; --w) {\n            __________________________\n        }\n    }\n    return dp[W];\n}",
       "options": [
         {
           "key": "A",
@@ -374,7 +373,7 @@
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "通过指向  Base 的指针删除  Derived 对象时,一定会先调用  Derived 的析构函数,再调用  Base 的析\n构函数。\nint choose(vector<int>& a) {\n    if (a.empty()) return 0;\n    int n = a.size();\n    if (n == 1) return a[0];\n    vector<int> dp(n, 0);\n    dp[0] = a[0];\n    dp[1] = max(a[0], a[1]);\n    for (int i = 2; i < n; ++i) {\n        dp[i] = __________________________;\n    }\n    return dp[n - 1];\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint knapsack(int W, vector<int>& wt, vector<int>& val) {\n    int n = wt.size();\n    vector<int> dp(W + 1, 0);\n    for (int i = 0; i < n; ++i) {\n        for (int w = W; w >= wt[i]; --w) {\n            __________________________\n        }\n    }\n    return dp[W];\n}",
+      "stem": "通过指向 Base 的指针删除 Derived 对象时,一定会先调用 Derived 的析构函数,再调用 Base 的析\n构函数。\n#include <iostream>\nusing namespace std;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nclass Base {\npublic:\n    ~Base() {\n        cout << \"Base destructor\" << endl;\n    }\n};\nclass Derived : public Base {\npublic:\n    ~Derived() {\n        cout << \"Derived destructor\" << endl;\n    }\n};\nint main() {\n    Base* p = new Derived();\n    delete p;\n    return 0;\n}",
       "options": [
         {
           "key": "T",
@@ -390,7 +389,7 @@
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "在  C++ STL 中,stack 的  pop() 函数会返回栈顶元素并将其删除。",
+      "stem": "在 C++ STL 中,stack 的 pop() 函数会返回栈顶元素并将其删除。",
       "options": [
         {
           "key": "T",
@@ -406,7 +405,7 @@
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "程序运行后会输出  2。",
+      "stem": "程序运行后会输出 2 。\nint main() {\n    queue<int> q;\n    q.push(1);\n    q.push(2);\n    q.push(3);\n    q.pop();\n    cout << q.front() << endl;\n    return 0;\n}",
       "options": [
         {
           "key": "T",
@@ -422,7 +421,7 @@
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "下列函数试图将整数  x 插入到一棵二叉搜索树中。假设二叉搜索树满足如下性质:对于任意结点,左子树\n中所有结点的值均小于该结点的值,右子树中所有结点的值均大于或等于该结点的值。判断该函数是否能够在插入\n后保持二叉搜索树性质。\n#include <iostream>\nusing namespace std;\nclass Base {\npublic:\n    ~Base() {\n        cout << \"Base destructor\" << endl;\n    }\n};\nclass Derived : public Base {\npublic:\n    ~Derived() {\n        cout << \"Derived destructor\" << endl;\n    }\n};\nint main() {\n    Base* p = new Derived();\n    delete p;\n    return 0;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nint main() {\n    queue<int> q;\n    q.push(1);\n    q.push(2);\n    q.push(3);\n    q.pop();\n    cout << q.front() << endl;\n    return 0;\n}\n\n\n\n\n\n\n\n\n\nstruct TreeNode {\n    int val;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n};\nTreeNode* insertNode(TreeNode* root, int x) {\n    if (root == nullptr) {\n        return new TreeNode(x);\n    }\n    if (x < root->val) {\n        root->right = insertNode(root->right, x);\n    } else {\n        root->left = insertNode(root->left, x);\n    }\n    return root;\n}",
+      "stem": "下列函数试图将整数 x 插入到一棵二叉搜索树中。假设二叉搜索树满足如下性质:对于任意结点,左子树\n中所有结点的值均小于该结点的值,右子树中所有结点的值均大于或等于该结点的值。判断该函数是否能够在插入\n后保持二叉搜索树性质。\nstruct TreeNode {\n    int val;\n    TreeNode* left;\n    TreeNode* right;\n    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTreeNode* insertNode(TreeNode* root, int x) {\n    if (root == nullptr) {\n        return new TreeNode(x);\n    }\n    if (x < root->val) {\n        root->right = insertNode(root->right, x);\n    } else {\n        root->left = insertNode(root->left, x);\n    }\n    return root;\n}",
       "options": [
         {
           "key": "T",
@@ -454,7 +453,7 @@
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "若用数组按层序存储完全二叉树,且根节点下标为  0,则下标为  i 的节点左孩子下标为  2 * i + 1,右\n孩子下标为  2 * i + 2。",
+      "stem": "若用数组按层序存储完全二叉树,且根节点下标为 0 ,则下标为 i 的节点左孩子下标为 2 * i + 1 ,右\n孩子下标为 2 * i + 2 。",
       "options": [
         {
           "key": "T",
@@ -470,7 +469,7 @@
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "以下代码可以正确地按层换行输出二叉树的节点值。",
+      "stem": "以下代码可以正确地按层换行输出二叉树的节点值。\nvoid printByLevel(TreeNode* root) {\n    if (!root) return;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        for (int i = 0; i < q.size(); ++i) {\n            TreeNode* cur = q.front();\n            q.pop();\n            cout << cur->val << \" \";\n            if (cur->left) q.push(cur->left);\n            if (cur->right) q.push(cur->right);\n        }\n        cout << endl;\n    }\n}",
       "options": [
         {
           "key": "T",
@@ -521,17 +520,7 @@
       "seq": 1,
       "kind": "traditional",
       "title": "条形蛋糕",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n寒假到了,小杨同学打算找一份兼职,顺便体验一下打工人的生活。\n小杨同学给一家蛋糕店发送了一份自己的简历,希望可以在寒假来这里帮忙。店长最近正好遇到了一个难题:店里\n每天会做一条长条蛋糕,但是不同长度的蛋糕块卖出的价格不同,应该怎么分才能卖得最多呢?\n有趣的是店长曾经学习过计算机专业。他最近对动态规划算法很感兴趣,于是打算用这个问题考一考小杨同学,问\n题如下:\n给定一条长度为   的长条蛋糕和一个价格表,该价格表表示长度为  ( )的蛋糕块的价格为  。求\n蛋糕的分割方案,使得总销售价格最大,注意蛋糕块的长度必须为整数。\n3.1.2\n\n输入格式\n第一行一个正整数  ( ),表示长条蛋糕的总长度。\n第二行   个正整数  ( ),表示不同长度蛋糕块的价格。\nvoid printByLevel(TreeNode* root) {\n    if (!root) return;\n    queue<TreeNode*> q;\n    q.push(root);\n    while (!q.empty()) {\n        for (int i = 0; i < q.size(); ++i) {\n            TreeNode* cur = q.front();\n            q.pop();\n            cout << cur->val << \" \";\n            if (cur->left) q.push(cur->left);\n            if (cur->right) q.push(cur->right);\n        }\n        cout << endl;\n    }\n}\n\n3.1.3 输出格式\n一行一个正整数,表示最大总销售价格。\n3.1.4 输入样例  1\n3.1.5 输出样例  1\n3.1.6 输入样例  2\n3.1.7 输出样例  2\n3.1.8 样例解释\n第一个样例中,长度为   的蛋糕价值为  ,长度为   的蛋糕价值为  ,长度为   的蛋糕价值为  ,长度为   的蛋糕价\n值为  ;\n总长度为   的长条蛋糕,有   五种本质不同的分法。\n其对应的总销售价格分别为  ,故最大总销售价格为  。\n第二个样例中,长度为   的长条蛋糕,销售价格最大的分法为  ,最大总销售价格为  。\n3.1.9",
-      "time_ms": 1000,
-      "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
-    },
-    {
-      "seq": 2,
-      "kind": "traditional",
-      "title": "满二叉树",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n给定一棵包含   个结点的有根二叉树,结点依次以   编号,根结点编号为  。\n对于结点  ,其左儿子的编号记为  ,右儿子编号记为  。特别地,如果左儿子不存在则  ,如果右儿子不存在\n则  。\n树中每个结点都对应一棵以其为根的子树。请你求出给定有根树的所有   棵子树中,有多少棵子树是满二叉树。\n满二叉树是指所有叶子深度均相同,且除叶子外均有两个儿子的二叉树,例如以下三棵二叉树均是满二叉树:\n例如,\n在上面这棵有   个节点的二叉树中,有   个子树是满二叉树(包括整个树本身,及所有的单个叶子节点);\n又例如,\n在上面这棵有   个节点的二叉树中,有   个子树是满二叉树(包括节点   的子树,以及所有单个叶子节点)。\n3.2.2\n\n输入格式\n第一行,一个正整数  ,表示有根二叉树结点数量。\n接下来   行,每行两个非负整数  ,表示结点   的左儿子编号和右儿子编号,整数之间以空格分隔。\n3.2.3 输出格式\n输出一行,一个整数,表示所有子树中满二叉树的数量。\n()      ()            ()\n       /  \\          /  \\\n     ()    ()      ()    ()\n                  /  \\  /  \\\n                ()   ()()   ()\n\n   ()\n  /  \\\n()    ()\n\n   (1)\n  /   \\\n(2)   (3)\n     /   \\\n   (4)   (5)\n\n3.2.4 样例\n3.2.5 输入样例  1\n3.2.6 输出样例  1\n3.2.7 输入样例  2\n3.2.8 输出样例  2\n3.2.9 数据范围\n对于   的测试点,保证  。\n对于所有测试点,保证  。\n\n2 3\n4 0\n0 0\n0 0\n\n2 3\n0 0\n0 0\n\n3.2.10",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n寒假到了,小杨同学打算找一份兼职,顺便体验一下打工人的生活。\n小杨同学给一家蛋糕店发送了一份自己的简历,希望可以在寒假来这里帮忙。店长最近正好遇到了一个难题:店里\n每天会做一条长条蛋糕,但是不同长度的蛋糕块卖出的价格不同,应该怎么分才能卖得最多呢?\n有趣的是店长曾经学习过计算机专业。他最近对动态规划算法很感兴趣,于是打算用这个问题考一考小杨同学,问\n题如下:\n给定一条长度为  的长条蛋糕和一个价格表,该价格表表示长度为 (\n)的蛋糕块的价格为\n。求\n蛋糕的分割方案,使得总销售价格最大,注意蛋糕块的长度必须为整数。\n3.1.2\n\n输入格式\n第一行一个正整数 (\n),表示长条蛋糕的总长度。\n第二行  个正整数\n(\n),表示不同长度蛋糕块的价格。\n3.1.3\n输出格式\n一行一个正整数,表示最大总销售价格。\n3.1.4\n输入样例 1\n\n1 5 8 9\n\n3.1.5\n输出样例 1\n\n3.1.6\n输入样例 2\n\n1 5 8 9 10 17 17 20 24 30\n\n3.1.7\n输出样例 2\n\n3.1.8\n样例解释\n第一个样例中,长度为  的蛋糕价值为 ,长度为  的蛋糕价值为 ,长度为  的蛋糕价值为 ,长度为  的蛋糕价\n值为 ;\n总长度为  的长条蛋糕,有\n 五种本质不同的分法。\n其对应的总销售价格分别为\n,故最大总销售价格为\n。\n第二个样例中,长度为\n 的长条蛋糕,销售价格最大的分法为\n,最大总销售价格为\n。\n3.1.9",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -541,12 +530,35 @@
           "suspect": false
         },
         {
-          "in": "4\n5\n21\n3\n",
-          "out": "3\n",
-          "suspect": true
+          "in": "10\n",
+          "out": "10\n",
+          "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "#include <iostream>\nusing namespace std;\nint dp[1010], p[1010];\nint main() {\n    int n;\n    cin >> n;\n    for (int i = 1; i <= n; ++i)\n        cin >> p[i];\n    for (int i = 1; i <= n; ++i) {\n        for (int j = i; j <= n; ++j) {\n            dp[j] = max(dp[j], dp[j - i] + p[i]);\n        }\n    }\n    cout << dp[n] << endl;\n    return 0;\n}"
+    },
+    {
+      "seq": 2,
+      "kind": "traditional",
+      "title": "满二叉树",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n给定一棵包含  个结点的有根二叉树,结点依次以\n 编号,根结点编号为 。\n对于结点 ,其左儿子的编号记为 ,右儿子编号记为 。特别地,如果左儿子不存在则\n,如果右儿子不存在\n则\n。\n树中每个结点都对应一棵以其为根的子树。请你求出给定有根树的所有  棵子树中,有多少棵子树是满二叉树。\n满二叉树是指所有叶子深度均相同,且除叶子外均有两个儿子的二叉树,例如以下三棵二叉树均是满二叉树:\n()      ()            ()\n       /  \\          /  \\\n     ()    ()      ()    ()\n                  /  \\  /  \\\n                ()   ()()   ()\n\n例如,\n   ()\n  /  \\\n()    ()\n\n在上面这棵有  个节点的二叉树中,有  个子树是满二叉树(包括整个树本身,及所有的单个叶子节点);\n又例如,\n   (1)\n  /   \\\n(2)   (3)\n     /   \\\n   (4)   (5)\n\n在上面这棵有  个节点的二叉树中,有  个子树是满二叉树(包括节点  的子树,以及所有单个叶子节点)。\n3.2.2\n\n输入格式\n第一行,一个正整数 ,表示有根二叉树结点数量。\n接下来  行,每行两个非负整数\n,表示结点  的左儿子编号和右儿子编号,整数之间以空格分隔。\n3.2.3\n输出格式\n输出一行,一个整数,表示所有子树中满二叉树的数量。\n3.2.4\n样例\n3.2.5\n输入样例 1\n\n2 3\n4 0\n0 0\n0 0\n\n3.2.6\n输出样例 1\n\n3.2.7\n输入样例 2\n\n2 3\n0 0\n0 0\n\n3.2.8\n输出样例 2\n\n3.2.9\n数据范围\n对于\n 的测试点,保证\n。\n对于所有测试点,保证\n。\n3.2.10",
+      "time_ms": 1000,
+      "memory_mb": 512,
+      "samples": [
+        {
+          "in": "4\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "5\n2\n1\n3\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "#include <iostream>\n#include <algorithm>\nusing namespace std;\nint n;\nint l[100010], r[100010];\nint h[100010], chk[100010] = {1};\nint ans;\nvoid dfs(int u) {\n    if (!u)\n        return;\n    dfs(l[u]);\n    dfs(r[u]);\n    h[u] = max(h[l[u]], h[r[u]]) + 1;\n    chk[u] = chk[l[u]] && chk[r[u]] && (h[l[u]] == h[r[u]]);\n    ans += chk[u];\n}\nint main() {\n    cin >> n;\n    for (int i = 1; i <= n; i++)\n        cin >> l[i] >> r[i];\n    ans = 0;\n    dfs(1);\n    cout << ans << endl;\n    return 0;\n}"
     }
   ],
   "answer_rows": [
@@ -565,11 +577,8 @@
       "B",
       "A",
       "B",
-      "A",
-      "C"
-    ],
-    [
       "A"
-    ]
+    ],
+    []
   ]
 }

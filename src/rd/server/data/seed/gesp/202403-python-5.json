@@ -3,16 +3,16 @@
     "ym": "202403",
     "lang": "python",
     "level": 5,
-    "title": "GESP 3月认证 Python五级真题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10134.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1602047526830112.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202403-python-5.pdf"
+    "title": "202403-python-5",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202403-python-5.pdf",
+    "tf_vision_filled": 10
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "下面流程图在 yr 输入 2024 时,可以判定 yr 代表闰年,并输出2 月是 29 天,则图中菱形框中应该填入(   )。",
+      "stem": "下面流程图在yr输入2024时,可以判定yr代表闰年,并输出2月是29天,则图中菱形框中应该填入(  )。",
       "options": [
         {
           "key": "A",
@@ -36,7 +36,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "在 TCP 协议中,完成连接建立需要通过(   )握手。",
+      "stem": "在TCP协议中,完成连接建立需要通过(  )握手。",
       "options": [
         {
           "key": "A",
@@ -60,7 +60,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "下面有关排序算法的说法,正确的是(   )",
+      "stem": "下面有关排序算法的说法,正确的是(  )",
       "options": [
         {
           "key": "A",
@@ -68,7 +68,7 @@
         },
         {
           "key": "B",
-          "text": "Python 中 list 类型的 sort() 是稳定排序"
+          "text": "Python中list类型的sort()是稳定排序"
         },
         {
           "key": "C",
@@ -84,7 +84,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "不同的排序算法,其空间复杂度也不同。与冒泡法排序空间复杂度相同的是(   )",
+      "stem": "不同的排序算法,其空间复杂度也不同。与冒泡法排序空间复杂度相同的是(  )",
       "options": [
         {
           "key": "A",
@@ -108,23 +108,23 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下面 Python 代码中, aFactorial() 和 bFactorial() 用于求正整数的阶乘。有关说法,错误的是 (  ) 。",
+      "stem": "下面Python代码中,aFactorial()和bFactorial()用于求正整数的阶乘。有关说法,错误的是(\n )。",
       "options": [
         {
           "key": "A",
-          "text": "aFactorial( ) 用循环方式, bFactorial() 递归方式"
+          "text": "aFactorial( )用循环方式,bFactorial()递归方式"
         },
         {
           "key": "B",
-          "text": "bFactorial( ) 更加符合数学定义,直观易于理解,而 aFactorial() 需要将数学定义转换为计算机程序实现"
+          "text": "bFactorial( )更加符合数学定义,直观易于理解,而aFactorial()需要将数学定义转换为计算机程序实现"
         },
         {
           "key": "C",
-          "text": "当 N 值较大时, aFactorial( ) 执行效率更高,而 bFactorial() 因为有多次函数调用,效率将降低,且 N 如果较大, 将可能导致不能使用"
+          "text": "当N值较大时,aFactorial( )执行效率更高,而bFactorial()因为有多次函数调用,效率将降低,且N如果较大, 将可能导致不能使用"
         },
         {
           "key": "D",
-          "text": "bFactorial( ) 因为代码量较少,没有循环,因此其执行效率更高"
+          "text": "bFactorial( )因为代码量较少,没有循环,因此其执行效率更高"
         }
       ],
       "answer": "D"
@@ -132,23 +132,23 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "有关下面 Python 代码的说法,正确的是 (  ) 。",
+      "stem": "有关下面Python代码的说法,正确的是(\n )。",
       "options": [
         {
           "key": "A",
-          "text": "代码中 qSort() 函数不是稳定排序"
+          "text": "代码中qSort()函数不是稳定排序"
         },
         {
           "key": "B",
-          "text": "代码中 qSort() 函数空间复杂度为 O(1)"
+          "text": "代码中qSort()函数空间复杂度为O(1)"
         },
         {
           "key": "C",
-          "text": "代码中 qSort() 函数是就地排序"
+          "text": "代码中qSort()函数是就地排序"
         },
         {
           "key": "D",
-          "text": "代码中 qSort() 函数是外排序,因为排序后的结果保存在新的内存空间即外空间"
+          "text": "代码中qSort()函数是外排序,因为排序后的结果保存在新的内存空间即外空间"
         }
       ],
       "answer": "A"
@@ -156,23 +156,23 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "上题不能支持其他常见类型的排序,如实现该支持,横线处分别应填写代码是 ( ) 。",
+      "stem": "上题不能支持其他常见类型的排序,如实现该支持,横线处分别应填写代码是( )。",
       "options": [
         {
           "key": "A",
-          "text": "isinstance(iterData, list) == False,st == [x for x in iterData]"
+          "text": "isinstance(iterData, list) == False ,st == [x for x in iterData]"
         },
         {
           "key": "B",
-          "text": "type(iterData) == list,lst = [x for x in iterData]"
+          "text": "type(iterData) == list ,lst = [x for x in iterData]"
         },
         {
           "key": "C",
-          "text": "isinstance(iterData, list),lst = list(iterData)"
+          "text": "isinstance(iterData, list) ,lst = list(iterData)"
         },
         {
           "key": "D",
-          "text": "type(iterData) != list,lst = list(iterData)"
+          "text": "type(iterData) != list ,lst = list(iterData)"
         }
       ],
       "answer": "D"
@@ -180,23 +180,23 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "上上题 qSort() 函数不支持排序规则函数,形如 sorted() 函数的 key 参数,为实现类似目标,横线处分别应填入\n代码是 (  ) 。",
+      "stem": "上上题qSort()函数不支持排序规则函数,形如sorted()函数的key参数,为实现类似目标,横线处分别应填入\n代码是( )。",
       "options": [
         {
           "key": "A",
-          "text": "fx == None,fx(x) >= fx(Pivot),fx(x) < fx(Pivot)"
+          "text": "fx == None ,fx(x) >= fx(Pivot) ,fx(x) < fx(Pivot)"
         },
         {
           "key": "B",
-          "text": "fx == None,fx(x) >= Pivot,fx(x) < Pivot"
+          "text": "fx == None ,fx(x) >= Pivot ,fx(x) < Pivot"
         },
         {
           "key": "C",
-          "text": "fx != None,fx(x) >= fx(Pivot),fx(x) < fx(Pivot)"
+          "text": "fx != None ,fx(x) >= fx(Pivot) ,fx(x) < fx(Pivot)"
         },
         {
           "key": "D",
-          "text": "fx != None,fx(x) >= Pivot,fx(x) < Pivot"
+          "text": "fx != None ,fx(x) >= Pivot ,fx(x) < Pivot"
         }
       ],
       "answer": "C"
@@ -204,23 +204,23 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "下面的 Python 代码中 merge() 函数的两个参数均为 list 类型,且是已按相同规则排序的数据。下面有关说法中,\n正确的是(     )。",
+      "stem": "下面的Python代码中merge()函数的两个参数均为list类型,且是已按相同规则排序的数据。下面有关说法中,\n正确的是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "第 3-7 行代码将导致死循环,因为没有循环变量及其改变"
+          "text": "第3-7行代码将导致死循环,因为没有循环变量及其改变"
         },
         {
           "key": "B",
-          "text": "第 5 行和第 7 行代码执行后, result 的成员值为 None"
+          "text": "第5行和第7行代码执行后,result的成员值为None"
         },
         {
           "key": "C",
-          "text": "第 9 行和第 11 行是否被执行,与 arr1 和 arr2 的成员值有关,如果值转换为 False ,将不会被执行"
+          "text": "第9行和第11行是否被执行,与arr1和arr2的成员值有关,如果值转换为False,将不会被执行"
         },
         {
           "key": "D",
-          "text": "merge() 函数的代码没有错误,执行后参数 arr1 和 arr2 将合并成新的 list 保存到 result 之中,且有序"
+          "text": "merge()函数的代码没有错误,执行后参数arr1和arr2将合并成新的list保存到result之中,且有序"
         }
       ],
       "answer": "D"
@@ -228,23 +228,23 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "阅读下面 Python 代码,横线处应填入(     )。",
+      "stem": "阅读下面Python代码,横线处应填入(    )。",
       "options": [
         {
           "key": "A",
-          "text": "isOdd,isEven"
+          "text": "isOdd ,isEven"
         },
         {
           "key": "B",
-          "text": "isOdd,isEven(10)"
+          "text": "isOdd ,isEven(10)"
         },
         {
           "key": "C",
-          "text": "isOdd(10),isEven"
+          "text": "isOdd(10) ,isEven"
         },
         {
           "key": "D",
-          "text": "isOdd(10),isEven(10)"
+          "text": "isOdd(10) ,isEven(10)"
         }
       ],
       "answer": "A"
@@ -252,7 +252,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "下面 Python 代码的平均时间复杂度是(     )。",
+      "stem": "下面Python代码的平均时间复杂度是(    )。",
       "options": [
         {
           "key": "A",
@@ -268,11 +268,11 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "有关下面 Python 代码的说法,正确的是(     )。",
+      "stem": "有关下面Python代码的说法,正确的是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "代码采用二分法查找,仅对有序 list 有效,不适用于 set 、 dict 等"
+          "text": "代码采用二分法查找,仅对有序list有效,不适用于set、dict等"
         },
         {
           "key": "B",
@@ -280,11 +280,11 @@
         },
         {
           "key": "C",
-          "text": "第 16 行代码 __bSearch() 最后一个参数 val 应为 queryVal"
+          "text": "第16行代码__bSearch()最后一个参数val应为queryVal"
         },
         {
           "key": "D",
-          "text": "第 16 行代码应为 return __bSearch"
+          "text": "第16行代码应为return __bSearch"
         }
       ],
       "answer": "A"
@@ -292,7 +292,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "在上题的算法中,其时间复杂度是(     )。",
+      "stem": "在上题的算法中,其时间复杂度是(    )。",
       "options": [
         {
           "key": "A",
@@ -308,23 +308,23 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "下面的 Python 代码中, idList 变量为 list 类型,保存有大量身份编码,倒数第二位如为偶数,则为女性,奇数\n为男性,从第 7 位开始连续 8 位为出生年月日,年为 4 位数月和日均为两位数。编码统计每天有几位男生生日女生生\n日。横线处应填入代码是(     )。",
+      "stem": "下面的Python代码中,idList变量为list类型,保存有大量身份编码,倒数第二位如为偶数,则为女性,奇数\n为男性,从第7位开始连续8位为出生年月日,年为4位数月和日均为两位数。编码统计每天有几位男生生日女生生\n日。横线处应填入代码是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "(1, 0) if gender == 1 else (1, 0),(0, 1)"
+          "text": "(1, 0) if gender == 1 else (1, 0) ,(0, 1)"
         },
         {
           "key": "B",
-          "text": "(0, 1) if gender == 1 else (1, 0),(0, 0)"
+          "text": "(0, 1) if gender == 1 else (1, 0) ,(0, 0)"
         },
         {
           "key": "C",
-          "text": "0, 1 if gender == 1 else 1, 0,0, 0"
+          "text": "0, 1 if gender == 1 else 1, 0 ,0, 0"
         },
         {
           "key": "D",
-          "text": "(0, 1) if gender == 1 else (1, 0),0, 0"
+          "text": "(0, 1) if gender == 1 else (1, 0) ,0, 0"
         }
       ],
       "answer": "B"
@@ -332,23 +332,23 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "有关下面 Python 代码的说法错误的是(     )。\n题号 1 2 3 4 5 6 7 8 9 10\n答案",
+      "stem": "有关下面Python代码的说法错误的是(    )。",
       "options": [
         {
           "key": "A",
-          "text": "代码中第 17 行执行后, firstNode( 第一个节点 ) 的下一个节点指向第 3 个节点,即 secondNode( 第 2 个节点 ) 的下一 个"
+          "text": "代码中第17行执行后,firstNode(第一个节点)的下一个节点指向第3个节点,即secondNode(第2个节点)的下一 个"
         },
         {
           "key": "B",
-          "text": "代码中第 18 行执行后,第 3 个节点的 Previous( 前向 ) 指向第 1 个节点( firstNode )"
+          "text": "代码中第18行执行后,第3个节点的Previous(前向)指向第1个节点(firstNode)"
         },
         {
           "key": "C",
-          "text": "仅仅通过 firstNode 节点,不能访问第 2 个节点,第 2 个节点已不在内存中存在,自动释放所占内存"
+          "text": "仅仅通过firstNode节点,不能访问第2个节点,第2个节点已不在内存中存在,自动释放所占内存"
         },
         {
           "key": "D",
-          "text": "在第 18 行后,执行 del secondNode 后,第 2 个节点所占内存才会被释放。仅仅执行先有第 16-18 行,第 2 个节点 内存不会被释放。"
+          "text": "在第18行后,执行del secondNode后,第2个节点所占内存才会被释放。仅仅执行先有第16-18行,第2个节点 内存不会被释放。"
         }
       ],
       "answer": "C"
@@ -358,7 +358,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "一个算法设计合理的话是可以没有输出的,比如冒泡排序就不输出任何信息(   )。",
+      "stem": "一个算法设计合理的话是可以没有输出的,比如冒泡排序就不输出任何信息(  )。",
       "options": [
         {
           "key": "T",
@@ -369,12 +369,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "流程图描述算法的能力是有限的,比如它无法对能够提前终止的循环给出等价描述  (  ) 。",
+      "stem": "流程图描述算法的能力是有限的,比如它无法对能够提前终止的循环给出等价描述 (  ) 。",
       "options": [
         {
           "key": "T",
@@ -385,12 +385,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "归并排序的空间复杂度是 。 (  )",
+      "stem": "归并排序的空间复杂度是\n。(\n )",
       "options": [
         {
           "key": "T",
@@ -401,12 +401,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "在 Python 中,当对 dict 类型进行 in 运算查找元素是否存在时,其时间复杂度为O(1), set 类型也如此。(   )",
+      "stem": "在Python中,当对dict类型进行in运算查找元素是否存在时,其时间复杂度为O(1) ,set类型也如此。(  )",
       "options": [
         {
           "key": "T",
@@ -417,12 +417,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "在以下 Python 代码中,执行后输出是5=>4=>3=>2=>1=>2=>3=>2=>1=>5。 (  )",
+      "stem": "在以下Python代码中,执行后输出是5=>4=>3=>2=>1=>2=>3=>2=>1=>5 。(\n )",
       "options": [
         {
           "key": "T",
@@ -433,12 +433,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "贪心算法虽然可能不是局部最优,但可达到全局最优。  (  )",
+      "stem": "贪心算法虽然可能不是局部最优,但可达到全局最优。 (\n )",
       "options": [
         {
           "key": "T",
@@ -449,12 +449,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "Python 内置函数 sorted() 可对支持 for-in 循环的数据类型排序。(   )",
+      "stem": "Python内置函数sorted()可对支持for-in循环的数据类型排序。(  )",
       "options": [
         {
           "key": "T",
@@ -465,12 +465,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     },
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "冒泡排序是就地排序,空间复杂度为O(1)。(   )",
+      "stem": "冒泡排序是就地排序,空间复杂度为O(1) 。(  )",
       "options": [
         {
           "key": "T",
@@ -481,12 +481,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "下面的 Python 代码能实现 N 的质因数分解,类似埃氏筛法。(   )",
+      "stem": "下面的Python代码能实现N的质因数分解,类似埃氏筛法。(  )",
       "options": [
         {
           "key": "T",
@@ -497,12 +497,12 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "T"
     },
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "Python 代码 print(sorted(list(range(10,20)), key = hex)) 执行后将输出 [10, 11, 12, 13, 14, 15, 16, 17, 18, 19] 。(   )",
+      "stem": "Python代码print(sorted(list(range(10,20)), key = hex))执行后将输出[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]。(  )",
       "options": [
         {
           "key": "T",
@@ -513,7 +513,7 @@
           "text": "错误"
         }
       ],
-      "answer": ""
+      "answer": "F"
     }
   ],
   "program": [
@@ -521,21 +521,45 @@
       "seq": 1,
       "kind": "traditional",
       "title": "成绩排序",
-      "statement": "3.1.1 问题描述\n有   名同学,每名同学有语文、数学、英语三科成绩。你需要按如下规则对所有同学的成绩从高到低排序:\n1. 比较总分,高者靠前;\n2. 如果总分相同,则比较语文和数学两科总分,高者靠前;\n3. 如果仍相同,则比较语文和数学两科的最高分,高者靠前;\n4. 如果仍相同,则二人并列。\n你需要输出每位同学的排名,如遇   人并列,则他们排名相同,并留空后面的   个名次。例如,有   名同学并\n列第  ,则后一名同学自动成为第   名。\n3.1.2 输入描述\n第一行一个整数  ,表示同学的人数。\n接下来   行,每行三个非负整数   分别表示该名同学的语文、数学、英语成绩。\n保证  。\n3.1.3 输出描述\n输出   行,按输入同学的顺序,输出他们的排名。\n注意:请不要按排名输出同学的序号,而是按同学的顺序输出他们各自的排名\n3.1.4 特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5 样例输入  1\n3.1.6 样例输出  1\n3.1.7 数据规模\n对于   的测试点,保证  ,且所有同学的总分各不相同。\n对于所有测试点,保证  。\n3.1.8",
+      "statement": "3.1.1\n问题描述\n有\n 名同学,每名同学有语文、数学、英语三科成绩。你需要按如下规则对所有同学的成绩从高到低排序:\n1. 比较总分,高者靠前;\n2. 如果总分相同,则比较语文和数学两科总分,高者靠前;\n3. 如果仍相同,则比较语文和数学两科的最高分,高者靠前;\n4. 如果仍相同,则二人并列。\n你需要输出每位同学的排名,如遇  人并列,则他们排名相同,并留空后面的\n 个名次。例如,有  名同学并\n列第 ,则后一名同学自动成为第  名。\n3.1.2\n输入描述\n第一行一个整数\n,表示同学的人数。\n接下来\n 行,每行三个非负整数\n 分别表示该名同学的语文、数学、英语成绩。\n保证\n。\n3.1.3\n输出描述\n输出\n 行,按输入同学的顺序,输出他们的排名。\n注意:请不要按排名输出同学的序号,而是按同学的顺序输出他们各自的排名\n3.1.4\n特别提醒\n在常规程序中,输入、输出时提供提示是好习惯。但在本场考试中,由于系统限定,请不要在输入、输出中附带任\n何提示信息。\n3.1.5\n样例输入 1\n\n140 140 150\n140 149 140\n148 141 140\n141 148 140\n145 145 139\n0 0 0\n\n3.1.6\n样例输出 1\n\n3.1.7\n数据规模\n对于\n 的测试点,保证\n,且所有同学的总分各不相同。\n对于所有测试点,保证\n。\n3.1.8",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "6\n",
+          "out": "2\n",
+          "suspect": false
+        },
+        {
+          "in": "7\n",
+          "out": "3\n",
+          "suspect": false
+        },
+        {
+          "in": "4\n4\n",
+          "out": "3\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "N = int(input())\nstudents = []\nfor i in range(N):\n    c, m, e = list(map(int, input().split()))\n    students.append((c + m + e, c + m, max(c, m), i))\nstudents.sort(reverse = True)\nrank = [None for i in range(N)]\nlast_student = None\nfor i, student in enumerate(students):\n    if student[:-1] != last_student:\n        last_student = student[:-1]\n        curr_rank = i + 1\n    rank[student[-1]] = curr_rank\nfor r in rank:\n    print(r)"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "-smooth 数",
-      "statement": "140 140 150\n140 149 140\n148 141 140\n141 148 140\n145 145 139\n0 0 0\n\nN = int(input())\nstudents = []\n    c, m, e = list(map(int, input().split()))\n    students.append((c + m + e, c + m, max(c, m), i))\nstudents.sort(reverse = True)\nrank = [None for i in range(N)]\nlast_student = None\n    if student[:-1] != last_student:\n        last_student = student[:-1]\n        curr_rank = i + 1\n    rank[student[-1]] = curr_rank\n    print(r)\n\n子任务编号 数据点占比\n\n3.2.1 题面描述\n小杨同学想寻找一种名为  -smooth 数的正整数。\n如果一个正整数的最大质因子不超过  ,则该正整数为  -smooth 数。\n小杨同学想知道,对于给定的   和  ,有多少个不超过   的  -smooth 数。\n3.2.2\n\n输入格式\n第一行包含两个正整数  ,含义如题面所示。\n3.2.3 输出格式\n输出一个非负整数,表示不超过   的  -smooth 数的数量。\n3.2.4 样例 1\n3.2.5 样例解释\n在不超过   的正整数中,-smooth 数有  ,共   个。\n3.2.6 数据范围\n对于全部数据,保证有  , 。\n3.2.7",
+      "statement": "3.2.1\n题面描述\n小杨同学想寻找一种名为 -smooth 数的正整数。\n如果一个正整数的最大质因子不超过 ,则该正整数为 -smooth 数。\n小杨同学想知道,对于给定的  和 ,有多少个不超过  的 -smooth 数。\n3.2.2\n\n输入格式\n第一行包含两个正整数\n,含义如题面所示。\n3.2.3\n输出格式\n输出一个非负整数,表示不超过  的 -smooth 数的数量。\n3.2.4\n样例1\n10 3\n\n3.2.5\n样例解释\n在不超过\n 的正整数中,-smooth 数有\n,共  个。\n3.2.6\n数据范围\n子任务编号\n数据点占比\n\n对于全部数据,保证有\n,\n。\n3.2.7",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "7\n",
+          "out": "1\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "n, B = map(int, input().split())\nis_prime = [True] * (n + 1)\nprimes = []\nmax_prime_factor = [0] * (n + 1)\nfor i in range(2, n + 1):\n    if is_prime[i]:\n        primes.append(i)\n        max_prime_factor[i] = i\n    for p in primes:\n        if i * p > n:\n            break\n        is_prime[i * p] = False\n        max_prime_factor[i * p] = max(max_prime_factor[i], p)\n        if i % p == 0:\n            break\ncnt = 0\nfor i in range(1, n + 1):\n    if max_prime_factor[i] <= B:\n        cnt += 1\nprint(cnt)"
     }
   ],
   "answer_rows": [
@@ -556,8 +580,6 @@
       "B",
       "C"
     ],
-    [
-      "A"
-    ]
+    []
   ]
 }

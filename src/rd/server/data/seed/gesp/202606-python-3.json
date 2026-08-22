@@ -3,16 +3,15 @@
     "ym": "202606",
     "lang": "python",
     "level": 3,
-    "title": "CCF GESP 2026年6月认证 Python 3级试题",
-    "session_url": "https://gesp.ccf.org.cn/101/1010/10284.html",
-    "pdf_url": "https://gesp.ccf.org.cn/101/attach/1753295490121760.pdf",
-    "pdf_path": "src/rd/server/data/imports/gesp/202606-python-3.pdf"
+    "title": "202606-python-3",
+    "pdf_url": "",
+    "pdf_path": "src/rd/server/data/cache/gesp/202606-python-3.pdf"
   },
   "choice": [
     {
       "seq": 1,
       "kind": "choice",
-      "stem": "学校组织同学们到未来农场参观,小明听讲解员介绍。在智能温室中,湿度传感器可以连续检测土壤的湿\n度,并将检测到的湿度数据实时发送给中央控制器。中央控制器根据这些数据判断是否开启灌溉系统。请问,这里\n的湿度传感器所发挥的作用,类似于计算机系统中的哪一类组件?(   )",
+      "stem": "学校组织同学们到未来农场参观,小明听讲解员介绍。在智能温室中,湿度传感器可以连续检测土壤的湿\n度,并将检测到的湿度数据实时发送给中央控制器。中央控制器根据这些数据判断是否开启灌溉系统。请问,这里\n的湿度传感器所发挥的作用,类似于计算机系统中的哪一类组件?(  )",
       "options": [
         {
           "key": "A",
@@ -36,7 +35,7 @@
     {
       "seq": 2,
       "kind": "choice",
-      "stem": "小明同学去郊外农场参观回来后,在自己的电脑中安装了一个  3D 农场仿真模拟系统。因为他今年买的这台\n二手电脑有点老旧, 3D 农场仿真模拟系统运行时经常弹出 “ 系统内存不足 ” 的警告,导致系统卡顿严重。他计划通过\n增加物理内存来解决问题。请问他应该购买以下哪种硬件组件?(   )",
+      "stem": "小明同学去郊外农场参观回来后,在自己的电脑中安装了一个 3D 农场仿真模拟系统。因为他今年买的这台\n二手电脑有点老旧,3D 农场仿真模拟系统运行时经常弹出“系统内存不足”的警告,导致系统卡顿严重。他计划通过\n增加物理内存来解决问题。请问他应该购买以下哪种硬件组件?(  )",
       "options": [
         {
           "key": "A",
@@ -60,7 +59,7 @@
     {
       "seq": 3,
       "kind": "choice",
-      "stem": "在  Python 中,-1 的   位补码用十六进制表示是?(   )",
+      "stem": "在 Python 中,-1 的\n 位补码用十六进制表示是?(  )",
       "options": [
         {
           "key": "A",
@@ -84,7 +83,7 @@
     {
       "seq": 4,
       "kind": "choice",
-      "stem": "执行  print(bin(0o15)) 的输出结果是?(   )",
+      "stem": "执行 print(bin(0o15)) 的输出结果是?(  )",
       "options": [
         {
           "key": "A",
@@ -108,7 +107,7 @@
     {
       "seq": 5,
       "kind": "choice",
-      "stem": "下列哪个表达式可以将整数  x 的二进制表示中从右往左数第   位(最低位为第   位)强制设置为  1,而其\n他位保持不变?(   )",
+      "stem": "下列哪个表达式可以将整数 x 的二进制表示中从右往左数第  位(最低位为第  位)强制设置为 1 ,而其\n他位保持不变?(  )",
       "options": [
         {
           "key": "A",
@@ -132,7 +131,7 @@
     {
       "seq": 6,
       "kind": "choice",
-      "stem": "下面  Python 代码执行后,输出的结果是?(   )",
+      "stem": "下面 Python 代码执行后,输出的结果是?(  )\nlst = [1, 2, 3, 4, 5]\nprint(lst.pop(-2))\nprint(lst)\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -156,7 +155,7 @@
     {
       "seq": 7,
       "kind": "choice",
-      "stem": "t = (2, 4, 6, 2),执行  t.count(2) 的结果是?(   )",
+      "stem": "t = (2, 4, 6, 2) ,执行 t.count(2) 的结果是?(  )",
       "options": [
         {
           "key": "A",
@@ -180,7 +179,7 @@
     {
       "seq": 8,
       "kind": "choice",
-      "stem": "下面  Python 代码执行后,输出的结果是?(   )",
+      "stem": "下面 Python 代码执行后,输出的结果是?(  )\ndict_a = {'a': 1, 'b': 2, 'c': 3}\ndict_b = {'b': 4, 'd': 5}\ndict_a.update(dict_b)\nprint(dict_a['b'])\n1\n2\n3\n4",
       "options": [
         {
           "key": "A",
@@ -204,7 +203,7 @@
     {
       "seq": 9,
       "kind": "choice",
-      "stem": "执行  s = \"a,b,c,d\"; print(s.split(',', 2)) 的结果是?(   )",
+      "stem": "执行 s = \"a,b,c,d\"; print(s.split(',', 2)) 的结果是?(  )",
       "options": [
         {
           "key": "A",
@@ -228,7 +227,7 @@
     {
       "seq": 10,
       "kind": "choice",
-      "stem": "已知  set1 = {1, 2},set2 = {3}。现要求在不修改  set1 的前提下,获得一个包含  set1 和  set2\n所有元素的新集合,以下哪个操作是正确的?(   )",
+      "stem": "已知 set1 = {1, 2} ,set2 = {3} 。现要求在不修改 set1 的前提下,获得一个包含 set1 和 set2\n所有元素的新集合,以下哪个操作是正确的?(  )",
       "options": [
         {
           "key": "A",
@@ -244,7 +243,7 @@
         },
         {
           "key": "D",
-          "text": "set1.update(set2) lst = [1, 2, 3, 4, 5] print(lst.pop(-2)) print(lst) dict_a = {'a': 1, 'b': 2, 'c': 3} dict_b = {'b': 4, 'd': 5} dict_a.update(dict_b) print(dict_a['b'])"
+          "text": "set1.update(set2)"
         }
       ],
       "answer": "B"
@@ -252,7 +251,7 @@
     {
       "seq": 11,
       "kind": "choice",
-      "stem": "从字典  d = {'a': 1, 'b': 2} 中,如何得到一个只包含键的列表?(   )",
+      "stem": "从字典 d = {'a': 1, 'b': 2} 中,如何得到一个只包含键的列表?(  )",
       "options": [
         {
           "key": "A",
@@ -276,7 +275,7 @@
     {
       "seq": 12,
       "kind": "choice",
-      "stem": "用   元、 元、 元硬币凑出   元,且硬币总数不超过   枚。以下程序计算符合要求的组合个数,横线处\n应填写的代码是?(   )",
+      "stem": "用  元、 元、 元硬币凑出\n 元,且硬币总数不超过  枚。以下程序计算符合要求的组合个数,横线处\n应填写的代码是?(  )\ncount = 0\nfor one in range(0, 11):\n    for two in range(0, 6):\n        for five in range(0, 3):\n            total_money = one + two * 2 + five * 5\n            total_coins = one + two + five\n            if ________:\n                count += 1\nprint(count)\n1\n2\n3\n4\n5\n6\n7\n8\n9",
       "options": [
         {
           "key": "A",
@@ -300,7 +299,7 @@
     {
       "seq": 13,
       "kind": "choice",
-      "stem": "下列程序能够将列表中的偶数筛选出来,并组成新列表。横线处填写的代码是?(   )",
+      "stem": "下列程序能够将列表中的偶数筛选出来,并组成新列表。横线处填写的代码是?(  )\nnums = [1, 2, 3, 4, 5, 6]\nresult = [x for x in nums if ________]\nprint(result)  # 期望输出 [2, 4, 6]\n1\n2\n3",
       "options": [
         {
           "key": "A",
@@ -324,7 +323,7 @@
     {
       "seq": 14,
       "kind": "choice",
-      "stem": "某电商平台有  M 种商品类别,平台记录了  N 条销售记录,每条记录包含商品类别编号和销售数量。需要\n找出每个类别中单次销售数量最多的那一笔(即该类别的最大销售数量),并输出这些最大数量中的最小值。以下\n程序试图实现此功能,横线处填写的代码是?(   )",
+      "stem": "某电商平台有 M 种商品类别,平台记录了 N 条销售记录,每条记录包含商品类别编号和销售数量。需要\n找出每个类别中单次销售数量最多的那一笔(即该类别的最大销售数量),并输出这些最大数量中的最小值。以下\n程序试图实现此功能,横线处填写的代码是?(  )\nM, N = map(int, input().split())\nmax_sale = [None] * (M + 1)   # 用 None 初始化,表示暂无记录\nfor _ in range(N):\n    cate, amount = map(int, input().split())\n    ____________\n        max_sale[cate] = amount\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nvalid_max = [v for v in max_sale[1:] if v is not None]\nresult = min(valid_max)\nprint(result)",
       "options": [
         {
           "key": "A",
@@ -332,7 +331,7 @@
         },
         {
           "key": "B",
-          "text": "if amount > max_sale[cate]: count = 0 for one in range(0, 11): for two in range(0, 6): for five in range(0, 3): total_money = one + two * 2 + five * 5 total_coins = one + two + five if ________: count += 1 print(count) nums = [1, 2, 3, 4, 5, 6] result = [x for x in nums if ________] print(result) # 期望输出 [2, 4, 6] M, N = map(int, input().split()) max_sale = [None] * (M + 1) # 用 None 初始化,表示暂无记录 for _ in range(N): cate, amount = map(int, input().split()) ____________ max_sale[cate] = amount valid_max = [v for v in max_sale[1:] if v is not None] result = min(valid_max) print(result) 题号 1 2 3 4 5 6 7 8 9 10 答案"
+          "text": "if amount > max_sale[cate]:"
         },
         {
           "key": "C",
@@ -348,7 +347,7 @@
     {
       "seq": 15,
       "kind": "choice",
-      "stem": "以下程序实现了一种简单的 “ 翻转 ” 加密:将大写字母表中的每个字母替换为与其对称的字母(A↔Z、\nB↔Y、C↔X、 ...... )。横线处填写的代码是?(   )",
+      "stem": "以下程序实现了一种简单的“翻转”加密:将大写字母表中的每个字母替换为与其对称的字母(A ↔Z 、\nB ↔Y 、C ↔X 、......)。横线处填写的代码是?(  )\ntext = \"HELLO\"\nresult = []\nfor ch in text:\n    if 'A' <= ch <= 'Z':\n        _________\n        result.append(new_ch)\n    else:\n        result.append(ch)\nencrypted = ''.join(result)\nprint(encrypted)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
       "options": [
         {
           "key": "A",
@@ -374,7 +373,7 @@
     {
       "seq": 1,
       "kind": "tf",
-      "stem": "又到期末考试周,小明发现这次许多闭卷考试不仅禁止携带手机、平板电脑,还有最近比较时髦的各类  AI\n眼镜(也有叫智能眼镜)也同样不允许带入考场。这些  AI 眼镜应该也是内置了操作系统并可能支持  Wi-Fi 或蓝牙连\n接。",
+      "stem": "又到期末考试周,小明发现这次许多闭卷考试不仅禁止携带手机、平板电脑,还有最近比较时髦的各类 AI\n眼镜(也有叫智能眼镜)也同样不允许带入考场。这些 AI 眼镜应该也是内置了操作系统并可能支持 Wi-Fi 或蓝牙连\n接。",
       "options": [
         {
           "key": "T",
@@ -390,7 +389,7 @@
     {
       "seq": 2,
       "kind": "tf",
-      "stem": "bin()、oct()、hex() 这三个函数的返回值类型是整数(int)。",
+      "stem": "bin() 、oct() 、hex() 这三个函数的返回值类型是整数(int )。",
       "options": [
         {
           "key": "T",
@@ -406,7 +405,7 @@
     {
       "seq": 3,
       "kind": "tf",
-      "stem": "表达式  (x & (x-1)) 可以用来判断正整数  x 是否为  2 的幂次方。",
+      "stem": "表达式 (x & (x-1)) 可以用来判断正整数 x 是否为 2 的幂次方。",
       "options": [
         {
           "key": "T",
@@ -422,7 +421,7 @@
     {
       "seq": 4,
       "kind": "tf",
-      "stem": "切片操作  mylist[2:5:-1] 会返回索引  2 到索引  4(包含)的元素,但顺序是反向的。",
+      "stem": "切片操作 mylist[2:5:-1] 会返回索引 2 到索引 4 (包含)的元素,但顺序是反向的。",
       "options": [
         {
           "key": "T",
@@ -438,7 +437,7 @@
     {
       "seq": 5,
       "kind": "tf",
-      "stem": "创建只包含一个元素的元组时,必须在元素后加一个逗号,例如  (1,)。",
+      "stem": "创建只包含一个元素的元组时,必须在元素后加一个逗号,例如 (1,) 。",
       "options": [
         {
           "key": "T",
@@ -454,7 +453,7 @@
     {
       "seq": 6,
       "kind": "tf",
-      "stem": "执行  d1 = {x: x for x in [1, 1, 2]} 后,d1 为  {1: 1, 2: 2}。",
+      "stem": "执行 d1 = {x: x for x in [1, 1, 2]} 后,d1 为 {1: 1, 2: 2} 。",
       "options": [
         {
           "key": "T",
@@ -470,7 +469,7 @@
     {
       "seq": 7,
       "kind": "tf",
-      "stem": "使用  in 运算符检查子字符串是否存在时,如果字符串为空,\"\" in \"abc\" 将返回  False。",
+      "stem": "使用 in 运算符检查子字符串是否存在时,如果字符串为空,\"\" in \"abc\" 将返回 False 。",
       "options": [
         {
           "key": "T",
@@ -486,7 +485,7 @@
     {
       "seq": 8,
       "kind": "tf",
-      "stem": "执行下面  Python 代码后,输出的结果为  2。",
+      "stem": "执行下面 Python 代码后,输出的结果为 2 。\ns = {10, 20, 30}\ns.remove(20)\ns.discard(40)\nprint(len(s))",
       "options": [
         {
           "key": "T",
@@ -502,7 +501,7 @@
     {
       "seq": 9,
       "kind": "tf",
-      "stem": "执行下面  Python 代码后,输出的结果为  7。\ntext = \"HELLO\"\nresult = []\nfor ch in text:\n    if 'A' <= ch <= 'Z':\n        _________\n        result.append(new_ch)\n    else:\n        result.append(ch)\nencrypted = ''.join(result)\nprint(encrypted)\n\n\n\n\n\n\n\n\n\n\ns = {10, 20, 30}\ns.remove(20)\ns.discard(40)\nprint(len(s))",
+      "stem": "执行下面 Python 代码后,输出的结果为 7 。\nmy_str = \"hello world\"\nmy_set = set(my_str)\nresult = len(''.join(my_set))\nprint(len)",
       "options": [
         {
           "key": "T",
@@ -518,7 +517,7 @@
     {
       "seq": 10,
       "kind": "tf",
-      "stem": "下列  Python 代码能够正确统计出所有能被  3 整除且至少包含一个数字  5 的四位数的个数。",
+      "stem": "下列 Python 代码能够正确统计出所有能被 3 整除且至少包含一个数字 5 的四位数的个数。\ncount = 0\nfor num in range(1000, 10000):\n    if num % 3 == 0:\n        digits = [int(d) for d in str(num)]\n        if 5 in digits:\n            count += 1\nprint(count)",
       "options": [
         {
           "key": "T",
@@ -537,7 +536,7 @@
       "seq": 1,
       "kind": "traditional",
       "title": "加密",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.1.1 题目描述\n小杨同学有一串数字,想把它们变成另一串数字,这个过程叫做加密。\n他有一本密码本,密码本告诉你:\n每个数字应该变成哪个数字。\n数字一共有   个:\n0、1、2、3、4、5、6、7、8、9\n密码本会依次告诉你:\n0 要变成什么\n1 要变成什么\n2 要变成什么\n......\n9 要变成什么\n请你按照密码本,把原来的每个数字都换成新的数字,然后输出。\n3.1.2\n\n输入格式\n输入共有   行。\n第一行:一个整数,表示有多少个数字需要加密;\n第二行:这些需要加密的数字;\n第三行:密码本,一共   个数字。\n这   个数字的意思是:\n第   个数字:表示  0 加密后变成什么;\n第   个数字:表示  1 加密后变成什么;\n第   个数字:表示  2 加密后变成什么;\nmy_str = \"hello world\"\nmy_set = set(my_str)\nresult = len(''.join(my_set))\nprint(len)\n\ncount = 0\nfor num in range(1000, 10000):\n    if num % 3 == 0:\n        digits = [int(d) for d in str(num)]\n        if 5 in digits:\n            count += 1\nprint(count)\n\n......\n第   个数字:表示  9 加密后变成什么。\n3.1.3 输出格式\n输出加密后的数字。\n也就是:把输入第二行里的每个数字,都按照输入第三行的密码本换掉后输出。\n3.1.4 样例\n3.1.5 输入样例  1\n3.1.6 输出样例  1\n3.1.7 样例解释\n第二行要加密的数字是:\n0 2 0 3 4 1 9\n第三行密码本是:\n9 0 1 2 3 4 5 6 7 8\n它的意思是:\n0 变成  9\n1 变成  0\n2 变成  1\n3 变成  2\n4 变成  3\n5 变成  4\n6 变成  5\n7 变成  6\n8 变成  7\n9 变成  8\n所以:\n0 变成  9\n2 变成  1\n0 变成  9\n3 变成  2\n4 变成  3\n1 变成  0\n9 变成  8\n\n0 2 0 3 4 1 9\n9 0 1 2 3 4 5 6 7 8\n\n9 1 9 2 3 0 81\n最后得到:\n9 1 9 2 3 0 8\n3.1.8 数据范围\n需要加密的数字个数不超过   个,且均为   到  ;密码本中的数字不重复,且均为   到  。\n3.1.9",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.1.1\n题目描述\n小杨同学有一串数字,想把它们变成另一串数字,这个过程叫做加密。\n他有一本密码本,密码本告诉你:\n每个数字应该变成哪个数字。\n数字一共有\n 个:\n0 、1 、2 、3 、4 、5 、6 、7 、8 、9\n密码本会依次告诉你:\n0 要变成什么\n1 要变成什么\n2 要变成什么\n......\n9 要变成什么\n请你按照密码本,把原来的每个数字都换成新的数字,然后输出。\n3.1.2\n\n输入格式\n输入共有  行。\n第一行:一个整数,表示有多少个数字需要加密;\n第二行:这些需要加密的数字;\n第三行:密码本,一共\n 个数字。\n这\n 个数字的意思是:\n第  个数字:表示 0 加密后变成什么;\n第  个数字:表示 1 加密后变成什么;\n第  个数字:表示 2 加密后变成什么;\n......\n第\n 个数字:表示 9 加密后变成什么。\n3.1.3\n输出格式\n输出加密后的数字。\n也就是:把输入第二行里的每个数字,都按照输入第三行的密码本换掉后输出。\n3.1.4\n样例\n3.1.5\n输入样例 1\n\n0 2 0 3 4 1 9\n9 0 1 2 3 4 5 6 7 8\n\n3.1.6\n输出样例 1\n9 1 9 2 3 0 8\n\n3.1.7\n样例解释\n第二行要加密的数字是:\n0 2 0 3 4 1 9\n第三行密码本是:\n9 0 1 2 3 4 5 6 7 8\n它的意思是:\n0 变成 9\n1 变成 0\n2 变成 1\n3 变成 2\n4 变成 3\n5 变成 4\n6 变成 5\n7 变成 6\n8 变成 7\n9 变成 8\n所以:\n0 变成 9\n2 变成 1\n0 变成 9\n3 变成 2\n4 变成 3\n1 变成 0\n9 变成 8\n最后得到:\n9 1 9 2 3 0 8\n3.1.8\n数据范围\n需要加密的数字个数不超过\n 个,且均为  到 ;密码本中的数字不重复,且均为  到 。\n3.1.9",
       "time_ms": 1000,
       "memory_mb": 512,
       "samples": [
@@ -547,17 +546,25 @@
           "suspect": false
         }
       ],
-      "has_ref": true
+      "has_ref": true,
+      "reference": "# 需要加密的数字\nn = int(input())\n# 需要被加密的文本\ntxt = input().split()\n# 密码本\nkeys = list(input().split())\nfor x in txt:\n    # keys[x]:将原始文本映射成加密后的\n    print(keys[int(x)], end = ' ')"
     },
     {
       "seq": 2,
       "kind": "traditional",
       "title": "字符转换",
-      "statement": "时间限制: 1.0 s\n内存限制: 512.0 MB\n3.2.1 题目描述\n小杨同学有一串字符,里面可能有:\n大写字母,比如  A、B、C\n小写字母,比如  a、b、c\n数字,比如  0、1、2\n现在小杨同学想把这串字符变一变,规则如下:\n1. 如果是大写字母,就变成对应的小写字母;\n2. 如果是小写字母,就变成对应的大写字母;\n3. 如果是数字,就变成  *。\n请你按照这个规则,帮小杨把整串字符转换好。\n3.2.2\n\n输入格式\n输入一共有   行。\n第一行:一个整数,表示这串字符一共有多少个字符。\n第二行:一串连续的字符,中间没有空格。\n3.2.3 输出格式\n输出转换后的字符。\n注意:\n输出时字符之间不要加空格。\n# 需要加密的数字\nn = int(input())\n# 需要被加密的文本\ntxt = input().split()\n# 密码本\nkeys = list(input().split())\nfor x in txt:\n    # keys[x] :将原始文本映射成加密后的\n    print(keys[int(x)], end = ' ')\n\n3.2.4 样例\n3.2.5 输入样例  1\n3.2.6 输出样例  1\n3.2.7 样例解释\n原来的字符是:\n从左到右一个一个看:\n1. a 是小写字母,所以变成  A;\n2. B 是大写字母,所以变成  b;\n3. c 是小写字母,所以变成  C;\n4. 9 是数字,所以变成  *;\n5. 8 是数字,所以变成  *。\n所以最后输出:\n3.2.8 数据范围\n字符个数不会超过   个。\n每个字符只会是大写字母、小写字母或数字。\n3.2.9",
+      "statement": "时间限制:1.0 s\n内存限制:512.0 MB\n3.2.1\n题目描述\n小杨同学有一串字符,里面可能有:\n大写字母,比如 A 、B 、C\n小写字母,比如 a 、b 、c\n数字,比如 0 、1 、2\n现在小杨同学想把这串字符变一变,规则如下:\n1. 如果是大写字母,就变成对应的小写字母;\n2. 如果是小写字母,就变成对应的大写字母;\n3. 如果是数字,就变成 * 。\n请你按照这个规则,帮小杨把整串字符转换好。\n3.2.2\n\n输入格式\n输入一共有  行。\n第一行:一个整数,表示这串字符一共有多少个字符。\n第二行:一串连续的字符,中间没有空格。\n3.2.3\n输出格式\n输出转换后的字符。\n注意:\n输出时字符之间不要加空格。\n3.2.4\n样例\n3.2.5\n输入样例 1\n\naBc98\n\n3.2.6\n输出样例 1\nAbC**\n\n3.2.7\n样例解释\n原来的字符是:\naBc98\n\n从左到右一个一个看:\n1. a 是小写字母,所以变成 A ;\n2. B 是大写字母,所以变成 b ;\n3. c 是小写字母,所以变成 C ;\n4. 9 是数字,所以变成 * ;\n5. 8 是数字,所以变成 * 。\n所以最后输出:\nAbC**\n\n3.2.8\n数据范围\n字符个数不会超过\n 个。\n每个字符只会是大写字母、小写字母或数字。\n3.2.9",
       "time_ms": 1000,
       "memory_mb": 512,
-      "samples": [],
-      "has_ref": true
+      "samples": [
+        {
+          "in": "5\n",
+          "out": "2\n",
+          "suspect": false
+        }
+      ],
+      "has_ref": true,
+      "reference": "# 文本长度n\nn = int(input())\n# 需要转换的字符串\ns = input().strip()\n# 最终的答案\nans = ''\n# 遍历字符串中的字符\nfor c in s:\n    # 如果是小写就变成大写\n    if 'a' <= c <= 'z':\n        ans += c.upper()\n    # 如果c是大写就变成小写\n    elif 'A' <= c <= 'Z':\n        ans += c.lower()\n    # 如果是数字就变成*\n    else:\n        ans += '*'\nprint(ans)"
     }
   ],
   "answer_rows": [
@@ -578,8 +585,6 @@
       "A",
       "A"
     ],
-    [
-      "C"
-    ]
+    []
   ]
 }
