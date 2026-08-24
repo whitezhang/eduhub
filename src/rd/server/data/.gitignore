@@ -1,4 +1,4 @@
-# runtime / cache 不进 git。seed（gesp、csp-j）与 catalog/problems 进 git。
+# runtime / cache 按环境分目录 test|prod，不进 git。seed / catalog 共享。
 runtime/
 cache/
 # 旧布局（仅 data 根下，勿误伤 catalog/problems）

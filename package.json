@@ -14,7 +14,9 @@
     "import:gesp": "python src/op/gesp_import.py",
     "apply:catalog": "node src/op/apply-catalog.mjs",
     "build:client": "vite build --config src/rd/client/vite.config.js",
-    "build": "npm run build:client"
+    "build": "npm run build:client",
+    "policy-sync": "node src/op/policy-sync.mjs",
+    "contest-sync": "node src/op/contest-sync.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

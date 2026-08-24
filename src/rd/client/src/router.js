@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "./views/Home.vue";
+import News from "./views/News.vue";
 import Problems from "./views/Problems.vue";
 import ProblemSolve from "./views/ProblemSolve.vue";
 import External from "./views/External.vue";
@@ -19,7 +20,10 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: Home },
-    { path: "/syllabus", component: SyllabusOverview, meta: { ...authMeta, sectionTitle: "大纲" } },
+    { path: "/news", redirect: "/news/policy" },
+    { path: "/news/:tab(policy|contests)", component: News },
+    { path: "/policy", redirect: "/news/policy" },
+    { path: "/syllabus", component: SyllabusOverview, meta: { ...authMeta, sectionTitle: "教学大纲" } },
     { path: "/syllabus/guide", redirect: (to) => ({ path: "/syllabus", query: to.query }) },
     { path: "/syllabus/topic/:id", redirect: (to) => ({ path: "/syllabus", query: to.query }) },
     { path: "/problems", component: Problems, meta: { ...authMeta, sectionTitle: "题库" } },

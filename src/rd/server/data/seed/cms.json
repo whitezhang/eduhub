@@ -1,4 +1,131 @@
 {
+  "hero_pitch": "编程按官方赛道练。先定级别，再本周开练。",
+  "policy_intro": "教育部、国务院政策库等官方文件，按出台时间排列。",
+  "contests_intro": "一线城市与公开赛事活动，按年内举办时间排列。",
+  "policy_feed": [
+    {
+      "date": "2022-03",
+      "title": "教育部：义务教育课程方案和课程标准（2022年版）",
+      "url": "http://www.moe.gov.cn/srcsite/a26/s8001/202204/t20220420_619921.html",
+      "summary": "印发义务教育各学科新课标，信息科技独立设科（取代原信息技术），2022 年秋季起执行；强调计算思维、算法逻辑与用程序解决问题，编程素养进入课堂体系。"
+    },
+    {
+      "date": "2022-04",
+      "title": "中国政府网：义务教育新课标政策文件（2022年）",
+      "url": "https://www.gov.cn/zhengce/zhengceku/2022-04/21/content_5686535.htm",
+      "summary": "国务院政策库收录同一批义务教育新课标文件，明确 2022 年秋季学期起正式实施，信息科技成为义务教育阶段独立科目。"
+    },
+    {
+      "date": "2024-02",
+      "title": "教育部：中小学人工智能教育基地名单（2024年2月）",
+      "url": "http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202402/t20240223_1116387.html",
+      "summary": "公布 184 个中小学人工智能教育基地，以基地试点探索 AI 教育实施路径，依托信息科技等课程推广人工智能教育。"
+    },
+    {
+      "date": "2024-12",
+      "title": "教育部：部署加强中小学人工智能教育（2024年12月）",
+      "url": "http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202412/t20241202_1165500.html",
+      "summary": "系统化推进 AI 教育：分学段教学（小学体验、初中应用、高中创作），倡导项目式与任务式学习，纳入课后服务，提升数字素养与创新能力。"
+    },
+    {
+      "date": "2025-04",
+      "title": "教育部等九部门：加快推进教育数字化意见",
+      "url": "http://www.moe.gov.cn/srcsite/A01/s7048/202504/t20250416_1187476.html",
+      "summary": "将 AI 融入教育教学全要素；开大中小学信息科技/人工智能相关课程；修订义务教育、普通高中信息科技课程标准；建设教育大模型与智慧课程。"
+    },
+    {
+      "date": "2025-05",
+      "title": "教育部：中小学人工智能通识教育指南（2025年版）",
+      "url": "http://www.moe.gov.cn/s78/A16/gongzuo/gzzl_yb/202506/t20250630_1195963.html",
+      "summary": "基教教指委发布 AI 通识教育指南与生成式 AI 使用指南：小学兴趣体验、初中技术原理、高中系统创新；螺旋式素养培养。"
+    },
+    {
+      "date": "2026-04",
+      "title": "教育部等五部门：「人工智能+教育」行动计划",
+      "url": "http://www.moe.gov.cn/srcsite/A16/s3342/202604/t20260410_1433240.html",
+      "summary": "教科信〔2026〕1 号：推动 AI 教育纳入地方课程体系，明确各学段目标与课时；目标 2030 年 AI 与教育深度融合；建强 AI 教育基地。"
+    }
+  ],
+  "star_s": "课标已把信息科技独立设科，AI 教育也在推进。出处见「新闻 → 政策」。\n\n一线多按 GESP、CSP 考期排课，也有黑客松、创客节等活动。详见「新闻 → 公开赛」。\n\n以后更看重能考出来的成绩，不看「学过一门课」的说法。\n\n别比城市。对齐官方路线，定级，按考期练。",
+  "star_s_links": {
+    "tier1": [
+      {
+        "when": "3/6/9/12 月",
+        "title": "CCF GESP 编程能力等级认证",
+        "url": "https://gesp.ccf.org.cn/",
+        "summary": "CCF 主办，每年 3、6、9、12 月统考；一线常作按级练卷的里程碑，高等级可与 CSP 衔接。",
+        "showcase_label": "大纲与样题",
+        "showcase_url": "https://gesp.ccf.org.cn/101/1019/10090.html"
+      },
+      {
+        "when": "4 月–12 月",
+        "title": "澎湃新闻：上海青少年人工智能创新大赛",
+        "url": "https://www.thepaper.cn/newsDetail_forward_29796998",
+        "summary": "每年 4 月启动、12 月颁奖，全年多轮子活动与夏令营；覆盖 AI 应用、机器人等赛项。",
+        "showcase_label": "颁奖报道与作品侧写",
+        "showcase_url": "https://news.qq.com/rain/a/20241229A044UX00"
+      },
+      {
+        "when": "6 月–11 月",
+        "title": "深圳市教育局：深圳学生创客节",
+        "url": "https://szeb.sz.gov.cn/home/xxgk/flzy/gggs/content/post_11989973.html",
+        "summary": "每年 6 月至 11 月举办系列市级竞赛，区级选拔后参加市赛评审。",
+        "showcase_label": "创客作品报道",
+        "showcase_url": "http://www.jyb.cn/rmtzcg/xwy/wzxw/202411/t20241126_2111274813.html"
+      },
+      {
+        "when": "约 7 月",
+        "title": "杭州网：AdventureX 黑客松（信奥选手参赛报道）",
+        "url": "https://hznews.hangzhou.com.cn/chengshi/content/2025-07/25/content_9046646_0.htm",
+        "summary": "暑期大型黑客松，限天组队做产品；报道中有 CSP 信奥背景选手，侧重实战与跨界协作。",
+        "showcase_label": "成果展示 Gallery",
+        "showcase_url": "https://gallery.adventure-x.org/browse"
+      },
+      {
+        "when": "约 8 月",
+        "title": "上海市人民政府：国际青少年科技创新挑战营",
+        "url": "https://www.shanghai.gov.cn/nw15343/20240805/aef386ddb54a4120abc3689990ca500b.html",
+        "summary": "每年 8 月初，国际青少年科技创新交流营，含竞赛、路演与顶科课堂等活动。",
+        "showcase_label": "云端作品展厅",
+        "showcase_url": "https://siyste2024.secsa.cn"
+      },
+      {
+        "when": "约 12 月",
+        "title": "上海市青少年科普促进会：编程与机器人挑战活动",
+        "url": "https://www.shqsnkj.com/IpsaInfo?p=FB60D66BCD8D0F9CF95003BD51634E9B55B917AF3E5AA34C",
+        "summary": "每年 12 月末举办，编程、机器人、无人机等多板块同期竞技。",
+        "showcase_label": "活动纪实",
+        "showcase_url": "https://www.shqsnkj.com/IpsaInfo?p=FB60D66BCD8D0F9CF95003BD51634E9B55B917AF3E5AA34C"
+      },
+      {
+        "when": "约 12 月",
+        "title": "广州市教育局：青少年科技创新大赛",
+        "url": "https://jyj.gz.gov.cn/yw/jyxtdt/content/post_10062537.html",
+        "summary": "每年 12 月末市级终评，区校选拔后展示发明创造与科技创新成果。",
+        "showcase_label": "终评报道（含成果展示）",
+        "showcase_url": "https://jyj.gz.gov.cn/yw/jyxtdt/content/post_10062537.html"
+      }
+    ]
+  },
+  "star_t": "弄清现在该练哪一级、哪一轮，按考期排进本周。\n\n路径：GESP → CSP-J/S → NOIP → NOI。进度用卷面和榜单对照，别空说「在学」。",
+  "star_r": "练下来，孩子能把题目写成可验证的程序。看的是卷面进度，不是证书截图。\n\n奖项是信号，能力才长久。报名与证书以 CCF 官网为准。",
+  "case_studies": [
+    {
+      "title": "GESP 按级入门",
+      "lens": "教学",
+      "body": "从 GESP 1 级起按级刷卷，一年 2–4 级，先打基础再碰 CSP。"
+    },
+    {
+      "title": "CSP 两轮分开练",
+      "lens": "比赛",
+      "body": "初赛偏选择题与读程序，复赛才是机试。两条线分开练。"
+    },
+    {
+      "title": "一线常见节奏",
+      "lens": "教学",
+      "body": "寒暑假刷级，9 月对准 CSP 初赛。先 GESP 再 CSP。"
+    }
+  ],
   "gesp_csp_bridge": {
     "title": "GESP 与 CSP 衔接",
     "note": "须满足 CCF 当年官方认定条件，并在报名时按通知申请。以下分数指该级别认证成绩。",
@@ -13,38 +140,6 @@
       }
     ]
   },
-  "csp_compare": [
-    {
-      "label": "初赛题型",
-      "j": "选择 + 阅读程序 + 完善程序",
-      "s": "选择 + 阅读程序 + 完善程序 + 多选"
-    },
-    {
-      "label": "复赛题数",
-      "j": "4 题",
-      "s": "4 题"
-    },
-    {
-      "label": "复赛时长",
-      "j": "约 3.5 小时",
-      "s": "约 4 小时"
-    },
-    {
-      "label": "复赛满分",
-      "j": "400 分",
-      "s": "400 分"
-    },
-    {
-      "label": "核心难度",
-      "j": "模拟 / 贪心 / DP / 图论基础",
-      "s": "线段树 / 树形 DP / 网络流 / KMP"
-    },
-    {
-      "label": "一等奖参考线",
-      "j": "约 200 分",
-      "s": "约 150 分"
-    }
-  ],
   "syllabus": [
     {
       "slug": "gesp",

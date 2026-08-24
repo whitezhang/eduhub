@@ -22,22 +22,18 @@ except Exception:
     pass
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA = Path(os.environ.get("DATA_DIR") or ROOT / "src" / "rd" / "server" / "data")
-RUNTIME = DATA / "runtime"
+_OP = Path(__file__).resolve().parent
+if str(_OP) not in sys.path:
+    sys.path.insert(0, str(_OP))
+from eduhub_paths import data_dir as DATA, db_path, migrate_legacy_runtime, runtime_dir as RUNTIME
+
 SEED = DATA / "seed" / "gesp-adacpp"
 GESP_PDF_SEED = DATA / "seed" / "gesp"
 
 
-def db_path() -> Path:
-    RUNTIME.mkdir(parents=True, exist_ok=True)
-    env = os.environ.get("EDUHUB_DB")
-    if env:
-        return Path(env)
-    if (RUNTIME / "eduhub.db").exists():
-        return RUNTIME / "eduhub.db"
-    if (DATA / "eduhub.db").exists():
-        return DATA / "eduhub.db"
-    return RUNTIME / "eduhub.db"
+def resolve_db_path() -> Path:
+    migrate_legacy_runtime()
+    return db_path()
 
 
 def load_papers() -> list[dict]:
@@ -322,7 +318,7 @@ def add_to_gesp_list(con: sqlite3.Connection, pid: int) -> None:
 
 
 def import_papers(papers: list[dict]) -> None:
-    path = db_path()
+    path = resolve_db_path()
     con = sqlite3.connect(path)
     total = 0
     with_ans = 0

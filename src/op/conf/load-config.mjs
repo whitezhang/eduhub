@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { envName } from "../../rd/server/paths.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -14,13 +15,6 @@ function deepMerge(base, patch) {
     }
   }
   return out;
-}
-
-function envName() {
-  const e = String(process.env.EDUHUB_ENV || "").toLowerCase();
-  if (e === "prod" || e === "test") return e;
-  if (process.env.NODE_ENV === "production") return "prod";
-  return "test";
 }
 
 let cached;

@@ -27,9 +27,12 @@ except Exception:
     pass
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA = Path(os.environ.get("DATA_DIR") or ROOT / "src" / "rd" / "server" / "data")
-RUNTIME = DATA / "runtime"
-CACHE_GESP = DATA / "cache" / "gesp"
+_OP = Path(__file__).resolve().parent
+if str(_OP) not in sys.path:
+    sys.path.insert(0, str(_OP))
+from eduhub_paths import cache_dir, data_dir as DATA, db_path, migrate_legacy_runtime, runtime_dir as RUNTIME
+
+CACHE_GESP = cache_dir() / "gesp"
 PARSED_DIR = DATA / "seed" / "gesp"
 
 
@@ -44,49 +47,33 @@ def apply_tf_vision(parsed: dict, pdf_path: Path, *, prefer_vision: bool = False
 
 
 def migrate_layout() -> None:
-    """Old flat data/ → runtime / cache / seed. Same-volume rename, no copy."""
-    RUNTIME.mkdir(parents=True, exist_ok=True)
+    """Old flat data/ → runtime/{env} / cache/{env} / seed."""
+    migrate_legacy_runtime()
     CACHE_GESP.mkdir(parents=True, exist_ok=True)
     PARSED_DIR.mkdir(parents=True, exist_ok=True)
     (RUNTIME / "tmp").mkdir(parents=True, exist_ok=True)
-
-    def take(src: Path, dest: Path) -> None:
-        if not src.exists() or dest.exists():
-            return
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        try:
-            src.rename(dest)
-        except PermissionError:
-            print(f"skip locked {src}", flush=True)
-
-    take(DATA / "eduhub.db", RUNTIME / "eduhub.db")
-    take(DATA / "eduhub.db-wal", RUNTIME / "eduhub.db-wal")
-    take(DATA / "eduhub.db-shm", RUNTIME / "eduhub.db-shm")
-    take(DATA / "problems", RUNTIME / "problems")
-    (RUNTIME / "problems").mkdir(parents=True, exist_ok=True)
-    take(DATA / "tmp", RUNTIME / "tmp")
-    take(DATA / "crawls", DATA / "cache" / "crawls")
     old = DATA / "imports" / "gesp"
     if old.is_dir():
         parsed = old / "parsed"
         if parsed.is_dir():
             for p in parsed.glob("*.json"):
-                take(p, PARSED_DIR / p.name)
+                dest = PARSED_DIR / p.name
+                if p.exists() and not dest.exists():
+                    try:
+                        p.rename(dest)
+                    except PermissionError:
+                        print(f"skip locked {p}", flush=True)
         for p in old.glob("*.pdf"):
-            take(p, CACHE_GESP / p.name)
+            dest = CACHE_GESP / p.name
+            if p.exists() and not dest.exists():
+                try:
+                    p.rename(dest)
+                except PermissionError:
+                    print(f"skip locked {p}", flush=True)
 
 
 migrate_layout()
-DB_PATH = Path(
-    os.environ.get("EDUHUB_DB")
-    or (
-        RUNTIME / "eduhub.db"
-        if (RUNTIME / "eduhub.db").exists()
-        else DATA / "eduhub.db"
-        if (DATA / "eduhub.db").exists()
-        else RUNTIME / "eduhub.db"
-    )
-)
+DB_PATH = db_path()
 PROBLEM_DIR = RUNTIME / "problems" if (RUNTIME / "problems").exists() else DATA / "problems"
 BASE = "https://gesp.ccf.org.cn"
 INDEX_PAGES = [

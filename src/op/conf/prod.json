@@ -12,5 +12,23 @@
   },
   "secrets": {
     "ssoSecret": "change-me-on-server"
+  },
+  "policySync": {
+    "enabled": true,
+    "scheduler": true,
+    "fetchLive": true,
+    "newStatus": "pending",
+    "scheduleHour": 6,
+    "scheduleMinute": 0,
+    "tzOffsetMin": 480
+  },
+  "contestSync": {
+    "enabled": true,
+    "scheduler": true,
+    "fetchLive": true,
+    "newStatus": "pending",
+    "scheduleHour": 6,
+    "scheduleMinute": 30,
+    "tzOffsetMin": 480
   }
 }

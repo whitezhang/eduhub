@@ -7,6 +7,8 @@ import { loadConfig } from "../../op/conf/load-config.mjs";
 import { getDb } from "./db.mjs";
 import { parsePath, sendJson } from "./http-util.mjs";
 import { handleApi } from "./api.mjs";
+import { startPolicySyncScheduler } from "./policy-sync.mjs";
+import { startContestSyncScheduler } from "./contest-sync.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "../../..");
@@ -15,7 +17,9 @@ const PORT = Number(process.env.PORT || 8081);
 const production = process.env.NODE_ENV === "production";
 
 loadConfig();
-getDb();
+const db = getDb();
+startPolicySyncScheduler(db);
+startContestSyncScheduler(db);
 
 const TYPES = {
   ".html": "text/html; charset=utf-8",

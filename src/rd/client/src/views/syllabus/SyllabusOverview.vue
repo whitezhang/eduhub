@@ -54,22 +54,6 @@ watch(topicPages, (n) => {
           <p v-if="item.blurb" class="muted syll-blurb">{{ item.blurb }}</p>
         </div>
 
-        <template v-if="item.round_compare?.length">
-          <h3 class="syll-section-title">初赛 vs 复赛</h3>
-          <table class="table desk syll-table syll-table-compact">
-            <thead>
-              <tr><th>维度</th><th>初赛（第一轮）</th><th>复赛（第二轮）</th></tr>
-            </thead>
-            <tbody>
-              <tr v-for="(row, i) in item.round_compare" :key="i">
-                <td>{{ row.label }}</td>
-                <td>{{ row.preliminary }}</td>
-                <td>{{ row.finals }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </template>
-
         <template v-if="topics.length">
           <div class="syll-section-bar">
             <h3 class="syll-section-title">知识体系</h3>
@@ -107,21 +91,22 @@ watch(topicPages, (n) => {
           </p>
         </template>
 
-        <template v-if="item.slug === 'csp-j' && cms.csp_compare?.length">
-          <h3 class="syll-section-title">CSP-J vs CSP-S</h3>
+        <template v-if="item.round_compare?.length">
+          <h3 class="syll-section-title">初赛 vs 复赛</h3>
           <table class="table desk syll-table syll-table-compact">
             <thead>
-              <tr><th>维度</th><th>CSP-J 入门组</th><th>CSP-S 提高组</th></tr>
+              <tr><th>维度</th><th>初赛（第一轮）</th><th>复赛（第二轮）</th></tr>
             </thead>
             <tbody>
-              <tr v-for="(row, i) in cms.csp_compare" :key="i">
+              <tr v-for="(row, i) in item.round_compare" :key="i">
                 <td>{{ row.label }}</td>
-                <td>{{ row.j }}</td>
-                <td>{{ row.s }}</td>
+                <td>{{ row.preliminary }}</td>
+                <td>{{ row.finals }}</td>
               </tr>
             </tbody>
           </table>
         </template>
+
       </section>
     </template>
   </article>

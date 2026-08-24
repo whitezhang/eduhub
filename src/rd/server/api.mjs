@@ -18,6 +18,45 @@ import {
   updateCatalogPublished,
 } from "./catalog.mjs";
 import fs from "node:fs";
+import { runPolicySync } from "./policy-sync.mjs";
+import { runContestSync } from "./contest-sync.mjs";
+
+function publishedPolicyFeed(db) {
+  return db
+    .prepare(
+      `SELECT date, title, url, summary FROM policy_items
+       WHERE status = 'published' ORDER BY date ASC, id ASC`,
+    )
+    .all();
+}
+
+function policySyncedAt(db) {
+  const row = db.prepare("SELECT body FROM cms_blocks WHERE key = 'policy_synced_at'").get();
+  return row?.body || null;
+}
+
+function publishedContestFeed(db) {
+  return db
+    .prepare(
+      `SELECT when_label, title, url, summary, showcase_label, showcase_url
+       FROM contest_items
+       WHERE status = 'published' ORDER BY id ASC`,
+    )
+    .all()
+    .map((row) => ({
+      when: row.when_label || "",
+      title: row.title,
+      url: row.url,
+      summary: row.summary,
+      showcase_label: row.showcase_label,
+      showcase_url: row.showcase_url,
+    }));
+}
+
+function contestSyncedAt(db) {
+  const row = db.prepare("SELECT body FROM cms_blocks WHERE key = 'contest_synced_at'").get();
+  return row?.body || null;
+}
 
 function contestState(c, now = Date.now()) {
   const s = new Date(c.start_at).getTime();
@@ -218,11 +257,17 @@ export async function handleApi(req, res, pathname, query) {
     const rows = db.prepare("SELECT key, body FROM cms_blocks").all();
     const cms = {};
     for (const r of rows) {
-      if (r.key === "syllabus" || r.key === "timeline" || r.key === "syllabus_meta") {
+      if (
+        r.key === "syllabus" ||
+        r.key === "timeline" ||
+        r.key === "syllabus_meta" ||
+        r.key === "case_studies" ||
+        r.key === "star_s_links" ||
+        r.key === "policy_feed"
+      ) {
         try {
           const parsed = JSON.parse(r.body);
           if (r.key === "syllabus_meta") {
-            if (parsed.csp_compare) cms.csp_compare = parsed.csp_compare;
             if (parsed.gesp_csp_bridge) cms.gesp_csp_bridge = parsed.gesp_csp_bridge;
           } else {
             cms[r.key] = parsed;
@@ -238,11 +283,42 @@ export async function handleApi(req, res, pathname, query) {
         ? cms.syllabus.map((s) => ({ slug: s.slug, title: s.title, blurb: s.blurb }))
         : [];
       sendJson(res, 200, {
-        benefits: cms.benefits,
+        hero_pitch: cms.hero_pitch,
+        star_s: cms.star_s,
+        star_t: cms.star_t,
+        star_r: cms.star_r,
+        case_studies: Array.isArray(cms.case_studies) ? cms.case_studies : [],
         timeline: cms.timeline,
-        gesp_csp_bridge: cms.gesp_csp_bridge,
-        csp_compare: cms.csp_compare,
         syllabus,
+      });
+      return true;
+    }
+    if (query.scope === "policy") {
+      if (!guardListAccess(req, res, me)) return true;
+      let feed = publishedPolicyFeed(db);
+      if (!feed.length) {
+        let legacy = Array.isArray(cms.policy_feed) ? cms.policy_feed : [];
+        if (!legacy.length && cms.star_s_links?.policy) legacy = cms.star_s_links.policy;
+        feed = legacy.filter((item) => item?.url);
+      }
+      sendJson(res, 200, {
+        policy_intro: cms.policy_intro || "教育部、国务院政策库等官方文件，按出台时间排列。",
+        policy_feed: feed,
+        synced_at: policySyncedAt(db),
+      });
+      return true;
+    }
+    if (query.scope === "contests") {
+      if (!guardListAccess(req, res, me)) return true;
+      let feed = publishedContestFeed(db);
+      if (!feed.length) {
+        const tier1 = cms.star_s_links?.tier1 || [];
+        feed = tier1.filter((item) => item?.url);
+      }
+      sendJson(res, 200, {
+        contests_intro: cms.contests_intro || "一线城市与公开赛事活动，按年内举办时间排列。",
+        contest_feed: feed,
+        synced_at: contestSyncedAt(db),
       });
       return true;
     }
@@ -782,12 +858,119 @@ export async function handleApi(req, res, pathname, query) {
     }
     if (method === "PUT" && pathname === "/api/studio/cms") {
       const body = await readJsonBody(req, 200_000);
-      const keys = ["benefits", "syllabus", "timeline"];
+      const keys = [
+        "hero_pitch",
+        "star_s",
+        "star_t",
+        "star_r",
+        "case_studies",
+        "star_s_links",
+        "policy_intro",
+        "policy_feed",
+        "policy_synced_at",
+        "contests_intro",
+        "contest_synced_at",
+        "benefits",
+        "syllabus",
+        "timeline",
+      ];
       for (const k of keys) {
         if (body[k] == null) continue;
         const val = typeof body[k] === "string" ? body[k] : JSON.stringify(body[k]);
         db.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET body = excluded.body").run(k, val);
       }
+      sendJson(res, 200, { ok: true });
+      return true;
+    }
+    if (method === "GET" && pathname === "/api/studio/policy-items") {
+      const items = db
+        .prepare(
+          `SELECT id, url, date, title, summary, source, status, fetched_at, created_at
+           FROM policy_items ORDER BY status DESC, date ASC, id ASC`,
+        )
+        .all();
+      sendJson(res, 200, {
+        items,
+        synced_at: policySyncedAt(db),
+      });
+      return true;
+    }
+    if (method === "POST" && pathname === "/api/studio/policy-sync") {
+      try {
+        const result = await runPolicySync(db, { force: true });
+        sendJson(res, 200, result);
+      } catch (err) {
+        sendJson(res, 500, { error: String(err.message || err) });
+      }
+      return true;
+    }
+    const policyPublish = pathname.match(/^\/api\/studio\/policy-items\/(\d+)\/publish$/);
+    if (method === "POST" && policyPublish) {
+      const id = Number(policyPublish[1]);
+      const row = db.prepare("SELECT id FROM policy_items WHERE id = ?").get(id);
+      if (!row) {
+        sendJson(res, 404, { error: "条目不存在" });
+        return true;
+      }
+      db.prepare("UPDATE policy_items SET status = 'published' WHERE id = ?").run(id);
+      sendJson(res, 200, { ok: true });
+      return true;
+    }
+    const policyReject = pathname.match(/^\/api\/studio\/policy-items\/(\d+)\/reject$/);
+    if (method === "POST" && policyReject) {
+      const id = Number(policyReject[1]);
+      const row = db.prepare("SELECT id FROM policy_items WHERE id = ?").get(id);
+      if (!row) {
+        sendJson(res, 404, { error: "条目不存在" });
+        return true;
+      }
+      db.prepare("UPDATE policy_items SET status = 'rejected' WHERE id = ?").run(id);
+      sendJson(res, 200, { ok: true });
+      return true;
+    }
+    if (method === "GET" && pathname === "/api/studio/contest-items") {
+      const items = db
+        .prepare(
+          `SELECT id, url, when_label, title, summary, showcase_label, showcase_url, source, status, fetched_at, created_at
+           FROM contest_items ORDER BY status DESC, id ASC`,
+        )
+        .all();
+      sendJson(res, 200, {
+        items,
+        synced_at: contestSyncedAt(db),
+      });
+      return true;
+    }
+    if (method === "POST" && pathname === "/api/studio/contest-sync") {
+      try {
+        const result = await runContestSync(db, { force: true });
+        sendJson(res, 200, result);
+      } catch (err) {
+        sendJson(res, 500, { error: String(err.message || err) });
+      }
+      return true;
+    }
+    const contestPublish = pathname.match(/^\/api\/studio\/contest-items\/(\d+)\/publish$/);
+    if (method === "POST" && contestPublish) {
+      const id = Number(contestPublish[1]);
+      const row = db.prepare("SELECT id FROM contest_items WHERE id = ?").get(id);
+      if (!row) {
+        sendJson(res, 404, { error: "条目不存在" });
+        return true;
+      }
+      db.prepare("UPDATE contest_items SET status = 'published' WHERE id = ?").run(id);
+      sendJson(res, 200, { ok: true });
+      return true;
+    }
+    const contestReject = pathname.match(/^\/api\/studio\/contest-items\/(\d+)\/reject$/);
+    if (method === "POST" && contestReject) {
+      const id = Number(contestReject[1]);
+      const row = db.prepare("SELECT id FROM contest_items WHERE id = ?").get(id);
+      if (!row) {
+        sendJson(res, 404, { error: "条目不存在" });
+        return true;
+      }
+      db.prepare("UPDATE contest_items SET status = 'rejected' WHERE id = ?").run(id);
       sendJson(res, 200, { ok: true });
       return true;
     }

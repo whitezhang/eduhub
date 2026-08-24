@@ -3,7 +3,24 @@ import { computed, onMounted, reactive, ref, watch } from "vue";
 import { api } from "../api.js";
 
 const tab = ref("review");
-const cms = reactive({ benefits: "", syllabus: "[]", timeline: "[]" });
+const cms = reactive({
+  hero_pitch: "",
+  star_s: "",
+  star_t: "",
+  star_r: "",
+  case_studies: "[]",
+  star_s_links: "{\"tier1\":[]}",
+  policy_intro: "",
+  contests_intro: "",
+  syllabus: "[]",
+  timeline: "[]",
+});
+const policyItems = ref([]);
+const policySyncedAt = ref("");
+const policySyncBusy = ref(false);
+const contestItems = ref([]);
+const contestSyncedAt = ref("");
+const contestSyncBusy = ref(false);
 const users = ref([]);
 const newUser = reactive({ username: "", password: "" });
 const problems = ref([]);
@@ -130,14 +147,115 @@ async function loadStudio() {
 onMounted(async () => {
   try {
     const c = await api("/api/cms");
-    cms.benefits = c.benefits || "";
+    cms.hero_pitch = c.hero_pitch || "";
+    cms.star_s = c.star_s || "";
+    cms.star_t = c.star_t || "";
+    cms.star_r = c.star_r || "";
+    cms.case_studies = JSON.stringify(c.case_studies || [], null, 2);
+    cms.star_s_links = JSON.stringify(c.star_s_links || { tier1: [] }, null, 2);
+    cms.policy_intro = c.policy_intro || "";
+    cms.contests_intro = c.contests_intro || "";
     cms.syllabus = JSON.stringify(c.syllabus || [], null, 2);
     cms.timeline = JSON.stringify(c.timeline || [], null, 2);
+    await loadPolicyItems();
+    await loadContestItems();
     await loadStudio();
   } catch (e) {
     msg.value = e.message;
   }
 });
+
+async function loadPolicyItems() {
+  try {
+    const data = await api("/api/studio/policy-items");
+    policyItems.value = data.items || [];
+    policySyncedAt.value = data.synced_at || "";
+  } catch (e) {
+    msg.value = e.message;
+  }
+}
+
+async function runPolicySync() {
+  policySyncBusy.value = true;
+  msg.value = "";
+  try {
+    const result = await api("/api/studio/policy-sync", { method: "POST" });
+    msg.value = `政策同步完成：新增 ${result.added ?? 0} 条`;
+    await loadPolicyItems();
+  } catch (e) {
+    msg.value = e.message;
+  } finally {
+    policySyncBusy.value = false;
+  }
+}
+
+async function publishPolicyItem(id) {
+  try {
+    await api(`/api/studio/policy-items/${id}/publish`, { method: "POST" });
+    await loadPolicyItems();
+    msg.value = "已发布";
+  } catch (e) {
+    msg.value = e.message;
+  }
+}
+
+async function rejectPolicyItem(id) {
+  try {
+    await api(`/api/studio/policy-items/${id}/reject`, { method: "POST" });
+    await loadPolicyItems();
+    msg.value = "已驳回";
+  } catch (e) {
+    msg.value = e.message;
+  }
+}
+
+const pendingPolicyItems = computed(() => policyItems.value.filter((i) => i.status === "pending"));
+
+async function loadContestItems() {
+  try {
+    const data = await api("/api/studio/contest-items");
+    contestItems.value = data.items || [];
+    contestSyncedAt.value = data.synced_at || "";
+  } catch (e) {
+    msg.value = e.message;
+  }
+}
+
+async function runContestSync() {
+  contestSyncBusy.value = true;
+  msg.value = "";
+  try {
+    const result = await api("/api/studio/contest-sync", { method: "POST" });
+    msg.value = `公开赛同步完成：新增 ${result.added ?? 0} 条`;
+    await loadContestItems();
+  } catch (e) {
+    msg.value = e.message;
+  } finally {
+    contestSyncBusy.value = false;
+  }
+}
+
+async function publishContestItem(id) {
+  try {
+    await api(`/api/studio/contest-items/${id}/publish`, { method: "POST" });
+    await loadContestItems();
+    msg.value = "已发布";
+  } catch (e) {
+    msg.value = e.message;
+  }
+}
+
+async function rejectContestItem(id) {
+  try {
+    await api(`/api/studio/contest-items/${id}/reject`, { method: "POST" });
+    await loadContestItems();
+    msg.value = "已驳回";
+  } catch (e) {
+    msg.value = e.message;
+  }
+}
+
+const pendingContestItems = computed(() => contestItems.value.filter((i) => i.status === "pending"));
 
 async function saveCms() {
   msg.value = "";
@@ -145,7 +263,14 @@ async function saveCms() {
     await api("/api/studio/cms", {
       method: "PUT",
       body: {
-        benefits: cms.benefits,
+        hero_pitch: cms.hero_pitch,
+        star_s: cms.star_s,
+        star_t: cms.star_t,
+        star_r: cms.star_r,
+        case_studies: JSON.parse(cms.case_studies),
+        star_s_links: JSON.parse(cms.star_s_links),
+        policy_intro: cms.policy_intro,
+        contests_intro: cms.contests_intro,
         syllabus: JSON.parse(cms.syllabus),
         timeline: JSON.parse(cms.timeline),
       },
@@ -354,14 +479,73 @@ async function deleteUser(u) {
       </p>
     </section>
     <section v-if="tab === 'cms'">
-      <label class="field">学习信息学的好处
-        <textarea v-model="cms.benefits" rows="8"></textarea>
+      <label class="field">顶区主张（hero_pitch）
+        <textarea v-model="cms.hero_pitch" rows="2"></textarea>
       </label>
-      <label class="field">教学大纲（JSON：slug/title/blurb/rounds/topics/guides）
-        <textarea v-model="cms.syllabus" rows="16" class="mono"></textarea>
+      <label class="field">STAR 场景（star_s，空行分段：政策 / 一线 / 趋势 / 我们该怎么做）
+        <textarea v-model="cms.star_s" rows="10"></textarea>
       </label>
-      <label class="field">时间节点（JSON）
-        <textarea v-model="cms.timeline" rows="10" class="mono"></textarea>
+      <label class="field">STAR 任务（star_t）
+        <textarea v-model="cms.star_t" rows="5"></textarea>
+      </label>
+      <label class="field">STAR 结果（star_r）
+        <textarea v-model="cms.star_r" rows="5"></textarea>
+      </label>
+      <label class="field">场景链接（star_s_links JSON：tier1 为公开赛种子，同步到 contest_items）
+        <textarea v-model="cms.star_s_links" rows="8" class="mono"></textarea>
+      </label>
+      <label class="field">政策页导语（policy_intro）
+        <textarea v-model="cms.policy_intro" rows="2"></textarea>
+      </label>
+      <div class="field">
+        <div class="studio-policy-head">
+          <span>国家政策同步（policy_items 表）</span>
+          <button class="btn-ghost" type="button" :disabled="policySyncBusy" @click="runPolicySync">
+            {{ policySyncBusy ? "同步中…" : "立即抓取" }}
+          </button>
+        </div>
+        <p v-if="policySyncedAt" class="muted">上次同步：{{ policySyncedAt }}</p>
+        <p v-if="pendingPolicyItems.length" class="muted">待审核 {{ pendingPolicyItems.length }} 条</p>
+        <ul v-if="pendingPolicyItems.length" class="studio-policy-pending">
+          <li v-for="item in pendingPolicyItems" :key="item.id" class="studio-policy-row">
+            <span class="mono">{{ item.date }}</span>
+            <a :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+            <button class="btn-ghost" type="button" @click="publishPolicyItem(item.id)">发布</button>
+            <button class="btn-ghost" type="button" @click="rejectPolicyItem(item.id)">驳回</button>
+          </li>
+        </ul>
+        <p v-else class="muted">暂无待审核条目。</p>
+      </div>
+      <label class="field">公开赛页导语（contests_intro）
+        <textarea v-model="cms.contests_intro" rows="2"></textarea>
+      </label>
+      <div class="field">
+        <div class="studio-policy-head">
+          <span>公开赛同步（contest_items 表）</span>
+          <button class="btn-ghost" type="button" :disabled="contestSyncBusy" @click="runContestSync">
+            {{ contestSyncBusy ? "同步中…" : "立即抓取" }}
+          </button>
+        </div>
+        <p v-if="contestSyncedAt" class="muted">上次同步：{{ contestSyncedAt }}</p>
+        <p v-if="pendingContestItems.length" class="muted">待审核 {{ pendingContestItems.length }} 条</p>
+        <ul v-if="pendingContestItems.length" class="studio-policy-pending">
+          <li v-for="item in pendingContestItems" :key="item.id" class="studio-policy-row">
+            <span class="mono">{{ item.when_label || "—" }}</span>
+            <a :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+            <button class="btn-ghost" type="button" @click="publishContestItem(item.id)">发布</button>
+            <button class="btn-ghost" type="button" @click="rejectContestItem(item.id)">驳回</button>
+          </li>
+        </ul>
+        <p v-else class="muted">暂无待审核条目。</p>
+      </div>
+      <label class="field">案例（case_studies JSON：title / lens / body）
+        <textarea v-model="cms.case_studies" rows="8" class="mono"></textarea>
+      </label>
+      <label class="field">教学大纲（syllabus JSON）
+        <textarea v-model="cms.syllabus" rows="12" class="mono"></textarea>
+      </label>
+      <label class="field">时间节点（timeline JSON）
+        <textarea v-model="cms.timeline" rows="8" class="mono"></textarea>
       </label>
       <button class="btn" type="button" @click="saveCms">保存</button>
     </section>

@@ -467,8 +467,12 @@ function optionBody(opt) {
         <template v-if="problem.subtasks?.length">
           <h3>测试点</h3>
           <table class="table">
-            <tr><th>编号</th><th>分值</th></tr>
-            <tr v-for="t in problem.subtasks" :key="t.seq"><td class="mono">{{ t.seq }}</td><td>{{ t.score }}</td></tr>
+            <thead>
+              <tr><th>编号</th><th>分值</th></tr>
+            </thead>
+            <tbody>
+              <tr v-for="t in problem.subtasks" :key="t.seq"><td class="mono">{{ t.seq }}</td><td>{{ t.score }}</td></tr>
+            </tbody>
           </table>
         </template>
       </div>
@@ -512,12 +516,16 @@ function optionBody(opt) {
           </p>
           <p v-if="result.result?.error" class="pre">{{ result.result.error }}</p>
           <table v-if="result.result?.cases?.length && result.status !== 'submitted'" class="table">
-            <tr><th>点</th><th>结果</th><th>分</th></tr>
-            <tr v-for="c in result.result.cases" :key="c.seq">
-              <td class="mono">{{ c.seq }}</td>
-              <td :class="c.result === 'AC' ? 'ok' : 'bad'">{{ c.result }} {{ explain(c.result) }}</td>
-              <td>{{ c.score }}</td>
-            </tr>
+            <thead>
+              <tr><th>点</th><th>结果</th><th>分</th></tr>
+            </thead>
+            <tbody>
+              <tr v-for="c in result.result.cases" :key="c.seq">
+                <td class="mono">{{ c.seq }}</td>
+                <td :class="c.result === 'AC' ? 'ok' : 'bad'">{{ c.result }} {{ explain(c.result) }}</td>
+                <td>{{ c.score }}</td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <p v-else-if="paper && !nextProblem" class="muted">

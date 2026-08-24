@@ -513,12 +513,16 @@ onUnmounted(() => {
                   v-if="ensureAnswer(p).result.result?.cases?.length && ensureAnswer(p).result.status !== 'submitted'"
                   class="table"
                 >
-                  <tr><th>点</th><th>结果</th><th>分</th></tr>
-                  <tr v-for="c in ensureAnswer(p).result.result.cases" :key="c.seq">
-                    <td class="mono">{{ c.seq }}</td>
-                    <td :class="c.result === 'AC' ? 'ok' : 'bad'">{{ c.result }} {{ explain(c.result) }}</td>
-                    <td>{{ c.score }}</td>
-                  </tr>
+                  <thead>
+                    <tr><th>点</th><th>结果</th><th>分</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="c in ensureAnswer(p).result.result.cases" :key="c.seq">
+                      <td class="mono">{{ c.seq }}</td>
+                      <td :class="c.result === 'AC' ? 'ok' : 'bad'">{{ c.result }} {{ explain(c.result) }}</td>
+                      <td>{{ c.score }}</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>

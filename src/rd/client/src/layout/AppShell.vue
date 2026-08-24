@@ -73,7 +73,8 @@ async function saveProfile() {
       <button class="menu-btn" type="button" @click="menuOpen = !menuOpen">菜单</button>
       <nav class="nav" @click="menuOpen = false">
         <router-link to="/" :class="{ 'router-link-active': route.path === '/' }">首页</router-link>
-        <router-link to="/syllabus" :class="{ 'router-link-active': route.path.startsWith('/syllabus') }">大纲</router-link>
+        <router-link to="/news" :class="{ 'router-link-active': route.path.startsWith('/news') }">新闻</router-link>
+        <router-link to="/syllabus" :class="{ 'router-link-active': route.path.startsWith('/syllabus') }">教学大纲</router-link>
         <router-link to="/problems">题库</router-link>
         <router-link to="/external">外部资料</router-link>
         <router-link to="/progress">榜单</router-link>

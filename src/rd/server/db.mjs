@@ -3,33 +3,72 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { DatabaseSync } from "node:sqlite";
 import bcrypt from "bcryptjs";
+import { envName, resolveDataDir, resolveDbPath } from "./paths.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const SERVER_ROOT = __dirname;
-export const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, "data");
-export const RUNTIME_DIR = path.join(DATA_DIR, "runtime");
-export const CACHE_DIR = path.join(DATA_DIR, "cache");
+export const DATA_DIR = resolveDataDir();
+const RUNTIME_ENV = envName();
+export const RUNTIME_DIR = path.join(DATA_DIR, "runtime", RUNTIME_ENV);
+export const CACHE_DIR = path.join(DATA_DIR, "cache", RUNTIME_ENV);
 export const SEED_DIR = path.join(DATA_DIR, "seed");
 export const CATALOG_DIR = path.join(DATA_DIR, "catalog");
 export const PROBLEM_DATA_DIR = path.join(RUNTIME_DIR, "problems");
 
 function renameIfAbsent(from, to) {
-  if (!fs.existsSync(from) || fs.existsSync(to)) return;
+  if (!fs.existsSync(from) || fs.existsSync(to)) return false;
   fs.mkdirSync(path.dirname(to), { recursive: true });
   try {
     fs.renameSync(from, to);
+    return true;
   } catch (err) {
-    if (err && (err.code === "EPERM" || err.code === "EBUSY" || err.code === "EACCES")) return;
+    if (err && (err.code === "EPERM" || err.code === "EBUSY" || err.code === "EACCES")) return false;
     throw err;
   }
 }
 
+function replaceEnvDbFromLegacy(legacyDb, envDb) {
+  if (!fs.existsSync(legacyDb)) return;
+  const need =
+    !fs.existsSync(envDb) || fs.statSync(legacyDb).size > fs.statSync(envDb).size;
+  if (!need) return;
+  fs.mkdirSync(path.dirname(envDb), { recursive: true });
+  for (const suffix of ["-wal", "-shm"]) {
+    const ep = envDb + suffix;
+    const lp = legacyDb + suffix;
+    if (fs.existsSync(ep)) fs.unlinkSync(ep);
+    if (fs.existsSync(lp)) renameIfAbsent(lp, ep);
+  }
+  if (fs.existsSync(envDb)) fs.unlinkSync(envDb);
+  if (!renameIfAbsent(legacyDb, envDb)) {
+    fs.copyFileSync(legacyDb, envDb);
+    for (const suffix of ["-wal", "-shm"]) {
+      const lp = legacyDb + suffix;
+      const ep = envDb + suffix;
+      if (fs.existsSync(lp) && !fs.existsSync(ep)) fs.copyFileSync(lp, ep);
+    }
+  }
+}
+
 function migrateLegacyLayout() {
-  renameIfAbsent(path.join(DATA_DIR, "eduhub.db"), path.join(RUNTIME_DIR, "eduhub.db"));
+  const legacyRuntime = path.join(DATA_DIR, "runtime");
+  const legacyDb = path.join(legacyRuntime, "eduhub.db");
+  const envDb = path.join(RUNTIME_DIR, "eduhub.db");
+  replaceEnvDbFromLegacy(legacyDb, envDb);
+  renameIfAbsent(legacyDb, envDb);
+  renameIfAbsent(path.join(legacyRuntime, "eduhub.db-wal"), path.join(RUNTIME_DIR, "eduhub.db-wal"));
+  renameIfAbsent(path.join(legacyRuntime, "eduhub.db-shm"), path.join(RUNTIME_DIR, "eduhub.db-shm"));
+  renameIfAbsent(path.join(legacyRuntime, "problems"), path.join(RUNTIME_DIR, "problems"));
+  renameIfAbsent(path.join(legacyRuntime, "tmp"), path.join(RUNTIME_DIR, "tmp"));
+  renameIfAbsent(path.join(DATA_DIR, "eduhub.db"), envDb);
   renameIfAbsent(path.join(DATA_DIR, "eduhub.db-wal"), path.join(RUNTIME_DIR, "eduhub.db-wal"));
   renameIfAbsent(path.join(DATA_DIR, "eduhub.db-shm"), path.join(RUNTIME_DIR, "eduhub.db-shm"));
   renameIfAbsent(path.join(DATA_DIR, "problems"), path.join(RUNTIME_DIR, "problems"));
   renameIfAbsent(path.join(DATA_DIR, "tmp"), path.join(RUNTIME_DIR, "tmp"));
+  const legacyCache = path.join(DATA_DIR, "cache");
+  renameIfAbsent(path.join(legacyCache, "gesp"), path.join(CACHE_DIR, "gesp"));
+  renameIfAbsent(path.join(legacyCache, "crawls"), path.join(CACHE_DIR, "crawls"));
+  renameIfAbsent(path.join(legacyCache, "adacpp-profile"), path.join(CACHE_DIR, "adacpp-profile"));
   const oldPdfs = path.join(DATA_DIR, "imports", "gesp");
   const cacheGesp = path.join(CACHE_DIR, "gesp");
   const seedGesp = path.join(SEED_DIR, "gesp");
@@ -52,14 +91,7 @@ function migrateLegacyLayout() {
 
 migrateLegacyLayout();
 
-function resolvedDbPath() {
-  if (process.env.EDUHUB_DB) return process.env.EDUHUB_DB;
-  const neu = path.join(RUNTIME_DIR, "eduhub.db");
-  const old = path.join(DATA_DIR, "eduhub.db");
-  return fs.existsSync(neu) || !fs.existsSync(old) ? neu : old;
-}
-
-export const DB_PATH = resolvedDbPath();
+export const DB_PATH = resolveDbPath(DATA_DIR);
 
 let db;
 
@@ -203,6 +235,30 @@ function schema(database) {
       updated_at TEXT NOT NULL DEFAULT (datetime('now')),
       PRIMARY KEY (day, ip_hash)
     );
+    CREATE TABLE IF NOT EXISTS policy_items (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      url TEXT NOT NULL UNIQUE,
+      date TEXT NOT NULL,
+      title TEXT NOT NULL,
+      summary TEXT,
+      source TEXT,
+      status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('published','pending','rejected')),
+      fetched_at TEXT NOT NULL DEFAULT (datetime('now')),
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+    CREATE TABLE IF NOT EXISTS contest_items (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      url TEXT NOT NULL UNIQUE,
+      when_label TEXT NOT NULL DEFAULT '',
+      title TEXT NOT NULL,
+      summary TEXT,
+      showcase_label TEXT,
+      showcase_url TEXT,
+      source TEXT,
+      status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('published','pending','rejected')),
+      fetched_at TEXT NOT NULL DEFAULT (datetime('now')),
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
   `);
 }
 
@@ -225,6 +281,125 @@ function migrate(database) {
   }
   // Coach passwords must never be exposed in studio; clear any leftover plaintext.
   database.prepare("UPDATE users SET password_plain = NULL WHERE role = 'coach'").run();
+  migratePolicyItems(database);
+  migrateContestItems(database);
+}
+
+function migrateContestItems(database) {
+  if (!tableExists(database, "contest_items")) {
+    database.exec(`
+      CREATE TABLE IF NOT EXISTS contest_items (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        url TEXT NOT NULL UNIQUE,
+        when_label TEXT NOT NULL DEFAULT '',
+        title TEXT NOT NULL,
+        summary TEXT,
+        showcase_label TEXT,
+        showcase_url TEXT,
+        source TEXT,
+        status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('published','pending','rejected')),
+        fetched_at TEXT NOT NULL DEFAULT (datetime('now')),
+        created_at TEXT NOT NULL DEFAULT (datetime('now'))
+      );
+    `);
+  }
+  const n = database.prepare("SELECT COUNT(*) AS c FROM contest_items").get().c;
+  if (n > 0) return;
+
+  let feed = [];
+  const cmsPath = path.join(SEED_DIR, "cms.json");
+  if (fs.existsSync(cmsPath)) {
+    const cms = JSON.parse(fs.readFileSync(cmsPath, "utf8"));
+    feed = cms.star_s_links?.tier1 || cms.contest_feed || [];
+  }
+  const ins = database.prepare(
+    `INSERT INTO contest_items (url, when_label, title, summary, showcase_label, showcase_url, source, status, fetched_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, 'published', datetime('now'))`,
+  );
+  for (const item of feed) {
+    if (!item?.url) continue;
+    const source = sourceFromContestUrl(item.url);
+    try {
+      ins.run(
+        item.url,
+        item.when || "",
+        item.title || item.url,
+        item.summary || "",
+        item.showcase_label || null,
+        item.showcase_url || null,
+        source,
+      );
+    } catch (err) {
+      if (!String(err.message).includes("UNIQUE")) throw err;
+    }
+  }
+}
+
+function sourceFromContestUrl(url) {
+  try {
+    const h = new URL(url).hostname.toLowerCase();
+    if (h.includes("ccf.org.cn")) return "ccf";
+    if (h.includes("moe.gov.cn")) return "moe";
+    if (h.endsWith(".gov.cn")) return "gov";
+    if (h.includes("jyb.cn")) return "jyb";
+    return "media";
+  } catch {
+    return null;
+  }
+}
+
+function migratePolicyItems(database) {
+  if (!tableExists(database, "policy_items")) {
+    database.exec(`
+      CREATE TABLE IF NOT EXISTS policy_items (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        url TEXT NOT NULL UNIQUE,
+        date TEXT NOT NULL,
+        title TEXT NOT NULL,
+        summary TEXT,
+        source TEXT,
+        status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('published','pending','rejected')),
+        fetched_at TEXT NOT NULL DEFAULT (datetime('now')),
+        created_at TEXT NOT NULL DEFAULT (datetime('now'))
+      );
+    `);
+  }
+  const n = database.prepare("SELECT COUNT(*) AS c FROM policy_items").get().c;
+  if (n > 0) return;
+
+  let feed = [];
+  const row = database.prepare("SELECT body FROM cms_blocks WHERE key = 'policy_feed'").get();
+  if (row) {
+    try {
+      feed = JSON.parse(row.body || "[]");
+    } catch {
+      feed = [];
+    }
+  }
+  if (!feed.length) {
+    const cmsPath = path.join(SEED_DIR, "cms.json");
+    if (fs.existsSync(cmsPath)) {
+      const cms = JSON.parse(fs.readFileSync(cmsPath, "utf8"));
+      feed = cms.policy_feed || cms.star_s_links?.policy || [];
+    }
+  }
+  const ins = database.prepare(
+    `INSERT INTO policy_items (url, date, title, summary, source, status, fetched_at)
+     VALUES (?, ?, ?, ?, ?, 'published', datetime('now'))`,
+  );
+  for (const item of feed) {
+    if (!item?.url) continue;
+    const source = item.url.includes("moe.gov.cn")
+      ? "moe"
+      : item.url.includes("gov.cn")
+        ? "gov"
+        : null;
+    try {
+      ins.run(item.url, item.date || "", item.title || item.url, item.summary || "", source);
+    } catch (err) {
+      if (!String(err.message).includes("UNIQUE")) throw err;
+    }
+  }
 }
 
 
@@ -317,9 +492,35 @@ function seedIfEmpty(database) {
     syllabus = JSON.stringify(cms.syllabus || []);
     timeline = JSON.stringify(cms.timeline || []);
     const meta = {};
-    if (Array.isArray(cms.csp_compare)) meta.csp_compare = cms.csp_compare;
     if (cms.gesp_csp_bridge) meta.gesp_csp_bridge = cms.gesp_csp_bridge;
     if (Object.keys(meta).length) syllabusMeta = JSON.stringify(meta);
+    const starTextKeys = ["hero_pitch", "star_s", "star_t", "star_r"];
+    for (const k of starTextKeys) {
+      if (cms[k]) {
+        database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run(k, cms[k]);
+      }
+    }
+    if (Array.isArray(cms.case_studies)) {
+      database
+        .prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)")
+        .run("case_studies", JSON.stringify(cms.case_studies));
+    }
+    if (cms.star_s_links) {
+      database
+        .prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)")
+        .run("star_s_links", JSON.stringify(cms.star_s_links));
+    }
+    if (cms.policy_intro) {
+      database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("policy_intro", cms.policy_intro);
+    }
+    if (cms.contests_intro) {
+      database.prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)").run("contests_intro", cms.contests_intro);
+    }
+    if (Array.isArray(cms.policy_feed)) {
+      database
+        .prepare("INSERT INTO cms_blocks (key, body) VALUES (?, ?)")
+        .run("policy_feed", JSON.stringify(cms.policy_feed));
+    }
   } else {
     syllabus = "[]";
     timeline = "[]";
