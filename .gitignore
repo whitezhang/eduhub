@@ -1,8 +1,22 @@
+# EduHub .gitignore — 提交惯例（以此为准）
+#
+# 进 git：
+#   - docs/、src/、package.json、配置种子（test.json / prod.json 非 *.local）
+#   - src/rd/server/data/seed/、catalog/（题库与 CMS 种子）
+#   - 仓根 output/（本机 npm run build:client 后提交，线上直接部署）
+#
+# 不进 git：
+#   - node_modules/、本机构建中间目录、密钥与本机覆盖配置
+#   - data/runtime/、data/cache/（SQLite 库、测例运行态、抓取缓存）
+#   - 旧布局残留库文件、tmp/imports/crawls 等
+#   - .cursor/、.skill-tracer/、.skill-overview/（编辑器与本地工具态）
+#
+# 细节见 docs/架构设计.md、docs/题库抓取.md；data 子目录另有 src/rd/server/data/.gitignore
+
 node_modules/
 src/rd/client/dist/
-# 正式前端产物在仓根 output/，本机构建后提交，服务器直接部署
 
-# data：runtime / cache 不进 git；seed（gesp、csp-j）与 catalog 进 git，deploy 时导入。
+# data：runtime / cache 不进 git；seed 与 catalog 进 git，deploy 时导入。
 src/rd/server/data/runtime/
 src/rd/server/data/cache/
 !src/rd/server/data/catalog/

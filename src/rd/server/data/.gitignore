@@ -1,4 +1,5 @@
-# runtime / cache 按环境分目录 test|prod，不进 git。seed / catalog 共享。
+# runtime / cache 按环境分目录 test|prod，不进 git（见仓根 .gitignore 提交惯例）。
+# seed / catalog 共享，进 git。
 runtime/
 cache/
 # 旧布局（仅 data 根下，勿误伤 catalog/problems）

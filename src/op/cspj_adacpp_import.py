@@ -30,8 +30,9 @@ ROOT = Path(__file__).resolve().parents[2]
 _OP = Path(__file__).resolve().parent
 if str(_OP) not in sys.path:
     sys.path.insert(0, str(_OP))
-from eduhub_paths import cache_dir, data_dir as DATA, db_path, migrate_legacy_runtime, runtime_dir as RUNTIME
+from eduhub_paths import cache_dir, data_dir, db_path, migrate_legacy_runtime
 
+DATA = data_dir()
 SEED = DATA / "seed" / "csp-j"
 CACHE = cache_dir() / "adacpp"
 INDEX = "https://adacpp.com/practice"
