@@ -2,10 +2,13 @@
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 EDUHUB_SRC="${EDUHUB_SRC:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
+export EDUHUB_ENV="${EDUHUB_ENV:-prod}"
+export NODE_ENV="${NODE_ENV:-production}"
 API_SERVICE="${API_SERVICE:-eduhub-api}"
 API_PORT="${API_PORT:-8081}"
 HEALTH_URL="${HEALTH_URL:-http://127.0.0.1:${API_PORT}/api/health}"
 
+echo "==> [server] env EDUHUB_ENV=$EDUHUB_ENV NODE_ENV=$NODE_ENV"
 echo "==> [server] npm ci"
 cd "$EDUHUB_SRC"
 npm ci --omit=dev

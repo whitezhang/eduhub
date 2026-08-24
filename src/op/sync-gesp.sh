@@ -29,10 +29,10 @@ if [[ "$SKIP_PUSH" != "1" ]]; then
   ssh "$REMOTE" "mkdir -p '$REMOTE_JSON'"
   rsync -az --delete --include='*.json' --exclude='*' "$LOCAL_JSON/" "$REMOTE:$REMOTE_JSON/"
   echo "==> import on remote"
-  ssh "$REMOTE" "cd '$REMOTE_ROOT' && python3 src/op/gesp_import.py --skip-crawl"
+  ssh "$REMOTE" "cd '$REMOTE_ROOT' && EDUHUB_ENV=prod NODE_ENV=production python3 src/op/gesp_import.py --skip-crawl"
 else
   echo "==> import locally (JSON only, no PDF)"
   cd "$ROOT"
-  python3 src/op/gesp_import.py --skip-crawl
+  EDUHUB_ENV="${EDUHUB_ENV:-prod}" NODE_ENV="${NODE_ENV:-production}" python3 src/op/gesp_import.py --skip-crawl
 fi
 echo "sync-gesp done."

@@ -4,9 +4,12 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export EDUHUB_SRC="${EDUHUB_SRC:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
 export WEB="${WEB:-/www/wwwroot/edu.jsoner.cn}"
+export EDUHUB_ENV="${EDUHUB_ENV:-prod}"
+export NODE_ENV="${NODE_ENV:-production}"
 SKIP_SERVER="${SKIP_SERVER:-0}"
 SKIP_CLIENT="${SKIP_CLIENT:-0}"
 
+echo "==> [deploy] env EDUHUB_ENV=$EDUHUB_ENV NODE_ENV=$NODE_ENV"
 echo "==> [deploy] sync $EDUHUB_SRC"
 cd "$EDUHUB_SRC"
 git fetch --all
