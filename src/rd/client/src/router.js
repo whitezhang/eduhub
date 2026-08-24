@@ -48,8 +48,11 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to) => {
-  if (!to.meta.requiresAuth) return true;
   const session = useSession();
+  if (!to.meta.requiresAuth) {
+    if (!session.user) session.closeLogin();
+    return true;
+  }
   if (!session.ready) {
     try {
       await session.refresh();
