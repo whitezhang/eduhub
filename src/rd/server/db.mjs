@@ -201,6 +201,13 @@ function schema(database) {
       seq INTEGER NOT NULL,
       PRIMARY KEY (contest_id, problem_id)
     );
+    CREATE TABLE IF NOT EXISTS contest_registrations (
+      contest_id INTEGER NOT NULL,
+      user_id INTEGER NOT NULL,
+      PRIMARY KEY (contest_id, user_id),
+      FOREIGN KEY (contest_id) REFERENCES contests(id),
+      FOREIGN KEY (user_id) REFERENCES users(id)
+    );
     CREATE TABLE IF NOT EXISTS paper_drafts (
       user_id INTEGER NOT NULL,
       contest_id INTEGER NOT NULL,
@@ -283,6 +290,17 @@ function migrate(database) {
   database.prepare("UPDATE users SET password_plain = NULL WHERE role = 'coach'").run();
   migratePolicyItems(database);
   migrateContestItems(database);
+  if (!tableExists(database, "contest_registrations")) {
+    database.exec(`
+      CREATE TABLE IF NOT EXISTS contest_registrations (
+        contest_id INTEGER NOT NULL,
+        user_id INTEGER NOT NULL,
+        PRIMARY KEY (contest_id, user_id),
+        FOREIGN KEY (contest_id) REFERENCES contests(id),
+        FOREIGN KEY (user_id) REFERENCES users(id)
+      );
+    `);
+  }
 }
 
 function migrateContestItems(database) {
